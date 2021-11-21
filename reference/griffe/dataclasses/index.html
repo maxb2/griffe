@@ -2090,37 +2090,29 @@ but were imported from another module.</p>
 <li>if the target cannot be resolved, the kind becomes <a href="#griffe.dataclasses.Kind">Kind.ALIAS</a></li>
 </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Attributes:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>name</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The alias name.</p></li>
-              <li>
-                <b>lineno</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
-                – <p>The alias starting line number.</p></li>
-              <li>
-                <b>endlineno</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
-                – <p>The alias ending line number.</p></li>
-              <li>
-                <b>parent</b>
-                    (<code><a href="#griffe.dataclasses.Module">Module</a> | <a href="#griffe.dataclasses.Class">Class</a> | None</code>)
-                – <p>The alias parent.</p></li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b>name</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The alias name.</p>
+      </li>
+      <li class="field-body">
+        <b>lineno</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
+        – <p>The alias starting line number.</p>
+      </li>
+      <li class="field-body">
+        <b>endlineno</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
+        – <p>The alias ending line number.</p>
+      </li>
+      <li class="field-body">
+        <b>parent</b>
+            (<code><a href="#griffe.dataclasses.Module">Module</a> | <a href="#griffe.dataclasses.Class">Class</a> | None</code>)
+        – <p>The alias parent.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -2481,47 +2473,35 @@ but were imported from another module.</p>
 
       <p>Initialize the alias.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>name</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The alias name.</p>
-              </li>
-              <li>
-                <b>target</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="#griffe.dataclasses.Object">Object</a> | <a href="#griffe.dataclasses.Alias">Alias</a></code>)
-                – <p>If it's a string, the target resolution is delayed until accessing the target property.
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>name</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The alias name.</p>
+      </li>
+      <li class="field-body">
+        <b>target</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="#griffe.dataclasses.Object">Object</a> | <a href="#griffe.dataclasses.Alias">Alias</a></code>)
+        – <p>If it's a string, the target resolution is delayed until accessing the target property.
 If it's an object, or even another alias, the target is immediately set.</p>
-              </li>
-              <li>
-                <b>lineno</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
-                – <p>The alias starting line number.</p>
-              </li>
-              <li>
-                <b>endlineno</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
-                – <p>The alias ending line number.</p>
-              </li>
-              <li>
-                <b>parent</b>
-                    (<code><a href="#griffe.dataclasses.Module">Module</a> | <a href="#griffe.dataclasses.Class">Class</a> | None</code>)
-                – <p>The alias parent.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+      </li>
+      <li class="field-body">
+        <b>lineno</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
+        – <p>The alias starting line number.</p>
+      </li>
+      <li class="field-body">
+        <b>endlineno</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
+        – <p>The alias ending line number.</p>
+      </li>
+      <li class="field-body">
+        <b>parent</b>
+            (<code><a href="#griffe.dataclasses.Module">Module</a> | <a href="#griffe.dataclasses.Class">Class</a> | None</code>)
+        – <p>The alias parent.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -2606,52 +2586,28 @@ If it's an object, or even another alias, the target is immediately set.</p>
 
       <p>Return this alias' data as a dictionary.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>full</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
-                – <p>Whether to return full info, or just base info.</p>
-              </li>
-              <li>
-                <b>**kwargs</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>Additional serialization options.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>full</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
+        – <p>Whether to return full info, or just base info.</p>
+      </li>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>Additional serialization options.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
-                –
-                <p>A dictionary.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+          –
+        <p>A dictionary.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -2727,26 +2683,14 @@ If it's an object, or even another alias, the target is immediately set.</p>
 
       <p>Return the target's kind, or Kind.ALIAS if the target cannot be resolved.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="#griffe.dataclasses.Kind">Kind</a></code>
-                –
-                <p>A kind.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="#griffe.dataclasses.Kind">Kind</a></code>
+          –
+        <p>A kind.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -2796,26 +2740,14 @@ If it's an object, or even another alias, the target is immediately set.</p>
 
       <p>Return the modules collection attached to the alias parents.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="../collections/#griffe.collections.ModulesCollection">ModulesCollection</a></code>
-                –
-                <p>A modules collection.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="../collections/#griffe.collections.ModulesCollection">ModulesCollection</a></code>
+          –
+        <p>A modules collection.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -2859,26 +2791,14 @@ If it's an object, or even another alias, the target is immediately set.</p>
 
       <p>Return the dotted path / import path of this object.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                –
-                <p>A dotted path.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+          –
+        <p>A dotted path.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -2972,26 +2892,14 @@ If it's an object, or even another alias, the target is immediately set.</p>
 
       <p>Tell whether this alias' target is resolved.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-                –
-                <p>True or False.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+          –
+        <p>True or False.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -3035,26 +2943,14 @@ If it's an object, or even another alias, the target is immediately set.</p>
 <p>Upon accessing this property, if the target is not already resolved,
 a lookup is done using the modules collection to find the target.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="#griffe.dataclasses.Object">Object</a> | <a href="#griffe.dataclasses.Alias">Alias</a></code>
-                –
-                <p>The resolved target.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="#griffe.dataclasses.Object">Object</a> | <a href="#griffe.dataclasses.Alias">Alias</a></code>
+          –
+        <p>The resolved target.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -3230,41 +3126,29 @@ Attribute            (<a href="#griffe.dataclasses.Object">Object</a>)
 
       <p>Initialize the function.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>*args</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>See <a href="#griffe.dataclasses.Object"><code>griffe.dataclasses.Object</code></a>.</p>
-              </li>
-              <li>
-                <b>value</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>)
-                – <p>The attribute value, if any.</p>
-              </li>
-              <li>
-                <b>annotation</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../expressions/#griffe.expressions.Name">Name</a> | <a href="../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
-                – <p>The attribute annotation, if any.</p>
-              </li>
-              <li>
-                <b>**kwargs</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>See <a href="#griffe.dataclasses.Object"><code>griffe.dataclasses.Object</code></a>.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*args</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>See <a href="#griffe.dataclasses.Object"><code>griffe.dataclasses.Object</code></a>.</p>
+      </li>
+      <li class="field-body">
+        <b>value</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>)
+        – <p>The attribute value, if any.</p>
+      </li>
+      <li class="field-body">
+        <b>annotation</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../expressions/#griffe.expressions.Name">Name</a> | <a href="../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
+        – <p>The attribute annotation, if any.</p>
+      </li>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>See <a href="#griffe.dataclasses.Object"><code>griffe.dataclasses.Object</code></a>.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -3326,47 +3210,23 @@ Attribute            (<a href="#griffe.dataclasses.Object">Object</a>)
 
       <p>Return this function's data as a dictionary.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>**kwargs</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>Additional serialization options.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>Additional serialization options.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
-                –
-                <p>A dictionary.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+          –
+        <p>A dictionary.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -3542,41 +3402,29 @@ Class            (<a href="#griffe.dataclasses.Object">Object</a>)
 
       <p>Initialize the class.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>*args</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>See <a href="#griffe.dataclasses.Object"><code>griffe.dataclasses.Object</code></a>.</p>
-              </li>
-              <li>
-                <b>bases</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="../expressions/#griffe.expressions.Name">Name</a> | <a href="../expressions/#griffe.expressions.Expression">Expression</a>] | None</code>)
-                – <p>The list of base classes, if any.</p>
-              </li>
-              <li>
-                <b>decorators</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="#griffe.dataclasses.Decorator">Decorator</a>] | None</code>)
-                – <p>The class decorators, if any.</p>
-              </li>
-              <li>
-                <b>**kwargs</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>See <a href="#griffe.dataclasses.Object"><code>griffe.dataclasses.Object</code></a>.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*args</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>See <a href="#griffe.dataclasses.Object"><code>griffe.dataclasses.Object</code></a>.</p>
+      </li>
+      <li class="field-body">
+        <b>bases</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="../expressions/#griffe.expressions.Name">Name</a> | <a href="../expressions/#griffe.expressions.Expression">Expression</a>] | None</code>)
+        – <p>The list of base classes, if any.</p>
+      </li>
+      <li class="field-body">
+        <b>decorators</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="#griffe.dataclasses.Decorator">Decorator</a>] | None</code>)
+        – <p>The class decorators, if any.</p>
+      </li>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>See <a href="#griffe.dataclasses.Object"><code>griffe.dataclasses.Object</code></a>.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -3638,47 +3486,23 @@ Class            (<a href="#griffe.dataclasses.Object">Object</a>)
 
       <p>Return this class' data as a dictionary.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>**kwargs</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>Additional serialization options.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>Additional serialization options.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
-                –
-                <p>A dictionary.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+          –
+        <p>A dictionary.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -3742,29 +3566,19 @@ Decorator        </code>
 
       <p>This class represents decorators.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Attributes:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>lineno</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
-                – <p>The starting line number.</p></li>
-              <li>
-                <b>endlineno</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
-                – <p>The ending line number.</p></li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b>lineno</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
+        – <p>The starting line number.</p>
+      </li>
+      <li class="field-body">
+        <b>endlineno</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
+        – <p>The ending line number.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -3860,31 +3674,19 @@ Decorator        </code>
 
       <p>Initialize the decorator.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>lineno</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
-                – <p>The starting line number.</p>
-              </li>
-              <li>
-                <b>endlineno</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
-                – <p>The ending line number.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>lineno</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
+        – <p>The starting line number.</p>
+      </li>
+      <li class="field-body">
+        <b>endlineno</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
+        – <p>The ending line number.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -3928,47 +3730,23 @@ Decorator        </code>
 
       <p>Return this decorator's data as a dictionary.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>**kwargs</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>Additional serialization options.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>Additional serialization options.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
-                –
-                <p>A dictionary.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+          –
+        <p>A dictionary.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -4032,37 +3810,29 @@ Docstring        </code>
 
       <p>This class represents docstrings.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Attributes:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>value</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The actual documentation string, cleaned up.</p></li>
-              <li>
-                <b>lineno</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
-                – <p>The starting line number.</p></li>
-              <li>
-                <b>endlineno</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
-                – <p>The ending line number.</p></li>
-              <li>
-                <b>parent</b>
-                    (<code><a href="#griffe.dataclasses.Module">Module</a> | <a href="#griffe.dataclasses.Class">Class</a> | <a href="#griffe.dataclasses.Function">Function</a> | <a href="#griffe.dataclasses.Attribute">Attribute</a> | None</code>)
-                – <p>The parent object on which this docstring is attached.</p></li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b>value</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The actual documentation string, cleaned up.</p>
+      </li>
+      <li class="field-body">
+        <b>lineno</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
+        – <p>The starting line number.</p>
+      </li>
+      <li class="field-body">
+        <b>endlineno</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
+        – <p>The ending line number.</p>
+      </li>
+      <li class="field-body">
+        <b>parent</b>
+            (<code><a href="#griffe.dataclasses.Module">Module</a> | <a href="#griffe.dataclasses.Class">Class</a> | <a href="#griffe.dataclasses.Function">Function</a> | <a href="#griffe.dataclasses.Attribute">Attribute</a> | None</code>)
+        – <p>The parent object on which this docstring is attached.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -4281,51 +4051,39 @@ Docstring        </code>
 
       <p>Initialize the docstring.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>value</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The docstring value.</p>
-              </li>
-              <li>
-                <b>lineno</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
-                – <p>The starting line number.</p>
-              </li>
-              <li>
-                <b>endlineno</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
-                – <p>The ending line number.</p>
-              </li>
-              <li>
-                <b>parent</b>
-                    (<code><a href="#griffe.dataclasses.Module">Module</a> | <a href="#griffe.dataclasses.Class">Class</a> | <a href="#griffe.dataclasses.Function">Function</a> | <a href="#griffe.dataclasses.Attribute">Attribute</a> | None</code>)
-                – <p>The parent object on which this docstring is attached.</p>
-              </li>
-              <li>
-                <b>parser</b>
-                    (<code><a href="../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
-                – <p>The docstring parser to use. By default, no parsing is done.</p>
-              </li>
-              <li>
-                <b>parser_options</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
-                – <p>Additional docstring parsing options.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>value</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The docstring value.</p>
+      </li>
+      <li class="field-body">
+        <b>lineno</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
+        – <p>The starting line number.</p>
+      </li>
+      <li class="field-body">
+        <b>endlineno</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
+        – <p>The ending line number.</p>
+      </li>
+      <li class="field-body">
+        <b>parent</b>
+            (<code><a href="#griffe.dataclasses.Module">Module</a> | <a href="#griffe.dataclasses.Class">Class</a> | <a href="#griffe.dataclasses.Function">Function</a> | <a href="#griffe.dataclasses.Attribute">Attribute</a> | None</code>)
+        – <p>The parent object on which this docstring is attached.</p>
+      </li>
+      <li class="field-body">
+        <b>parser</b>
+            (<code><a href="../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+        – <p>The docstring parser to use. By default, no parsing is done.</p>
+      </li>
+      <li class="field-body">
+        <b>parser_options</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
+        – <p>Additional docstring parsing options.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -4403,57 +4161,33 @@ Docstring        </code>
 
       <p>Return this docstring's data as a dictionary.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>full</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
-                – <p>Whether to return full info, or just base info.</p>
-              </li>
-              <li>
-                <b>docstring_parser</b>
-                    (<code><a href="../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
-                – <p>The docstring parser to parse the docstring with. By default, no parsing is done.</p>
-              </li>
-              <li>
-                <b>**kwargs</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>Additional serialization or docstring parsing options.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>full</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
+        – <p>Whether to return full info, or just base info.</p>
+      </li>
+      <li class="field-body">
+        <b>docstring_parser</b>
+            (<code><a href="../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+        – <p>The docstring parser to parse the docstring with. By default, no parsing is done.</p>
+      </li>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>Additional serialization or docstring parsing options.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
-                –
-                <p>A dictionary.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+          –
+        <p>A dictionary.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -4517,26 +4251,14 @@ Docstring        </code>
 
       <p>Returns the lines of the docstring.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
-                –
-                <p>The docstring's lines.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
+          –
+        <p>The docstring's lines.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -4578,53 +4300,29 @@ Docstring        </code>
 
       <p>Parse the docstring into structured data.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>parser</b>
-                    (<code><a href="../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
-                – <p>The docstring parser to use.
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>parser</b>
+            (<code><a href="../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+        – <p>The docstring parser to use.
 In order: use the given parser, or the self parser, or no parser (return a single text section).</p>
-              </li>
-              <li>
-                <b>**options</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>Additional docstring parsing options.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+      </li>
+      <li class="field-body">
+        <b>**options</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>Additional docstring parsing options.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="../docstrings/dataclasses/#griffe.docstrings.dataclasses.DocstringSection">DocstringSection</a>]</code>
-                –
-                <p>The parsed docstring as a list of sections.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="../docstrings/dataclasses/#griffe.docstrings.dataclasses.DocstringSection">DocstringSection</a>]</code>
+          –
+        <p>The parsed docstring as a list of sections.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -4674,26 +4372,14 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
       <p>Return the docstring, parsed into structured data.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="../docstrings/dataclasses/#griffe.docstrings.dataclasses.DocstringSection">DocstringSection</a>]</code>
-                –
-                <p>The parsed docstring as a list of sections.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="../docstrings/dataclasses/#griffe.docstrings.dataclasses.DocstringSection">DocstringSection</a>]</code>
+          –
+        <p>The parsed docstring as a list of sections.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -4864,46 +4550,34 @@ Function            (<a href="#griffe.dataclasses.Object">Object</a>)
 
       <p>Initialize the function.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>*args</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>See <a href="#griffe.dataclasses.Object"><code>griffe.dataclasses.Object</code></a>.</p>
-              </li>
-              <li>
-                <b>parameters</b>
-                    (<code><a href="#griffe.dataclasses.Parameters">Parameters</a> | None</code>)
-                – <p>The function parameters.</p>
-              </li>
-              <li>
-                <b>returns</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../expressions/#griffe.expressions.Name">Name</a> | <a href="../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
-                – <p>The function return annotation.</p>
-              </li>
-              <li>
-                <b>decorators</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="#griffe.dataclasses.Decorator">Decorator</a>] | None</code>)
-                – <p>The function decorators, if any.</p>
-              </li>
-              <li>
-                <b>**kwargs</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>See <a href="#griffe.dataclasses.Object"><code>griffe.dataclasses.Object</code></a>.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*args</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>See <a href="#griffe.dataclasses.Object"><code>griffe.dataclasses.Object</code></a>.</p>
+      </li>
+      <li class="field-body">
+        <b>parameters</b>
+            (<code><a href="#griffe.dataclasses.Parameters">Parameters</a> | None</code>)
+        – <p>The function parameters.</p>
+      </li>
+      <li class="field-body">
+        <b>returns</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../expressions/#griffe.expressions.Name">Name</a> | <a href="../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
+        – <p>The function return annotation.</p>
+      </li>
+      <li class="field-body">
+        <b>decorators</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="#griffe.dataclasses.Decorator">Decorator</a>] | None</code>)
+        – <p>The function decorators, if any.</p>
+      </li>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>See <a href="#griffe.dataclasses.Object"><code>griffe.dataclasses.Object</code></a>.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -4971,47 +4645,23 @@ Function            (<a href="#griffe.dataclasses.Object">Object</a>)
 
       <p>Return this function's data as a dictionary.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>**kwargs</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>Additional serialization options.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>Additional serialization options.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
-                –
-                <p>A dictionary.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+          –
+        <p>A dictionary.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -5078,37 +4728,29 @@ Kind            (<a href="https://docs.python.org/3/library/enum.html#module-enu
 
       <p>Enumeration of the different objects kinds.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Attributes:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>MODULE</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The module kind.</p></li>
-              <li>
-                <b>CLASS</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The class kind.</p></li>
-              <li>
-                <b>FUNCTION</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The function kind.</p></li>
-              <li>
-                <b>ATTRIBUTE</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The attribute kind.</p></li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b>MODULE</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The module kind.</p>
+      </li>
+      <li class="field-body">
+        <b>CLASS</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The class kind.</p>
+      </li>
+      <li class="field-body">
+        <b>FUNCTION</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The function kind.</p>
+      </li>
+      <li class="field-body">
+        <b>ATTRIBUTE</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The attribute kind.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -5400,36 +5042,24 @@ Module            (<a href="#griffe.dataclasses.Object">Object</a>)
 
       <p>Initialize the module.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>*args</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>See <a href="#griffe.dataclasses.Object"><code>griffe.dataclasses.Object</code></a>.</p>
-              </li>
-              <li>
-                <b>filepath</b>
-                    (<code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
-                – <p>The module file path. It can be null for namespace packages.</p>
-              </li>
-              <li>
-                <b>**kwargs</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>See <a href="#griffe.dataclasses.Object"><code>griffe.dataclasses.Object</code></a>.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*args</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>See <a href="#griffe.dataclasses.Object"><code>griffe.dataclasses.Object</code></a>.</p>
+      </li>
+      <li class="field-body">
+        <b>filepath</b>
+            (<code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
+        – <p>The module file path. It can be null for namespace packages.</p>
+      </li>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>See <a href="#griffe.dataclasses.Object"><code>griffe.dataclasses.Object</code></a>.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -5476,47 +5106,23 @@ Module            (<a href="#griffe.dataclasses.Object">Object</a>)
 
       <p>Return this module's data as a dictionary.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>**kwargs</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>Additional serialization options.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>Additional serialization options.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
-                –
-                <p>A dictionary.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+          –
+        <p>A dictionary.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -5566,26 +5172,14 @@ Module            (<a href="#griffe.dataclasses.Object">Object</a>)
 
       <p>Get the file path of this module.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>
-                –
-                <p>The module's file path.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>
+          –
+        <p>The module's file path.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -5627,26 +5221,14 @@ Module            (<a href="#griffe.dataclasses.Object">Object</a>)
 
       <p>Tell if this module is an <code>__init__.py</code> module.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-                –
-                <p>True or False.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+          –
+        <p>True or False.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -5688,26 +5270,14 @@ Module            (<a href="#griffe.dataclasses.Object">Object</a>)
 
       <p>Tell if this module is a namespace package (top folder, no <code>__init__.py</code>).</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-                –
-                <p>True or False.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+          –
+        <p>True or False.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -5749,26 +5319,14 @@ Module            (<a href="#griffe.dataclasses.Object">Object</a>)
 
       <p>Tell if this module is a namespace subpackage.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-                –
-                <p>True or False.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+          –
+        <p>True or False.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -5820,26 +5378,14 @@ Module            (<a href="#griffe.dataclasses.Object">Object</a>)
 
       <p>Tell if this module is a package (top module).</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-                –
-                <p>True or False.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+          –
+        <p>True or False.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -5881,26 +5427,14 @@ Module            (<a href="#griffe.dataclasses.Object">Object</a>)
 
       <p>Tell if this module is a subpackage.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-                –
-                <p>True or False.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+          –
+        <p>True or False.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -5955,53 +5489,49 @@ Object            (<a href="../mixins/#griffe.mixins.GetMembersMixin">GetMembers
 
       <p>An abstract class representing a Python object.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Attributes:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>kind</b>
-                    (<code><a href="#griffe.dataclasses.Kind">Kind</a></code>)
-                – <p>The object kind.</p></li>
-              <li>
-                <b>name</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The object name.</p></li>
-              <li>
-                <b>lineno</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
-                – <p>The object starting line, or None for modules. Lines start at 1.</p></li>
-              <li>
-                <b>endlineno</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
-                – <p>The object ending line (inclusive), or None for modules.</p></li>
-              <li>
-                <b>docstring</b>
-                    (<code><a href="#griffe.dataclasses.Docstring">Docstring</a> | None</code>)
-                – <p>The object docstring.</p></li>
-              <li>
-                <b>parent</b>
-                    (<code><a href="#griffe.dataclasses.Module">Module</a> | <a href="#griffe.dataclasses.Class">Class</a> | None</code>)
-                – <p>The object parent, or None if it is the top module.</p></li>
-              <li>
-                <b>members</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="#griffe.dataclasses.Object">Object</a> | <a href="#griffe.dataclasses.Alias">Alias</a>]</code>)
-                – <p>The object members.</p></li>
-              <li>
-                <b>labels</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#set">set</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>)
-                – <p>The object labels.</p></li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b>kind</b>
+            (<code><a href="#griffe.dataclasses.Kind">Kind</a></code>)
+        – <p>The object kind.</p>
+      </li>
+      <li class="field-body">
+        <b>name</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The object name.</p>
+      </li>
+      <li class="field-body">
+        <b>lineno</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
+        – <p>The object starting line, or None for modules. Lines start at 1.</p>
+      </li>
+      <li class="field-body">
+        <b>endlineno</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
+        – <p>The object ending line (inclusive), or None for modules.</p>
+      </li>
+      <li class="field-body">
+        <b>docstring</b>
+            (<code><a href="#griffe.dataclasses.Docstring">Docstring</a> | None</code>)
+        – <p>The object docstring.</p>
+      </li>
+      <li class="field-body">
+        <b>parent</b>
+            (<code><a href="#griffe.dataclasses.Module">Module</a> | <a href="#griffe.dataclasses.Class">Class</a> | None</code>)
+        – <p>The object parent, or None if it is the top module.</p>
+      </li>
+      <li class="field-body">
+        <b>members</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="#griffe.dataclasses.Object">Object</a> | <a href="#griffe.dataclasses.Alias">Alias</a>]</code>)
+        – <p>The object members.</p>
+      </li>
+      <li class="field-body">
+        <b>labels</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#set">set</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>)
+        – <p>The object labels.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -6747,56 +6277,44 @@ Object            (<a href="../mixins/#griffe.mixins.GetMembersMixin">GetMembers
 
       <p>Initialize the object.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>name</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The object name, as declared in the code.</p>
-              </li>
-              <li>
-                <b>lineno</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
-                – <p>The object starting line, or None for modules. Lines start at 1.</p>
-              </li>
-              <li>
-                <b>endlineno</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
-                – <p>The object ending line (inclusive), or None for modules.</p>
-              </li>
-              <li>
-                <b>docstring</b>
-                    (<code><a href="#griffe.dataclasses.Docstring">Docstring</a> | None</code>)
-                – <p>The object docstring.</p>
-              </li>
-              <li>
-                <b>parent</b>
-                    (<code><a href="#griffe.dataclasses.Module">Module</a> | <a href="#griffe.dataclasses.Class">Class</a> | None</code>)
-                – <p>The object parent.</p>
-              </li>
-              <li>
-                <b>lines_collection</b>
-                    (<code><a href="../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
-                – <p>A collection of source code lines.</p>
-              </li>
-              <li>
-                <b>modules_collection</b>
-                    (<code><a href="../collections/#griffe.collections.ModulesCollection">ModulesCollection</a> | None</code>)
-                – <p>A collection of modules.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>name</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The object name, as declared in the code.</p>
+      </li>
+      <li class="field-body">
+        <b>lineno</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
+        – <p>The object starting line, or None for modules. Lines start at 1.</p>
+      </li>
+      <li class="field-body">
+        <b>endlineno</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a> | None</code>)
+        – <p>The object ending line (inclusive), or None for modules.</p>
+      </li>
+      <li class="field-body">
+        <b>docstring</b>
+            (<code><a href="#griffe.dataclasses.Docstring">Docstring</a> | None</code>)
+        – <p>The object docstring.</p>
+      </li>
+      <li class="field-body">
+        <b>parent</b>
+            (<code><a href="#griffe.dataclasses.Module">Module</a> | <a href="#griffe.dataclasses.Class">Class</a> | None</code>)
+        – <p>The object parent.</p>
+      </li>
+      <li class="field-body">
+        <b>lines_collection</b>
+            (<code><a href="../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
+        – <p>A collection of source code lines.</p>
+      </li>
+      <li class="field-body">
+        <b>modules_collection</b>
+            (<code><a href="../collections/#griffe.collections.ModulesCollection">ModulesCollection</a> | None</code>)
+        – <p>A collection of modules.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -6897,52 +6415,28 @@ Object            (<a href="../mixins/#griffe.mixins.GetMembersMixin">GetMembers
 
       <p>Return this object's data as a dictionary.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>full</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
-                – <p>Whether to return full info, or just base info.</p>
-              </li>
-              <li>
-                <b>**kwargs</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>Additional serialization options.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>full</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
+        – <p>Whether to return full info, or just base info.</p>
+      </li>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>Additional serialization options.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
-                –
-                <p>A dictionary.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+          –
+        <p>A dictionary.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -7040,26 +6534,14 @@ Object            (<a href="../mixins/#griffe.mixins.GetMembersMixin">GetMembers
 
       <p>Return the attribute members.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="#griffe.dataclasses.Attribute">Attribute</a>]</code>
-                –
-                <p>A dictionary of attributes.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="#griffe.dataclasses.Attribute">Attribute</a>]</code>
+          –
+        <p>A dictionary of attributes.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -7102,26 +6584,14 @@ Object            (<a href="../mixins/#griffe.mixins.GetMembersMixin">GetMembers
       <p>Return the full dotted path of this object.</p>
 <p>The canonical path is the path where the object was defined (not imported).</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                –
-                <p>A dotted path.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+          –
+        <p>A dotted path.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -7171,26 +6641,14 @@ Object            (<a href="../mixins/#griffe.mixins.GetMembersMixin">GetMembers
 
       <p>Return the class members.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="#griffe.dataclasses.Class">Class</a>]</code>
-                –
-                <p>A dictionary of classes.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="#griffe.dataclasses.Class">Class</a>]</code>
+          –
+        <p>A dictionary of classes.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -7236,26 +6694,14 @@ as they should always have a parent module.
 If not, <code>self.module</code> would trigger a <code>ValueError</code> anyway.
 If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>
-                –
-                <p>A file path.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>
+          –
+        <p>A file path.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -7307,47 +6753,23 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
       <p>Filter and return members based on predicates.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>*predicates</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Callable">Callable</a>[[<a href="#griffe.dataclasses.Object">Object</a> | <a href="#griffe.dataclasses.Alias">Alias</a>], <a href="https://docs.python.org/3/library/functions.html#bool">bool</a>]</code>)
-                – <p>A list of predicates, i.e. callables accepting a member as argument and returning a boolean.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*predicates</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Callable">Callable</a>[[<a href="#griffe.dataclasses.Object">Object</a> | <a href="#griffe.dataclasses.Alias">Alias</a>], <a href="https://docs.python.org/3/library/functions.html#bool">bool</a>]</code>)
+        – <p>A list of predicates, i.e. callables accepting a member as argument and returning a boolean.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="#griffe.dataclasses.Object">Object</a> | <a href="#griffe.dataclasses.Alias">Alias</a>]</code>
-                –
-                <p>A dictionary of members.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="#griffe.dataclasses.Object">Object</a> | <a href="#griffe.dataclasses.Alias">Alias</a>]</code>
+          –
+        <p>A dictionary of members.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -7405,26 +6827,14 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
       <p>Return the function members.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="#griffe.dataclasses.Function">Function</a>]</code>
-                –
-                <p>A dictionary of functions.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="#griffe.dataclasses.Function">Function</a>]</code>
+          –
+        <p>A dictionary of functions.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -7466,47 +6876,23 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
       <p>Tell if this object has all the given labels.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>labels</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#set">set</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>)
-                – <p>A set of labels.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>labels</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#set">set</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>)
+        – <p>A set of labels.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-                –
-                <p>True or False.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+          –
+        <p>True or False.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -7552,47 +6938,23 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
       <p>Tell if this object is of the given kind.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>kind</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="#griffe.dataclasses.Kind">Kind</a> | <a href="https://docs.python.org/3/library/stdtypes.html#set">set</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="#griffe.dataclasses.Kind">Kind</a>]</code>)
-                – <p>An instance or set of kinds (strings or enumerations).</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>kind</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="#griffe.dataclasses.Kind">Kind</a> | <a href="https://docs.python.org/3/library/stdtypes.html#set">set</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="#griffe.dataclasses.Kind">Kind</a>]</code>)
+        – <p>An instance or set of kinds (strings or enumerations).</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-                –
-                <p>True or False.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+          –
+        <p>True or False.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -7656,26 +7018,14 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
       <p>Return the lines containing the source of this object.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
-                –
-                <p>A list of lines.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
+          –
+        <p>A list of lines.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -7721,26 +7071,14 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
       <p>Return the lines collection attached to this object or its parents.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="../collections/#griffe.collections.LinesCollection">LinesCollection</a></code>
-                –
-                <p>A lines collection.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="../collections/#griffe.collections.LinesCollection">LinesCollection</a></code>
+          –
+        <p>A lines collection.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -7799,52 +7137,28 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 of its parent module or class. When <code>_all__</code> is not defined,
 we consider the member to be <em>implicitely</em> exported.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>member</b>
-                    (<code><a href="#griffe.dataclasses.Object">Object</a> | <a href="#griffe.dataclasses.Alias">Alias</a></code>)
-                – <p>The member to verify.</p>
-              </li>
-              <li>
-                <b>explicitely</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
-                – <p>Whether to only return True when <code>__all__</code> is defined.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>member</b>
+            (<code><a href="#griffe.dataclasses.Object">Object</a> | <a href="#griffe.dataclasses.Alias">Alias</a></code>)
+        – <p>The member to verify.</p>
+      </li>
+      <li class="field-body">
+        <b>explicitely</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
+        – <p>Whether to only return True when <code>__all__</code> is defined.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-                –
-                <p>True or False.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+          –
+        <p>True or False.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -7904,26 +7218,14 @@ we consider the member to be <em>implicitely</em> exported.</p>
 
       <p>Return the parent module of this object.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="#griffe.dataclasses.Module">Module</a></code>
-                –
-                <p>The parent module.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="#griffe.dataclasses.Module">Module</a></code>
+          –
+        <p>The parent module.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -7979,26 +7281,14 @@ we consider the member to be <em>implicitely</em> exported.</p>
 
       <p>Return the module members.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="#griffe.dataclasses.Module">Module</a>]</code>
-                –
-                <p>A dictionary of modules.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="#griffe.dataclasses.Module">Module</a>]</code>
+          –
+        <p>A dictionary of modules.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -8040,26 +7330,14 @@ we consider the member to be <em>implicitely</em> exported.</p>
 
       <p>Return the modules collection attached to this object or its parents.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="../collections/#griffe.collections.ModulesCollection">ModulesCollection</a></code>
-                –
-                <p>A modules collection.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="../collections/#griffe.collections.ModulesCollection">ModulesCollection</a></code>
+          –
+        <p>A modules collection.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -8115,26 +7393,14 @@ we consider the member to be <em>implicitely</em> exported.</p>
 
       <p>Return the absolute top module (the package) of this object.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="#griffe.dataclasses.Module">Module</a></code>
-                –
-                <p>The parent module.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="#griffe.dataclasses.Module">Module</a></code>
+          –
+        <p>The parent module.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -8183,26 +7449,14 @@ we consider the member to be <em>implicitely</em> exported.</p>
       <p>Return the dotted path of this object.</p>
 <p>On regular objects (not aliases), the path is the canonical path.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                –
-                <p>A dotted path.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+          –
+        <p>A dotted path.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -8248,26 +7502,14 @@ we consider the member to be <em>implicitely</em> exported.</p>
 
       <p>Return the file path where this object was defined, relative to the top module path.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>
-                –
-                <p>A file path.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>
+          –
+        <p>A file path.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -8309,47 +7551,23 @@ we consider the member to be <em>implicitely</em> exported.</p>
 
       <p>Resolve a name within this object's and parents' scope.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>name</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The name to resolve.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>name</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The name to resolve.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                –
-                <p>The resolved name.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+          –
+        <p>The resolved name.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -8419,26 +7637,14 @@ we consider the member to be <em>implicitely</em> exported.</p>
 
       <p>Return the source code of this object.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                –
-                <p>The source code.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+          –
+        <p>The source code.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -8492,37 +7698,29 @@ Parameter        </code>
 
       <p>This class represent a function parameter.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Attributes:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>name</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The parameter name.</p></li>
-              <li>
-                <b>annotation</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../expressions/#griffe.expressions.Name">Name</a> | <a href="../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
-                – <p>The parameter annotation, if any.</p></li>
-              <li>
-                <b>kind</b>
-                    (<code><a href="#griffe.dataclasses.ParameterKind">ParameterKind</a> | None</code>)
-                – <p>The parameter kind.</p></li>
-              <li>
-                <b>default</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>)
-                – <p>The parameter default, if any.</p></li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b>name</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The parameter name.</p>
+      </li>
+      <li class="field-body">
+        <b>annotation</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../expressions/#griffe.expressions.Name">Name</a> | <a href="../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
+        – <p>The parameter annotation, if any.</p>
+      </li>
+      <li class="field-body">
+        <b>kind</b>
+            (<code><a href="#griffe.dataclasses.ParameterKind">ParameterKind</a> | None</code>)
+        – <p>The parameter kind.</p>
+      </li>
+      <li class="field-body">
+        <b>default</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>)
+        – <p>The parameter default, if any.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -8650,41 +7848,29 @@ Parameter        </code>
 
       <p>Initialize the parameter.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>name</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The parameter name.</p>
-              </li>
-              <li>
-                <b>annotation</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../expressions/#griffe.expressions.Name">Name</a> | <a href="../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
-                – <p>The parameter annotation, if any.</p>
-              </li>
-              <li>
-                <b>kind</b>
-                    (<code><a href="#griffe.dataclasses.ParameterKind">ParameterKind</a> | None</code>)
-                – <p>The parameter kind.</p>
-              </li>
-              <li>
-                <b>default</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>)
-                – <p>The parameter default, if any.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>name</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The parameter name.</p>
+      </li>
+      <li class="field-body">
+        <b>annotation</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../expressions/#griffe.expressions.Name">Name</a> | <a href="../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
+        – <p>The parameter annotation, if any.</p>
+      </li>
+      <li class="field-body">
+        <b>kind</b>
+            (<code><a href="#griffe.dataclasses.ParameterKind">ParameterKind</a> | None</code>)
+        – <p>The parameter kind.</p>
+      </li>
+      <li class="field-body">
+        <b>default</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>)
+        – <p>The parameter default, if any.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -8750,47 +7936,23 @@ Parameter        </code>
 
       <p>Return this parameter's data as a dictionary.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>**kwargs</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>Additional serialization options.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>Additional serialization options.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
-                –
-                <p>A dictionary.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+          –
+        <p>A dictionary.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -8859,41 +8021,34 @@ ParameterKind            (<a href="https://docs.python.org/3/library/enum.html#m
 
       <p>Enumeration of the different parameter kinds.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Attributes:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>positional_only</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>Positional-only parameter.</p></li>
-              <li>
-                <b>positional_or_keyword</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>Positional or keyword parameter.</p></li>
-              <li>
-                <b>var_positional</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>Variadic positional parameter.</p></li>
-              <li>
-                <b>keyword_only</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>Keyword-only parameter.</p></li>
-              <li>
-                <b>var_keyword</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>Variadic keyword parameter.</p></li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b>positional_only</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>Positional-only parameter.</p>
+      </li>
+      <li class="field-body">
+        <b>positional_or_keyword</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>Positional or keyword parameter.</p>
+      </li>
+      <li class="field-body">
+        <b>var_positional</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>Variadic positional parameter.</p>
+      </li>
+      <li class="field-body">
+        <b>keyword_only</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>Keyword-only parameter.</p>
+      </li>
+      <li class="field-body">
+        <b>var_keyword</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>Variadic keyword parameter.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -9092,26 +8247,14 @@ Parameters        </code>
 
       <p>Initialize the parameters container.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>*parameters</b>
-                    (<code><a href="#griffe.dataclasses.Parameter">Parameter</a></code>)
-                – <p>The initial parameters to add to the container.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*parameters</b>
+            (<code><a href="#griffe.dataclasses.Parameter">Parameter</a></code>)
+        – <p>The initial parameters to add to the container.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
@@ -9159,26 +8302,14 @@ Parameters        </code>
 
       <p>Add a parameter to the container.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>parameter</b>
-                    (<code><a href="#griffe.dataclasses.Parameter">Parameter</a></code>)
-                – <p>The function parameter to add.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>parameter</b>
+            (<code><a href="#griffe.dataclasses.Parameter">Parameter</a></code>)
+        – <p>The function parameter to add.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>

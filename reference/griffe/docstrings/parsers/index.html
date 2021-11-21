@@ -1121,57 +1121,33 @@ Parser            (<a href="https://docs.python.org/3/library/enum.html#module-e
 
       <p>Parse the docstring.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>docstring</b>
-                    (<code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
-                – <p>The docstring to parse.</p>
-              </li>
-              <li>
-                <b>parser</b>
-                    (<code><a href="#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
-                – <p>The docstring parser to use. If None, return a single text section.</p>
-              </li>
-              <li>
-                <b>**options</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>The options accepted by the parser.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>docstring</b>
+            (<code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
+        – <p>The docstring to parse.</p>
+      </li>
+      <li class="field-body">
+        <b>parser</b>
+            (<code><a href="#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+        – <p>The docstring parser to use. If None, return a single text section.</p>
+      </li>
+      <li class="field-body">
+        <b>**options</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>The options accepted by the parser.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="../dataclasses/#griffe.docstrings.dataclasses.DocstringSection">DocstringSection</a>]</code>
-                –
-                <p>A list of docstring sections.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="../dataclasses/#griffe.docstrings.dataclasses.DocstringSection">DocstringSection</a>]</code>
+          –
+        <p>A list of docstring sections.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/parsers.py</code></summary>

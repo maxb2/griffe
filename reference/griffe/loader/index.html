@@ -1234,24 +1234,13 @@ AsyncGriffeLoader            (<a href="#griffe.loader._BaseGriffeLoader">_BaseGr
 
       <p>The asynchronous Griffe loader, allowing to load data from modules.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Attributes:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>extensions</b>
-                – <p>The extensions to use.</p></li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b>extensions</b>
+        – <p>The extensions to use.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
@@ -1480,52 +1469,28 @@ AsyncGriffeLoader            (<a href="#griffe.loader._BaseGriffeLoader">_BaseGr
 
       <p>Follow aliases: try to recursively resolve all found aliases.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>obj</b>
-                    (<code><a href="../dataclasses/#griffe.dataclasses.Object">Object</a></code>)
-                – <p>The object and its members to recurse on.</p>
-              </li>
-              <li>
-                <b>only_exported</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
-                – <p>Only try to resolve an alias if it is explicitely exported.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>obj</b>
+            (<code><a href="../dataclasses/#griffe.dataclasses.Object">Object</a></code>)
+        – <p>The object and its members to recurse on.</p>
+      </li>
+      <li class="field-body">
+        <b>only_exported</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
+        – <p>Only try to resolve an alias if it is explicitely exported.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-                –
-                <p>True if everything was resolved, False otherwise.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+          –
+        <p>True if everything was resolved, False otherwise.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
@@ -1603,57 +1568,33 @@ AsyncGriffeLoader            (<a href="#griffe.loader._BaseGriffeLoader">_BaseGr
 
       <p>Load a module.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>module</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
-                – <p>The module name or path.</p>
-              </li>
-              <li>
-                <b>submodules</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
-                – <p>Whether to recurse on the submodules.</p>
-              </li>
-              <li>
-                <b>search_paths</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
-                – <p>The paths to search into.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>module</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
+        – <p>The module name or path.</p>
+      </li>
+      <li class="field-body">
+        <b>submodules</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
+        – <p>Whether to recurse on the submodules.</p>
+      </li>
+      <li class="field-body">
+        <b>search_paths</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
+        – <p>The paths to search into.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="../dataclasses/#griffe.dataclasses.Module">Module</a></code>
-                –
-                <p>A module.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="../dataclasses/#griffe.dataclasses.Module">Module</a></code>
+          –
+        <p>A module.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
@@ -1732,24 +1673,13 @@ GriffeLoader            (<a href="#griffe.loader._BaseGriffeLoader">_BaseGriffeL
 
       <p>The Griffe loader, allowing to load data from modules.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Attributes:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>extensions</b>
-                – <p>The extensions to use.</p></li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b>extensions</b>
+        – <p>The extensions to use.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
@@ -1970,52 +1900,28 @@ GriffeLoader            (<a href="#griffe.loader._BaseGriffeLoader">_BaseGriffeL
 
       <p>Follow aliases: try to recursively resolve all found aliases.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>obj</b>
-                    (<code><a href="../dataclasses/#griffe.dataclasses.Object">Object</a></code>)
-                – <p>The object and its members to recurse on.</p>
-              </li>
-              <li>
-                <b>only_exported</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
-                – <p>Only try to resolve an alias if it is explicitely exported.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>obj</b>
+            (<code><a href="../dataclasses/#griffe.dataclasses.Object">Object</a></code>)
+        – <p>The object and its members to recurse on.</p>
+      </li>
+      <li class="field-body">
+        <b>only_exported</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
+        – <p>Only try to resolve an alias if it is explicitely exported.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-                –
-                <p>True if everything was resolved, False otherwise.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+          –
+        <p>True if everything was resolved, False otherwise.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
@@ -2093,57 +1999,33 @@ GriffeLoader            (<a href="#griffe.loader._BaseGriffeLoader">_BaseGriffeL
 
       <p>Load a module.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>module</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
-                – <p>The module name or path.</p>
-              </li>
-              <li>
-                <b>submodules</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
-                – <p>Whether to recurse on the submodules.</p>
-              </li>
-              <li>
-                <b>search_paths</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
-                – <p>The paths to search into.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>module</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
+        – <p>The module name or path.</p>
+      </li>
+      <li class="field-body">
+        <b>submodules</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
+        – <p>Whether to recurse on the submodules.</p>
+      </li>
+      <li class="field-body">
+        <b>search_paths</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
+        – <p>The paths to search into.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="../dataclasses/#griffe.dataclasses.Module">Module</a></code>
-                –
-                <p>A module.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="../dataclasses/#griffe.dataclasses.Module">Module</a></code>
+          –
+        <p>A module.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
@@ -2337,46 +2219,34 @@ _BaseGriffeLoader        </code>
 
       <p>Initialize the loader.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>extensions</b>
-                    (<code><a href="../extensions/#griffe.extensions.Extensions">Extensions</a> | None</code>)
-                – <p>The extensions to use.</p>
-              </li>
-              <li>
-                <b>docstring_parser</b>
-                    (<code><a href="../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
-                – <p>The docstring parser to use. By default, no parsing is done.</p>
-              </li>
-              <li>
-                <b>docstring_options</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
-                – <p>Additional docstring parsing options.</p>
-              </li>
-              <li>
-                <b>lines_collection</b>
-                    (<code><a href="../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
-                – <p>A collection of source code lines.</p>
-              </li>
-              <li>
-                <b>modules_collection</b>
-                    (<code><a href="../collections/#griffe.collections.ModulesCollection">ModulesCollection</a> | None</code>)
-                – <p>A collection of modules.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>extensions</b>
+            (<code><a href="../extensions/#griffe.extensions.Extensions">Extensions</a> | None</code>)
+        – <p>The extensions to use.</p>
+      </li>
+      <li class="field-body">
+        <b>docstring_parser</b>
+            (<code><a href="../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+        – <p>The docstring parser to use. By default, no parsing is done.</p>
+      </li>
+      <li class="field-body">
+        <b>docstring_options</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
+        – <p>Additional docstring parsing options.</p>
+      </li>
+      <li class="field-body">
+        <b>lines_collection</b>
+            (<code><a href="../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
+        – <p>A collection of source code lines.</p>
+      </li>
+      <li class="field-body">
+        <b>modules_collection</b>
+            (<code><a href="../collections/#griffe.collections.ModulesCollection">ModulesCollection</a> | None</code>)
+        – <p>A collection of modules.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
@@ -2464,52 +2334,28 @@ _BaseGriffeLoader        </code>
 
       <p>Find a module in a given list of paths or in <code>sys.path</code>.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>module_name</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The module name.</p>
-              </li>
-              <li>
-                <b>search_paths</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
-                – <p>The paths to search into.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>module_name</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The module name.</p>
+      </li>
+      <li class="field-body">
+        <b>search_paths</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
+        – <p>The paths to search into.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>
-                –
-                <p>The module file path.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>
+          –
+        <p>The module file path.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
@@ -2609,48 +2455,24 @@ _BaseGriffeLoader        </code>
 
       <p>Iterate on a module's submodules, if any.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>path</b>
-                    (<code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
-                – <p>The module path.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>path</b>
+            (<code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
+        – <p>The module path.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Yields:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/typing.html#typing.Iterator">Iterator</a>[NamePartsAndPathType]</code>
-                –
-                <p>This generator yields tuples containing the parts
+  <p>Yields:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/typing.html#typing.Iterator">Iterator</a>[NamePartsAndPathType]</code>
+          –
+        <p>This generator yields tuples containing the parts
 of the submodule name as well as its filepath.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
@@ -2736,48 +2558,24 @@ of the submodule name as well as its filepath.</p>
 
       <p>Get the module name and path from a path.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>path</b>
-                    (<code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
-                – <p>A directory or file path. Paths to <code>__init__.py</code> files
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>path</b>
+            (<code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
+        – <p>A directory or file path. Paths to <code>__init__.py</code> files
 will be resolved to their parent directory.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>]</code>
-                –
-                <p>The name of the module (or package) and its path.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>]</code>
+          –
+        <p>The name of the module (or package) and its path.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>

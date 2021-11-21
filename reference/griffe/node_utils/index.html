@@ -1181,52 +1181,28 @@
 
       <p>Extract a resolvable annotation.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>node</b>
-                    (<code><a href="https://docs.python.org/3/library/ast.html#ast.AST">Node</a></code>)
-                – <p>The annotation node.</p>
-              </li>
-              <li>
-                <b>parent</b>
-                    (<code><a href="../dataclasses/#griffe.dataclasses.Class">Class</a> | <a href="../dataclasses/#griffe.dataclasses.Module">Module</a></code>)
-                – <p>The parent used to resolve the name.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="https://docs.python.org/3/library/ast.html#ast.AST">Node</a></code>)
+        – <p>The annotation node.</p>
+      </li>
+      <li class="field-body">
+        <b>parent</b>
+            (<code><a href="../dataclasses/#griffe.dataclasses.Class">Class</a> | <a href="../dataclasses/#griffe.dataclasses.Module">Module</a></code>)
+        – <p>The parent used to resolve the name.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../expressions/#griffe.expressions.Name">Name</a> | <a href="../expressions/#griffe.expressions.Expression">Expression</a></code>
-                –
-                <p>A string or resovable name or expression.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../expressions/#griffe.expressions.Name">Name</a> | <a href="../expressions/#griffe.expressions.Expression">Expression</a></code>
+          –
+        <p>A string or resovable name or expression.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/node_utils.py</code></summary>
@@ -1274,52 +1250,28 @@
 
       <p>Extract a resolvable name for a given base class.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>node</b>
-                    (<code><a href="https://docs.python.org/3/library/ast.html#ast.AST">Node</a></code>)
-                – <p>The base class node.</p>
-              </li>
-              <li>
-                <b>parent</b>
-                    (<code><a href="../dataclasses/#griffe.dataclasses.Class">Class</a> | <a href="../dataclasses/#griffe.dataclasses.Module">Module</a></code>)
-                – <p>The parent used to resolve the name.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="https://docs.python.org/3/library/ast.html#ast.AST">Node</a></code>)
+        – <p>The base class node.</p>
+      </li>
+      <li class="field-body">
+        <b>parent</b>
+            (<code><a href="../dataclasses/#griffe.dataclasses.Class">Class</a> | <a href="../dataclasses/#griffe.dataclasses.Module">Module</a></code>)
+        – <p>The parent used to resolve the name.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="../expressions/#griffe.expressions.Name">Name</a> | <a href="../expressions/#griffe.expressions.Expression">Expression</a></code>
-                –
-                <p>A resovable name or expression.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="../expressions/#griffe.expressions.Name">Name</a> | <a href="../expressions/#griffe.expressions.Expression">Expression</a></code>
+          –
+        <p>A resovable name or expression.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/node_utils.py</code></summary>
@@ -1367,52 +1319,28 @@
 
       <p>Extract a docstring.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>node</b>
-                    (<code><a href="https://docs.python.org/3/library/ast.html#ast.AST">Node</a></code>)
-                – <p>The node to extract the docstring from.</p>
-              </li>
-              <li>
-                <b>strict</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
-                – <p>Whether to skip searching the body (functions).</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="https://docs.python.org/3/library/ast.html#ast.AST">Node</a></code>)
+        – <p>The node to extract the docstring from.</p>
+      </li>
+      <li class="field-body">
+        <b>strict</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
+        – <p>Whether to skip searching the body (functions).</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None, <a href="https://docs.python.org/3/library/functions.html#int">int</a> | None, <a href="https://docs.python.org/3/library/functions.html#int">int</a> | None]</code>
-                –
-                <p>A tuple with the value and line numbers of the docstring.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None, <a href="https://docs.python.org/3/library/functions.html#int">int</a> | None, <a href="https://docs.python.org/3/library/functions.html#int">int</a> | None]</code>
+          –
+        <p>A tuple with the value and line numbers of the docstring.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/node_utils.py</code></summary>
@@ -1488,47 +1416,23 @@
 
       <p>Extract names from an assignment node, only for instance attributes.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>node</b>
-                    (<code><a href="https://docs.python.org/3/library/ast.html#ast.AST">Node</a></code>)
-                – <p>The node to extract names from.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="https://docs.python.org/3/library/ast.html#ast.AST">Node</a></code>)
+        – <p>The node to extract names from.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
-                –
-                <p>A list of names.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
+          –
+        <p>A list of names.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/node_utils.py</code></summary>
@@ -1574,47 +1478,23 @@
 
       <p>Extract names from an assignment node.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>node</b>
-                    (<code><a href="https://docs.python.org/3/library/ast.html#ast.AST">Node</a></code>)
-                – <p>The node to extract names from.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="https://docs.python.org/3/library/ast.html#ast.AST">Node</a></code>)
+        – <p>The node to extract names from.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
-                –
-                <p>A list of names.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
+          –
+        <p>A list of names.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/node_utils.py</code></summary>
@@ -1660,58 +1540,34 @@
 
       <p>Extract the default value of a function parameter.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>node</b>
-                    (<code><a href="https://docs.python.org/3/library/ast.html#ast.AST">Node</a></code>)
-                – <p>The node to extract the default value from.</p>
-              </li>
-              <li>
-                <b>filepath</b>
-                    (<code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
-                – <p>The filepath in which the parameter is written.
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="https://docs.python.org/3/library/ast.html#ast.AST">Node</a></code>)
+        – <p>The node to extract the default value from.</p>
+      </li>
+      <li class="field-body">
+        <b>filepath</b>
+            (<code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
+        – <p>The filepath in which the parameter is written.
 It allows to retrieve the actual code directly from the lines collection.</p>
-              </li>
-              <li>
-                <b>lines_collection</b>
-                    (<code><a href="../collections/#griffe.collections.LinesCollection">LinesCollection</a></code>)
-                – <p>A collection of source code lines.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+      </li>
+      <li class="field-body">
+        <b>lines_collection</b>
+            (<code><a href="../collections/#griffe.collections.LinesCollection">LinesCollection</a></code>)
+        – <p>A collection of source code lines.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>
-                –
-                <p>The default value as a string.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>
+          –
+        <p>The default value as a string.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/node_utils.py</code></summary>
@@ -1781,47 +1637,23 @@ It allows to retrieve the actual code directly from the lines collection.</p>
 
       <p>Extract a complex value as a string.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>node</b>
-                    (<code><a href="https://docs.python.org/3/library/ast.html#ast.AST">Node</a></code>)
-                – <p>The node to extract the value from.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="https://docs.python.org/3/library/ast.html#ast.AST">Node</a></code>)
+        – <p>The node to extract the value from.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                –
-                <p>The unparsed code of the node.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+          –
+        <p>The unparsed code of the node.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/node_utils.py</code></summary>

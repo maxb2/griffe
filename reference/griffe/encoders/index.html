@@ -1248,51 +1248,39 @@ the <a href="https://docs.python.org/3/library/json.html#json.dump"><code>json.d
 
       <p>Initialize the encoder.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>*args</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>See <a href="https://docs.python.org/3/library/json.html#json.JSONEncoder"><code>json.JSONEncoder</code></a>.</p>
-              </li>
-              <li>
-                <b>full</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
-                – <p>Whether to dump full data or base data.
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*args</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>See <a href="https://docs.python.org/3/library/json.html#json.JSONEncoder"><code>json.JSONEncoder</code></a>.</p>
+      </li>
+      <li class="field-body">
+        <b>full</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
+        – <p>Whether to dump full data or base data.
 If you plan to reload the data in Python memory
 using the <a href="#griffe.encoders.decoder">decoder</a>,
 you don't need the full data as it can be infered again
 using the base data. If you want to feed a non-Python
 tool instead, dump the full data.</p>
-              </li>
-              <li>
-                <b>docstring_parser</b>
-                    (<code><a href="../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
-                – <p>The docstring parser to use. By default, no parsing is done.</p>
-              </li>
-              <li>
-                <b>docstring_options</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
-                – <p>Additional docstring parsing options.</p>
-              </li>
-              <li>
-                <b>**kwargs</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>See <a href="https://docs.python.org/3/library/json.html#json.JSONEncoder"><code>json.JSONEncoder</code></a>.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+      </li>
+      <li class="field-body">
+        <b>docstring_parser</b>
+            (<code><a href="../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+        – <p>The docstring parser to use. By default, no parsing is done.</p>
+      </li>
+      <li class="field-body">
+        <b>docstring_options</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
+        – <p>Additional docstring parsing options.</p>
+      </li>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>See <a href="https://docs.python.org/3/library/json.html#json.JSONEncoder"><code>json.JSONEncoder</code></a>.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/encoders.py</code></summary>
@@ -1370,47 +1358,23 @@ tool instead, dump the full data.</p>
 
       <p>Return a serializable representation of the given object.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>obj</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>The object to serialize.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>obj</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>The object to serialize.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>
-                –
-                <p>A serializable representation.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>
+          –
+        <p>A serializable representation.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/encoders.py</code></summary>
@@ -1475,47 +1439,23 @@ tool instead, dump the full data.</p>
       <p>Decode dictionaries as data classes.</p>
 <p>The <a href="https://docs.python.org/3/library/json.html#json.loads"><code>json.loads</code></a> method walks the tree from bottom to top.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>obj_dict</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>)
-                – <p>The dictionary to decode.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>obj_dict</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>)
+        – <p>The dictionary to decode.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | <a href="../dataclasses/#griffe.dataclasses.Module">Module</a> | <a href="../dataclasses/#griffe.dataclasses.Class">Class</a> | <a href="../dataclasses/#griffe.dataclasses.Function">Function</a> | <a href="../dataclasses/#griffe.dataclasses.Attribute">Attribute</a></code>
-                –
-                <p>An instance of a data class.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | <a href="../dataclasses/#griffe.dataclasses.Module">Module</a> | <a href="../dataclasses/#griffe.dataclasses.Class">Class</a> | <a href="../dataclasses/#griffe.dataclasses.Function">Function</a> | <a href="../dataclasses/#griffe.dataclasses.Attribute">Attribute</a></code>
+          –
+        <p>An instance of a data class.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/encoders.py</code></summary>

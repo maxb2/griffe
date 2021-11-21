@@ -1051,82 +1051,58 @@ populating its members recursively, by using a custom <a href="https://docs.pyth
 
       <p>Parse and visit a module file.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>module_name</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The module name (as when importing [from] it).</p>
-              </li>
-              <li>
-                <b>filepath</b>
-                    (<code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
-                – <p>The module file path.</p>
-              </li>
-              <li>
-                <b>code</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The module contents.</p>
-              </li>
-              <li>
-                <b>extensions</b>
-                    (<code><a href="../extensions/#griffe.extensions.Extensions">Extensions</a> | None</code>)
-                – <p>The extensions to use when visiting the AST.</p>
-              </li>
-              <li>
-                <b>parent</b>
-                    (<code><a href="../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>)
-                – <p>The optional parent of this module.</p>
-              </li>
-              <li>
-                <b>docstring_parser</b>
-                    (<code><a href="../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
-                – <p>The docstring parser to use. By default, no parsing is done.</p>
-              </li>
-              <li>
-                <b>docstring_options</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
-                – <p>Additional docstring parsing options.</p>
-              </li>
-              <li>
-                <b>lines_collection</b>
-                    (<code><a href="../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
-                – <p>A collection of source code lines.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>module_name</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The module name (as when importing [from] it).</p>
+      </li>
+      <li class="field-body">
+        <b>filepath</b>
+            (<code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
+        – <p>The module file path.</p>
+      </li>
+      <li class="field-body">
+        <b>code</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The module contents.</p>
+      </li>
+      <li class="field-body">
+        <b>extensions</b>
+            (<code><a href="../extensions/#griffe.extensions.Extensions">Extensions</a> | None</code>)
+        – <p>The extensions to use when visiting the AST.</p>
+      </li>
+      <li class="field-body">
+        <b>parent</b>
+            (<code><a href="../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>)
+        – <p>The optional parent of this module.</p>
+      </li>
+      <li class="field-body">
+        <b>docstring_parser</b>
+            (<code><a href="../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+        – <p>The docstring parser to use. By default, no parsing is done.</p>
+      </li>
+      <li class="field-body">
+        <b>docstring_options</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
+        – <p>Additional docstring parsing options.</p>
+      </li>
+      <li class="field-body">
+        <b>lines_collection</b>
+            (<code><a href="../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
+        – <p>A collection of source code lines.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="../dataclasses/#griffe.dataclasses.Module">Module</a></code>
-                –
-                <p>The module, with its members populated.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="../dataclasses/#griffe.dataclasses.Module">Module</a></code>
+          –
+        <p>The module, with its members populated.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/visitor.py</code></summary>

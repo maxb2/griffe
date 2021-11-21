@@ -1225,26 +1225,14 @@ Each name in the expression can be resolved to its full name within its scope.</
 
       <p>Initialize the expression.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>*values</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="#griffe.expressions.Expression">Expression</a> | <a href="#griffe.expressions.Name">Name</a></code>)
-                – <p>The initial values of the expression.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*values</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="#griffe.expressions.Expression">Expression</a> | <a href="#griffe.expressions.Name">Name</a></code>)
+        – <p>The initial values of the expression.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/expressions.py</code></summary>
@@ -1299,25 +1287,14 @@ Name        </code>
 
       <p>This class represents a Python object identified by a name in a given scope.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Attributes:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>source</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The name as written in the source code.</p></li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b>source</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The name as written in the source code.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/expressions.py</code></summary>
@@ -1466,31 +1443,19 @@ Name        </code>
 
       <p>Initialize the name.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>source</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The name as written in the source code.</p>
-              </li>
-              <li>
-                <b>full</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/typing.html#typing.Callable">Callable</a></code>)
-                – <p>The full, resolved name in the given scope, or a callable to resolve it later.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>source</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The name as written in the source code.</p>
+      </li>
+      <li class="field-body">
+        <b>full</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/typing.html#typing.Callable">Callable</a></code>)
+        – <p>The full, resolved name in the given scope, or a callable to resolve it later.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/expressions.py</code></summary>
@@ -1546,47 +1511,23 @@ Name        </code>
 
       <p>Return this name's data as a dictionary.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>**kwargs</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
-                – <p>Additional serialization options.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>Additional serialization options.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
-                –
-                <p>A dictionary.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+          –
+        <p>A dictionary.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/expressions.py</code></summary>
@@ -1635,26 +1576,14 @@ Name        </code>
 If a callable was given, call it and return its result.
 It the name cannot be resolved, return the source.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                –
-                <p>The resolved name or the source.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+          –
+        <p>The resolved name or the source.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/expressions.py</code></summary>

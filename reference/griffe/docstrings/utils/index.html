@@ -1048,79 +1048,43 @@
 
       <p>Create and return a warn function.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>name</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The logger name.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>name</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The logger name.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/typing.html#typing.Callable">Callable</a>[[<a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a>, <a href="https://docs.python.org/3/library/functions.html#int">int</a>, <a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>], None]</code>
-                –
-                <p>A function used to log parsing warnings.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/typing.html#typing.Callable">Callable</a>[[<a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a>, <a href="https://docs.python.org/3/library/functions.html#int">int</a>, <a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>], None]</code>
+          –
+        <p>A function used to log parsing warnings.</p>
+      </li>
+  </ul>
       <p>This function logs a warning message by prefixing it with the filepath and line number.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters of the returned function:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>docstring</b>
-                    (<code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
-                – <p>The docstring object.</p>
-              </li>
-              <li>
-                <b>offset</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
-                – <p>The offset in the docstring lines.</p>
-              </li>
-              <li>
-                <b>message</b>
-                    (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-                – <p>The message to log.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters of the returned function:</p>
+  <ul>
+      <li class="field-body">
+        <b>docstring</b>
+            (<code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
+        – <p>The docstring object.</p>
+      </li>
+      <li class="field-body">
+        <b>offset</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
+        – <p>The offset in the docstring lines.</p>
+      </li>
+      <li class="field-body">
+        <b>message</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The message to log.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/utils.py</code></summary>

@@ -1299,26 +1299,14 @@ Extension            (_BaseVisitor)
 
       <p>Initialize the visitor extension.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>main_visitor</b>
-                    (<code>MainVisitor</code>)
-                – <p>The main visitor.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>main_visitor</b>
+            (<code>MainVisitor</code>)
+        – <p>The main visitor.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/extensions/base.py</code></summary>
@@ -1570,26 +1558,14 @@ Extensions        </code>
 
       <p>Initialize the extensions container.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>*extensions_classes</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Type">Type</a>[Extension]</code>)
-                – <p>The extensions to add.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*extensions_classes</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Type">Type</a>[Extension]</code>)
+        – <p>The extensions to add.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/extensions/base.py</code></summary>
@@ -1631,26 +1607,14 @@ Extensions        </code>
 
       <p>Add visitor extensions to this container.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>*extensions_classes</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Type">Type</a>[Extension]</code>)
-                – <p>The extensions to add.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*extensions_classes</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Type">Type</a>[Extension]</code>)
+        – <p>The extensions to add.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/extensions/base.py</code></summary>
@@ -1690,47 +1654,23 @@ Extensions        </code>
 
       <p>Clear and instantiate the visitor classes.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>main_visitor</b>
-                    (<code>MainVisitor</code>)
-                – <p>The main visitor, leading the visit.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>main_visitor</b>
+            (<code>MainVisitor</code>)
+        – <p>The main visitor, leading the visit.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code>Extensions</code>
-                –
-                <p>Self, conveniently.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>Extensions</code>
+          –
+        <p>Self, conveniently.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/extensions/base.py</code></summary>
@@ -1788,47 +1728,23 @@ Extensions        </code>
 
       <p>Return the visitors that run at the given time.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>when</b>
-                    (<code>When</code>)
-                – <p>The selected time.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>when</b>
+            (<code>When</code>)
+        – <p>The selected time.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[Extension]</code>
-                –
-                <p>Visitors.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[Extension]</code>
+          –
+        <p>Visitors.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/extensions/base.py</code></summary>
@@ -1874,26 +1790,14 @@ Extensions        </code>
 
       <p>Return the visitors that run when the children visit starts.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[Extension]</code>
-                –
-                <p>Visitors.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[Extension]</code>
+          –
+        <p>Visitors.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/extensions/base.py</code></summary>
@@ -1935,26 +1839,14 @@ Extensions        </code>
 
       <p>Return the visitors that run when the children visit stops.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[Extension]</code>
-                –
-                <p>Visitors.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[Extension]</code>
+          –
+        <p>Visitors.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/extensions/base.py</code></summary>
@@ -1996,26 +1888,14 @@ Extensions        </code>
 
       <p>Return the visitors that run when the visit starts.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[Extension]</code>
-                –
-                <p>Visitors.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[Extension]</code>
+          –
+        <p>Visitors.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/extensions/base.py</code></summary>
@@ -2057,26 +1937,14 @@ Extensions        </code>
 
       <p>Return the visitors that run when the visit stops.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[Extension]</code>
-                –
-                <p>Visitors.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[Extension]</code>
+          –
+        <p>Visitors.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/extensions/base.py</code></summary>
@@ -2131,37 +1999,29 @@ When            (<a href="https://docs.python.org/3/library/enum.html#module-enu
 
       <p>This enumeration contains the different times at which an extension is used.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Attributes:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>visit_starts</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
-                – <p>For each node, before starting the visit.</p></li>
-              <li>
-                <b>children_visit_starts</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
-                – <p>For each node, after the visit has started, and before starting to visit children.</p></li>
-              <li>
-                <b>children_visit_stops</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
-                – <p>For each node, after the children have been visited, and before finishing the visit.</p></li>
-              <li>
-                <b>visit_stops</b>
-                    (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
-                – <p>For each node, after finishing the visit.</p></li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b>visit_starts</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
+        – <p>For each node, before starting the visit.</p>
+      </li>
+      <li class="field-body">
+        <b>children_visit_starts</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
+        – <p>For each node, after the visit has started, and before starting to visit children.</p>
+      </li>
+      <li class="field-body">
+        <b>children_visit_stops</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
+        – <p>For each node, after the children have been visited, and before finishing the visit.</p>
+      </li>
+      <li class="field-body">
+        <b>visit_stops</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
+        – <p>For each node, after finishing the visit.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/extensions/base.py</code></summary>
@@ -2236,47 +2096,23 @@ When            (<a href="https://docs.python.org/3/library/enum.html#module-enu
 
       <p>Load configured extensions.</p>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Parameters:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                <b>exts</b>
-                    (<code><a href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | <a href="https://docs.python.org/3/library/typing.html#typing.Type">Type</a>[Extension]]</code>)
-                – <p>A sequence of extension, with potential configuration options.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>exts</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | <a href="https://docs.python.org/3/library/typing.html#typing.Type">Type</a>[Extension]]</code>)
+        – <p>A sequence of extension, with potential configuration options.</p>
+      </li>
+  </ul>
 
-  <table class="field-list">
-    <colgroup>
-      <col class="field-name" />
-      <col class="field-body" />
-    </colgroup>
-    <tbody valign="top">
-      <tr class="field">
-        <th class="field-name">Returns:</th>
-        <td class="field-body">
-          <ul class="first simple">
-              <li>
-                    <code>Extensions</code>
-                –
-                <p>An extensions container.</p>
-              </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>Extensions</code>
+          –
+        <p>An extensions container.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/extensions/base.py</code></summary>
