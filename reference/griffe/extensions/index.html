@@ -2162,8 +2162,8 @@ When            (<a href="https://docs.python.org/3/library/enum.html#module-enu
     <span class="n">extensions</span> <span class="o">=</span> <span class="n">Extensions</span><span class="p">()</span>
 
     <span class="k">for</span> <span class="n">extension_item</span> <span class="ow">in</span> <span class="n">exts</span><span class="p">:</span>
-        <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">extension_item</span><span class="p">,</span> <span class="n">Extension</span><span class="p">):</span>  <span class="c1"># type: ignore</span>
-            <span class="n">extensions</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">extension_item</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+        <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">extension_item</span><span class="p">,</span> <span class="n">Extension</span><span class="p">):</span>  <span class="c1"># type: ignore[arg-type]</span>
+            <span class="n">extensions</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">extension_item</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
             <span class="k">continue</span>
 
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">extension_item</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
@@ -2173,15 +2173,15 @@ When            (<a href="https://docs.python.org/3/library/enum.html#module-enu
                 <span class="n">ext_module</span> <span class="o">=</span> <span class="nb">__import__</span><span class="p">(</span><span class="n">extension_item</span><span class="p">)</span>
             <span class="n">options</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">extension_item</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-            <span class="n">import_path</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">extension_item</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>  <span class="c1"># type: ignore</span>
+            <span class="n">import_path</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">extension_item</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>  <span class="c1"># type: ignore[call-overload]</span>
             <span class="k">if</span> <span class="n">import_path</span> <span class="ow">in</span> <span class="n">builtin_extensions</span><span class="p">:</span>
                 <span class="n">ext_module</span> <span class="o">=</span> <span class="n">builtin_extensions</span><span class="p">[</span><span class="n">import_path</span><span class="p">]</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">ext_module</span> <span class="o">=</span> <span class="nb">__import__</span><span class="p">(</span><span class="n">import_path</span><span class="p">)</span>
-            <span class="n">options</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">extension_item</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>  <span class="c1"># type: ignore</span>
+            <span class="n">options</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">extension_item</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>  <span class="c1"># type: ignore[call-overload]</span>
 
         <span class="c1"># TODO: handle AttributeError</span>
-        <span class="n">extension</span> <span class="o">=</span> <span class="n">ext_module</span><span class="o">.</span><span class="n">get_extension</span><span class="p">(</span><span class="o">**</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+        <span class="n">extension</span> <span class="o">=</span> <span class="n">ext_module</span><span class="o">.</span><span class="n">get_extension</span><span class="p">(</span><span class="o">**</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[attr-defined]</span>
         <span class="n">extensions</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">extension</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">extensions</span>

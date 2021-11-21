@@ -2360,7 +2360,7 @@ but were imported from another module.</p>
 <span class="sd">        Returns:</span>
 <span class="sd">            A dotted path.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>  <span class="c1"># type: ignore  # we assume there&#39;s always a parent</span>
+        <span class="k">return</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>  <span class="c1"># type: ignore[union-attr]  # we assume there&#39;s always a parent</span>
 
     <span class="nd">@cached_property</span>
     <span class="k">def</span> <span class="nf">modules_collection</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ModulesCollection</span><span class="p">:</span>
@@ -2370,7 +2370,7 @@ but were imported from another module.</p>
 <span class="sd">            A modules collection.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># no need to forward to the target</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">modules_collection</span>  <span class="c1"># type: ignore  # we assume there&#39;s always a parent</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">modules_collection</span>  <span class="c1"># type: ignore[union-attr]  # we assume there&#39;s always a parent</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">target</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Object</span> <span class="o">|</span> <span class="n">Alias</span><span class="p">:</span>
@@ -2384,7 +2384,7 @@ but were imported from another module.</p>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolved</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">resolve_target</span><span class="p">()</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target</span>  <span class="c1"># type: ignore  # cannot return None, exception is raised</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target</span>  <span class="c1"># type: ignore[return-value]  # cannot return None, exception is raised</span>
 
     <span class="k">def</span> <span class="nf">resolve_target</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Resolve the target.</span>
@@ -2767,7 +2767,7 @@ If it's an object, or even another alias, the target is immediately set.</p>
 <span class="sd">        A modules collection.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># no need to forward to the target</span>
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">modules_collection</span>  <span class="c1"># type: ignore  # we assume there&#39;s always a parent</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">modules_collection</span>  <span class="c1"># type: ignore[union-attr]  # we assume there&#39;s always a parent</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -2816,7 +2816,7 @@ If it's an object, or even another alias, the target is immediately set.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">        A dotted path.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>  <span class="c1"># type: ignore  # we assume there&#39;s always a parent</span>
+    <span class="k">return</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>  <span class="c1"># type: ignore[union-attr]  # we assume there&#39;s always a parent</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -2978,7 +2978,7 @@ a lookup is done using the modules collection to find the target.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolved</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">resolve_target</span><span class="p">()</span>
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target</span>  <span class="c1"># type: ignore  # cannot return None, exception is raised</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target</span>  <span class="c1"># type: ignore[return-value]  # cannot return None, exception is raised</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -3079,7 +3079,7 @@ Attribute            (<a href="#griffe.dataclasses.Object">Object</a>)
         <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">value</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">annotation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">annotation</span>
 
-    <span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore</span>
+    <span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
         <span class="sd">&quot;&quot;&quot;Return this function&#39;s data as a dictionary.</span>
 
 <span class="sd">        Parameters:</span>
@@ -3244,7 +3244,7 @@ Attribute            (<a href="#griffe.dataclasses.Object">Object</a>)
 <span class="normal"> 999</span>
 <span class="normal">1000</span>
 <span class="normal">1001</span>
-<span class="normal">1002</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore</span>
+<span class="normal">1002</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
     <span class="sd">&quot;&quot;&quot;Return this function&#39;s data as a dictionary.</span>
 
 <span class="sd">    Parameters:</span>
@@ -3357,7 +3357,7 @@ Class            (<a href="#griffe.dataclasses.Object">Object</a>)
         <span class="bp">self</span><span class="o">.</span><span class="n">bases</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span><span class="p">]</span> <span class="o">=</span> <span class="n">bases</span> <span class="ow">or</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">decorators</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Decorator</span><span class="p">]</span> <span class="o">=</span> <span class="n">decorators</span> <span class="ow">or</span> <span class="p">[]</span>
 
-    <span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore</span>
+    <span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
         <span class="sd">&quot;&quot;&quot;Return this class&#39; data as a dictionary.</span>
 
 <span class="sd">        Parameters:</span>
@@ -3518,7 +3518,7 @@ Class            (<a href="#griffe.dataclasses.Object">Object</a>)
 <span class="normal">915</span>
 <span class="normal">916</span>
 <span class="normal">917</span>
-<span class="normal">918</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore</span>
+<span class="normal">918</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
     <span class="sd">&quot;&quot;&quot;Return this class&#39; data as a dictionary.</span>
 
 <span class="sd">    Parameters:</span>
@@ -3829,7 +3829,7 @@ Docstring        </code>
       </li>
       <li class="field-body">
         <b>parent</b>
-            (<code><a href="#griffe.dataclasses.Module">Module</a> | <a href="#griffe.dataclasses.Class">Class</a> | <a href="#griffe.dataclasses.Function">Function</a> | <a href="#griffe.dataclasses.Attribute">Attribute</a> | None</code>)
+            (<code><a href="#griffe.dataclasses.Object">Object</a> | None</code>)
         – <p>The parent object on which this docstring is attached.</p>
       </li>
   </ul>
@@ -3941,7 +3941,7 @@ Docstring        </code>
         <span class="o">*</span><span class="p">,</span>
         <span class="n">lineno</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">endlineno</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">parent</span><span class="p">:</span> <span class="n">Module</span> <span class="o">|</span> <span class="n">Class</span> <span class="o">|</span> <span class="n">Function</span> <span class="o">|</span> <span class="n">Attribute</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">parent</span><span class="p">:</span> <span class="n">Object</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">parser</span><span class="p">:</span> <span class="n">Parser</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">parser_options</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -3958,7 +3958,7 @@ Docstring        </code>
         <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">cleandoc</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lineno</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">lineno</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">endlineno</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">endlineno</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">:</span> <span class="n">Module</span> <span class="o">|</span> <span class="n">Class</span> <span class="o">|</span> <span class="n">Function</span> <span class="o">|</span> <span class="n">Attribute</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">parent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">:</span> <span class="n">Object</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">parent</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="p">:</span> <span class="n">Parser</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">parser</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">parser_options</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">parser_options</span> <span class="ow">or</span> <span class="p">{}</span>
 
@@ -4070,7 +4070,7 @@ Docstring        </code>
       </li>
       <li class="field-body">
         <b>parent</b>
-            (<code><a href="#griffe.dataclasses.Module">Module</a> | <a href="#griffe.dataclasses.Class">Class</a> | <a href="#griffe.dataclasses.Function">Function</a> | <a href="#griffe.dataclasses.Attribute">Attribute</a> | None</code>)
+            (<code><a href="#griffe.dataclasses.Object">Object</a> | None</code>)
         – <p>The parent object on which this docstring is attached.</p>
       </li>
       <li class="field-body">
@@ -4118,7 +4118,7 @@ Docstring        </code>
     <span class="o">*</span><span class="p">,</span>
     <span class="n">lineno</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">endlineno</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">parent</span><span class="p">:</span> <span class="n">Module</span> <span class="o">|</span> <span class="n">Class</span> <span class="o">|</span> <span class="n">Function</span> <span class="o">|</span> <span class="n">Attribute</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">parent</span><span class="p">:</span> <span class="n">Object</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">parser</span><span class="p">:</span> <span class="n">Parser</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">parser_options</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -4135,7 +4135,7 @@ Docstring        </code>
     <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">cleandoc</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">lineno</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">lineno</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">endlineno</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">endlineno</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">:</span> <span class="n">Module</span> <span class="o">|</span> <span class="n">Class</span> <span class="o">|</span> <span class="n">Function</span> <span class="o">|</span> <span class="n">Attribute</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">parent</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">:</span> <span class="n">Object</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">parent</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="p">:</span> <span class="n">Parser</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">parser</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">parser_options</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">parser_options</span> <span class="ow">or</span> <span class="p">{}</span>
 </code></pre></div>
@@ -4503,7 +4503,7 @@ Function            (<a href="#griffe.dataclasses.Object">Object</a>)
         <span class="bp">self</span><span class="o">.</span><span class="n">returns</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">returns</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">decorators</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Decorator</span><span class="p">]</span> <span class="o">=</span> <span class="n">decorators</span> <span class="ow">or</span> <span class="p">[]</span>
 
-    <span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore</span>
+    <span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
         <span class="sd">&quot;&quot;&quot;Return this function&#39;s data as a dictionary.</span>
 
 <span class="sd">        Parameters:</span>
@@ -4678,7 +4678,7 @@ Function            (<a href="#griffe.dataclasses.Object">Object</a>)
 <span class="normal">958</span>
 <span class="normal">959</span>
 <span class="normal">960</span>
-<span class="normal">961</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore</span>
+<span class="normal">961</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
     <span class="sd">&quot;&quot;&quot;Return this function&#39;s data as a dictionary.</span>
 
 <span class="sd">    Parameters:</span>
@@ -4956,7 +4956,7 @@ Module            (<a href="#griffe.dataclasses.Object">Object</a>)
 <span class="sd">        Returns:</span>
 <span class="sd">            True or False.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;__init__.py&quot;</span>  <span class="c1"># type: ignore</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;__init__.py&quot;</span>
 
     <span class="nd">@cached_property</span>
     <span class="k">def</span> <span class="nf">is_package</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
@@ -4995,11 +4995,11 @@ Module            (<a href="#griffe.dataclasses.Object">Object</a>)
         <span class="k">return</span> <span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">parent</span>
             <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">is_dir</span><span class="p">()</span>
-            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">is_namespace_package</span>  <span class="c1"># type: ignore  # modules parents are always modules</span>
-            <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">is_namespace_subpackage</span>  <span class="c1"># type: ignore  # modules parents are always modules</span>
+            <span class="ow">and</span> <span class="n">cast</span><span class="p">(</span><span class="n">Module</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span><span class="o">.</span><span class="n">is_namespace_package</span>
+            <span class="ow">or</span> <span class="n">cast</span><span class="p">(</span><span class="n">Module</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span><span class="o">.</span><span class="n">is_namespace_subpackage</span>
         <span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore</span>
+    <span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
         <span class="sd">&quot;&quot;&quot;Return this module&#39;s data as a dictionary.</span>
 
 <span class="sd">        Parameters:</span>
@@ -5137,7 +5137,7 @@ Module            (<a href="#griffe.dataclasses.Object">Object</a>)
 <span class="normal">876</span>
 <span class="normal">877</span>
 <span class="normal">878</span>
-<span class="normal">879</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore</span>
+<span class="normal">879</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
     <span class="sd">&quot;&quot;&quot;Return this module&#39;s data as a dictionary.</span>
 
 <span class="sd">    Parameters:</span>
@@ -5246,7 +5246,7 @@ Module            (<a href="#griffe.dataclasses.Object">Object</a>)
 <span class="sd">    Returns:</span>
 <span class="sd">        True or False.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;__init__.py&quot;</span>  <span class="c1"># type: ignore</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;__init__.py&quot;</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -5352,8 +5352,8 @@ Module            (<a href="#griffe.dataclasses.Object">Object</a>)
     <span class="k">return</span> <span class="p">(</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">parent</span>
         <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">is_dir</span><span class="p">()</span>
-        <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">is_namespace_package</span>  <span class="c1"># type: ignore  # modules parents are always modules</span>
-        <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">is_namespace_subpackage</span>  <span class="c1"># type: ignore  # modules parents are always modules</span>
+        <span class="ow">and</span> <span class="n">cast</span><span class="p">(</span><span class="n">Module</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span><span class="o">.</span><span class="n">is_namespace_package</span>
+        <span class="ow">or</span> <span class="n">cast</span><span class="p">(</span><span class="n">Module</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span><span class="o">.</span><span class="n">is_namespace_subpackage</span>
     <span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
@@ -5937,7 +5937,7 @@ Object            (<a href="../mixins/#griffe.mixins.GetMembersMixin">GetMembers
 
         <span class="c1"># attach the docstring to this object</span>
         <span class="k">if</span> <span class="n">docstring</span><span class="p">:</span>
-            <span class="n">docstring</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span>  <span class="c1"># type: ignore</span>
+            <span class="n">docstring</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">!r}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">lineno</span><span class="si">!r}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">endlineno</span><span class="si">!r}</span><span class="s2">)&gt;&quot;</span>
@@ -6018,7 +6018,7 @@ Object            (<a href="../mixins/#griffe.mixins.GetMembersMixin">GetMembers
 <span class="sd">        Returns:</span>
 <span class="sd">            A dictionary of modules.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">member</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">MODULE</span><span class="p">}</span>  <span class="c1"># type: ignore</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">member</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">MODULE</span><span class="p">}</span>  <span class="c1"># type: ignore[misc]</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">classes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Class</span><span class="p">]:</span>
@@ -6027,7 +6027,7 @@ Object            (<a href="../mixins/#griffe.mixins.GetMembersMixin">GetMembers
 <span class="sd">        Returns:</span>
 <span class="sd">            A dictionary of classes.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">member</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">CLASS</span><span class="p">}</span>  <span class="c1"># type: ignore</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">member</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">CLASS</span><span class="p">}</span>  <span class="c1"># type: ignore[misc]</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">functions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Function</span><span class="p">]:</span>
@@ -6036,7 +6036,7 @@ Object            (<a href="../mixins/#griffe.mixins.GetMembersMixin">GetMembers
 <span class="sd">        Returns:</span>
 <span class="sd">            A dictionary of functions.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">member</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">FUNCTION</span><span class="p">}</span>  <span class="c1"># type: ignore</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">member</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">FUNCTION</span><span class="p">}</span>  <span class="c1"># type: ignore[misc]</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Attribute</span><span class="p">]:</span>
@@ -6045,7 +6045,7 @@ Object            (<a href="../mixins/#griffe.mixins.GetMembersMixin">GetMembers
 <span class="sd">        Returns:</span>
 <span class="sd">            A dictionary of attributes.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">member</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">ATTRIBUTE</span><span class="p">}</span>  <span class="c1"># type: ignore</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">member</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">ATTRIBUTE</span><span class="p">}</span>  <span class="c1"># type: ignore[misc]</span>
 
     <span class="nd">@cached_property</span>
     <span class="k">def</span> <span class="nf">module</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
@@ -6073,7 +6073,7 @@ Object            (<a href="../mixins/#griffe.mixins.GetMembersMixin">GetMembers
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">module</span>
         <span class="k">while</span> <span class="n">module</span><span class="o">.</span><span class="n">parent</span><span class="p">:</span>
-            <span class="n">module</span> <span class="o">=</span> <span class="n">module</span><span class="o">.</span><span class="n">parent</span>  <span class="c1"># type: ignore</span>
+            <span class="n">module</span> <span class="o">=</span> <span class="n">module</span><span class="o">.</span><span class="n">parent</span>  <span class="c1"># type: ignore[assignment]  # always a module</span>
         <span class="k">return</span> <span class="n">module</span>
 
     <span class="nd">@cached_property</span>
@@ -6097,7 +6097,7 @@ Object            (<a href="../mixins/#griffe.mixins.GetMembersMixin">GetMembers
 <span class="sd">        Returns:</span>
 <span class="sd">            A file path.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">package</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">package</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span>
 
     <span class="nd">@cached_property</span>
     <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
@@ -6390,7 +6390,7 @@ Object            (<a href="../mixins/#griffe.mixins.GetMembersMixin">GetMembers
 
     <span class="c1"># attach the docstring to this object</span>
     <span class="k">if</span> <span class="n">docstring</span><span class="p">:</span>
-        <span class="n">docstring</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span>  <span class="c1"># type: ignore</span>
+        <span class="n">docstring</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -6559,7 +6559,7 @@ Object            (<a href="../mixins/#griffe.mixins.GetMembersMixin">GetMembers
 <span class="sd">    Returns:</span>
 <span class="sd">        A dictionary of attributes.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">member</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">ATTRIBUTE</span><span class="p">}</span>  <span class="c1"># type: ignore</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">member</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">ATTRIBUTE</span><span class="p">}</span>  <span class="c1"># type: ignore[misc]</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -6666,7 +6666,7 @@ Object            (<a href="../mixins/#griffe.mixins.GetMembersMixin">GetMembers
 <span class="sd">    Returns:</span>
 <span class="sd">        A dictionary of classes.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">member</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">CLASS</span><span class="p">}</span>  <span class="c1"># type: ignore</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">member</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">CLASS</span><span class="p">}</span>  <span class="c1"># type: ignore[misc]</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -6852,7 +6852,7 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">        A dictionary of functions.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">member</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">FUNCTION</span><span class="p">}</span>  <span class="c1"># type: ignore</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">member</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">FUNCTION</span><span class="p">}</span>  <span class="c1"># type: ignore[misc]</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -7306,7 +7306,7 @@ we consider the member to be <em>implicitely</em> exported.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">        A dictionary of modules.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">member</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">MODULE</span><span class="p">}</span>  <span class="c1"># type: ignore</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">member</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">MODULE</span><span class="p">}</span>  <span class="c1"># type: ignore[misc]</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -7423,7 +7423,7 @@ we consider the member to be <em>implicitely</em> exported.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">module</span>
     <span class="k">while</span> <span class="n">module</span><span class="o">.</span><span class="n">parent</span><span class="p">:</span>
-        <span class="n">module</span> <span class="o">=</span> <span class="n">module</span><span class="o">.</span><span class="n">parent</span>  <span class="c1"># type: ignore</span>
+        <span class="n">module</span> <span class="o">=</span> <span class="n">module</span><span class="o">.</span><span class="n">parent</span>  <span class="c1"># type: ignore[assignment]  # always a module</span>
     <span class="k">return</span> <span class="n">module</span>
 </code></pre></div>
 </td></tr></table>
@@ -7527,7 +7527,7 @@ we consider the member to be <em>implicitely</em> exported.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">        A file path.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">package</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">package</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
         </details>

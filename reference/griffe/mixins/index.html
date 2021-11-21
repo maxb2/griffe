@@ -1182,8 +1182,8 @@ The method expects a <code>members</code> attribute/property to be available on 
         <span class="k">if</span> <span class="ow">not</span> <span class="n">parts</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>  <span class="c1"># type: ignore</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>  <span class="c1"># type: ignore</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>  <span class="c1"># type: ignore[attr-defined]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>  <span class="c1"># type: ignore[attr-defined]</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -1270,7 +1270,7 @@ ObjectAliasMixin        </code>
 <span class="sd">        Returns:</span>
 <span class="sd">            True or False.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">member_is_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">explicitely</span><span class="o">=</span><span class="n">explicitely</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">member_is_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">explicitely</span><span class="o">=</span><span class="n">explicitely</span><span class="p">)</span>  <span class="c1"># type: ignore[attr-defined]</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">is_explicitely_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
@@ -1288,7 +1288,7 @@ ObjectAliasMixin        </code>
 <span class="sd">        Returns:</span>
 <span class="sd">            True or False.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">exports</span> <span class="ow">is</span> <span class="kc">None</span>  <span class="c1"># type: ignore</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">exports</span> <span class="ow">is</span> <span class="kc">None</span>  <span class="c1"># type: ignore[attr-defined]</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -1405,7 +1405,7 @@ ObjectAliasMixin        </code>
 <span class="sd">    Returns:</span>
 <span class="sd">        True or False.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">member_is_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">explicitely</span><span class="o">=</span><span class="n">explicitely</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">member_is_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">explicitely</span><span class="o">=</span><span class="n">explicitely</span><span class="p">)</span>  <span class="c1"># type: ignore[attr-defined]</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -1454,7 +1454,7 @@ ObjectAliasMixin        </code>
 <span class="sd">    Returns:</span>
 <span class="sd">        True or False.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">exports</span> <span class="ow">is</span> <span class="kc">None</span>  <span class="c1"># type: ignore</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">exports</span> <span class="ow">is</span> <span class="kc">None</span>  <span class="c1"># type: ignore[attr-defined]</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -1534,10 +1534,10 @@ Each time a member is set, its <code>_modules_collection</code> attribute is set
         <span class="k">if</span> <span class="ow">not</span> <span class="n">parts</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;cannot set self (empty parts)&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># type: ignore</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># type: ignore[attr-defined]</span>
             <span class="n">value</span><span class="o">.</span><span class="n">_modules_collection</span> <span class="o">=</span> <span class="bp">self</span>  <span class="c1"># noqa: WPS437</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># type: ignore</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># type: ignore[attr-defined]</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -1624,10 +1624,10 @@ Each time a member is set, its <code>parent</code> attribute is set as well.</p>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">parts</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;cannot set self (empty parts)&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># type: ignore</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># type: ignore[attr-defined]</span>
             <span class="n">value</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># type: ignore</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># type: ignore[attr-defined]</span>
 </code></pre></div>
 </td></tr></table>
         </details>

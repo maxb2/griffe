@@ -1451,7 +1451,7 @@ tool instead, dump the full data.</p>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | <a href="../dataclasses/#griffe.dataclasses.Module">Module</a> | <a href="../dataclasses/#griffe.dataclasses.Class">Class</a> | <a href="../dataclasses/#griffe.dataclasses.Function">Function</a> | <a href="../dataclasses/#griffe.dataclasses.Attribute">Attribute</a></code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | <a href="../dataclasses/#griffe.dataclasses.Object">Object</a></code>
           –
         <p>An instance of a data class.</p>
       </li>
@@ -1486,7 +1486,7 @@ tool instead, dump the full data.</p>
 <span class="normal">109</span>
 <span class="normal">110</span>
 <span class="normal">111</span>
-<span class="normal">112</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">decoder</span><span class="p">(</span><span class="n">obj_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="n">Module</span> <span class="o">|</span> <span class="n">Class</span> <span class="o">|</span> <span class="n">Function</span> <span class="o">|</span> <span class="n">Attribute</span><span class="p">:</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">112</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">decoder</span><span class="p">(</span><span class="n">obj_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="n">Object</span><span class="p">:</span>  <span class="c1"># noqa: WPS231</span>
     <span class="sd">&quot;&quot;&quot;Decode dictionaries as data classes.</span>
 
 <span class="sd">    The [`json.loads`][] method walks the tree from bottom to top.</span>

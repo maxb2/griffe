@@ -15,6 +15,7 @@ h5.doc-heading {
   margin-bottom: 0 !important;
 }
 
+/* Avoid line breaks in rendered fields. */
 .field-body p {
   display: inline;
 }
