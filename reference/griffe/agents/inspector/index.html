@@ -268,7 +268,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="https:/pawamoy.github.io" class="md-tabs__link">
+    <a href="https://pawamoy.github.io/" class="md-tabs__link">
       Author's website
     </a>
   </li>
@@ -1189,7 +1189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="https:/pawamoy.github.io" class="md-nav__link">
+      <a href="https://pawamoy.github.io/" class="md-nav__link">
         Author's website
       </a>
     </li>
@@ -1982,120 +1982,49 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.Inspector.__init__" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Initialize the inspector.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>module_name</code></td>
-          <td class="doc-param-details">
-            <p>The module name.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>filepath</code></td>
-          <td class="doc-param-details">
-            <p>The optional filepath.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>extensions</code></td>
-          <td class="doc-param-details">
-            <p>Extensions to use when inspecting.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../extensions/#griffe.agents.extensions.Extensions">Extensions</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>parent</code></td>
-          <td class="doc-param-details">
-            <p>The module parent.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>docstring_parser</code></td>
-          <td class="doc-param-details">
-            <p>The docstring parser to use.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>docstring_options</code></td>
-          <td class="doc-param-details">
-            <p>The docstring parsing options.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>lines_collection</code></td>
-          <td class="doc-param-details">
-            <p>A collection of source code lines.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>module_name</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The module name.</p>
+      </li>
+      <li class="field-body">
+        <b>filepath</b>
+            (<code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | None</code>)
+        – <p>The optional filepath.</p>
+      </li>
+      <li class="field-body">
+        <b>extensions</b>
+            (<code><a href="../extensions/#griffe.agents.extensions.Extensions">Extensions</a></code>)
+        – <p>Extensions to use when inspecting.</p>
+      </li>
+      <li class="field-body">
+        <b>parent</b>
+            (<code><a href="../../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>)
+        – <p>The module parent.</p>
+      </li>
+      <li class="field-body">
+        <b>docstring_parser</b>
+            (<code><a href="../../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+        – <p>The docstring parser to use.</p>
+      </li>
+      <li class="field-body">
+        <b>docstring_options</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
+        – <p>The docstring parsing options.</p>
+      </li>
+      <li class="field-body">
+        <b>lines_collection</b>
+            (<code><a href="../../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
+        – <p>A collection of source code lines.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
@@ -2178,32 +2107,19 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.Inspector.generic_inspect" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Extend the base generic inspection with extensions.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>node</code></td>
-          <td class="doc-param-details">
-            <p>The node to inspect.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+        – <p>The node to inspect.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
@@ -2247,25 +2163,19 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.Inspector.get_module" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Build and return the object representing the module attached to this inspector.</p>
 <p>This method triggers a complete inspection of the module members.</p>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>A module instance.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="../../dataclasses/#griffe.dataclasses.Module">Module</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="../../dataclasses/#griffe.dataclasses.Module">Module</a></code>
+        – <p>A module instance.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
@@ -2309,48 +2219,24 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.Inspector.handle_attribute" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Handle an attribute.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>node</code></td>
-          <td class="doc-param-details">
-            <p>The node to inspect.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>annotation</code></td>
-          <td class="doc-param-details">
-            <p>A potentiel annotation.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../../expressions/#griffe.expressions.Name">Name</a> | <a href="../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+        – <p>The node to inspect.</p>
+      </li>
+      <li class="field-body">
+        <b>annotation</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../../expressions/#griffe.expressions.Name">Name</a> | <a href="../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
+        – <p>A potentiel annotation.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
@@ -2446,48 +2332,24 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.Inspector.handle_function" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Handle a function.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>node</code></td>
-          <td class="doc-param-details">
-            <p>The node to inspect.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>labels</code></td>
-          <td class="doc-param-details">
-            <p>Labels to add to the data object.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#set">set</a> | None</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+        – <p>The node to inspect.</p>
+      </li>
+      <li class="field-body">
+        <b>labels</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#set">set</a> | None</code>)
+        – <p>Labels to add to the data object.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
@@ -2567,32 +2429,19 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.Inspector.inspect" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Extend the base inspection with extensions.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>node</code></td>
-          <td class="doc-param-details">
-            <p>The node to inspect.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+        – <p>The node to inspect.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
@@ -2636,32 +2485,19 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.Inspector.inspect_attribute" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Inspect an attribute.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>node</code></td>
-          <td class="doc-param-details">
-            <p>The node to inspect.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+        – <p>The node to inspect.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
@@ -2697,32 +2533,19 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.Inspector.inspect_cached_property" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Inspect a cached property.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>node</code></td>
-          <td class="doc-param-details">
-            <p>The node to inspect.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+        – <p>The node to inspect.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
@@ -2758,32 +2581,19 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.Inspector.inspect_class" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Inspect a class.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>node</code></td>
-          <td class="doc-param-details">
-            <p>The node to inspect.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+        – <p>The node to inspect.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
@@ -2839,32 +2649,19 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.Inspector.inspect_classmethod" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Inspect a class method.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>node</code></td>
-          <td class="doc-param-details">
-            <p>The node to inspect.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+        – <p>The node to inspect.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
@@ -2900,32 +2697,19 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.Inspector.inspect_coroutine" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Inspect a coroutine.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>node</code></td>
-          <td class="doc-param-details">
-            <p>The node to inspect.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+        – <p>The node to inspect.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
@@ -2961,32 +2745,19 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.Inspector.inspect_function" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Inspect a function.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>node</code></td>
-          <td class="doc-param-details">
-            <p>The node to inspect.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+        – <p>The node to inspect.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
@@ -3022,32 +2793,19 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.Inspector.inspect_method" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Inspect a method.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>node</code></td>
-          <td class="doc-param-details">
-            <p>The node to inspect.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+        – <p>The node to inspect.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
@@ -3083,32 +2841,19 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.Inspector.inspect_method_descriptor" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Inspect a method descriptor.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>node</code></td>
-          <td class="doc-param-details">
-            <p>The node to inspect.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+        – <p>The node to inspect.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
@@ -3144,32 +2889,19 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.Inspector.inspect_module" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Inspect a module.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>node</code></td>
-          <td class="doc-param-details">
-            <p>The node to inspect.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+        – <p>The node to inspect.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
@@ -3219,32 +2951,19 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.Inspector.inspect_property" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Inspect a property.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>node</code></td>
-          <td class="doc-param-details">
-            <p>The node to inspect.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+        – <p>The node to inspect.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
@@ -3280,32 +2999,19 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.Inspector.inspect_staticmethod" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Inspect a static method.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>node</code></td>
-          <td class="doc-param-details">
-            <p>The node to inspect.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+        – <p>The node to inspect.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
@@ -3353,143 +3059,57 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 
 <a href="#griffe.agents.inspector.inspect" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
 
       <p>Inspect a module.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>module_name</code></td>
-          <td class="doc-param-details">
-            <p>The module name (as when importing [from] it).</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>filepath</code></td>
-          <td class="doc-param-details">
-            <p>The module file path.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | None</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>extensions</code></td>
-          <td class="doc-param-details">
-            <p>The extensions to use when inspecting the module.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../extensions/#griffe.agents.extensions.Extensions">Extensions</a> | None</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>parent</code></td>
-          <td class="doc-param-details">
-            <p>The optional parent of this module.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>docstring_parser</code></td>
-          <td class="doc-param-details">
-            <p>The docstring parser to use. By default, no parsing is done.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>docstring_options</code></td>
-          <td class="doc-param-details">
-            <p>Additional docstring parsing options.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>lines_collection</code></td>
-          <td class="doc-param-details">
-            <p>A collection of source code lines.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>module_name</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The module name (as when importing [from] it).</p>
+      </li>
+      <li class="field-body">
+        <b>filepath</b>
+            (<code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | None</code>)
+        – <p>The module file path.</p>
+      </li>
+      <li class="field-body">
+        <b>extensions</b>
+            (<code><a href="../extensions/#griffe.agents.extensions.Extensions">Extensions</a> | None</code>)
+        – <p>The extensions to use when inspecting the module.</p>
+      </li>
+      <li class="field-body">
+        <b>parent</b>
+            (<code><a href="../../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>)
+        – <p>The optional parent of this module.</p>
+      </li>
+      <li class="field-body">
+        <b>docstring_parser</b>
+            (<code><a href="../../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+        – <p>The docstring parser to use. By default, no parsing is done.</p>
+      </li>
+      <li class="field-body">
+        <b>docstring_options</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
+        – <p>Additional docstring parsing options.</p>
+      </li>
+      <li class="field-body">
+        <b>lines_collection</b>
+            (<code><a href="../../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
+        – <p>A collection of source code lines.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>The module, with its members populated.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="../../dataclasses/#griffe.dataclasses.Module">Module</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="../../dataclasses/#griffe.dataclasses.Module">Module</a></code>
+        – <p>The module, with its members populated.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>

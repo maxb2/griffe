@@ -268,7 +268,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="https:/pawamoy.github.io" class="md-tabs__link">
+    <a href="https://pawamoy.github.io/" class="md-tabs__link">
       Author's website
     </a>
   </li>
@@ -1123,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="https:/pawamoy.github.io" class="md-nav__link">
+      <a href="https://pawamoy.github.io/" class="md-nav__link">
         Author's website
       </a>
     </li>
@@ -1427,36 +1427,19 @@ Each name in the expression can be resolved to its full name within its scope.</
 
 <a href="#griffe.expressions.Expression.__init__" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Initialize the expression.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>*values</code></td>
-          <td class="doc-param-details">
-            <p>The initial values of the expression.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="#griffe.expressions.Expression">Expression</a> | <a href="#griffe.expressions.Name">Name</a></code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>()</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*values</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="#griffe.expressions.Expression">Expression</a> | <a href="#griffe.expressions.Name">Name</a></code>)
+        – <p>The initial values of the expression.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/expressions.py</code></summary>
@@ -1495,24 +1478,18 @@ Each name in the expression can be resolved to its full name within its scope.</
 
 <a href="#griffe.expressions.Expression.is_tuple" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Tell whether this expression represents a tuple.</p>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>True or False.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+        – <p>True or False.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/expressions.py</code></summary>
@@ -1550,47 +1527,27 @@ Each name in the expression can be resolved to its full name within its scope.</
 
 <a href="#griffe.expressions.Expression.tuple_item" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Return the n-th item of this tuple expression.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>nth</code></td>
-          <td class="doc-param-details">
-            <p>The item number.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>nth</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
+        – <p>The item number.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>A string or name.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="#griffe.expressions.Name">Name</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="#griffe.expressions.Name">Name</a></code>
+        – <p>A string or name.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/expressions.py</code></summary>
@@ -1656,28 +1613,14 @@ Name        </code>
 
       <p>This class represents a Python object identified by a name in a given scope.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>ATTRIBUTE</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>source</code></td>
-          <td class="doc-attribute-details">
-            <p>The name as written in the source code.</p>
-            <p>
-                <span class="doc-attribute-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b>source</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The name as written in the source code.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/expressions.py</code></summary>
@@ -1840,44 +1783,24 @@ Name        </code>
 
 <a href="#griffe.expressions.Name.__init__" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Initialize the name.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>source</code></td>
-          <td class="doc-param-details">
-            <p>The name as written in the source code.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>full</code></td>
-          <td class="doc-param-details">
-            <p>The full, resolved name in the given scope, or a callable to resolve it later.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/typing.html#typing.Callable">Callable</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>source</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The name as written in the source code.</p>
+      </li>
+      <li class="field-body">
+        <b>full</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/typing.html#typing.Callable">Callable</a></code>)
+        – <p>The full, resolved name in the given scope, or a callable to resolve it later.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/expressions.py</code></summary>
@@ -1929,51 +1852,27 @@ Name        </code>
 
 <a href="#griffe.expressions.Name.as_dict" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Return this name's data as a dictionary.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>**kwargs</code></td>
-          <td class="doc-param-details">
-            <p>Additional serialization options.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>{}</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>Additional serialization options.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>A dictionary.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+        – <p>A dictionary.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/expressions.py</code></summary>
@@ -2015,24 +1914,18 @@ Name        </code>
 
 <a href="#griffe.expressions.Name.brief" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Return the brief source name.</p>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>The last part of the source name.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+        – <p>The last part of the source name.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/expressions.py</code></summary>
@@ -2070,6 +1963,7 @@ Name        </code>
 
 <a href="#griffe.expressions.Name.full" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Return the full, resolved name.</p>
@@ -2077,20 +1971,13 @@ Name        </code>
 If a callable was given, call it and return its result.
 It the name cannot be resolved, return the source.</p>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>The resolved name or the source.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+        – <p>The resolved name or the source.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/expressions.py</code></summary>

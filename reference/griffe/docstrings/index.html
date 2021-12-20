@@ -268,7 +268,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="https:/pawamoy.github.io" class="md-tabs__link">
+    <a href="https://pawamoy.github.io/" class="md-tabs__link">
       Author's website
     </a>
   </li>
@@ -1012,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="https:/pawamoy.github.io" class="md-nav__link">
+      <a href="https://pawamoy.github.io/" class="md-nav__link">
         Author's website
       </a>
     </li>
@@ -1171,75 +1171,37 @@ Parser            (<a href="https://docs.python.org/3/library/enum.html#module-e
 
 <a href="#griffe.docstrings.parse" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
 
       <p>Parse the docstring.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>docstring</code></td>
-          <td class="doc-param-details">
-            <p>The docstring to parse.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>parser</code></td>
-          <td class="doc-param-details">
-            <p>The docstring parser to use. If None, return a single text section.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>**options</code></td>
-          <td class="doc-param-details">
-            <p>The options accepted by the parser.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>{}</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>docstring</b>
+            (<code><a href="../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
+        – <p>The docstring to parse.</p>
+      </li>
+      <li class="field-body">
+        <b>parser</b>
+            (<code><a href="parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+        – <p>The docstring parser to use. If None, return a single text section.</p>
+      </li>
+      <li class="field-body">
+        <b>**options</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>The options accepted by the parser.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>A list of docstring sections.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="dataclasses/#griffe.docstrings.dataclasses.DocstringSection">DocstringSection</a>]</code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="dataclasses/#griffe.docstrings.dataclasses.DocstringSection">DocstringSection</a>]</code>
+        – <p>A list of docstring sections.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/parsers.py</code></summary>

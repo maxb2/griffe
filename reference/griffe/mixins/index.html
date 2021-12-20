@@ -268,7 +268,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="https:/pawamoy.github.io" class="md-tabs__link">
+    <a href="https://pawamoy.github.io/" class="md-tabs__link">
       Author's website
     </a>
   </li>
@@ -1103,7 +1103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="https:/pawamoy.github.io" class="md-nav__link">
+      <a href="https://pawamoy.github.io/" class="md-nav__link">
         Author's website
       </a>
     </li>
@@ -1334,9 +1334,7 @@ ObjectAliasMixin        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/mixins.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 85</span>
 <span class="normal"> 86</span>
 <span class="normal"> 87</span>
 <span class="normal"> 88</span>
@@ -1364,7 +1362,9 @@ ObjectAliasMixin        </code>
 <span class="normal">110</span>
 <span class="normal">111</span>
 <span class="normal">112</span>
-<span class="normal">113</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ObjectAliasMixin</span><span class="p">:</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ObjectAliasMixin</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;A mixin for methods that appear both in objects and aliases, unchanged.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">is_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">explicitely</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
@@ -1420,35 +1420,29 @@ ObjectAliasMixin        </code>
 
 <a href="#griffe.mixins.ObjectAliasMixin.is_explicitely_exported" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Tell if this object/alias is explicitely exported by its parent.</p>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>True or False.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+        – <p>True or False.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/mixins.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 99</span>
 <span class="normal">100</span>
 <span class="normal">101</span>
 <span class="normal">102</span>
 <span class="normal">103</span>
-<span class="normal">104</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">is_explicitely_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if this object/alias is explicitely exported by its parent.</span>
 
@@ -1475,64 +1469,40 @@ ObjectAliasMixin        </code>
 
 <a href="#griffe.mixins.ObjectAliasMixin.is_exported" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Tell if this object/alias is implicitely exported by its parent.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>explicitely</code></td>
-          <td class="doc-param-details">
-            <p>Whether to only return True when <code>__all__</code> is defined.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>explicitely</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
+        – <p>Whether to only return True when <code>__all__</code> is defined.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>True or False.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+        – <p>True or False.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/mixins.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">86</span>
-<span class="normal">87</span>
-<span class="normal">88</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">88</span>
 <span class="normal">89</span>
 <span class="normal">90</span>
 <span class="normal">91</span>
 <span class="normal">92</span>
 <span class="normal">93</span>
 <span class="normal">94</span>
-<span class="normal">95</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">is_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">explicitely</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="normal">95</span>
+<span class="normal">96</span>
+<span class="normal">97</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">is_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">explicitely</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if this object/alias is implicitely exported by its parent.</span>
 
 <span class="sd">    Parameters:</span>
@@ -1561,35 +1531,29 @@ ObjectAliasMixin        </code>
 
 <a href="#griffe.mixins.ObjectAliasMixin.is_implicitely_exported" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Tell if this object/alias is implicitely exported by its parent.</p>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>True or False.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+        – <p>True or False.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/mixins.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">108</span>
 <span class="normal">109</span>
 <span class="normal">110</span>
 <span class="normal">111</span>
 <span class="normal">112</span>
-<span class="normal">113</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">is_implicitely_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if this object/alias is implicitely exported by its parent.</span>
 
@@ -1637,9 +1601,7 @@ Each time a member is set, its <code>_modules_collection</code> attribute is set
 
         <details class="quote">
           <summary>Source code in <code>griffe/mixins.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">64</span>
 <span class="normal">65</span>
 <span class="normal">66</span>
 <span class="normal">67</span>
@@ -1655,7 +1617,9 @@ Each time a member is set, its <code>_modules_collection</code> attribute is set
 <span class="normal">77</span>
 <span class="normal">78</span>
 <span class="normal">79</span>
-<span class="normal">80</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SetCollectionMembersMixin</span><span class="p">:</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SetCollectionMembersMixin</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;This mixin adds a `__setitem__` method to a class.</span>
 
 <span class="sd">    It makes it easier to set members of an object.</span>
@@ -1739,7 +1703,9 @@ Each time a member is set, its <code>parent</code> attribute is set as well.</p>
 <span class="normal">56</span>
 <span class="normal">57</span>
 <span class="normal">58</span>
-<span class="normal">59</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SetMembersMixin</span><span class="p">:</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SetMembersMixin</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;This mixin adds a `__setitem__` method to a class.</span>
 
 <span class="sd">    It makes it easier to set members of an object.</span>
@@ -1752,8 +1718,10 @@ Each time a member is set, its <code>parent</code> attribute is set as well.</p>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
             <span class="n">name</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
             <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">:</span>  <span class="c1"># type: ignore[attr-defined]</span>
-                <span class="k">for</span> <span class="n">alias</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">aliases</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>  <span class="c1"># type: ignore[attr-defined]</span>
-                    <span class="n">alias</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">value</span>
+                <span class="n">member</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>  <span class="c1"># type: ignore[attr-defined]</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">member</span><span class="o">.</span><span class="n">is_alias</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">alias</span> <span class="ow">in</span> <span class="n">member</span><span class="o">.</span><span class="n">aliases</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+                        <span class="n">alias</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">value</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># type: ignore[attr-defined]</span>
             <span class="n">value</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span>
         <span class="k">else</span><span class="p">:</span>

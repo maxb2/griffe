@@ -268,7 +268,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="https:/pawamoy.github.io" class="md-tabs__link">
+    <a href="https://pawamoy.github.io/" class="md-tabs__link">
       Author's website
     </a>
   </li>
@@ -1214,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="https:/pawamoy.github.io" class="md-nav__link">
+      <a href="https://pawamoy.github.io/" class="md-nav__link">
         Author's website
       </a>
     </li>
@@ -1469,40 +1469,19 @@ DocstringAdmonition        </code>
 
       <p>This base class represents admonitions.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>ATTRIBUTE</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>kind</code></td>
-          <td class="doc-attribute-details">
-            <p>The admonition kind.</p>
-            <p>
-                <span class="doc-attribute-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>contents</code></td>
-          <td class="doc-attribute-details">
-            <p>The admonition contents.</p>
-            <p>
-                <span class="doc-attribute-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b>kind</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The admonition kind.</p>
+      </li>
+      <li class="field-body">
+        <b>contents</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The admonition contents.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
@@ -1594,44 +1573,24 @@ DocstringAdmonition        </code>
 
 <a href="#griffe.docstrings.dataclasses.DocstringAdmonition.__init__" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Initialize the admonition.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>kind</code></td>
-          <td class="doc-param-details">
-            <p>The admonition kind.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>contents</code></td>
-          <td class="doc-param-details">
-            <p>The admonition contents.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>kind</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The admonition kind.</p>
+      </li>
+      <li class="field-body">
+        <b>contents</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The admonition contents.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
@@ -1671,51 +1630,27 @@ DocstringAdmonition        </code>
 
 <a href="#griffe.docstrings.dataclasses.DocstringAdmonition.as_dict" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Return this admonition's data as a dictionary.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>**kwargs</code></td>
-          <td class="doc-param-details">
-            <p>Additional serialization options.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>{}</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>Additional serialization options.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>A dictionary.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+        – <p>A dictionary.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
@@ -1812,40 +1747,19 @@ DocstringElement        </code>
 
       <p>This base class represents annotated, nameless elements.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>ATTRIBUTE</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>annotation</code></td>
-          <td class="doc-attribute-details">
-            <p>The element annotation, if any.</p>
-            <p>
-                <span class="doc-attribute-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../../expressions/#griffe.expressions.Name">Name</a> | <a href="../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>description</code></td>
-          <td class="doc-attribute-details">
-            <p>The element description.</p>
-            <p>
-                <span class="doc-attribute-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b>annotation</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../../expressions/#griffe.expressions.Name">Name</a> | <a href="../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
+        – <p>The element annotation, if any.</p>
+      </li>
+      <li class="field-body">
+        <b>description</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The element description.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
@@ -1937,48 +1851,24 @@ DocstringElement        </code>
 
 <a href="#griffe.docstrings.dataclasses.DocstringElement.__init__" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Initialize the element.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>annotation</code></td>
-          <td class="doc-param-details">
-            <p>The element annotation, if any.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../../../../../../expressions/#griffe.expressions.Name">Name</a> | <a href="../../../../../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>description</code></td>
-          <td class="doc-param-details">
-            <p>The element description.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>annotation</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../../../../../../expressions/#griffe.expressions.Name">Name</a> | <a href="../../../../../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
+        – <p>The element annotation, if any.</p>
+      </li>
+      <li class="field-body">
+        <b>description</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The element description.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
@@ -2018,51 +1908,27 @@ DocstringElement        </code>
 
 <a href="#griffe.docstrings.dataclasses.DocstringElement.as_dict" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Return this element's data as a dictionary.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>**kwargs</code></td>
-          <td class="doc-param-details">
-            <p>Additional serialization options.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>{}</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>Additional serialization options.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>A dictionary.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+        – <p>A dictionary.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
@@ -2127,40 +1993,19 @@ DocstringNamedElement            (<a href="#griffe.docstrings.dataclasses.Docstr
 
       <p>This base class represents annotated, named elements.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>ATTRIBUTE</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>name</code></td>
-          <td class="doc-attribute-details">
-            <p>The element name.</p>
-            <p>
-                <span class="doc-attribute-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>value</code></td>
-          <td class="doc-attribute-details">
-            <p>The element value, as a string, if any.</p>
-            <p>
-                <span class="doc-attribute-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b>name</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The element name.</p>
+      </li>
+      <li class="field-body">
+        <b>value</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>)
+        – <p>The element value, as a string, if any.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
@@ -2272,76 +2117,34 @@ DocstringNamedElement            (<a href="#griffe.docstrings.dataclasses.Docstr
 
 <a href="#griffe.docstrings.dataclasses.DocstringNamedElement.__init__" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Initialize the element.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>name</code></td>
-          <td class="doc-param-details">
-            <p>The element name.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>description</code></td>
-          <td class="doc-param-details">
-            <p>The element description.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>annotation</code></td>
-          <td class="doc-param-details">
-            <p>The element annotation, if any.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../../../../../../expressions/#griffe.expressions.Name">Name</a> | <a href="../../../../../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>value</code></td>
-          <td class="doc-param-details">
-            <p>The element value, as a string.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>name</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The element name.</p>
+      </li>
+      <li class="field-body">
+        <b>description</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The element description.</p>
+      </li>
+      <li class="field-body">
+        <b>annotation</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../../../../../../expressions/#griffe.expressions.Name">Name</a> | <a href="../../../../../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
+        – <p>The element annotation, if any.</p>
+      </li>
+      <li class="field-body">
+        <b>value</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>)
+        – <p>The element value, as a string.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
@@ -2401,51 +2204,27 @@ DocstringNamedElement            (<a href="#griffe.docstrings.dataclasses.Docstr
 
 <a href="#griffe.docstrings.dataclasses.DocstringNamedElement.as_dict" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Return this element's data as a dictionary.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>**kwargs</code></td>
-          <td class="doc-param-details">
-            <p>Additional serialization options.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>{}</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>Additional serialization options.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>A dictionary.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+        – <p>A dictionary.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
@@ -2775,60 +2554,29 @@ DocstringSection        </code>
 
 <a href="#griffe.docstrings.dataclasses.DocstringSection.__init__" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Initialize the section.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>kind</code></td>
-          <td class="doc-param-details">
-            <p>The section kind.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="#griffe.docstrings.dataclasses.DocstringSectionKind">DocstringSectionKind</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>value</code></td>
-          <td class="doc-param-details">
-            <p>The section value.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>title</code></td>
-          <td class="doc-param-details">
-            <p>An optional title.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>kind</b>
+            (<code><a href="#griffe.docstrings.dataclasses.DocstringSectionKind">DocstringSectionKind</a></code>)
+        – <p>The section kind.</p>
+      </li>
+      <li class="field-body">
+        <b>value</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>The section value.</p>
+      </li>
+      <li class="field-body">
+        <b>title</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>)
+        – <p>An optional title.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
@@ -2872,51 +2620,27 @@ DocstringSection        </code>
 
 <a href="#griffe.docstrings.dataclasses.DocstringSection.as_dict" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Return this section's data as a dictionary.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>**kwargs</code></td>
-          <td class="doc-param-details">
-            <p>Additional serialization options.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>{}</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>Additional serialization options.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>A dictionary.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+        – <p>A dictionary.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>

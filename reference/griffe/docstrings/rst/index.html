@@ -268,7 +268,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="https:/pawamoy.github.io" class="md-tabs__link">
+    <a href="https://pawamoy.github.io/" class="md-tabs__link">
       Author's website
     </a>
   </li>
@@ -1161,7 +1161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="https:/pawamoy.github.io" class="md-nav__link">
+      <a href="https://pawamoy.github.io/" class="md-nav__link">
         Author's website
       </a>
     </li>
@@ -1437,47 +1437,27 @@ FieldType        </code>
 
 <a href="#griffe.docstrings.rst.FieldType.matches" class="headerlink" title="Permanent link">¤</a></h3>
 
+
     <div class="doc doc-contents ">
 
       <p>Check if a line matches the field type.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>line</code></td>
-          <td class="doc-param-details">
-            <p>Line to check against</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>line</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>Line to check against</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>True if the line matches the field type, False otherwise.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+        – <p>True if the line matches the field type, False otherwise.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/rst.py</code></summary>
@@ -1669,59 +1649,32 @@ ParsedValues        </code>
 
 <a href="#griffe.docstrings.rst._consolidate_continuation_lines" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
 
       <p>Convert a docstring field into a single line if a line continuation exists.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>lines</code></td>
-          <td class="doc-param-details">
-            <p>The docstring lines.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>offset</code></td>
-          <td class="doc-param-details">
-            <p>The line number to start at.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>lines</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>)
+        – <p>The docstring lines.</p>
+      </li>
+      <li class="field-body">
+        <b>offset</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
+        – <p>The line number to start at.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>A tuple containing the continued lines as a single string and the index at which to continue parsing.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/functions.html#int">int</a>]</code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/functions.html#int">int</a>]</code>
+        – <p>A tuple containing the continued lines as a single string and the index at which to continue parsing.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/rst.py</code></summary>
@@ -1785,48 +1738,28 @@ ParsedValues        </code>
 
 <a href="#griffe.docstrings.rst._consolidate_descriptive_type" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
 
       <p>Convert type descriptions with "or" into respective type signature.</p>
 <p>"x or y" -&gt; "x | y"</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>descriptive_type</code></td>
-          <td class="doc-param-details">
-            <p>Descriptions of an item's type.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>descriptive_type</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>Descriptions of an item's type.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>Type signature for descriptive type.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+        – <p>Type signature for descriptive type.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/rst.py</code></summary>
@@ -1876,59 +1809,32 @@ ParsedValues        </code>
 
 <a href="#griffe.docstrings.rst._read_attribute" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
 
       <p>Parse an attribute value.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>docstring</code></td>
-          <td class="doc-param-details">
-            <p>The docstring.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>offset</code></td>
-          <td class="doc-param-details">
-            <p>The line number to start at.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>docstring</b>
+            (<code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
+        – <p>The docstring.</p>
+      </li>
+      <li class="field-body">
+        <b>offset</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
+        – <p>The line number to start at.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>Index at which to continue parsing.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+        – <p>Index at which to continue parsing.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/rst.py</code></summary>
@@ -2032,59 +1938,32 @@ ParsedValues        </code>
 
 <a href="#griffe.docstrings.rst._read_attribute_type" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
 
       <p>Parse a parameter type.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>docstring</code></td>
-          <td class="doc-param-details">
-            <p>The docstring.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>offset</code></td>
-          <td class="doc-param-details">
-            <p>The line number to start at.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>docstring</b>
+            (<code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
+        – <p>The docstring.</p>
+      </li>
+      <li class="field-body">
+        <b>offset</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
+        – <p>The line number to start at.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>Index at which to continue parsing.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+        – <p>Index at which to continue parsing.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/rst.py</code></summary>
@@ -2166,59 +2045,32 @@ ParsedValues        </code>
 
 <a href="#griffe.docstrings.rst._read_exception" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
 
       <p>Parse an exception value.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>docstring</code></td>
-          <td class="doc-param-details">
-            <p>The docstring.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>offset</code></td>
-          <td class="doc-param-details">
-            <p>The line number to start at.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>docstring</b>
+            (<code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
+        – <p>The docstring.</p>
+      </li>
+      <li class="field-body">
+        <b>offset</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
+        – <p>The line number to start at.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>A tuple containing a <code>DocstringSection</code> (or <code>None</code>) and the index at which to continue parsing.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+        – <p>A tuple containing a <code>DocstringSection</code> (or <code>None</code>) and the index at which to continue parsing.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/rst.py</code></summary>
@@ -2284,59 +2136,32 @@ ParsedValues        </code>
 
 <a href="#griffe.docstrings.rst._read_parameter" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
 
       <p>Parse a parameter value.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>docstring</code></td>
-          <td class="doc-param-details">
-            <p>The docstring.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>offset</code></td>
-          <td class="doc-param-details">
-            <p>The line number to start at.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>docstring</b>
+            (<code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
+        – <p>The docstring.</p>
+      </li>
+      <li class="field-body">
+        <b>offset</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
+        – <p>The line number to start at.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>Index at which to continue parsing.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+        – <p>Index at which to continue parsing.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/rst.py</code></summary>
@@ -2440,59 +2265,32 @@ ParsedValues        </code>
 
 <a href="#griffe.docstrings.rst._read_parameter_type" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
 
       <p>Parse a parameter type.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>docstring</code></td>
-          <td class="doc-param-details">
-            <p>The docstring.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>offset</code></td>
-          <td class="doc-param-details">
-            <p>The line number to start at.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>docstring</b>
+            (<code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
+        – <p>The docstring.</p>
+      </li>
+      <li class="field-body">
+        <b>offset</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
+        – <p>The line number to start at.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>Index at which to continue parsing.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+        – <p>Index at which to continue parsing.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/rst.py</code></summary>
@@ -2574,59 +2372,32 @@ ParsedValues        </code>
 
 <a href="#griffe.docstrings.rst._read_return" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
 
       <p>Parse an return value.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>docstring</code></td>
-          <td class="doc-param-details">
-            <p>The docstring.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>offset</code></td>
-          <td class="doc-param-details">
-            <p>The line number to start at.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>docstring</b>
+            (<code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
+        – <p>The docstring.</p>
+      </li>
+      <li class="field-body">
+        <b>offset</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
+        – <p>The line number to start at.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>Index at which to continue parsing.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+        – <p>Index at which to continue parsing.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/rst.py</code></summary>
@@ -2714,59 +2485,32 @@ ParsedValues        </code>
 
 <a href="#griffe.docstrings.rst._read_return_type" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
 
       <p>Parse an return type value.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>docstring</code></td>
-          <td class="doc-param-details">
-            <p>The docstring.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>offset</code></td>
-          <td class="doc-param-details">
-            <p>The line number to start at.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>docstring</b>
+            (<code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
+        – <p>The docstring.</p>
+      </li>
+      <li class="field-body">
+        <b>offset</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
+        – <p>The line number to start at.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>Index at which to continue parsing.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+        – <p>Index at which to continue parsing.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/rst.py</code></summary>
@@ -2832,47 +2576,27 @@ ParsedValues        </code>
 
 <a href="#griffe.docstrings.rst._strip_blank_lines" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
 
       <p>Remove lines with no text or only whitespace characters from the start and end of the list.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>lines</code></td>
-          <td class="doc-param-details">
-            <p>Lines to be stripped.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>lines</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>)
+        – <p>Lines to be stripped.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>A list with the same contents, with any blank lines at the start or end removed.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
+        – <p>A list with the same contents, with any blank lines at the start or end removed.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/rst.py</code></summary>
@@ -2942,63 +2666,32 @@ ParsedValues        </code>
 
 <a href="#griffe.docstrings.rst.parse" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
 
       <p>Parse an RST-styled docstring.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>docstring</code></td>
-          <td class="doc-param-details">
-            <p>The docstring to parse.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>**options</code></td>
-          <td class="doc-param-details">
-            <p>Additional parsing options.</p>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>{}</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>docstring</b>
+            (<code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
+        – <p>The docstring to parse.</p>
+      </li>
+      <li class="field-body">
+        <b>**options</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>Additional parsing options.</p>
+      </li>
+  </ul>
 
-  <table>
-    <tbody>
-      <tr><td><b>RETURNS</b></td></tr>
-        <tr>
-          <td class="doc-returns-details">
-            <p>A list of docstring sections.</p>
-            <p>
-              <b>TYPE:</b>
-                <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="../dataclasses/#griffe.docstrings.dataclasses.DocstringSection">DocstringSection</a>]</code>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="../dataclasses/#griffe.docstrings.dataclasses.DocstringSection">DocstringSection</a>]</code>
+        – <p>A list of docstring sections.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/rst.py</code></summary>
