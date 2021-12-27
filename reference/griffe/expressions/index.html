@@ -916,6 +916,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#griffe.expressions.Expression.full" class="md-nav__link">
+    full()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#griffe.expressions.Expression.is_tuple" class="md-nav__link">
     is_tuple()
   </a>
@@ -1178,6 +1185,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#griffe.expressions.Expression.full" class="md-nav__link">
+    full()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#griffe.expressions.Expression.is_tuple" class="md-nav__link">
     is_tuple()
   </a>
@@ -1350,7 +1364,18 @@ Each name in the expression can be resolved to its full name within its scope.</
 <span class="normal">126</span>
 <span class="normal">127</span>
 <span class="normal">128</span>
-<span class="normal">129</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Expression</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>  <span class="c1"># noqa: WPS600</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Expression</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>  <span class="c1"># noqa: WPS600</span>
     <span class="sd">&quot;&quot;&quot;This class represents a Python expression.</span>
 
 <span class="sd">    For example, it can represents complex annotations such as:</span>
@@ -1378,6 +1403,17 @@ Each name in the expression can be resolved to its full name within its scope.</
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">element</span><span class="p">)</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">full</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Return self as a string.</span>
+
+<span class="sd">        This property is only useful to the AST utils.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Self as a string.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">is_tuple</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
@@ -1472,6 +1508,60 @@ Each name in the expression can be resolved to its full name within its scope.</
 
 
 
+<h3 id="griffe.expressions.Expression.full" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">full</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#griffe.expressions.Expression.full" class="headerlink" title="Permanent link">¤</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Return self as a string.</p>
+<p>This property is only useful to the AST utils.</p>
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+        – <p>Self as a string.</p>
+      </li>
+  </ul>
+
+        <details class="quote">
+          <summary>Source code in <code>griffe/expressions.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">full</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Return self as a string.</span>
+
+<span class="sd">    This property is only useful to the AST utils.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Self as a string.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
 <h3 id="griffe.expressions.Expression.is_tuple" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">is_tuple</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
@@ -1493,14 +1583,14 @@ Each name in the expression can be resolved to its full name within its scope.</
 
         <details class="quote">
           <summary>Source code in <code>griffe/expressions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">is_tuple</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell whether this expression represents a tuple.</span>
 
@@ -1551,20 +1641,20 @@ Each name in the expression can be resolved to its full name within its scope.</
 
         <details class="quote">
           <summary>Source code in <code>griffe/expressions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">127</span>
 <span class="normal">128</span>
-<span class="normal">129</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tuple_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nth</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span><span class="p">:</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tuple_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nth</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the n-th item of this tuple expression.</span>
 
 <span class="sd">    Parameters:</span>
