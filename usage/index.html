@@ -467,6 +467,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ast-nodes" class="md-nav__link">
+    AST nodes
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1131,6 +1138,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ast-nodes" class="md-nav__link">
+    AST nodes
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1188,7 +1202,7 @@ If Griffe can't find the packages, it will fail with a <code>ModuleNotFoundError
 <span class="n">fastapi</span> <span class="o">=</span> <span class="n">griffe</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="s2">&quot;fastapi&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>If you don't want to recurse in the submodules:</p>
-<div class="highlight"><pre><span></span><code><span class="n">fastapi</span> <span class="o">=</span> <span class="n">griffe</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="s2">&quot;fastapi&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">fastapi</span> <span class="o">=</span> <span class="n">griffe</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="s2">&quot;fastapi&quot;</span><span class="p">,</span> <span class="n">submodules</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">¤</a></h3>
 <p>You can pass extensions to the loader to augment its capacities:</p>
@@ -1201,9 +1215,9 @@ If Griffe can't find the packages, it will fail with a <code>ModuleNotFoundError
 
 <span class="c1"># or define your own</span>
 <span class="k">class</span> <span class="nc">ClassStartsAtOddLineNumberExtension</span><span class="p">(</span><span class="n">Extension</span><span class="p">):</span>
-    <span class="n">when</span> <span class="o">=</span> <span class="n">When</span><span class="o">.</span><span class="n">visit_stops</span>
+    <span class="n">when</span> <span class="o">=</span> <span class="n">When</span><span class="o">.</span><span class="n">after_all</span>
 
-    <span class="k">def</span> <span class="nf">visit_ClassDef</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">visit_classdef</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">lineno</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">visitor</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">labels</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;starts at odd line number&quot;</span><span class="p">)</span>
 
@@ -1212,13 +1226,13 @@ If Griffe can't find the packages, it will fail with a <code>ModuleNotFoundError
 <span class="n">griffe</span> <span class="o">=</span> <span class="n">GriffeLoader</span><span class="p">(</span><span class="n">extensions</span><span class="o">=</span><span class="n">extensions</span><span class="p">)</span>
 <span class="n">fastapi</span> <span class="o">=</span> <span class="n">griffe</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="s2">&quot;fastapi&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>Extensions are subclasses of <a href="https://docs.python.org/3/library/ast.html#ast.NodeVisitor"><code>ast.NodeVisitor</code></a>.
+<p>Extensions are subclasses of a custom version of <a href="https://docs.python.org/3/library/ast.html#ast.NodeVisitor"><code>ast.NodeVisitor</code></a>.
 Griffe uses a node visitor as well, that we will call the <em>main visitor</em>.
 The extensions are instantiated with a reference to this main visitor,
 so they can benefit from its capacities (navigating the nodes, getting the current
 class or module, etc.).</p>
 <p>Each time a node is visited, the main visitor will make the extensions visit the node as well.
-Implement the <code>visit_&lt;NODE_TYPE&gt;</code> methods to visit nodes of certain types,
+Implement the <code>visit_&lt;NODE_TYPE_LOWER&gt;</code> methods to visit nodes of certain types,
 and act on their properties.</p>
 <div class="admonition warning">
 <p class="admonition-title">Important note</p>
@@ -1233,7 +1247,7 @@ without handling its children (what the <code>generic_visit</code> does).</p>
 <p>You can access the main visitor state and data through the <code>.visitor</code> attribute,
 and the nodes instances are extended with additional attributes and properties:</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MyExtension</span><span class="p">(</span><span class="n">Extension</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">visit_FunctionDef</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">visit_functiondef</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">node</span><span class="o">.</span><span class="n">parent</span>  <span class="c1"># the parent node</span>
         <span class="n">node</span><span class="o">.</span><span class="n">children</span>  <span class="c1"># the list of children nodes</span>
         <span class="n">node</span><span class="o">.</span><span class="n">siblings</span>  <span class="c1"># all the siblings nodes, from top to bottom</span>
@@ -1244,7 +1258,7 @@ and the nodes instances are extended with additional attributes and properties:<
 
         <span class="bp">self</span><span class="o">.</span><span class="n">visitor</span>  <span class="c1"># the main visitor</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">visitor</span><span class="o">.</span><span class="n">current</span>  <span class="c1"># the current data object</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">visitor</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">kind</span>  <span class="c1"># the kind of object: module, class, function, data </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">visitor</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">kind</span>  <span class="c1"># the kind of object: module, class, function, attribute </span>
 </code></pre></div>
 <p>See the data classes (<a href="../reference/griffe/dataclasses/#griffe.dataclasses.Module">Module</a>,
 <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Class">Class</a>, <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Function">Function</a>
@@ -1270,7 +1284,7 @@ set its <code>when</code> attribute:</p>
 </code></pre></div>
 <p>By default, it will run the extension after the visit/inspection of the node:
 that's when the full data for this node and its children is loaded.</p>
-<hr />
+<h3 id="ast-nodes">AST nodes<a class="headerlink" href="#ast-nodes" title="Permanent link">¤</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Nodes</p>
 <p><table style="border: none; background-color: unset;"><tbody><tr><td></p>
