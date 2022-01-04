@@ -871,6 +871,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#griffe.exceptions.AliasResolutionError.target_path" class="md-nav__link">
+    target_path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#griffe.exceptions.AliasResolutionError.__init__" class="md-nav__link">
     __init__()
   </a>
@@ -886,6 +893,33 @@
   <a href="#griffe.exceptions.BuiltinModuleError" class="md-nav__link">
     BuiltinModuleError
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#griffe.exceptions.CyclicAliasError" class="md-nav__link">
+    CyclicAliasError
+  </a>
+  
+    <nav class="md-nav" aria-label="CyclicAliasError">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#griffe.exceptions.CyclicAliasError.chain" class="md-nav__link">
+    chain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#griffe.exceptions.CyclicAliasError.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1168,6 +1202,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#griffe.exceptions.AliasResolutionError.target_path" class="md-nav__link">
+    target_path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#griffe.exceptions.AliasResolutionError.__init__" class="md-nav__link">
     __init__()
   </a>
@@ -1183,6 +1224,33 @@
   <a href="#griffe.exceptions.BuiltinModuleError" class="md-nav__link">
     BuiltinModuleError
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#griffe.exceptions.CyclicAliasError" class="md-nav__link">
+    CyclicAliasError
+  </a>
+  
+    <nav class="md-nav" aria-label="CyclicAliasError">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#griffe.exceptions.CyclicAliasError.chain" class="md-nav__link">
+    chain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#griffe.exceptions.CyclicAliasError.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1297,9 +1365,7 @@ AliasResolutionError            (<a href="#griffe.exceptions.GriffeError">Griffe
 
         <details class="quote">
           <summary>Source code in <code>griffe/exceptions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">22</span>
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
@@ -1307,7 +1373,9 @@ AliasResolutionError            (<a href="#griffe.exceptions.GriffeError">Griffe
 <span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AliasResolutionError</span><span class="p">(</span><span class="n">GriffeError</span><span class="p">):</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AliasResolutionError</span><span class="p">(</span><span class="n">GriffeError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Exception for alias that cannot be resolved.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -1317,7 +1385,7 @@ AliasResolutionError            (<a href="#griffe.exceptions.GriffeError">Griffe
 <span class="sd">            target_path: The problematic target path.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">target_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">target_path</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;could not resolve </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">target_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Could not resolve </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">target_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -1329,6 +1397,23 @@ AliasResolutionError            (<a href="#griffe.exceptions.GriffeError">Griffe
 
 
 
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="griffe.exceptions.AliasResolutionError.target_path" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">target_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">target_path</span></code>
+
+
+<a href="#griffe.exceptions.AliasResolutionError.target_path" class="headerlink" title="Permanent link">¤</a></h3>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+  </div>
 
 
 
@@ -1360,21 +1445,21 @@ AliasResolutionError            (<a href="#griffe.exceptions.GriffeError">Griffe
 
         <details class="quote">
           <summary>Source code in <code>griffe/exceptions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">25</span>
 <span class="normal">26</span>
 <span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Initialize the exception.</span>
 
 <span class="sd">    Parameters:</span>
 <span class="sd">        target_path: The problematic target path.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">target_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">target_path</span>
-    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;could not resolve </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">target_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Could not resolve </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">target_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -1413,13 +1498,146 @@ BuiltinModuleError            (<a href="#griffe.exceptions.GriffeError">GriffeEr
 
         <details class="quote">
           <summary>Source code in <code>griffe/exceptions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">41</span>
-<span class="normal">42</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BuiltinModuleError</span><span class="p">(</span><span class="n">GriffeError</span><span class="p">):</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">56</span>
+<span class="normal">57</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BuiltinModuleError</span><span class="p">(</span><span class="n">GriffeError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Exception raised when trying to access the filepath of a builtin module.&quot;&quot;&quot;</span>
 </code></pre></div>
 </td></tr></table>
         </details>
 
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="griffe.exceptions.CyclicAliasError" class="doc doc-heading">
+        <code>
+CyclicAliasError            (<a href="#griffe.exceptions.GriffeError">GriffeError</a>)
+        </code>
+
+
+
+<a href="#griffe.exceptions.CyclicAliasError" class="headerlink" title="Permanent link">¤</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Exception raised when a cycle is detected in aliases.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>griffe/exceptions.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">CyclicAliasError</span><span class="p">(</span><span class="n">GriffeError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Exception raised when a cycle is detected in aliases.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chain</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Initialize the exception.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            chain: The cyclic chain of items (such as target path).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chain</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">chain</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;Cyclic aliases detected:</span><span class="se">\n</span><span class="s2">  &quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">  &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chain</span><span class="p">))</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="griffe.exceptions.CyclicAliasError.chain" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">chain</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">chain</span></code>
+
+
+<a href="#griffe.exceptions.CyclicAliasError.chain" class="headerlink" title="Permanent link">¤</a></h3>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="griffe.exceptions.CyclicAliasError.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chain</span><span class="p">)</span></code>
+
+
+<a href="#griffe.exceptions.CyclicAliasError.__init__" class="headerlink" title="Permanent link">¤</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Initialize the exception.</p>
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>chain</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>)
+        – <p>The cyclic chain of items (such as target path).</p>
+      </li>
+  </ul>
+
+        <details class="quote">
+          <summary>Source code in <code>griffe/exceptions.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chain</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Initialize the exception.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        chain: The cyclic chain of items (such as target path).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">chain</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">chain</span>
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;Cyclic aliases detected:</span><span class="se">\n</span><span class="s2">  &quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">  &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chain</span><span class="p">))</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
 
     </div>
 
@@ -1446,8 +1664,8 @@ ExtensionError            (<a href="#griffe.exceptions.GriffeError">GriffeError<
 
         <details class="quote">
           <summary>Source code in <code>griffe/exceptions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">45</span>
-<span class="normal">46</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ExtensionError</span><span class="p">(</span><span class="n">GriffeError</span><span class="p">):</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">60</span>
+<span class="normal">61</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ExtensionError</span><span class="p">(</span><span class="n">GriffeError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Base class for errors raised by extensions.&quot;&quot;&quot;</span>
 </code></pre></div>
 </td></tr></table>
@@ -1479,8 +1697,8 @@ ExtensionNotLoadedError            (<a href="#griffe.exceptions.ExtensionError">
 
         <details class="quote">
           <summary>Source code in <code>griffe/exceptions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">49</span>
-<span class="normal">50</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ExtensionNotLoadedError</span><span class="p">(</span><span class="n">ExtensionError</span><span class="p">):</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">64</span>
+<span class="normal">65</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ExtensionNotLoadedError</span><span class="p">(</span><span class="n">ExtensionError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Exception raised when an extension could not be loaded.&quot;&quot;&quot;</span>
 </code></pre></div>
 </td></tr></table>
@@ -1512,8 +1730,8 @@ GriffeError            (<a href="https://docs.python.org/3/library/exceptions.ht
 
         <details class="quote">
           <summary>Source code in <code>griffe/exceptions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">GriffeError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">GriffeError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;The base exception for all Griffe errors.&quot;&quot;&quot;</span>
 </code></pre></div>
 </td></tr></table>
@@ -1545,8 +1763,8 @@ LastNodeError            (<a href="#griffe.exceptions.GriffeError">GriffeError</
 
         <details class="quote">
           <summary>Source code in <code>griffe/exceptions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">33</span>
-<span class="normal">34</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">LastNodeError</span><span class="p">(</span><span class="n">GriffeError</span><span class="p">):</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">48</span>
+<span class="normal">49</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">LastNodeError</span><span class="p">(</span><span class="n">GriffeError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Exception raised when trying to access a next or previous node.&quot;&quot;&quot;</span>
 </code></pre></div>
 </td></tr></table>
@@ -1578,8 +1796,8 @@ NameResolutionError            (<a href="#griffe.exceptions.GriffeError">GriffeE
 
         <details class="quote">
           <summary>Source code in <code>griffe/exceptions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">NameResolutionError</span><span class="p">(</span><span class="n">GriffeError</span><span class="p">):</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">NameResolutionError</span><span class="p">(</span><span class="n">GriffeError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Exception for names that cannot be resolved in a object scope.&quot;&quot;&quot;</span>
 </code></pre></div>
 </td></tr></table>
@@ -1611,8 +1829,8 @@ RootNodeError            (<a href="#griffe.exceptions.GriffeError">GriffeError</
 
         <details class="quote">
           <summary>Source code in <code>griffe/exceptions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">37</span>
-<span class="normal">38</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">RootNodeError</span><span class="p">(</span><span class="n">GriffeError</span><span class="p">):</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">52</span>
+<span class="normal">53</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">RootNodeError</span><span class="p">(</span><span class="n">GriffeError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Exception raised when trying to use siblings properties on a root node.&quot;&quot;&quot;</span>
 </code></pre></div>
 </td></tr></table>
@@ -1644,8 +1862,8 @@ UnhandledPthFileError            (<a href="#griffe.exceptions.GriffeError">Griff
 
         <details class="quote">
           <summary>Source code in <code>griffe/exceptions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">UnhandledPthFileError</span><span class="p">(</span><span class="n">GriffeError</span><span class="p">):</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">UnhandledPthFileError</span><span class="p">(</span><span class="n">GriffeError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Exception for unhandled .path files, when searching modules.&quot;&quot;&quot;</span>
 </code></pre></div>
 </td></tr></table>
@@ -1677,8 +1895,8 @@ UnimportableModuleError            (<a href="#griffe.exceptions.GriffeError">Gri
 
         <details class="quote">
           <summary>Source code in <code>griffe/exceptions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">UnimportableModuleError</span><span class="p">(</span><span class="n">GriffeError</span><span class="p">):</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">UnimportableModuleError</span><span class="p">(</span><span class="n">GriffeError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Exception for modules that cannot be imported.&quot;&quot;&quot;</span>
 </code></pre></div>
 </td></tr></table>

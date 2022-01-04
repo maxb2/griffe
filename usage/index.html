@@ -1189,14 +1189,14 @@ If Griffe can't find the packages, it will fail with a <code>ModuleNotFoundError
 <h3 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">¤</a></h3>
 <p>You can pass extensions to the loader to augment its capacities:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">griffe.loader</span> <span class="kn">import</span> <span class="n">GriffeLoader</span>
-<span class="kn">from</span> <span class="nn">griffe.extensions</span> <span class="kn">import</span> <span class="n">Extension</span><span class="p">,</span> <span class="n">Extensions</span><span class="p">,</span> <span class="n">When</span>
+<span class="kn">from</span> <span class="nn">griffe.extensions</span> <span class="kn">import</span> <span class="n">VisitorExtension</span><span class="p">,</span> <span class="n">Extensions</span><span class="p">,</span> <span class="n">When</span>
 
 <span class="c1"># import extensions</span>
 <span class="kn">from</span> <span class="nn">some.package</span> <span class="kn">import</span> <span class="n">TheirExtension</span>
 
 
 <span class="c1"># or define your own</span>
-<span class="k">class</span> <span class="nc">ClassStartsAtOddLineNumberExtension</span><span class="p">(</span><span class="n">Extension</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">ClassStartsAtOddLineNumberExtension</span><span class="p">(</span><span class="n">VisitorExtension</span><span class="p">):</span>
     <span class="n">when</span> <span class="o">=</span> <span class="n">When</span><span class="o">.</span><span class="n">after_all</span>
 
     <span class="k">def</span> <span class="nf">visit_classdef</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>

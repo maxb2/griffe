@@ -1153,6 +1153,15 @@ nested arbitrarily.</p>
       </li>
   </ul>
 
+  <p>Raises:</p>
+  <ul>
+      <li class="field-body">
+            <code>ImportError</code>
+          –
+        <p>When there was an error during import.</p>
+      </li>
+  </ul>
+
   <p>Returns:</p>
   <ul>
       <li class="field-body">
@@ -1180,7 +1189,13 @@ nested arbitrarily.</p>
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">dynamic_import</span><span class="p">(</span><span class="n">import_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">dynamic_import</span><span class="p">(</span><span class="n">import_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Dynamically import the specified object.</span>
 
 <span class="sd">    It can be a module, class, method, function, attribute,</span>
@@ -1189,10 +1204,16 @@ nested arbitrarily.</p>
 <span class="sd">    Parameters:</span>
 <span class="sd">        import_path: The path of the object to import.</span>
 
+<span class="sd">    Raises:</span>
+<span class="sd">        ImportError: When there was an error during import.</span>
+
 <span class="sd">    Returns:</span>
 <span class="sd">        The imported object.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">module</span> <span class="o">=</span> <span class="nb">__import__</span><span class="p">(</span><span class="n">import_path</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">module</span> <span class="o">=</span> <span class="nb">__import__</span><span class="p">(</span><span class="n">import_path</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error while importing &#39;</span><span class="si">{</span><span class="n">import_path</span><span class="si">}</span><span class="s2">&#39;: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">error</span>
     <span class="n">attr_parts</span> <span class="o">=</span> <span class="n">import_path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]</span>
     <span class="n">value</span> <span class="o">=</span> <span class="n">module</span>
     <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">attr_parts</span><span class="p">:</span>
