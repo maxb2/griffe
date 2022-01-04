@@ -670,34 +670,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#griffe.cli._level_choices" class="md-nav__link">
-    _level_choices
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#griffe.cli.logger" class="md-nav__link">
-    logger
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#griffe.cli._load_packages" class="md-nav__link">
-    _load_packages()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#griffe.cli._print_data" class="md-nav__link">
-    _print_data()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#griffe.cli.get_parser" class="md-nav__link">
     get_parser()
   </a>
@@ -1119,34 +1091,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#griffe.cli._level_choices" class="md-nav__link">
-    _level_choices
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#griffe.cli.logger" class="md-nav__link">
-    logger
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#griffe.cli._load_packages" class="md-nav__link">
-    _load_packages()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#griffe.cli._print_data" class="md-nav__link">
-    _print_data()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#griffe.cli.get_parser" class="md-nav__link">
     get_parser()
   </a>
@@ -1195,161 +1139,9 @@
 
 
 
-  <div class="doc doc-object doc-attribute">
 
 
 
-<h2 id="griffe.cli._level_choices" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">_level_choices</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;DEBUG&#39;</span><span class="p">,</span> <span class="s1">&#39;INFO&#39;</span><span class="p">,</span> <span class="s1">&#39;WARNING&#39;</span><span class="p">,</span> <span class="s1">&#39;ERROR&#39;</span><span class="p">,</span> <span class="s1">&#39;CRITICAL&#39;</span><span class="p">)</span></code>
-
-
-<a href="#griffe.cli._level_choices" class="headerlink" title="Permanent link">¤</a></h2>
-
-    <div class="doc doc-contents ">
-
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-attribute">
-
-
-
-<h2 id="griffe.cli.logger" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">logger</span> <span class="o">=</span> <span class="n">get_logger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span></code>
-
-
-<a href="#griffe.cli.logger" class="headerlink" title="Permanent link">¤</a></h2>
-
-    <div class="doc doc-contents ">
-
-    </div>
-
-  </div>
-
-
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h2 id="griffe.cli._load_packages" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">_load_packages</span><span class="p">(</span><span class="n">packages</span><span class="p">,</span> <span class="n">extensions</span><span class="p">,</span> <span class="n">search_paths</span><span class="p">,</span> <span class="n">docstring_parser</span><span class="p">,</span> <span class="n">docstring_options</span><span class="p">,</span> <span class="n">resolve_aliases</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">only_exported</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">only_known_modules</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
-
-
-<a href="#griffe.cli._load_packages" class="headerlink" title="Permanent link">¤</a></h2>
-
-
-    <div class="doc doc-contents ">
-
-
-        <details class="quote">
-          <summary>Source code in <code>griffe/cli.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">_load_packages</span><span class="p">(</span>
-    <span class="n">packages</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
-    <span class="n">extensions</span><span class="p">:</span> <span class="n">Extensions</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">search_paths</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
-    <span class="n">docstring_parser</span><span class="p">:</span> <span class="n">Parser</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">docstring_options</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
-    <span class="n">resolve_aliases</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="n">only_exported</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="n">only_known_modules</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-<span class="p">):</span>
-    <span class="n">loader</span> <span class="o">=</span> <span class="n">GriffeLoader</span><span class="p">(</span>
-        <span class="n">extensions</span><span class="o">=</span><span class="n">extensions</span><span class="p">,</span>
-        <span class="n">docstring_parser</span><span class="o">=</span><span class="n">docstring_parser</span><span class="p">,</span>
-        <span class="n">docstring_options</span><span class="o">=</span><span class="n">docstring_options</span><span class="p">,</span>
-    <span class="p">)</span>
-    <span class="k">for</span> <span class="n">package</span> <span class="ow">in</span> <span class="n">packages</span><span class="p">:</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Loading package </span><span class="si">{</span><span class="n">package</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">loader</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="n">package</span><span class="p">,</span> <span class="n">search_paths</span><span class="o">=</span><span class="n">search_paths</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">ModuleNotFoundError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Could not find package </span><span class="si">{</span><span class="n">package</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tried but could not import package </span><span class="si">{</span><span class="n">package</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">resolve_aliases</span><span class="p">:</span>
-        <span class="n">unresolved</span><span class="p">,</span> <span class="n">iterations</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">resolve_aliases</span><span class="p">(</span><span class="n">only_exported</span><span class="p">,</span> <span class="n">only_known_modules</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">unresolved</span><span class="p">:</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">unresolved</span><span class="p">)</span><span class="si">}</span><span class="s2"> aliases were still unresolved after </span><span class="si">{</span><span class="n">iterations</span><span class="si">}</span><span class="s2"> iterations&quot;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;All aliases were resolved after </span><span class="si">{</span><span class="n">iterations</span><span class="si">}</span><span class="s2"> iterations&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">loader</span><span class="o">.</span><span class="n">modules_collection</span><span class="o">.</span><span class="n">members</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h2 id="griffe.cli._print_data" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">_print_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">output_file</span><span class="p">)</span></code>
-
-
-<a href="#griffe.cli._print_data" class="headerlink" title="Permanent link">¤</a></h2>
-
-
-    <div class="doc doc-contents ">
-
-
-        <details class="quote">
-          <summary>Source code in <code>griffe/cli.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">_print_data</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">output_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">output_file</span> <span class="ow">is</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fd</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">fd</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
 
 
 
