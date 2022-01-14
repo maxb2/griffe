@@ -411,10 +411,45 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../usage/">Usage</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Usage" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Usage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../usage/" class="md-nav__link">
-        Usage
+      <a href="../../../docstrings/" class="md-nav__link">
+        Docstrings
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1023,6 +1058,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stats/" class="md-nav__link">
+        stats
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1292,7 +1341,7 @@ Expression            (<a href="https://docs.python.org/3/library/stdtypes.html#
     <div class="doc doc-contents ">
 
       <p>This class represents a Python expression.</p>
-<p>For example, it can represents complex annotations such as:</p>
+<p>For example, it can represent complex annotations such as:</p>
 <ul>
 <li><code>Optional[Dict[str, Tuple[int, bool]]]</code></li>
 <li><code>str | Callable | list[int]</code></li>
@@ -1367,7 +1416,7 @@ Each name in the expression can be resolved to its full name within its scope.</
 <span class="normal">143</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Expression</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>  <span class="c1"># noqa: WPS600</span>
     <span class="sd">&quot;&quot;&quot;This class represents a Python expression.</span>
 
-<span class="sd">    For example, it can represents complex annotations such as:</span>
+<span class="sd">    For example, it can represent complex annotations such as:</span>
 
 <span class="sd">    - `Optional[Dict[str, Tuple[int, bool]]]`</span>
 <span class="sd">    - `str | Callable | list[int]`</span>

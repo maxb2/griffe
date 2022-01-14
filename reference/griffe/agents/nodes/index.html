@@ -411,10 +411,45 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../usage/">Usage</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Usage" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Usage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../../usage/" class="md-nav__link">
-        Usage
+      <a href="../../../../docstrings/" class="md-nav__link">
+        Docstrings
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -907,6 +942,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#griffe.agents.nodes.relative_to_absolute" class="md-nav__link">
+    relative_to_absolute()
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1208,6 +1250,20 @@
     <li class="md-nav__item">
       <a href="../../mixins/" class="md-nav__link">
         mixins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stats/" class="md-nav__link">
+        stats
       </a>
     </li>
   
@@ -1620,6 +1676,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#griffe.agents.nodes.relative_to_absolute" class="md-nav__link">
+    relative_to_absolute()
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1678,9 +1741,7 @@ ASTNode        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 97</span>
 <span class="normal"> 98</span>
 <span class="normal"> 99</span>
 <span class="normal">100</span>
@@ -1823,7 +1884,9 @@ ASTNode        </code>
 <span class="normal">237</span>
 <span class="normal">238</span>
 <span class="normal">239</span>
-<span class="normal">240</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ASTNode</span><span class="p">:</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ASTNode</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;This class is dynamically added to the bases of each AST node class.&quot;&quot;&quot;</span>
 
     <span class="n">parent</span><span class="p">:</span> <span class="n">ASTNode</span>
@@ -2011,9 +2074,7 @@ ASTNode        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">115</span>
 <span class="normal">116</span>
 <span class="normal">117</span>
 <span class="normal">118</span>
@@ -2032,7 +2093,9 @@ ASTNode        </code>
 <span class="normal">131</span>
 <span class="normal">132</span>
 <span class="normal">133</span>
-<span class="normal">134</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>  <span class="c1"># noqa: WPS231</span>
 <span class="k">def</span> <span class="nf">children</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">ASTNode</span><span class="p">]:</span>  <span class="c1"># noqa: WPS231</span>
     <span class="sd">&quot;&quot;&quot;Build and return the children of this node.</span>
 
@@ -2081,7 +2144,7 @@ ASTNode        </code>
   <p>Raises:</p>
   <ul>
       <li class="field-body">
-            <code>LastNodeError</code>
+            <code><a href="../../exceptions/#griffe.exceptions.LastNodeError">LastNodeError</a></code>
           –
         <p>When the node does not have children.</p>
       </li>
@@ -2097,9 +2160,7 @@ ASTNode        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">212</span>
-<span class="normal">213</span>
-<span class="normal">214</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">214</span>
 <span class="normal">215</span>
 <span class="normal">216</span>
 <span class="normal">217</span>
@@ -2110,7 +2171,9 @@ ASTNode        </code>
 <span class="normal">222</span>
 <span class="normal">223</span>
 <span class="normal">224</span>
-<span class="normal">225</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">first_child</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ASTNode</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the first child of this node.</span>
 
@@ -2158,14 +2221,14 @@ ASTNode        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">106</span>
 <span class="normal">107</span>
 <span class="normal">108</span>
 <span class="normal">109</span>
 <span class="normal">110</span>
-<span class="normal">111</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">kind</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the kind of this node.</span>
 
@@ -2200,7 +2263,7 @@ ASTNode        </code>
   <p>Raises:</p>
   <ul>
       <li class="field-body">
-            <code>LastNodeError</code>
+            <code><a href="../../exceptions/#griffe.exceptions.LastNodeError">LastNodeError</a></code>
           –
         <p>When the node does not have children.</p>
       </li>
@@ -2216,9 +2279,7 @@ ASTNode        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">227</span>
-<span class="normal">228</span>
-<span class="normal">229</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">229</span>
 <span class="normal">230</span>
 <span class="normal">231</span>
 <span class="normal">232</span>
@@ -2229,7 +2290,9 @@ ASTNode        </code>
 <span class="normal">237</span>
 <span class="normal">238</span>
 <span class="normal">239</span>
-<span class="normal">240</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">last_child</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ASTNode</span><span class="p">:</span>  <span class="c1"># noqa: A003</span>
     <span class="sd">&quot;&quot;&quot;Return the lasts child of this node.</span>
 
@@ -2270,7 +2333,7 @@ ASTNode        </code>
   <p>Raises:</p>
   <ul>
       <li class="field-body">
-            <code>LastNodeError</code>
+            <code><a href="../../exceptions/#griffe.exceptions.LastNodeError">LastNodeError</a></code>
           –
         <p>When the node does not have next siblings.</p>
       </li>
@@ -2286,9 +2349,7 @@ ASTNode        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">197</span>
-<span class="normal">198</span>
-<span class="normal">199</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">199</span>
 <span class="normal">200</span>
 <span class="normal">201</span>
 <span class="normal">202</span>
@@ -2299,7 +2360,9 @@ ASTNode        </code>
 <span class="normal">207</span>
 <span class="normal">208</span>
 <span class="normal">209</span>
-<span class="normal">210</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>  <span class="c1"># noqa: A003</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>  <span class="c1"># noqa: A003</span>
 <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ASTNode</span><span class="p">:</span>  <span class="c1"># noqa: A003</span>
     <span class="sd">&quot;&quot;&quot;Return the next sibling of this node.</span>
 
@@ -2347,16 +2410,16 @@ ASTNode        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">164</span>
 <span class="normal">165</span>
 <span class="normal">166</span>
 <span class="normal">167</span>
 <span class="normal">168</span>
 <span class="normal">169</span>
 <span class="normal">170</span>
-<span class="normal">171</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">next_siblings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">ASTNode</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Return the next siblings of this node, starting from the closest.</span>
 
@@ -2393,7 +2456,7 @@ ASTNode        </code>
   <p>Raises:</p>
   <ul>
       <li class="field-body">
-            <code>RootNodeError</code>
+            <code><a href="../../exceptions/#griffe.exceptions.RootNodeError">RootNodeError</a></code>
           –
         <p>When the node doesn't have a parent.</p>
       </li>
@@ -2409,9 +2472,7 @@ ASTNode        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">138</span>
 <span class="normal">139</span>
 <span class="normal">140</span>
 <span class="normal">141</span>
@@ -2422,7 +2483,9 @@ ASTNode        </code>
 <span class="normal">146</span>
 <span class="normal">147</span>
 <span class="normal">148</span>
-<span class="normal">149</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">position</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell the position of this node amongst its siblings.</span>
 
@@ -2463,7 +2526,7 @@ ASTNode        </code>
   <p>Raises:</p>
   <ul>
       <li class="field-body">
-            <code>LastNodeError</code>
+            <code><a href="../../exceptions/#griffe.exceptions.LastNodeError">LastNodeError</a></code>
           –
         <p>When the node does not have previous siblings.</p>
       </li>
@@ -2479,9 +2542,7 @@ ASTNode        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">182</span>
-<span class="normal">183</span>
-<span class="normal">184</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">184</span>
 <span class="normal">185</span>
 <span class="normal">186</span>
 <span class="normal">187</span>
@@ -2492,7 +2553,9 @@ ASTNode        </code>
 <span class="normal">192</span>
 <span class="normal">193</span>
 <span class="normal">194</span>
-<span class="normal">195</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">previous</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ASTNode</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the previous sibling of this node.</span>
 
@@ -2540,16 +2603,16 @@ ASTNode        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">153</span>
 <span class="normal">154</span>
 <span class="normal">155</span>
 <span class="normal">156</span>
 <span class="normal">157</span>
 <span class="normal">158</span>
 <span class="normal">159</span>
-<span class="normal">160</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">previous_siblings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">ASTNode</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Return the previous siblings of this node, starting from the closest.</span>
 
@@ -2593,14 +2656,14 @@ ASTNode        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">173</span>
-<span class="normal">174</span>
-<span class="normal">175</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">175</span>
 <span class="normal">176</span>
 <span class="normal">177</span>
 <span class="normal">178</span>
 <span class="normal">179</span>
-<span class="normal">180</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">siblings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">ASTNode</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Return the siblings of this node.</span>
 
@@ -2646,9 +2709,7 @@ ObjectKind            (<a href="https://docs.python.org/3/library/enum.html#modu
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">243</span>
-<span class="normal">244</span>
-<span class="normal">245</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">245</span>
 <span class="normal">246</span>
 <span class="normal">247</span>
 <span class="normal">248</span>
@@ -2664,7 +2725,9 @@ ObjectKind            (<a href="https://docs.python.org/3/library/enum.html#modu
 <span class="normal">258</span>
 <span class="normal">259</span>
 <span class="normal">260</span>
-<span class="normal">261</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ObjectKind</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ObjectKind</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Enumeration for the different kinds of objects.&quot;&quot;&quot;</span>
 
     <span class="n">MODULE</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;module&quot;</span>
@@ -2762,9 +2825,7 @@ each node has a reference to its parent, but not to its child (for simplicity pu
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">264</span>
-<span class="normal">265</span>
-<span class="normal">266</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">266</span>
 <span class="normal">267</span>
 <span class="normal">268</span>
 <span class="normal">269</span>
@@ -3008,7 +3069,9 @@ each node has a reference to its parent, but not to its child (for simplicity pu
 <span class="normal">507</span>
 <span class="normal">508</span>
 <span class="normal">509</span>
-<span class="normal">510</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ObjectNode</span><span class="p">:</span>
+<span class="normal">510</span>
+<span class="normal">511</span>
+<span class="normal">512</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ObjectNode</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Helper class to represent an object tree.</span>
 
 <span class="sd">    It&#39;s not really a tree but more a backward-linked list:</span>
@@ -3310,9 +3373,7 @@ each node has a reference to its parent, but not to its child (for simplicity pu
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">281</span>
-<span class="normal">282</span>
-<span class="normal">283</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">283</span>
 <span class="normal">284</span>
 <span class="normal">285</span>
 <span class="normal">286</span>
@@ -3330,7 +3391,9 @@ each node has a reference to its parent, but not to its child (for simplicity pu
 <span class="normal">298</span>
 <span class="normal">299</span>
 <span class="normal">300</span>
-<span class="normal">301</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">ObjectNode</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">ObjectNode</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Initialize the object.</span>
 
@@ -3388,9 +3451,7 @@ each node has a reference to its parent, but not to its child (for simplicity pu
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">339</span>
-<span class="normal">340</span>
-<span class="normal">341</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">341</span>
 <span class="normal">342</span>
 <span class="normal">343</span>
 <span class="normal">344</span>
@@ -3399,7 +3460,9 @@ each node has a reference to its parent, but not to its child (for simplicity pu
 <span class="normal">347</span>
 <span class="normal">348</span>
 <span class="normal">349</span>
-<span class="normal">350</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">children</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">ObjectNode</span><span class="p">]:</span>  <span class="c1"># noqa: WPS231</span>
     <span class="sd">&quot;&quot;&quot;Build and return the children of this node.</span>
 
@@ -3445,15 +3508,15 @@ each node has a reference to its parent, but not to its child (for simplicity pu
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">382</span>
-<span class="normal">383</span>
-<span class="normal">384</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">384</span>
 <span class="normal">385</span>
 <span class="normal">386</span>
 <span class="normal">387</span>
 <span class="normal">388</span>
 <span class="normal">389</span>
-<span class="normal">390</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">is_builtin_function</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Tell if this node&#39;s object is a builtin function.</span>
@@ -3496,15 +3559,15 @@ each node has a reference to its parent, but not to its child (for simplicity pu
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">456</span>
-<span class="normal">457</span>
-<span class="normal">458</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">458</span>
 <span class="normal">459</span>
 <span class="normal">460</span>
 <span class="normal">461</span>
 <span class="normal">462</span>
 <span class="normal">463</span>
-<span class="normal">464</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">464</span>
+<span class="normal">465</span>
+<span class="normal">466</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">is_builtin_method</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Tell if this node&#39;s object is a builtin method.</span>
@@ -3547,15 +3610,15 @@ each node has a reference to its parent, but not to its child (for simplicity pu
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">412</span>
-<span class="normal">413</span>
-<span class="normal">414</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">414</span>
 <span class="normal">415</span>
 <span class="normal">416</span>
 <span class="normal">417</span>
 <span class="normal">418</span>
 <span class="normal">419</span>
-<span class="normal">420</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">420</span>
+<span class="normal">421</span>
+<span class="normal">422</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">is_cached_property</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Tell if this node&#39;s object is a cached property.</span>
@@ -3598,15 +3661,15 @@ each node has a reference to its parent, but not to its child (for simplicity pu
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">362</span>
-<span class="normal">363</span>
-<span class="normal">364</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">364</span>
 <span class="normal">365</span>
 <span class="normal">366</span>
 <span class="normal">367</span>
 <span class="normal">368</span>
 <span class="normal">369</span>
-<span class="normal">370</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">is_class</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Tell if this node&#39;s object is a class.</span>
@@ -3649,9 +3712,7 @@ each node has a reference to its parent, but not to its child (for simplicity pu
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">482</span>
-<span class="normal">483</span>
-<span class="normal">484</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">484</span>
 <span class="normal">485</span>
 <span class="normal">486</span>
 <span class="normal">487</span>
@@ -3663,7 +3724,9 @@ each node has a reference to its parent, but not to its child (for simplicity pu
 <span class="normal">493</span>
 <span class="normal">494</span>
 <span class="normal">495</span>
-<span class="normal">496</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">496</span>
+<span class="normal">497</span>
+<span class="normal">498</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">is_classmethod</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Tell if this node&#39;s object is a classmethod.</span>
@@ -3712,15 +3775,15 @@ each node has a reference to its parent, but not to its child (for simplicity pu
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">392</span>
-<span class="normal">393</span>
-<span class="normal">394</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">394</span>
 <span class="normal">395</span>
 <span class="normal">396</span>
 <span class="normal">397</span>
 <span class="normal">398</span>
 <span class="normal">399</span>
-<span class="normal">400</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">400</span>
+<span class="normal">401</span>
+<span class="normal">402</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">is_coroutine</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Tell if this node&#39;s object is a coroutine.</span>
@@ -3763,15 +3826,15 @@ each node has a reference to its parent, but not to its child (for simplicity pu
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">372</span>
-<span class="normal">373</span>
-<span class="normal">374</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">374</span>
 <span class="normal">375</span>
 <span class="normal">376</span>
 <span class="normal">377</span>
 <span class="normal">378</span>
 <span class="normal">379</span>
-<span class="normal">380</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">is_function</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Tell if this node&#39;s object is a function.</span>
@@ -3814,16 +3877,16 @@ each node has a reference to its parent, but not to its child (for simplicity pu
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">432</span>
-<span class="normal">433</span>
-<span class="normal">434</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">434</span>
 <span class="normal">435</span>
 <span class="normal">436</span>
 <span class="normal">437</span>
 <span class="normal">438</span>
 <span class="normal">439</span>
 <span class="normal">440</span>
-<span class="normal">441</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">441</span>
+<span class="normal">442</span>
+<span class="normal">443</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">is_method</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Tell if this node&#39;s object is a method.</span>
@@ -3869,9 +3932,7 @@ method descriptors, rather than normal methods.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">443</span>
-<span class="normal">444</span>
-<span class="normal">445</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">445</span>
 <span class="normal">446</span>
 <span class="normal">447</span>
 <span class="normal">448</span>
@@ -3880,7 +3941,9 @@ method descriptors, rather than normal methods.</p>
 <span class="normal">451</span>
 <span class="normal">452</span>
 <span class="normal">453</span>
-<span class="normal">454</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">454</span>
+<span class="normal">455</span>
+<span class="normal">456</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">is_method_descriptor</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Tell if this node&#39;s object is a method descriptor.</span>
@@ -3926,15 +3989,15 @@ method descriptors, rather than normal methods.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">352</span>
-<span class="normal">353</span>
-<span class="normal">354</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">354</span>
 <span class="normal">355</span>
 <span class="normal">356</span>
 <span class="normal">357</span>
 <span class="normal">358</span>
 <span class="normal">359</span>
-<span class="normal">360</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">is_module</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Tell if this node&#39;s object is a module.</span>
@@ -3977,15 +4040,15 @@ method descriptors, rather than normal methods.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">402</span>
-<span class="normal">403</span>
-<span class="normal">404</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">404</span>
 <span class="normal">405</span>
 <span class="normal">406</span>
 <span class="normal">407</span>
 <span class="normal">408</span>
 <span class="normal">409</span>
-<span class="normal">410</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">is_property</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Tell if this node&#39;s object is a property.</span>
@@ -4028,9 +4091,7 @@ method descriptors, rather than normal methods.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">466</span>
-<span class="normal">467</span>
-<span class="normal">468</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">468</span>
 <span class="normal">469</span>
 <span class="normal">470</span>
 <span class="normal">471</span>
@@ -4042,7 +4103,9 @@ method descriptors, rather than normal methods.</p>
 <span class="normal">477</span>
 <span class="normal">478</span>
 <span class="normal">479</span>
-<span class="normal">480</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">480</span>
+<span class="normal">481</span>
+<span class="normal">482</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">is_staticmethod</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Tell if this node&#39;s object is a staticmethod.</span>
@@ -4091,9 +4154,7 @@ method descriptors, rather than normal methods.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">306</span>
-<span class="normal">307</span>
-<span class="normal">308</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">308</span>
 <span class="normal">309</span>
 <span class="normal">310</span>
 <span class="normal">311</span>
@@ -4122,7 +4183,9 @@ method descriptors, rather than normal methods.</p>
 <span class="normal">334</span>
 <span class="normal">335</span>
 <span class="normal">336</span>
-<span class="normal">337</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">kind</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ObjectKind</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the kind of this node.</span>
 
@@ -4188,15 +4251,15 @@ method descriptors, rather than normal methods.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">422</span>
-<span class="normal">423</span>
-<span class="normal">424</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">424</span>
 <span class="normal">425</span>
 <span class="normal">426</span>
 <span class="normal">427</span>
 <span class="normal">428</span>
 <span class="normal">429</span>
-<span class="normal">430</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">parent_is_class</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Tell if the object of this node&#39;s parent is a class.</span>
@@ -4347,9 +4410,7 @@ method descriptors, rather than normal methods.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">666</span>
-<span class="normal">667</span>
-<span class="normal">668</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">668</span>
 <span class="normal">669</span>
 <span class="normal">670</span>
 <span class="normal">671</span>
@@ -4359,7 +4420,9 @@ method descriptors, rather than normal methods.</p>
 <span class="normal">675</span>
 <span class="normal">676</span>
 <span class="normal">677</span>
-<span class="normal">678</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_annotation</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">AST</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">Module</span> <span class="o">|</span> <span class="n">Class</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">678</span>
+<span class="normal">679</span>
+<span class="normal">680</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_annotation</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">AST</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">Module</span> <span class="o">|</span> <span class="n">Class</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Extract a resolvable annotation.</span>
 
 <span class="sd">    Parameters:</span>
@@ -4420,9 +4483,7 @@ method descriptors, rather than normal methods.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">683</span>
-<span class="normal">684</span>
-<span class="normal">685</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">685</span>
 <span class="normal">686</span>
 <span class="normal">687</span>
 <span class="normal">688</span>
@@ -4444,7 +4505,9 @@ method descriptors, rather than normal methods.</p>
 <span class="normal">704</span>
 <span class="normal">705</span>
 <span class="normal">706</span>
-<span class="normal">707</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_docstring</span><span class="p">(</span>
+<span class="normal">707</span>
+<span class="normal">708</span>
+<span class="normal">709</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_docstring</span><span class="p">(</span>
     <span class="n">node</span><span class="p">:</span> <span class="n">AST</span><span class="p">,</span>
     <span class="n">strict</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]:</span>
@@ -4512,16 +4575,16 @@ method descriptors, rather than normal methods.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1143</span>
-<span class="normal">1144</span>
-<span class="normal">1145</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1145</span>
 <span class="normal">1146</span>
 <span class="normal">1147</span>
 <span class="normal">1148</span>
 <span class="normal">1149</span>
 <span class="normal">1150</span>
 <span class="normal">1151</span>
-<span class="normal">1152</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_instance_names</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">AST</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="normal">1152</span>
+<span class="normal">1153</span>
+<span class="normal">1154</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_instance_names</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">AST</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Extract names from an assignment node, only for instance attributes.</span>
 
 <span class="sd">    Parameters:</span>
@@ -4574,16 +4637,16 @@ method descriptors, rather than normal methods.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1103</span>
-<span class="normal">1104</span>
-<span class="normal">1105</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1105</span>
 <span class="normal">1106</span>
 <span class="normal">1107</span>
 <span class="normal">1108</span>
 <span class="normal">1109</span>
 <span class="normal">1110</span>
 <span class="normal">1111</span>
-<span class="normal">1112</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">AST</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="normal">1112</span>
+<span class="normal">1113</span>
+<span class="normal">1114</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">AST</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Extract name from an assignment node.</span>
 
 <span class="sd">    Parameters:</span>
@@ -4636,16 +4699,16 @@ method descriptors, rather than normal methods.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1131</span>
-<span class="normal">1132</span>
-<span class="normal">1133</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1133</span>
 <span class="normal">1134</span>
 <span class="normal">1135</span>
 <span class="normal">1136</span>
 <span class="normal">1137</span>
 <span class="normal">1138</span>
 <span class="normal">1139</span>
-<span class="normal">1140</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_names</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">AST</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="normal">1140</span>
+<span class="normal">1141</span>
+<span class="normal">1142</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_names</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">AST</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Extract names from an assignment node.</span>
 
 <span class="sd">    Parameters:</span>
@@ -4709,9 +4772,7 @@ It allows to retrieve the actual code directly from the lines collection.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1157</span>
-<span class="normal">1158</span>
-<span class="normal">1159</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1159</span>
 <span class="normal">1160</span>
 <span class="normal">1161</span>
 <span class="normal">1162</span>
@@ -4730,7 +4791,9 @@ It allows to retrieve the actual code directly from the lines collection.</p>
 <span class="normal">1175</span>
 <span class="normal">1176</span>
 <span class="normal">1177</span>
-<span class="normal">1178</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_parameter_default</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">AST</span><span class="p">,</span> <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">lines_collection</span><span class="p">:</span> <span class="n">LinesCollection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">1178</span>
+<span class="normal">1179</span>
+<span class="normal">1180</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_parameter_default</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">AST</span><span class="p">,</span> <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">lines_collection</span><span class="p">:</span> <span class="n">LinesCollection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Extract the default value of a function parameter.</span>
 
 <span class="sd">    Parameters:</span>
@@ -4795,16 +4858,16 @@ It allows to retrieve the actual code directly from the lines collection.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1075</span>
-<span class="normal">1076</span>
-<span class="normal">1077</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1077</span>
 <span class="normal">1078</span>
 <span class="normal">1079</span>
 <span class="normal">1080</span>
 <span class="normal">1081</span>
 <span class="normal">1082</span>
 <span class="normal">1083</span>
-<span class="normal">1084</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">AST</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="normal">1084</span>
+<span class="normal">1085</span>
+<span class="normal">1086</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">AST</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Extract a complex value as a string.</span>
 
 <span class="sd">    Parameters:</span>
@@ -4857,16 +4920,16 @@ It allows to retrieve the actual code directly from the lines collection.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">537</span>
-<span class="normal">538</span>
-<span class="normal">539</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">539</span>
 <span class="normal">540</span>
 <span class="normal">541</span>
 <span class="normal">542</span>
 <span class="normal">543</span>
 <span class="normal">544</span>
 <span class="normal">545</span>
-<span class="normal">546</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parse__all__</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">NodeAssign</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>  <span class="c1"># noqa: WPS116,WPS120,WPS440</span>
+<span class="normal">546</span>
+<span class="normal">547</span>
+<span class="normal">548</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parse__all__</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">NodeAssign</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>  <span class="c1"># noqa: WPS116,WPS120,WPS440</span>
     <span class="sd">&quot;&quot;&quot;Get the values declared in `__all__`.</span>
 
 <span class="sd">    Parameters:</span>
@@ -4876,6 +4939,98 @@ It allows to retrieve the actual code directly from the lines collection.</p>
 <span class="sd">        A set of names.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="p">{</span><span class="n">elt</span><span class="o">.</span><span class="n">value</span> <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">elts</span><span class="p">}</span>  <span class="c1"># type: ignore[attr-defined]</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="griffe.agents.nodes.relative_to_absolute" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">relative_to_absolute</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">current_module</span><span class="p">)</span></code>
+
+
+<a href="#griffe.agents.nodes.relative_to_absolute" class="headerlink" title="Permanent link">¤</a></h2>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Convert a relative import path to an absolute one.</p>
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>node</b>
+            (<code><a href="https://docs.python.org/3/library/ast.html#ast.ImportFrom">NodeImportFrom</a></code>)
+        – <p>The "from ... import ..." AST node.</p>
+      </li>
+      <li class="field-body">
+        <b>name</b>
+            (<code><a href="https://docs.python.org/3/library/ast.html#ast.alias">NodeAlias</a></code>)
+        – <p>The imported name.</p>
+      </li>
+      <li class="field-body">
+        <b>current_module</b>
+            (<code><a href="../../dataclasses/#griffe.dataclasses.Module">Module</a></code>)
+        – <p>The module in which the import happens.</p>
+      </li>
+  </ul>
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+        – <p>The absolute import path.</p>
+      </li>
+  </ul>
+
+        <details class="quote">
+          <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1185</span>
+<span class="normal">1186</span>
+<span class="normal">1187</span>
+<span class="normal">1188</span>
+<span class="normal">1189</span>
+<span class="normal">1190</span>
+<span class="normal">1191</span>
+<span class="normal">1192</span>
+<span class="normal">1193</span>
+<span class="normal">1194</span>
+<span class="normal">1195</span>
+<span class="normal">1196</span>
+<span class="normal">1197</span>
+<span class="normal">1198</span>
+<span class="normal">1199</span>
+<span class="normal">1200</span>
+<span class="normal">1201</span>
+<span class="normal">1202</span>
+<span class="normal">1203</span>
+<span class="normal">1204</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">relative_to_absolute</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">NodeImportFrom</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">NodeAlias</span><span class="p">,</span> <span class="n">current_module</span><span class="p">:</span> <span class="n">Module</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Convert a relative import path to an absolute one.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        node: The &quot;from ... import ...&quot; AST node.</span>
+<span class="sd">        name: The imported name.</span>
+<span class="sd">        current_module: The module in which the import happens.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The absolute import path.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">level</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">level</span>
+    <span class="k">if</span> <span class="n">level</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">current_module</span><span class="o">.</span><span class="n">is_package</span> <span class="ow">or</span> <span class="n">current_module</span><span class="o">.</span><span class="n">is_subpackage</span><span class="p">:</span>
+        <span class="n">level</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">level</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">current_module</span><span class="o">.</span><span class="n">parent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">current_module</span> <span class="o">=</span> <span class="n">current_module</span><span class="o">.</span><span class="n">parent</span>  <span class="c1"># type: ignore[assignment]</span>
+        <span class="n">level</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="n">base</span> <span class="o">=</span> <span class="n">current_module</span><span class="o">.</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span> <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">level</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">node_module</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">module</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span> <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">module</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">base</span> <span class="o">+</span> <span class="n">node_module</span> <span class="o">+</span> <span class="n">name</span><span class="o">.</span><span class="n">name</span>
 </code></pre></div>
 </td></tr></table>
         </details>
