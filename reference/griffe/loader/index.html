@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://pawamoy.github.io/griffe/reference/griffe/loader/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.8">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6e60f8b8.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -64,7 +64,7 @@
   
     
     
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -889,6 +889,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../finder/" class="md-nav__link">
+        finder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../importer/" class="md-nav__link">
         importer
       </a>
@@ -984,27 +998,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#griffe.loader.find_module" class="md-nav__link">
-    find_module()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#griffe.loader.find_module_or_path" class="md-nav__link">
-    find_module_or_path()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#griffe.loader.iter_submodules" class="md-nav__link">
-    iter_submodules()
-  </a>
   
 </li>
       
@@ -1242,27 +1235,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#griffe.loader.find_module" class="md-nav__link">
-    find_module()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#griffe.loader.find_module_or_path" class="md-nav__link">
-    find_module_or_path()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#griffe.loader.iter_submodules" class="md-nav__link">
-    iter_submodules()
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1287,7 +1259,7 @@
 <a id="griffe.loader"></a>
     <div class="doc doc-contents first">
 
-      <p>This module contains the code allowing to find module and load their data.</p>
+      <p>This module contains the code allowing to load modules data.</p>
 <p>This is the entrypoint to use griffe programatically:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">griffe.loader</span> <span class="kn">import</span> <span class="n">GriffeLoader</span>
 
@@ -1298,11 +1270,6 @@
 
 
   <div class="doc doc-children">
-
-
-
-
-
 
 
 
@@ -1330,7 +1297,14 @@ GriffeLoader        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 73</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
 <span class="normal"> 74</span>
 <span class="normal"> 75</span>
 <span class="normal"> 76</span>
@@ -1641,17 +1615,15 @@ GriffeLoader        </code>
 <span class="normal">381</span>
 <span class="normal">382</span>
 <span class="normal">383</span>
-<span class="normal">384</span>
-<span class="normal">385</span>
-<span class="normal">386</span>
-<span class="normal">387</span>
-<span class="normal">388</span>
-<span class="normal">389</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">GriffeLoader</span><span class="p">:</span>
+<span class="normal">384</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">GriffeLoader</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;The Griffe loader, allowing to load data from modules.&quot;&quot;&quot;</span>
+
+    <span class="n">ignored_modules</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;debugpy&quot;</span><span class="p">,</span> <span class="s2">&quot;_pydev&quot;</span><span class="p">}</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">extensions</span><span class="p">:</span> <span class="n">Extensions</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">search_paths</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">docstring_parser</span><span class="p">:</span> <span class="n">Parser</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">docstring_options</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">lines_collection</span><span class="p">:</span> <span class="n">LinesCollection</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -1661,6 +1633,7 @@ GriffeLoader        </code>
 
 <span class="sd">        Parameters:</span>
 <span class="sd">            extensions: The extensions to use.</span>
+<span class="sd">            search_paths: The paths to search into.</span>
 <span class="sd">            docstring_parser: The docstring parser to use. By default, no parsing is done.</span>
 <span class="sd">            docstring_options: Additional docstring parsing options.</span>
 <span class="sd">            lines_collection: A collection of source code lines.</span>
@@ -1671,6 +1644,7 @@ GriffeLoader        </code>
         <span class="bp">self</span><span class="o">.</span><span class="n">docstring_options</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">docstring_options</span> <span class="ow">or</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lines_collection</span><span class="p">:</span> <span class="n">LinesCollection</span> <span class="o">=</span> <span class="n">lines_collection</span> <span class="ow">or</span> <span class="n">LinesCollection</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">:</span> <span class="n">ModulesCollection</span> <span class="o">=</span> <span class="n">modules_collection</span> <span class="ow">or</span> <span class="n">ModulesCollection</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">finder</span><span class="p">:</span> <span class="n">ModuleFinder</span> <span class="o">=</span> <span class="n">ModuleFinder</span><span class="p">(</span><span class="n">search_paths</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_time_stats</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s2">&quot;time_spent_visiting&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
             <span class="s2">&quot;time_spent_inspecting&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -1681,7 +1655,6 @@ GriffeLoader        </code>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">module</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">,</span>
         <span class="n">submodules</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="n">search_paths</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">try_relative_path</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Load a module.</span>
@@ -1689,7 +1662,6 @@ GriffeLoader        </code>
 <span class="sd">        Parameters:</span>
 <span class="sd">            module: The module name or path.</span>
 <span class="sd">            submodules: Whether to recurse on the submodules.</span>
-<span class="sd">            search_paths: The paths to search into.</span>
 <span class="sd">            try_relative_path: Whether to try finding the module as a relative path.</span>
 
 <span class="sd">        Returns:</span>
@@ -1701,16 +1673,14 @@ GriffeLoader        </code>
             <span class="n">top_module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_module</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">try</span><span class="p">:</span>
-                <span class="n">module_name</span><span class="p">,</span> <span class="n">top_module_name</span><span class="p">,</span> <span class="n">top_module_path</span> <span class="o">=</span> <span class="n">_top_name_and_path</span><span class="p">(</span>
-                    <span class="n">module</span><span class="p">,</span> <span class="n">search_paths</span><span class="p">,</span> <span class="n">try_relative_path</span>
-                <span class="p">)</span>
+                <span class="n">module_name</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">finder</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">try_relative_path</span><span class="p">)</span>
             <span class="k">except</span> <span class="ne">ModuleNotFoundError</span><span class="p">:</span>
                 <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Could not find </span><span class="si">{</span><span class="n">module</span><span class="si">}</span><span class="s2">: trying inspection&quot;</span><span class="p">)</span>
                 <span class="n">module_name</span> <span class="o">=</span> <span class="n">module</span>
                 <span class="n">top_module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_module</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found </span><span class="si">{</span><span class="n">module</span><span class="si">}</span><span class="s2">: visiting&quot;</span><span class="p">)</span>
-                <span class="n">top_module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load_module_path</span><span class="p">(</span><span class="n">top_module_name</span><span class="p">,</span> <span class="n">top_module_path</span><span class="p">,</span> <span class="n">submodules</span><span class="o">=</span><span class="n">submodules</span><span class="p">)</span>
+                <span class="n">top_module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load_module_path</span><span class="p">(</span><span class="n">package</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">package</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">submodules</span><span class="o">=</span><span class="n">submodules</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">[</span><span class="n">top_module</span><span class="o">.</span><span class="n">path</span><span class="p">]</span> <span class="o">=</span> <span class="n">top_module</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">[</span><span class="n">module_name</span><span class="p">]</span>  <span class="c1"># type: ignore[index]</span>
 
@@ -1853,12 +1823,12 @@ GriffeLoader        </code>
     <span class="k">def</span> <span class="nf">_load_module_path</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">module_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span>
+        <span class="n">module_path</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">],</span>
         <span class="n">submodules</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
         <span class="n">parent</span><span class="p">:</span> <span class="n">Module</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
         <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Loading path </span><span class="si">{</span><span class="n">module_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">module_path</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module_path</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
             <span class="n">module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="n">module_path</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">module_path</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s2">&quot;.py&quot;</span><span class="p">:</span>
             <span class="n">code</span> <span class="o">=</span> <span class="n">module_path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
@@ -1870,10 +1840,10 @@ GriffeLoader        </code>
         <span class="k">return</span> <span class="n">module</span>
 
     <span class="k">def</span> <span class="nf">_load_submodules</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">Module</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">subparts</span><span class="p">,</span> <span class="n">subpath</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">iter_submodules</span><span class="p">(</span><span class="n">module</span><span class="o">.</span><span class="n">filepath</span><span class="p">),</span> <span class="n">key</span><span class="o">=</span><span class="n">_module_depth</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">subparts</span><span class="p">,</span> <span class="n">subpath</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">finder</span><span class="o">.</span><span class="n">submodules</span><span class="p">(</span><span class="n">module</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_load_submodule</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">subparts</span><span class="p">,</span> <span class="n">subpath</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_load_submodule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">Module</span><span class="p">,</span> <span class="n">subparts</span><span class="p">:</span> <span class="n">NamePartsType</span><span class="p">,</span> <span class="n">subpath</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">_load_submodule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">Module</span><span class="p">,</span> <span class="n">subparts</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">subpath</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">member_parent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_member_parent</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">subparts</span><span class="p">,</span> <span class="n">subpath</span><span class="p">)</span>
         <span class="k">except</span> <span class="n">UnimportableModuleError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
@@ -1892,7 +1862,7 @@ GriffeLoader        </code>
         <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>  <span class="c1"># noqa: WPS440</span>
             <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;OSError when loading </span><span class="si">{</span><span class="n">subpath</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_create_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">module_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">_create_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">module_path</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">Module</span><span class="p">(</span>
             <span class="n">module_name</span><span class="p">,</span>
             <span class="n">filepath</span><span class="o">=</span><span class="n">module_path</span><span class="p">,</span>
@@ -1919,7 +1889,7 @@ GriffeLoader        </code>
         <span class="k">return</span> <span class="n">module</span>
 
     <span class="k">def</span> <span class="nf">_inspect_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">Module</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">prefix</span> <span class="ow">in</span> <span class="n">_ignored_modules</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">prefix</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ignored_modules</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">module_name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
                 <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ignored module &#39;</span><span class="si">{</span><span class="n">module_name</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
         <span class="n">start</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
@@ -1927,6 +1897,7 @@ GriffeLoader        </code>
             <span class="n">module</span> <span class="o">=</span> <span class="n">inspect</span><span class="p">(</span>
                 <span class="n">module_name</span><span class="p">,</span>
                 <span class="n">filepath</span><span class="o">=</span><span class="n">filepath</span><span class="p">,</span>
+                <span class="n">import_paths</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">finder</span><span class="o">.</span><span class="n">search_paths</span><span class="p">,</span>
                 <span class="n">extensions</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">extensions</span><span class="p">,</span>
                 <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span>
                 <span class="n">docstring_parser</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">docstring_parser</span><span class="p">,</span>
@@ -1939,7 +1910,7 @@ GriffeLoader        </code>
         <span class="bp">self</span><span class="o">.</span><span class="n">_time_stats</span><span class="p">[</span><span class="s2">&quot;time_spent_inspecting&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">elapsed</span><span class="o">.</span><span class="n">microseconds</span>
         <span class="k">return</span> <span class="n">module</span>
 
-    <span class="k">def</span> <span class="nf">_member_parent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">Module</span><span class="p">,</span> <span class="n">subparts</span><span class="p">:</span> <span class="n">NamePartsType</span><span class="p">,</span> <span class="n">subpath</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">_member_parent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">Module</span><span class="p">,</span> <span class="n">subparts</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">subpath</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
         <span class="n">parent_parts</span> <span class="o">=</span> <span class="n">subparts</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">module</span><span class="p">[</span><span class="n">parent_parts</span><span class="p">]</span>
@@ -1984,12 +1955,14 @@ GriffeLoader        </code>
 
 
 
+
+
   <div class="doc doc-object doc-function">
 
 
 
 <h3 id="griffe.loader.GriffeLoader.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extensions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_parser</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lines_collection</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">modules_collection</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extensions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">search_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_parser</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lines_collection</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">modules_collection</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
 <a href="#griffe.loader.GriffeLoader.__init__" class="headerlink" title="Permanent link">¤</a></h3>
@@ -2005,6 +1978,11 @@ GriffeLoader        </code>
         <b>extensions</b>
             (<code><a href="../agents/extensions/#griffe.agents.extensions.Extensions">Extensions</a> | None</code>)
         – <p>The extensions to use.</p>
+      </li>
+      <li class="field-body">
+        <b>search_paths</b>
+            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
+        – <p>The paths to search into.</p>
       </li>
       <li class="field-body">
         <b>docstring_parser</b>
@@ -2030,7 +2008,12 @@ GriffeLoader        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 76</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
 <span class="normal"> 77</span>
 <span class="normal"> 78</span>
 <span class="normal"> 79</span>
@@ -2054,11 +2037,10 @@ GriffeLoader        </code>
 <span class="normal"> 97</span>
 <span class="normal"> 98</span>
 <span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">100</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">extensions</span><span class="p">:</span> <span class="n">Extensions</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">search_paths</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">docstring_parser</span><span class="p">:</span> <span class="n">Parser</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">docstring_options</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">lines_collection</span><span class="p">:</span> <span class="n">LinesCollection</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -2068,6 +2050,7 @@ GriffeLoader        </code>
 
 <span class="sd">    Parameters:</span>
 <span class="sd">        extensions: The extensions to use.</span>
+<span class="sd">        search_paths: The paths to search into.</span>
 <span class="sd">        docstring_parser: The docstring parser to use. By default, no parsing is done.</span>
 <span class="sd">        docstring_options: Additional docstring parsing options.</span>
 <span class="sd">        lines_collection: A collection of source code lines.</span>
@@ -2078,6 +2061,7 @@ GriffeLoader        </code>
     <span class="bp">self</span><span class="o">.</span><span class="n">docstring_options</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">docstring_options</span> <span class="ow">or</span> <span class="p">{}</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">lines_collection</span><span class="p">:</span> <span class="n">LinesCollection</span> <span class="o">=</span> <span class="n">lines_collection</span> <span class="ow">or</span> <span class="n">LinesCollection</span><span class="p">()</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">:</span> <span class="n">ModulesCollection</span> <span class="o">=</span> <span class="n">modules_collection</span> <span class="ow">or</span> <span class="n">ModulesCollection</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">finder</span><span class="p">:</span> <span class="n">ModuleFinder</span> <span class="o">=</span> <span class="n">ModuleFinder</span><span class="p">(</span><span class="n">search_paths</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_time_stats</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s2">&quot;time_spent_visiting&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;time_spent_inspecting&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -2105,7 +2089,7 @@ GriffeLoader        </code>
 
 
 <h3 id="griffe.loader.GriffeLoader.load_module" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">load_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">,</span> <span class="n">submodules</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">search_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">try_relative_path</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">load_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">,</span> <span class="n">submodules</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">try_relative_path</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 
 <a href="#griffe.loader.GriffeLoader.load_module" class="headerlink" title="Permanent link">¤</a></h3>
@@ -2128,11 +2112,6 @@ GriffeLoader        </code>
         – <p>Whether to recurse on the submodules.</p>
       </li>
       <li class="field-body">
-        <b>search_paths</b>
-            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
-        – <p>The paths to search into.</p>
-      </li>
-      <li class="field-body">
         <b>try_relative_path</b>
             (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
         – <p>Whether to try finding the module as a relative path.</p>
@@ -2149,7 +2128,9 @@ GriffeLoader        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">104</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
 <span class="normal">105</span>
 <span class="normal">106</span>
 <span class="normal">107</span>
@@ -2178,17 +2159,10 @@ GriffeLoader        </code>
 <span class="normal">130</span>
 <span class="normal">131</span>
 <span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">load_module</span><span class="p">(</span>
+<span class="normal">133</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">load_module</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">module</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">,</span>
     <span class="n">submodules</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="n">search_paths</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">try_relative_path</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Load a module.</span>
@@ -2196,7 +2170,6 @@ GriffeLoader        </code>
 <span class="sd">    Parameters:</span>
 <span class="sd">        module: The module name or path.</span>
 <span class="sd">        submodules: Whether to recurse on the submodules.</span>
-<span class="sd">        search_paths: The paths to search into.</span>
 <span class="sd">        try_relative_path: Whether to try finding the module as a relative path.</span>
 
 <span class="sd">    Returns:</span>
@@ -2208,16 +2181,14 @@ GriffeLoader        </code>
         <span class="n">top_module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_module</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
-            <span class="n">module_name</span><span class="p">,</span> <span class="n">top_module_name</span><span class="p">,</span> <span class="n">top_module_path</span> <span class="o">=</span> <span class="n">_top_name_and_path</span><span class="p">(</span>
-                <span class="n">module</span><span class="p">,</span> <span class="n">search_paths</span><span class="p">,</span> <span class="n">try_relative_path</span>
-            <span class="p">)</span>
+            <span class="n">module_name</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">finder</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">try_relative_path</span><span class="p">)</span>
         <span class="k">except</span> <span class="ne">ModuleNotFoundError</span><span class="p">:</span>
             <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Could not find </span><span class="si">{</span><span class="n">module</span><span class="si">}</span><span class="s2">: trying inspection&quot;</span><span class="p">)</span>
             <span class="n">module_name</span> <span class="o">=</span> <span class="n">module</span>
             <span class="n">top_module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_module</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found </span><span class="si">{</span><span class="n">module</span><span class="si">}</span><span class="s2">: visiting&quot;</span><span class="p">)</span>
-            <span class="n">top_module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load_module_path</span><span class="p">(</span><span class="n">top_module_name</span><span class="p">,</span> <span class="n">top_module_path</span><span class="p">,</span> <span class="n">submodules</span><span class="o">=</span><span class="n">submodules</span><span class="p">)</span>
+            <span class="n">top_module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load_module_path</span><span class="p">(</span><span class="n">package</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">package</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">submodules</span><span class="o">=</span><span class="n">submodules</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">[</span><span class="n">top_module</span><span class="o">.</span><span class="n">path</span><span class="p">]</span> <span class="o">=</span> <span class="n">top_module</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">[</span><span class="n">module_name</span><span class="p">]</span>  <span class="c1"># type: ignore[index]</span>
 </code></pre></div>
@@ -2273,7 +2244,13 @@ GriffeLoader        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">141</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
 <span class="normal">142</span>
 <span class="normal">143</span>
 <span class="normal">144</span>
@@ -2302,13 +2279,7 @@ GriffeLoader        </code>
 <span class="normal">167</span>
 <span class="normal">168</span>
 <span class="normal">169</span>
-<span class="normal">170</span>
-<span class="normal">171</span>
-<span class="normal">172</span>
-<span class="normal">173</span>
-<span class="normal">174</span>
-<span class="normal">175</span>
-<span class="normal">176</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_aliases</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">170</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_aliases</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">only_exported</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">only_known_modules</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -2402,7 +2373,13 @@ GriffeLoader        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">178</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
 <span class="normal">179</span>
 <span class="normal">180</span>
 <span class="normal">181</span>
@@ -2485,13 +2462,7 @@ GriffeLoader        </code>
 <span class="normal">258</span>
 <span class="normal">259</span>
 <span class="normal">260</span>
-<span class="normal">261</span>
-<span class="normal">262</span>
-<span class="normal">263</span>
-<span class="normal">264</span>
-<span class="normal">265</span>
-<span class="normal">266</span>
-<span class="normal">267</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_module_aliases</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">261</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_module_aliases</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">obj</span><span class="p">:</span> <span class="n">Object</span><span class="p">,</span>
     <span class="n">only_exported</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -2615,13 +2586,13 @@ GriffeLoader        </code>
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">269</span>
-<span class="normal">270</span>
-<span class="normal">271</span>
-<span class="normal">272</span>
-<span class="normal">273</span>
-<span class="normal">274</span>
-<span class="normal">275</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">stats</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">stats</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Compute some statistics.</span>
 
 <span class="sd">    Returns:</span>
@@ -2646,472 +2617,6 @@ GriffeLoader        </code>
   </div>
 
 
-
-
-
-
-
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h2 id="griffe.loader.find_module" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">find_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="n">search_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
-
-<a href="#griffe.loader.find_module" class="headerlink" title="Permanent link">¤</a></h2>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Find a module in a given list of paths or in <code>sys.path</code>.</p>
-
-  <p>Parameters:</p>
-  <ul>
-      <li class="field-body">
-        <b>module_name</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-        – <p>The module name.</p>
-      </li>
-      <li class="field-body">
-        <b>search_paths</b>
-            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
-        – <p>The paths to search into.</p>
-      </li>
-  </ul>
-
-  <p>Raises:</p>
-  <ul>
-      <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/exceptions.html#ModuleNotFoundError">ModuleNotFoundError</a></code>
-          –
-        <p>When the module cannot be found.</p>
-      </li>
-  </ul>
-
-  <p>Returns:</p>
-  <ul>
-      <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>
-        – <p>The module file path.</p>
-      </li>
-  </ul>
-
-        <details class="quote">
-          <summary>Source code in <code>griffe/loader.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">474</span>
-<span class="normal">475</span>
-<span class="normal">476</span>
-<span class="normal">477</span>
-<span class="normal">478</span>
-<span class="normal">479</span>
-<span class="normal">480</span>
-<span class="normal">481</span>
-<span class="normal">482</span>
-<span class="normal">483</span>
-<span class="normal">484</span>
-<span class="normal">485</span>
-<span class="normal">486</span>
-<span class="normal">487</span>
-<span class="normal">488</span>
-<span class="normal">489</span>
-<span class="normal">490</span>
-<span class="normal">491</span>
-<span class="normal">492</span>
-<span class="normal">493</span>
-<span class="normal">494</span>
-<span class="normal">495</span>
-<span class="normal">496</span>
-<span class="normal">497</span>
-<span class="normal">498</span>
-<span class="normal">499</span>
-<span class="normal">500</span>
-<span class="normal">501</span>
-<span class="normal">502</span>
-<span class="normal">503</span>
-<span class="normal">504</span>
-<span class="normal">505</span>
-<span class="normal">506</span>
-<span class="normal">507</span>
-<span class="normal">508</span>
-<span class="normal">509</span>
-<span class="normal">510</span>
-<span class="normal">511</span>
-<span class="normal">512</span>
-<span class="normal">513</span>
-<span class="normal">514</span>
-<span class="normal">515</span>
-<span class="normal">516</span>
-<span class="normal">517</span>
-<span class="normal">518</span>
-<span class="normal">519</span>
-<span class="normal">520</span>
-<span class="normal">521</span>
-<span class="normal">522</span>
-<span class="normal">523</span>
-<span class="normal">524</span>
-<span class="normal">525</span>
-<span class="normal">526</span>
-<span class="normal">527</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">search_paths</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>  <span class="c1"># noqa: WPS231</span>
-    <span class="sd">&quot;&quot;&quot;Find a module in a given list of paths or in `sys.path`.</span>
-
-<span class="sd">    Parameters:</span>
-<span class="sd">        module_name: The module name.</span>
-<span class="sd">        search_paths: The paths to search into.</span>
-
-<span class="sd">    Raises:</span>
-<span class="sd">        ModuleNotFoundError: When the module cannot be found.</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        The module file path.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># optimization: pre-compute Paths to relieve CPU when joining paths</span>
-    <span class="n">search</span> <span class="o">=</span> <span class="p">[</span><span class="n">path</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">Path</span><span class="p">)</span> <span class="k">else</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">search_paths</span> <span class="ow">or</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">]</span>
-    <span class="n">parts</span> <span class="o">=</span> <span class="n">module_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
-
-    <span class="c1"># always search a .pth file first using the first part</span>
-    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">search</span><span class="p">:</span>
-        <span class="n">top_pth</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">.pth&quot;</span><span class="p">)</span>
-        <span class="n">abs_top_pth</span> <span class="o">=</span> <span class="n">path</span> <span class="o">/</span> <span class="n">top_pth</span>
-        <span class="k">if</span> <span class="n">abs_top_pth</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
-            <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="n">UnhandledPthFileError</span><span class="p">):</span>
-                <span class="n">location</span> <span class="o">=</span> <span class="n">_handle_pth_file</span><span class="p">(</span><span class="n">abs_top_pth</span><span class="p">)</span>
-                <span class="k">if</span> <span class="n">location</span><span class="o">.</span><span class="n">suffix</span><span class="p">:</span>
-                    <span class="n">location</span> <span class="o">=</span> <span class="n">location</span><span class="o">.</span><span class="n">parent</span>
-                <span class="n">search</span> <span class="o">=</span> <span class="p">[</span><span class="n">location</span><span class="o">.</span><span class="n">parent</span><span class="p">]</span>
-                <span class="c1"># TODO: possible optimization</span>
-                <span class="c1"># always break if exists?</span>
-                <span class="k">break</span>
-
-    <span class="c1"># resume regular search</span>
-    <span class="n">filepaths</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="c1"># TODO: handle .py[cod] and .so files?</span>
-        <span class="n">Path</span><span class="p">(</span><span class="o">*</span><span class="n">parts</span><span class="p">,</span> <span class="s2">&quot;__init__.py&quot;</span><span class="p">),</span>
-        <span class="n">Path</span><span class="p">(</span><span class="o">*</span><span class="n">parts</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">parts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">.py&quot;</span><span class="p">),</span>
-        <span class="n">Path</span><span class="p">(</span><span class="o">*</span><span class="n">parts</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">parts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">.pth&quot;</span><span class="p">),</span>
-        <span class="n">Path</span><span class="p">(</span><span class="o">*</span><span class="n">parts</span><span class="p">),</span>  <span class="c1"># namespace packages, try last</span>
-    <span class="p">]</span>
-
-    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">search</span><span class="p">:</span>  <span class="c1"># noqa: WPS440</span>
-        <span class="k">for</span> <span class="n">choice</span> <span class="ow">in</span> <span class="n">filepaths</span><span class="p">:</span>
-            <span class="n">abs_path</span> <span class="o">=</span> <span class="n">path</span> <span class="o">/</span> <span class="n">choice</span>
-            <span class="c1"># optimization: just check if the file exists,</span>
-            <span class="c1"># not if it&#39;s an actual file</span>
-            <span class="k">if</span> <span class="n">abs_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
-                <span class="k">if</span> <span class="n">abs_path</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.pth&quot;</span><span class="p">):</span>
-                    <span class="k">try</span><span class="p">:</span>
-                        <span class="k">return</span> <span class="n">_handle_pth_file</span><span class="p">(</span><span class="n">abs_path</span><span class="p">)</span>
-                    <span class="k">except</span> <span class="n">UnhandledPthFileError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-                        <span class="k">raise</span> <span class="ne">ModuleNotFoundError</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">error</span>
-                <span class="k">return</span> <span class="n">abs_path</span>
-
-    <span class="k">raise</span> <span class="ne">ModuleNotFoundError</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h2 id="griffe.loader.find_module_or_path" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">find_module_or_path</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">search_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">try_relative_path</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
-
-
-<a href="#griffe.loader.find_module_or_path" class="headerlink" title="Permanent link">¤</a></h2>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Find the name and path of a module.</p>
-<p>If a Path is passed, only try to find the module as a file path.
-If a string is passed, first try to find the module as a file path,
-then look into the search paths.</p>
-
-  <p>Parameters:</p>
-  <ul>
-      <li class="field-body">
-        <b>module</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
-        – <p>The module name or path.</p>
-      </li>
-      <li class="field-body">
-        <b>search_paths</b>
-            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
-        – <p>The paths to search into.</p>
-      </li>
-      <li class="field-body">
-        <b>try_relative_path</b>
-            (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
-        – <p>Whether to try finding the module as a relative path,
-when the given module is not already a path.</p>
-      </li>
-  </ul>
-
-  <p>Raises:</p>
-  <ul>
-      <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/exceptions.html#FileNotFoundError">FileNotFoundError</a></code>
-          –
-        <p>When a Path was passed and the module could not be found:</p>
-<ul>
-<li>the directory has no <code>__init__.py</code> file in it</li>
-<li>the path does not exist</li>
-</ul>
-      </li>
-      <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/exceptions.html#ModuleNotFoundError">ModuleNotFoundError</a></code>
-          –
-        <p>When a string was passed and the module could not be found:</p>
-<ul>
-<li>no <code>module/__init__.py</code></li>
-<li>no <code>module.py</code></li>
-<li>no <code>module.pth</code></li>
-<li>no <code>module</code> directory (namespace packages)</li>
-<li>or unsupported .pth file</li>
-</ul>
-      </li>
-  </ul>
-
-  <p>Returns:</p>
-  <ul>
-      <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>]</code>
-        – <p>The name of the module (or package) and its path.</p>
-      </li>
-  </ul>
-
-        <details class="quote">
-          <summary>Source code in <code>griffe/loader.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">406</span>
-<span class="normal">407</span>
-<span class="normal">408</span>
-<span class="normal">409</span>
-<span class="normal">410</span>
-<span class="normal">411</span>
-<span class="normal">412</span>
-<span class="normal">413</span>
-<span class="normal">414</span>
-<span class="normal">415</span>
-<span class="normal">416</span>
-<span class="normal">417</span>
-<span class="normal">418</span>
-<span class="normal">419</span>
-<span class="normal">420</span>
-<span class="normal">421</span>
-<span class="normal">422</span>
-<span class="normal">423</span>
-<span class="normal">424</span>
-<span class="normal">425</span>
-<span class="normal">426</span>
-<span class="normal">427</span>
-<span class="normal">428</span>
-<span class="normal">429</span>
-<span class="normal">430</span>
-<span class="normal">431</span>
-<span class="normal">432</span>
-<span class="normal">433</span>
-<span class="normal">434</span>
-<span class="normal">435</span>
-<span class="normal">436</span>
-<span class="normal">437</span>
-<span class="normal">438</span>
-<span class="normal">439</span>
-<span class="normal">440</span>
-<span class="normal">441</span>
-<span class="normal">442</span>
-<span class="normal">443</span>
-<span class="normal">444</span>
-<span class="normal">445</span>
-<span class="normal">446</span>
-<span class="normal">447</span>
-<span class="normal">448</span>
-<span class="normal">449</span>
-<span class="normal">450</span>
-<span class="normal">451</span>
-<span class="normal">452</span>
-<span class="normal">453</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_module_or_path</span><span class="p">(</span>
-    <span class="n">module</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">,</span>
-    <span class="n">search_paths</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">try_relative_path</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;Find the name and path of a module.</span>
-
-<span class="sd">    If a Path is passed, only try to find the module as a file path.</span>
-<span class="sd">    If a string is passed, first try to find the module as a file path,</span>
-<span class="sd">    then look into the search paths.</span>
-
-<span class="sd">    Parameters:</span>
-<span class="sd">        module: The module name or path.</span>
-<span class="sd">        search_paths: The paths to search into.</span>
-<span class="sd">        try_relative_path: Whether to try finding the module as a relative path,</span>
-<span class="sd">            when the given module is not already a path.</span>
-
-<span class="sd">    Raises:</span>
-<span class="sd">        FileNotFoundError: When a Path was passed and the module could not be found:</span>
-
-<span class="sd">            - the directory has no `__init__.py` file in it</span>
-<span class="sd">            - the path does not exist</span>
-
-<span class="sd">        ModuleNotFoundError: When a string was passed and the module could not be found:</span>
-
-<span class="sd">            - no `module/__init__.py`</span>
-<span class="sd">            - no `module.py`</span>
-<span class="sd">            - no `module.pth`</span>
-<span class="sd">            - no `module` directory (namespace packages)</span>
-<span class="sd">            - or unsupported .pth file</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        The name of the module (or package) and its path.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">Path</span><span class="p">):</span>
-        <span class="c1"># programatically passed a Path, try only that</span>
-        <span class="n">module_name</span><span class="p">,</span> <span class="n">module_path</span> <span class="o">=</span> <span class="n">_module_name_path</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">try_relative_path</span><span class="p">:</span>
-        <span class="c1"># passed a string (from CLI or Python code), try both</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">module_name</span><span class="p">,</span> <span class="n">module_path</span> <span class="o">=</span> <span class="n">_module_name_path</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">module</span><span class="p">))</span>
-        <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
-            <span class="n">module_name</span> <span class="o">=</span> <span class="n">module</span>
-            <span class="n">module_path</span> <span class="o">=</span> <span class="n">find_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="n">search_paths</span><span class="o">=</span><span class="n">search_paths</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">module_name</span> <span class="o">=</span> <span class="n">module</span>
-        <span class="n">module_path</span> <span class="o">=</span> <span class="n">find_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="n">search_paths</span><span class="o">=</span><span class="n">search_paths</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">module_name</span><span class="p">,</span> <span class="n">module_path</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h2 id="griffe.loader.iter_submodules" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">iter_submodules</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
-
-
-<a href="#griffe.loader.iter_submodules" class="headerlink" title="Permanent link">¤</a></h2>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Iterate on a module's submodules, if any.</p>
-
-  <p>Parameters:</p>
-  <ul>
-      <li class="field-body">
-        <b>path</b>
-            (<code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
-        – <p>The module path.</p>
-      </li>
-  </ul>
-
-  <p>Yields:</p>
-  <ul>
-      <li class="field-body">
-<b>name_parts</b>(            <code><a href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, ...]</code>
-)        – <p>The parts of a submodule name.</p>
-      </li>
-      <li class="field-body">
-<b>filepath</b>(            <code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>
-)        – <p>A submodule filepath.</p>
-      </li>
-  </ul>
-
-        <details class="quote">
-          <summary>Source code in <code>griffe/loader.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">566</span>
-<span class="normal">567</span>
-<span class="normal">568</span>
-<span class="normal">569</span>
-<span class="normal">570</span>
-<span class="normal">571</span>
-<span class="normal">572</span>
-<span class="normal">573</span>
-<span class="normal">574</span>
-<span class="normal">575</span>
-<span class="normal">576</span>
-<span class="normal">577</span>
-<span class="normal">578</span>
-<span class="normal">579</span>
-<span class="normal">580</span>
-<span class="normal">581</span>
-<span class="normal">582</span>
-<span class="normal">583</span>
-<span class="normal">584</span>
-<span class="normal">585</span>
-<span class="normal">586</span>
-<span class="normal">587</span>
-<span class="normal">588</span>
-<span class="normal">589</span>
-<span class="normal">590</span>
-<span class="normal">591</span>
-<span class="normal">592</span>
-<span class="normal">593</span>
-<span class="normal">594</span>
-<span class="normal">595</span>
-<span class="normal">596</span>
-<span class="normal">597</span>
-<span class="normal">598</span>
-<span class="normal">599</span>
-<span class="normal">600</span>
-<span class="normal">601</span>
-<span class="normal">602</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">iter_submodules</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">NamePartsAndPathType</span><span class="p">]:</span>  <span class="c1"># noqa: WPS231,WPS234</span>
-    <span class="sd">&quot;&quot;&quot;Iterate on a module&#39;s submodules, if any.</span>
-
-<span class="sd">    Parameters:</span>
-<span class="sd">        path: The module path.</span>
-
-<span class="sd">    Yields:</span>
-<span class="sd">        name_parts (tuple[str, ...]): The parts of a submodule name.</span>
-<span class="sd">        filepath (Path): A submodule filepath.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">stem</span> <span class="o">==</span> <span class="s2">&quot;__init__&quot;</span><span class="p">:</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">parent</span>
-    <span class="c1"># optimization: just check if the file name ends with .py</span>
-    <span class="c1"># (to distinguish it from a directory),</span>
-    <span class="c1"># not if it&#39;s an actual file</span>
-    <span class="k">elif</span> <span class="n">path</span><span class="o">.</span><span class="n">suffix</span> <span class="ow">in</span> <span class="n">_extensions_set</span><span class="p">:</span>
-        <span class="k">return</span>
-
-    <span class="k">for</span> <span class="n">subpath</span> <span class="ow">in</span> <span class="n">_filter_py_modules</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-        <span class="n">rel_subpath</span> <span class="o">=</span> <span class="n">subpath</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-        <span class="n">py_file</span> <span class="o">=</span> <span class="n">rel_subpath</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s2">&quot;.py&quot;</span>
-        <span class="n">stem</span> <span class="o">=</span> <span class="n">rel_subpath</span><span class="o">.</span><span class="n">stem</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">py_file</span><span class="p">:</span>
-            <span class="c1"># .py[cod] and .so files look like `name.cpython-38-x86_64-linux-gnu.ext`</span>
-            <span class="n">stem</span> <span class="o">=</span> <span class="n">stem</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">stem</span> <span class="o">==</span> <span class="s2">&quot;__init__&quot;</span><span class="p">:</span>
-            <span class="c1"># optimization: since it&#39;s a relative path,</span>
-            <span class="c1"># if it has only one part and is named __init__,</span>
-            <span class="c1"># it means it&#39;s the starting path</span>
-            <span class="c1"># (no need to compare it against starting path)</span>
-            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">rel_subpath</span><span class="o">.</span><span class="n">parts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="k">continue</span>
-            <span class="k">yield</span> <span class="n">rel_subpath</span><span class="o">.</span><span class="n">parts</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">subpath</span>
-        <span class="k">elif</span> <span class="n">py_file</span><span class="p">:</span>
-            <span class="k">yield</span> <span class="n">rel_subpath</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parts</span><span class="p">,</span> <span class="n">subpath</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">yield</span> <span class="n">rel_subpath</span><span class="o">.</span><span class="n">with_name</span><span class="p">(</span><span class="n">stem</span><span class="p">)</span><span class="o">.</span><span class="n">parts</span><span class="p">,</span> <span class="n">subpath</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
 
 
 
@@ -3214,10 +2719,10 @@ when the given module is not already a path.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.960e086b.min.js"></script>
       
     
   </body>
