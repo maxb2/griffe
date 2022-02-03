@@ -1189,6 +1189,25 @@
 
 
 <h1 id="docstrings">Docstrings<a class="headerlink" href="#docstrings" title="Permanent link">¤</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Want to contribute?</p>
+<p>Each red cross is a link to an issue on the bugtracker.
+You will find some guidance on how to add support for the corresponding item.</p>
+<p>The sections are easier to deal in that order:</p>
+<ul>
+<li>Deprecated (single item, version and text)</li>
+<li>Raises, Warns (multiple items, no names, single type each)</li>
+<li>Attributes, Other Parameters, Parameters (multiple items, one name and one optional type each)</li>
+<li>Returns (multiple items, optional name and/or type each, annotation to split when multiple names)</li>
+<li>Receives, Yields (multiple items, optional name and/or type each, several types of annotations to split when multiple names)</li>
+</ul>
+<p>"Examples" section are a bit different as they require to parse the examples.
+But you can probably reuse the code in the Google parser.
+We can probably even factorize the examples parsing into a single function.</p>
+<p>You can tackle several items at once in a single PR,
+as long as they relate to a single parser or a single section
+(a line or a column of the following tables).</p>
+</div>
 <h2 id="section-support">Section support<a class="headerlink" href="#section-support" title="Permanent link">¤</a></h2>
 <table>
 <thead>
@@ -1210,19 +1229,19 @@
 <td>Deprecated</td>
 <td>✅</td>
 <td>✅<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/6">❌</a></td>
 </tr>
 <tr>
 <td>Examples</td>
 <td>✅</td>
 <td>✅</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/7">❌</a></td>
 </tr>
 <tr>
 <td>Other Parameters</td>
 <td>✅</td>
 <td>✅</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/27">❌</a></td>
 </tr>
 <tr>
 <td>Parameters</td>
@@ -1240,7 +1259,7 @@
 <td>Receives</td>
 <td>✅</td>
 <td>✅</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/8">❌</a></td>
 </tr>
 <tr>
 <td>Returns</td>
@@ -1252,13 +1271,13 @@
 <td>Warns</td>
 <td>✅</td>
 <td>✅</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/9">❌</a></td>
 </tr>
 <tr>
 <td>Yields</td>
 <td>✅</td>
 <td>✅</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/10">❌</a></td>
 </tr>
 </tbody>
 </table>
@@ -1276,8 +1295,8 @@
 <tr>
 <td>Attributes</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/29">❌</a></td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/33">❌</a></td>
 </tr>
 <tr>
 <td>Deprecated</td>
@@ -1295,7 +1314,7 @@
 <td>Other Parameters</td>
 <td>✅</td>
 <td>✅</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/34">❌</a></td>
 </tr>
 <tr>
 <td>Parameters</td>
@@ -1311,14 +1330,14 @@
 </tr>
 <tr>
 <td>Receives</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/28">❌</a></td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/30">❌</a></td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/35">❌</a></td>
 </tr>
 <tr>
 <td>Returns</td>
 <td>✅</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/31">❌</a></td>
 <td>✅</td>
 </tr>
 <tr>
@@ -1330,8 +1349,8 @@
 <tr>
 <td>Yields</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/32">❌</a></td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/36">❌</a></td>
 </tr>
 </tbody>
 </table>
@@ -1349,8 +1368,8 @@
 <tr>
 <td>Attributes</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/11">❌</a></td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/19">❌</a></td>
 </tr>
 <tr>
 <td>Deprecated</td>
@@ -1367,44 +1386,44 @@
 <tr>
 <td>Other Parameters</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/12">❌</a></td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/20">❌</a></td>
 </tr>
 <tr>
 <td>Parameters</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/13">❌</a></td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/21">❌</a></td>
 </tr>
 <tr>
 <td>Raises</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/14">❌</a></td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/22">❌</a></td>
 </tr>
 <tr>
 <td>Receives</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/15">❌</a></td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/23">❌</a></td>
 </tr>
 <tr>
 <td>Returns</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/16">❌</a></td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/24">❌</a></td>
 </tr>
 <tr>
 <td>Warns</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/17">❌</a></td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/25">❌</a></td>
 </tr>
 <tr>
 <td>Yields</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/18">❌</a></td>
+<td><a href="https://github.com/mkdocstrings/griffe/issues/26">❌</a></td>
 </tr>
 </tbody>
 </table>
