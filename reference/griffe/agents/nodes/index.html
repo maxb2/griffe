@@ -4808,7 +4808,9 @@ It allows to retrieve the actual code directly from the lines collection.</p>
 <span class="normal">1183</span>
 <span class="normal">1184</span>
 <span class="normal">1185</span>
-<span class="normal">1186</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_parameter_default</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">AST</span><span class="p">,</span> <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">lines_collection</span><span class="p">:</span> <span class="n">LinesCollection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">1186</span>
+<span class="normal">1187</span>
+<span class="normal">1188</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_parameter_default</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">AST</span><span class="p">,</span> <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">lines_collection</span><span class="p">:</span> <span class="n">LinesCollection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Extract the default value of a function parameter.</span>
 
 <span class="sd">    Parameters:</span>
@@ -4824,6 +4826,8 @@ It allows to retrieve the actual code directly from the lines collection.</p>
         <span class="k">return</span> <span class="kc">None</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">NodeConstant</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">repr</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">NodeStr</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">repr</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">NodeName</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">node</span><span class="o">.</span><span class="n">id</span>
     <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">lineno</span> <span class="o">==</span> <span class="n">node</span><span class="o">.</span><span class="n">end_lineno</span><span class="p">:</span>  <span class="c1"># type: ignore[attr-defined]</span>
@@ -5007,9 +5011,7 @@ It allows to retrieve the actual code directly from the lines collection.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/nodes.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1191</span>
-<span class="normal">1192</span>
-<span class="normal">1193</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1193</span>
 <span class="normal">1194</span>
 <span class="normal">1195</span>
 <span class="normal">1196</span>
@@ -5026,7 +5028,9 @@ It allows to retrieve the actual code directly from the lines collection.</p>
 <span class="normal">1207</span>
 <span class="normal">1208</span>
 <span class="normal">1209</span>
-<span class="normal">1210</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">relative_to_absolute</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">NodeImportFrom</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">NodeAlias</span><span class="p">,</span> <span class="n">current_module</span><span class="p">:</span> <span class="n">Module</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="normal">1210</span>
+<span class="normal">1211</span>
+<span class="normal">1212</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">relative_to_absolute</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">NodeImportFrom</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">NodeAlias</span><span class="p">,</span> <span class="n">current_module</span><span class="p">:</span> <span class="n">Module</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Convert a relative import path to an absolute one.</span>
 
 <span class="sd">    Parameters:</span>

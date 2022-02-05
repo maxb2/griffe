@@ -1615,7 +1615,9 @@ GriffeLoader        </code>
 <span class="normal">381</span>
 <span class="normal">382</span>
 <span class="normal">383</span>
-<span class="normal">384</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">GriffeLoader</span><span class="p">:</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">GriffeLoader</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;The Griffe loader, allowing to load data from modules.&quot;&quot;&quot;</span>
 
     <span class="n">ignored_modules</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;debugpy&quot;</span><span class="p">,</span> <span class="s2">&quot;_pydev&quot;</span><span class="p">}</span>
@@ -1847,6 +1849,8 @@ GriffeLoader        </code>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">member_parent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_member_parent</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">subparts</span><span class="p">,</span> <span class="n">subpath</span><span class="p">)</span>
         <span class="k">except</span> <span class="n">UnimportableModuleError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="c1"># TODO: maybe add option to still load them</span>
+            <span class="c1"># TODO: maybe increase level to WARNING</span>
             <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">. Missing __init__ module?&quot;</span><span class="p">)</span>
             <span class="k">return</span>
         <span class="k">try</span><span class="p">:</span>  <span class="c1"># noqa: WPS225</span>

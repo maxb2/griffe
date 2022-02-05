@@ -1572,7 +1572,8 @@ ModuleFinder        </code>
 <span class="normal">265</span>
 <span class="normal">266</span>
 <span class="normal">267</span>
-<span class="normal">268</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ModuleFinder</span><span class="p">:</span>
+<span class="normal">268</span>
+<span class="normal">269</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ModuleFinder</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;The Griffe finder, allowing to find modules on the file system.&quot;&quot;&quot;</span>
 
     <span class="n">accepted_py_module_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.py&quot;</span><span class="p">,</span> <span class="s2">&quot;.pyc&quot;</span><span class="p">,</span> <span class="s2">&quot;.pyo&quot;</span><span class="p">,</span> <span class="s2">&quot;.pyd&quot;</span><span class="p">,</span> <span class="s2">&quot;.so&quot;</span><span class="p">]</span>
@@ -1791,6 +1792,7 @@ ModuleFinder        </code>
         <span class="n">parent_path</span> <span class="o">=</span> <span class="n">path</span> <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">is_dir</span><span class="p">()</span> <span class="k">else</span> <span class="n">path</span><span class="o">.</span><span class="n">parent</span>
         <span class="k">for</span> <span class="n">search_path</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_paths</span><span class="p">:</span>
             <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+                <span class="c1"># TODO: it does not work when parent_path is relative and search_path absolute</span>
                 <span class="n">rel_path</span> <span class="o">=</span> <span class="n">parent_path</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">search_path</span><span class="p">)</span>
                 <span class="n">top_path</span> <span class="o">=</span> <span class="n">search_path</span> <span class="o">/</span> <span class="n">rel_path</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
                 <span class="k">return</span> <span class="n">top_path</span><span class="o">.</span><span class="n">name</span>
