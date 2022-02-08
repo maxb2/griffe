@@ -1218,11 +1218,11 @@
 
 
 
-<h2 id="griffe.docstrings.google.parse" class="doc doc-heading">
+<h2 class="doc doc-heading" id="griffe.docstrings.google.parse">
 <code class="highlight language-python"><span class="n">parse</span><span class="p">(</span><span class="n">docstring</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span></code>
 
 
-<a href="#griffe.docstrings.google.parse" class="headerlink" title="Permanent link">¤</a></h2>
+<a class="headerlink" href="#griffe.docstrings.google.parse" title="Permanent link">¤</a></h2>
 
 
     <div class="doc doc-contents ">
@@ -1401,13 +1401,13 @@ It then returns this list of sections.</p>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">contents</span><span class="p">,</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">_read_block</span><span class="p">(</span><span class="n">docstring</span><span class="p">,</span> <span class="n">offset</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
                     <span class="k">if</span> <span class="n">contents</span><span class="p">:</span>
-                        <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="s2">&quot; &quot;</span> <span class="ow">in</span> <span class="n">admonition_type</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                             <span class="n">title</span> <span class="o">=</span> <span class="n">admonition_type</span>
-                            <span class="n">admonition_type</span> <span class="o">=</span> <span class="s2">&quot;note&quot;</span>
+                        <span class="n">admonition_type</span> <span class="o">=</span> <span class="n">admonition_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
                         <span class="n">sections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
                             <span class="n">DocstringSection</span><span class="p">(</span>
                                 <span class="n">kind</span><span class="o">=</span><span class="n">DocstringSectionKind</span><span class="o">.</span><span class="n">admonition</span><span class="p">,</span>
-                                <span class="n">value</span><span class="o">=</span><span class="n">DocstringAdmonition</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="n">admonition_type</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="n">contents</span><span class="o">=</span><span class="n">contents</span><span class="p">),</span>
+                                <span class="n">value</span><span class="o">=</span><span class="n">DocstringAdmonition</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="n">admonition_type</span><span class="p">,</span> <span class="n">contents</span><span class="o">=</span><span class="n">contents</span><span class="p">),</span>
                                 <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
                             <span class="p">)</span>
                         <span class="p">)</span>
