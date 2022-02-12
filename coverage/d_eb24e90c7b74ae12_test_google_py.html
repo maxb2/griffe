@@ -44,8 +44,8 @@
             </div>
         </div>
         <h2>
-            <span class="text">255 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">255<span class="text"> run</span></button>
+            <span class="text">248 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">248<span class="text"> run</span></button>
             <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">0<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
             <button type="button" class="par run show_par button_toggle_par" value="par" data-shortcut="p" title="Toggle lines partially run">0<span class="text"> partial</span></button>
@@ -781,25 +781,12 @@
     <p class="run"><span class="n"><a id="t720" href="#t720">720</a></span><span class="t">    <span class="key">assert</span> <span class="nam">sections</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">.</span><span class="nam">kind</span> <span class="key">is</span> <span class="nam">DocstringSectionKind</span><span class="op">.</span><span class="nam">text</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t721" href="#t721">721</a></span><span class="t">    <span class="key">assert</span> <span class="nam">len</span><span class="op">(</span><span class="nam">sections</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">.</span><span class="nam">value</span><span class="op">.</span><span class="nam">splitlines</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">==</span> <span class="nam">len</span><span class="op">(</span><span class="nam">inspect</span><span class="op">.</span><span class="nam">cleandoc</span><span class="op">(</span><span class="nam">docstring</span><span class="op">)</span><span class="op">.</span><span class="nam">splitlines</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t722" href="#t722">722</a></span><span class="t">    <span class="key">assert</span> <span class="key">not</span> <span class="nam">warnings</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t723" href="#t723">723</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t724" href="#t724">724</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t725" href="#t725">725</a></span><span class="t"><span class="key">def</span> <span class="nam">test_unknown_matching_admonitions</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t726" href="#t726">726</a></span><span class="t">    <span class="str">"""Properly handle offset when matching an unknown admonition (line ending with `:`)."""</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t727" href="#t727">727</a></span><span class="t">    <span class="nam">docstring</span> <span class="op">=</span> <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t728" href="#t728">728</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t729" href="#t729">729</a></span><span class="t"><span class="str">        Ending line.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t730" href="#t730">730</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t731" href="#t731">731</a></span><span class="t">    <span class="nam">sections</span><span class="op">,</span> <span class="nam">warnings</span> <span class="op">=</span> <span class="nam">parse</span><span class="op">(</span><span class="nam">docstring</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t732" href="#t732">732</a></span><span class="t">    <span class="key">assert</span> <span class="nam">len</span><span class="op">(</span><span class="nam">sections</span><span class="op">)</span> <span class="op">==</span> <span class="num">1</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t733" href="#t733">733</a></span><span class="t">    <span class="key">assert</span> <span class="nam">sections</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">.</span><span class="nam">kind</span> <span class="key">is</span> <span class="nam">DocstringSectionKind</span><span class="op">.</span><span class="nam">text</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t734" href="#t734">734</a></span><span class="t">    <span class="key">assert</span> <span class="nam">len</span><span class="op">(</span><span class="nam">sections</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">.</span><span class="nam">value</span><span class="op">.</span><span class="nam">splitlines</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">==</span> <span class="nam">len</span><span class="op">(</span><span class="nam">inspect</span><span class="op">.</span><span class="nam">cleandoc</span><span class="op">(</span><span class="nam">docstring</span><span class="op">)</span><span class="op">.</span><span class="nam">splitlines</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t735" href="#t735">735</a></span><span class="t">    <span class="key">assert</span> <span class="key">not</span> <span class="nam">warnings</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
         <p>
-            <a class="nav" href="covindex.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.3</a>,
-            created at 2022-02-10 22:44 +0100
+            <a class="nav" href="covindex.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.3.1</a>,
+            created at 2022-02-12 12:10 +0100
         </p>
     </div>
 </footer>

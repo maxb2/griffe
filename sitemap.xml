@@ -2,192 +2,192 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mkdocstrings.github.io/griffe/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/changelog/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/code_of_conduct/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/contributing/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/credits/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/docstrings/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/license/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/usage/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>None</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/cli/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/collections/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/dataclasses/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/encoders/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/exceptions/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/expressions/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/finder/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/importer/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/loader/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/logger/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/mixins/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/stats/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/agents/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/agents/base/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/agents/inspector/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/agents/nodes/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/agents/visitor/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/agents/extensions/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/agents/extensions/hybrid/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/docstrings/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/docstrings/dataclasses/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/docstrings/google/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/docstrings/markdown/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/docstrings/numpy/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/docstrings/parsers/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/docstrings/sphinx/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/docstrings/utils/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mkdocstrings.github.io/griffe/coverage/</loc>
-         <lastmod>2022-02-10</lastmod>
+         <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
