@@ -146,11 +146,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mkdocstrings.github.io/griffe/reference/griffe/agents/extensions/no_init_summary/</loc>
-         <lastmod>2022-02-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://mkdocstrings.github.io/griffe/reference/griffe/docstrings/</loc>
          <lastmod>2022-02-12</lastmod>
          <changefreq>daily</changefreq>
