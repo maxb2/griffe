@@ -643,19 +643,6 @@
     HybridExtension
   </a>
   
-    <nav class="md-nav" aria-label="HybridExtension">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#griffe.agents.extensions.hybrid.HybridExtension.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1168,19 +1155,6 @@
     HybridExtension
   </a>
   
-    <nav class="md-nav" aria-label="HybridExtension">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#griffe.agents.extensions.hybrid.HybridExtension.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1226,15 +1200,16 @@
 
 
 <h2 id="griffe.agents.extensions.hybrid.HybridExtension" class="doc doc-heading">
-        <code>
-HybridExtension            (<a href="../../../../../#griffe.agents.extensions.VisitorExtension">VisitorExtension</a>)
-        </code>
-
+<code class="highlight language-python"><span class="n">HybridExtension</span><span class="p">(</span><span class="n">extension</span><span class="p">)</span></code>
 
 
 <a href="#griffe.agents.extensions.hybrid.HybridExtension" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a title="griffe.agents.extensions.base.VisitorExtension" href="../../../../../#griffe.agents.extensions.VisitorExtension">VisitorExtension</a></code></p>
+
 
       <p>Inspect during a visit.</p>
 <p>This extension accepts the name of another extension (an inspector)
@@ -1245,9 +1220,29 @@ attribute (assignment), when in fact it's a function or a class
 dynamically constructed. In this case, inspecting it will
 provide the desired data.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/agents/extensions/hybrid.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">18</span>
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>extension</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>)
+        – <p>The name or configuration of another extension.</p>
+      </li>
+  </ul>
+
+  <p>Raises:</p>
+  <ul>
+      <li class="field-body">
+            <code><a title="griffe.exceptions.ExtensionError" href="../../../exceptions/#griffe.exceptions.ExtensionError">ExtensionError</a></code>
+          –
+        <p>When the passed extension is not an inspector extension.</p>
+      </li>
+  </ul>
+
+            <details class="quote">
+              <summary>Source code in <code>griffe/agents/extensions/hybrid.py</code></summary>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
 <span class="normal">21</span>
@@ -1263,162 +1258,7 @@ provide the desired data.</p>
 <span class="normal">31</span>
 <span class="normal">32</span>
 <span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">HybridExtension</span><span class="p">(</span><span class="n">VisitorExtension</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Inspect during a visit.</span>
-
-<span class="sd">    This extension accepts the name of another extension (an inspector)</span>
-<span class="sd">    and runs it appropriately. It allows to inspect objects</span>
-<span class="sd">    after having visited them, so as to extract more data.</span>
-
-<span class="sd">    Indeed, during the visit, an object might be seen as a simple</span>
-<span class="sd">    attribute (assignment), when in fact it&#39;s a function or a class</span>
-<span class="sd">    dynamically constructed. In this case, inspecting it will</span>
-<span class="sd">    provide the desired data.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">when</span> <span class="o">=</span> <span class="n">When</span><span class="o">.</span><span class="n">after_all</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extension</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the extension.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            extension: The name or configuration of another extension.</span>
-
-<span class="sd">        Raises:</span>
-<span class="sd">            ExtensionError: When the passed extension is not an inspector extension.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_extension</span><span class="p">:</span> <span class="n">InspectorExtension</span> <span class="o">=</span> <span class="n">load_extension</span><span class="p">(</span><span class="n">extension</span><span class="p">)</span>  <span class="c1"># type: ignore[assignment]</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_extension</span><span class="p">,</span> <span class="n">InspectorExtension</span><span class="p">):</span>
-            <span class="k">raise</span> <span class="n">ExtensionError</span><span class="p">(</span>
-                <span class="s2">&quot;the &#39;hybrid&#39; extension only accepts inspector extensions. &quot;</span>
-                <span class="s2">&quot;If you want to use a visitor extension, just add it normally &quot;</span>
-                <span class="s2">&quot;to your extensions configuration, without using &#39;hybrid&#39;.&quot;</span>
-            <span class="p">)</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-
-    <span class="k">def</span> <span class="nf">attach</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">visitor</span><span class="p">:</span> <span class="n">Visitor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># noqa: D102</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">attach</span><span class="p">(</span><span class="n">visitor</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_extension</span><span class="o">.</span><span class="n">attach</span><span class="p">(</span><span class="n">visitor</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]  # tolerate hybrid behavior</span>
-
-    <span class="k">def</span> <span class="nf">visit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">AST</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># noqa: D102</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">just_visited</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">visitor</span><span class="o">.</span><span class="n">current</span><span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>  <span class="c1"># type: ignore[attr-defined]</span>
-        <span class="k">except</span> <span class="p">(</span><span class="ne">KeyError</span><span class="p">,</span> <span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
-            <span class="k">return</span>
-        <span class="k">if</span> <span class="n">just_visited</span><span class="o">.</span><span class="n">is_alias</span><span class="p">:</span>
-            <span class="k">return</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">value</span> <span class="o">=</span> <span class="n">dynamic_import</span><span class="p">(</span><span class="n">just_visited</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
-            <span class="c1"># can happen when an object is defined conditionally,</span>
-            <span class="c1"># for example based on the Python version</span>
-            <span class="k">return</span>
-        <span class="n">object_node</span> <span class="o">=</span> <span class="n">ObjectNode</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">node</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>  <span class="c1"># type: ignore[attr-defined]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_extension</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">object_node</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h3 id="griffe.agents.extensions.hybrid.HybridExtension.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extension</span><span class="p">)</span></code>
-
-
-<a href="#griffe.agents.extensions.hybrid.HybridExtension.__init__" class="headerlink" title="Permanent link">¤</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Initialize the extension.</p>
-
-  <p>Parameters:</p>
-  <ul>
-      <li class="field-body">
-        <b>extension</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>)
-        – <p>The name or configuration of another extension.</p>
-      </li>
-  </ul>
-
-  <p>Raises:</p>
-  <ul>
-      <li class="field-body">
-            <code><a href="../../../exceptions/#griffe.exceptions.ExtensionError">ExtensionError</a></code>
-          –
-        <p>When the passed extension is not an inspector extension.</p>
-      </li>
-  </ul>
-
-        <details class="quote">
-          <summary>Source code in <code>griffe/agents/extensions/hybrid.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extension</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extension</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Initialize the extension.</span>
 
 <span class="sd">    Parameters:</span>
@@ -1437,10 +1277,18 @@ provide the desired data.</p>
     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 </code></pre></div>
 </td></tr></table>
-        </details>
-    </div>
+            </details>
 
-  </div>
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
 
 
 

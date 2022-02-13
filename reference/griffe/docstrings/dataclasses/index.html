@@ -789,13 +789,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#griffe.docstrings.dataclasses.DocstringAdmonition.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#griffe.docstrings.dataclasses.DocstringAdmonition.as_dict" class="md-nav__link">
     as_dict()
   </a>
@@ -823,13 +816,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#griffe.docstrings.dataclasses.DocstringElement.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#griffe.docstrings.dataclasses.DocstringElement.as_dict" class="md-nav__link">
     as_dict()
   </a>
@@ -848,13 +834,6 @@
   
     <nav class="md-nav" aria-label="DocstringNamedElement">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#griffe.docstrings.dataclasses.DocstringNamedElement.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#griffe.docstrings.dataclasses.DocstringNamedElement.as_dict" class="md-nav__link">
@@ -903,13 +882,6 @@
   
     <nav class="md-nav" aria-label="DocstringSection">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#griffe.docstrings.dataclasses.DocstringSection.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#griffe.docstrings.dataclasses.DocstringSection.as_dict" class="md-nav__link">
@@ -1314,13 +1286,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#griffe.docstrings.dataclasses.DocstringAdmonition.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#griffe.docstrings.dataclasses.DocstringAdmonition.as_dict" class="md-nav__link">
     as_dict()
   </a>
@@ -1348,13 +1313,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#griffe.docstrings.dataclasses.DocstringElement.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#griffe.docstrings.dataclasses.DocstringElement.as_dict" class="md-nav__link">
     as_dict()
   </a>
@@ -1373,13 +1331,6 @@
   
     <nav class="md-nav" aria-label="DocstringNamedElement">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#griffe.docstrings.dataclasses.DocstringNamedElement.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#griffe.docstrings.dataclasses.DocstringNamedElement.as_dict" class="md-nav__link">
@@ -1428,13 +1379,6 @@
   
     <nav class="md-nav" aria-label="DocstringSection">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#griffe.docstrings.dataclasses.DocstringSection.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#griffe.docstrings.dataclasses.DocstringSection.as_dict" class="md-nav__link">
@@ -1510,14 +1454,14 @@
 
 
 <h2 id="griffe.docstrings.dataclasses.DocstringAdmonition" class="doc doc-heading">
-        <code>
-DocstringAdmonition        </code>
-
+<code class="highlight language-python"><span class="n">DocstringAdmonition</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">kind</span><span class="p">,</span> <span class="n">contents</span><span class="p">)</span></code>
 
 
 <a href="#griffe.docstrings.dataclasses.DocstringAdmonition" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+
 
       <p>This base class represents admonitions.</p>
 
@@ -1535,100 +1479,7 @@ DocstringAdmonition        </code>
       </li>
   </ul>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span>
-<span class="normal">85</span>
-<span class="normal">86</span>
-<span class="normal">87</span>
-<span class="normal">88</span>
-<span class="normal">89</span>
-<span class="normal">90</span>
-<span class="normal">91</span>
-<span class="normal">92</span>
-<span class="normal">93</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DocstringAdmonition</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;This base class represents admonitions.</span>
 
-<span class="sd">    Attributes:</span>
-<span class="sd">        kind: The admonition kind.</span>
-<span class="sd">        contents: The admonition contents.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">kind</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">contents</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the admonition.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            kind: The admonition kind.</span>
-<span class="sd">            contents: The admonition contents.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">kind</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">kind</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">contents</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">contents</span>
-
-    <span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return this admonition&#39;s data as a dictionary.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            **kwargs: Additional serialization options.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            A dictionary.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="p">{</span>
-            <span class="s2">&quot;kind&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">kind</span><span class="p">,</span>
-            <span class="s2">&quot;contents&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">contents</span><span class="p">,</span>
-        <span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h3 id="griffe.docstrings.dataclasses.DocstringAdmonition.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">kind</span><span class="p">,</span> <span class="n">contents</span><span class="p">)</span></code>
-
-
-<a href="#griffe.docstrings.dataclasses.DocstringAdmonition.__init__" class="headerlink" title="Permanent link">¤</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Initialize the admonition.</p>
 
   <p>Parameters:</p>
   <ul>
@@ -1644,17 +1495,17 @@ DocstringAdmonition        </code>
       </li>
   </ul>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">kind</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">contents</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+            <details class="quote">
+              <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">kind</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">contents</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Initialize the admonition.</span>
 
 <span class="sd">    Parameters:</span>
@@ -1665,10 +1516,18 @@ DocstringAdmonition        </code>
     <span class="bp">self</span><span class="o">.</span><span class="n">contents</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">contents</span>
 </code></pre></div>
 </td></tr></table>
-        </details>
-    </div>
+            </details>
 
-  </div>
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
 
 
 
@@ -1691,7 +1550,7 @@ DocstringAdmonition        </code>
   <ul>
       <li class="field-body">
         <b>**kwargs</b>
-            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+            (<code><a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
         – <p>Additional serialization options.</p>
       </li>
   </ul>
@@ -1699,7 +1558,7 @@ DocstringAdmonition        </code>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
         – <p>A dictionary.</p>
       </li>
   </ul>
@@ -1755,26 +1614,21 @@ DocstringAdmonition        </code>
 
 
 <h2 id="griffe.docstrings.dataclasses.DocstringAttribute" class="doc doc-heading">
-        <code>
-DocstringAttribute            (<a href="#griffe.docstrings.dataclasses.DocstringNamedElement">DocstringNamedElement</a>)
-        </code>
+          <code>DocstringAttribute</code>
 
 
 
 <a href="#griffe.docstrings.dataclasses.DocstringAttribute" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a title="griffe.docstrings.dataclasses.DocstringNamedElement" href="#griffe.docstrings.dataclasses.DocstringNamedElement">DocstringNamedElement</a></code></p>
+
 
       <p>This class represents a documented module/class attribute.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">209</span>
-<span class="normal">210</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DocstringAttribute</span><span class="p">(</span><span class="n">DocstringNamedElement</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;This class represents a documented module/class attribute.&quot;&quot;&quot;</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
+
 
 
     </div>
@@ -1788,14 +1642,14 @@ DocstringAttribute            (<a href="#griffe.docstrings.dataclasses.Docstring
 
 
 <h2 id="griffe.docstrings.dataclasses.DocstringElement" class="doc doc-heading">
-        <code>
-DocstringElement        </code>
-
+<code class="highlight language-python"><span class="n">DocstringElement</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">annotation</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
 <a href="#griffe.docstrings.dataclasses.DocstringElement" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+
 
       <p>This base class represents annotated, nameless elements.</p>
 
@@ -1803,7 +1657,7 @@ DocstringElement        </code>
   <ul>
       <li class="field-body">
         <b>annotation</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../../expressions/#griffe.expressions.Name">Name</a> | <a href="../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a title="griffe.dataclasses.Name" href="../../expressions/#griffe.expressions.Name">Name</a> | <a title="griffe.dataclasses.Expression" href="../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
         – <p>The element annotation, if any.</p>
       </li>
       <li class="field-body">
@@ -1813,9 +1667,25 @@ DocstringElement        </code>
       </li>
   </ul>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 96</span>
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>annotation</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a title="griffe.dataclasses.Name" href="../../../../../../expressions/#griffe.expressions.Name">Name</a> | <a title="griffe.dataclasses.Expression" href="../../../../../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
+        – <p>The element annotation, if any.</p>
+      </li>
+      <li class="field-body">
+        <b>description</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The element description.</p>
+      </li>
+  </ul>
+
+            <details class="quote">
+              <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 96</span>
 <span class="normal"> 97</span>
 <span class="normal"> 98</span>
 <span class="normal"> 99</span>
@@ -1823,62 +1693,18 @@ DocstringElement        </code>
 <span class="normal">101</span>
 <span class="normal">102</span>
 <span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DocstringElement</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;This base class represents annotated, nameless elements.</span>
+<span class="normal">104</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">annotation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Initialize the element.</span>
 
-<span class="sd">    Attributes:</span>
+<span class="sd">    Parameters:</span>
 <span class="sd">        annotation: The element annotation, if any.</span>
 <span class="sd">        description: The element description.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">annotation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the element.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            annotation: The element annotation, if any.</span>
-<span class="sd">            description: The element description.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">description</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">annotation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">annotation</span>
-
-    <span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return this element&#39;s data as a dictionary.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            **kwargs: Additional serialization options.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            A dictionary.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="p">{</span>
-            <span class="s2">&quot;annotation&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">annotation</span><span class="p">,</span>
-            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">description</span><span class="p">,</span>
-        <span class="p">}</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">description</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">annotation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">annotation</span>
 </code></pre></div>
 </td></tr></table>
-        </details>
+            </details>
 
 
 
@@ -1890,63 +1716,6 @@ DocstringElement        </code>
 
 
 
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h3 id="griffe.docstrings.dataclasses.DocstringElement.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">annotation</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
-
-<a href="#griffe.docstrings.dataclasses.DocstringElement.__init__" class="headerlink" title="Permanent link">¤</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Initialize the element.</p>
-
-  <p>Parameters:</p>
-  <ul>
-      <li class="field-body">
-        <b>annotation</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../../../../../../expressions/#griffe.expressions.Name">Name</a> | <a href="../../../../../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
-        – <p>The element annotation, if any.</p>
-      </li>
-      <li class="field-body">
-        <b>description</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-        – <p>The element description.</p>
-      </li>
-  </ul>
-
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">annotation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Initialize the element.</span>
-
-<span class="sd">    Parameters:</span>
-<span class="sd">        annotation: The element annotation, if any.</span>
-<span class="sd">        description: The element description.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">description</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">annotation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">annotation</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
 
 
 
@@ -1969,7 +1738,7 @@ DocstringElement        </code>
   <ul>
       <li class="field-body">
         <b>**kwargs</b>
-            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+            (<code><a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
         – <p>Additional serialization options.</p>
       </li>
   </ul>
@@ -1977,7 +1746,7 @@ DocstringElement        </code>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
         – <p>A dictionary.</p>
       </li>
   </ul>
@@ -2033,15 +1802,16 @@ DocstringElement        </code>
 
 
 <h2 id="griffe.docstrings.dataclasses.DocstringNamedElement" class="doc doc-heading">
-        <code>
-DocstringNamedElement            (<a href="#griffe.docstrings.dataclasses.DocstringElement">DocstringElement</a>)
-        </code>
-
+<code class="highlight language-python"><span class="n">DocstringNamedElement</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">annotation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
 <a href="#griffe.docstrings.dataclasses.DocstringNamedElement" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a title="griffe.docstrings.dataclasses.DocstringElement" href="#griffe.docstrings.dataclasses.DocstringElement">DocstringElement</a></code></p>
+
 
       <p>This base class represents annotated, named elements.</p>
 
@@ -2059,9 +1829,35 @@ DocstringNamedElement            (<a href="#griffe.docstrings.dataclasses.Docstr
       </li>
   </ul>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">129</span>
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>name</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The element name.</p>
+      </li>
+      <li class="field-body">
+        <b>description</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The element description.</p>
+      </li>
+      <li class="field-body">
+        <b>annotation</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a title="griffe.dataclasses.Name" href="../../../../../../expressions/#griffe.expressions.Name">Name</a> | <a title="griffe.dataclasses.Expression" href="../../../../../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
+        – <p>The element annotation, if any.</p>
+      </li>
+      <li class="field-body">
+        <b>value</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>)
+        – <p>The element value, as a string.</p>
+      </li>
+  </ul>
+
+            <details class="quote">
+              <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">129</span>
 <span class="normal">130</span>
 <span class="normal">131</span>
 <span class="normal">132</span>
@@ -2079,146 +1875,7 @@ DocstringNamedElement            (<a href="#griffe.docstrings.dataclasses.Docstr
 <span class="normal">144</span>
 <span class="normal">145</span>
 <span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span>
-<span class="normal">155</span>
-<span class="normal">156</span>
-<span class="normal">157</span>
-<span class="normal">158</span>
-<span class="normal">159</span>
-<span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
-<span class="normal">167</span>
-<span class="normal">168</span>
-<span class="normal">169</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DocstringNamedElement</span><span class="p">(</span><span class="n">DocstringElement</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;This base class represents annotated, named elements.</span>
-
-<span class="sd">    Attributes:</span>
-<span class="sd">        name: The element name.</span>
-<span class="sd">        value: The element value, as a string, if any.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span>
-        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="o">*</span><span class="p">,</span>
-        <span class="n">description</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">annotation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">value</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the element.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            name: The element name.</span>
-<span class="sd">            description: The element description.</span>
-<span class="sd">            annotation: The element annotation, if any.</span>
-<span class="sd">            value: The element value, as a string.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">annotation</span><span class="o">=</span><span class="n">annotation</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return this element&#39;s data as a dictionary.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            **kwargs: Additional serialization options.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            A dictionary.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">base</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">as_dict</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)}</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">base</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span>
-        <span class="k">return</span> <span class="n">base</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h3 id="griffe.docstrings.dataclasses.DocstringNamedElement.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">annotation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
-
-<a href="#griffe.docstrings.dataclasses.DocstringNamedElement.__init__" class="headerlink" title="Permanent link">¤</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Initialize the element.</p>
-
-  <p>Parameters:</p>
-  <ul>
-      <li class="field-body">
-        <b>name</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-        – <p>The element name.</p>
-      </li>
-      <li class="field-body">
-        <b>description</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-        – <p>The element description.</p>
-      </li>
-      <li class="field-body">
-        <b>annotation</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../../../../../../expressions/#griffe.expressions.Name">Name</a> | <a href="../../../../../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
-        – <p>The element annotation, if any.</p>
-      </li>
-      <li class="field-body">
-        <b>value</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>)
-        – <p>The element value, as a string.</p>
-      </li>
-  </ul>
-
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span>
-<span class="normal">155</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">147</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="o">*</span><span class="p">,</span>
@@ -2239,10 +1896,18 @@ DocstringNamedElement            (<a href="#griffe.docstrings.dataclasses.Docstr
     <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">value</span>
 </code></pre></div>
 </td></tr></table>
-        </details>
-    </div>
+            </details>
 
-  </div>
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
 
 
 
@@ -2265,7 +1930,7 @@ DocstringNamedElement            (<a href="#griffe.docstrings.dataclasses.Docstr
   <ul>
       <li class="field-body">
         <b>**kwargs</b>
-            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+            (<code><a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
         – <p>Additional serialization options.</p>
       </li>
   </ul>
@@ -2273,7 +1938,7 @@ DocstringNamedElement            (<a href="#griffe.docstrings.dataclasses.Docstr
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
         – <p>A dictionary.</p>
       </li>
   </ul>
@@ -2329,52 +1994,21 @@ DocstringNamedElement            (<a href="#griffe.docstrings.dataclasses.Docstr
 
 
 <h2 id="griffe.docstrings.dataclasses.DocstringParameter" class="doc doc-heading">
-        <code>
-DocstringParameter            (<a href="#griffe.docstrings.dataclasses.DocstringNamedElement">DocstringNamedElement</a>)
-        </code>
+          <code>DocstringParameter</code>
 
 
 
 <a href="#griffe.docstrings.dataclasses.DocstringParameter" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a title="griffe.docstrings.dataclasses.DocstringNamedElement" href="#griffe.docstrings.dataclasses.DocstringNamedElement">DocstringNamedElement</a></code></p>
+
 
       <p>This class represent a documented function parameter.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">192</span>
-<span class="normal">193</span>
-<span class="normal">194</span>
-<span class="normal">195</span>
-<span class="normal">196</span>
-<span class="normal">197</span>
-<span class="normal">198</span>
-<span class="normal">199</span>
-<span class="normal">200</span>
-<span class="normal">201</span>
-<span class="normal">202</span>
-<span class="normal">203</span>
-<span class="normal">204</span>
-<span class="normal">205</span>
-<span class="normal">206</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DocstringParameter</span><span class="p">(</span><span class="n">DocstringNamedElement</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;This class represent a documented function parameter.&quot;&quot;&quot;</span>
 
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Return the default value of this parameter.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            The parameter&#39;s default.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span>
-
-    <span class="nd">@default</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
 
 
 
@@ -2403,26 +2037,21 @@ DocstringParameter            (<a href="#griffe.docstrings.dataclasses.Docstring
 
 
 <h2 id="griffe.docstrings.dataclasses.DocstringRaise" class="doc doc-heading">
-        <code>
-DocstringRaise            (<a href="#griffe.docstrings.dataclasses.DocstringElement">DocstringElement</a>)
-        </code>
+          <code>DocstringRaise</code>
 
 
 
 <a href="#griffe.docstrings.dataclasses.DocstringRaise" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a title="griffe.docstrings.dataclasses.DocstringElement" href="#griffe.docstrings.dataclasses.DocstringElement">DocstringElement</a></code></p>
+
 
       <p>This class represents a documented raise value.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">172</span>
-<span class="normal">173</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DocstringRaise</span><span class="p">(</span><span class="n">DocstringElement</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;This class represents a documented raise value.&quot;&quot;&quot;</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
+
 
 
     </div>
@@ -2436,26 +2065,21 @@ DocstringRaise            (<a href="#griffe.docstrings.dataclasses.DocstringElem
 
 
 <h2 id="griffe.docstrings.dataclasses.DocstringReceive" class="doc doc-heading">
-        <code>
-DocstringReceive            (<a href="#griffe.docstrings.dataclasses.DocstringNamedElement">DocstringNamedElement</a>)
-        </code>
+          <code>DocstringReceive</code>
 
 
 
 <a href="#griffe.docstrings.dataclasses.DocstringReceive" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a title="griffe.docstrings.dataclasses.DocstringNamedElement" href="#griffe.docstrings.dataclasses.DocstringNamedElement">DocstringNamedElement</a></code></p>
+
 
       <p>This class represents a documented receive value.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">188</span>
-<span class="normal">189</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DocstringReceive</span><span class="p">(</span><span class="n">DocstringNamedElement</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;This class represents a documented receive value.&quot;&quot;&quot;</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
+
 
 
     </div>
@@ -2469,26 +2093,21 @@ DocstringReceive            (<a href="#griffe.docstrings.dataclasses.DocstringNa
 
 
 <h2 id="griffe.docstrings.dataclasses.DocstringReturn" class="doc doc-heading">
-        <code>
-DocstringReturn            (<a href="#griffe.docstrings.dataclasses.DocstringNamedElement">DocstringNamedElement</a>)
-        </code>
+          <code>DocstringReturn</code>
 
 
 
 <a href="#griffe.docstrings.dataclasses.DocstringReturn" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a title="griffe.docstrings.dataclasses.DocstringNamedElement" href="#griffe.docstrings.dataclasses.DocstringNamedElement">DocstringNamedElement</a></code></p>
+
 
       <p>This class represents a documented return value.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">180</span>
-<span class="normal">181</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DocstringReturn</span><span class="p">(</span><span class="n">DocstringNamedElement</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;This class represents a documented return value.&quot;&quot;&quot;</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
+
 
 
     </div>
@@ -2502,125 +2121,29 @@ DocstringReturn            (<a href="#griffe.docstrings.dataclasses.DocstringNam
 
 
 <h2 id="griffe.docstrings.dataclasses.DocstringSection" class="doc doc-heading">
-        <code>
-DocstringSection        </code>
-
+<code class="highlight language-python"><span class="n">DocstringSection</span><span class="p">(</span><span class="n">kind</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
 <a href="#griffe.docstrings.dataclasses.DocstringSection" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+
 
       <p>Placeholder.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DocstringSection</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Placeholder.&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kind</span><span class="p">:</span> <span class="n">DocstringSectionKind</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the section.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            kind: The section kind.</span>
-<span class="sd">            value: The section value.</span>
-<span class="sd">            title: An optional title.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">kind</span><span class="p">:</span> <span class="n">DocstringSectionKind</span> <span class="o">=</span> <span class="n">kind</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="n">value</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">title</span>
-
-    <span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return this section&#39;s data as a dictionary.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            **kwargs: Additional serialization options.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            A dictionary.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;as_dict&quot;</span><span class="p">):</span>
-            <span class="n">serialized_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">as_dict</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">serialized_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span>
-        <span class="n">base</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;kind&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">kind</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">serialized_value</span><span class="p">}</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span><span class="p">:</span>
-            <span class="n">base</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span>
-        <span class="k">return</span> <span class="n">base</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h3 id="griffe.docstrings.dataclasses.DocstringSection.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kind</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
-
-<a href="#griffe.docstrings.dataclasses.DocstringSection.__init__" class="headerlink" title="Permanent link">¤</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Initialize the section.</p>
 
   <p>Parameters:</p>
   <ul>
       <li class="field-body">
         <b>kind</b>
-            (<code><a href="#griffe.docstrings.dataclasses.DocstringSectionKind">DocstringSectionKind</a></code>)
+            (<code><a title="griffe.docstrings.dataclasses.DocstringSectionKind" href="#griffe.docstrings.dataclasses.DocstringSectionKind">DocstringSectionKind</a></code>)
         – <p>The section kind.</p>
       </li>
       <li class="field-body">
         <b>value</b>
-            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+            (<code><a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
         – <p>The section value.</p>
       </li>
       <li class="field-body">
@@ -2630,19 +2153,19 @@ DocstringSection        </code>
       </li>
   </ul>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">32</span>
+            <details class="quote">
+              <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
 <span class="normal">33</span>
 <span class="normal">34</span>
 <span class="normal">35</span>
 <span class="normal">36</span>
 <span class="normal">37</span>
 <span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kind</span><span class="p">:</span> <span class="n">DocstringSectionKind</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">39</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kind</span><span class="p">:</span> <span class="n">DocstringSectionKind</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Initialize the section.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2655,10 +2178,19 @@ DocstringSection        </code>
     <span class="bp">self</span><span class="o">.</span><span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">title</span>
 </code></pre></div>
 </td></tr></table>
-        </details>
-    </div>
+            </details>
 
-  </div>
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
 
 
 
@@ -2681,7 +2213,7 @@ DocstringSection        </code>
   <ul>
       <li class="field-body">
         <b>**kwargs</b>
-            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+            (<code><a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
         – <p>Additional serialization options.</p>
       </li>
   </ul>
@@ -2689,7 +2221,7 @@ DocstringSection        </code>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
         – <p>A dictionary.</p>
       </li>
   </ul>
@@ -2753,52 +2285,21 @@ DocstringSection        </code>
 
 
 <h2 id="griffe.docstrings.dataclasses.DocstringSectionKind" class="doc doc-heading">
-        <code>
-DocstringSectionKind            (<a href="https://docs.python.org/3/library/enum.html#module-enum">enum</a>.<a href="https://docs.python.org/3/library/enum.html#enum.Enum">Enum</a>)
-        </code>
+          <code>DocstringSectionKind</code>
 
 
 
 <a href="#griffe.docstrings.dataclasses.DocstringSectionKind" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a href="https://docs.python.org/3/library/enum.html#module-enum">enum</a>.<a title="enum.Enum" href="https://docs.python.org/3/library/enum.html#enum.Enum">Enum</a></code></p>
+
 
       <p>The possible section kinds.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DocstringSectionKind</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;The possible section kinds.&quot;&quot;&quot;</span>
 
-    <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;text&quot;</span>
-    <span class="n">parameters</span> <span class="o">=</span> <span class="s2">&quot;parameters&quot;</span>
-    <span class="n">other_parameters</span> <span class="o">=</span> <span class="s2">&quot;other parameters&quot;</span>
-    <span class="n">raises</span> <span class="o">=</span> <span class="s2">&quot;raises&quot;</span>
-    <span class="n">warns</span> <span class="o">=</span> <span class="s2">&quot;warns&quot;</span>
-    <span class="n">returns</span> <span class="o">=</span> <span class="s2">&quot;returns&quot;</span>
-    <span class="n">yields</span> <span class="o">=</span> <span class="s2">&quot;yields&quot;</span>
-    <span class="n">receives</span> <span class="o">=</span> <span class="s2">&quot;receives&quot;</span>
-    <span class="n">examples</span> <span class="o">=</span> <span class="s2">&quot;examples&quot;</span>
-    <span class="n">attributes</span> <span class="o">=</span> <span class="s2">&quot;attributes&quot;</span>
-    <span class="n">deprecated</span> <span class="o">=</span> <span class="s2">&quot;deprecated&quot;</span>
-    <span class="n">admonition</span> <span class="o">=</span> <span class="s2">&quot;admonition&quot;</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
 
 
 
@@ -2838,26 +2339,21 @@ DocstringSectionKind            (<a href="https://docs.python.org/3/library/enum
 
 
 <h2 id="griffe.docstrings.dataclasses.DocstringWarn" class="doc doc-heading">
-        <code>
-DocstringWarn            (<a href="#griffe.docstrings.dataclasses.DocstringElement">DocstringElement</a>)
-        </code>
+          <code>DocstringWarn</code>
 
 
 
 <a href="#griffe.docstrings.dataclasses.DocstringWarn" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a title="griffe.docstrings.dataclasses.DocstringElement" href="#griffe.docstrings.dataclasses.DocstringElement">DocstringElement</a></code></p>
+
 
       <p>This class represents a documented warn value.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">176</span>
-<span class="normal">177</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DocstringWarn</span><span class="p">(</span><span class="n">DocstringElement</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;This class represents a documented warn value.&quot;&quot;&quot;</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
+
 
 
     </div>
@@ -2871,26 +2367,21 @@ DocstringWarn            (<a href="#griffe.docstrings.dataclasses.DocstringEleme
 
 
 <h2 id="griffe.docstrings.dataclasses.DocstringYield" class="doc doc-heading">
-        <code>
-DocstringYield            (<a href="#griffe.docstrings.dataclasses.DocstringNamedElement">DocstringNamedElement</a>)
-        </code>
+          <code>DocstringYield</code>
 
 
 
 <a href="#griffe.docstrings.dataclasses.DocstringYield" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a title="griffe.docstrings.dataclasses.DocstringNamedElement" href="#griffe.docstrings.dataclasses.DocstringNamedElement">DocstringNamedElement</a></code></p>
+
 
       <p>This class represents a documented yield value.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">184</span>
-<span class="normal">185</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DocstringYield</span><span class="p">(</span><span class="n">DocstringNamedElement</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;This class represents a documented yield value.&quot;&quot;&quot;</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
+
 
 
     </div>

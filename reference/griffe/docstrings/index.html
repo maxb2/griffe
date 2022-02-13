@@ -1160,34 +1160,21 @@
 
 
 <h2 id="griffe.docstrings.Parser" class="doc doc-heading">
-        <code>
-Parser            (<a href="https://docs.python.org/3/library/enum.html#module-enum">enum</a>.<a href="https://docs.python.org/3/library/enum.html#enum.Enum">Enum</a>)
-        </code>
+          <code>Parser</code>
 
 
 
 <a href="#griffe.docstrings.Parser" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a href="https://docs.python.org/3/library/enum.html#module-enum">enum</a>.<a title="enum.Enum" href="https://docs.python.org/3/library/enum.html#enum.Enum">Enum</a></code></p>
+
 
       <p>Enumeration for the different docstring parsers.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/parsers.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Parser</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Enumeration for the different docstring parsers.&quot;&quot;&quot;</span>
 
-    <span class="n">google</span> <span class="o">=</span> <span class="s2">&quot;google&quot;</span>
-    <span class="n">sphinx</span> <span class="o">=</span> <span class="s2">&quot;sphinx&quot;</span>
-    <span class="n">numpy</span> <span class="o">=</span> <span class="s2">&quot;numpy&quot;</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
 
 
 
@@ -1233,17 +1220,17 @@ Parser            (<a href="https://docs.python.org/3/library/enum.html#module-e
   <ul>
       <li class="field-body">
         <b>docstring</b>
-            (<code><a href="../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
+            (<code><a title="griffe.dataclasses.Docstring" href="../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
         – <p>The docstring to parse.</p>
       </li>
       <li class="field-body">
         <b>parser</b>
-            (<code><a href="parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+            (<code><a title="griffe.docstrings.parsers.Parser" href="parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
         – <p>The docstring parser to use. If None, return a single text section.</p>
       </li>
       <li class="field-body">
         <b>**options</b>
-            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+            (<code><a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
         – <p>The options accepted by the parser.</p>
       </li>
   </ul>
@@ -1251,7 +1238,7 @@ Parser            (<a href="https://docs.python.org/3/library/enum.html#module-e
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="dataclasses/#griffe.docstrings.dataclasses.DocstringSection">DocstringSection</a>]</code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="griffe.docstrings.dataclasses.DocstringSection" href="dataclasses/#griffe.docstrings.dataclasses.DocstringSection">DocstringSection</a>]</code>
         – <p>A list of docstring sections.</p>
       </li>
   </ul>

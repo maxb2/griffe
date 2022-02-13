@@ -1304,41 +1304,19 @@
 
 
 <h2 id="griffe.mixins.DelMembersMixin" class="doc doc-heading">
-        <code>
-DelMembersMixin        </code>
+          <code>DelMembersMixin</code>
 
 
 
 <a href="#griffe.mixins.DelMembersMixin" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+
 
       <p>This mixin adds a <code>__delitem__</code> method to a class.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/mixins.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DelMembersMixin</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;This mixin adds a `__delitem__` method to a class.&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__delitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># noqa: WPS603</span>
-        <span class="n">parts</span> <span class="o">=</span> <span class="n">_get_parts</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">name</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>  <span class="c1"># type: ignore[attr-defined]  # noqa: WPS420</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>  <span class="c1"># type: ignore[attr-defined]  # noqa: WPS420</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
 
 
 
@@ -1367,61 +1345,21 @@ DelMembersMixin        </code>
 
 
 <h2 id="griffe.mixins.GetMembersMixin" class="doc doc-heading">
-        <code>
-GetMembersMixin        </code>
+          <code>GetMembersMixin</code>
 
 
 
 <a href="#griffe.mixins.GetMembersMixin" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+
 
       <p>This mixin adds a <code>__getitem__</code> method to a class.</p>
 <p>It makes it easier to access members of an object.
 The method expects a <code>members</code> attribute/property to be available on the instance.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/mixins.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">GetMembersMixin</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;This mixin adds a `__getitem__` method to a class.</span>
 
-<span class="sd">    It makes it easier to access members of an object.</span>
-<span class="sd">    The method expects a `members` attribute/property to be available on the instance.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="n">key</span><span class="p">:</span>
-                <span class="k">return</span> <span class="bp">self</span>
-            <span class="n">parts</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">parts</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">parts</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>  <span class="c1"># type: ignore[attr-defined]</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>  <span class="c1"># type: ignore[attr-defined]</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
 
 
 
@@ -1450,83 +1388,19 @@ The method expects a <code>members</code> attribute/property to be available on 
 
 
 <h2 id="griffe.mixins.ObjectAliasMixin" class="doc doc-heading">
-        <code>
-ObjectAliasMixin        </code>
+          <code>ObjectAliasMixin</code>
 
 
 
 <a href="#griffe.mixins.ObjectAliasMixin" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+
 
       <p>A mixin for methods that appear both in objects and aliases, unchanged.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/mixins.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ObjectAliasMixin</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;A mixin for methods that appear both in objects and aliases, unchanged.&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">is_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">explicitely</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Tell if this object/alias is implicitely exported by its parent.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            explicitely: Whether to only return True when `__all__` is defined.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            True or False.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">member_is_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">explicitely</span><span class="o">=</span><span class="n">explicitely</span><span class="p">)</span>  <span class="c1"># type: ignore[attr-defined]</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">is_explicitely_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Tell if this object/alias is explicitely exported by its parent.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            True or False.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_exported</span><span class="p">(</span><span class="n">explicitely</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">is_implicitely_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Tell if this object/alias is implicitely exported by its parent.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            True or False.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">exports</span> <span class="ow">is</span> <span class="kc">None</span>  <span class="c1"># type: ignore[attr-defined]</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
 
 
 
@@ -1714,63 +1588,24 @@ ObjectAliasMixin        </code>
 
 
 <h2 id="griffe.mixins.SetCollectionMembersMixin" class="doc doc-heading">
-        <code>
-SetCollectionMembersMixin            (<a href="#griffe.mixins.DelMembersMixin">DelMembersMixin</a>)
-        </code>
+          <code>SetCollectionMembersMixin</code>
 
 
 
 <a href="#griffe.mixins.SetCollectionMembersMixin" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a title="griffe.mixins.DelMembersMixin" href="#griffe.mixins.DelMembersMixin">DelMembersMixin</a></code></p>
+
 
       <p>This mixin adds a <code>__setitem__</code> method to a class.</p>
 <p>It makes it easier to set members of an object.
 The method expects a <code>members</code> attribute/property to be available on the instance.
 Each time a member is set, its <code>_modules_collection</code> attribute is set as well.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/mixins.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span>
-<span class="normal">85</span>
-<span class="normal">86</span>
-<span class="normal">87</span>
-<span class="normal">88</span>
-<span class="normal">89</span>
-<span class="normal">90</span>
-<span class="normal">91</span>
-<span class="normal">92</span>
-<span class="normal">93</span>
-<span class="normal">94</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SetCollectionMembersMixin</span><span class="p">(</span><span class="n">DelMembersMixin</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;This mixin adds a `__setitem__` method to a class.</span>
 
-<span class="sd">    It makes it easier to set members of an object.</span>
-<span class="sd">    The method expects a `members` attribute/property to be available on the instance.</span>
-<span class="sd">    Each time a member is set, its `_modules_collection` attribute is set as well.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">value</span><span class="p">):</span>
-        <span class="n">parts</span> <span class="o">=</span> <span class="n">_get_parts</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">name</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-            <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">:</span>  <span class="c1"># type: ignore[attr-defined]</span>
-                <span class="k">for</span> <span class="n">alias</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">aliases</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>  <span class="c1"># type: ignore[attr-defined]</span>
-                    <span class="n">alias</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">value</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># type: ignore[attr-defined]</span>
-            <span class="n">value</span><span class="o">.</span><span class="n">_modules_collection</span> <span class="o">=</span> <span class="bp">self</span>  <span class="c1"># noqa: WPS437</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># type: ignore[attr-defined]</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
 
 
 
@@ -1799,67 +1634,24 @@ Each time a member is set, its <code>_modules_collection</code> attribute is set
 
 
 <h2 id="griffe.mixins.SetMembersMixin" class="doc doc-heading">
-        <code>
-SetMembersMixin            (<a href="#griffe.mixins.DelMembersMixin">DelMembersMixin</a>)
-        </code>
+          <code>SetMembersMixin</code>
 
 
 
 <a href="#griffe.mixins.SetMembersMixin" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a title="griffe.mixins.DelMembersMixin" href="#griffe.mixins.DelMembersMixin">DelMembersMixin</a></code></p>
+
 
       <p>This mixin adds a <code>__setitem__</code> method to a class.</p>
 <p>It makes it easier to set members of an object.
 The method expects a <code>members</code> attribute/property to be available on the instance.
 Each time a member is set, its <code>parent</code> attribute is set as well.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/mixins.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SetMembersMixin</span><span class="p">(</span><span class="n">DelMembersMixin</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;This mixin adds a `__setitem__` method to a class.</span>
 
-<span class="sd">    It makes it easier to set members of an object.</span>
-<span class="sd">    The method expects a `members` attribute/property to be available on the instance.</span>
-<span class="sd">    Each time a member is set, its `parent` attribute is set as well.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">parts</span> <span class="o">=</span> <span class="n">_get_parts</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">name</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-            <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">:</span>  <span class="c1"># type: ignore[attr-defined]</span>
-                <span class="n">member</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>  <span class="c1"># type: ignore[attr-defined]</span>
-                <span class="k">if</span> <span class="ow">not</span> <span class="n">member</span><span class="o">.</span><span class="n">is_alias</span><span class="p">:</span>
-                    <span class="k">for</span> <span class="n">alias</span> <span class="ow">in</span> <span class="n">member</span><span class="o">.</span><span class="n">aliases</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
-                        <span class="n">alias</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">value</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># type: ignore[attr-defined]</span>
-            <span class="n">value</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># type: ignore[attr-defined]</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
 
 
 

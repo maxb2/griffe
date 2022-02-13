@@ -1117,15 +1117,22 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#ast-nodes" class="md-nav__link">
-    AST nodes
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-griffe-as-a-docstring-parsing-library" class="md-nav__link">
+    Using Griffe as a docstring-parsing library
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#ast-nodes" class="md-nav__link">
+    AST nodes
+  </a>
   
 </li>
       
@@ -1167,6 +1174,7 @@
 <span class="go">  }</span>
 <span class="go">]</span>
 </code></pre></div>
+<p>See <a href="../griffe.json">the full Griffe JSON dump</a>. </p>
 <p>By default, Griffe will search in <code>sys.path</code>, so if you installed it through <em>pipx</em>,
 there are few chances it will find your packages.
 To explicitely specify search paths, use the <code>-s, --search &lt;PATH&gt;</code> option.
@@ -1177,12 +1185,31 @@ If Griffe can't find the packages, it will fail with a <code>ModuleNotFoundError
 <p>Create a loader to load modules data, recursively:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">griffe.loader</span> <span class="kn">import</span> <span class="n">GriffeLoader</span>
 
-<span class="n">griffe</span> <span class="o">=</span> <span class="n">GriffeLoader</span><span class="p">()</span>
-<span class="n">fastapi</span> <span class="o">=</span> <span class="n">griffe</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="s2">&quot;fastapi&quot;</span><span class="p">)</span>
+<span class="n">loader</span> <span class="o">=</span> <span class="n">GriffeLoader</span><span class="p">()</span>
+<span class="n">griffe</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="s2">&quot;griffe&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>If you don't want to recurse in the submodules:</p>
-<div class="highlight"><pre><span></span><code><span class="n">fastapi</span> <span class="o">=</span> <span class="n">griffe</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="s2">&quot;fastapi&quot;</span><span class="p">,</span> <span class="n">submodules</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">griffe</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="s2">&quot;griffe&quot;</span><span class="p">,</span> <span class="n">submodules</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
+<p>The <a href="../reference/griffe/loader/#griffe.loader.GriffeLoader.load_module"><code>load_module</code></a> method
+returns a <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Module"><code>Module</code></a> instance.
+There are several ways to access members of an object:</p>
+<ul>
+<li>through its <code>members</code> attribute, which is a dictionary,
+  with the usual <code>keys()</code>, <code>values()</code> and <code>items()</code> methods.</li>
+<li>thanks to its <code>__getitem__</code> method. For example <code>griffe["dataclasses"]</code>
+  returns the <code>Module</code> instance representing Griffe's <code>dataclasses</code> module.
+  Since this module also has members, you can chain calls: <code>griffe["dataclasses"]["Module"]</code>.
+  Conveniently, you can chain the names with dots in a single call: <code>griffe["dataclasses.Module"]</code>.
+  You can even pass a tuple instead of a string: <code>griffe[("dataclasses", "Module")]</code>.</li>
+<li>through the <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Object.modules"><code>modules</code></a>,
+  <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Object.classes"><code>classes</code></a>,
+  <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Object.functions"><code>functions</code></a> and
+  <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Object.attributes"><code>attributes</code></a> properties,
+  which take care of filtering members based on their kind, and return dictionaries.</li>
+</ul>
+<p>Most of the time, you will only use classes from the <a href="../reference/griffe/dataclasses/#griffe.dataclasses"><code>griffe.dataclasses</code></a>
+and <a href="../reference/griffe/docstrings/dataclasses/#griffe.docstrings.dataclasses"><code>griffe.docstrings.dataclasses</code></a> modules.</p>
 <h3 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">¤</a></h3>
 <p>You can pass extensions to the loader to augment its capacities:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">griffe.loader</span> <span class="kn">import</span> <span class="n">GriffeLoader</span>
@@ -1212,16 +1239,16 @@ so they can benefit from its capacities (navigating the nodes, getting the curre
 class or module, etc.).</p>
 <p>Each time a node is visited, the main visitor will make the extensions visit the node as well.
 Implement the <code>visit_&lt;NODE_TYPE_LOWER&gt;</code> methods to visit nodes of certain types,
-and act on their properties.</p>
+and act on their properties. See the <a href="#ast-nodes">full list of AST nodes</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Important note</p>
 <p>Because the main visitor recursively walks the tree itself,
 calling extensions on each node,
-<strong>you must not call the <code>.generic_visit(node)</code> method in your <code>.visit_*</code> methods!</strong>
+<strong>you must not visit child nodes in your <code>.visit_*</code> methods!</strong>
 Otherwise, nodes down the tree will be visited twice or more:
 once by the main visitor, and as many times more as your extension is called.
 Let the main visitor do the walking, and just take care of the current node,
-without handling its children (what the <code>generic_visit</code> does).</p>
+without handling its children.</p>
 </div>
 <p>You can access the main visitor state and data through the <code>.visitor</code> attribute,
 and the nodes instances are extended with additional attributes and properties:</p>
@@ -1239,9 +1266,9 @@ and the nodes instances are extended with additional attributes and properties:<
         <span class="bp">self</span><span class="o">.</span><span class="n">visitor</span><span class="o">.</span><span class="n">current</span>  <span class="c1"># the current data object</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">visitor</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">kind</span>  <span class="c1"># the kind of object: module, class, function, attribute </span>
 </code></pre></div>
-<p>See the data classes (<a href="../reference/griffe/dataclasses/#griffe.dataclasses.Module">Module</a>,
-<a href="../reference/griffe/dataclasses/#griffe.dataclasses.Class">Class</a>, <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Function">Function</a>
-and <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Attribute">Attribute</a>)
+<p>See the data classes (<a href="../reference/griffe/dataclasses/#griffe.dataclasses.Module"><code>Module</code></a>,
+<a href="../reference/griffe/dataclasses/#griffe.dataclasses.Class"><code>Class</code></a>, <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Function"><code>Function</code></a>
+and <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Attribute"><code>Attribute</code></a>)
 for a complete description of their methods and attributes.</p>
 <p>Extensions are run at certain moments while walking the Abstract Syntax Tree (AST):</p>
 <ul>
@@ -1263,9 +1290,48 @@ set its <code>when</code> attribute:</p>
 </code></pre></div>
 <p>By default, it will run the extension after the visit/inspection of the node:
 that's when the full data for this node and its children is loaded.</p>
-<h3 id="ast-nodes">AST nodes<a class="headerlink" href="#ast-nodes" title="Permanent link">¤</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Nodes</p>
+<h2 id="using-griffe-as-a-docstring-parsing-library">Using Griffe as a docstring-parsing library<a class="headerlink" href="#using-griffe-as-a-docstring-parsing-library" title="Permanent link">¤</a></h2>
+<p>You can use Griffe to parse arbitrary docstrings.
+You don't have to load anything through the Griffe loader.
+You need to import the <a href="../reference/griffe/docstrings/parsers/#griffe.docstrings.parsers.parse"><code>parse</code></a> function,
+the <a href="../reference/griffe/docstrings/parsers/#griffe.docstrings.parsers.Parser"><code>Parser</code></a> enumeration,
+and the <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Docstring"><code>Docstring</code></a> class.
+Then you can build a <code>Docstring</code> instance and call <code>parse</code> on it,
+choosing the parsing-style to use:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">griffe.dataclasses</span> <span class="kn">import</span> <span class="n">Docstring</span>
+<span class="kn">from</span> <span class="nn">griffe.docstrings.parsers</span> <span class="kn">import</span> <span class="n">Parser</span><span class="p">,</span> <span class="n">parse</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Hello I&#39;m a docstring!&quot;</span>
+<span class="n">docstring</span> <span class="o">=</span> <span class="n">Docstring</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">lineno</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">parsed</span> <span class="o">=</span> <span class="n">parse</span><span class="p">(</span><span class="n">docstring</span><span class="p">,</span> <span class="n">Parser</span><span class="o">.</span><span class="n">google</span><span class="p">)</span>
+</code></pre></div>
+<p>If you want to take advantage of the parsers ability to fetch
+annotations from the object from which the docstring originates,
+you can manually create the parent objects and link them to the docstring:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">griffe.dataclasses</span> <span class="kn">import</span> <span class="n">Docstring</span><span class="p">,</span> <span class="n">Function</span><span class="p">,</span> <span class="n">Parameters</span><span class="p">,</span> <span class="n">Parameter</span><span class="p">,</span> <span class="n">ParameterKind</span>
+<span class="kn">from</span> <span class="nn">griffe.docstrings.parsers</span> <span class="kn">import</span> <span class="n">Parser</span><span class="p">,</span> <span class="n">parse</span>
+
+<span class="n">function</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span>
+    <span class="s2">&quot;func&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="n">Parameters</span><span class="p">(</span>
+        <span class="n">Parameter</span><span class="p">(</span><span class="s2">&quot;param1&quot;</span><span class="p">,</span> <span class="n">annotation</span><span class="o">=</span><span class="s2">&quot;str&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="n">ParameterKind</span><span class="o">.</span><span class="n">positional_or_keyword</span><span class="p">),</span>
+        <span class="n">Parameter</span><span class="p">(</span><span class="s2">&quot;param2&quot;</span><span class="p">,</span> <span class="n">annotation</span><span class="o">=</span><span class="s2">&quot;int&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="n">ParameterKind</span><span class="o">.</span><span class="n">keyword_only</span><span class="p">),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Hello I&#39;m a docstring!</span>
+
+<span class="s2">Parameters:</span>
+<span class="s2">    param1: Description.</span>
+<span class="s2">    param2: Description.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">docstring</span> <span class="o">=</span> <span class="n">Docstring</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">lineno</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">function</span><span class="p">)</span>
+<span class="n">parsed</span> <span class="o">=</span> <span class="n">parse</span><span class="p">(</span><span class="n">docstring</span><span class="p">,</span> <span class="n">Parser</span><span class="o">.</span><span class="n">google</span><span class="p">)</span>
+</code></pre></div>
+<p>With this the parser will fetch the <code>str</code> and <code>int</code> annotations
+from the parent function's parameters.</p>
+<h2 id="ast-nodes">AST nodes<a class="headerlink" href="#ast-nodes" title="Permanent link">¤</a></h2>
+<blockquote>
 <p><table style="border: none; background-color: unset;"><tbody><tr><td></p>
 <ul>
 <li><a href="https://docs.python.org/3/library/ast.html#ast.Add"><code>Add</code></a></li>
@@ -1394,7 +1460,7 @@ that's when the full data for this node and its children is loaded.</p>
 <li><a href="https://docs.python.org/3/library/ast.html#ast.YieldFrom"><code>YieldFrom</code></a></li>
 </ul>
 <p></td></tr></tbody></table></p>
-</div>
+</blockquote>
 <div class="footnote">
 <hr />
 <ol>

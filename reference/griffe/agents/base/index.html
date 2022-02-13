@@ -1290,55 +1290,19 @@
 
 
 <h2 id="griffe.agents.base.BaseInspector" class="doc doc-heading">
-        <code>
-BaseInspector        </code>
+          <code>BaseInspector</code>
 
 
 
 <a href="#griffe.agents.base.BaseInspector" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+
 
       <p>The base class for inspectors.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/agents/base.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BaseInspector</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;The base class for inspectors.&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">inspect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Inspect a node.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;inspect_</span><span class="si">{</span><span class="n">node</span><span class="o">.</span><span class="n">kind</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">generic_inspect</span><span class="p">)(</span><span class="n">node</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">generic_inspect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Inspect the children of a node.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect (its children).</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
 
 
 
@@ -1370,7 +1334,7 @@ BaseInspector        </code>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect (its children).</p>
       </li>
   </ul>
@@ -1416,7 +1380,7 @@ BaseInspector        </code>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
@@ -1460,55 +1424,19 @@ BaseInspector        </code>
 
 
 <h2 id="griffe.agents.base.BaseVisitor" class="doc doc-heading">
-        <code>
-BaseVisitor        </code>
+          <code>BaseVisitor</code>
 
 
 
 <a href="#griffe.agents.base.BaseVisitor" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+
 
       <p>The base class for visitors.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/agents/base.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BaseVisitor</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;The base class for visitors.&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">visit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">AST</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Visit a node.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to visit.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;visit_</span><span class="si">{</span><span class="n">node</span><span class="o">.</span><span class="n">kind</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">generic_visit</span><span class="p">)(</span><span class="n">node</span><span class="p">)</span>  <span class="c1"># type: ignore[attr-defined]</span>
-
-    <span class="k">def</span> <span class="nf">generic_visit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">AST</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Visit the children of a node.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to visit (its children).</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
 
 
 
@@ -1540,7 +1468,7 @@ BaseVisitor        </code>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a href="https://docs.python.org/3/library/ast.html#ast.AST">AST</a></code>)
+            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a title="ast.AST" href="https://docs.python.org/3/library/ast.html#ast.AST">AST</a></code>)
         – <p>The node to visit (its children).</p>
       </li>
   </ul>
@@ -1586,7 +1514,7 @@ BaseVisitor        </code>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a href="https://docs.python.org/3/library/ast.html#ast.AST">AST</a></code>)
+            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a title="ast.AST" href="https://docs.python.org/3/library/ast.html#ast.AST">AST</a></code>)
         – <p>The node to visit.</p>
       </li>
   </ul>

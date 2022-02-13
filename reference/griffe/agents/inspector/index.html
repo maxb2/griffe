@@ -666,13 +666,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#griffe.agents.inspector.Inspector.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#griffe.agents.inspector.Inspector.generic_inspect" class="md-nav__link">
     generic_inspect()
   </a>
@@ -1303,13 +1296,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#griffe.agents.inspector.Inspector.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#griffe.agents.inspector.Inspector.generic_inspect" class="md-nav__link">
     generic_inspect()
   </a>
@@ -1506,22 +1492,64 @@ and recursively handle its members.</p>
 
 
 <h2 id="griffe.agents.inspector.Inspector" class="doc doc-heading">
-        <code>
-Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseInspector</a>)
-        </code>
-
+<code class="highlight language-python"><span class="n">Inspector</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">extensions</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_parser</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lines_collection</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
 <a href="#griffe.agents.inspector.Inspector" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a title="griffe.agents.base.BaseInspector" href="../base/#griffe.agents.base.BaseInspector">BaseInspector</a></code></p>
+
 
       <p>This class is used to instantiate an inspector.</p>
 <p>Inspectors iterate on objects members to extract data from them.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">145</span>
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>module_name</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The module name.</p>
+      </li>
+      <li class="field-body">
+        <b>filepath</b>
+            (<code><a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | None</code>)
+        – <p>The optional filepath.</p>
+      </li>
+      <li class="field-body">
+        <b>extensions</b>
+            (<code><a title="griffe.agents.extensions.Extensions" href="../extensions/#griffe.agents.extensions.Extensions">Extensions</a></code>)
+        – <p>Extensions to use when inspecting.</p>
+      </li>
+      <li class="field-body">
+        <b>parent</b>
+            (<code><a title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>)
+        – <p>The module parent.</p>
+      </li>
+      <li class="field-body">
+        <b>docstring_parser</b>
+            (<code><a title="griffe.docstrings.parsers.Parser" href="../../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+        – <p>The docstring parser to use.</p>
+      </li>
+      <li class="field-body">
+        <b>docstring_options</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
+        – <p>The docstring parsing options.</p>
+      </li>
+      <li class="field-body">
+        <b>lines_collection</b>
+            (<code><a title="griffe.collections.LinesCollection" href="../../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
+        – <p>A collection of source code lines.</p>
+      </li>
+  </ul>
+
+            <details class="quote">
+              <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">145</span>
 <span class="normal">146</span>
 <span class="normal">147</span>
 <span class="normal">148</span>
@@ -1550,669 +1578,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
 <span class="normal">171</span>
 <span class="normal">172</span>
 <span class="normal">173</span>
-<span class="normal">174</span>
-<span class="normal">175</span>
-<span class="normal">176</span>
-<span class="normal">177</span>
-<span class="normal">178</span>
-<span class="normal">179</span>
-<span class="normal">180</span>
-<span class="normal">181</span>
-<span class="normal">182</span>
-<span class="normal">183</span>
-<span class="normal">184</span>
-<span class="normal">185</span>
-<span class="normal">186</span>
-<span class="normal">187</span>
-<span class="normal">188</span>
-<span class="normal">189</span>
-<span class="normal">190</span>
-<span class="normal">191</span>
-<span class="normal">192</span>
-<span class="normal">193</span>
-<span class="normal">194</span>
-<span class="normal">195</span>
-<span class="normal">196</span>
-<span class="normal">197</span>
-<span class="normal">198</span>
-<span class="normal">199</span>
-<span class="normal">200</span>
-<span class="normal">201</span>
-<span class="normal">202</span>
-<span class="normal">203</span>
-<span class="normal">204</span>
-<span class="normal">205</span>
-<span class="normal">206</span>
-<span class="normal">207</span>
-<span class="normal">208</span>
-<span class="normal">209</span>
-<span class="normal">210</span>
-<span class="normal">211</span>
-<span class="normal">212</span>
-<span class="normal">213</span>
-<span class="normal">214</span>
-<span class="normal">215</span>
-<span class="normal">216</span>
-<span class="normal">217</span>
-<span class="normal">218</span>
-<span class="normal">219</span>
-<span class="normal">220</span>
-<span class="normal">221</span>
-<span class="normal">222</span>
-<span class="normal">223</span>
-<span class="normal">224</span>
-<span class="normal">225</span>
-<span class="normal">226</span>
-<span class="normal">227</span>
-<span class="normal">228</span>
-<span class="normal">229</span>
-<span class="normal">230</span>
-<span class="normal">231</span>
-<span class="normal">232</span>
-<span class="normal">233</span>
-<span class="normal">234</span>
-<span class="normal">235</span>
-<span class="normal">236</span>
-<span class="normal">237</span>
-<span class="normal">238</span>
-<span class="normal">239</span>
-<span class="normal">240</span>
-<span class="normal">241</span>
-<span class="normal">242</span>
-<span class="normal">243</span>
-<span class="normal">244</span>
-<span class="normal">245</span>
-<span class="normal">246</span>
-<span class="normal">247</span>
-<span class="normal">248</span>
-<span class="normal">249</span>
-<span class="normal">250</span>
-<span class="normal">251</span>
-<span class="normal">252</span>
-<span class="normal">253</span>
-<span class="normal">254</span>
-<span class="normal">255</span>
-<span class="normal">256</span>
-<span class="normal">257</span>
-<span class="normal">258</span>
-<span class="normal">259</span>
-<span class="normal">260</span>
-<span class="normal">261</span>
-<span class="normal">262</span>
-<span class="normal">263</span>
-<span class="normal">264</span>
-<span class="normal">265</span>
-<span class="normal">266</span>
-<span class="normal">267</span>
-<span class="normal">268</span>
-<span class="normal">269</span>
-<span class="normal">270</span>
-<span class="normal">271</span>
-<span class="normal">272</span>
-<span class="normal">273</span>
-<span class="normal">274</span>
-<span class="normal">275</span>
-<span class="normal">276</span>
-<span class="normal">277</span>
-<span class="normal">278</span>
-<span class="normal">279</span>
-<span class="normal">280</span>
-<span class="normal">281</span>
-<span class="normal">282</span>
-<span class="normal">283</span>
-<span class="normal">284</span>
-<span class="normal">285</span>
-<span class="normal">286</span>
-<span class="normal">287</span>
-<span class="normal">288</span>
-<span class="normal">289</span>
-<span class="normal">290</span>
-<span class="normal">291</span>
-<span class="normal">292</span>
-<span class="normal">293</span>
-<span class="normal">294</span>
-<span class="normal">295</span>
-<span class="normal">296</span>
-<span class="normal">297</span>
-<span class="normal">298</span>
-<span class="normal">299</span>
-<span class="normal">300</span>
-<span class="normal">301</span>
-<span class="normal">302</span>
-<span class="normal">303</span>
-<span class="normal">304</span>
-<span class="normal">305</span>
-<span class="normal">306</span>
-<span class="normal">307</span>
-<span class="normal">308</span>
-<span class="normal">309</span>
-<span class="normal">310</span>
-<span class="normal">311</span>
-<span class="normal">312</span>
-<span class="normal">313</span>
-<span class="normal">314</span>
-<span class="normal">315</span>
-<span class="normal">316</span>
-<span class="normal">317</span>
-<span class="normal">318</span>
-<span class="normal">319</span>
-<span class="normal">320</span>
-<span class="normal">321</span>
-<span class="normal">322</span>
-<span class="normal">323</span>
-<span class="normal">324</span>
-<span class="normal">325</span>
-<span class="normal">326</span>
-<span class="normal">327</span>
-<span class="normal">328</span>
-<span class="normal">329</span>
-<span class="normal">330</span>
-<span class="normal">331</span>
-<span class="normal">332</span>
-<span class="normal">333</span>
-<span class="normal">334</span>
-<span class="normal">335</span>
-<span class="normal">336</span>
-<span class="normal">337</span>
-<span class="normal">338</span>
-<span class="normal">339</span>
-<span class="normal">340</span>
-<span class="normal">341</span>
-<span class="normal">342</span>
-<span class="normal">343</span>
-<span class="normal">344</span>
-<span class="normal">345</span>
-<span class="normal">346</span>
-<span class="normal">347</span>
-<span class="normal">348</span>
-<span class="normal">349</span>
-<span class="normal">350</span>
-<span class="normal">351</span>
-<span class="normal">352</span>
-<span class="normal">353</span>
-<span class="normal">354</span>
-<span class="normal">355</span>
-<span class="normal">356</span>
-<span class="normal">357</span>
-<span class="normal">358</span>
-<span class="normal">359</span>
-<span class="normal">360</span>
-<span class="normal">361</span>
-<span class="normal">362</span>
-<span class="normal">363</span>
-<span class="normal">364</span>
-<span class="normal">365</span>
-<span class="normal">366</span>
-<span class="normal">367</span>
-<span class="normal">368</span>
-<span class="normal">369</span>
-<span class="normal">370</span>
-<span class="normal">371</span>
-<span class="normal">372</span>
-<span class="normal">373</span>
-<span class="normal">374</span>
-<span class="normal">375</span>
-<span class="normal">376</span>
-<span class="normal">377</span>
-<span class="normal">378</span>
-<span class="normal">379</span>
-<span class="normal">380</span>
-<span class="normal">381</span>
-<span class="normal">382</span>
-<span class="normal">383</span>
-<span class="normal">384</span>
-<span class="normal">385</span>
-<span class="normal">386</span>
-<span class="normal">387</span>
-<span class="normal">388</span>
-<span class="normal">389</span>
-<span class="normal">390</span>
-<span class="normal">391</span>
-<span class="normal">392</span>
-<span class="normal">393</span>
-<span class="normal">394</span>
-<span class="normal">395</span>
-<span class="normal">396</span>
-<span class="normal">397</span>
-<span class="normal">398</span>
-<span class="normal">399</span>
-<span class="normal">400</span>
-<span class="normal">401</span>
-<span class="normal">402</span>
-<span class="normal">403</span>
-<span class="normal">404</span>
-<span class="normal">405</span>
-<span class="normal">406</span>
-<span class="normal">407</span>
-<span class="normal">408</span>
-<span class="normal">409</span>
-<span class="normal">410</span>
-<span class="normal">411</span>
-<span class="normal">412</span>
-<span class="normal">413</span>
-<span class="normal">414</span>
-<span class="normal">415</span>
-<span class="normal">416</span>
-<span class="normal">417</span>
-<span class="normal">418</span>
-<span class="normal">419</span>
-<span class="normal">420</span>
-<span class="normal">421</span>
-<span class="normal">422</span>
-<span class="normal">423</span>
-<span class="normal">424</span>
-<span class="normal">425</span>
-<span class="normal">426</span>
-<span class="normal">427</span>
-<span class="normal">428</span>
-<span class="normal">429</span>
-<span class="normal">430</span>
-<span class="normal">431</span>
-<span class="normal">432</span>
-<span class="normal">433</span>
-<span class="normal">434</span>
-<span class="normal">435</span>
-<span class="normal">436</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Inspector</span><span class="p">(</span><span class="n">BaseInspector</span><span class="p">):</span>  <span class="c1"># noqa: WPS338</span>
-    <span class="sd">&quot;&quot;&quot;This class is used to instantiate an inspector.</span>
-
-<span class="sd">    Inspectors iterate on objects members to extract data from them.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span>
-        <span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">extensions</span><span class="p">:</span> <span class="n">Extensions</span><span class="p">,</span>
-        <span class="n">parent</span><span class="p">:</span> <span class="n">Module</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">docstring_parser</span><span class="p">:</span> <span class="n">Parser</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">docstring_options</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">lines_collection</span><span class="p">:</span> <span class="n">LinesCollection</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the inspector.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            module_name: The module name.</span>
-<span class="sd">            filepath: The optional filepath.</span>
-<span class="sd">            extensions: Extensions to use when inspecting.</span>
-<span class="sd">            parent: The module parent.</span>
-<span class="sd">            docstring_parser: The docstring parser to use.</span>
-<span class="sd">            docstring_options: The docstring parsing options.</span>
-<span class="sd">            lines_collection: A collection of source code lines.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">module_name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">filepath</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">extensions</span><span class="p">:</span> <span class="n">Extensions</span> <span class="o">=</span> <span class="n">extensions</span><span class="o">.</span><span class="n">attach_inspector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">:</span> <span class="n">Module</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">parent</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">current</span><span class="p">:</span> <span class="n">Module</span> <span class="o">|</span> <span class="n">Class</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: ignore[assignment]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">docstring_parser</span><span class="p">:</span> <span class="n">Parser</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">docstring_parser</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">docstring_options</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">docstring_options</span> <span class="ow">or</span> <span class="p">{}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lines_collection</span><span class="p">:</span> <span class="n">LinesCollection</span> <span class="o">=</span> <span class="n">lines_collection</span> <span class="ow">or</span> <span class="n">LinesCollection</span><span class="p">()</span>
-
-    <span class="k">def</span> <span class="nf">_get_docstring</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Docstring</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">value</span> <span class="o">=</span> <span class="n">getdoc</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">obj</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">None</span>
-        <span class="k">return</span> <span class="n">Docstring</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span>
-            <span class="n">parser</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">docstring_parser</span><span class="p">,</span>
-            <span class="n">parser_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">docstring_options</span><span class="p">,</span>
-        <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">get_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">import_paths</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Build and return the object representing the module attached to this inspector.</span>
-
-<span class="sd">        This method triggers a complete inspection of the module members.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            import_paths: Paths replacing `sys.path` to import the module.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            A module instance.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">import_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">module_name</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">import_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">import_path</span><span class="si">}</span><span class="s2">&quot;</span>
-        <span class="n">value</span> <span class="o">=</span> <span class="n">dynamic_import</span><span class="p">(</span><span class="n">import_path</span><span class="p">,</span> <span class="n">import_paths</span><span class="p">)</span>
-        <span class="n">top_node</span> <span class="o">=</span> <span class="n">ObjectNode</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">module_name</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">top_node</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">module</span>
-
-    <span class="k">def</span> <span class="nf">inspect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Extend the base inspection with extensions.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">for</span> <span class="n">before_inspector</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">extensions</span><span class="o">.</span><span class="n">before_inspection</span><span class="p">:</span>
-            <span class="n">before_inspector</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">after_inspector</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">extensions</span><span class="o">.</span><span class="n">after_inspection</span><span class="p">:</span>
-            <span class="n">after_inspector</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">generic_inspect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># noqa: WPS231</span>
-        <span class="sd">&quot;&quot;&quot;Extend the base generic inspection with extensions.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">for</span> <span class="n">before_inspector</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">extensions</span><span class="o">.</span><span class="n">before_children_inspection</span><span class="p">:</span>
-            <span class="n">before_inspector</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-
-        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
-            <span class="n">child_module_path</span> <span class="o">=</span> <span class="n">_should_create_alias</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">child_module_path</span><span class="p">:</span>
-                <span class="n">child_name</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;__name__&quot;</span><span class="p">,</span> <span class="n">child</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-                <span class="n">target_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">child_module_path</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">child_name</span><span class="si">}</span><span class="s2">&quot;</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">current</span><span class="p">[</span><span class="n">child</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">Alias</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">target_path</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
-
-        <span class="k">for</span> <span class="n">after_inspector</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">extensions</span><span class="o">.</span><span class="n">after_children_inspection</span><span class="p">:</span>
-            <span class="n">after_inspector</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">inspect_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Inspect a module.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">=</span> <span class="n">Module</span><span class="p">(</span>
-            <span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">module_name</span><span class="p">,</span>
-            <span class="n">filepath</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="p">,</span>
-            <span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">,</span>
-            <span class="n">docstring</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_docstring</span><span class="p">(</span><span class="n">node</span><span class="p">),</span>
-            <span class="n">lines_collection</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">lines_collection</span><span class="p">,</span>
-        <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">generic_inspect</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">inspect_class</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Inspect a class.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">bases</span> <span class="o">=</span> <span class="p">[</span><span class="n">base</span><span class="o">.</span><span class="vm">__name__</span> <span class="k">for</span> <span class="n">base</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="vm">__bases__</span> <span class="k">if</span> <span class="n">base</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">object</span><span class="p">]</span>  <span class="c1"># noqa: WPS609</span>
-
-        <span class="n">class_</span> <span class="o">=</span> <span class="n">Class</span><span class="p">(</span>
-            <span class="n">name</span><span class="o">=</span><span class="n">node</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-            <span class="n">docstring</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_docstring</span><span class="p">(</span><span class="n">node</span><span class="p">),</span>
-            <span class="n">bases</span><span class="o">=</span><span class="n">bases</span><span class="p">,</span>
-        <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">current</span><span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">class_</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">=</span> <span class="n">class_</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">generic_inspect</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">parent</span>  <span class="c1"># type: ignore[assignment]</span>
-
-    <span class="k">def</span> <span class="nf">inspect_staticmethod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Inspect a static method.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">handle_function</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;classmethod&quot;</span><span class="p">})</span>
-
-    <span class="k">def</span> <span class="nf">inspect_classmethod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Inspect a class method.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">handle_function</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;staticmethod&quot;</span><span class="p">})</span>
-
-    <span class="k">def</span> <span class="nf">inspect_method_descriptor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Inspect a method descriptor.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">handle_function</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;method descriptor&quot;</span><span class="p">})</span>
-
-    <span class="k">def</span> <span class="nf">inspect_builtin_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Inspect a builtin method.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">handle_function</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;builtin&quot;</span><span class="p">})</span>
-
-    <span class="k">def</span> <span class="nf">inspect_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Inspect a method.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">handle_function</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">inspect_coroutine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Inspect a coroutine.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">handle_function</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;async&quot;</span><span class="p">})</span>
-
-    <span class="k">def</span> <span class="nf">inspect_builtin_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Inspect a builtin function.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">handle_function</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;builtin&quot;</span><span class="p">})</span>
-
-    <span class="k">def</span> <span class="nf">inspect_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Inspect a function.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">handle_function</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">inspect_cached_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Inspect a cached property.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">handle_function</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;cached property&quot;</span><span class="p">})</span>
-
-    <span class="k">def</span> <span class="nf">inspect_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Inspect a property.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">handle_function</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;property&quot;</span><span class="p">})</span>
-
-    <span class="k">def</span> <span class="nf">handle_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">,</span> <span class="n">labels</span><span class="p">:</span> <span class="nb">set</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>  <span class="c1"># noqa: WPS231</span>
-        <span class="sd">&quot;&quot;&quot;Handle a function.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">            labels: Labels to add to the data object.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">signature</span> <span class="o">=</span> <span class="n">getsignature</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">obj</span><span class="p">)</span>
-        <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">,</span> <span class="n">TokenError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
-            <span class="n">parameters</span> <span class="o">=</span> <span class="kc">None</span>
-            <span class="n">returns</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">parameters</span> <span class="o">=</span> <span class="n">Parameters</span><span class="p">(</span>
-                <span class="o">*</span><span class="p">[</span><span class="n">_convert_parameter</span><span class="p">(</span><span class="n">parameter</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">current</span><span class="p">)</span> <span class="k">for</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">signature</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
-            <span class="p">)</span>
-            <span class="n">return_annotation</span> <span class="o">=</span> <span class="n">signature</span><span class="o">.</span><span class="n">return_annotation</span>
-            <span class="k">if</span> <span class="n">return_annotation</span> <span class="ow">is</span> <span class="n">empty</span><span class="p">:</span>
-                <span class="n">returns</span> <span class="o">=</span> <span class="kc">None</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">returns</span> <span class="o">=</span> <span class="n">_convert_object_to_annotation</span><span class="p">(</span><span class="n">return_annotation</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">current</span><span class="p">)</span>
-
-        <span class="n">function</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span>
-            <span class="n">name</span><span class="o">=</span><span class="n">node</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-            <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">,</span>
-            <span class="n">returns</span><span class="o">=</span><span class="n">returns</span><span class="p">,</span>
-            <span class="n">docstring</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_docstring</span><span class="p">(</span><span class="n">node</span><span class="p">),</span>
-        <span class="p">)</span>
-        <span class="k">if</span> <span class="n">labels</span><span class="p">:</span>
-            <span class="n">function</span><span class="o">.</span><span class="n">labels</span> <span class="o">|=</span> <span class="n">labels</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">current</span><span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">function</span>
-
-    <span class="k">def</span> <span class="nf">inspect_attribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Inspect an attribute.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">handle_attribute</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">handle_attribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">,</span> <span class="n">annotation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>  <span class="c1"># noqa: WPS231</span>
-        <span class="sd">&quot;&quot;&quot;Handle an attribute.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">            annotation: A potentiel annotation.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="c1"># TODO: to improve</span>
-        <span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span>
-        <span class="n">labels</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-
-        <span class="k">if</span> <span class="n">parent</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">ObjectKind</span><span class="o">.</span><span class="n">MODULE</span><span class="p">:</span>
-            <span class="n">labels</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;module&quot;</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">parent</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">ObjectKind</span><span class="o">.</span><span class="n">CLASS</span><span class="p">:</span>
-            <span class="n">labels</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;class&quot;</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">parent</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">ObjectKind</span><span class="o">.</span><span class="n">FUNCTION</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">parent</span><span class="o">.</span><span class="n">name</span> <span class="o">!=</span> <span class="s2">&quot;__init__&quot;</span><span class="p">:</span>
-                <span class="k">return</span>
-            <span class="n">parent</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">parent</span>
-            <span class="n">labels</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">)</span>
-
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">value</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">obj</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># could trigger anything</span>
-            <span class="n">value</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="n">docstring</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_docstring</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-
-        <span class="n">attribute</span> <span class="o">=</span> <span class="n">Attribute</span><span class="p">(</span>
-            <span class="n">name</span><span class="o">=</span><span class="n">node</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-            <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">,</span>
-            <span class="n">annotation</span><span class="o">=</span><span class="n">annotation</span><span class="p">,</span>
-            <span class="c1"># lineno=node.lineno,</span>
-            <span class="c1"># endlineno=node.end_lineno,</span>
-            <span class="n">docstring</span><span class="o">=</span><span class="n">docstring</span><span class="p">,</span>
-        <span class="p">)</span>
-        <span class="n">attribute</span><span class="o">.</span><span class="n">labels</span> <span class="o">|=</span> <span class="n">labels</span>
-        <span class="n">parent</span><span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">attribute</span>
-
-        <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;__all__&quot;</span><span class="p">:</span>
-            <span class="n">parent</span><span class="o">.</span><span class="n">exports</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">obj</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h3 id="griffe.agents.inspector.Inspector.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module_name</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">extensions</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_parser</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lines_collection</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
-
-<a href="#griffe.agents.inspector.Inspector.__init__" class="headerlink" title="Permanent link">¤</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Initialize the inspector.</p>
-
-  <p>Parameters:</p>
-  <ul>
-      <li class="field-body">
-        <b>module_name</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-        – <p>The module name.</p>
-      </li>
-      <li class="field-body">
-        <b>filepath</b>
-            (<code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | None</code>)
-        – <p>The optional filepath.</p>
-      </li>
-      <li class="field-body">
-        <b>extensions</b>
-            (<code><a href="../extensions/#griffe.agents.extensions.Extensions">Extensions</a></code>)
-        – <p>Extensions to use when inspecting.</p>
-      </li>
-      <li class="field-body">
-        <b>parent</b>
-            (<code><a href="../../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>)
-        – <p>The module parent.</p>
-      </li>
-      <li class="field-body">
-        <b>docstring_parser</b>
-            (<code><a href="../../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
-        – <p>The docstring parser to use.</p>
-      </li>
-      <li class="field-body">
-        <b>docstring_options</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
-        – <p>The docstring parsing options.</p>
-      </li>
-      <li class="field-body">
-        <b>lines_collection</b>
-            (<code><a href="../../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
-        – <p>A collection of source code lines.</p>
-      </li>
-  </ul>
-
-        <details class="quote">
-          <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span>
-<span class="normal">155</span>
-<span class="normal">156</span>
-<span class="normal">157</span>
-<span class="normal">158</span>
-<span class="normal">159</span>
-<span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
-<span class="normal">167</span>
-<span class="normal">168</span>
-<span class="normal">169</span>
-<span class="normal">170</span>
-<span class="normal">171</span>
-<span class="normal">172</span>
-<span class="normal">173</span>
-<span class="normal">174</span>
-<span class="normal">175</span>
-<span class="normal">176</span>
-<span class="normal">177</span>
-<span class="normal">178</span>
-<span class="normal">179</span>
-<span class="normal">180</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">174</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
@@ -2244,10 +1610,24 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
     <span class="bp">self</span><span class="o">.</span><span class="n">lines_collection</span><span class="p">:</span> <span class="n">LinesCollection</span> <span class="o">=</span> <span class="n">lines_collection</span> <span class="ow">or</span> <span class="n">LinesCollection</span><span class="p">()</span>
 </code></pre></div>
 </td></tr></table>
-        </details>
-    </div>
+            </details>
 
-  </div>
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2271,7 +1651,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
@@ -2346,7 +1726,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>import_paths</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
         – <p>Paths replacing <code>sys.path</code> to import the module.</p>
       </li>
   </ul>
@@ -2354,7 +1734,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="../../dataclasses/#griffe.dataclasses.Module">Module</a></code>
+            <code><a title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a></code>
         – <p>A module instance.</p>
       </li>
   </ul>
@@ -2424,12 +1804,12 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
       <li class="field-body">
         <b>annotation</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="../../expressions/#griffe.expressions.Name">Name</a> | <a href="../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a title="griffe.expressions.Name" href="../../expressions/#griffe.expressions.Name">Name</a> | <a title="griffe.expressions.Expression" href="../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
         – <p>A potentiel annotation.</p>
       </li>
   </ul>
@@ -2543,7 +1923,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
       <li class="field-body">
@@ -2644,7 +2024,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
@@ -2700,7 +2080,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
@@ -2748,7 +2128,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
@@ -2796,7 +2176,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
@@ -2844,7 +2224,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
@@ -2892,7 +2272,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
@@ -2960,7 +2340,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
@@ -3008,7 +2388,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
@@ -3056,7 +2436,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
@@ -3104,7 +2484,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
@@ -3152,7 +2532,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
@@ -3200,7 +2580,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
@@ -3262,7 +2642,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
@@ -3310,7 +2690,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
@@ -3377,37 +2757,37 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
       </li>
       <li class="field-body">
         <b>filepath</b>
-            (<code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | None</code>)
+            (<code><a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | None</code>)
         – <p>The module file path.</p>
       </li>
       <li class="field-body">
         <b>import_paths</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
         – <p>Paths to import the module from.</p>
       </li>
       <li class="field-body">
         <b>extensions</b>
-            (<code><a href="../extensions/#griffe.agents.extensions.Extensions">Extensions</a> | None</code>)
+            (<code><a title="griffe.agents.extensions.Extensions" href="../extensions/#griffe.agents.extensions.Extensions">Extensions</a> | None</code>)
         – <p>The extensions to use when inspecting the module.</p>
       </li>
       <li class="field-body">
         <b>parent</b>
-            (<code><a href="../../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>)
+            (<code><a title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>)
         – <p>The optional parent of this module.</p>
       </li>
       <li class="field-body">
         <b>docstring_parser</b>
-            (<code><a href="../../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+            (<code><a title="griffe.docstrings.parsers.Parser" href="../../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
         – <p>The docstring parser to use. By default, no parsing is done.</p>
       </li>
       <li class="field-body">
         <b>docstring_options</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
         – <p>Additional docstring parsing options.</p>
       </li>
       <li class="field-body">
         <b>lines_collection</b>
-            (<code><a href="../../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
+            (<code><a title="griffe.collections.LinesCollection" href="../../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
         – <p>A collection of source code lines.</p>
       </li>
   </ul>
@@ -3415,7 +2795,7 @@ Inspector            (<a href="../base/#griffe.agents.base.BaseInspector">BaseIn
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="../../dataclasses/#griffe.dataclasses.Module">Module</a></code>
+            <code><a title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a></code>
         – <p>The module, with its members populated.</p>
       </li>
   </ul>

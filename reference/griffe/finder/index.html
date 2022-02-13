@@ -934,13 +934,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#griffe.finder.ModuleFinder.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#griffe.finder.ModuleFinder.find_module" class="md-nav__link">
     find_module()
   </a>
@@ -980,13 +973,6 @@
   
     <nav class="md-nav" aria-label="Package">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#griffe.finder.Package.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#griffe.finder.Package.is_namespace" class="md-nav__link">
@@ -1223,13 +1209,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#griffe.finder.ModuleFinder.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#griffe.finder.ModuleFinder.find_module" class="md-nav__link">
     find_module()
   </a>
@@ -1269,13 +1248,6 @@
   
     <nav class="md-nav" aria-label="Package">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#griffe.finder.Package.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#griffe.finder.Package.is_namespace" class="md-nav__link">
@@ -1332,534 +1304,43 @@
 
 
 <h2 id="griffe.finder.ModuleFinder" class="doc doc-heading">
-        <code>
-ModuleFinder        </code>
-
+<code class="highlight language-python"><span class="n">ModuleFinder</span><span class="p">(</span><span class="n">search_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
 <a href="#griffe.finder.ModuleFinder" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+
 
       <p>The Griffe finder, allowing to find modules on the file system.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/finder.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 41</span>
-<span class="normal"> 42</span>
-<span class="normal"> 43</span>
-<span class="normal"> 44</span>
-<span class="normal"> 45</span>
-<span class="normal"> 46</span>
-<span class="normal"> 47</span>
-<span class="normal"> 48</span>
-<span class="normal"> 49</span>
-<span class="normal"> 50</span>
-<span class="normal"> 51</span>
-<span class="normal"> 52</span>
-<span class="normal"> 53</span>
-<span class="normal"> 54</span>
-<span class="normal"> 55</span>
-<span class="normal"> 56</span>
-<span class="normal"> 57</span>
-<span class="normal"> 58</span>
-<span class="normal"> 59</span>
-<span class="normal"> 60</span>
-<span class="normal"> 61</span>
-<span class="normal"> 62</span>
-<span class="normal"> 63</span>
-<span class="normal"> 64</span>
-<span class="normal"> 65</span>
-<span class="normal"> 66</span>
-<span class="normal"> 67</span>
-<span class="normal"> 68</span>
-<span class="normal"> 69</span>
-<span class="normal"> 70</span>
-<span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span>
-<span class="normal">155</span>
-<span class="normal">156</span>
-<span class="normal">157</span>
-<span class="normal">158</span>
-<span class="normal">159</span>
-<span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
-<span class="normal">167</span>
-<span class="normal">168</span>
-<span class="normal">169</span>
-<span class="normal">170</span>
-<span class="normal">171</span>
-<span class="normal">172</span>
-<span class="normal">173</span>
-<span class="normal">174</span>
-<span class="normal">175</span>
-<span class="normal">176</span>
-<span class="normal">177</span>
-<span class="normal">178</span>
-<span class="normal">179</span>
-<span class="normal">180</span>
-<span class="normal">181</span>
-<span class="normal">182</span>
-<span class="normal">183</span>
-<span class="normal">184</span>
-<span class="normal">185</span>
-<span class="normal">186</span>
-<span class="normal">187</span>
-<span class="normal">188</span>
-<span class="normal">189</span>
-<span class="normal">190</span>
-<span class="normal">191</span>
-<span class="normal">192</span>
-<span class="normal">193</span>
-<span class="normal">194</span>
-<span class="normal">195</span>
-<span class="normal">196</span>
-<span class="normal">197</span>
-<span class="normal">198</span>
-<span class="normal">199</span>
-<span class="normal">200</span>
-<span class="normal">201</span>
-<span class="normal">202</span>
-<span class="normal">203</span>
-<span class="normal">204</span>
-<span class="normal">205</span>
-<span class="normal">206</span>
-<span class="normal">207</span>
-<span class="normal">208</span>
-<span class="normal">209</span>
-<span class="normal">210</span>
-<span class="normal">211</span>
-<span class="normal">212</span>
-<span class="normal">213</span>
-<span class="normal">214</span>
-<span class="normal">215</span>
-<span class="normal">216</span>
-<span class="normal">217</span>
-<span class="normal">218</span>
-<span class="normal">219</span>
-<span class="normal">220</span>
-<span class="normal">221</span>
-<span class="normal">222</span>
-<span class="normal">223</span>
-<span class="normal">224</span>
-<span class="normal">225</span>
-<span class="normal">226</span>
-<span class="normal">227</span>
-<span class="normal">228</span>
-<span class="normal">229</span>
-<span class="normal">230</span>
-<span class="normal">231</span>
-<span class="normal">232</span>
-<span class="normal">233</span>
-<span class="normal">234</span>
-<span class="normal">235</span>
-<span class="normal">236</span>
-<span class="normal">237</span>
-<span class="normal">238</span>
-<span class="normal">239</span>
-<span class="normal">240</span>
-<span class="normal">241</span>
-<span class="normal">242</span>
-<span class="normal">243</span>
-<span class="normal">244</span>
-<span class="normal">245</span>
-<span class="normal">246</span>
-<span class="normal">247</span>
-<span class="normal">248</span>
-<span class="normal">249</span>
-<span class="normal">250</span>
-<span class="normal">251</span>
-<span class="normal">252</span>
-<span class="normal">253</span>
-<span class="normal">254</span>
-<span class="normal">255</span>
-<span class="normal">256</span>
-<span class="normal">257</span>
-<span class="normal">258</span>
-<span class="normal">259</span>
-<span class="normal">260</span>
-<span class="normal">261</span>
-<span class="normal">262</span>
-<span class="normal">263</span>
-<span class="normal">264</span>
-<span class="normal">265</span>
-<span class="normal">266</span>
-<span class="normal">267</span>
-<span class="normal">268</span>
-<span class="normal">269</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ModuleFinder</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;The Griffe finder, allowing to find modules on the file system.&quot;&quot;&quot;</span>
 
-    <span class="n">accepted_py_module_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.py&quot;</span><span class="p">,</span> <span class="s2">&quot;.pyc&quot;</span><span class="p">,</span> <span class="s2">&quot;.pyo&quot;</span><span class="p">,</span> <span class="s2">&quot;.pyd&quot;</span><span class="p">,</span> <span class="s2">&quot;.so&quot;</span><span class="p">]</span>
-    <span class="n">extensions_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">accepted_py_module_extensions</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">search_paths</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the finder.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            search_paths: Optional paths to search into.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_paths_contents</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="c1"># optimization: pre-compute Paths to relieve CPU when joining paths</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">search_paths</span> <span class="o">=</span> <span class="p">[</span><span class="n">path</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">Path</span><span class="p">)</span> <span class="k">else</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">search_paths</span> <span class="ow">or</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">]</span>
-        <span class="k">if</span> <span class="nb">bool</span><span class="p">(</span><span class="n">search_paths</span><span class="p">):</span>
-            <span class="c1"># without custom search paths, sys.path is used, and is already extended from .pth files</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_extend_from_pth_files</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_extend_from_editables_modules</span><span class="p">()</span>
-
-    <span class="k">def</span> <span class="nf">find_spec</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span>
-        <span class="n">module</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">,</span>
-        <span class="n">try_relative_path</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Package</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Find the top module of a module.</span>
-
-<span class="sd">        If a Path is passed, only try to find the module as a file path.</span>
-<span class="sd">        If a string is passed, first try to find the module as a file path,</span>
-<span class="sd">        then look into the search paths.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            module: The module name or path.</span>
-<span class="sd">            try_relative_path: Whether to try finding the module as a relative path,</span>
-<span class="sd">                when the given module is not already a path.</span>
-
-<span class="sd">        Raises:</span>
-<span class="sd">            FileNotFoundError: When a Path was passed and the module could not be found:</span>
-
-<span class="sd">                - the directory has no `__init__.py` file in it</span>
-<span class="sd">                - the path does not exist</span>
-
-<span class="sd">            ModuleNotFoundError: When a string was passed and the module could not be found:</span>
-
-<span class="sd">                - no `module/__init__.py`</span>
-<span class="sd">                - no `module.py`</span>
-<span class="sd">                - no `module.pth`</span>
-<span class="sd">                - no `module` directory (namespace packages)</span>
-<span class="sd">                - or unsupported .pth file</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            The name of the module (or package), the name of its top module, and the path(s) of its top module.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">module_path</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">]</span>
-        <span class="n">top_module_path</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">]</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">Path</span><span class="p">):</span>
-            <span class="n">module_name</span><span class="p">,</span> <span class="n">module_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_module_name_path</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
-            <span class="n">top_module_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_top_module_name</span><span class="p">(</span><span class="n">module_path</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">try_relative_path</span><span class="p">:</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">module_name</span><span class="p">,</span> <span class="n">module_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_module_name_path</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">module</span><span class="p">))</span>
-            <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
-                <span class="n">module_name</span> <span class="o">=</span> <span class="n">module</span>  <span class="c1"># type: ignore[assignment]</span>
-                <span class="n">top_module_name</span> <span class="o">=</span> <span class="n">module</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># type: ignore[union-attr]</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">top_module_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_top_module_name</span><span class="p">(</span><span class="n">module_path</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">module_name</span> <span class="o">=</span> <span class="n">module</span>
-            <span class="n">top_module_name</span> <span class="o">=</span> <span class="n">module</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="n">top_module_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_module</span><span class="p">(</span><span class="n">top_module_name</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">module_name</span><span class="p">,</span> <span class="n">Package</span><span class="p">(</span><span class="n">top_module_name</span><span class="p">,</span> <span class="n">top_module_path</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">find_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">]:</span>  <span class="c1"># noqa: WPS231</span>
-        <span class="sd">&quot;&quot;&quot;Find a module.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            module_name: The module name.</span>
-
-<span class="sd">        Raises:</span>
-<span class="sd">            ModuleNotFoundError: When the module cannot be found.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            The module file path.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">filepaths</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="n">Path</span><span class="p">(</span><span class="n">module_name</span><span class="p">),</span>
-            <span class="c1"># TODO: handle .py[cod] and .so files?</span>
-            <span class="n">Path</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">module_name</span><span class="si">}</span><span class="s2">.py&quot;</span><span class="p">),</span>
-        <span class="p">]</span>
-
-        <span class="n">namespace_dirs</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_paths</span><span class="p">:</span>  <span class="c1"># noqa: WPS440</span>
-            <span class="n">path_contents</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_contents</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">path_contents</span><span class="p">:</span>
-                <span class="k">for</span> <span class="n">choice</span> <span class="ow">in</span> <span class="n">filepaths</span><span class="p">:</span>
-                    <span class="n">abs_path</span> <span class="o">=</span> <span class="n">path</span> <span class="o">/</span> <span class="n">choice</span>
-                    <span class="k">if</span> <span class="n">abs_path</span> <span class="ow">in</span> <span class="n">path_contents</span><span class="p">:</span>
-                        <span class="k">if</span> <span class="n">abs_path</span><span class="o">.</span><span class="n">suffix</span><span class="p">:</span>
-                            <span class="k">return</span> <span class="n">abs_path</span>
-                        <span class="k">else</span><span class="p">:</span>
-                            <span class="n">init_module</span> <span class="o">=</span> <span class="n">abs_path</span> <span class="o">/</span> <span class="s2">&quot;__init__.py&quot;</span>
-                            <span class="k">if</span> <span class="n">init_module</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
-                                <span class="k">return</span> <span class="n">init_module</span>
-                            <span class="k">else</span><span class="p">:</span>
-                                <span class="n">namespace_dirs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">abs_path</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="n">namespace_dirs</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">namespace_dirs</span>
-
-        <span class="k">raise</span> <span class="ne">ModuleNotFoundError</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">iter_submodules</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">NamePartsAndPathType</span><span class="p">]:</span>  <span class="c1"># noqa: WPS231,WPS234</span>
-        <span class="sd">&quot;&quot;&quot;Iterate on a module&#39;s submodules, if any.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            path: The module path.</span>
-
-<span class="sd">        Yields:</span>
-<span class="sd">            name_parts (tuple[str, ...]): The parts of a submodule name.</span>
-<span class="sd">            filepath (Path): A submodule filepath.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">path_elem</span> <span class="ow">in</span> <span class="n">path</span><span class="p">:</span>
-                <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">iter_submodules</span><span class="p">(</span><span class="n">path_elem</span><span class="p">)</span>
-            <span class="k">return</span>
-
-        <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">stem</span> <span class="o">==</span> <span class="s2">&quot;__init__&quot;</span><span class="p">:</span>
-            <span class="n">path</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">parent</span>
-        <span class="c1"># optimization: just check if the file name ends with .py[cod]/.so</span>
-        <span class="c1"># (to distinguish it from a directory),</span>
-        <span class="c1"># not if it&#39;s an actual file</span>
-        <span class="k">elif</span> <span class="n">path</span><span class="o">.</span><span class="n">suffix</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">extensions_set</span><span class="p">:</span>
-            <span class="k">return</span>
-
-        <span class="k">for</span> <span class="n">subpath</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filter_py_modules</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-            <span class="n">rel_subpath</span> <span class="o">=</span> <span class="n">subpath</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-            <span class="n">py_file</span> <span class="o">=</span> <span class="n">rel_subpath</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s2">&quot;.py&quot;</span>
-            <span class="n">stem</span> <span class="o">=</span> <span class="n">rel_subpath</span><span class="o">.</span><span class="n">stem</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="n">py_file</span><span class="p">:</span>
-                <span class="c1"># .py[cod] and .so files look like `name.cpython-38-x86_64-linux-gnu.ext`</span>
-                <span class="n">stem</span> <span class="o">=</span> <span class="n">stem</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-            <span class="k">if</span> <span class="n">stem</span> <span class="o">==</span> <span class="s2">&quot;__init__&quot;</span><span class="p">:</span>
-                <span class="c1"># optimization: since it&#39;s a relative path,</span>
-                <span class="c1"># if it has only one part and is named __init__,</span>
-                <span class="c1"># it means it&#39;s the starting path</span>
-                <span class="c1"># (no need to compare it against starting path)</span>
-                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">rel_subpath</span><span class="o">.</span><span class="n">parts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                    <span class="k">continue</span>
-                <span class="k">yield</span> <span class="n">rel_subpath</span><span class="o">.</span><span class="n">parts</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">subpath</span>
-            <span class="k">elif</span> <span class="n">py_file</span><span class="p">:</span>
-                <span class="k">yield</span> <span class="n">rel_subpath</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parts</span><span class="p">,</span> <span class="n">subpath</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="k">yield</span> <span class="n">rel_subpath</span><span class="o">.</span><span class="n">with_name</span><span class="p">(</span><span class="n">stem</span><span class="p">)</span><span class="o">.</span><span class="n">parts</span><span class="p">,</span> <span class="n">subpath</span>
-
-    <span class="k">def</span> <span class="nf">submodules</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">Module</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">NamePartsAndPathType</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the list of a module&#39;s submodules.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            module: The parent module.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            A list of tuples containing the parts of the submodule name and its path.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">iter_submodules</span><span class="p">(</span><span class="n">module</span><span class="o">.</span><span class="n">filepath</span><span class="p">),</span> <span class="n">key</span><span class="o">=</span><span class="n">_module_depth</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_module_name_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">]:</span>  <span class="c1"># noqa: WPS231</span>
-        <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
-            <span class="k">for</span> <span class="n">ext</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">accepted_py_module_extensions</span><span class="p">:</span>
-                <span class="n">module_path</span> <span class="o">=</span> <span class="n">path</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;__init__</span><span class="si">{</span><span class="n">ext</span><span class="si">}</span><span class="s2">&quot;</span>
-                <span class="k">if</span> <span class="n">module_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
-                    <span class="k">return</span> <span class="n">path</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">module_path</span>
-            <span class="k">return</span> <span class="n">path</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">path</span>
-        <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
-            <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">stem</span> <span class="o">==</span> <span class="s2">&quot;__init__&quot;</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">is_absolute</span><span class="p">():</span>
-                    <span class="k">return</span> <span class="n">path</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">path</span>
-                <span class="k">return</span> <span class="n">path</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">path</span>
-            <span class="k">return</span> <span class="n">path</span><span class="o">.</span><span class="n">stem</span><span class="p">,</span> <span class="n">path</span>
-        <span class="k">raise</span> <span class="ne">FileNotFoundError</span>
-
-    <span class="k">def</span> <span class="nf">_contents</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">]:</span>
-        <span class="k">if</span> <span class="n">path</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_paths_contents</span><span class="p">:</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_paths_contents</span><span class="p">[</span><span class="n">path</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">iterdir</span><span class="p">())</span>
-            <span class="k">except</span> <span class="p">(</span><span class="ne">FileNotFoundError</span><span class="p">,</span> <span class="ne">NotADirectoryError</span><span class="p">):</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_paths_contents</span><span class="p">[</span><span class="n">path</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_paths_contents</span><span class="p">[</span><span class="n">path</span><span class="p">]</span>
-
-    <span class="k">def</span> <span class="nf">_append_search_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">path</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_paths</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">search_paths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_extend_from_pth_files</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_paths</span><span class="p">:</span>
-            <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_contents</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-                <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s2">&quot;.pth&quot;</span><span class="p">:</span>
-                    <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="n">UnhandledPthFileError</span><span class="p">):</span>
-                        <span class="bp">self</span><span class="o">.</span><span class="n">_append_search_path</span><span class="p">(</span><span class="n">_handle_pth_file</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
-
-    <span class="k">def</span> <span class="nf">_extend_from_editables_modules</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_paths</span><span class="p">:</span>  <span class="c1"># noqa: WPS440</span>
-            <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_contents</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-                <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">stem</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;__editables_&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">item</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s2">&quot;.py&quot;</span><span class="p">:</span>
-                    <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="n">UnhandledEditablesModuleError</span><span class="p">):</span>
-                        <span class="bp">self</span><span class="o">.</span><span class="n">_append_search_path</span><span class="p">(</span><span class="n">_handle_editables_module</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
-
-    <span class="k">def</span> <span class="nf">_filter_py_modules</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Path</span><span class="p">]:</span>
-        <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">topdown</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-            <span class="c1"># optimization: modify dirs in-place to exclude __pycache__ directories</span>
-            <span class="n">dirs</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">dir</span> <span class="k">for</span> <span class="nb">dir</span> <span class="ow">in</span> <span class="n">dirs</span> <span class="k">if</span> <span class="nb">dir</span> <span class="o">!=</span> <span class="s2">&quot;__pycache__&quot;</span><span class="p">]</span>  <span class="c1"># noqa: WPS362</span>
-            <span class="k">for</span> <span class="n">relfile</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">relfile</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">extensions_set</span><span class="p">:</span>
-                    <span class="k">yield</span> <span class="n">Path</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">relfile</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_top_module_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="c1"># first find if a parent is in search paths</span>
-        <span class="n">parent_path</span> <span class="o">=</span> <span class="n">path</span> <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">is_dir</span><span class="p">()</span> <span class="k">else</span> <span class="n">path</span><span class="o">.</span><span class="n">parent</span>
-        <span class="k">for</span> <span class="n">search_path</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_paths</span><span class="p">:</span>
-            <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
-                <span class="c1"># TODO: it does not work when parent_path is relative and search_path absolute</span>
-                <span class="n">rel_path</span> <span class="o">=</span> <span class="n">parent_path</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">search_path</span><span class="p">)</span>
-                <span class="n">top_path</span> <span class="o">=</span> <span class="n">search_path</span> <span class="o">/</span> <span class="n">rel_path</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-                <span class="k">return</span> <span class="n">top_path</span><span class="o">.</span><span class="n">name</span>
-        <span class="c1"># if not, get the highest directory with an __init__ module,</span>
-        <span class="c1"># add its parent to search paths and return it</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">parent_path</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">&quot;__init__.py&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
-            <span class="n">parent_path</span> <span class="o">=</span> <span class="n">parent_path</span><span class="o">.</span><span class="n">parent</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">search_paths</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parent_path</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">parent_path</span><span class="o">.</span><span class="n">name</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h3 id="griffe.finder.ModuleFinder.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">search_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
-
-<a href="#griffe.finder.ModuleFinder.__init__" class="headerlink" title="Permanent link">¤</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Initialize the finder.</p>
 
   <p>Parameters:</p>
   <ul>
       <li class="field-body">
         <b>search_paths</b>
-            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
+            (<code><a title="typing.Sequence" href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
         – <p>Optional paths to search into.</p>
       </li>
   </ul>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/finder.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">47</span>
+            <details class="quote">
+              <summary>Source code in <code>griffe/finder.py</code></summary>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
 <span class="normal">48</span>
 <span class="normal">49</span>
 <span class="normal">50</span>
 <span class="normal">51</span>
 <span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">search_paths</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">53</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">search_paths</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Initialize the finder.</span>
 
 <span class="sd">    Parameters:</span>
@@ -1874,10 +1355,20 @@ ModuleFinder        </code>
     <span class="bp">self</span><span class="o">.</span><span class="n">_extend_from_editables_modules</span><span class="p">()</span>
 </code></pre></div>
 </td></tr></table>
-        </details>
-    </div>
+            </details>
 
-  </div>
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1924,7 +1415,7 @@ ModuleFinder        </code>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | <a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>]</code>
+            <code><a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | <a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>]</code>
         – <p>The module file path.</p>
       </li>
   </ul>
@@ -2037,7 +1528,7 @@ then look into the search paths.</p>
   <ul>
       <li class="field-body">
         <b>module</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
         – <p>The module name or path.</p>
       </li>
       <li class="field-body">
@@ -2076,7 +1567,7 @@ when the given module is not already a path.</p>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="#griffe.finder.Package">Package</a>]</code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="griffe.finder.Package" href="#griffe.finder.Package">Package</a>]</code>
         – <p>The name of the module (or package), the name of its top module, and the path(s) of its top module.</p>
       </li>
   </ul>
@@ -2212,7 +1703,7 @@ when the given module is not already a path.</p>
   <ul>
       <li class="field-body">
         <b>path</b>
-            (<code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | <a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>]</code>)
+            (<code><a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | <a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>]</code>)
         – <p>The module path.</p>
       </li>
   </ul>
@@ -2224,7 +1715,7 @@ when the given module is not already a path.</p>
 )        – <p>The parts of a submodule name.</p>
       </li>
       <li class="field-body">
-<b>filepath</b>(            <code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>
+<b>filepath</b>(            <code><a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>
 )        – <p>A submodule filepath.</p>
       </li>
   </ul>
@@ -2342,7 +1833,7 @@ when the given module is not already a path.</p>
   <ul>
       <li class="field-body">
         <b>module</b>
-            (<code><a href="../dataclasses/#griffe.dataclasses.Module">Module</a></code>)
+            (<code><a title="griffe.dataclasses.Module" href="../dataclasses/#griffe.dataclasses.Module">Module</a></code>)
         – <p>The parent module.</p>
       </li>
   </ul>
@@ -2350,7 +1841,7 @@ when the given module is not already a path.</p>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[NamePartsAndPathType]</code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<span title="griffe.finder.NamePartsAndPathType">NamePartsAndPathType</span>]</code>
         – <p>A list of tuples containing the parts of the submodule name and its path.</p>
       </li>
   </ul>
@@ -2400,20 +1891,36 @@ when the given module is not already a path.</p>
 
 
 <h2 id="griffe.finder.Package" class="doc doc-heading">
-        <code>
-Package        </code>
-
+<code class="highlight language-python"><span class="n">Package</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span></code>
 
 
 <a href="#griffe.finder.Package" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+
 
       <p>This class is a simple placeholder used during the process of finding modules.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/finder.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">18</span>
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>name</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The package name.</p>
+      </li>
+      <li class="field-body">
+        <b>path</b>
+            (<code><a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | <a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>]</code>)
+        – <p>The package path(s).</p>
+      </li>
+  </ul>
+
+            <details class="quote">
+              <summary>Source code in <code>griffe/finder.py</code></summary>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
 <span class="normal">21</span>
@@ -2421,42 +1928,18 @@ Package        </code>
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Package</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;This class is a simple placeholder used during the process of finding modules.&quot;&quot;&quot;</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Initialize the package.</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the package.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            name: The package name.</span>
-<span class="sd">            path: The package path(s).</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">]</span> <span class="o">=</span> <span class="n">path</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">is_namespace</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Tell if this package is a namespace one.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            True or false.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
+<span class="sd">    Parameters:</span>
+<span class="sd">        name: The package name.</span>
+<span class="sd">        path: The package path(s).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">]</span> <span class="o">=</span> <span class="n">path</span>
 </code></pre></div>
 </td></tr></table>
-        </details>
+            </details>
 
 
 
@@ -2468,63 +1951,6 @@ Package        </code>
 
 
 
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h3 id="griffe.finder.Package.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span></code>
-
-
-<a href="#griffe.finder.Package.__init__" class="headerlink" title="Permanent link">¤</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Initialize the package.</p>
-
-  <p>Parameters:</p>
-  <ul>
-      <li class="field-body">
-        <b>name</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-        – <p>The package name.</p>
-      </li>
-      <li class="field-body">
-        <b>path</b>
-            (<code><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | <a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>]</code>)
-        – <p>The package path(s).</p>
-      </li>
-  </ul>
-
-        <details class="quote">
-          <summary>Source code in <code>griffe/finder.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Initialize the package.</span>
-
-<span class="sd">    Parameters:</span>
-<span class="sd">        name: The package name.</span>
-<span class="sd">        path: The package path(s).</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">]</span> <span class="o">=</span> <span class="n">path</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
 
 
 

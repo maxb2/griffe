@@ -920,13 +920,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#griffe.expressions.Expression.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#griffe.expressions.Expression.full" class="md-nav__link">
     full()
   </a>
@@ -959,13 +952,6 @@
   
     <nav class="md-nav" aria-label="Name">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#griffe.expressions.Name.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#griffe.expressions.Name.as_dict" class="md-nav__link">
@@ -1230,13 +1216,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#griffe.expressions.Expression.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#griffe.expressions.Expression.full" class="md-nav__link">
     full()
   </a>
@@ -1269,13 +1248,6 @@
   
     <nav class="md-nav" aria-label="Name">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#griffe.expressions.Name.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#griffe.expressions.Name.as_dict" class="md-nav__link">
@@ -1344,15 +1316,16 @@
 
 
 <h2 id="griffe.expressions.Expression" class="doc doc-heading">
-        <code>
-Expression            (<a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>)
-        </code>
-
+<code class="highlight language-python"><span class="n">Expression</span><span class="p">(</span><span class="o">*</span><span class="n">values</span><span class="p">)</span></code>
 
 
 <a href="#griffe.expressions.Expression" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a></code></p>
+
 
       <p>This class represents a Python expression.</p>
 <p>For example, it can represent complex annotations such as:</p>
@@ -1363,182 +1336,27 @@ Expression            (<a href="https://docs.python.org/3/library/stdtypes.html#
 <p>Expressions are simple lists containing strings, names or expressions.
 Each name in the expression can be resolved to its full name within its scope.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/expressions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Expression</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>  <span class="c1"># noqa: WPS600</span>
-    <span class="sd">&quot;&quot;&quot;This class represents a Python expression.</span>
 
-<span class="sd">    For example, it can represent complex annotations such as:</span>
-
-<span class="sd">    - `Optional[Dict[str, Tuple[int, bool]]]`</span>
-<span class="sd">    - `str | Callable | list[int]`</span>
-
-<span class="sd">    Expressions are simple lists containing strings, names or expressions.</span>
-<span class="sd">    Each name in the expression can be resolved to its full name within its scope.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">values</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="n">Name</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the expression.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            *values: The initial values of the expression.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
-        <span class="c1"># for value in values:</span>
-        <span class="c1">#     if isinstance(value, Expression):</span>
-        <span class="c1">#         self.extend(value)</span>
-        <span class="c1">#     else:</span>
-        <span class="c1">#         self.append(value)</span>
-
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">element</span><span class="p">)</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">)</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">full</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Return self as a string.</span>
-
-<span class="sd">        This property is only useful to the AST utils.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            Self as a string.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">is_tuple</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Tell whether this expression represents a tuple.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            True or False.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;[&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;tuple&quot;</span>
-
-    <span class="k">def</span> <span class="nf">tuple_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nth</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Return the n-th item of this tuple expression.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            nth: The item number.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            A string or name.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="c1">#  0  1     2     3</span>
-        <span class="c1"># N|E [     E     ]</span>
-        <span class="c1">#       N , N , N</span>
-        <span class="c1">#       0 1 2 3 4</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span> <span class="o">*</span> <span class="n">nth</span><span class="p">]</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h3 id="griffe.expressions.Expression.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">values</span><span class="p">)</span></code>
-
-
-<a href="#griffe.expressions.Expression.__init__" class="headerlink" title="Permanent link">¤</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Initialize the expression.</p>
 
   <p>Parameters:</p>
   <ul>
       <li class="field-body">
         <b>*values</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="#griffe.expressions.Expression">Expression</a> | <a href="#griffe.expressions.Name">Name</a></code>)
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a title="griffe.expressions.Expression" href="#griffe.expressions.Expression">Expression</a> | <a title="griffe.expressions.Name" href="#griffe.expressions.Name">Name</a></code>)
         – <p>The initial values of the expression.</p>
       </li>
   </ul>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/expressions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">values</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="n">Name</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+            <details class="quote">
+              <summary>Source code in <code>griffe/expressions.py</code></summary>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">values</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="n">Name</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Initialize the expression.</span>
 
 <span class="sd">    Parameters:</span>
@@ -1548,10 +1366,16 @@ Each name in the expression can be resolved to its full name within its scope.</
     <span class="bp">self</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
-        </details>
-    </div>
+            </details>
 
-  </div>
+
+
+  <div class="doc doc-children">
+
+
+
+
+
 
 
 
@@ -1686,7 +1510,7 @@ Each name in the expression can be resolved to its full name within its scope.</
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="#griffe.expressions.Name">Name</a></code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a title="griffe.expressions.Name" href="#griffe.expressions.Name">Name</a></code>
         – <p>A string or name.</p>
       </li>
   </ul>
@@ -1744,14 +1568,14 @@ Each name in the expression can be resolved to its full name within its scope.</
 
 
 <h2 id="griffe.expressions.Name" class="doc doc-heading">
-        <code>
-Name        </code>
-
+<code class="highlight language-python"><span class="n">Name</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">full</span><span class="p">)</span></code>
 
 
 <a href="#griffe.expressions.Name" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+
 
       <p>This class represents a Python object identified by a name in a given scope.</p>
 
@@ -1764,9 +1588,25 @@ Name        </code>
       </li>
   </ul>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/expressions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span>
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>source</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+        – <p>The name as written in the source code.</p>
+      </li>
+      <li class="field-body">
+        <b>full</b>
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a title="typing.Callable" href="https://docs.python.org/3/library/typing.html#typing.Callable">Callable</a></code>)
+        – <p>The full, resolved name in the given scope, or a callable to resolve it later.</p>
+      </li>
+  </ul>
+
+            <details class="quote">
+              <summary>Source code in <code>griffe/expressions.py</code></summary>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
@@ -1779,194 +1619,7 @@ Name        </code>
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Name</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;This class represents a Python object identified by a name in a given scope.</span>
-
-<span class="sd">    Attributes:</span>
-<span class="sd">        source: The name as written in the source code.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">full</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the name.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            source: The name as written in the source code.</span>
-<span class="sd">            full: The full, resolved name in the given scope, or a callable to resolve it later.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">source</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">full</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_full</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">full</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_resolver</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="kc">None</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_full</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_resolver</span> <span class="o">=</span> <span class="n">full</span>
-
-    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">Name</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>  <span class="c1"># type: ignore[override]</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">source</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">full</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">full</span>  <span class="c1"># noqa: WPS437</span>
-
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Name(source=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="si">!r}</span><span class="s2">, full=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">full</span><span class="si">!r}</span><span class="s2">)&quot;</span>
-
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">full</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Return the full, resolved name.</span>
-
-<span class="sd">        If it was given when creating the name, return that.</span>
-<span class="sd">        If a callable was given, call it and return its result.</span>
-<span class="sd">        It the name cannot be resolved, return the source.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            The resolved name or the source.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_full</span><span class="p">:</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_full</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_resolver</span><span class="p">()</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span>
-            <span class="k">except</span> <span class="n">NameResolutionError</span><span class="p">:</span>
-                <span class="c1"># probably a built-in</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_full</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_full</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">brief</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Return the brief source name.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            The last part of the source name.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-
-    <span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return this name&#39;s data as a dictionary.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            **kwargs: Additional serialization options.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            A dictionary.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="s2">&quot;full&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">full</span><span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h3 id="griffe.expressions.Name.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">full</span><span class="p">)</span></code>
-
-
-<a href="#griffe.expressions.Name.__init__" class="headerlink" title="Permanent link">¤</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Initialize the name.</p>
-
-  <p>Parameters:</p>
-  <ul>
-      <li class="field-body">
-        <b>source</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-        – <p>The name as written in the source code.</p>
-      </li>
-      <li class="field-body">
-        <b>full</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/typing.html#typing.Callable">Callable</a></code>)
-        – <p>The full, resolved name in the given scope, or a callable to resolve it later.</p>
-      </li>
-  </ul>
-
-        <details class="quote">
-          <summary>Source code in <code>griffe/expressions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">full</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">full</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Initialize the name.</span>
 
 <span class="sd">    Parameters:</span>
@@ -1982,10 +1635,20 @@ Name        </code>
         <span class="bp">self</span><span class="o">.</span><span class="n">_resolver</span> <span class="o">=</span> <span class="n">full</span>
 </code></pre></div>
 </td></tr></table>
-        </details>
-    </div>
+            </details>
 
-  </div>
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2010,7 +1673,7 @@ Name        </code>
   <ul>
       <li class="field-body">
         <b>**kwargs</b>
-            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+            (<code><a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
         – <p>Additional serialization options.</p>
       </li>
   </ul>
@@ -2018,7 +1681,7 @@ Name        </code>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</code>
         – <p>A dictionary.</p>
       </li>
   </ul>

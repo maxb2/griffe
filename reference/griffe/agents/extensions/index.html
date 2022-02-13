@@ -1115,13 +1115,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#griffe.agents.extensions.base.Extensions.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#griffe.agents.extensions.base.Extensions.add" class="md-nav__link">
     add()
   </a>
@@ -1212,13 +1205,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#griffe.agents.extensions.base.InspectorExtension.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#griffe.agents.extensions.base.InspectorExtension.attach" class="md-nav__link">
     attach()
   </a>
@@ -1244,13 +1230,6 @@
   
     <nav class="md-nav" aria-label="VisitorExtension">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#griffe.agents.extensions.base.VisitorExtension.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#griffe.agents.extensions.base.VisitorExtension.attach" class="md-nav__link">
@@ -1335,269 +1314,50 @@
 
 
 <h2 id="griffe.agents.extensions.Extensions" class="doc doc-heading">
-        <code>
-Extensions        </code>
-
+<code class="highlight language-python"><span class="n">Extensions</span><span class="p">(</span><span class="o">*</span><span class="n">extensions</span><span class="p">)</span></code>
 
 
 <a href="#griffe.agents.extensions.Extensions" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+
 
       <p>This class helps iterating on extensions that should run at different times.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/agents/extensions/base.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  3</span>
-<span class="normal">  4</span>
-<span class="normal">  5</span>
-<span class="normal">  6</span>
-<span class="normal">  7</span>
-<span class="normal">  8</span>
-<span class="normal">  9</span>
-<span class="normal"> 10</span>
-<span class="normal"> 11</span>
-<span class="normal"> 12</span>
-<span class="normal"> 13</span>
-<span class="normal"> 14</span>
-<span class="normal"> 15</span>
-<span class="normal"> 16</span>
-<span class="normal"> 17</span>
-<span class="normal"> 18</span>
-<span class="normal"> 19</span>
-<span class="normal"> 20</span>
-<span class="normal"> 21</span>
-<span class="normal"> 22</span>
-<span class="normal"> 23</span>
-<span class="normal"> 24</span>
-<span class="normal"> 25</span>
-<span class="normal"> 26</span>
-<span class="normal"> 27</span>
-<span class="normal"> 28</span>
-<span class="normal"> 29</span>
-<span class="normal"> 30</span>
-<span class="normal"> 31</span>
-<span class="normal"> 32</span>
-<span class="normal"> 33</span>
-<span class="normal"> 34</span>
-<span class="normal"> 35</span>
-<span class="normal"> 36</span>
-<span class="normal"> 37</span>
-<span class="normal"> 38</span>
-<span class="normal"> 39</span>
-<span class="normal"> 40</span>
-<span class="normal"> 41</span>
-<span class="normal"> 42</span>
-<span class="normal"> 43</span>
-<span class="normal"> 44</span>
-<span class="normal"> 45</span>
-<span class="normal"> 46</span>
-<span class="normal"> 47</span>
-<span class="normal"> 48</span>
-<span class="normal"> 49</span>
-<span class="normal"> 50</span>
-<span class="normal"> 51</span>
-<span class="normal"> 52</span>
-<span class="normal"> 53</span>
-<span class="normal"> 54</span>
-<span class="normal"> 55</span>
-<span class="normal"> 56</span>
-<span class="normal"> 57</span>
-<span class="normal"> 58</span>
-<span class="normal"> 59</span>
-<span class="normal"> 60</span>
-<span class="normal"> 61</span>
-<span class="normal"> 62</span>
-<span class="normal"> 63</span>
-<span class="normal"> 64</span>
-<span class="normal"> 65</span>
-<span class="normal"> 66</span>
-<span class="normal"> 67</span>
-<span class="normal"> 68</span>
-<span class="normal"> 69</span>
-<span class="normal"> 70</span>
-<span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Extensions</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;This class helps iterating on extensions that should run at different times.&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">extensions</span><span class="p">:</span> <span class="n">Extension</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the extensions container.</span>
 
-<span class="sd">        Parameters:</span>
-<span class="sd">            *extensions: The extensions to add.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_visitors</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">When</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="n">VisitorExtension</span><span class="p">]]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_inspectors</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">When</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="n">InspectorExtension</span><span class="p">]]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="o">*</span><span class="n">extensions</span><span class="p">)</span>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*extensions</b>
+            (<code><span title="griffe.agents.extensions.base.Extension">Extension</span></code>)
+        – <p>The extensions to add.</p>
+      </li>
+  </ul>
 
-    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">extensions</span><span class="p">:</span> <span class="n">Extension</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Add extensions to this container.</span>
+            <details class="quote">
+              <summary>Source code in <code>griffe/agents/extensions/base.py</code></summary>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">extensions</span><span class="p">:</span> <span class="n">Extension</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Initialize the extensions container.</span>
 
-<span class="sd">        Parameters:</span>
-<span class="sd">            *extensions: The extensions to add.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">for</span> <span class="n">extension</span> <span class="ow">in</span> <span class="n">extensions</span><span class="p">:</span>
-            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">extension</span><span class="p">,</span> <span class="n">VisitorExtension</span><span class="p">):</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_visitors</span><span class="p">[</span><span class="n">extension</span><span class="o">.</span><span class="n">when</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">extension</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_inspectors</span><span class="p">[</span><span class="n">extension</span><span class="o">.</span><span class="n">when</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">extension</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">attach_visitor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_visitor</span><span class="p">:</span> <span class="n">Visitor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Extensions</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Attach a parent visitor to the visitor extensions.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            parent_visitor: The parent visitor, leading the visit.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            Self, conveniently.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">for</span> <span class="n">when</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visitors</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-            <span class="k">for</span> <span class="n">visitor</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visitors</span><span class="p">[</span><span class="n">when</span><span class="p">]:</span>
-                <span class="n">visitor</span><span class="o">.</span><span class="n">attach</span><span class="p">(</span><span class="n">parent_visitor</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span>
-
-    <span class="k">def</span> <span class="nf">attach_inspector</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_inspector</span><span class="p">:</span> <span class="n">Inspector</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Extensions</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Attach a parent inspector to the inspector extensions.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            parent_inspector: The parent inspector, leading the inspection.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            Self, conveniently.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">for</span> <span class="n">when</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspectors</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-            <span class="k">for</span> <span class="n">inspector</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspectors</span><span class="p">[</span><span class="n">when</span><span class="p">]:</span>
-                <span class="n">inspector</span><span class="o">.</span><span class="n">attach</span><span class="p">(</span><span class="n">parent_inspector</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">before_visit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">VisitorExtension</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the visitors that run before the visit.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            Visitors.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visitors</span><span class="p">[</span><span class="n">When</span><span class="o">.</span><span class="n">before_all</span><span class="p">]</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">before_children_visit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">VisitorExtension</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the visitors that run before the children visit.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            Visitors.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visitors</span><span class="p">[</span><span class="n">When</span><span class="o">.</span><span class="n">before_children</span><span class="p">]</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">after_children_visit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">VisitorExtension</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the visitors that run after the children visit.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            Visitors.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visitors</span><span class="p">[</span><span class="n">When</span><span class="o">.</span><span class="n">after_children</span><span class="p">]</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">after_visit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">VisitorExtension</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the visitors that run after the visit.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            Visitors.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visitors</span><span class="p">[</span><span class="n">When</span><span class="o">.</span><span class="n">after_all</span><span class="p">]</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">before_inspection</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">InspectorExtension</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the inspectors that run before the inspection.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            Inspectors.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspectors</span><span class="p">[</span><span class="n">When</span><span class="o">.</span><span class="n">before_all</span><span class="p">]</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">before_children_inspection</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">InspectorExtension</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the inspectors that run before the children inspection.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            Inspectors.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspectors</span><span class="p">[</span><span class="n">When</span><span class="o">.</span><span class="n">before_children</span><span class="p">]</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">after_children_inspection</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">InspectorExtension</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the inspectors that run after the children inspection.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            Inspectors.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspectors</span><span class="p">[</span><span class="n">When</span><span class="o">.</span><span class="n">after_children</span><span class="p">]</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">after_inspection</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">InspectorExtension</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the inspectors that run after the inspection.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            Inspectors.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspectors</span><span class="p">[</span><span class="n">When</span><span class="o">.</span><span class="n">after_all</span><span class="p">]</span>
+<span class="sd">    Parameters:</span>
+<span class="sd">        *extensions: The extensions to add.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_visitors</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">When</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="n">VisitorExtension</span><span class="p">]]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_inspectors</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">When</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="n">InspectorExtension</span><span class="p">]]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="o">*</span><span class="n">extensions</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
-        </details>
+            </details>
 
 
 
@@ -1609,58 +1369,6 @@ Extensions        </code>
 
 
 
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h3 id="griffe.agents.extensions.base.Extensions.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">extensions</span><span class="p">)</span></code>
-
-
-<a href="#griffe.agents.extensions.base.Extensions.__init__" class="headerlink" title="Permanent link">¤</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Initialize the extensions container.</p>
-
-  <p>Parameters:</p>
-  <ul>
-      <li class="field-body">
-        <b>*extensions</b>
-            (<code>Extension</code>)
-        – <p>The extensions to add.</p>
-      </li>
-  </ul>
-
-        <details class="quote">
-          <summary>Source code in <code>griffe/agents/extensions/base.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">extensions</span><span class="p">:</span> <span class="n">Extension</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Initialize the extensions container.</span>
-
-<span class="sd">    Parameters:</span>
-<span class="sd">        *extensions: The extensions to add.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_visitors</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">When</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="n">VisitorExtension</span><span class="p">]]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_inspectors</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">When</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="n">InspectorExtension</span><span class="p">]]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="o">*</span><span class="n">extensions</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
 
 
 
@@ -1683,7 +1391,7 @@ Extensions        </code>
   <ul>
       <li class="field-body">
         <b>*extensions</b>
-            (<code>Extension</code>)
+            (<code><span title="griffe.agents.extensions.base.Extension">Extension</span></code>)
         – <p>The extensions to add.</p>
       </li>
   </ul>
@@ -1738,7 +1446,7 @@ Extensions        </code>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="#griffe.agents.extensions.InspectorExtension">InspectorExtension</a>]</code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="griffe.agents.extensions.base.InspectorExtension" href="#griffe.agents.extensions.InspectorExtension">InspectorExtension</a>]</code>
         – <p>Inspectors.</p>
       </li>
   </ul>
@@ -1787,7 +1495,7 @@ Extensions        </code>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="#griffe.agents.extensions.VisitorExtension">VisitorExtension</a>]</code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="griffe.agents.extensions.base.VisitorExtension" href="#griffe.agents.extensions.VisitorExtension">VisitorExtension</a>]</code>
         – <p>Visitors.</p>
       </li>
   </ul>
@@ -1836,7 +1544,7 @@ Extensions        </code>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="../../../../#griffe.agents.extensions.InspectorExtension">InspectorExtension</a>]</code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="griffe.agents.extensions.base.InspectorExtension" href="../../../../#griffe.agents.extensions.InspectorExtension">InspectorExtension</a>]</code>
         – <p>Inspectors.</p>
       </li>
   </ul>
@@ -1885,7 +1593,7 @@ Extensions        </code>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="../../../../#griffe.agents.extensions.VisitorExtension">VisitorExtension</a>]</code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="griffe.agents.extensions.base.VisitorExtension" href="../../../../#griffe.agents.extensions.VisitorExtension">VisitorExtension</a>]</code>
         – <p>Visitors.</p>
       </li>
   </ul>
@@ -1935,7 +1643,7 @@ Extensions        </code>
   <ul>
       <li class="field-body">
         <b>parent_inspector</b>
-            (<code><a href="../inspector/#griffe.agents.inspector.Inspector">Inspector</a></code>)
+            (<code><a title="griffe.agents.inspector.Inspector" href="../inspector/#griffe.agents.inspector.Inspector">Inspector</a></code>)
         – <p>The parent inspector, leading the inspection.</p>
       </li>
   </ul>
@@ -1943,7 +1651,7 @@ Extensions        </code>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="#griffe.agents.extensions.Extensions">Extensions</a></code>
+            <code><a title="griffe.agents.extensions.base.Extensions" href="#griffe.agents.extensions.Extensions">Extensions</a></code>
         – <p>Self, conveniently.</p>
       </li>
   </ul>
@@ -2003,7 +1711,7 @@ Extensions        </code>
   <ul>
       <li class="field-body">
         <b>parent_visitor</b>
-            (<code><a href="../visitor/#griffe.agents.visitor.Visitor">Visitor</a></code>)
+            (<code><a title="griffe.agents.visitor.Visitor" href="../visitor/#griffe.agents.visitor.Visitor">Visitor</a></code>)
         – <p>The parent visitor, leading the visit.</p>
       </li>
   </ul>
@@ -2011,7 +1719,7 @@ Extensions        </code>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="../../../../#griffe.agents.extensions.Extensions">Extensions</a></code>
+            <code><a title="griffe.agents.extensions.base.Extensions" href="../../../../#griffe.agents.extensions.Extensions">Extensions</a></code>
         – <p>Self, conveniently.</p>
       </li>
   </ul>
@@ -2070,7 +1778,7 @@ Extensions        </code>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="../../../../#griffe.agents.extensions.InspectorExtension">InspectorExtension</a>]</code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="griffe.agents.extensions.base.InspectorExtension" href="../../../../#griffe.agents.extensions.InspectorExtension">InspectorExtension</a>]</code>
         – <p>Inspectors.</p>
       </li>
   </ul>
@@ -2119,7 +1827,7 @@ Extensions        </code>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="../../../../#griffe.agents.extensions.VisitorExtension">VisitorExtension</a>]</code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="griffe.agents.extensions.base.VisitorExtension" href="../../../../#griffe.agents.extensions.VisitorExtension">VisitorExtension</a>]</code>
         – <p>Visitors.</p>
       </li>
   </ul>
@@ -2168,7 +1876,7 @@ Extensions        </code>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="../../../../#griffe.agents.extensions.InspectorExtension">InspectorExtension</a>]</code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="griffe.agents.extensions.base.InspectorExtension" href="../../../../#griffe.agents.extensions.InspectorExtension">InspectorExtension</a>]</code>
         – <p>Inspectors.</p>
       </li>
   </ul>
@@ -2217,7 +1925,7 @@ Extensions        </code>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="../../../../#griffe.agents.extensions.VisitorExtension">VisitorExtension</a>]</code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="griffe.agents.extensions.base.VisitorExtension" href="../../../../#griffe.agents.extensions.VisitorExtension">VisitorExtension</a>]</code>
         – <p>Visitors.</p>
       </li>
   </ul>
@@ -2263,72 +1971,33 @@ Extensions        </code>
 
 
 <h2 id="griffe.agents.extensions.InspectorExtension" class="doc doc-heading">
-        <code>
-InspectorExtension            (<a href="../base/#griffe.agents.base.BaseInspector">BaseInspector</a>)
-        </code>
-
+<code class="highlight language-python"><span class="n">InspectorExtension</span><span class="p">()</span></code>
 
 
 <a href="#griffe.agents.extensions.InspectorExtension" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a title="griffe.agents.base.BaseInspector" href="../base/#griffe.agents.base.BaseInspector">BaseInspector</a></code></p>
+
 
       <p>The object inspector extension base class, to inherit from.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/agents/extensions/base.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">InspectorExtension</span><span class="p">(</span><span class="n">BaseInspector</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;The object inspector extension base class, to inherit from.&quot;&quot;&quot;</span>
 
-    <span class="n">when</span><span class="p">:</span> <span class="n">When</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the inspector extension.&quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">inspector</span><span class="p">:</span> <span class="n">Inspector</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: ignore[assignment]</span>
-
-    <span class="k">def</span> <span class="nf">attach</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inspector</span><span class="p">:</span> <span class="n">Inspector</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Attach the parent inspector to this extension.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            inspector: The parent inspector.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">inspector</span> <span class="o">=</span> <span class="n">inspector</span>
-
-    <span class="k">def</span> <span class="nf">inspect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Inspect a node.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to inspect.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;inspect_</span><span class="si">{</span><span class="n">node</span><span class="o">.</span><span class="n">kind</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="kc">None</span><span class="p">)(</span><span class="n">node</span><span class="p">)</span>
+            <details class="quote">
+              <summary>Source code in <code>griffe/agents/extensions/base.py</code></summary>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Initialize the inspector extension.&quot;&quot;&quot;</span>
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">inspector</span><span class="p">:</span> <span class="n">Inspector</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: ignore[assignment]</span>
 </code></pre></div>
 </td></tr></table>
-        </details>
+            </details>
 
 
 
@@ -2340,39 +2009,6 @@ InspectorExtension            (<a href="../base/#griffe.agents.base.BaseInspecto
 
 
 
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h3 id="griffe.agents.extensions.base.InspectorExtension.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
-
-
-<a href="#griffe.agents.extensions.base.InspectorExtension.__init__" class="headerlink" title="Permanent link">¤</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Initialize the inspector extension.</p>
-
-        <details class="quote">
-          <summary>Source code in <code>griffe/agents/extensions/base.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Initialize the inspector extension.&quot;&quot;&quot;</span>
-    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">inspector</span><span class="p">:</span> <span class="n">Inspector</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: ignore[assignment]</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
 
 
 
@@ -2395,7 +2031,7 @@ InspectorExtension            (<a href="../base/#griffe.agents.base.BaseInspecto
   <ul>
       <li class="field-body">
         <b>inspector</b>
-            (<code><a href="../inspector/#griffe.agents.inspector.Inspector">Inspector</a></code>)
+            (<code><a title="griffe.agents.inspector.Inspector" href="../inspector/#griffe.agents.inspector.Inspector">Inspector</a></code>)
         – <p>The parent inspector.</p>
       </li>
   </ul>
@@ -2443,7 +2079,7 @@ InspectorExtension            (<a href="../base/#griffe.agents.base.BaseInspecto
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
@@ -2487,72 +2123,33 @@ InspectorExtension            (<a href="../base/#griffe.agents.base.BaseInspecto
 
 
 <h2 id="griffe.agents.extensions.VisitorExtension" class="doc doc-heading">
-        <code>
-VisitorExtension            (<a href="../base/#griffe.agents.base.BaseVisitor">BaseVisitor</a>)
-        </code>
-
+<code class="highlight language-python"><span class="n">VisitorExtension</span><span class="p">()</span></code>
 
 
 <a href="#griffe.agents.extensions.VisitorExtension" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a title="griffe.agents.base.BaseVisitor" href="../base/#griffe.agents.base.BaseVisitor">BaseVisitor</a></code></p>
+
 
       <p>The node visitor extension base class, to inherit from.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/agents/extensions/base.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">VisitorExtension</span><span class="p">(</span><span class="n">BaseVisitor</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;The node visitor extension base class, to inherit from.&quot;&quot;&quot;</span>
 
-    <span class="n">when</span><span class="p">:</span> <span class="n">When</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the visitor extension.&quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">visitor</span><span class="p">:</span> <span class="n">Visitor</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: ignore[assignment]</span>
-
-    <span class="k">def</span> <span class="nf">attach</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">visitor</span><span class="p">:</span> <span class="n">Visitor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Attach the parent visitor to this extension.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            visitor: The parent visitor.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">visitor</span> <span class="o">=</span> <span class="n">visitor</span>
-
-    <span class="k">def</span> <span class="nf">visit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">AST</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Visit a node.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            node: The node to visit.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;visit_</span><span class="si">{</span><span class="n">node</span><span class="o">.</span><span class="n">kind</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="kc">None</span><span class="p">)(</span><span class="n">node</span><span class="p">)</span>  <span class="c1"># type: ignore[attr-defined]</span>
+            <details class="quote">
+              <summary>Source code in <code>griffe/agents/extensions/base.py</code></summary>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Initialize the visitor extension.&quot;&quot;&quot;</span>
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">visitor</span><span class="p">:</span> <span class="n">Visitor</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: ignore[assignment]</span>
 </code></pre></div>
 </td></tr></table>
-        </details>
+            </details>
 
 
 
@@ -2564,39 +2161,6 @@ VisitorExtension            (<a href="../base/#griffe.agents.base.BaseVisitor">B
 
 
 
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h3 id="griffe.agents.extensions.base.VisitorExtension.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
-
-
-<a href="#griffe.agents.extensions.base.VisitorExtension.__init__" class="headerlink" title="Permanent link">¤</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Initialize the visitor extension.</p>
-
-        <details class="quote">
-          <summary>Source code in <code>griffe/agents/extensions/base.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Initialize the visitor extension.&quot;&quot;&quot;</span>
-    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">visitor</span><span class="p">:</span> <span class="n">Visitor</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: ignore[assignment]</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
 
 
 
@@ -2619,7 +2183,7 @@ VisitorExtension            (<a href="../base/#griffe.agents.base.BaseVisitor">B
   <ul>
       <li class="field-body">
         <b>visitor</b>
-            (<code><a href="../visitor/#griffe.agents.visitor.Visitor">Visitor</a></code>)
+            (<code><a title="griffe.agents.visitor.Visitor" href="../visitor/#griffe.agents.visitor.Visitor">Visitor</a></code>)
         – <p>The parent visitor.</p>
       </li>
   </ul>
@@ -2667,7 +2231,7 @@ VisitorExtension            (<a href="../base/#griffe.agents.base.BaseVisitor">B
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a href="https://docs.python.org/3/library/ast.html#ast.AST">AST</a></code>)
+            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a title="ast.AST" href="https://docs.python.org/3/library/ast.html#ast.AST">AST</a></code>)
         – <p>The node to visit.</p>
       </li>
   </ul>
@@ -2711,15 +2275,17 @@ VisitorExtension            (<a href="../base/#griffe.agents.base.BaseVisitor">B
 
 
 <h2 id="griffe.agents.extensions.When" class="doc doc-heading">
-        <code>
-When            (<a href="https://docs.python.org/3/library/enum.html#module-enum">enum</a>.<a href="https://docs.python.org/3/library/enum.html#enum.Enum">Enum</a>)
-        </code>
+          <code>When</code>
 
 
 
 <a href="#griffe.agents.extensions.When" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a href="https://docs.python.org/3/library/enum.html#module-enum">enum</a>.<a title="enum.Enum" href="https://docs.python.org/3/library/enum.html#enum.Enum">Enum</a></code></p>
+
 
       <p>This enumeration contains the different times at which an extension is used.</p>
 
@@ -2747,38 +2313,7 @@ When            (<a href="https://docs.python.org/3/library/enum.html#module-enu
       </li>
   </ul>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/agents/extensions/base.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">When</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;This enumeration contains the different times at which an extension is used.</span>
 
-<span class="sd">    Attributes:</span>
-<span class="sd">        before_all: For each node, before the visit/inspection.</span>
-<span class="sd">        before_children: For each node, after the visit has started, and before the children visit/inspection.</span>
-<span class="sd">        after_children: For each node, after the children have been visited/inspected, and before finishing the visit/inspection.</span>
-<span class="sd">        after_all: For each node, after the visit/inspection.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">before_all</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">before_children</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
-    <span class="n">after_children</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span>
-    <span class="n">after_all</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
 
 
 
@@ -2825,7 +2360,7 @@ When            (<a href="https://docs.python.org/3/library/enum.html#module-enu
   <ul>
       <li class="field-body">
         <b>extension</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | Extension | <a href="https://docs.python.org/3/library/typing.html#typing.Type">Type</a>[Extension]</code>)
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | <span title="griffe.agents.extensions.base.Extension">Extension</span> | <a title="typing.Type" href="https://docs.python.org/3/library/typing.html#typing.Type">Type</a>[<span title="griffe.agents.extensions.base.Extension">Extension</span>]</code>)
         – <p>An extension, with potential configuration options.</p>
       </li>
   </ul>
@@ -2833,7 +2368,7 @@ When            (<a href="https://docs.python.org/3/library/enum.html#module-enu
   <p>Raises:</p>
   <ul>
       <li class="field-body">
-            <code><a href="../../exceptions/#griffe.exceptions.ExtensionNotLoadedError">ExtensionNotLoadedError</a></code>
+            <code><a title="griffe.exceptions.ExtensionNotLoadedError" href="../../exceptions/#griffe.exceptions.ExtensionNotLoadedError">ExtensionNotLoadedError</a></code>
           –
         <p>When the extension cannot be loaded,
 either because the module is not found, or because it does not expose
@@ -2845,7 +2380,7 @@ the traceback.</p>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code>Extension</code>
+            <code><span title="griffe.agents.extensions.base.Extension">Extension</span></code>
         – <p>An extension instance.</p>
       </li>
   </ul>
@@ -2963,7 +2498,7 @@ the traceback.</p>
   <ul>
       <li class="field-body">
         <b>exts</b>
-            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | Extension | <a href="https://docs.python.org/3/library/typing.html#typing.Type">Type</a>[Extension]]</code>)
+            (<code><a title="typing.Sequence" href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | <span title="griffe.agents.extensions.base.Extension">Extension</span> | <a title="typing.Type" href="https://docs.python.org/3/library/typing.html#typing.Type">Type</a>[<span title="griffe.agents.extensions.base.Extension">Extension</span>]]</code>)
         – <p>A sequence of extension, with potential configuration options.</p>
       </li>
   </ul>
@@ -2971,7 +2506,7 @@ the traceback.</p>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="../../../../#griffe.agents.extensions.Extensions">Extensions</a></code>
+            <code><a title="griffe.agents.extensions.base.Extensions" href="../../../../#griffe.agents.extensions.Extensions">Extensions</a></code>
         – <p>An extensions container.</p>
       </li>
   </ul>

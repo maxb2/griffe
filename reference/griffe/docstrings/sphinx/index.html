@@ -1276,55 +1276,19 @@ See <a href="https://github.com/mkdocstrings/pytkdocs/pull/71">https://github.co
 
 
 <h2 id="griffe.docstrings.sphinx.FieldType" class="doc doc-heading">
-        <code>
-FieldType        </code>
+          <code>FieldType</code>
 
 
 
 <a href="#griffe.docstrings.sphinx.FieldType" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+
 
       <p>Maps directive names to parser functions.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/sphinx.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">class</span> <span class="nc">FieldType</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Maps directive names to parser functions.&quot;&quot;&quot;</span>
 
-    <span class="n">names</span><span class="p">:</span> <span class="n">FrozenSet</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
-    <span class="n">reader</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Docstring</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">ParsedValues</span><span class="p">],</span> <span class="nb">int</span><span class="p">]</span>
-
-    <span class="k">def</span> <span class="nf">matches</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Check if a line matches the field type.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            line: Line to check against</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            True if the line matches the field type, False otherwise.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="nb">any</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;:</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">names</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
 
 
 
@@ -1416,39 +1380,19 @@ FieldType        </code>
 
 
 <h2 id="griffe.docstrings.sphinx.ParsedDirective" class="doc doc-heading">
-        <code>
-ParsedDirective        </code>
+          <code>ParsedDirective</code>
 
 
 
 <a href="#griffe.docstrings.sphinx.ParsedDirective" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+
 
       <p>Directive information that has been parsed from a docstring.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/sphinx.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
-<span class="k">class</span> <span class="nc">ParsedDirective</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Directive information that has been parsed from a docstring.&quot;&quot;&quot;</span>
 
-    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">next_index</span><span class="p">:</span> <span class="nb">int</span>
-    <span class="n">directive_parts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
-    <span class="n">value</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">invalid</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
 
 
 
@@ -1481,45 +1425,19 @@ ParsedDirective        </code>
 
 
 <h2 id="griffe.docstrings.sphinx.ParsedValues" class="doc doc-heading">
-        <code>
-ParsedValues        </code>
+          <code>ParsedValues</code>
 
 
 
 <a href="#griffe.docstrings.sphinx.ParsedValues" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+
 
       <p>Values parsed from the docstring to be used to produce sections.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/docstrings/sphinx.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
-<span class="k">class</span> <span class="nc">ParsedValues</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Values parsed from the docstring to be used to produce sections.&quot;&quot;&quot;</span>
 
-    <span class="n">description</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
-    <span class="n">parameters</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">DocstringParameter</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">dict</span><span class="p">)</span>
-    <span class="n">param_types</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">dict</span><span class="p">)</span>
-    <span class="n">attributes</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">DocstringAttribute</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">dict</span><span class="p">)</span>
-    <span class="n">attribute_types</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">dict</span><span class="p">)</span>
-    <span class="n">exceptions</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">DocstringRaise</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
-    <span class="n">return_value</span><span class="p">:</span> <span class="n">DocstringReturn</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">return_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
 
 
 
@@ -1584,12 +1502,12 @@ ParsedValues        </code>
   <ul>
       <li class="field-body">
         <b>docstring</b>
-            (<code><a href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
+            (<code><a title="griffe.dataclasses.Docstring" href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
         – <p>The docstring to parse.</p>
       </li>
       <li class="field-body">
         <b>**options</b>
-            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+            (<code><a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
         – <p>Additional parsing options.</p>
       </li>
   </ul>
@@ -1597,7 +1515,7 @@ ParsedValues        </code>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a href="../dataclasses/#griffe.docstrings.dataclasses.DocstringSection">DocstringSection</a>]</code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="griffe.docstrings.dataclasses.DocstringSection" href="../dataclasses/#griffe.docstrings.dataclasses.DocstringSection">DocstringSection</a>]</code>
         – <p>A list of docstring sections.</p>
       </li>
   </ul>

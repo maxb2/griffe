@@ -962,13 +962,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#griffe.loader.GriffeLoader.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#griffe.loader.GriffeLoader.load_module" class="md-nav__link">
     load_module()
   </a>
@@ -1196,13 +1189,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#griffe.loader.GriffeLoader.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#griffe.loader.GriffeLoader.load_module" class="md-nav__link">
     load_module()
   </a>
@@ -1284,764 +1270,85 @@
 
 
 <h2 id="griffe.loader.GriffeLoader" class="doc doc-heading">
-        <code>
-GriffeLoader        </code>
-
+<code class="highlight language-python"><span class="n">GriffeLoader</span><span class="p">(</span><span class="n">extensions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">search_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_parser</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lines_collection</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">modules_collection</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
 <a href="#griffe.loader.GriffeLoader" class="headerlink" title="Permanent link">¤</a></h2>
 
+
     <div class="doc doc-contents ">
+
 
       <p>The Griffe loader, allowing to load data from modules.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/loader.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 66</span>
-<span class="normal"> 67</span>
-<span class="normal"> 68</span>
-<span class="normal"> 69</span>
-<span class="normal"> 70</span>
-<span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span>
-<span class="normal">155</span>
-<span class="normal">156</span>
-<span class="normal">157</span>
-<span class="normal">158</span>
-<span class="normal">159</span>
-<span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
-<span class="normal">167</span>
-<span class="normal">168</span>
-<span class="normal">169</span>
-<span class="normal">170</span>
-<span class="normal">171</span>
-<span class="normal">172</span>
-<span class="normal">173</span>
-<span class="normal">174</span>
-<span class="normal">175</span>
-<span class="normal">176</span>
-<span class="normal">177</span>
-<span class="normal">178</span>
-<span class="normal">179</span>
-<span class="normal">180</span>
-<span class="normal">181</span>
-<span class="normal">182</span>
-<span class="normal">183</span>
-<span class="normal">184</span>
-<span class="normal">185</span>
-<span class="normal">186</span>
-<span class="normal">187</span>
-<span class="normal">188</span>
-<span class="normal">189</span>
-<span class="normal">190</span>
-<span class="normal">191</span>
-<span class="normal">192</span>
-<span class="normal">193</span>
-<span class="normal">194</span>
-<span class="normal">195</span>
-<span class="normal">196</span>
-<span class="normal">197</span>
-<span class="normal">198</span>
-<span class="normal">199</span>
-<span class="normal">200</span>
-<span class="normal">201</span>
-<span class="normal">202</span>
-<span class="normal">203</span>
-<span class="normal">204</span>
-<span class="normal">205</span>
-<span class="normal">206</span>
-<span class="normal">207</span>
-<span class="normal">208</span>
-<span class="normal">209</span>
-<span class="normal">210</span>
-<span class="normal">211</span>
-<span class="normal">212</span>
-<span class="normal">213</span>
-<span class="normal">214</span>
-<span class="normal">215</span>
-<span class="normal">216</span>
-<span class="normal">217</span>
-<span class="normal">218</span>
-<span class="normal">219</span>
-<span class="normal">220</span>
-<span class="normal">221</span>
-<span class="normal">222</span>
-<span class="normal">223</span>
-<span class="normal">224</span>
-<span class="normal">225</span>
-<span class="normal">226</span>
-<span class="normal">227</span>
-<span class="normal">228</span>
-<span class="normal">229</span>
-<span class="normal">230</span>
-<span class="normal">231</span>
-<span class="normal">232</span>
-<span class="normal">233</span>
-<span class="normal">234</span>
-<span class="normal">235</span>
-<span class="normal">236</span>
-<span class="normal">237</span>
-<span class="normal">238</span>
-<span class="normal">239</span>
-<span class="normal">240</span>
-<span class="normal">241</span>
-<span class="normal">242</span>
-<span class="normal">243</span>
-<span class="normal">244</span>
-<span class="normal">245</span>
-<span class="normal">246</span>
-<span class="normal">247</span>
-<span class="normal">248</span>
-<span class="normal">249</span>
-<span class="normal">250</span>
-<span class="normal">251</span>
-<span class="normal">252</span>
-<span class="normal">253</span>
-<span class="normal">254</span>
-<span class="normal">255</span>
-<span class="normal">256</span>
-<span class="normal">257</span>
-<span class="normal">258</span>
-<span class="normal">259</span>
-<span class="normal">260</span>
-<span class="normal">261</span>
-<span class="normal">262</span>
-<span class="normal">263</span>
-<span class="normal">264</span>
-<span class="normal">265</span>
-<span class="normal">266</span>
-<span class="normal">267</span>
-<span class="normal">268</span>
-<span class="normal">269</span>
-<span class="normal">270</span>
-<span class="normal">271</span>
-<span class="normal">272</span>
-<span class="normal">273</span>
-<span class="normal">274</span>
-<span class="normal">275</span>
-<span class="normal">276</span>
-<span class="normal">277</span>
-<span class="normal">278</span>
-<span class="normal">279</span>
-<span class="normal">280</span>
-<span class="normal">281</span>
-<span class="normal">282</span>
-<span class="normal">283</span>
-<span class="normal">284</span>
-<span class="normal">285</span>
-<span class="normal">286</span>
-<span class="normal">287</span>
-<span class="normal">288</span>
-<span class="normal">289</span>
-<span class="normal">290</span>
-<span class="normal">291</span>
-<span class="normal">292</span>
-<span class="normal">293</span>
-<span class="normal">294</span>
-<span class="normal">295</span>
-<span class="normal">296</span>
-<span class="normal">297</span>
-<span class="normal">298</span>
-<span class="normal">299</span>
-<span class="normal">300</span>
-<span class="normal">301</span>
-<span class="normal">302</span>
-<span class="normal">303</span>
-<span class="normal">304</span>
-<span class="normal">305</span>
-<span class="normal">306</span>
-<span class="normal">307</span>
-<span class="normal">308</span>
-<span class="normal">309</span>
-<span class="normal">310</span>
-<span class="normal">311</span>
-<span class="normal">312</span>
-<span class="normal">313</span>
-<span class="normal">314</span>
-<span class="normal">315</span>
-<span class="normal">316</span>
-<span class="normal">317</span>
-<span class="normal">318</span>
-<span class="normal">319</span>
-<span class="normal">320</span>
-<span class="normal">321</span>
-<span class="normal">322</span>
-<span class="normal">323</span>
-<span class="normal">324</span>
-<span class="normal">325</span>
-<span class="normal">326</span>
-<span class="normal">327</span>
-<span class="normal">328</span>
-<span class="normal">329</span>
-<span class="normal">330</span>
-<span class="normal">331</span>
-<span class="normal">332</span>
-<span class="normal">333</span>
-<span class="normal">334</span>
-<span class="normal">335</span>
-<span class="normal">336</span>
-<span class="normal">337</span>
-<span class="normal">338</span>
-<span class="normal">339</span>
-<span class="normal">340</span>
-<span class="normal">341</span>
-<span class="normal">342</span>
-<span class="normal">343</span>
-<span class="normal">344</span>
-<span class="normal">345</span>
-<span class="normal">346</span>
-<span class="normal">347</span>
-<span class="normal">348</span>
-<span class="normal">349</span>
-<span class="normal">350</span>
-<span class="normal">351</span>
-<span class="normal">352</span>
-<span class="normal">353</span>
-<span class="normal">354</span>
-<span class="normal">355</span>
-<span class="normal">356</span>
-<span class="normal">357</span>
-<span class="normal">358</span>
-<span class="normal">359</span>
-<span class="normal">360</span>
-<span class="normal">361</span>
-<span class="normal">362</span>
-<span class="normal">363</span>
-<span class="normal">364</span>
-<span class="normal">365</span>
-<span class="normal">366</span>
-<span class="normal">367</span>
-<span class="normal">368</span>
-<span class="normal">369</span>
-<span class="normal">370</span>
-<span class="normal">371</span>
-<span class="normal">372</span>
-<span class="normal">373</span>
-<span class="normal">374</span>
-<span class="normal">375</span>
-<span class="normal">376</span>
-<span class="normal">377</span>
-<span class="normal">378</span>
-<span class="normal">379</span>
-<span class="normal">380</span>
-<span class="normal">381</span>
-<span class="normal">382</span>
-<span class="normal">383</span>
-<span class="normal">384</span>
-<span class="normal">385</span>
-<span class="normal">386</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">GriffeLoader</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;The Griffe loader, allowing to load data from modules.&quot;&quot;&quot;</span>
 
-    <span class="n">ignored_modules</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;debugpy&quot;</span><span class="p">,</span> <span class="s2">&quot;_pydev&quot;</span><span class="p">}</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span>
-        <span class="n">extensions</span><span class="p">:</span> <span class="n">Extensions</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">search_paths</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">docstring_parser</span><span class="p">:</span> <span class="n">Parser</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">docstring_options</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">lines_collection</span><span class="p">:</span> <span class="n">LinesCollection</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">modules_collection</span><span class="p">:</span> <span class="n">ModulesCollection</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the loader.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            extensions: The extensions to use.</span>
-<span class="sd">            search_paths: The paths to search into.</span>
-<span class="sd">            docstring_parser: The docstring parser to use. By default, no parsing is done.</span>
-<span class="sd">            docstring_options: Additional docstring parsing options.</span>
-<span class="sd">            lines_collection: A collection of source code lines.</span>
-<span class="sd">            modules_collection: A collection of modules.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">extensions</span><span class="p">:</span> <span class="n">Extensions</span> <span class="o">=</span> <span class="n">extensions</span> <span class="ow">or</span> <span class="n">Extensions</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">docstring_parser</span><span class="p">:</span> <span class="n">Parser</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">docstring_parser</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">docstring_options</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">docstring_options</span> <span class="ow">or</span> <span class="p">{}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lines_collection</span><span class="p">:</span> <span class="n">LinesCollection</span> <span class="o">=</span> <span class="n">lines_collection</span> <span class="ow">or</span> <span class="n">LinesCollection</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">:</span> <span class="n">ModulesCollection</span> <span class="o">=</span> <span class="n">modules_collection</span> <span class="ow">or</span> <span class="n">ModulesCollection</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">finder</span><span class="p">:</span> <span class="n">ModuleFinder</span> <span class="o">=</span> <span class="n">ModuleFinder</span><span class="p">(</span><span class="n">search_paths</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_time_stats</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s2">&quot;time_spent_visiting&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="s2">&quot;time_spent_inspecting&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="p">}</span>
-        <span class="n">patch_ast</span><span class="p">()</span>
-
-    <span class="k">def</span> <span class="nf">load_module</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span>
-        <span class="n">module</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">,</span>
-        <span class="n">submodules</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="n">try_relative_path</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Load a module.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            module: The module name or path.</span>
-<span class="sd">            submodules: Whether to recurse on the submodules.</span>
-<span class="sd">            try_relative_path: Whether to try finding the module as a relative path.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            A module.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">module</span> <span class="ow">in</span> <span class="n">_builtin_modules</span><span class="p">:</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">module</span><span class="si">}</span><span class="s2"> is a builtin module: inspecting&quot;</span><span class="p">)</span>
-            <span class="n">module_name</span> <span class="o">=</span> <span class="n">module</span>
-            <span class="n">top_module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_module</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">module_name</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">finder</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">try_relative_path</span><span class="p">)</span>
-            <span class="k">except</span> <span class="ne">ModuleNotFoundError</span><span class="p">:</span>
-                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Could not find </span><span class="si">{</span><span class="n">module</span><span class="si">}</span><span class="s2">: trying inspection&quot;</span><span class="p">)</span>
-                <span class="n">module_name</span> <span class="o">=</span> <span class="n">module</span>
-                <span class="n">top_module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_module</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found </span><span class="si">{</span><span class="n">module</span><span class="si">}</span><span class="s2">: visiting&quot;</span><span class="p">)</span>
-                <span class="n">top_module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load_module_path</span><span class="p">(</span><span class="n">package</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">package</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">submodules</span><span class="o">=</span><span class="n">submodules</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">[</span><span class="n">top_module</span><span class="o">.</span><span class="n">path</span><span class="p">]</span> <span class="o">=</span> <span class="n">top_module</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">[</span><span class="n">module_name</span><span class="p">]</span>  <span class="c1"># type: ignore[index]</span>
-
-    <span class="k">def</span> <span class="nf">resolve_aliases</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
-        <span class="bp">self</span><span class="p">,</span>
-        <span class="n">only_exported</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="n">only_known_modules</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="n">max_iterations</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">int</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Resolve aliases.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            only_exported: When true, only try to resolve an alias if it is explicitely exported.</span>
-<span class="sd">            only_known_modules: When true, don&#39;t try to load unspecified modules to resolve aliases.</span>
-<span class="sd">            max_iterations: Maximum number of iterations on the loader modules collection.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            The unresolved aliases and the number of iterations done.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">max_iterations</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">max_iterations</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">)</span>  <span class="c1"># type: ignore[assignment]</span>
-        <span class="n">prev_unresolved</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-        <span class="n">unresolved</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>  <span class="c1"># init to enter loop</span>
-        <span class="n">iteration</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="n">collection</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="o">.</span><span class="n">members</span>
-        <span class="k">while</span> <span class="n">unresolved</span> <span class="ow">and</span> <span class="n">unresolved</span> <span class="o">!=</span> <span class="n">prev_unresolved</span> <span class="ow">and</span> <span class="n">iteration</span> <span class="o">&lt;</span> <span class="n">max_iterations</span><span class="p">:</span>  <span class="c1"># type: ignore[operator]</span>
-            <span class="n">prev_unresolved</span> <span class="o">=</span> <span class="n">unresolved</span> <span class="o">-</span> <span class="p">{</span><span class="s2">&quot;0&quot;</span><span class="p">}</span>
-            <span class="n">unresolved</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-            <span class="n">resolved</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-            <span class="n">iteration</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="k">for</span> <span class="n">module_name</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">collection</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
-                <span class="n">module</span> <span class="o">=</span> <span class="n">collection</span><span class="p">[</span><span class="n">module_name</span><span class="p">]</span>
-                <span class="n">next_resolved</span><span class="p">,</span> <span class="n">next_unresolved</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolve_module_aliases</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">only_exported</span><span class="p">,</span> <span class="n">only_known_modules</span><span class="p">)</span>
-                <span class="n">resolved</span> <span class="o">|=</span> <span class="n">next_resolved</span>
-                <span class="n">unresolved</span> <span class="o">|=</span> <span class="n">next_unresolved</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot;Iteration </span><span class="si">{</span><span class="n">iteration</span><span class="si">}</span><span class="s2"> finished, </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">resolved</span><span class="p">)</span><span class="si">}</span><span class="s2"> aliases resolved, still </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">unresolved</span><span class="p">)</span><span class="si">}</span><span class="s2"> to go&quot;</span>
-            <span class="p">)</span>
-        <span class="k">return</span> <span class="n">unresolved</span><span class="p">,</span> <span class="n">iteration</span>
-
-    <span class="k">def</span> <span class="nf">resolve_module_aliases</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
-        <span class="bp">self</span><span class="p">,</span>
-        <span class="n">obj</span><span class="p">:</span> <span class="n">Object</span><span class="p">,</span>
-        <span class="n">only_exported</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="n">only_known_modules</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="n">seen</span><span class="p">:</span> <span class="nb">set</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
-        <span class="sd">&quot;&quot;&quot;Follow aliases: try to recursively resolve all found aliases.</span>
-
-<span class="sd">        Parameters:</span>
-<span class="sd">            obj: The object and its members to recurse on.</span>
-<span class="sd">            only_exported: When true, only try to resolve an alias if it is explicitely exported.</span>
-<span class="sd">            only_known_modules: When true, don&#39;t try to load unspecified modules to resolve aliases.</span>
-<span class="sd">            seen: Used to avoid infinite recursion.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            Both sets of resolved and unresolved aliases.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">resolved</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-        <span class="n">unresolved</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-        <span class="n">expanded</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">to_remove</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">seen</span> <span class="o">=</span> <span class="n">seen</span> <span class="ow">or</span> <span class="nb">set</span><span class="p">()</span>
-        <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
-
-        <span class="c1"># iterate a first time to expand wildcards</span>
-        <span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
-            <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">is_alias</span> <span class="ow">and</span> <span class="n">member</span><span class="o">.</span><span class="n">wildcard</span><span class="p">:</span>  <span class="c1"># type: ignore[union-attr]  # we know it&#39;s an alias</span>
-                <span class="n">package</span> <span class="o">=</span> <span class="n">member</span><span class="o">.</span><span class="n">wildcard</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># type: ignore[union-attr]</span>
-                <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="n">package</span><span class="o">.</span><span class="n">path</span> <span class="o">!=</span> <span class="n">package</span> <span class="ow">and</span> <span class="n">package</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">:</span>
-                    <span class="k">try</span><span class="p">:</span>
-                        <span class="bp">self</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="n">package</span><span class="p">,</span> <span class="n">try_relative_path</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-                    <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-                        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Could not expand wildcard import </span><span class="si">{</span><span class="n">member</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">obj</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-                    <span class="k">else</span><span class="p">:</span>
-                        <span class="n">expanded</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_expand_wildcard</span><span class="p">(</span><span class="n">member</span><span class="p">))</span>  <span class="c1"># type: ignore[arg-type]</span>
-                        <span class="n">to_remove</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">member</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-
-        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">to_remove</span><span class="p">:</span>
-            <span class="k">del</span> <span class="n">obj</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>  <span class="c1"># noqa: WPS420</span>
-        <span class="k">for</span> <span class="n">new_member</span> <span class="ow">in</span> <span class="n">expanded</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
-            <span class="k">if</span> <span class="n">new_member</span><span class="o">.</span><span class="n">is_alias</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">new_member</span><span class="o">.</span><span class="n">wildcard</span><span class="p">:</span>  <span class="c1"># type: ignore[union-attr]</span>
-                <span class="k">try</span><span class="p">:</span>
-                    <span class="n">alias</span> <span class="o">=</span> <span class="n">Alias</span><span class="p">(</span><span class="n">new_member</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">new_member</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>  <span class="c1"># type: ignore[union-attr]</span>
-                <span class="k">except</span> <span class="n">AliasResolutionError</span><span class="p">:</span>
-                    <span class="n">alias</span> <span class="o">=</span> <span class="n">new_member</span>  <span class="c1"># type: ignore[assignment]  # noqa: WPS437</span>
-                <span class="k">except</span> <span class="n">CyclicAliasError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>  <span class="c1"># noqa: WPS440</span>
-                    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">error</span><span class="p">))</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">alias</span> <span class="o">=</span> <span class="n">Alias</span><span class="p">(</span><span class="n">new_member</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">new_member</span><span class="p">)</span>
-            <span class="n">obj</span><span class="p">[</span><span class="n">new_member</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">alias</span>
-
-        <span class="c1"># iterate a second time to resolve aliases and recurse</span>
-        <span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>  <span class="c1"># noqa: WPS440</span>
-            <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">is_alias</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">wildcard</span> <span class="ow">or</span> <span class="n">member</span><span class="o">.</span><span class="n">resolved</span><span class="p">:</span>  <span class="c1"># type: ignore[union-attr]</span>
-                    <span class="k">continue</span>
-                <span class="k">if</span> <span class="n">only_exported</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">member</span><span class="o">.</span><span class="n">is_explicitely_exported</span><span class="p">:</span>
-                    <span class="k">continue</span>
-                <span class="k">try</span><span class="p">:</span>
-                    <span class="n">member</span><span class="o">.</span><span class="n">resolve_target</span><span class="p">()</span>  <span class="c1"># type: ignore[union-attr]</span>
-                <span class="k">except</span> <span class="n">AliasResolutionError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>  <span class="c1"># noqa: WPS440</span>
-                    <span class="n">path</span> <span class="o">=</span> <span class="n">member</span><span class="o">.</span><span class="n">path</span>
-                    <span class="n">target</span> <span class="o">=</span> <span class="n">error</span><span class="o">.</span><span class="n">target_path</span>  <span class="c1"># type: ignore[union-attr]  # noqa: WPS437</span>
-                    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Alias resolution error for </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="n">target</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-                    <span class="n">unresolved</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-                    <span class="n">package</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-                    <span class="n">load_module</span> <span class="o">=</span> <span class="p">(</span>
-                        <span class="ow">not</span> <span class="n">only_known_modules</span>
-                        <span class="ow">and</span> <span class="n">obj</span><span class="o">.</span><span class="n">package</span><span class="o">.</span><span class="n">path</span> <span class="o">!=</span> <span class="n">package</span>
-                        <span class="ow">and</span> <span class="n">package</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span>
-                    <span class="p">)</span>
-                    <span class="k">if</span> <span class="n">load_module</span><span class="p">:</span>
-                        <span class="k">try</span><span class="p">:</span>  <span class="c1"># noqa: WPS505</span>
-                            <span class="bp">self</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="n">package</span><span class="p">,</span> <span class="n">try_relative_path</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-                        <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>  <span class="c1"># noqa: WPS440</span>
-                            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Could not follow alias </span><span class="si">{</span><span class="n">member</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-                <span class="k">except</span> <span class="n">CyclicAliasError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-                    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">error</span><span class="p">))</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Alias </span><span class="si">{</span><span class="n">member</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2"> was resolved to </span><span class="si">{</span><span class="n">member</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># type: ignore[union-attr]</span>
-                    <span class="n">resolved</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">member</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
-            <span class="k">elif</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">in</span> <span class="p">{</span><span class="n">Kind</span><span class="o">.</span><span class="n">MODULE</span><span class="p">,</span> <span class="n">Kind</span><span class="o">.</span><span class="n">CLASS</span><span class="p">}</span> <span class="ow">and</span> <span class="n">member</span><span class="o">.</span><span class="n">path</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
-                <span class="n">sub_resolved</span><span class="p">,</span> <span class="n">sub_unresolved</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolve_module_aliases</span><span class="p">(</span>
-                    <span class="n">member</span><span class="p">,</span> <span class="n">only_exported</span><span class="p">,</span> <span class="n">only_known_modules</span><span class="p">,</span> <span class="n">seen</span>  <span class="c1"># type: ignore[arg-type]</span>
-                <span class="p">)</span>
-                <span class="n">resolved</span> <span class="o">|=</span> <span class="n">sub_resolved</span>
-                <span class="n">unresolved</span> <span class="o">|=</span> <span class="n">sub_unresolved</span>
-
-        <span class="k">return</span> <span class="n">resolved</span><span class="p">,</span> <span class="n">unresolved</span>
-
-    <span class="k">def</span> <span class="nf">stats</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Compute some statistics.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            Some statistics.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="p">{</span><span class="o">**</span><span class="n">stats</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">_time_stats</span><span class="p">}</span>
-
-    <span class="k">def</span> <span class="nf">_load_module_path</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span>
-        <span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">module_path</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">],</span>
-        <span class="n">submodules</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="n">parent</span><span class="p">:</span> <span class="n">Module</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Loading path </span><span class="si">{</span><span class="n">module_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module_path</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-            <span class="n">module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="n">module_path</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">module_path</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s2">&quot;.py&quot;</span><span class="p">:</span>
-            <span class="n">code</span> <span class="o">=</span> <span class="n">module_path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
-            <span class="n">module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visit_module</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">module_name</span><span class="p">,</span> <span class="n">module_path</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="n">module_path</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">submodules</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_load_submodules</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">module</span>
-
-    <span class="k">def</span> <span class="nf">_load_submodules</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">Module</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">subparts</span><span class="p">,</span> <span class="n">subpath</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">finder</span><span class="o">.</span><span class="n">submodules</span><span class="p">(</span><span class="n">module</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_load_submodule</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">subparts</span><span class="p">,</span> <span class="n">subpath</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_load_submodule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">Module</span><span class="p">,</span> <span class="n">subparts</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">subpath</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">member_parent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_member_parent</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">subparts</span><span class="p">,</span> <span class="n">subpath</span><span class="p">)</span>
-        <span class="k">except</span> <span class="n">UnimportableModuleError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-            <span class="c1"># TODO: maybe add option to still load them</span>
-            <span class="c1"># TODO: maybe increase level to WARNING</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">. Missing __init__ module?&quot;</span><span class="p">)</span>
-            <span class="k">return</span>
-        <span class="k">try</span><span class="p">:</span>  <span class="c1"># noqa: WPS225</span>
-            <span class="n">member_parent</span><span class="p">[</span><span class="n">subparts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load_module_path</span><span class="p">(</span>
-                <span class="n">subparts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">subpath</span><span class="p">,</span> <span class="n">submodules</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">member_parent</span>
-            <span class="p">)</span>
-        <span class="k">except</span> <span class="ne">SyntaxError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>  <span class="c1"># noqa: WPS440</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Syntax error: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>  <span class="c1"># noqa: WPS440</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Import error: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">UnicodeDecodeError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>  <span class="c1"># noqa: WPS440</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;UnicodeDecodeError when loading </span><span class="si">{</span><span class="n">subpath</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>  <span class="c1"># noqa: WPS440</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;OSError when loading </span><span class="si">{</span><span class="n">subpath</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_create_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">module_path</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">Module</span><span class="p">(</span>
-            <span class="n">module_name</span><span class="p">,</span>
-            <span class="n">filepath</span><span class="o">=</span><span class="n">module_path</span><span class="p">,</span>
-            <span class="n">lines_collection</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">lines_collection</span><span class="p">,</span>
-            <span class="n">modules_collection</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">,</span>
-        <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_visit_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">code</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">module_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">Module</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lines_collection</span><span class="p">[</span><span class="n">module_path</span><span class="p">]</span> <span class="o">=</span> <span class="n">code</span><span class="o">.</span><span class="n">splitlines</span><span class="p">(</span><span class="n">keepends</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-        <span class="n">start</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-        <span class="n">module</span> <span class="o">=</span> <span class="n">visit</span><span class="p">(</span>
-            <span class="n">module_name</span><span class="p">,</span>
-            <span class="n">filepath</span><span class="o">=</span><span class="n">module_path</span><span class="p">,</span>
-            <span class="n">code</span><span class="o">=</span><span class="n">code</span><span class="p">,</span>
-            <span class="n">extensions</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">extensions</span><span class="p">,</span>
-            <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span>
-            <span class="n">docstring_parser</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">docstring_parser</span><span class="p">,</span>
-            <span class="n">docstring_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">docstring_options</span><span class="p">,</span>
-            <span class="n">lines_collection</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">lines_collection</span><span class="p">,</span>
-            <span class="n">modules_collection</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">,</span>
-        <span class="p">)</span>
-        <span class="n">elapsed</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_time_stats</span><span class="p">[</span><span class="s2">&quot;time_spent_visiting&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">elapsed</span><span class="o">.</span><span class="n">microseconds</span>
-        <span class="k">return</span> <span class="n">module</span>
-
-    <span class="k">def</span> <span class="nf">_inspect_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">Module</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">prefix</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ignored_modules</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">module_name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ignored module &#39;</span><span class="si">{</span><span class="n">module_name</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
-        <span class="n">start</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">module</span> <span class="o">=</span> <span class="n">inspect</span><span class="p">(</span>
-                <span class="n">module_name</span><span class="p">,</span>
-                <span class="n">filepath</span><span class="o">=</span><span class="n">filepath</span><span class="p">,</span>
-                <span class="n">import_paths</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">finder</span><span class="o">.</span><span class="n">search_paths</span><span class="p">,</span>
-                <span class="n">extensions</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">extensions</span><span class="p">,</span>
-                <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span>
-                <span class="n">docstring_parser</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">docstring_parser</span><span class="p">,</span>
-                <span class="n">docstring_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">docstring_options</span><span class="p">,</span>
-                <span class="n">lines_collection</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">lines_collection</span><span class="p">,</span>
-            <span class="p">)</span>
-        <span class="k">except</span> <span class="ne">SystemExit</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Importing &#39;</span><span class="si">{</span><span class="n">module_name</span><span class="si">}</span><span class="s2">&#39; raised a system exit&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">error</span>
-        <span class="n">elapsed</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_time_stats</span><span class="p">[</span><span class="s2">&quot;time_spent_inspecting&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">elapsed</span><span class="o">.</span><span class="n">microseconds</span>
-        <span class="k">return</span> <span class="n">module</span>
-
-    <span class="k">def</span> <span class="nf">_member_parent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">Module</span><span class="p">,</span> <span class="n">subparts</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">subpath</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
-        <span class="n">parent_parts</span> <span class="o">=</span> <span class="n">subparts</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">module</span><span class="p">[</span><span class="n">parent_parts</span><span class="p">]</span>
-        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">module</span><span class="o">.</span><span class="n">is_namespace_package</span> <span class="ow">or</span> <span class="n">module</span><span class="o">.</span><span class="n">is_namespace_subpackage</span><span class="p">:</span>
-                <span class="n">member_parent</span> <span class="o">=</span> <span class="n">Module</span><span class="p">(</span>
-                    <span class="n">subparts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-                    <span class="n">filepath</span><span class="o">=</span><span class="n">subpath</span><span class="o">.</span><span class="n">parent</span><span class="p">,</span>
-                    <span class="n">lines_collection</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">lines_collection</span><span class="p">,</span>
-                    <span class="n">modules_collection</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">,</span>
-                <span class="p">)</span>
-                <span class="n">module</span><span class="p">[</span><span class="n">parent_parts</span><span class="p">]</span> <span class="o">=</span> <span class="n">member_parent</span>
-                <span class="k">return</span> <span class="n">member_parent</span>
-        <span class="k">raise</span> <span class="n">UnimportableModuleError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subpath</span><span class="si">}</span><span class="s2"> is not importable&quot;</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_expand_wildcard</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wildcard_obj</span><span class="p">:</span> <span class="n">Alias</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Object</span> <span class="o">|</span> <span class="n">Alias</span><span class="p">]:</span>
-        <span class="n">module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">[</span><span class="n">wildcard_obj</span><span class="o">.</span><span class="n">wildcard</span><span class="p">]</span>  <span class="c1"># type: ignore[index]  # we know it&#39;s a wildcard</span>
-        <span class="n">explicitely</span> <span class="o">=</span> <span class="s2">&quot;__all__&quot;</span> <span class="ow">in</span> <span class="n">module</span><span class="o">.</span><span class="n">members</span>
-        <span class="k">return</span> <span class="p">{</span>
-            <span class="n">name</span><span class="p">:</span> <span class="n">imported_member</span>
-            <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">imported_member</span> <span class="ow">in</span> <span class="n">module</span><span class="o">.</span><span class="n">members</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
-            <span class="k">if</span> <span class="n">imported_member</span><span class="o">.</span><span class="n">is_exported</span><span class="p">(</span><span class="n">explicitely</span><span class="o">=</span><span class="n">explicitely</span><span class="p">)</span>
-        <span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h3 id="griffe.loader.GriffeLoader.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extensions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">search_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_parser</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lines_collection</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">modules_collection</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
-
-<a href="#griffe.loader.GriffeLoader.__init__" class="headerlink" title="Permanent link">¤</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Initialize the loader.</p>
 
   <p>Parameters:</p>
   <ul>
       <li class="field-body">
         <b>extensions</b>
-            (<code><a href="../agents/extensions/#griffe.agents.extensions.Extensions">Extensions</a> | None</code>)
+            (<code><a title="griffe.agents.extensions.Extensions" href="../agents/extensions/#griffe.agents.extensions.Extensions">Extensions</a> | None</code>)
         – <p>The extensions to use.</p>
       </li>
       <li class="field-body">
         <b>search_paths</b>
-            (<code><a href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
+            (<code><a title="typing.Sequence" href="https://docs.python.org/3/library/typing.html#typing.Sequence">Sequence</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
         – <p>The paths to search into.</p>
       </li>
       <li class="field-body">
         <b>docstring_parser</b>
-            (<code><a href="../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+            (<code><a title="griffe.docstrings.parsers.Parser" href="../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
         – <p>The docstring parser to use. By default, no parsing is done.</p>
       </li>
       <li class="field-body">
         <b>docstring_options</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
         – <p>Additional docstring parsing options.</p>
       </li>
       <li class="field-body">
         <b>lines_collection</b>
-            (<code><a href="../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
+            (<code><a title="griffe.collections.LinesCollection" href="../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
         – <p>A collection of source code lines.</p>
       </li>
       <li class="field-body">
         <b>modules_collection</b>
-            (<code><a href="../collections/#griffe.collections.ModulesCollection">ModulesCollection</a> | None</code>)
+            (<code><a title="griffe.collections.ModulesCollection" href="../collections/#griffe.collections.ModulesCollection">ModulesCollection</a> | None</code>)
         – <p>A collection of modules.</p>
       </li>
   </ul>
 
-        <details class="quote">
-          <summary>Source code in <code>griffe/loader.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <details class="quote">
+              <summary>Source code in <code>griffe/loader.py</code></summary>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">extensions</span><span class="p">:</span> <span class="n">Extensions</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">search_paths</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -2073,10 +1380,24 @@ GriffeLoader        </code>
     <span class="n">patch_ast</span><span class="p">()</span>
 </code></pre></div>
 </td></tr></table>
-        </details>
-    </div>
+            </details>
 
-  </div>
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2107,7 +1428,7 @@ GriffeLoader        </code>
   <ul>
       <li class="field-body">
         <b>module</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
+            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
         – <p>The module name or path.</p>
       </li>
       <li class="field-body">
@@ -2125,7 +1446,7 @@ GriffeLoader        </code>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="../dataclasses/#griffe.dataclasses.Module">Module</a></code>
+            <code><a title="griffe.dataclasses.Module" href="../dataclasses/#griffe.dataclasses.Module">Module</a></code>
         – <p>A module.</p>
       </li>
   </ul>
@@ -2347,7 +1668,7 @@ GriffeLoader        </code>
   <ul>
       <li class="field-body">
         <b>obj</b>
-            (<code><a href="../dataclasses/#griffe.dataclasses.Object">Object</a></code>)
+            (<code><a title="griffe.dataclasses.Object" href="../dataclasses/#griffe.dataclasses.Object">Object</a></code>)
         – <p>The object and its members to recurse on.</p>
       </li>
       <li class="field-body">
