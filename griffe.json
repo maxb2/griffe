@@ -308,13 +308,13 @@
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
 "docstring": {
-"value": "This module contains data encoders/serializers and decoders/deserializers.\n\nThe available formats are:\n\n- `JSON`: see the [encoder][griffe.encoders.Encoder] and [decoder][griffe.encoders.decoder].",
+"value": "This module contains data encoders/serializers and decoders/deserializers.\n\nThe available formats are:\n\n- `JSON`: see the [`JSONEncoder`][griffe.encoders.JSONEncoder] and [`json_decoder`][griffe.encoders.json_decoder].",
 "lineno": 1,
 "endlineno": 6,
 "parsed": [
 {
 "kind": "text",
-"value": "This module contains data encoders/serializers and decoders/deserializers.\n\nThe available formats are:\n\n- `JSON`: see the [encoder][griffe.encoders.Encoder] and [decoder][griffe.encoders.decoder]."
+"value": "This module contains data encoders/serializers and decoders/deserializers.\n\nThe available formats are:\n\n- `JSON`: see the [`JSONEncoder`][griffe.encoders.JSONEncoder] and [`json_decoder`][griffe.encoders.json_decoder]."
 }
 ]
 },
@@ -378,11 +378,19 @@
 },
 {
 "kind": "alias",
+"name": "Alias",
+"target_path": "griffe.dataclasses.Alias",
+"path": "griffe.encoders.Alias",
+"lineno": 14,
+"endlineno": 27
+},
+{
+"kind": "alias",
 "name": "Attribute",
 "target_path": "griffe.dataclasses.Attribute",
 "path": "griffe.encoders.Attribute",
 "lineno": 14,
-"endlineno": 14
+"endlineno": 27
 },
 {
 "kind": "alias",
@@ -390,7 +398,23 @@
 "target_path": "griffe.dataclasses.Class",
 "path": "griffe.encoders.Class",
 "lineno": 14,
-"endlineno": 14
+"endlineno": 27
+},
+{
+"kind": "alias",
+"name": "Decorator",
+"target_path": "griffe.dataclasses.Decorator",
+"path": "griffe.encoders.Decorator",
+"lineno": 14,
+"endlineno": 27
+},
+{
+"kind": "alias",
+"name": "Docstring",
+"target_path": "griffe.dataclasses.Docstring",
+"path": "griffe.encoders.Docstring",
+"lineno": 14,
+"endlineno": 27
 },
 {
 "kind": "alias",
@@ -398,7 +422,7 @@
 "target_path": "griffe.dataclasses.Function",
 "path": "griffe.encoders.Function",
 "lineno": 14,
-"endlineno": 14
+"endlineno": 27
 },
 {
 "kind": "alias",
@@ -406,7 +430,7 @@
 "target_path": "griffe.dataclasses.Kind",
 "path": "griffe.encoders.Kind",
 "lineno": 14,
-"endlineno": 14
+"endlineno": 27
 },
 {
 "kind": "alias",
@@ -414,7 +438,7 @@
 "target_path": "griffe.dataclasses.Module",
 "path": "griffe.encoders.Module",
 "lineno": 14,
-"endlineno": 14
+"endlineno": 27
 },
 {
 "kind": "alias",
@@ -422,7 +446,15 @@
 "target_path": "griffe.dataclasses.Object",
 "path": "griffe.encoders.Object",
 "lineno": 14,
-"endlineno": 14
+"endlineno": 27
+},
+{
+"kind": "alias",
+"name": "Parameter",
+"target_path": "griffe.dataclasses.Parameter",
+"path": "griffe.encoders.Parameter",
+"lineno": 14,
+"endlineno": 27
 },
 {
 "kind": "alias",
@@ -430,23 +462,47 @@
 "target_path": "griffe.dataclasses.ParameterKind",
 "path": "griffe.encoders.ParameterKind",
 "lineno": 14,
-"endlineno": 14
+"endlineno": 27
+},
+{
+"kind": "alias",
+"name": "Parameters",
+"target_path": "griffe.dataclasses.Parameters",
+"path": "griffe.encoders.Parameters",
+"lineno": 14,
+"endlineno": 27
 },
 {
 "kind": "alias",
 "name": "DocstringSectionKind",
 "target_path": "griffe.docstrings.dataclasses.DocstringSectionKind",
 "path": "griffe.encoders.DocstringSectionKind",
-"lineno": 15,
-"endlineno": 15
+"lineno": 28,
+"endlineno": 28
 },
 {
 "kind": "alias",
 "name": "Parser",
 "target_path": "griffe.docstrings.parsers.Parser",
 "path": "griffe.encoders.Parser",
-"lineno": 16,
-"endlineno": 16
+"lineno": 29,
+"endlineno": 29
+},
+{
+"kind": "alias",
+"name": "Expression",
+"target_path": "griffe.expressions.Expression",
+"path": "griffe.encoders.Expression",
+"lineno": 30,
+"endlineno": 30
+},
+{
+"kind": "alias",
+"name": "Name",
+"target_path": "griffe.expressions.Name",
+"path": "griffe.encoders.Name",
+"lineno": 30,
+"endlineno": 30
 },
 {
 "kind": "function",
@@ -454,8 +510,8 @@
 "path": "griffe.encoders._enum_value",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 19,
-"endlineno": 20,
+"lineno": 33,
+"endlineno": 34,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -471,12 +527,12 @@
 },
 {
 "kind": "attribute",
-"name": "_type_map",
-"path": "griffe.encoders._type_map",
+"name": "_json_encoder_map",
+"path": "griffe.encoders._json_encoder_map",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 23,
-"endlineno": 30,
+"lineno": 37,
+"endlineno": 44,
 "labels": [
 "module-attribute"
 ],
@@ -523,27 +579,31 @@
 },
 {
 "kind": "class",
-"name": "Encoder",
-"path": "griffe.encoders.Encoder",
+"name": "JSONEncoder",
+"path": "griffe.encoders.JSONEncoder",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 33,
-"endlineno": 84,
+"lineno": 47,
+"endlineno": 101,
 "docstring": {
-"value": "JSON encoder.\n\nJSON encoders are not used directly, but through\nthe [`json.dump`][] or [`json.dumps`][] methods.\n\nExamples:\n    >>> import json\n    >>> from griffe.encoders import Encoder\n    >>> json.dumps(..., cls=Encoder, full=True, **kwargs)",
-"lineno": 34,
-"endlineno": 43,
+"value": "JSON encoder.\n\nJSON encoders can be used directly, or through\nthe [`json.dump`][] or [`json.dumps`][] methods.\n\nExamples:\n    >>> from griffe.encoders import JSONEncoder\n    >>> JSONEncoder(full=True).encode(..., **kwargs)\n\n    >>> import json\n    >>> from griffe.encoders import JSONEncoder\n    >>> json.dumps(..., cls=JSONEncoder, full=True, **kwargs)",
+"lineno": 48,
+"endlineno": 60,
 "parsed": [
 {
 "kind": "text",
-"value": "JSON encoder.\n\nJSON encoders are not used directly, but through\nthe [`json.dump`][] or [`json.dumps`][] methods."
+"value": "JSON encoder.\n\nJSON encoders can be used directly, or through\nthe [`json.dump`][] or [`json.dumps`][] methods."
 },
 {
 "kind": "examples",
 "value": [
 [
 "examples",
-">>> import json\n>>> from griffe.encoders import Encoder\n>>> json.dumps(..., cls=Encoder, full=True, **kwargs)"
+">>> from griffe.encoders import JSONEncoder\n>>> JSONEncoder(full=True).encode(..., **kwargs)"
+],
+[
+"examples",
+">>> import json\n>>> from griffe.encoders import JSONEncoder\n>>> json.dumps(..., cls=JSONEncoder, full=True, **kwargs)"
 ]
 ]
 }
@@ -554,15 +614,15 @@
 {
 "kind": "function",
 "name": "__init__",
-"path": "griffe.encoders.Encoder.__init__",
+"path": "griffe.encoders.JSONEncoder.__init__",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 45,
-"endlineno": 70,
+"lineno": 62,
+"endlineno": 87,
 "docstring": {
-"value": "Initialize the encoder.\n\nParameters:\n    *args: See [`json.JSONEncoder`][].\n    full: Whether to dump full data or base data.\n        If you plan to reload the data in Python memory\n        using the [decoder][griffe.encoders.decoder],\n        you don't need the full data as it can be infered again\n        using the base data. If you want to feed a non-Python\n        tool instead, dump the full data.\n    docstring_parser: The docstring parser to use. By default, no parsing is done.\n    docstring_options: Additional docstring parsing options.\n    **kwargs: See [`json.JSONEncoder`][].",
-"lineno": 53,
-"endlineno": 66,
+"value": "Initialize the encoder.\n\nParameters:\n    *args: See [`json.JSONEncoder`][].\n    full: Whether to dump full data or base data.\n        If you plan to reload the data in Python memory\n        using the [`json_decoder`][griffe.encoders.json_decoder],\n        you don't need the full data as it can be infered again\n        using the base data. If you want to feed a non-Python\n        tool instead, dump the full data.\n    docstring_parser: The docstring parser to use. By default, no parsing is done.\n    docstring_options: Additional docstring parsing options.\n    **kwargs: See [`json.JSONEncoder`][].",
+"lineno": 70,
+"endlineno": 83,
 "parsed": [
 {
 "kind": "parameters",
@@ -582,7 +642,7 @@
 "source": "bool",
 "full": "bool"
 },
-"description": "Whether to dump full data or base data.\nIf you plan to reload the data in Python memory\nusing the [decoder][griffe.encoders.decoder],\nyou don't need the full data as it can be infered again\nusing the base data. If you want to feed a non-Python\ntool instead, dump the full data.",
+"description": "Whether to dump full data or base data.\nIf you plan to reload the data in Python memory\nusing the [`json_decoder`][griffe.encoders.json_decoder],\nyou don't need the full data as it can be infered again\nusing the base data. If you want to feed a non-Python\ntool instead, dump the full data.",
 "value": "False"
 },
 {
@@ -723,11 +783,11 @@
 {
 "kind": "attribute",
 "name": "full",
-"path": "griffe.encoders.Encoder.full",
+"path": "griffe.encoders.JSONEncoder.full",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 68,
-"endlineno": 68,
+"lineno": 85,
+"endlineno": 85,
 "labels": [
 "instance-attribute"
 ],
@@ -741,11 +801,11 @@
 {
 "kind": "attribute",
 "name": "docstring_parser",
-"path": "griffe.encoders.Encoder.docstring_parser",
+"path": "griffe.encoders.JSONEncoder.docstring_parser",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 69,
-"endlineno": 69,
+"lineno": 86,
+"endlineno": 86,
 "labels": [
 "instance-attribute"
 ],
@@ -763,11 +823,11 @@
 {
 "kind": "attribute",
 "name": "docstring_options",
-"path": "griffe.encoders.Encoder.docstring_options",
+"path": "griffe.encoders.JSONEncoder.docstring_options",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 70,
-"endlineno": 70,
+"lineno": 87,
+"endlineno": 87,
 "labels": [
 "instance-attribute"
 ],
@@ -796,15 +856,15 @@
 {
 "kind": "function",
 "name": "default",
-"path": "griffe.encoders.Encoder.default",
+"path": "griffe.encoders.JSONEncoder.default",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 72,
-"endlineno": 84,
+"lineno": 89,
+"endlineno": 101,
 "docstring": {
 "value": "Return a serializable representation of the given object.\n\nParameters:\n    obj: The object to serialize.\n\nReturns:\n    A serializable representation.",
-"lineno": 73,
-"endlineno": 80,
+"lineno": 90,
+"endlineno": 97,
 "parsed": [
 {
 "kind": "text",
@@ -881,20 +941,487 @@
 },
 {
 "kind": "function",
-"name": "decoder",
-"path": "griffe.encoders.decoder",
+"name": "_load_docstring",
+"path": "griffe.encoders._load_docstring",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 87,
-"endlineno": 114,
+"lineno": 104,
+"endlineno": 107,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "obj_dict",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": null
+},
+{
+"kind": "function",
+"name": "_load_decorators",
+"path": "griffe.encoders._load_decorators",
+"filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
+"relative_filepath": "griffe/encoders.py",
+"lineno": 110,
+"endlineno": 111,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "obj_dict",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": null
+},
+{
+"kind": "attribute",
+"name": "_annotation_loader_map",
+"path": "griffe.encoders._annotation_loader_map",
+"filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
+"relative_filepath": "griffe/encoders.py",
+"lineno": 114,
+"endlineno": 118,
+"labels": [
+"module-attribute"
+],
+"members": [],
+"value": "{str: lambda _: _, dict: lambda dct: Name(dct['source'], dct['full']), list: lambda lst: Expression([_load_annotation(_) for _ in lst])}"
+},
+{
+"kind": "function",
+"name": "_load_annotation",
+"path": "griffe.encoders._load_annotation",
+"filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
+"relative_filepath": "griffe/encoders.py",
+"lineno": 121,
+"endlineno": 124,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "annotation",
+"annotation": [
+[
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+{
+"source": "dict",
+"full": "dict"
+}
+],
+" | ",
+{
+"source": "list",
+"full": "list"
+}
+],
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": [
+[
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+{
+"source": "Name",
+"full": "griffe.expressions.Name"
+}
+],
+" | ",
+{
+"source": "Expression",
+"full": "griffe.expressions.Expression"
+}
+]
+},
+{
+"kind": "function",
+"name": "_load_parameter",
+"path": "griffe.encoders._load_parameter",
+"filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
+"relative_filepath": "griffe/encoders.py",
+"lineno": 127,
+"endlineno": 133,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "obj_dict",
+"annotation": [
+{
+"source": "dict",
+"full": "dict"
+},
+"[",
+[
+{
+"source": "str",
+"full": "str"
+},
+", ",
+{
+"source": "Any",
+"full": "typing.Any"
+}
+],
+"]"
+],
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": {
+"source": "Parameter",
+"full": "griffe.dataclasses.Parameter"
+}
+},
+{
+"kind": "function",
+"name": "_load_module",
+"path": "griffe.encoders._load_module",
+"filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
+"relative_filepath": "griffe/encoders.py",
+"lineno": 136,
+"endlineno": 141,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "obj_dict",
+"annotation": [
+{
+"source": "dict",
+"full": "dict"
+},
+"[",
+[
+{
+"source": "str",
+"full": "str"
+},
+", ",
+{
+"source": "Any",
+"full": "typing.Any"
+}
+],
+"]"
+],
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": {
+"source": "Module",
+"full": "griffe.dataclasses.Module"
+}
+},
+{
+"kind": "function",
+"name": "_load_class",
+"path": "griffe.encoders._load_class",
+"filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
+"relative_filepath": "griffe/encoders.py",
+"lineno": 144,
+"endlineno": 156,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "obj_dict",
+"annotation": [
+{
+"source": "dict",
+"full": "dict"
+},
+"[",
+[
+{
+"source": "str",
+"full": "str"
+},
+", ",
+{
+"source": "Any",
+"full": "typing.Any"
+}
+],
+"]"
+],
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": {
+"source": "Class",
+"full": "griffe.dataclasses.Class"
+}
+},
+{
+"kind": "function",
+"name": "_load_function",
+"path": "griffe.encoders._load_function",
+"filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
+"relative_filepath": "griffe/encoders.py",
+"lineno": 159,
+"endlineno": 170,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "obj_dict",
+"annotation": [
+{
+"source": "dict",
+"full": "dict"
+},
+"[",
+[
+{
+"source": "str",
+"full": "str"
+},
+", ",
+{
+"source": "Any",
+"full": "typing.Any"
+}
+],
+"]"
+],
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": {
+"source": "Function",
+"full": "griffe.dataclasses.Function"
+}
+},
+{
+"kind": "function",
+"name": "_load_attribute",
+"path": "griffe.encoders._load_attribute",
+"filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
+"relative_filepath": "griffe/encoders.py",
+"lineno": 173,
+"endlineno": 183,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "obj_dict",
+"annotation": [
+{
+"source": "dict",
+"full": "dict"
+},
+"[",
+[
+{
+"source": "str",
+"full": "str"
+},
+", ",
+{
+"source": "Any",
+"full": "typing.Any"
+}
+],
+"]"
+],
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": {
+"source": "Attribute",
+"full": "griffe.dataclasses.Attribute"
+}
+},
+{
+"kind": "function",
+"name": "_load_alias",
+"path": "griffe.encoders._load_alias",
+"filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
+"relative_filepath": "griffe/encoders.py",
+"lineno": 186,
+"endlineno": 192,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "obj_dict",
+"annotation": [
+{
+"source": "dict",
+"full": "dict"
+},
+"[",
+[
+{
+"source": "str",
+"full": "str"
+},
+", ",
+{
+"source": "Any",
+"full": "typing.Any"
+}
+],
+"]"
+],
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": {
+"source": "Alias",
+"full": "griffe.dataclasses.Alias"
+}
+},
+{
+"kind": "attribute",
+"name": "_loader_map",
+"path": "griffe.encoders._loader_map",
+"filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
+"relative_filepath": "griffe/encoders.py",
+"lineno": 195,
+"endlineno": 201,
+"labels": [
+"module-attribute"
+],
+"members": [],
+"value": "{Kind.MODULE: _load_module, Kind.CLASS: _load_class, Kind.FUNCTION: _load_function, Kind.ATTRIBUTE: _load_attribute, Kind.ALIAS: _load_alias}",
+"annotation": [
+{
+"source": "dict",
+"full": "dict"
+},
+"[",
+[
+{
+"source": "Kind",
+"full": "griffe.dataclasses.Kind"
+},
+", ",
+[
+{
+"source": "Callable",
+"full": "typing.Callable"
+},
+"[",
+[
+[
+"[",
+[
+{
+"source": "dict",
+"full": "dict"
+},
+"[",
+[
+{
+"source": "str",
+"full": "str"
+},
+", ",
+{
+"source": "Any",
+"full": "typing.Any"
+}
+],
+"]"
+],
+"]"
+],
+", ",
+[
+[
+[
+[
+{
+"source": "Module",
+"full": "griffe.dataclasses.Module"
+},
+" | ",
+{
+"source": "Class",
+"full": "griffe.dataclasses.Class"
+}
+],
+" | ",
+{
+"source": "Function",
+"full": "griffe.dataclasses.Function"
+}
+],
+" | ",
+{
+"source": "Attribute",
+"full": "griffe.dataclasses.Attribute"
+}
+],
+" | ",
+{
+"source": "Alias",
+"full": "griffe.dataclasses.Alias"
+}
+]
+],
+"]"
+]
+],
+"]"
+]
+},
+{
+"kind": "function",
+"name": "json_decoder",
+"path": "griffe.encoders.json_decoder",
+"filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
+"relative_filepath": "griffe/encoders.py",
+"lineno": 204,
+"endlineno": 226,
 "docstring": {
-"value": "Decode dictionaries as data classes.\n\nThe [`json.loads`][] method walks the tree from bottom to top.\n\nParameters:\n    obj_dict: The dictionary to decode.\n\nReturns:\n    An instance of a data class.",
-"lineno": 88,
-"endlineno": 97,
+"value": "Decode dictionaries as data classes.\n\nThe [`json.loads`][] method walks the tree from bottom to top.\n\nExamples:\n    >>> import json\n    >>> from griffe.encoders import json_decoder\n    >>> json.loads(..., object_hook=json_decoder)\n\nParameters:\n    obj_dict: The dictionary to decode.\n\nReturns:\n    An instance of a data class.",
+"lineno": 205,
+"endlineno": 219,
 "parsed": [
 {
 "kind": "text",
 "value": "Decode dictionaries as data classes.\n\nThe [`json.loads`][] method walks the tree from bottom to top."
+},
+{
+"kind": "examples",
+"value": [
+[
+"examples",
+">>> import json\n>>> from griffe.encoders import json_decoder\n>>> json.loads(..., object_hook=json_decoder)"
+]
+]
 },
 {
 "kind": "parameters",
@@ -931,6 +1458,8 @@
 "name": "",
 "annotation": [
 [
+[
+[
 {
 "source": "dict",
 "full": "dict"
@@ -953,6 +1482,18 @@
 {
 "source": "Object",
 "full": "griffe.dataclasses.Object"
+}
+],
+" | ",
+{
+"source": "Alias",
+"full": "griffe.dataclasses.Alias"
+}
+],
+" | ",
+{
+"source": "Parameter",
+"full": "griffe.dataclasses.Parameter"
 }
 ],
 "description": "An instance of a data class."
@@ -992,6 +1533,8 @@
 ],
 "returns": [
 [
+[
+[
 {
 "source": "dict",
 "full": "dict"
@@ -1014,6 +1557,18 @@
 {
 "source": "Object",
 "full": "griffe.dataclasses.Object"
+}
+],
+" | ",
+{
+"source": "Alias",
+"full": "griffe.dataclasses.Alias"
+}
+],
+" | ",
+{
+"source": "Parameter",
+"full": "griffe.dataclasses.Parameter"
 }
 ]
 }
@@ -9282,9 +9837,9 @@
 },
 {
 "kind": "alias",
-"name": "Encoder",
-"target_path": "griffe.encoders.Encoder",
-"path": "griffe.cli.Encoder",
+"name": "JSONEncoder",
+"target_path": "griffe.encoders.JSONEncoder",
+"path": "griffe.cli.JSONEncoder",
 "lineno": 28,
 "endlineno": 28
 },
@@ -10326,16 +10881,45 @@
 },
 {
 "kind": "class",
-"name": "NameResolutionError",
-"path": "griffe.exceptions.NameResolutionError",
+"name": "LoadingError",
+"path": "griffe.exceptions.LoadingError",
 "filepath": "/media/data/dev/griffe/src/griffe/exceptions.py",
 "relative_filepath": "griffe/exceptions.py",
 "lineno": 10,
 "endlineno": 11,
 "docstring": {
-"value": "Exception for names that cannot be resolved in a object scope.",
+"value": "The base exception for all Griffe errors.",
 "lineno": 11,
 "endlineno": 11,
+"parsed": [
+{
+"kind": "text",
+"value": "The base exception for all Griffe errors."
+}
+]
+},
+"labels": [],
+"members": [],
+"bases": [
+{
+"source": "GriffeError",
+"full": "griffe.exceptions.GriffeError"
+}
+],
+"decorators": []
+},
+{
+"kind": "class",
+"name": "NameResolutionError",
+"path": "griffe.exceptions.NameResolutionError",
+"filepath": "/media/data/dev/griffe/src/griffe/exceptions.py",
+"relative_filepath": "griffe/exceptions.py",
+"lineno": 14,
+"endlineno": 15,
+"docstring": {
+"value": "Exception for names that cannot be resolved in a object scope.",
+"lineno": 15,
+"endlineno": 15,
 "parsed": [
 {
 "kind": "text",
@@ -10359,12 +10943,12 @@
 "path": "griffe.exceptions.UnhandledPthFileError",
 "filepath": "/media/data/dev/griffe/src/griffe/exceptions.py",
 "relative_filepath": "griffe/exceptions.py",
-"lineno": 14,
-"endlineno": 15,
+"lineno": 18,
+"endlineno": 19,
 "docstring": {
 "value": "Exception for unhandled .pth files, when searching modules.",
-"lineno": 15,
-"endlineno": 15,
+"lineno": 19,
+"endlineno": 19,
 "parsed": [
 {
 "kind": "text",
@@ -10388,12 +10972,12 @@
 "path": "griffe.exceptions.UnhandledEditablesModuleError",
 "filepath": "/media/data/dev/griffe/src/griffe/exceptions.py",
 "relative_filepath": "griffe/exceptions.py",
-"lineno": 18,
-"endlineno": 19,
+"lineno": 22,
+"endlineno": 23,
 "docstring": {
 "value": "Exception for unhandled editables modules, when searching modules.",
-"lineno": 19,
-"endlineno": 19,
+"lineno": 23,
+"endlineno": 23,
 "parsed": [
 {
 "kind": "text",
@@ -10417,12 +11001,12 @@
 "path": "griffe.exceptions.UnimportableModuleError",
 "filepath": "/media/data/dev/griffe/src/griffe/exceptions.py",
 "relative_filepath": "griffe/exceptions.py",
-"lineno": 22,
-"endlineno": 23,
+"lineno": 26,
+"endlineno": 27,
 "docstring": {
 "value": "Exception for modules that cannot be imported.",
-"lineno": 23,
-"endlineno": 23,
+"lineno": 27,
+"endlineno": 27,
 "parsed": [
 {
 "kind": "text",
@@ -10446,12 +11030,12 @@
 "path": "griffe.exceptions.AliasResolutionError",
 "filepath": "/media/data/dev/griffe/src/griffe/exceptions.py",
 "relative_filepath": "griffe/exceptions.py",
-"lineno": 26,
-"endlineno": 36,
+"lineno": 30,
+"endlineno": 40,
 "docstring": {
 "value": "Exception for alias that cannot be resolved.",
-"lineno": 27,
-"endlineno": 27,
+"lineno": 31,
+"endlineno": 31,
 "parsed": [
 {
 "kind": "text",
@@ -10467,12 +11051,12 @@
 "path": "griffe.exceptions.AliasResolutionError.__init__",
 "filepath": "/media/data/dev/griffe/src/griffe/exceptions.py",
 "relative_filepath": "griffe/exceptions.py",
-"lineno": 29,
-"endlineno": 36,
+"lineno": 33,
+"endlineno": 40,
 "docstring": {
 "value": "Initialize the exception.\n\nParameters:\n    target_path: The problematic target path.",
-"lineno": 30,
-"endlineno": 34,
+"lineno": 34,
+"endlineno": 38,
 "parsed": [
 {
 "kind": "parameters",
@@ -10517,8 +11101,8 @@
 "path": "griffe.exceptions.AliasResolutionError.target_path",
 "filepath": "/media/data/dev/griffe/src/griffe/exceptions.py",
 "relative_filepath": "griffe/exceptions.py",
-"lineno": 35,
-"endlineno": 35,
+"lineno": 39,
+"endlineno": 39,
 "labels": [
 "instance-attribute"
 ],
@@ -10544,12 +11128,12 @@
 "path": "griffe.exceptions.CyclicAliasError",
 "filepath": "/media/data/dev/griffe/src/griffe/exceptions.py",
 "relative_filepath": "griffe/exceptions.py",
-"lineno": 39,
-"endlineno": 49,
+"lineno": 43,
+"endlineno": 53,
 "docstring": {
 "value": "Exception raised when a cycle is detected in aliases.",
-"lineno": 40,
-"endlineno": 40,
+"lineno": 44,
+"endlineno": 44,
 "parsed": [
 {
 "kind": "text",
@@ -10565,12 +11149,12 @@
 "path": "griffe.exceptions.CyclicAliasError.__init__",
 "filepath": "/media/data/dev/griffe/src/griffe/exceptions.py",
 "relative_filepath": "griffe/exceptions.py",
-"lineno": 42,
-"endlineno": 49,
+"lineno": 46,
+"endlineno": 53,
 "docstring": {
 "value": "Initialize the exception.\n\nParameters:\n    chain: The cyclic chain of items (such as target path).",
-"lineno": 43,
-"endlineno": 47,
+"lineno": 47,
+"endlineno": 51,
 "parsed": [
 {
 "kind": "parameters",
@@ -10631,8 +11215,8 @@
 "path": "griffe.exceptions.CyclicAliasError.chain",
 "filepath": "/media/data/dev/griffe/src/griffe/exceptions.py",
 "relative_filepath": "griffe/exceptions.py",
-"lineno": 48,
-"endlineno": 48,
+"lineno": 52,
+"endlineno": 52,
 "labels": [
 "instance-attribute"
 ],
@@ -10666,12 +11250,12 @@
 "path": "griffe.exceptions.LastNodeError",
 "filepath": "/media/data/dev/griffe/src/griffe/exceptions.py",
 "relative_filepath": "griffe/exceptions.py",
-"lineno": 52,
-"endlineno": 53,
+"lineno": 56,
+"endlineno": 57,
 "docstring": {
 "value": "Exception raised when trying to access a next or previous node.",
-"lineno": 53,
-"endlineno": 53,
+"lineno": 57,
+"endlineno": 57,
 "parsed": [
 {
 "kind": "text",
@@ -10695,12 +11279,12 @@
 "path": "griffe.exceptions.RootNodeError",
 "filepath": "/media/data/dev/griffe/src/griffe/exceptions.py",
 "relative_filepath": "griffe/exceptions.py",
-"lineno": 56,
-"endlineno": 57,
+"lineno": 60,
+"endlineno": 61,
 "docstring": {
 "value": "Exception raised when trying to use siblings properties on a root node.",
-"lineno": 57,
-"endlineno": 57,
+"lineno": 61,
+"endlineno": 61,
 "parsed": [
 {
 "kind": "text",
@@ -10724,12 +11308,12 @@
 "path": "griffe.exceptions.BuiltinModuleError",
 "filepath": "/media/data/dev/griffe/src/griffe/exceptions.py",
 "relative_filepath": "griffe/exceptions.py",
-"lineno": 60,
-"endlineno": 61,
+"lineno": 64,
+"endlineno": 65,
 "docstring": {
 "value": "Exception raised when trying to access the filepath of a builtin module.",
-"lineno": 61,
-"endlineno": 61,
+"lineno": 65,
+"endlineno": 65,
 "parsed": [
 {
 "kind": "text",
@@ -10753,12 +11337,12 @@
 "path": "griffe.exceptions.ExtensionError",
 "filepath": "/media/data/dev/griffe/src/griffe/exceptions.py",
 "relative_filepath": "griffe/exceptions.py",
-"lineno": 64,
-"endlineno": 65,
+"lineno": 68,
+"endlineno": 69,
 "docstring": {
 "value": "Base class for errors raised by extensions.",
-"lineno": 65,
-"endlineno": 65,
+"lineno": 69,
+"endlineno": 69,
 "parsed": [
 {
 "kind": "text",
@@ -10782,12 +11366,12 @@
 "path": "griffe.exceptions.ExtensionNotLoadedError",
 "filepath": "/media/data/dev/griffe/src/griffe/exceptions.py",
 "relative_filepath": "griffe/exceptions.py",
-"lineno": 68,
-"endlineno": 69,
+"lineno": 72,
+"endlineno": 73,
 "docstring": {
 "value": "Exception raised when an extension could not be loaded.",
-"lineno": 69,
-"endlineno": 69,
+"lineno": 73,
+"endlineno": 73,
 "parsed": [
 {
 "kind": "text",
@@ -14144,6 +14728,14 @@
 },
 {
 "kind": "alias",
+"name": "LoadingError",
+"target_path": "griffe.exceptions.LoadingError",
+"path": "griffe.loader.LoadingError",
+"lineno": 27,
+"endlineno": 27
+},
+{
+"kind": "alias",
 "name": "UnimportableModuleError",
 "target_path": "griffe.exceptions.UnimportableModuleError",
 "path": "griffe.loader.UnimportableModuleError",
@@ -14240,7 +14832,7 @@
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
 "lineno": 66,
-"endlineno": 386,
+"endlineno": 410,
 "docstring": {
 "value": "The Griffe loader, allowing to load data from modules.",
 "lineno": 67,
@@ -14669,11 +15261,11 @@
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
 "lineno": 102,
-"endlineno": 133,
+"endlineno": 141,
 "docstring": {
-"value": "Load a module.\n\nParameters:\n    module: The module name or path.\n    submodules: Whether to recurse on the submodules.\n    try_relative_path: Whether to try finding the module as a relative path.\n\nReturns:\n    A module.",
+"value": "Load a module.\n\nParameters:\n    module: The module name or path.\n    submodules: Whether to recurse on the submodules.\n    try_relative_path: Whether to try finding the module as a relative path.\n\nRaises:\n    LoadingError: When loading a module failed for various reasons.\n\nReturns:\n    A module.",
 "lineno": 108,
-"endlineno": 117,
+"endlineno": 120,
 "parsed": [
 {
 "kind": "text",
@@ -14714,6 +15306,18 @@
 },
 "description": "Whether to try finding the module as a relative path.",
 "value": "True"
+}
+]
+},
+{
+"kind": "raises",
+"value": [
+{
+"annotation": {
+"source": "LoadingError",
+"full": "griffe.exceptions.LoadingError"
+},
+"description": "When loading a module failed for various reasons."
 }
 ]
 },
@@ -14788,12 +15392,12 @@
 "path": "griffe.loader.GriffeLoader.resolve_aliases",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 135,
-"endlineno": 170,
+"lineno": 143,
+"endlineno": 178,
 "docstring": {
 "value": "Resolve aliases.\n\nParameters:\n    only_exported: When true, only try to resolve an alias if it is explicitely exported.\n    only_known_modules: When true, don't try to load unspecified modules to resolve aliases.\n    max_iterations: Maximum number of iterations on the loader modules collection.\n\nReturns:\n    The unresolved aliases and the number of iterations done.",
-"lineno": 141,
-"endlineno": 150,
+"lineno": 149,
+"endlineno": 158,
 "parsed": [
 {
 "kind": "text",
@@ -14949,12 +15553,12 @@
 "path": "griffe.loader.GriffeLoader.resolve_module_aliases",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 172,
-"endlineno": 261,
+"lineno": 180,
+"endlineno": 269,
 "docstring": {
 "value": "Follow aliases: try to recursively resolve all found aliases.\n\nParameters:\n    obj: The object and its members to recurse on.\n    only_exported: When true, only try to resolve an alias if it is explicitely exported.\n    only_known_modules: When true, don't try to load unspecified modules to resolve aliases.\n    seen: Used to avoid infinite recursion.\n\nReturns:\n    Both sets of resolved and unresolved aliases.",
-"lineno": 179,
-"endlineno": 189,
+"lineno": 187,
+"endlineno": 197,
 "parsed": [
 {
 "kind": "text",
@@ -15143,12 +15747,12 @@
 "path": "griffe.loader.GriffeLoader.stats",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 263,
-"endlineno": 269,
+"lineno": 271,
+"endlineno": 277,
 "docstring": {
 "value": "Compute some statistics.\n\nReturns:\n    Some statistics.",
-"lineno": 264,
-"endlineno": 268,
+"lineno": 272,
+"endlineno": 276,
 "parsed": [
 {
 "kind": "text",
@@ -15187,12 +15791,133 @@
 },
 {
 "kind": "function",
+"name": "_store_and_return",
+"path": "griffe.loader.GriffeLoader._store_and_return",
+"filepath": "/media/data/dev/griffe/src/griffe/loader.py",
+"relative_filepath": "griffe/loader.py",
+"lineno": 279,
+"endlineno": 281,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "name",
+"annotation": {
+"source": "str",
+"full": "str"
+},
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "module",
+"annotation": {
+"source": "Module",
+"full": "griffe.dataclasses.Module"
+},
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": {
+"source": "Module",
+"full": "griffe.dataclasses.Module"
+}
+},
+{
+"kind": "function",
+"name": "_load_module",
+"path": "griffe.loader.GriffeLoader._load_module",
+"filepath": "/media/data/dev/griffe/src/griffe/loader.py",
+"relative_filepath": "griffe/loader.py",
+"lineno": 283,
+"endlineno": 299,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "module_name",
+"annotation": {
+"source": "str",
+"full": "str"
+},
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "module_path",
+"annotation": [
+{
+"source": "Path",
+"full": "pathlib.Path"
+},
+" | ",
+[
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "Path",
+"full": "pathlib.Path"
+},
+"]"
+]
+],
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "submodules",
+"annotation": {
+"source": "bool",
+"full": "bool"
+},
+"kind": "positional or keyword",
+"default": "True"
+},
+{
+"name": "parent",
+"annotation": [
+{
+"source": "Module",
+"full": "griffe.dataclasses.Module"
+},
+" | ",
+"None"
+],
+"kind": "positional or keyword",
+"default": "None"
+}
+],
+"returns": {
+"source": "Module",
+"full": "griffe.dataclasses.Module"
+}
+},
+{
+"kind": "function",
 "name": "_load_module_path",
 "path": "griffe.loader.GriffeLoader._load_module_path",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 271,
-"endlineno": 288,
+"lineno": 301,
+"endlineno": 318,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -15270,8 +15995,8 @@
 "path": "griffe.loader.GriffeLoader._load_submodules",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 290,
-"endlineno": 292,
+"lineno": 320,
+"endlineno": 322,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -15300,8 +16025,8 @@
 "path": "griffe.loader.GriffeLoader._load_submodule",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 294,
-"endlineno": 313,
+"lineno": 324,
+"endlineno": 337,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -15360,8 +16085,8 @@
 "path": "griffe.loader.GriffeLoader._create_module",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 315,
-"endlineno": 321,
+"lineno": 339,
+"endlineno": 345,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -15417,8 +16142,8 @@
 "path": "griffe.loader.GriffeLoader._visit_module",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 323,
-"endlineno": 339,
+"lineno": 347,
+"endlineno": 363,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -15481,8 +16206,8 @@
 "path": "griffe.loader.GriffeLoader._inspect_module",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 341,
-"endlineno": 361,
+"lineno": 365,
+"endlineno": 385,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -15540,8 +16265,8 @@
 "path": "griffe.loader.GriffeLoader._member_parent",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 363,
-"endlineno": 377,
+"lineno": 387,
+"endlineno": 401,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -15603,8 +16328,8 @@
 "path": "griffe.loader.GriffeLoader._expand_wildcard",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 379,
-"endlineno": 386,
+"lineno": 403,
+"endlineno": 410,
 "labels": [],
 "members": [],
 "decorators": [],

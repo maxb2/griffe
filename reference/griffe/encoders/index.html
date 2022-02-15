@@ -884,15 +884,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#griffe.encoders.Encoder" class="md-nav__link">
-    Encoder
+  <a href="#griffe.encoders.JSONEncoder" class="md-nav__link">
+    JSONEncoder
   </a>
   
-    <nav class="md-nav" aria-label="Encoder">
+    <nav class="md-nav" aria-label="JSONEncoder">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#griffe.encoders.Encoder.default" class="md-nav__link">
+  <a href="#griffe.encoders.JSONEncoder.default" class="md-nav__link">
     default()
   </a>
   
@@ -904,8 +904,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#griffe.encoders.decoder" class="md-nav__link">
-    decoder()
+  <a href="#griffe.encoders.json_decoder" class="md-nav__link">
+    json_decoder()
   </a>
   
 </li>
@@ -1167,15 +1167,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#griffe.encoders.Encoder" class="md-nav__link">
-    Encoder
+  <a href="#griffe.encoders.JSONEncoder" class="md-nav__link">
+    JSONEncoder
   </a>
   
-    <nav class="md-nav" aria-label="Encoder">
+    <nav class="md-nav" aria-label="JSONEncoder">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#griffe.encoders.Encoder.default" class="md-nav__link">
+  <a href="#griffe.encoders.JSONEncoder.default" class="md-nav__link">
     default()
   </a>
   
@@ -1187,8 +1187,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#griffe.encoders.decoder" class="md-nav__link">
-    decoder()
+  <a href="#griffe.encoders.json_decoder" class="md-nav__link">
+    json_decoder()
   </a>
   
 </li>
@@ -1220,7 +1220,7 @@
       <p>This module contains data encoders/serializers and decoders/deserializers.</p>
 <p>The available formats are:</p>
 <ul>
-<li><code>JSON</code>: see the <a href="#griffe.encoders.Encoder">encoder</a> and <a href="#griffe.encoders.decoder">decoder</a>.</li>
+<li><code>JSON</code>: see the <a href="#griffe.encoders.JSONEncoder"><code>JSONEncoder</code></a> and <a href="#griffe.encoders.json_decoder"><code>json_decoder</code></a>.</li>
 </ul>
 
 
@@ -1234,15 +1234,17 @@
 
 
 
+
+
   <div class="doc doc-object doc-class">
 
 
 
-<h2 id="griffe.encoders.Encoder" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">Encoder</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">docstring_parser</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+<h2 id="griffe.encoders.JSONEncoder" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">JSONEncoder</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">docstring_parser</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 
-<a href="#griffe.encoders.Encoder" class="headerlink" title="Permanent link">¤</a></h2>
+<a href="#griffe.encoders.JSONEncoder" class="headerlink" title="Permanent link">¤</a></h2>
 
 
     <div class="doc doc-contents ">
@@ -1251,7 +1253,7 @@
 
 
       <p>JSON encoder.</p>
-<p>JSON encoders are not used directly, but through
+<p>JSON encoders can be used directly, or through
 the <a href="https://docs.python.org/3/library/json.html#json.dump"><code>json.dump</code></a> or <a href="https://docs.python.org/3/library/json.html#json.dumps"><code>json.dumps</code></a> methods.</p>
 
 <p><strong>Examples:</strong></p>
@@ -1270,7 +1272,7 @@ the <a href="https://docs.python.org/3/library/json.html#json.dump"><code>json.d
             (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
         – <p>Whether to dump full data or base data.
 If you plan to reload the data in Python memory
-using the <a href="#griffe.encoders.decoder">decoder</a>,
+using the <a href="#griffe.encoders.json_decoder"><code>json_decoder</code></a>,
 you don't need the full data as it can be infered again
 using the base data. If you want to feed a non-Python
 tool instead, dump the full data.</p>
@@ -1294,21 +1296,7 @@ tool instead, dump the full data.</p>
 
             <details class="quote">
               <summary>Source code in <code>griffe/encoders.py</code></summary>
-              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">47</span>
 <span class="normal">48</span>
 <span class="normal">49</span>
 <span class="normal">50</span>
@@ -1319,7 +1307,21 @@ tool instead, dump the full data.</p>
 <span class="normal">55</span>
 <span class="normal">56</span>
 <span class="normal">57</span>
-<span class="normal">58</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
     <span class="n">full</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -1333,7 +1335,7 @@ tool instead, dump the full data.</p>
 <span class="sd">        *args: See [`json.JSONEncoder`][].</span>
 <span class="sd">        full: Whether to dump full data or base data.</span>
 <span class="sd">            If you plan to reload the data in Python memory</span>
-<span class="sd">            using the [decoder][griffe.encoders.decoder],</span>
+<span class="sd">            using the [`json_decoder`][griffe.encoders.json_decoder],</span>
 <span class="sd">            you don&#39;t need the full data as it can be infered again</span>
 <span class="sd">            using the base data. If you want to feed a non-Python</span>
 <span class="sd">            tool instead, dump the full data.</span>
@@ -1367,11 +1369,11 @@ tool instead, dump the full data.</p>
 
 
 
-<h3 id="griffe.encoders.Encoder.default" class="doc doc-heading">
+<h3 id="griffe.encoders.JSONEncoder.default" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span></code>
 
 
-<a href="#griffe.encoders.Encoder.default" class="headerlink" title="Permanent link">¤</a></h3>
+<a href="#griffe.encoders.JSONEncoder.default" class="headerlink" title="Permanent link">¤</a></h3>
 
 
     <div class="doc doc-contents ">
@@ -1397,19 +1399,19 @@ tool instead, dump the full data.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/encoders.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>  <span class="c1"># noqa: WPS212</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>  <span class="c1"># noqa: WPS212</span>
     <span class="sd">&quot;&quot;&quot;Return a serializable representation of the given object.</span>
 
 <span class="sd">    Parameters:</span>
@@ -1421,7 +1423,7 @@ tool instead, dump the full data.</p>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">obj</span><span class="o">.</span><span class="n">as_dict</span><span class="p">(</span><span class="n">full</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">full</span><span class="p">,</span> <span class="n">docstring_parser</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">docstring_parser</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">docstring_options</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">_type_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">obj</span><span class="p">),</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">default</span><span class="p">)(</span><span class="n">obj</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">_json_encoder_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">obj</span><span class="p">),</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">default</span><span class="p">)(</span><span class="n">obj</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -1443,21 +1445,32 @@ tool instead, dump the full data.</p>
 
 
 
+
+
+
+
+
+
+
+
+
   <div class="doc doc-object doc-function">
 
 
 
-<h2 id="griffe.encoders.decoder" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">decoder</span><span class="p">(</span><span class="n">obj_dict</span><span class="p">)</span></code>
+<h2 id="griffe.encoders.json_decoder" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">json_decoder</span><span class="p">(</span><span class="n">obj_dict</span><span class="p">)</span></code>
 
 
-<a href="#griffe.encoders.decoder" class="headerlink" title="Permanent link">¤</a></h2>
+<a href="#griffe.encoders.json_decoder" class="headerlink" title="Permanent link">¤</a></h2>
 
 
     <div class="doc doc-contents ">
 
       <p>Decode dictionaries as data classes.</p>
 <p>The <a href="https://docs.python.org/3/library/json.html#json.loads"><code>json.loads</code></a> method walks the tree from bottom to top.</p>
+
+<p><strong>Examples:</strong></p>
 
   <p>Parameters:</p>
   <ul>
@@ -1471,44 +1484,44 @@ tool instead, dump the full data.</p>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | <a title="griffe.dataclasses.Object" href="../dataclasses/#griffe.dataclasses.Object">Object</a></code>
+            <code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | <a title="griffe.dataclasses.Object" href="../dataclasses/#griffe.dataclasses.Object">Object</a> | <a title="griffe.dataclasses.Alias" href="../dataclasses/#griffe.dataclasses.Alias">Alias</a> | <a title="griffe.dataclasses.Parameter" href="../dataclasses/#griffe.dataclasses.Parameter">Parameter</a></code>
         – <p>An instance of a data class.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/encoders.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">decoder</span><span class="p">(</span><span class="n">obj_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="n">Object</span><span class="p">:</span>  <span class="c1"># noqa: WPS231</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">json_decoder</span><span class="p">(</span><span class="n">obj_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="n">Object</span> <span class="o">|</span> <span class="n">Alias</span> <span class="o">|</span> <span class="n">Parameter</span><span class="p">:</span>  <span class="c1"># noqa: WPS231</span>
     <span class="sd">&quot;&quot;&quot;Decode dictionaries as data classes.</span>
 
 <span class="sd">    The [`json.loads`][] method walks the tree from bottom to top.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; import json</span>
+<span class="sd">        &gt;&gt;&gt; from griffe.encoders import json_decoder</span>
+<span class="sd">        &gt;&gt;&gt; json.loads(..., object_hook=json_decoder)</span>
 
 <span class="sd">    Parameters:</span>
 <span class="sd">        obj_dict: The dictionary to decode.</span>
@@ -1517,21 +1530,11 @@ tool instead, dump the full data.</p>
 <span class="sd">        An instance of a data class.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="s2">&quot;kind&quot;</span> <span class="ow">in</span> <span class="n">obj_dict</span><span class="p">:</span>
-        <span class="n">kind</span> <span class="o">=</span> <span class="n">Kind</span><span class="p">(</span><span class="n">obj_dict</span><span class="p">[</span><span class="s2">&quot;kind&quot;</span><span class="p">])</span>
-        <span class="k">if</span> <span class="n">kind</span> <span class="o">==</span> <span class="n">Kind</span><span class="o">.</span><span class="n">MODULE</span><span class="p">:</span>
-            <span class="n">module</span> <span class="o">=</span> <span class="n">Module</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">obj_dict</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">filepath</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="n">obj_dict</span><span class="p">[</span><span class="s2">&quot;filepath&quot;</span><span class="p">]))</span>
-            <span class="k">for</span> <span class="n">module_member</span> <span class="ow">in</span> <span class="n">obj_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;members&quot;</span><span class="p">,</span> <span class="p">[]):</span>
-                <span class="n">module</span><span class="p">[</span><span class="n">module_member</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">module_member</span>
-            <span class="k">return</span> <span class="n">module</span>
-        <span class="k">elif</span> <span class="n">kind</span> <span class="o">==</span> <span class="n">Kind</span><span class="o">.</span><span class="n">CLASS</span><span class="p">:</span>
-            <span class="n">class_</span> <span class="o">=</span> <span class="n">Class</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">obj_dict</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">lineno</span><span class="o">=</span><span class="n">obj_dict</span><span class="p">[</span><span class="s2">&quot;lineno&quot;</span><span class="p">],</span> <span class="n">endlineno</span><span class="o">=</span><span class="n">obj_dict</span><span class="p">[</span><span class="s2">&quot;endlineno&quot;</span><span class="p">])</span>
-            <span class="k">for</span> <span class="n">class_member</span> <span class="ow">in</span> <span class="n">obj_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;members&quot;</span><span class="p">,</span> <span class="p">[]):</span>
-                <span class="n">class_</span><span class="p">[</span><span class="n">class_member</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">class_member</span>
-            <span class="k">return</span> <span class="n">class_</span>
-        <span class="k">elif</span> <span class="n">kind</span> <span class="o">==</span> <span class="n">Kind</span><span class="o">.</span><span class="n">FUNCTION</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">Function</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">obj_dict</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">lineno</span><span class="o">=</span><span class="n">obj_dict</span><span class="p">[</span><span class="s2">&quot;lineno&quot;</span><span class="p">],</span> <span class="n">endlineno</span><span class="o">=</span><span class="n">obj_dict</span><span class="p">[</span><span class="s2">&quot;endlineno&quot;</span><span class="p">])</span>
-        <span class="k">elif</span> <span class="n">kind</span> <span class="o">==</span> <span class="n">Kind</span><span class="o">.</span><span class="n">ATTRIBUTE</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">Attribute</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">obj_dict</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">lineno</span><span class="o">=</span><span class="n">obj_dict</span><span class="p">[</span><span class="s2">&quot;lineno&quot;</span><span class="p">],</span> <span class="n">endlineno</span><span class="o">=</span><span class="n">obj_dict</span><span class="p">[</span><span class="s2">&quot;endlineno&quot;</span><span class="p">])</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">kind</span> <span class="o">=</span> <span class="n">Kind</span><span class="p">(</span><span class="n">obj_dict</span><span class="p">[</span><span class="s2">&quot;kind&quot;</span><span class="p">])</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_load_parameter</span><span class="p">(</span><span class="n">obj_dict</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">_loader_map</span><span class="p">[</span><span class="n">kind</span><span class="p">](</span><span class="n">obj_dict</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">obj_dict</span>
 </code></pre></div>
 </td></tr></table>
