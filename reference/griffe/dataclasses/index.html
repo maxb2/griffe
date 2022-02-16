@@ -2270,8 +2270,7 @@ If it's an object, or even another alias, the target is immediately set.</p>
 
             <details class="quote">
               <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">724</span>
-<span class="normal">725</span>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">725</span>
 <span class="normal">726</span>
 <span class="normal">727</span>
 <span class="normal">728</span>
@@ -2302,7 +2301,8 @@ If it's an object, or even another alias, the target is immediately set.</p>
 <span class="normal">753</span>
 <span class="normal">754</span>
 <span class="normal">755</span>
-<span class="normal">756</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">756</span>
+<span class="normal">757</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">target</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Object</span> <span class="o">|</span> <span class="n">Alias</span><span class="p">,</span>
@@ -2401,9 +2401,7 @@ If it's an object, or even another alias, the target is immediately set.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">917</span>
-<span class="normal">918</span>
-<span class="normal">919</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">919</span>
 <span class="normal">920</span>
 <span class="normal">921</span>
 <span class="normal">922</span>
@@ -2425,7 +2423,9 @@ If it's an object, or even another alias, the target is immediately set.</p>
 <span class="normal">938</span>
 <span class="normal">939</span>
 <span class="normal">940</span>
-<span class="normal">941</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="normal">941</span>
+<span class="normal">942</span>
+<span class="normal">943</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Return this alias&#39; data as a dictionary.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2484,8 +2484,7 @@ If it's an object, or even another alias, the target is immediately set.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">806</span>
-<span class="normal">807</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">807</span>
 <span class="normal">808</span>
 <span class="normal">809</span>
 <span class="normal">810</span>
@@ -2495,7 +2494,8 @@ If it's an object, or even another alias, the target is immediately set.</p>
 <span class="normal">814</span>
 <span class="normal">815</span>
 <span class="normal">816</span>
-<span class="normal">817</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">817</span>
+<span class="normal">818</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">kind</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Kind</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the target&#39;s kind, or Kind.ALIAS if the target cannot be resolved.</span>
 
@@ -2541,15 +2541,15 @@ If it's an object, or even another alias, the target is immediately set.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">844</span>
-<span class="normal">845</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">845</span>
 <span class="normal">846</span>
 <span class="normal">847</span>
 <span class="normal">848</span>
 <span class="normal">849</span>
 <span class="normal">850</span>
 <span class="normal">851</span>
-<span class="normal">852</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">852</span>
+<span class="normal">853</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">modules_collection</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ModulesCollection</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the modules collection attached to the alias parents.</span>
 
@@ -2593,14 +2593,14 @@ If it's an object, or even another alias, the target is immediately set.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">835</span>
-<span class="normal">836</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">836</span>
 <span class="normal">837</span>
 <span class="normal">838</span>
 <span class="normal">839</span>
 <span class="normal">840</span>
 <span class="normal">841</span>
-<span class="normal">842</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">842</span>
+<span class="normal">843</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the dotted path / import path of this object.</span>
 
@@ -2652,9 +2652,7 @@ and added to the collection.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">876</span>
-<span class="normal">877</span>
-<span class="normal">878</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">878</span>
 <span class="normal">879</span>
 <span class="normal">880</span>
 <span class="normal">881</span>
@@ -2671,7 +2669,9 @@ and added to the collection.</p>
 <span class="normal">892</span>
 <span class="normal">893</span>
 <span class="normal">894</span>
-<span class="normal">895</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_target</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">895</span>
+<span class="normal">896</span>
+<span class="normal">897</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_target</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Resolve the target.</span>
 
 <span class="sd">    Raises:</span>
@@ -2725,14 +2725,14 @@ and added to the collection.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">897</span>
-<span class="normal">898</span>
-<span class="normal">899</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">899</span>
 <span class="normal">900</span>
 <span class="normal">901</span>
 <span class="normal">902</span>
 <span class="normal">903</span>
-<span class="normal">904</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">904</span>
+<span class="normal">905</span>
+<span class="normal">906</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">resolved</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell whether this alias&#39; target is resolved.</span>
 
@@ -2775,16 +2775,16 @@ and added to the collection.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">906</span>
-<span class="normal">907</span>
-<span class="normal">908</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">908</span>
 <span class="normal">909</span>
 <span class="normal">910</span>
 <span class="normal">911</span>
 <span class="normal">912</span>
 <span class="normal">913</span>
 <span class="normal">914</span>
-<span class="normal">915</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">915</span>
+<span class="normal">916</span>
+<span class="normal">917</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">wildcard</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the module on which the wildcard import is performed (if any).</span>
 
@@ -2859,9 +2859,7 @@ and added to the collection.</p>
 
             <details class="quote">
               <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1147</span>
-<span class="normal">1148</span>
-<span class="normal">1149</span>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1149</span>
 <span class="normal">1150</span>
 <span class="normal">1151</span>
 <span class="normal">1152</span>
@@ -2876,7 +2874,9 @@ and added to the collection.</p>
 <span class="normal">1161</span>
 <span class="normal">1162</span>
 <span class="normal">1163</span>
-<span class="normal">1164</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">1164</span>
+<span class="normal">1165</span>
+<span class="normal">1166</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
     <span class="n">value</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -2946,9 +2946,7 @@ and added to the collection.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1171</span>
-<span class="normal">1172</span>
-<span class="normal">1173</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1173</span>
 <span class="normal">1174</span>
 <span class="normal">1175</span>
 <span class="normal">1176</span>
@@ -2960,7 +2958,9 @@ and added to the collection.</p>
 <span class="normal">1182</span>
 <span class="normal">1183</span>
 <span class="normal">1184</span>
-<span class="normal">1185</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
+<span class="normal">1185</span>
+<span class="normal">1186</span>
+<span class="normal">1187</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
     <span class="sd">&quot;&quot;&quot;Return this function&#39;s data as a dictionary.</span>
 
 <span class="sd">    Parameters:</span>
@@ -3040,9 +3040,7 @@ and added to the collection.</p>
 
             <details class="quote">
               <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1056</span>
-<span class="normal">1057</span>
-<span class="normal">1058</span>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1058</span>
 <span class="normal">1059</span>
 <span class="normal">1060</span>
 <span class="normal">1061</span>
@@ -3057,7 +3055,9 @@ and added to the collection.</p>
 <span class="normal">1070</span>
 <span class="normal">1071</span>
 <span class="normal">1072</span>
-<span class="normal">1073</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">1073</span>
+<span class="normal">1074</span>
+<span class="normal">1075</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
     <span class="n">bases</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -3127,9 +3127,7 @@ and added to the collection.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1080</span>
-<span class="normal">1081</span>
-<span class="normal">1082</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1082</span>
 <span class="normal">1083</span>
 <span class="normal">1084</span>
 <span class="normal">1085</span>
@@ -3139,7 +3137,9 @@ and added to the collection.</p>
 <span class="normal">1089</span>
 <span class="normal">1090</span>
 <span class="normal">1091</span>
-<span class="normal">1092</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
+<span class="normal">1092</span>
+<span class="normal">1093</span>
+<span class="normal">1094</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
     <span class="sd">&quot;&quot;&quot;Return this class&#39; data as a dictionary.</span>
 
 <span class="sd">    Parameters:</span>
@@ -3803,9 +3803,7 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
             <details class="quote">
               <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1095</span>
-<span class="normal">1096</span>
-<span class="normal">1097</span>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1097</span>
 <span class="normal">1098</span>
 <span class="normal">1099</span>
 <span class="normal">1100</span>
@@ -3823,7 +3821,9 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 <span class="normal">1112</span>
 <span class="normal">1113</span>
 <span class="normal">1114</span>
-<span class="normal">1115</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">1115</span>
+<span class="normal">1116</span>
+<span class="normal">1117</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
     <span class="n">parameters</span><span class="p">:</span> <span class="n">Parameters</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -3888,14 +3888,14 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1122</span>
-<span class="normal">1123</span>
-<span class="normal">1124</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1124</span>
 <span class="normal">1125</span>
 <span class="normal">1126</span>
 <span class="normal">1127</span>
 <span class="normal">1128</span>
-<span class="normal">1129</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">1129</span>
+<span class="normal">1130</span>
+<span class="normal">1131</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">annotation</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the return annotation.</span>
 
@@ -3946,9 +3946,7 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1131</span>
-<span class="normal">1132</span>
-<span class="normal">1133</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1133</span>
 <span class="normal">1134</span>
 <span class="normal">1135</span>
 <span class="normal">1136</span>
@@ -3959,7 +3957,9 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 <span class="normal">1141</span>
 <span class="normal">1142</span>
 <span class="normal">1143</span>
-<span class="normal">1144</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
+<span class="normal">1144</span>
+<span class="normal">1145</span>
+<span class="normal">1146</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
     <span class="sd">&quot;&quot;&quot;Return this function&#39;s data as a dictionary.</span>
 
 <span class="sd">    Parameters:</span>
@@ -4104,16 +4104,16 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
             <details class="quote">
               <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">944</span>
-<span class="normal">945</span>
-<span class="normal">946</span>
+              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">946</span>
 <span class="normal">947</span>
 <span class="normal">948</span>
 <span class="normal">949</span>
 <span class="normal">950</span>
 <span class="normal">951</span>
 <span class="normal">952</span>
-<span class="normal">953</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">953</span>
+<span class="normal">954</span>
+<span class="normal">955</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Initialize the module.</span>
 
 <span class="sd">    Parameters:</span>
@@ -4175,9 +4175,7 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1042</span>
-<span class="normal">1043</span>
-<span class="normal">1044</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1044</span>
 <span class="normal">1045</span>
 <span class="normal">1046</span>
 <span class="normal">1047</span>
@@ -4186,7 +4184,9 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 <span class="normal">1050</span>
 <span class="normal">1051</span>
 <span class="normal">1052</span>
-<span class="normal">1053</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
+<span class="normal">1053</span>
+<span class="normal">1054</span>
+<span class="normal">1055</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
     <span class="sd">&quot;&quot;&quot;Return this module&#39;s data as a dictionary.</span>
 
 <span class="sd">    Parameters:</span>
@@ -4241,9 +4241,7 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">966</span>
-<span class="normal">967</span>
-<span class="normal">968</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">968</span>
 <span class="normal">969</span>
 <span class="normal">970</span>
 <span class="normal">971</span>
@@ -4253,7 +4251,9 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 <span class="normal">975</span>
 <span class="normal">976</span>
 <span class="normal">977</span>
-<span class="normal">978</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">978</span>
+<span class="normal">979</span>
+<span class="normal">980</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">filepath</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Get the file path of this module.</span>
 
@@ -4300,9 +4300,7 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">980</span>
-<span class="normal">981</span>
-<span class="normal">982</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">982</span>
 <span class="normal">983</span>
 <span class="normal">984</span>
 <span class="normal">985</span>
@@ -4312,7 +4310,9 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 <span class="normal">989</span>
 <span class="normal">990</span>
 <span class="normal">991</span>
-<span class="normal">992</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">992</span>
+<span class="normal">993</span>
+<span class="normal">994</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">is_init_module</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if this module is an `__init__.py` module.</span>
 
@@ -4359,9 +4359,7 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1012</span>
-<span class="normal">1013</span>
-<span class="normal">1014</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1014</span>
 <span class="normal">1015</span>
 <span class="normal">1016</span>
 <span class="normal">1017</span>
@@ -4369,7 +4367,9 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 <span class="normal">1019</span>
 <span class="normal">1020</span>
 <span class="normal">1021</span>
-<span class="normal">1022</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">1022</span>
+<span class="normal">1023</span>
+<span class="normal">1024</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">is_namespace_package</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if this module is a namespace package (top folder, no `__init__.py`).</span>
 
@@ -4414,9 +4414,7 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1024</span>
-<span class="normal">1025</span>
-<span class="normal">1026</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1026</span>
 <span class="normal">1027</span>
 <span class="normal">1028</span>
 <span class="normal">1029</span>
@@ -4430,7 +4428,9 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 <span class="normal">1037</span>
 <span class="normal">1038</span>
 <span class="normal">1039</span>
-<span class="normal">1040</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">1040</span>
+<span class="normal">1041</span>
+<span class="normal">1042</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">is_namespace_subpackage</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if this module is a namespace subpackage.</span>
 
@@ -4481,14 +4481,14 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 994</span>
-<span class="normal"> 995</span>
-<span class="normal"> 996</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 996</span>
 <span class="normal"> 997</span>
 <span class="normal"> 998</span>
 <span class="normal"> 999</span>
 <span class="normal">1000</span>
-<span class="normal">1001</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">1001</span>
+<span class="normal">1002</span>
+<span class="normal">1003</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">is_package</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if this module is a package (top module).</span>
 
@@ -4530,14 +4530,14 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1003</span>
-<span class="normal">1004</span>
-<span class="normal">1005</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1005</span>
 <span class="normal">1006</span>
 <span class="normal">1007</span>
 <span class="normal">1008</span>
 <span class="normal">1009</span>
-<span class="normal">1010</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">1010</span>
+<span class="normal">1011</span>
+<span class="normal">1012</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">is_subpackage</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if this module is a subpackage.</span>
 
@@ -4815,8 +4815,7 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">669</span>
-<span class="normal">670</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">670</span>
 <span class="normal">671</span>
 <span class="normal">672</span>
 <span class="normal">673</span>
@@ -4850,7 +4849,8 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 <span class="normal">701</span>
 <span class="normal">702</span>
 <span class="normal">703</span>
-<span class="normal">704</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="normal">704</span>
+<span class="normal">705</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Return this object&#39;s data as a dictionary.</span>
 
 <span class="sd">    Parameters:</span>
@@ -4920,14 +4920,14 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">473</span>
-<span class="normal">474</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">474</span>
 <span class="normal">475</span>
 <span class="normal">476</span>
 <span class="normal">477</span>
 <span class="normal">478</span>
 <span class="normal">479</span>
-<span class="normal">480</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">480</span>
+<span class="normal">481</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Attribute</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Return the attribute members.</span>
 
@@ -4970,8 +4970,7 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">564</span>
-<span class="normal">565</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">565</span>
 <span class="normal">566</span>
 <span class="normal">567</span>
 <span class="normal">568</span>
@@ -4981,7 +4980,8 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 <span class="normal">572</span>
 <span class="normal">573</span>
 <span class="normal">574</span>
-<span class="normal">575</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">575</span>
+<span class="normal">576</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">canonical_path</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the full dotted path of this object.</span>
 
@@ -5027,14 +5027,14 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">455</span>
-<span class="normal">456</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">456</span>
 <span class="normal">457</span>
 <span class="normal">458</span>
 <span class="normal">459</span>
 <span class="normal">460</span>
 <span class="normal">461</span>
-<span class="normal">462</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">462</span>
+<span class="normal">463</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">classes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Class</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Return the class members.</span>
 
@@ -5080,8 +5080,7 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">510</span>
-<span class="normal">511</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">511</span>
 <span class="normal">512</span>
 <span class="normal">513</span>
 <span class="normal">514</span>
@@ -5092,7 +5091,8 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 <span class="normal">519</span>
 <span class="normal">520</span>
 <span class="normal">521</span>
-<span class="normal">522</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">522</span>
+<span class="normal">523</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">filepath</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Return the file path where this object was defined.</span>
 
@@ -5148,8 +5148,7 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">429</span>
-<span class="normal">430</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">430</span>
 <span class="normal">431</span>
 <span class="normal">432</span>
 <span class="normal">433</span>
@@ -5163,7 +5162,8 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 <span class="normal">441</span>
 <span class="normal">442</span>
 <span class="normal">443</span>
-<span class="normal">444</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">filter_members</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">predicates</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Object</span> <span class="o">|</span> <span class="n">Alias</span><span class="p">],</span> <span class="nb">bool</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Object</span> <span class="o">|</span> <span class="n">Alias</span><span class="p">]:</span>
+<span class="normal">444</span>
+<span class="normal">445</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">filter_members</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">predicates</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Object</span> <span class="o">|</span> <span class="n">Alias</span><span class="p">],</span> <span class="nb">bool</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Object</span> <span class="o">|</span> <span class="n">Alias</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Filter and return members based on predicates.</span>
 
 <span class="sd">    Parameters:</span>
@@ -5213,14 +5213,14 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">464</span>
-<span class="normal">465</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">465</span>
 <span class="normal">466</span>
 <span class="normal">467</span>
 <span class="normal">468</span>
 <span class="normal">469</span>
 <span class="normal">470</span>
-<span class="normal">471</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">471</span>
+<span class="normal">472</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">functions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Function</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Return the function members.</span>
 
@@ -5347,8 +5347,7 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">418</span>
-<span class="normal">419</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">419</span>
 <span class="normal">420</span>
 <span class="normal">421</span>
 <span class="normal">422</span>
@@ -5356,7 +5355,8 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 <span class="normal">424</span>
 <span class="normal">425</span>
 <span class="normal">426</span>
-<span class="normal">427</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">has_labels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">labels</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="normal">427</span>
+<span class="normal">428</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">has_labels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">labels</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if this object has all the given labels.</span>
 
 <span class="sd">    Parameters:</span>
@@ -5392,10 +5392,10 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">413</span>
-<span class="normal">414</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">414</span>
 <span class="normal">415</span>
-<span class="normal">416</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">416</span>
+<span class="normal">417</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">is_attribute</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if this object is an attribute.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">ATTRIBUTE</span>  <span class="c1"># noqa: DAR201</span>
@@ -5425,10 +5425,10 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">403</span>
-<span class="normal">404</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">404</span>
 <span class="normal">405</span>
-<span class="normal">406</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">406</span>
+<span class="normal">407</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">is_class</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if this object is a class.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">CLASS</span>  <span class="c1"># noqa: DAR201</span>
@@ -5458,10 +5458,10 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">408</span>
-<span class="normal">409</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">409</span>
 <span class="normal">410</span>
-<span class="normal">411</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">411</span>
+<span class="normal">412</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">is_function</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if this object is a function.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">FUNCTION</span>  <span class="c1"># noqa: DAR201</span>
@@ -5517,8 +5517,7 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">378</span>
-<span class="normal">379</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">379</span>
 <span class="normal">380</span>
 <span class="normal">381</span>
 <span class="normal">382</span>
@@ -5535,7 +5534,8 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 <span class="normal">393</span>
 <span class="normal">394</span>
 <span class="normal">395</span>
-<span class="normal">396</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">is_kind</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kind</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Kind</span> <span class="o">|</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="n">Kind</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="normal">396</span>
+<span class="normal">397</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">is_kind</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kind</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Kind</span> <span class="o">|</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="n">Kind</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if this object is of the given kind.</span>
 
 <span class="sd">    Parameters:</span>
@@ -5580,10 +5580,10 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">398</span>
-<span class="normal">399</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">399</span>
 <span class="normal">400</span>
-<span class="normal">401</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">401</span>
+<span class="normal">402</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">is_module</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if this object is a module.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="ow">is</span> <span class="n">Kind</span><span class="o">.</span><span class="n">MODULE</span>  <span class="c1"># noqa: DAR201</span>
@@ -5621,8 +5621,7 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">609</span>
-<span class="normal">610</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">610</span>
 <span class="normal">611</span>
 <span class="normal">612</span>
 <span class="normal">613</span>
@@ -5645,7 +5644,8 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 <span class="normal">630</span>
 <span class="normal">631</span>
 <span class="normal">632</span>
-<span class="normal">633</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">633</span>
+<span class="normal">634</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">lines</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Return the lines containing the source of this object.</span>
 
@@ -5713,8 +5713,7 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">593</span>
-<span class="normal">594</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">594</span>
 <span class="normal">595</span>
 <span class="normal">596</span>
 <span class="normal">597</span>
@@ -5727,7 +5726,8 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
 <span class="normal">604</span>
 <span class="normal">605</span>
 <span class="normal">606</span>
-<span class="normal">607</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">607</span>
+<span class="normal">608</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">lines_collection</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">LinesCollection</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the lines collection attached to this object or its parents.</span>
 
@@ -5767,7 +5767,8 @@ If it <em>does</em> return None, it means the tree was not built correctly.</p>
       <p>Tell if a member of this object is "exported".</p>
 <p>By exported, we mean that the object is included in the <code>__all__</code> attribute
 of its parent module or class. When <code>_all__</code> is not defined,
-we consider the member to be <em>implicitely</em> exported.</p>
+we consider the member to be <em>implicitely</em> exported,
+unless it's a module and it was not imported.</p>
 
   <p>Parameters:</p>
   <ul>
@@ -5809,12 +5810,14 @@ we consider the member to be <em>implicitely</em> exported.</p>
 <span class="normal">373</span>
 <span class="normal">374</span>
 <span class="normal">375</span>
-<span class="normal">376</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">member_is_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">member</span><span class="p">:</span> <span class="n">Object</span> <span class="o">|</span> <span class="n">Alias</span><span class="p">,</span> <span class="n">explicitely</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="normal">376</span>
+<span class="normal">377</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">member_is_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">member</span><span class="p">:</span> <span class="n">Object</span> <span class="o">|</span> <span class="n">Alias</span><span class="p">,</span> <span class="n">explicitely</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if a member of this object is &quot;exported&quot;.</span>
 
 <span class="sd">    By exported, we mean that the object is included in the `__all__` attribute</span>
 <span class="sd">    of its parent module or class. When `_all__` is not defined,</span>
-<span class="sd">    we consider the member to be *implicitely* exported.</span>
+<span class="sd">    we consider the member to be *implicitely* exported,</span>
+<span class="sd">    unless it&#39;s a module and it was not imported.</span>
 
 <span class="sd">    Parameters:</span>
 <span class="sd">        member: The member to verify.</span>
@@ -5824,7 +5827,7 @@ we consider the member to be <em>implicitely</em> exported.</p>
 <span class="sd">        True or False.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">exports</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">return</span> <span class="ow">not</span> <span class="n">explicitely</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="n">explicitely</span> <span class="ow">and</span> <span class="p">(</span><span class="n">member</span><span class="o">.</span><span class="n">is_alias</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">member</span><span class="o">.</span><span class="n">is_module</span> <span class="ow">or</span> <span class="n">member</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">imports</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">member</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">exports</span>
 </code></pre></div>
 </td></tr></table>
@@ -5869,8 +5872,7 @@ we consider the member to be <em>implicitely</em> exported.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">482</span>
-<span class="normal">483</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">483</span>
 <span class="normal">484</span>
 <span class="normal">485</span>
 <span class="normal">486</span>
@@ -5883,7 +5885,8 @@ we consider the member to be <em>implicitely</em> exported.</p>
 <span class="normal">493</span>
 <span class="normal">494</span>
 <span class="normal">495</span>
-<span class="normal">496</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">496</span>
+<span class="normal">497</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">module</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the parent module of this object.</span>
 
@@ -5932,14 +5935,14 @@ we consider the member to be <em>implicitely</em> exported.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">446</span>
-<span class="normal">447</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">447</span>
 <span class="normal">448</span>
 <span class="normal">449</span>
 <span class="normal">450</span>
 <span class="normal">451</span>
 <span class="normal">452</span>
-<span class="normal">453</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">453</span>
+<span class="normal">454</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">modules</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Module</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Return the module members.</span>
 
@@ -5990,8 +5993,7 @@ we consider the member to be <em>implicitely</em> exported.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">577</span>
-<span class="normal">578</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">578</span>
 <span class="normal">579</span>
 <span class="normal">580</span>
 <span class="normal">581</span>
@@ -6004,7 +6006,8 @@ we consider the member to be <em>implicitely</em> exported.</p>
 <span class="normal">588</span>
 <span class="normal">589</span>
 <span class="normal">590</span>
-<span class="normal">591</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">591</span>
+<span class="normal">592</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">modules_collection</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ModulesCollection</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the modules collection attached to this object or its parents.</span>
 
@@ -6053,8 +6056,7 @@ we consider the member to be <em>implicitely</em> exported.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">498</span>
-<span class="normal">499</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">499</span>
 <span class="normal">500</span>
 <span class="normal">501</span>
 <span class="normal">502</span>
@@ -6063,7 +6065,8 @@ we consider the member to be <em>implicitely</em> exported.</p>
 <span class="normal">505</span>
 <span class="normal">506</span>
 <span class="normal">507</span>
-<span class="normal">508</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">508</span>
+<span class="normal">509</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">package</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the absolute top module (the package) of this object.</span>
 
@@ -6109,8 +6112,7 @@ we consider the member to be <em>implicitely</em> exported.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">553</span>
-<span class="normal">554</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">554</span>
 <span class="normal">555</span>
 <span class="normal">556</span>
 <span class="normal">557</span>
@@ -6118,7 +6120,8 @@ we consider the member to be <em>implicitely</em> exported.</p>
 <span class="normal">559</span>
 <span class="normal">560</span>
 <span class="normal">561</span>
-<span class="normal">562</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">562</span>
+<span class="normal">563</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the dotted path of this object.</span>
 
@@ -6171,8 +6174,7 @@ we consider the member to be <em>implicitely</em> exported.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">524</span>
-<span class="normal">525</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">525</span>
 <span class="normal">526</span>
 <span class="normal">527</span>
 <span class="normal">528</span>
@@ -6198,7 +6200,8 @@ we consider the member to be <em>implicitely</em> exported.</p>
 <span class="normal">548</span>
 <span class="normal">549</span>
 <span class="normal">550</span>
-<span class="normal">551</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">551</span>
+<span class="normal">552</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>  <span class="c1"># noqa: WPS231</span>
 <span class="k">def</span> <span class="nf">relative_filepath</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>  <span class="c1"># noqa: WPS231</span>
     <span class="sd">&quot;&quot;&quot;Return the file path where this object was defined, relative to the top module path.</span>
 
@@ -6278,8 +6281,7 @@ we consider the member to be <em>implicitely</em> exported.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">644</span>
-<span class="normal">645</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">645</span>
 <span class="normal">646</span>
 <span class="normal">647</span>
 <span class="normal">648</span>
@@ -6301,7 +6303,8 @@ we consider the member to be <em>implicitely</em> exported.</p>
 <span class="normal">664</span>
 <span class="normal">665</span>
 <span class="normal">666</span>
-<span class="normal">667</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resolve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="normal">667</span>
+<span class="normal">668</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resolve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Resolve a name within this object&#39;s and parents&#39; scope.</span>
 
 <span class="sd">    Parameters:</span>
@@ -6359,14 +6362,14 @@ we consider the member to be <em>implicitely</em> exported.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">635</span>
-<span class="normal">636</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">636</span>
 <span class="normal">637</span>
 <span class="normal">638</span>
 <span class="normal">639</span>
 <span class="normal">640</span>
 <span class="normal">641</span>
-<span class="normal">642</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
+<span class="normal">642</span>
+<span class="normal">643</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@cached_property</span>
 <span class="k">def</span> <span class="nf">source</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the source code of this object.</span>
 
