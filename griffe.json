@@ -34591,7 +34591,7 @@
 "module-attribute"
 ],
 "members": [],
-"value": "'[_a-z][_a-z0-9]*'",
+"value": "'\\\\*{0,2}[_a-z][_a-z0-9]*'",
 "annotation": {
 "source": "str",
 "full": "str"
