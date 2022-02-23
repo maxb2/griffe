@@ -1215,12 +1215,14 @@
 
 
 
+
+
   <div class="doc doc-object doc-function">
 
 
 
 <h2 id="griffe.docstrings.google.parse" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">parse</span><span class="p">(</span><span class="n">docstring</span><span class="p">,</span> <span class="n">ignore_init_summary</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">parse</span><span class="p">(</span><span class="n">docstring</span><span class="p">,</span> <span class="n">ignore_init_summary</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">trim_doctest_flags</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span></code>
 
 
 <a href="#griffe.docstrings.google.parse" class="headerlink" title="Permanent link">¤</a></h2>
@@ -1245,6 +1247,11 @@ It then returns this list of sections.</p>
         – <p>Whether to ignore the summary in <code>__init__</code> methods' docstrings.</p>
       </li>
       <li class="field-body">
+        <b>trim_doctest_flags</b>
+            (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
+        – <p>Whether to remove doctest flags from Python example blocks.</p>
+      </li>
+      <li class="field-body">
         <b>**options</b>
             (<code><a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
         – <p>Additional parsing options.</p>
@@ -1261,56 +1268,7 @@ It then returns this list of sections.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/google.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">498</span>
-<span class="normal">499</span>
-<span class="normal">500</span>
-<span class="normal">501</span>
-<span class="normal">502</span>
-<span class="normal">503</span>
-<span class="normal">504</span>
-<span class="normal">505</span>
-<span class="normal">506</span>
-<span class="normal">507</span>
-<span class="normal">508</span>
-<span class="normal">509</span>
-<span class="normal">510</span>
-<span class="normal">511</span>
-<span class="normal">512</span>
-<span class="normal">513</span>
-<span class="normal">514</span>
-<span class="normal">515</span>
-<span class="normal">516</span>
-<span class="normal">517</span>
-<span class="normal">518</span>
-<span class="normal">519</span>
-<span class="normal">520</span>
-<span class="normal">521</span>
-<span class="normal">522</span>
-<span class="normal">523</span>
-<span class="normal">524</span>
-<span class="normal">525</span>
-<span class="normal">526</span>
-<span class="normal">527</span>
-<span class="normal">528</span>
-<span class="normal">529</span>
-<span class="normal">530</span>
-<span class="normal">531</span>
-<span class="normal">532</span>
-<span class="normal">533</span>
-<span class="normal">534</span>
-<span class="normal">535</span>
-<span class="normal">536</span>
-<span class="normal">537</span>
-<span class="normal">538</span>
-<span class="normal">539</span>
-<span class="normal">540</span>
-<span class="normal">541</span>
-<span class="normal">542</span>
-<span class="normal">543</span>
-<span class="normal">544</span>
-<span class="normal">545</span>
-<span class="normal">546</span>
-<span class="normal">547</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">547</span>
 <span class="normal">548</span>
 <span class="normal">549</span>
 <span class="normal">550</span>
@@ -1358,9 +1316,67 @@ It then returns this list of sections.</p>
 <span class="normal">592</span>
 <span class="normal">593</span>
 <span class="normal">594</span>
-<span class="normal">595</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">595</span>
+<span class="normal">596</span>
+<span class="normal">597</span>
+<span class="normal">598</span>
+<span class="normal">599</span>
+<span class="normal">600</span>
+<span class="normal">601</span>
+<span class="normal">602</span>
+<span class="normal">603</span>
+<span class="normal">604</span>
+<span class="normal">605</span>
+<span class="normal">606</span>
+<span class="normal">607</span>
+<span class="normal">608</span>
+<span class="normal">609</span>
+<span class="normal">610</span>
+<span class="normal">611</span>
+<span class="normal">612</span>
+<span class="normal">613</span>
+<span class="normal">614</span>
+<span class="normal">615</span>
+<span class="normal">616</span>
+<span class="normal">617</span>
+<span class="normal">618</span>
+<span class="normal">619</span>
+<span class="normal">620</span>
+<span class="normal">621</span>
+<span class="normal">622</span>
+<span class="normal">623</span>
+<span class="normal">624</span>
+<span class="normal">625</span>
+<span class="normal">626</span>
+<span class="normal">627</span>
+<span class="normal">628</span>
+<span class="normal">629</span>
+<span class="normal">630</span>
+<span class="normal">631</span>
+<span class="normal">632</span>
+<span class="normal">633</span>
+<span class="normal">634</span>
+<span class="normal">635</span>
+<span class="normal">636</span>
+<span class="normal">637</span>
+<span class="normal">638</span>
+<span class="normal">639</span>
+<span class="normal">640</span>
+<span class="normal">641</span>
+<span class="normal">642</span>
+<span class="normal">643</span>
+<span class="normal">644</span>
+<span class="normal">645</span>
+<span class="normal">646</span>
+<span class="normal">647</span>
+<span class="normal">648</span>
+<span class="normal">649</span>
+<span class="normal">650</span>
+<span class="normal">651</span>
+<span class="normal">652</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
     <span class="n">docstring</span><span class="p">:</span> <span class="n">Docstring</span><span class="p">,</span>
     <span class="n">ignore_init_summary</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">trim_doctest_flags</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="o">**</span><span class="n">options</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">DocstringSection</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Parse a docstring.</span>
@@ -1371,6 +1387,7 @@ It then returns this list of sections.</p>
 <span class="sd">    Parameters:</span>
 <span class="sd">        docstring: The docstring to parse.</span>
 <span class="sd">        ignore_init_summary: Whether to ignore the summary in `__init__` methods&#39; docstrings.</span>
+<span class="sd">        trim_doctest_flags: Whether to remove doctest flags from Python example blocks.</span>
 <span class="sd">        **options: Additional parsing options.</span>
 
 <span class="sd">    Returns:</span>
@@ -1382,8 +1399,14 @@ It then returns this list of sections.</p>
     <span class="n">in_code_block</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="n">lines</span> <span class="o">=</span> <span class="n">docstring</span><span class="o">.</span><span class="n">lines</span>
 
+    <span class="n">options</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;ignore_init_summary&quot;</span><span class="p">:</span> <span class="n">ignore_init_summary</span><span class="p">,</span>
+        <span class="s2">&quot;trim_doctest_flags&quot;</span><span class="p">:</span> <span class="n">trim_doctest_flags</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">options</span><span class="p">,</span>
+    <span class="p">}</span>
+
     <span class="n">ignore_summary</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="n">ignore_init_summary</span>  <span class="c1"># noqa: WPS222</span>
+        <span class="n">options</span><span class="p">[</span><span class="s2">&quot;ignore_init_summary&quot;</span><span class="p">]</span>  <span class="c1"># noqa: WPS222</span>
         <span class="ow">and</span> <span class="n">docstring</span><span class="o">.</span><span class="n">parent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
         <span class="ow">and</span> <span class="n">docstring</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;__init__&quot;</span>
         <span class="ow">and</span> <span class="n">docstring</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">is_function</span>
@@ -1426,7 +1449,7 @@ It then returns this list of sections.</p>
                             <span class="p">)</span>
                         <span class="n">current_section</span> <span class="o">=</span> <span class="p">[]</span>
                     <span class="n">reader</span> <span class="o">=</span> <span class="n">_section_reader</span><span class="p">[</span><span class="n">_section_kind</span><span class="p">[</span><span class="n">admonition_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()]]</span>
-                    <span class="n">section</span><span class="p">,</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">reader</span><span class="p">(</span><span class="n">docstring</span><span class="p">,</span> <span class="n">offset</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+                    <span class="n">section</span><span class="p">,</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">reader</span><span class="p">(</span><span class="n">docstring</span><span class="p">,</span> <span class="n">offset</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[operator]</span>
                     <span class="k">if</span> <span class="n">section</span><span class="p">:</span>
                         <span class="n">section</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
                         <span class="n">sections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">section</span><span class="p">)</span>

@@ -32921,7 +32921,7 @@
 "module-attribute"
 ],
 "members": [],
-"value": "{'args': DocstringSectionKind.parameters, 'arguments': DocstringSectionKind.parameters, 'params': DocstringSectionKind.parameters, 'parameters': DocstringSectionKind.parameters, 'keyword args': DocstringSectionKind.other_parameters, 'keyword parameters': DocstringSectionKind.other_parameters, 'other args': DocstringSectionKind.other_parameters, 'other parameters': DocstringSectionKind.other_parameters, 'raises': DocstringSectionKind.raises, 'exceptions': DocstringSectionKind.raises, 'returns': DocstringSectionKind.returns, 'yields': DocstringSectionKind.yields, 'examples': DocstringSectionKind.examples, 'attributes': DocstringSectionKind.attributes}"
+"value": "{'args': DocstringSectionKind.parameters, 'arguments': DocstringSectionKind.parameters, 'params': DocstringSectionKind.parameters, 'parameters': DocstringSectionKind.parameters, 'keyword args': DocstringSectionKind.other_parameters, 'keyword arguments': DocstringSectionKind.other_parameters, 'other args': DocstringSectionKind.other_parameters, 'other parameters': DocstringSectionKind.other_parameters, 'raises': DocstringSectionKind.raises, 'exceptions': DocstringSectionKind.raises, 'returns': DocstringSectionKind.returns, 'yields': DocstringSectionKind.yields, 'examples': DocstringSectionKind.examples, 'attributes': DocstringSectionKind.attributes}"
 },
 {
 "kind": "attribute",
@@ -33002,13 +33002,49 @@
 }
 },
 {
+"kind": "attribute",
+"name": "_RE_DOCTEST_BLANKLINE",
+"path": "griffe.docstrings.google._RE_DOCTEST_BLANKLINE",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
+"relative_filepath": "griffe/docstrings/google.py",
+"lineno": 52,
+"endlineno": 52,
+"labels": [
+"module-attribute"
+],
+"members": [],
+"value": "re.compile('^\\\\s*<BLANKLINE>\\\\s*$')",
+"annotation": {
+"source": "Pattern",
+"full": "typing.Pattern"
+}
+},
+{
+"kind": "attribute",
+"name": "_RE_DOCTEST_FLAGS",
+"path": "griffe.docstrings.google._RE_DOCTEST_FLAGS",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
+"relative_filepath": "griffe/docstrings/google.py",
+"lineno": 53,
+"endlineno": 53,
+"labels": [
+"module-attribute"
+],
+"members": [],
+"value": "re.compile('(\\\\s*#\\\\s*doctest:.+)$')",
+"annotation": {
+"source": "Pattern",
+"full": "typing.Pattern"
+}
+},
+{
 "kind": "function",
 "name": "_read_block_items",
 "path": "griffe.docstrings.google._read_block_items",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 54,
-"endlineno": 114,
+"lineno": 56,
+"endlineno": 116,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33043,8 +33079,8 @@
 "path": "griffe.docstrings.google._read_block",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 117,
-"endlineno": 145,
+"lineno": 119,
+"endlineno": 147,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33094,8 +33130,8 @@
 "path": "griffe.docstrings.google._read_parameters",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 148,
-"endlineno": 191,
+"lineno": 150,
+"endlineno": 193,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33153,8 +33189,8 @@
 "path": "griffe.docstrings.google._read_parameters_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 194,
-"endlineno": 201,
+"lineno": 196,
+"endlineno": 207,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33176,6 +33212,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -33208,8 +33253,8 @@
 "path": "griffe.docstrings.google._read_other_parameters_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 204,
-"endlineno": 211,
+"lineno": 210,
+"endlineno": 221,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33231,6 +33276,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -33263,8 +33317,8 @@
 "path": "griffe.docstrings.google._read_attributes_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 214,
-"endlineno": 246,
+"lineno": 224,
+"endlineno": 260,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33286,6 +33340,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -33318,8 +33381,8 @@
 "path": "griffe.docstrings.google._read_raises_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 249,
-"endlineno": 269,
+"lineno": 263,
+"endlineno": 287,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33341,6 +33404,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -33373,8 +33445,8 @@
 "path": "griffe.docstrings.google._read_warns_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 272,
-"endlineno": 289,
+"lineno": 290,
+"endlineno": 311,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33396,6 +33468,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -33428,8 +33509,8 @@
 "path": "griffe.docstrings.google._read_returns_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 292,
-"endlineno": 326,
+"lineno": 314,
+"endlineno": 352,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33451,6 +33532,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -33483,8 +33573,8 @@
 "path": "griffe.docstrings.google._read_yields_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 329,
-"endlineno": 364,
+"lineno": 355,
+"endlineno": 394,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33506,6 +33596,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -33538,8 +33637,8 @@
 "path": "griffe.docstrings.google._read_receives_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 367,
-"endlineno": 402,
+"lineno": 397,
+"endlineno": 436,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33561,6 +33660,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -33593,8 +33701,8 @@
 "path": "griffe.docstrings.google._read_examples_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 405,
-"endlineno": 453,
+"lineno": 439,
+"endlineno": 498,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33616,6 +33724,24 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "trim_doctest_flags",
+"annotation": {
+"source": "bool",
+"full": "bool"
+},
+"kind": "positional or keyword",
+"default": "True"
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -33648,8 +33774,8 @@
 "path": "griffe.docstrings.google._read_deprecated_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 456,
-"endlineno": 477,
+"lineno": 501,
+"endlineno": 526,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33671,6 +33797,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -33703,8 +33838,8 @@
 "path": "griffe.docstrings.google._is_empty_line",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 480,
-"endlineno": 481,
+"lineno": 529,
+"endlineno": 530,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33727,8 +33862,8 @@
 "path": "griffe.docstrings.google._section_reader",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 484,
-"endlineno": 495,
+"lineno": 533,
+"endlineno": 544,
 "labels": [
 "module-attribute"
 ],
@@ -33741,12 +33876,12 @@
 "path": "griffe.docstrings.google.parse",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 498,
-"endlineno": 595,
+"lineno": 547,
+"endlineno": 652,
 "docstring": {
-"value": "Parse a docstring.\n\nThis function iterates on lines of a docstring to build sections.\nIt then returns this list of sections.\n\nParameters:\n    docstring: The docstring to parse.\n    ignore_init_summary: Whether to ignore the summary in `__init__` methods' docstrings.\n    **options: Additional parsing options.\n\nReturns:\n    A list of docstring sections.",
-"lineno": 503,
-"endlineno": 515,
+"value": "Parse a docstring.\n\nThis function iterates on lines of a docstring to build sections.\nIt then returns this list of sections.\n\nParameters:\n    docstring: The docstring to parse.\n    ignore_init_summary: Whether to ignore the summary in `__init__` methods' docstrings.\n    trim_doctest_flags: Whether to remove doctest flags from Python example blocks.\n    **options: Additional parsing options.\n\nReturns:\n    A list of docstring sections.",
+"lineno": 553,
+"endlineno": 566,
 "parsed": [
 {
 "kind": "text",
@@ -33771,6 +33906,15 @@
 },
 "description": "Whether to ignore the summary in `__init__` methods' docstrings.",
 "value": "False"
+},
+{
+"name": "trim_doctest_flags",
+"annotation": {
+"source": "bool",
+"full": "bool"
+},
+"description": "Whether to remove doctest flags from Python example blocks.",
+"value": "True"
 },
 {
 "name": "**options",
@@ -33827,6 +33971,15 @@
 },
 "kind": "positional or keyword",
 "default": "False"
+},
+{
+"name": "trim_doctest_flags",
+"annotation": {
+"source": "bool",
+"full": "bool"
+},
+"kind": "positional or keyword",
+"default": "True"
 },
 {
 "name": "**options",
@@ -34688,13 +34841,49 @@
 }
 },
 {
+"kind": "attribute",
+"name": "_RE_DOCTEST_BLANKLINE",
+"path": "griffe.docstrings.numpy._RE_DOCTEST_BLANKLINE",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
+"relative_filepath": "griffe/docstrings/numpy.py",
+"lineno": 193,
+"endlineno": 193,
+"labels": [
+"module-attribute"
+],
+"members": [],
+"value": "re.compile('^\\\\s*<BLANKLINE>\\\\s*$')",
+"annotation": {
+"source": "Pattern",
+"full": "typing.Pattern"
+}
+},
+{
+"kind": "attribute",
+"name": "_RE_DOCTEST_FLAGS",
+"path": "griffe.docstrings.numpy._RE_DOCTEST_FLAGS",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
+"relative_filepath": "griffe/docstrings/numpy.py",
+"lineno": 194,
+"endlineno": 194,
+"labels": [
+"module-attribute"
+],
+"members": [],
+"value": "re.compile('(\\\\s*#\\\\s*doctest:.+)$')",
+"annotation": {
+"source": "Pattern",
+"full": "typing.Pattern"
+}
+},
+{
 "kind": "function",
 "name": "_read_parameters",
 "path": "griffe.docstrings.numpy._read_parameters",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 195,
-"endlineno": 239,
+"lineno": 197,
+"endlineno": 241,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34752,8 +34941,8 @@
 "path": "griffe.docstrings.numpy._read_parameters_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 242,
-"endlineno": 249,
+"lineno": 244,
+"endlineno": 255,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34775,6 +34964,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -34807,8 +35005,8 @@
 "path": "griffe.docstrings.numpy._read_other_parameters_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 252,
-"endlineno": 259,
+"lineno": 258,
+"endlineno": 269,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34830,6 +35028,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -34862,8 +35069,8 @@
 "path": "griffe.docstrings.numpy._read_deprecated_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 262,
-"endlineno": 278,
+"lineno": 272,
+"endlineno": 292,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34885,6 +35092,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -34917,8 +35133,8 @@
 "path": "griffe.docstrings.numpy._read_returns_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 281,
-"endlineno": 301,
+"lineno": 295,
+"endlineno": 319,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34940,6 +35156,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -34972,8 +35197,8 @@
 "path": "griffe.docstrings.numpy._read_yields_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 304,
-"endlineno": 324,
+"lineno": 322,
+"endlineno": 346,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34995,6 +35220,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -35027,8 +35261,8 @@
 "path": "griffe.docstrings.numpy._read_receives_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 327,
-"endlineno": 347,
+"lineno": 349,
+"endlineno": 373,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35050,6 +35284,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -35082,8 +35325,8 @@
 "path": "griffe.docstrings.numpy._read_raises_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 350,
-"endlineno": 365,
+"lineno": 376,
+"endlineno": 395,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35105,6 +35348,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -35137,8 +35389,8 @@
 "path": "griffe.docstrings.numpy._read_warns_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 368,
-"endlineno": 383,
+"lineno": 398,
+"endlineno": 417,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35160,6 +35412,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -35192,8 +35453,8 @@
 "path": "griffe.docstrings.numpy._read_attributes_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 386,
-"endlineno": 407,
+"lineno": 420,
+"endlineno": 445,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35215,6 +35476,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -35247,8 +35517,8 @@
 "path": "griffe.docstrings.numpy._read_examples_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 410,
-"endlineno": 458,
+"lineno": 448,
+"endlineno": 507,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35270,6 +35540,24 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "trim_doctest_flags",
+"annotation": {
+"source": "bool",
+"full": "bool"
+},
+"kind": "positional or keyword",
+"default": "True"
+},
+{
+"name": "**options",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
 }
 ],
 "returns": [
@@ -35302,8 +35590,8 @@
 "path": "griffe.docstrings.numpy._section_reader",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 461,
-"endlineno": 472,
+"lineno": 510,
+"endlineno": 521,
 "labels": [
 "module-attribute"
 ],
@@ -35316,12 +35604,12 @@
 "path": "griffe.docstrings.numpy.parse",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 475,
-"endlineno": 531,
+"lineno": 524,
+"endlineno": 587,
 "docstring": {
-"value": "Parse a docstring.\n\nThis function iterates on lines of a docstring to build sections.\nIt then returns this list of sections.\n\nParameters:\n    docstring: The docstring to parse.\n    **options: Additional parsing options.\n\nReturns:\n    A list of docstring sections.",
-"lineno": 479,
-"endlineno": 490,
+"value": "Parse a docstring.\n\nThis function iterates on lines of a docstring to build sections.\nIt then returns this list of sections.\n\nParameters:\n    docstring: The docstring to parse.\n    trim_doctest_flags: Whether to remove doctest flags from Python example blocks.\n    **options: Additional parsing options.\n\nReturns:\n    A list of docstring sections.",
+"lineno": 529,
+"endlineno": 541,
 "parsed": [
 {
 "kind": "text",
@@ -35337,6 +35625,15 @@
 "full": "griffe.dataclasses.Docstring"
 },
 "description": "The docstring to parse."
+},
+{
+"name": "trim_doctest_flags",
+"annotation": {
+"source": "bool",
+"full": "bool"
+},
+"description": "Whether to remove doctest flags from Python example blocks.",
+"value": "True"
 },
 {
 "name": "**options",
@@ -35384,6 +35681,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "trim_doctest_flags",
+"annotation": {
+"source": "bool",
+"full": "bool"
+},
+"kind": "positional or keyword",
+"default": "True"
 },
 {
 "name": "**options",

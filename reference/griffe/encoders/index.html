@@ -1258,6 +1258,13 @@
 the <a href="https://docs.python.org/3/library/json.html#json.dump"><code>json.dump</code></a> or <a href="https://docs.python.org/3/library/json.html#json.dumps"><code>json.dumps</code></a> methods.</p>
 
 <p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">griffe.encoders</span> <span class="kn">import</span> <span class="n">JSONEncoder</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">JSONEncoder</span><span class="p">(</span><span class="n">full</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">json</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">griffe.encoders</span> <span class="kn">import</span> <span class="n">JSONEncoder</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">JSONEncoder</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
 
 
 
@@ -1472,6 +1479,10 @@ tool instead, dump the full data.</p>
 <p>The <a href="https://docs.python.org/3/library/json.html#json.loads"><code>json.loads</code></a> method walks the tree from bottom to top.</p>
 
 <p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">json</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">griffe.encoders</span> <span class="kn">import</span> <span class="n">json_decoder</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">object_hook</span><span class="o">=</span><span class="n">json_decoder</span><span class="p">)</span>
+</code></pre></div>
 
   <p>Parameters:</p>
   <ul>
