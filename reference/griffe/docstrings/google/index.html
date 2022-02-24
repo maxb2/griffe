@@ -1268,20 +1268,7 @@ It then returns this list of sections.</p>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/google.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">547</span>
-<span class="normal">548</span>
-<span class="normal">549</span>
-<span class="normal">550</span>
-<span class="normal">551</span>
-<span class="normal">552</span>
-<span class="normal">553</span>
-<span class="normal">554</span>
-<span class="normal">555</span>
-<span class="normal">556</span>
-<span class="normal">557</span>
-<span class="normal">558</span>
-<span class="normal">559</span>
-<span class="normal">560</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">560</span>
 <span class="normal">561</span>
 <span class="normal">562</span>
 <span class="normal">563</span>
@@ -1373,7 +1360,9 @@ It then returns this list of sections.</p>
 <span class="normal">649</span>
 <span class="normal">650</span>
 <span class="normal">651</span>
-<span class="normal">652</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">652</span>
+<span class="normal">653</span>
+<span class="normal">654</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
     <span class="n">docstring</span><span class="p">:</span> <span class="n">Docstring</span><span class="p">,</span>
     <span class="n">ignore_init_summary</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="n">trim_doctest_flags</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -1393,7 +1382,7 @@ It then returns this list of sections.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">        A list of docstring sections.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">sections</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">sections</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">DocstringSection</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">current_section</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="n">in_code_block</span> <span class="o">=</span> <span class="kc">False</span>
@@ -1441,12 +1430,7 @@ It then returns this list of sections.</p>
                 <span class="k">if</span> <span class="n">admonition_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">_section_kind</span><span class="p">:</span>
                     <span class="k">if</span> <span class="n">current_section</span><span class="p">:</span>
                         <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">current_section</span><span class="p">):</span>
-                            <span class="n">sections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-                                <span class="n">DocstringSection</span><span class="p">(</span>
-                                    <span class="n">DocstringSectionKind</span><span class="o">.</span><span class="n">text</span><span class="p">,</span>
-                                    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_section</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">),</span>
-                                <span class="p">)</span>
-                            <span class="p">)</span>
+                            <span class="n">sections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">DocstringSectionText</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_section</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)))</span>
                         <span class="n">current_section</span> <span class="o">=</span> <span class="p">[]</span>
                     <span class="n">reader</span> <span class="o">=</span> <span class="n">_section_reader</span><span class="p">[</span><span class="n">_section_kind</span><span class="p">[</span><span class="n">admonition_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()]]</span>
                     <span class="n">section</span><span class="p">,</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">reader</span><span class="p">(</span><span class="n">docstring</span><span class="p">,</span> <span class="n">offset</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[operator]</span>
@@ -1460,13 +1444,7 @@ It then returns this list of sections.</p>
                         <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                             <span class="n">title</span> <span class="o">=</span> <span class="n">admonition_type</span>
                         <span class="n">admonition_type</span> <span class="o">=</span> <span class="n">admonition_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
-                        <span class="n">sections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-                            <span class="n">DocstringSection</span><span class="p">(</span>
-                                <span class="n">kind</span><span class="o">=</span><span class="n">DocstringSectionKind</span><span class="o">.</span><span class="n">admonition</span><span class="p">,</span>
-                                <span class="n">value</span><span class="o">=</span><span class="n">DocstringAdmonition</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="n">admonition_type</span><span class="p">,</span> <span class="n">contents</span><span class="o">=</span><span class="n">contents</span><span class="p">),</span>
-                                <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
-                            <span class="p">)</span>
-                        <span class="p">)</span>
+                        <span class="n">sections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">DocstringSectionAdmonition</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="n">admonition_type</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="n">contents</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">))</span>
                     <span class="k">else</span><span class="p">:</span>
                         <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="ne">IndexError</span><span class="p">):</span>
                             <span class="n">current_section</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="n">offset</span><span class="p">])</span>
@@ -1476,7 +1454,7 @@ It then returns this list of sections.</p>
         <span class="n">offset</span> <span class="o">+=</span> <span class="mi">1</span>
 
     <span class="k">if</span> <span class="n">current_section</span><span class="p">:</span>
-        <span class="n">sections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">DocstringSection</span><span class="p">(</span><span class="n">DocstringSectionKind</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_section</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)))</span>
+        <span class="n">sections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">DocstringSectionText</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_section</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)))</span>
 
     <span class="k">return</span> <span class="n">sections</span>
 </code></pre></div>

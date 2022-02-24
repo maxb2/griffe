@@ -1272,7 +1272,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">parser</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">parsers</span><span class="p">[</span><span class="n">parser</span><span class="p">](</span><span class="n">docstring</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[operator]</span>
-    <span class="k">return</span> <span class="p">[</span><span class="n">DocstringSection</span><span class="p">(</span><span class="n">DocstringSectionKind</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">docstring</span><span class="o">.</span><span class="n">value</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">DocstringSectionText</span><span class="p">(</span><span class="n">docstring</span><span class="o">.</span><span class="n">value</span><span class="p">)]</span>
 </code></pre></div>
 </td></tr></table>
         </details>

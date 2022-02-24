@@ -14954,7 +14954,7 @@
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
 "lineno": 66,
-"endlineno": 434,
+"endlineno": 417,
 "docstring": {
 "value": "The Griffe loader, allowing to load data from modules.",
 "lineno": 67,
@@ -15676,7 +15676,7 @@
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
 "lineno": 182,
-"endlineno": 230,
+"endlineno": 213,
 "docstring": {
 "value": "Expand wildcards: try to recursively expand all found wildcards.\n\nParameters:\n    obj: The object and its members to recurse on.\n    seen: Used to avoid infinite recursion.",
 "lineno": 183,
@@ -15755,12 +15755,12 @@
 "path": "griffe.loader.GriffeLoader.resolve_module_aliases",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 232,
-"endlineno": 291,
+"lineno": 215,
+"endlineno": 274,
 "docstring": {
 "value": "Follow aliases: try to recursively resolve all found aliases.\n\nParameters:\n    obj: The object and its members to recurse on.\n    only_exported: When true, only try to resolve an alias if it is explicitely exported.\n    only_known_modules: When true, don't try to load unspecified modules to resolve aliases.\n    seen: Used to avoid infinite recursion.\n\nReturns:\n    Both sets of resolved and unresolved aliases.",
-"lineno": 239,
-"endlineno": 249,
+"lineno": 222,
+"endlineno": 232,
 "parsed": [
 {
 "kind": "text",
@@ -15949,12 +15949,12 @@
 "path": "griffe.loader.GriffeLoader.stats",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 293,
-"endlineno": 299,
+"lineno": 276,
+"endlineno": 282,
 "docstring": {
 "value": "Compute some statistics.\n\nReturns:\n    Some statistics.",
-"lineno": 294,
-"endlineno": 298,
+"lineno": 277,
+"endlineno": 281,
 "parsed": [
 {
 "kind": "text",
@@ -15997,8 +15997,8 @@
 "path": "griffe.loader.GriffeLoader._store_and_return",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 301,
-"endlineno": 303,
+"lineno": 284,
+"endlineno": 286,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -16039,8 +16039,8 @@
 "path": "griffe.loader.GriffeLoader._load_module",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 305,
-"endlineno": 321,
+"lineno": 288,
+"endlineno": 304,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -16118,8 +16118,8 @@
 "path": "griffe.loader.GriffeLoader._load_module_path",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 323,
-"endlineno": 340,
+"lineno": 306,
+"endlineno": 323,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -16197,8 +16197,8 @@
 "path": "griffe.loader.GriffeLoader._load_submodules",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 342,
-"endlineno": 344,
+"lineno": 325,
+"endlineno": 327,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -16227,8 +16227,8 @@
 "path": "griffe.loader.GriffeLoader._load_submodule",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 346,
-"endlineno": 359,
+"lineno": 329,
+"endlineno": 342,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -16287,8 +16287,8 @@
 "path": "griffe.loader.GriffeLoader._create_module",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 361,
-"endlineno": 367,
+"lineno": 344,
+"endlineno": 350,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -16344,8 +16344,8 @@
 "path": "griffe.loader.GriffeLoader._visit_module",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 369,
-"endlineno": 385,
+"lineno": 352,
+"endlineno": 368,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -16408,8 +16408,8 @@
 "path": "griffe.loader.GriffeLoader._inspect_module",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 387,
-"endlineno": 407,
+"lineno": 370,
+"endlineno": 390,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -16467,8 +16467,8 @@
 "path": "griffe.loader.GriffeLoader._member_parent",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 409,
-"endlineno": 425,
+"lineno": 392,
+"endlineno": 408,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -16530,8 +16530,8 @@
 "path": "griffe.loader.GriffeLoader._expand_wildcard",
 "filepath": "/media/data/dev/griffe/src/griffe/loader.py",
 "relative_filepath": "griffe/loader.py",
-"lineno": 427,
-"endlineno": 434,
+"lineno": 410,
+"endlineno": 417,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -31037,756 +31037,32 @@
 "name": "Any",
 "target_path": "typing.Any",
 "path": "griffe.docstrings.dataclasses.Any",
-"lineno": 6,
-"endlineno": 6
+"lineno": 9,
+"endlineno": 9
+},
+{
+"kind": "alias",
+"name": "Literal",
+"target_path": "typing.Literal",
+"path": "griffe.docstrings.dataclasses.Literal",
+"lineno": 9,
+"endlineno": 9
 },
 {
 "kind": "alias",
 "name": "Expression",
 "target_path": "griffe.dataclasses.Expression",
 "path": "griffe.docstrings.dataclasses.Expression",
-"lineno": 9,
-"endlineno": 9
+"lineno": 11,
+"endlineno": 11
 },
 {
 "kind": "alias",
 "name": "Name",
 "target_path": "griffe.dataclasses.Name",
 "path": "griffe.docstrings.dataclasses.Name",
-"lineno": 9,
-"endlineno": 9
-},
-{
-"kind": "class",
-"name": "DocstringSectionKind",
-"path": "griffe.docstrings.dataclasses.DocstringSectionKind",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 12,
-"endlineno": 26,
-"docstring": {
-"value": "The possible section kinds.",
-"lineno": 13,
-"endlineno": 13,
-"parsed": [
-{
-"kind": "text",
-"value": "The possible section kinds."
-}
-]
-},
-"labels": [],
-"members": [
-{
-"kind": "attribute",
-"name": "text",
-"path": "griffe.docstrings.dataclasses.DocstringSectionKind.text",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 15,
-"endlineno": 15,
-"labels": [
-"class-attribute"
-],
-"members": [],
-"value": "'text'"
-},
-{
-"kind": "attribute",
-"name": "parameters",
-"path": "griffe.docstrings.dataclasses.DocstringSectionKind.parameters",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 16,
-"endlineno": 16,
-"labels": [
-"class-attribute"
-],
-"members": [],
-"value": "'parameters'"
-},
-{
-"kind": "attribute",
-"name": "other_parameters",
-"path": "griffe.docstrings.dataclasses.DocstringSectionKind.other_parameters",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 17,
-"endlineno": 17,
-"labels": [
-"class-attribute"
-],
-"members": [],
-"value": "'other parameters'"
-},
-{
-"kind": "attribute",
-"name": "raises",
-"path": "griffe.docstrings.dataclasses.DocstringSectionKind.raises",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 18,
-"endlineno": 18,
-"labels": [
-"class-attribute"
-],
-"members": [],
-"value": "'raises'"
-},
-{
-"kind": "attribute",
-"name": "warns",
-"path": "griffe.docstrings.dataclasses.DocstringSectionKind.warns",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 19,
-"endlineno": 19,
-"labels": [
-"class-attribute"
-],
-"members": [],
-"value": "'warns'"
-},
-{
-"kind": "attribute",
-"name": "returns",
-"path": "griffe.docstrings.dataclasses.DocstringSectionKind.returns",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 20,
-"endlineno": 20,
-"labels": [
-"class-attribute"
-],
-"members": [],
-"value": "'returns'"
-},
-{
-"kind": "attribute",
-"name": "yields",
-"path": "griffe.docstrings.dataclasses.DocstringSectionKind.yields",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 21,
-"endlineno": 21,
-"labels": [
-"class-attribute"
-],
-"members": [],
-"value": "'yields'"
-},
-{
-"kind": "attribute",
-"name": "receives",
-"path": "griffe.docstrings.dataclasses.DocstringSectionKind.receives",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 22,
-"endlineno": 22,
-"labels": [
-"class-attribute"
-],
-"members": [],
-"value": "'receives'"
-},
-{
-"kind": "attribute",
-"name": "examples",
-"path": "griffe.docstrings.dataclasses.DocstringSectionKind.examples",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 23,
-"endlineno": 23,
-"labels": [
-"class-attribute"
-],
-"members": [],
-"value": "'examples'"
-},
-{
-"kind": "attribute",
-"name": "attributes",
-"path": "griffe.docstrings.dataclasses.DocstringSectionKind.attributes",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 24,
-"endlineno": 24,
-"labels": [
-"class-attribute"
-],
-"members": [],
-"value": "'attributes'"
-},
-{
-"kind": "attribute",
-"name": "deprecated",
-"path": "griffe.docstrings.dataclasses.DocstringSectionKind.deprecated",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 25,
-"endlineno": 25,
-"labels": [
-"class-attribute"
-],
-"members": [],
-"value": "'deprecated'"
-},
-{
-"kind": "attribute",
-"name": "admonition",
-"path": "griffe.docstrings.dataclasses.DocstringSectionKind.admonition",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 26,
-"endlineno": 26,
-"labels": [
-"class-attribute"
-],
-"members": [],
-"value": "'admonition'"
-}
-],
-"bases": [
-[
-{
-"source": "enum",
-"full": "enum"
-},
-".",
-{
-"source": "Enum",
-"full": "enum.Enum"
-}
-]
-],
-"decorators": []
-},
-{
-"kind": "class",
-"name": "DocstringSection",
-"path": "griffe.docstrings.dataclasses.DocstringSection",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 29,
-"endlineno": 60,
-"docstring": {
-"value": "Placeholder.",
-"lineno": 30,
-"endlineno": 30,
-"parsed": [
-{
-"kind": "text",
-"value": "Placeholder."
-}
-]
-},
-"labels": [],
-"members": [
-{
-"kind": "function",
-"name": "__init__",
-"path": "griffe.docstrings.dataclasses.DocstringSection.__init__",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 32,
-"endlineno": 42,
-"docstring": {
-"value": "Initialize the section.\n\nParameters:\n    kind: The section kind.\n    value: The section value.\n    title: An optional title.",
-"lineno": 33,
-"endlineno": 39,
-"parsed": [
-{
-"kind": "parameters",
-"value": [
-{
-"name": "kind",
-"annotation": {
-"source": "DocstringSectionKind",
-"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
-},
-"description": "The section kind."
-},
-{
-"name": "value",
-"annotation": {
-"source": "Any",
-"full": "typing.Any"
-},
-"description": "The section value."
-},
-{
-"name": "title",
-"annotation": [
-{
-"source": "str",
-"full": "str"
-},
-" | ",
-"None"
-],
-"description": "An optional title.",
-"value": "None"
-}
-]
-}
-]
-},
-"labels": [],
-"members": [],
-"decorators": [],
-"parameters": [
-{
-"name": "self",
-"annotation": null,
-"kind": "positional or keyword",
-"default": null
-},
-{
-"name": "kind",
-"annotation": {
-"source": "DocstringSectionKind",
-"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
-},
-"kind": "positional or keyword",
-"default": null
-},
-{
-"name": "value",
-"annotation": {
-"source": "Any",
-"full": "typing.Any"
-},
-"kind": "positional or keyword",
-"default": null
-},
-{
-"name": "title",
-"annotation": [
-{
-"source": "str",
-"full": "str"
-},
-" | ",
-"None"
-],
-"kind": "positional or keyword",
-"default": "None"
-}
-],
-"returns": "None"
-},
-{
-"kind": "attribute",
-"name": "kind",
-"path": "griffe.docstrings.dataclasses.DocstringSection.kind",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 40,
-"endlineno": 40,
-"labels": [
-"instance-attribute"
-],
-"members": [],
-"value": "kind",
-"annotation": {
-"source": "DocstringSectionKind",
-"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
-}
-},
-{
-"kind": "attribute",
-"name": "value",
-"path": "griffe.docstrings.dataclasses.DocstringSection.value",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 41,
-"endlineno": 41,
-"labels": [
-"instance-attribute"
-],
-"members": [],
-"value": "value",
-"annotation": {
-"source": "Any",
-"full": "typing.Any"
-}
-},
-{
-"kind": "attribute",
-"name": "title",
-"path": "griffe.docstrings.dataclasses.DocstringSection.title",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 42,
-"endlineno": 42,
-"labels": [
-"instance-attribute"
-],
-"members": [],
-"value": "title",
-"annotation": [
-{
-"source": "str",
-"full": "str"
-},
-" | ",
-"None"
-]
-},
-{
-"kind": "function",
-"name": "as_dict",
-"path": "griffe.docstrings.dataclasses.DocstringSection.as_dict",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 44,
-"endlineno": 60,
-"docstring": {
-"value": "Return this section's data as a dictionary.\n\nParameters:\n    **kwargs: Additional serialization options.\n\nReturns:\n    A dictionary.",
-"lineno": 45,
-"endlineno": 52,
-"parsed": [
-{
-"kind": "text",
-"value": "Return this section's data as a dictionary."
-},
-{
-"kind": "parameters",
-"value": [
-{
-"name": "**kwargs",
-"annotation": {
-"source": "Any",
-"full": "typing.Any"
-},
-"description": "Additional serialization options.",
-"value": "{}"
-}
-]
-},
-{
-"kind": "returns",
-"value": [
-{
-"name": "",
-"annotation": [
-{
-"source": "dict",
-"full": "dict"
-},
-"[",
-[
-{
-"source": "str",
-"full": "str"
-},
-", ",
-{
-"source": "Any",
-"full": "typing.Any"
-}
-],
-"]"
-],
-"description": "A dictionary."
-}
-]
-}
-]
-},
-"labels": [],
-"members": [],
-"decorators": [],
-"parameters": [
-{
-"name": "self",
-"annotation": null,
-"kind": "positional or keyword",
-"default": null
-},
-{
-"name": "**kwargs",
-"annotation": {
-"source": "Any",
-"full": "typing.Any"
-},
-"kind": "variadic keyword",
-"default": "{}"
-}
-],
-"returns": [
-{
-"source": "dict",
-"full": "dict"
-},
-"[",
-[
-{
-"source": "str",
-"full": "str"
-},
-", ",
-{
-"source": "Any",
-"full": "typing.Any"
-}
-],
-"]"
-]
-}
-],
-"bases": [],
-"decorators": []
-},
-{
-"kind": "class",
-"name": "DocstringAdmonition",
-"path": "griffe.docstrings.dataclasses.DocstringAdmonition",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 63,
-"endlineno": 93,
-"docstring": {
-"value": "This base class represents admonitions.\n\nAttributes:\n    kind: The admonition kind.\n    contents: The admonition contents.",
-"lineno": 64,
-"endlineno": 69,
-"parsed": [
-{
-"kind": "text",
-"value": "This base class represents admonitions."
-},
-{
-"kind": "attributes",
-"value": [
-{
-"name": "kind",
-"annotation": {
-"source": "str",
-"full": "str"
-},
-"description": "The admonition kind."
-},
-{
-"name": "contents",
-"annotation": {
-"source": "str",
-"full": "str"
-},
-"description": "The admonition contents."
-}
-]
-}
-]
-},
-"labels": [],
-"members": [
-{
-"kind": "function",
-"name": "__init__",
-"path": "griffe.docstrings.dataclasses.DocstringAdmonition.__init__",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 71,
-"endlineno": 79,
-"docstring": {
-"value": "Initialize the admonition.\n\nParameters:\n    kind: The admonition kind.\n    contents: The admonition contents.",
-"lineno": 72,
-"endlineno": 77,
-"parsed": [
-{
-"kind": "parameters",
-"value": [
-{
-"name": "kind",
-"annotation": {
-"source": "str",
-"full": "str"
-},
-"description": "The admonition kind."
-},
-{
-"name": "contents",
-"annotation": {
-"source": "str",
-"full": "str"
-},
-"description": "The admonition contents."
-}
-]
-}
-]
-},
-"labels": [],
-"members": [],
-"decorators": [],
-"parameters": [
-{
-"name": "self",
-"annotation": null,
-"kind": "positional or keyword",
-"default": null
-},
-{
-"name": "kind",
-"annotation": {
-"source": "str",
-"full": "str"
-},
-"kind": "keyword-only",
-"default": null
-},
-{
-"name": "contents",
-"annotation": {
-"source": "str",
-"full": "str"
-},
-"kind": "keyword-only",
-"default": null
-}
-],
-"returns": "None"
-},
-{
-"kind": "attribute",
-"name": "kind",
-"path": "griffe.docstrings.dataclasses.DocstringAdmonition.kind",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 78,
-"endlineno": 78,
-"labels": [
-"instance-attribute"
-],
-"members": [],
-"value": "kind",
-"annotation": {
-"source": "str",
-"full": "str"
-}
-},
-{
-"kind": "attribute",
-"name": "contents",
-"path": "griffe.docstrings.dataclasses.DocstringAdmonition.contents",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 79,
-"endlineno": 79,
-"labels": [
-"instance-attribute"
-],
-"members": [],
-"value": "contents",
-"annotation": {
-"source": "str",
-"full": "str"
-}
-},
-{
-"kind": "function",
-"name": "as_dict",
-"path": "griffe.docstrings.dataclasses.DocstringAdmonition.as_dict",
-"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
-"relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 81,
-"endlineno": 93,
-"docstring": {
-"value": "Return this admonition's data as a dictionary.\n\nParameters:\n    **kwargs: Additional serialization options.\n\nReturns:\n    A dictionary.",
-"lineno": 82,
-"endlineno": 89,
-"parsed": [
-{
-"kind": "text",
-"value": "Return this admonition's data as a dictionary."
-},
-{
-"kind": "parameters",
-"value": [
-{
-"name": "**kwargs",
-"annotation": {
-"source": "Any",
-"full": "typing.Any"
-},
-"description": "Additional serialization options.",
-"value": "{}"
-}
-]
-},
-{
-"kind": "returns",
-"value": [
-{
-"name": "",
-"annotation": [
-{
-"source": "dict",
-"full": "dict"
-},
-"[",
-[
-{
-"source": "str",
-"full": "str"
-},
-", ",
-{
-"source": "Any",
-"full": "typing.Any"
-}
-],
-"]"
-],
-"description": "A dictionary."
-}
-]
-}
-]
-},
-"labels": [],
-"members": [],
-"decorators": [],
-"parameters": [
-{
-"name": "self",
-"annotation": null,
-"kind": "positional or keyword",
-"default": null
-},
-{
-"name": "**kwargs",
-"annotation": {
-"source": "Any",
-"full": "typing.Any"
-},
-"kind": "variadic keyword",
-"default": "{}"
-}
-],
-"returns": [
-{
-"source": "dict",
-"full": "dict"
-},
-"[",
-[
-{
-"source": "str",
-"full": "str"
-},
-", ",
-{
-"source": "Any",
-"full": "typing.Any"
-}
-],
-"]"
-]
-}
-],
-"bases": [],
-"decorators": []
+"lineno": 11,
+"endlineno": 11
 },
 {
 "kind": "class",
@@ -31794,12 +31070,12 @@
 "path": "griffe.docstrings.dataclasses.DocstringElement",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 96,
-"endlineno": 126,
+"lineno": 15,
+"endlineno": 45,
 "docstring": {
 "value": "This base class represents annotated, nameless elements.\n\nAttributes:\n    annotation: The element annotation, if any.\n    description: The element description.",
-"lineno": 97,
-"endlineno": 102,
+"lineno": 16,
+"endlineno": 21,
 "parsed": [
 {
 "kind": "text",
@@ -31854,12 +31130,12 @@
 "path": "griffe.docstrings.dataclasses.DocstringElement.__init__",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 104,
-"endlineno": 112,
+"lineno": 23,
+"endlineno": 31,
 "docstring": {
 "value": "Initialize the element.\n\nParameters:\n    annotation: The element annotation, if any.\n    description: The element description.",
-"lineno": 105,
-"endlineno": 110,
+"lineno": 24,
+"endlineno": 29,
 "parsed": [
 {
 "kind": "parameters",
@@ -31958,8 +31234,8 @@
 "path": "griffe.docstrings.dataclasses.DocstringElement.description",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 111,
-"endlineno": 111,
+"lineno": 30,
+"endlineno": 30,
 "labels": [
 "instance-attribute"
 ],
@@ -31976,8 +31252,8 @@
 "path": "griffe.docstrings.dataclasses.DocstringElement.annotation",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 112,
-"endlineno": 112,
+"lineno": 31,
+"endlineno": 31,
 "labels": [
 "instance-attribute"
 ],
@@ -32012,12 +31288,12 @@
 "path": "griffe.docstrings.dataclasses.DocstringElement.as_dict",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 114,
-"endlineno": 126,
+"lineno": 33,
+"endlineno": 45,
 "docstring": {
 "value": "Return this element's data as a dictionary.\n\nParameters:\n    **kwargs: Additional serialization options.\n\nReturns:\n    A dictionary.",
-"lineno": 115,
-"endlineno": 122,
+"lineno": 34,
+"endlineno": 41,
 "parsed": [
 {
 "kind": "text",
@@ -32117,12 +31393,12 @@
 "path": "griffe.docstrings.dataclasses.DocstringNamedElement",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 129,
-"endlineno": 169,
+"lineno": 48,
+"endlineno": 88,
 "docstring": {
 "value": "This base class represents annotated, named elements.\n\nAttributes:\n    name: The element name.\n    value: The element value, as a string, if any.",
-"lineno": 130,
-"endlineno": 135,
+"lineno": 49,
+"endlineno": 54,
 "parsed": [
 {
 "kind": "text",
@@ -32163,12 +31439,12 @@
 "path": "griffe.docstrings.dataclasses.DocstringNamedElement.__init__",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 137,
-"endlineno": 155,
+"lineno": 56,
+"endlineno": 74,
 "docstring": {
 "value": "Initialize the element.\n\nParameters:\n    name: The element name.\n    description: The element description.\n    annotation: The element annotation, if any.\n    value: The element value, as a string.",
-"lineno": 145,
-"endlineno": 152,
+"lineno": 64,
+"endlineno": 71,
 "parsed": [
 {
 "kind": "parameters",
@@ -32310,8 +31586,8 @@
 "path": "griffe.docstrings.dataclasses.DocstringNamedElement.name",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 154,
-"endlineno": 154,
+"lineno": 73,
+"endlineno": 73,
 "labels": [
 "instance-attribute"
 ],
@@ -32328,8 +31604,8 @@
 "path": "griffe.docstrings.dataclasses.DocstringNamedElement.value",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 155,
-"endlineno": 155,
+"lineno": 74,
+"endlineno": 74,
 "labels": [
 "instance-attribute"
 ],
@@ -32350,12 +31626,12 @@
 "path": "griffe.docstrings.dataclasses.DocstringNamedElement.as_dict",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 157,
-"endlineno": 169,
+"lineno": 76,
+"endlineno": 88,
 "docstring": {
 "value": "Return this element's data as a dictionary.\n\nParameters:\n    **kwargs: Additional serialization options.\n\nReturns:\n    A dictionary.",
-"lineno": 158,
-"endlineno": 165,
+"lineno": 77,
+"endlineno": 84,
 "parsed": [
 {
 "kind": "text",
@@ -32456,16 +31732,172 @@
 },
 {
 "kind": "class",
+"name": "DocstringAdmonition",
+"path": "griffe.docstrings.dataclasses.DocstringAdmonition",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 91,
+"endlineno": 118,
+"docstring": {
+"value": "This class represents an admonition.",
+"lineno": 92,
+"endlineno": 92,
+"parsed": [
+{
+"kind": "text",
+"value": "This class represents an admonition."
+}
+]
+},
+"labels": [],
+"members": [
+{
+"kind": "function",
+"name": "kind",
+"path": "griffe.docstrings.dataclasses.DocstringAdmonition.kind",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 103,
+"endlineno": 105,
+"labels": [],
+"members": [],
+"decorators": [
+{
+"lineno": 103,
+"endlineno": 103
+}
+],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "value",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": null
+},
+{
+"kind": "function",
+"name": "contents",
+"path": "griffe.docstrings.dataclasses.DocstringAdmonition.contents",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 116,
+"endlineno": 118,
+"labels": [],
+"members": [],
+"decorators": [
+{
+"lineno": 116,
+"endlineno": 116
+}
+],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "value",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": null
+}
+],
+"bases": [
+{
+"source": "DocstringElement",
+"full": "griffe.docstrings.dataclasses.DocstringElement"
+}
+],
+"decorators": []
+},
+{
+"kind": "class",
+"name": "DocstringDeprecated",
+"path": "griffe.docstrings.dataclasses.DocstringDeprecated",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 121,
+"endlineno": 135,
+"docstring": {
+"value": "This class represents a documented deprecated item.",
+"lineno": 122,
+"endlineno": 122,
+"parsed": [
+{
+"kind": "text",
+"value": "This class represents a documented deprecated item."
+}
+]
+},
+"labels": [],
+"members": [
+{
+"kind": "function",
+"name": "version",
+"path": "griffe.docstrings.dataclasses.DocstringDeprecated.version",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 133,
+"endlineno": 135,
+"labels": [],
+"members": [],
+"decorators": [
+{
+"lineno": 133,
+"endlineno": 133
+}
+],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "value",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": null
+}
+],
+"bases": [
+{
+"source": "DocstringElement",
+"full": "griffe.docstrings.dataclasses.DocstringElement"
+}
+],
+"decorators": []
+},
+{
+"kind": "class",
 "name": "DocstringRaise",
 "path": "griffe.docstrings.dataclasses.DocstringRaise",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 172,
-"endlineno": 173,
+"lineno": 138,
+"endlineno": 139,
 "docstring": {
 "value": "This class represents a documented raise value.",
-"lineno": 173,
-"endlineno": 173,
+"lineno": 139,
+"endlineno": 139,
 "parsed": [
 {
 "kind": "text",
@@ -32489,12 +31921,12 @@
 "path": "griffe.docstrings.dataclasses.DocstringWarn",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 176,
-"endlineno": 177,
+"lineno": 142,
+"endlineno": 143,
 "docstring": {
 "value": "This class represents a documented warn value.",
-"lineno": 177,
-"endlineno": 177,
+"lineno": 143,
+"endlineno": 143,
 "parsed": [
 {
 "kind": "text",
@@ -32518,12 +31950,12 @@
 "path": "griffe.docstrings.dataclasses.DocstringReturn",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 180,
-"endlineno": 181,
+"lineno": 146,
+"endlineno": 147,
 "docstring": {
 "value": "This class represents a documented return value.",
-"lineno": 181,
-"endlineno": 181,
+"lineno": 147,
+"endlineno": 147,
 "parsed": [
 {
 "kind": "text",
@@ -32547,12 +31979,12 @@
 "path": "griffe.docstrings.dataclasses.DocstringYield",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 184,
-"endlineno": 185,
+"lineno": 150,
+"endlineno": 151,
 "docstring": {
 "value": "This class represents a documented yield value.",
-"lineno": 185,
-"endlineno": 185,
+"lineno": 151,
+"endlineno": 151,
 "parsed": [
 {
 "kind": "text",
@@ -32576,12 +32008,12 @@
 "path": "griffe.docstrings.dataclasses.DocstringReceive",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 188,
-"endlineno": 189,
+"lineno": 154,
+"endlineno": 155,
 "docstring": {
 "value": "This class represents a documented receive value.",
-"lineno": 189,
-"endlineno": 189,
+"lineno": 155,
+"endlineno": 155,
 "parsed": [
 {
 "kind": "text",
@@ -32605,12 +32037,12 @@
 "path": "griffe.docstrings.dataclasses.DocstringParameter",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 192,
-"endlineno": 206,
+"lineno": 158,
+"endlineno": 172,
 "docstring": {
 "value": "This class represent a documented function parameter.",
-"lineno": 193,
-"endlineno": 193,
+"lineno": 159,
+"endlineno": 159,
 "parsed": [
 {
 "kind": "text",
@@ -32626,14 +32058,14 @@
 "path": "griffe.docstrings.dataclasses.DocstringParameter.default",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 204,
-"endlineno": 206,
+"lineno": 170,
+"endlineno": 172,
 "labels": [],
 "members": [],
 "decorators": [
 {
-"lineno": 204,
-"endlineno": 204
+"lineno": 170,
+"endlineno": 170
 }
 ],
 "parameters": [
@@ -32667,12 +32099,12 @@
 "path": "griffe.docstrings.dataclasses.DocstringAttribute",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
 "relative_filepath": "griffe/docstrings/dataclasses.py",
-"lineno": 209,
-"endlineno": 210,
+"lineno": 175,
+"endlineno": 176,
 "docstring": {
 "value": "This class represents a documented module/class attribute.",
-"lineno": 210,
-"endlineno": 210,
+"lineno": 176,
+"endlineno": 176,
 "parsed": [
 {
 "kind": "text",
@@ -32686,6 +32118,2428 @@
 {
 "source": "DocstringNamedElement",
 "full": "griffe.docstrings.dataclasses.DocstringNamedElement"
+}
+],
+"decorators": []
+},
+{
+"kind": "class",
+"name": "DocstringSectionKind",
+"path": "griffe.docstrings.dataclasses.DocstringSectionKind",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 180,
+"endlineno": 194,
+"docstring": {
+"value": "The possible section kinds.",
+"lineno": 181,
+"endlineno": 181,
+"parsed": [
+{
+"kind": "text",
+"value": "The possible section kinds."
+}
+]
+},
+"labels": [],
+"members": [
+{
+"kind": "attribute",
+"name": "text",
+"path": "griffe.docstrings.dataclasses.DocstringSectionKind.text",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 183,
+"endlineno": 183,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "'text'"
+},
+{
+"kind": "attribute",
+"name": "parameters",
+"path": "griffe.docstrings.dataclasses.DocstringSectionKind.parameters",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 184,
+"endlineno": 184,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "'parameters'"
+},
+{
+"kind": "attribute",
+"name": "other_parameters",
+"path": "griffe.docstrings.dataclasses.DocstringSectionKind.other_parameters",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 185,
+"endlineno": 185,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "'other parameters'"
+},
+{
+"kind": "attribute",
+"name": "raises",
+"path": "griffe.docstrings.dataclasses.DocstringSectionKind.raises",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 186,
+"endlineno": 186,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "'raises'"
+},
+{
+"kind": "attribute",
+"name": "warns",
+"path": "griffe.docstrings.dataclasses.DocstringSectionKind.warns",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 187,
+"endlineno": 187,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "'warns'"
+},
+{
+"kind": "attribute",
+"name": "returns",
+"path": "griffe.docstrings.dataclasses.DocstringSectionKind.returns",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 188,
+"endlineno": 188,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "'returns'"
+},
+{
+"kind": "attribute",
+"name": "yields",
+"path": "griffe.docstrings.dataclasses.DocstringSectionKind.yields",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 189,
+"endlineno": 189,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "'yields'"
+},
+{
+"kind": "attribute",
+"name": "receives",
+"path": "griffe.docstrings.dataclasses.DocstringSectionKind.receives",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 190,
+"endlineno": 190,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "'receives'"
+},
+{
+"kind": "attribute",
+"name": "examples",
+"path": "griffe.docstrings.dataclasses.DocstringSectionKind.examples",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 191,
+"endlineno": 191,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "'examples'"
+},
+{
+"kind": "attribute",
+"name": "attributes",
+"path": "griffe.docstrings.dataclasses.DocstringSectionKind.attributes",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 192,
+"endlineno": 192,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "'attributes'"
+},
+{
+"kind": "attribute",
+"name": "deprecated",
+"path": "griffe.docstrings.dataclasses.DocstringSectionKind.deprecated",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 193,
+"endlineno": 193,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "'deprecated'"
+},
+{
+"kind": "attribute",
+"name": "admonition",
+"path": "griffe.docstrings.dataclasses.DocstringSectionKind.admonition",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 194,
+"endlineno": 194,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "'admonition'"
+}
+],
+"bases": [
+[
+{
+"source": "enum",
+"full": "enum"
+},
+".",
+{
+"source": "Enum",
+"full": "enum.Enum"
+}
+]
+],
+"decorators": []
+},
+{
+"kind": "class",
+"name": "DocstringSection",
+"path": "griffe.docstrings.dataclasses.DocstringSection",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 197,
+"endlineno": 226,
+"docstring": {
+"value": "This class represents a docstring section.",
+"lineno": 198,
+"endlineno": 198,
+"parsed": [
+{
+"kind": "text",
+"value": "This class represents a docstring section."
+}
+]
+},
+"labels": [],
+"members": [
+{
+"kind": "attribute",
+"name": "kind",
+"path": "griffe.docstrings.dataclasses.DocstringSection.kind",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 200,
+"endlineno": 200,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "None",
+"annotation": {
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+}
+},
+{
+"kind": "function",
+"name": "__init__",
+"path": "griffe.docstrings.dataclasses.DocstringSection.__init__",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 202,
+"endlineno": 208,
+"docstring": {
+"value": "Initialize the section.\n\nParameters:\n    title: An optional title.",
+"lineno": 203,
+"endlineno": 207,
+"parsed": [
+{
+"kind": "parameters",
+"value": [
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"description": "An optional title.",
+"value": "None"
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"kind": "positional or keyword",
+"default": "None"
+}
+],
+"returns": "None"
+},
+{
+"kind": "attribute",
+"name": "title",
+"path": "griffe.docstrings.dataclasses.DocstringSection.title",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 208,
+"endlineno": 208,
+"labels": [
+"instance-attribute"
+],
+"members": [],
+"value": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+]
+},
+{
+"kind": "function",
+"name": "as_dict",
+"path": "griffe.docstrings.dataclasses.DocstringSection.as_dict",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 210,
+"endlineno": 226,
+"docstring": {
+"value": "Return this section's data as a dictionary.\n\nParameters:\n    **kwargs: Additional serialization options.\n\nReturns:\n    A dictionary.",
+"lineno": 211,
+"endlineno": 218,
+"parsed": [
+{
+"kind": "text",
+"value": "Return this section's data as a dictionary."
+},
+{
+"kind": "parameters",
+"value": [
+{
+"name": "**kwargs",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"description": "Additional serialization options.",
+"value": "{}"
+}
+]
+},
+{
+"kind": "returns",
+"value": [
+{
+"name": "",
+"annotation": [
+{
+"source": "dict",
+"full": "dict"
+},
+"[",
+[
+{
+"source": "str",
+"full": "str"
+},
+", ",
+{
+"source": "Any",
+"full": "typing.Any"
+}
+],
+"]"
+],
+"description": "A dictionary."
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "**kwargs",
+"annotation": {
+"source": "Any",
+"full": "typing.Any"
+},
+"kind": "variadic keyword",
+"default": "{}"
+}
+],
+"returns": [
+{
+"source": "dict",
+"full": "dict"
+},
+"[",
+[
+{
+"source": "str",
+"full": "str"
+},
+", ",
+{
+"source": "Any",
+"full": "typing.Any"
+}
+],
+"]"
+]
+}
+],
+"bases": [],
+"decorators": []
+},
+{
+"kind": "class",
+"name": "DocstringSectionText",
+"path": "griffe.docstrings.dataclasses.DocstringSectionText",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 229,
+"endlineno": 242,
+"docstring": {
+"value": "This class represents a text section.",
+"lineno": 230,
+"endlineno": 230,
+"parsed": [
+{
+"kind": "text",
+"value": "This class represents a text section."
+}
+]
+},
+"labels": [],
+"members": [
+{
+"kind": "attribute",
+"name": "kind",
+"path": "griffe.docstrings.dataclasses.DocstringSectionText.kind",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 232,
+"endlineno": 232,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "DocstringSectionKind.text",
+"annotation": {
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+}
+},
+{
+"kind": "function",
+"name": "__init__",
+"path": "griffe.docstrings.dataclasses.DocstringSectionText.__init__",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 234,
+"endlineno": 242,
+"docstring": {
+"value": "Initialize the section.\n\nParameters:\n    value: The section text.\n    title: An optional title.",
+"lineno": 235,
+"endlineno": 240,
+"parsed": [
+{
+"kind": "parameters",
+"value": [
+{
+"name": "value",
+"annotation": {
+"source": "str",
+"full": "str"
+},
+"description": "The section text."
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"description": "An optional title.",
+"value": "None"
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "value",
+"annotation": {
+"source": "str",
+"full": "str"
+},
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"kind": "positional or keyword",
+"default": "None"
+}
+],
+"returns": "None"
+},
+{
+"kind": "attribute",
+"name": "value",
+"path": "griffe.docstrings.dataclasses.DocstringSectionText.value",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 242,
+"endlineno": 242,
+"labels": [
+"instance-attribute"
+],
+"members": [],
+"value": "value",
+"annotation": {
+"source": "str",
+"full": "str"
+}
+}
+],
+"bases": [
+{
+"source": "DocstringSection",
+"full": "griffe.docstrings.dataclasses.DocstringSection"
+}
+],
+"decorators": []
+},
+{
+"kind": "class",
+"name": "DocstringSectionParameters",
+"path": "griffe.docstrings.dataclasses.DocstringSectionParameters",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 245,
+"endlineno": 258,
+"docstring": {
+"value": "This class represents a parameters section.",
+"lineno": 246,
+"endlineno": 246,
+"parsed": [
+{
+"kind": "text",
+"value": "This class represents a parameters section."
+}
+]
+},
+"labels": [],
+"members": [
+{
+"kind": "attribute",
+"name": "kind",
+"path": "griffe.docstrings.dataclasses.DocstringSectionParameters.kind",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 248,
+"endlineno": 248,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "DocstringSectionKind.parameters",
+"annotation": {
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+}
+},
+{
+"kind": "function",
+"name": "__init__",
+"path": "griffe.docstrings.dataclasses.DocstringSectionParameters.__init__",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 250,
+"endlineno": 258,
+"docstring": {
+"value": "Initialize the section.\n\nParameters:\n    value: The section parameters.\n    title: An optional title.",
+"lineno": 251,
+"endlineno": 256,
+"parsed": [
+{
+"kind": "parameters",
+"value": [
+{
+"name": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringParameter",
+"full": "griffe.docstrings.dataclasses.DocstringParameter"
+},
+"]"
+],
+"description": "The section parameters."
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"description": "An optional title.",
+"value": "None"
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringParameter",
+"full": "griffe.docstrings.dataclasses.DocstringParameter"
+},
+"]"
+],
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"kind": "positional or keyword",
+"default": "None"
+}
+],
+"returns": "None"
+},
+{
+"kind": "attribute",
+"name": "value",
+"path": "griffe.docstrings.dataclasses.DocstringSectionParameters.value",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 258,
+"endlineno": 258,
+"labels": [
+"instance-attribute"
+],
+"members": [],
+"value": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringParameter",
+"full": "griffe.docstrings.dataclasses.DocstringParameter"
+},
+"]"
+]
+}
+],
+"bases": [
+{
+"source": "DocstringSection",
+"full": "griffe.docstrings.dataclasses.DocstringSection"
+}
+],
+"decorators": []
+},
+{
+"kind": "class",
+"name": "DocstringSectionOtherParameters",
+"path": "griffe.docstrings.dataclasses.DocstringSectionOtherParameters",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 261,
+"endlineno": 264,
+"docstring": {
+"value": "This class represents an other parameters section.",
+"lineno": 262,
+"endlineno": 262,
+"parsed": [
+{
+"kind": "text",
+"value": "This class represents an other parameters section."
+}
+]
+},
+"labels": [],
+"members": [
+{
+"kind": "attribute",
+"name": "kind",
+"path": "griffe.docstrings.dataclasses.DocstringSectionOtherParameters.kind",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 264,
+"endlineno": 264,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "DocstringSectionKind.other_parameters",
+"annotation": {
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+}
+}
+],
+"bases": [
+{
+"source": "DocstringSectionParameters",
+"full": "griffe.docstrings.dataclasses.DocstringSectionParameters"
+}
+],
+"decorators": []
+},
+{
+"kind": "class",
+"name": "DocstringSectionRaises",
+"path": "griffe.docstrings.dataclasses.DocstringSectionRaises",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 267,
+"endlineno": 280,
+"docstring": {
+"value": "This class represents a raises section.",
+"lineno": 268,
+"endlineno": 268,
+"parsed": [
+{
+"kind": "text",
+"value": "This class represents a raises section."
+}
+]
+},
+"labels": [],
+"members": [
+{
+"kind": "attribute",
+"name": "kind",
+"path": "griffe.docstrings.dataclasses.DocstringSectionRaises.kind",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 270,
+"endlineno": 270,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "DocstringSectionKind.raises",
+"annotation": {
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+}
+},
+{
+"kind": "function",
+"name": "__init__",
+"path": "griffe.docstrings.dataclasses.DocstringSectionRaises.__init__",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 272,
+"endlineno": 280,
+"docstring": {
+"value": "Initialize the section.\n\nParameters:\n    value: The section exceptions.\n    title: An optional title.",
+"lineno": 273,
+"endlineno": 278,
+"parsed": [
+{
+"kind": "parameters",
+"value": [
+{
+"name": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringRaise",
+"full": "griffe.docstrings.dataclasses.DocstringRaise"
+},
+"]"
+],
+"description": "The section exceptions."
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"description": "An optional title.",
+"value": "None"
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringRaise",
+"full": "griffe.docstrings.dataclasses.DocstringRaise"
+},
+"]"
+],
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"kind": "positional or keyword",
+"default": "None"
+}
+],
+"returns": "None"
+},
+{
+"kind": "attribute",
+"name": "value",
+"path": "griffe.docstrings.dataclasses.DocstringSectionRaises.value",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 280,
+"endlineno": 280,
+"labels": [
+"instance-attribute"
+],
+"members": [],
+"value": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringRaise",
+"full": "griffe.docstrings.dataclasses.DocstringRaise"
+},
+"]"
+]
+}
+],
+"bases": [
+{
+"source": "DocstringSection",
+"full": "griffe.docstrings.dataclasses.DocstringSection"
+}
+],
+"decorators": []
+},
+{
+"kind": "class",
+"name": "DocstringSectionWarns",
+"path": "griffe.docstrings.dataclasses.DocstringSectionWarns",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 283,
+"endlineno": 296,
+"docstring": {
+"value": "This class represents a warns section.",
+"lineno": 284,
+"endlineno": 284,
+"parsed": [
+{
+"kind": "text",
+"value": "This class represents a warns section."
+}
+]
+},
+"labels": [],
+"members": [
+{
+"kind": "attribute",
+"name": "kind",
+"path": "griffe.docstrings.dataclasses.DocstringSectionWarns.kind",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 286,
+"endlineno": 286,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "DocstringSectionKind.warns",
+"annotation": {
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+}
+},
+{
+"kind": "function",
+"name": "__init__",
+"path": "griffe.docstrings.dataclasses.DocstringSectionWarns.__init__",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 288,
+"endlineno": 296,
+"docstring": {
+"value": "Initialize the section.\n\nParameters:\n    value: The section warnings.\n    title: An optional title.",
+"lineno": 289,
+"endlineno": 294,
+"parsed": [
+{
+"kind": "parameters",
+"value": [
+{
+"name": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringWarn",
+"full": "griffe.docstrings.dataclasses.DocstringWarn"
+},
+"]"
+],
+"description": "The section warnings."
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"description": "An optional title.",
+"value": "None"
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringWarn",
+"full": "griffe.docstrings.dataclasses.DocstringWarn"
+},
+"]"
+],
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"kind": "positional or keyword",
+"default": "None"
+}
+],
+"returns": "None"
+},
+{
+"kind": "attribute",
+"name": "value",
+"path": "griffe.docstrings.dataclasses.DocstringSectionWarns.value",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 296,
+"endlineno": 296,
+"labels": [
+"instance-attribute"
+],
+"members": [],
+"value": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringWarn",
+"full": "griffe.docstrings.dataclasses.DocstringWarn"
+},
+"]"
+]
+}
+],
+"bases": [
+{
+"source": "DocstringSection",
+"full": "griffe.docstrings.dataclasses.DocstringSection"
+}
+],
+"decorators": []
+},
+{
+"kind": "class",
+"name": "DocstringSectionReturns",
+"path": "griffe.docstrings.dataclasses.DocstringSectionReturns",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 299,
+"endlineno": 312,
+"docstring": {
+"value": "This class represents a returns section.",
+"lineno": 300,
+"endlineno": 300,
+"parsed": [
+{
+"kind": "text",
+"value": "This class represents a returns section."
+}
+]
+},
+"labels": [],
+"members": [
+{
+"kind": "attribute",
+"name": "kind",
+"path": "griffe.docstrings.dataclasses.DocstringSectionReturns.kind",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 302,
+"endlineno": 302,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "DocstringSectionKind.returns",
+"annotation": {
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+}
+},
+{
+"kind": "function",
+"name": "__init__",
+"path": "griffe.docstrings.dataclasses.DocstringSectionReturns.__init__",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 304,
+"endlineno": 312,
+"docstring": {
+"value": "Initialize the section.\n\nParameters:\n    value: The section returned items.\n    title: An optional title.",
+"lineno": 305,
+"endlineno": 310,
+"parsed": [
+{
+"kind": "parameters",
+"value": [
+{
+"name": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringReturn",
+"full": "griffe.docstrings.dataclasses.DocstringReturn"
+},
+"]"
+],
+"description": "The section returned items."
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"description": "An optional title.",
+"value": "None"
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringReturn",
+"full": "griffe.docstrings.dataclasses.DocstringReturn"
+},
+"]"
+],
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"kind": "positional or keyword",
+"default": "None"
+}
+],
+"returns": "None"
+},
+{
+"kind": "attribute",
+"name": "value",
+"path": "griffe.docstrings.dataclasses.DocstringSectionReturns.value",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 312,
+"endlineno": 312,
+"labels": [
+"instance-attribute"
+],
+"members": [],
+"value": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringReturn",
+"full": "griffe.docstrings.dataclasses.DocstringReturn"
+},
+"]"
+]
+}
+],
+"bases": [
+{
+"source": "DocstringSection",
+"full": "griffe.docstrings.dataclasses.DocstringSection"
+}
+],
+"decorators": []
+},
+{
+"kind": "class",
+"name": "DocstringSectionYields",
+"path": "griffe.docstrings.dataclasses.DocstringSectionYields",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 315,
+"endlineno": 328,
+"docstring": {
+"value": "This class represents a yields section.",
+"lineno": 316,
+"endlineno": 316,
+"parsed": [
+{
+"kind": "text",
+"value": "This class represents a yields section."
+}
+]
+},
+"labels": [],
+"members": [
+{
+"kind": "attribute",
+"name": "kind",
+"path": "griffe.docstrings.dataclasses.DocstringSectionYields.kind",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 318,
+"endlineno": 318,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "DocstringSectionKind.yields",
+"annotation": {
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+}
+},
+{
+"kind": "function",
+"name": "__init__",
+"path": "griffe.docstrings.dataclasses.DocstringSectionYields.__init__",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 320,
+"endlineno": 328,
+"docstring": {
+"value": "Initialize the section.\n\nParameters:\n    value: The section yielded items.\n    title: An optional title.",
+"lineno": 321,
+"endlineno": 326,
+"parsed": [
+{
+"kind": "parameters",
+"value": [
+{
+"name": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringYield",
+"full": "griffe.docstrings.dataclasses.DocstringYield"
+},
+"]"
+],
+"description": "The section yielded items."
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"description": "An optional title.",
+"value": "None"
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringYield",
+"full": "griffe.docstrings.dataclasses.DocstringYield"
+},
+"]"
+],
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"kind": "positional or keyword",
+"default": "None"
+}
+],
+"returns": "None"
+},
+{
+"kind": "attribute",
+"name": "value",
+"path": "griffe.docstrings.dataclasses.DocstringSectionYields.value",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 328,
+"endlineno": 328,
+"labels": [
+"instance-attribute"
+],
+"members": [],
+"value": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringYield",
+"full": "griffe.docstrings.dataclasses.DocstringYield"
+},
+"]"
+]
+}
+],
+"bases": [
+{
+"source": "DocstringSection",
+"full": "griffe.docstrings.dataclasses.DocstringSection"
+}
+],
+"decorators": []
+},
+{
+"kind": "class",
+"name": "DocstringSectionReceives",
+"path": "griffe.docstrings.dataclasses.DocstringSectionReceives",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 331,
+"endlineno": 344,
+"docstring": {
+"value": "This class represents a receives section.",
+"lineno": 332,
+"endlineno": 332,
+"parsed": [
+{
+"kind": "text",
+"value": "This class represents a receives section."
+}
+]
+},
+"labels": [],
+"members": [
+{
+"kind": "attribute",
+"name": "kind",
+"path": "griffe.docstrings.dataclasses.DocstringSectionReceives.kind",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 334,
+"endlineno": 334,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "DocstringSectionKind.receives",
+"annotation": {
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+}
+},
+{
+"kind": "function",
+"name": "__init__",
+"path": "griffe.docstrings.dataclasses.DocstringSectionReceives.__init__",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 336,
+"endlineno": 344,
+"docstring": {
+"value": "Initialize the section.\n\nParameters:\n    value: The section received items.\n    title: An optional title.",
+"lineno": 337,
+"endlineno": 342,
+"parsed": [
+{
+"kind": "parameters",
+"value": [
+{
+"name": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringReceive",
+"full": "griffe.docstrings.dataclasses.DocstringReceive"
+},
+"]"
+],
+"description": "The section received items."
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"description": "An optional title.",
+"value": "None"
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringReceive",
+"full": "griffe.docstrings.dataclasses.DocstringReceive"
+},
+"]"
+],
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"kind": "positional or keyword",
+"default": "None"
+}
+],
+"returns": "None"
+},
+{
+"kind": "attribute",
+"name": "value",
+"path": "griffe.docstrings.dataclasses.DocstringSectionReceives.value",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 344,
+"endlineno": 344,
+"labels": [
+"instance-attribute"
+],
+"members": [],
+"value": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringReceive",
+"full": "griffe.docstrings.dataclasses.DocstringReceive"
+},
+"]"
+]
+}
+],
+"bases": [
+{
+"source": "DocstringSection",
+"full": "griffe.docstrings.dataclasses.DocstringSection"
+}
+],
+"decorators": []
+},
+{
+"kind": "class",
+"name": "DocstringSectionExamples",
+"path": "griffe.docstrings.dataclasses.DocstringSectionExamples",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 347,
+"endlineno": 366,
+"docstring": {
+"value": "This class represents an examples section.",
+"lineno": 348,
+"endlineno": 348,
+"parsed": [
+{
+"kind": "text",
+"value": "This class represents an examples section."
+}
+]
+},
+"labels": [],
+"members": [
+{
+"kind": "attribute",
+"name": "kind",
+"path": "griffe.docstrings.dataclasses.DocstringSectionExamples.kind",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 350,
+"endlineno": 350,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "DocstringSectionKind.examples",
+"annotation": {
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+}
+},
+{
+"kind": "function",
+"name": "__init__",
+"path": "griffe.docstrings.dataclasses.DocstringSectionExamples.__init__",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 352,
+"endlineno": 366,
+"docstring": {
+"value": "Initialize the section.\n\nParameters:\n    value: The section examples.\n    title: An optional title.",
+"lineno": 357,
+"endlineno": 362,
+"parsed": [
+{
+"kind": "parameters",
+"value": [
+{
+"name": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+[
+{
+"source": "tuple",
+"full": "tuple"
+},
+"[",
+[
+[
+[
+{
+"source": "Literal",
+"full": "typing.Literal"
+},
+"[",
+[
+{
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+},
+".",
+{
+"source": "text",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind.text"
+}
+],
+"]"
+],
+" | ",
+[
+{
+"source": "Literal",
+"full": "typing.Literal"
+},
+"[",
+[
+{
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+},
+".",
+{
+"source": "examples",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind.examples"
+}
+],
+"]"
+]
+],
+", ",
+{
+"source": "str",
+"full": "str"
+}
+],
+"]"
+],
+"]"
+],
+"description": "The section examples."
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"description": "An optional title.",
+"value": "None"
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+[
+{
+"source": "tuple",
+"full": "tuple"
+},
+"[",
+[
+[
+[
+{
+"source": "Literal",
+"full": "typing.Literal"
+},
+"[",
+[
+{
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+},
+".",
+{
+"source": "text",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind.text"
+}
+],
+"]"
+],
+" | ",
+[
+{
+"source": "Literal",
+"full": "typing.Literal"
+},
+"[",
+[
+{
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+},
+".",
+{
+"source": "examples",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind.examples"
+}
+],
+"]"
+]
+],
+", ",
+{
+"source": "str",
+"full": "str"
+}
+],
+"]"
+],
+"]"
+],
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"kind": "positional or keyword",
+"default": "None"
+}
+],
+"returns": "None"
+},
+{
+"kind": "attribute",
+"name": "value",
+"path": "griffe.docstrings.dataclasses.DocstringSectionExamples.value",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 364,
+"endlineno": 366,
+"labels": [
+"instance-attribute"
+],
+"members": [],
+"value": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+[
+{
+"source": "tuple",
+"full": "tuple"
+},
+"[",
+[
+[
+[
+{
+"source": "Literal",
+"full": "typing.Literal"
+},
+"[",
+[
+{
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+},
+".",
+{
+"source": "text",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind.text"
+}
+],
+"]"
+],
+" | ",
+[
+{
+"source": "Literal",
+"full": "typing.Literal"
+},
+"[",
+[
+{
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+},
+".",
+{
+"source": "examples",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind.examples"
+}
+],
+"]"
+]
+],
+", ",
+{
+"source": "str",
+"full": "str"
+}
+],
+"]"
+],
+"]"
+]
+}
+],
+"bases": [
+{
+"source": "DocstringSection",
+"full": "griffe.docstrings.dataclasses.DocstringSection"
+}
+],
+"decorators": []
+},
+{
+"kind": "class",
+"name": "DocstringSectionAttributes",
+"path": "griffe.docstrings.dataclasses.DocstringSectionAttributes",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 369,
+"endlineno": 382,
+"docstring": {
+"value": "This class represents an attributes section.",
+"lineno": 370,
+"endlineno": 370,
+"parsed": [
+{
+"kind": "text",
+"value": "This class represents an attributes section."
+}
+]
+},
+"labels": [],
+"members": [
+{
+"kind": "attribute",
+"name": "kind",
+"path": "griffe.docstrings.dataclasses.DocstringSectionAttributes.kind",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 372,
+"endlineno": 372,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "DocstringSectionKind.attributes",
+"annotation": {
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+}
+},
+{
+"kind": "function",
+"name": "__init__",
+"path": "griffe.docstrings.dataclasses.DocstringSectionAttributes.__init__",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 374,
+"endlineno": 382,
+"docstring": {
+"value": "Initialize the section.\n\nParameters:\n    value: The section attributes.\n    title: An optional title.",
+"lineno": 375,
+"endlineno": 380,
+"parsed": [
+{
+"kind": "parameters",
+"value": [
+{
+"name": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringAttribute",
+"full": "griffe.docstrings.dataclasses.DocstringAttribute"
+},
+"]"
+],
+"description": "The section attributes."
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"description": "An optional title.",
+"value": "None"
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringAttribute",
+"full": "griffe.docstrings.dataclasses.DocstringAttribute"
+},
+"]"
+],
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"kind": "positional or keyword",
+"default": "None"
+}
+],
+"returns": "None"
+},
+{
+"kind": "attribute",
+"name": "value",
+"path": "griffe.docstrings.dataclasses.DocstringSectionAttributes.value",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 382,
+"endlineno": 382,
+"labels": [
+"instance-attribute"
+],
+"members": [],
+"value": "value",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+{
+"source": "DocstringAttribute",
+"full": "griffe.docstrings.dataclasses.DocstringAttribute"
+},
+"]"
+]
+}
+],
+"bases": [
+{
+"source": "DocstringSection",
+"full": "griffe.docstrings.dataclasses.DocstringSection"
+}
+],
+"decorators": []
+},
+{
+"kind": "class",
+"name": "DocstringSectionDeprecated",
+"path": "griffe.docstrings.dataclasses.DocstringSectionDeprecated",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 385,
+"endlineno": 399,
+"docstring": {
+"value": "This class represents a deprecated section.",
+"lineno": 386,
+"endlineno": 386,
+"parsed": [
+{
+"kind": "text",
+"value": "This class represents a deprecated section."
+}
+]
+},
+"labels": [],
+"members": [
+{
+"kind": "attribute",
+"name": "kind",
+"path": "griffe.docstrings.dataclasses.DocstringSectionDeprecated.kind",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 388,
+"endlineno": 388,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "DocstringSectionKind.deprecated",
+"annotation": {
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+}
+},
+{
+"kind": "function",
+"name": "__init__",
+"path": "griffe.docstrings.dataclasses.DocstringSectionDeprecated.__init__",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 390,
+"endlineno": 399,
+"docstring": {
+"value": "Initialize the section.\n\nParameters:\n    version: The deprecation version.\n    text: The deprecation text.\n    title: An optional title.",
+"lineno": 391,
+"endlineno": 397,
+"parsed": [
+{
+"kind": "parameters",
+"value": [
+{
+"name": "version",
+"annotation": {
+"source": "str",
+"full": "str"
+},
+"description": "The deprecation version."
+},
+{
+"name": "text",
+"annotation": {
+"source": "str",
+"full": "str"
+},
+"description": "The deprecation text."
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"description": "An optional title.",
+"value": "None"
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "version",
+"annotation": {
+"source": "str",
+"full": "str"
+},
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "text",
+"annotation": {
+"source": "str",
+"full": "str"
+},
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"kind": "positional or keyword",
+"default": "None"
+}
+],
+"returns": "None"
+},
+{
+"kind": "attribute",
+"name": "value",
+"path": "griffe.docstrings.dataclasses.DocstringSectionDeprecated.value",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 399,
+"endlineno": 399,
+"labels": [
+"instance-attribute"
+],
+"members": [],
+"value": "DocstringDeprecated(annotation=version, description=text)",
+"annotation": {
+"source": "DocstringDeprecated",
+"full": "griffe.docstrings.dataclasses.DocstringDeprecated"
+}
+}
+],
+"bases": [
+{
+"source": "DocstringSection",
+"full": "griffe.docstrings.dataclasses.DocstringSection"
+}
+],
+"decorators": []
+},
+{
+"kind": "class",
+"name": "DocstringSectionAdmonition",
+"path": "griffe.docstrings.dataclasses.DocstringSectionAdmonition",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 402,
+"endlineno": 416,
+"docstring": {
+"value": "This class represents an admonition section.",
+"lineno": 403,
+"endlineno": 403,
+"parsed": [
+{
+"kind": "text",
+"value": "This class represents an admonition section."
+}
+]
+},
+"labels": [],
+"members": [
+{
+"kind": "attribute",
+"name": "kind",
+"path": "griffe.docstrings.dataclasses.DocstringSectionAdmonition.kind",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 405,
+"endlineno": 405,
+"labels": [
+"class-attribute"
+],
+"members": [],
+"value": "DocstringSectionKind.admonition",
+"annotation": {
+"source": "DocstringSectionKind",
+"full": "griffe.docstrings.dataclasses.DocstringSectionKind"
+}
+},
+{
+"kind": "function",
+"name": "__init__",
+"path": "griffe.docstrings.dataclasses.DocstringSectionAdmonition.__init__",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 407,
+"endlineno": 416,
+"docstring": {
+"value": "Initialize the section.\n\nParameters:\n    kind: The admonition kind.\n    text: The admonition text.\n    title: An optional title.",
+"lineno": 408,
+"endlineno": 414,
+"parsed": [
+{
+"kind": "parameters",
+"value": [
+{
+"name": "kind",
+"annotation": {
+"source": "str",
+"full": "str"
+},
+"description": "The admonition kind."
+},
+{
+"name": "text",
+"annotation": {
+"source": "str",
+"full": "str"
+},
+"description": "The admonition text."
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"description": "An optional title.",
+"value": "None"
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "kind",
+"annotation": {
+"source": "str",
+"full": "str"
+},
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "text",
+"annotation": {
+"source": "str",
+"full": "str"
+},
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "title",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+"None"
+],
+"kind": "positional or keyword",
+"default": "None"
+}
+],
+"returns": "None"
+},
+{
+"kind": "attribute",
+"name": "value",
+"path": "griffe.docstrings.dataclasses.DocstringSectionAdmonition.value",
+"filepath": "/media/data/dev/griffe/src/griffe/docstrings/dataclasses.py",
+"relative_filepath": "griffe/docstrings/dataclasses.py",
+"lineno": 416,
+"endlineno": 416,
+"labels": [
+"instance-attribute"
+],
+"members": [],
+"value": "DocstringAdmonition(annotation=kind, description=text)",
+"annotation": {
+"source": "DocstringAdmonition",
+"full": "griffe.docstrings.dataclasses.DocstringAdmonition"
+}
+}
+],
+"bases": [
+{
+"source": "DocstringSection",
+"full": "griffe.docstrings.dataclasses.DocstringSection"
 }
 ],
 "decorators": []
@@ -32745,25 +34599,9 @@
 },
 {
 "kind": "alias",
-"name": "Any",
-"target_path": "typing.Any",
-"path": "griffe.docstrings.google.Any",
-"lineno": 7,
-"endlineno": 7
-},
-{
-"kind": "alias",
 "name": "List",
 "target_path": "typing.List",
 "path": "griffe.docstrings.google.List",
-"lineno": 7,
-"endlineno": 7
-},
-{
-"kind": "alias",
-"name": "Pattern",
-"target_path": "typing.Pattern",
-"path": "griffe.docstrings.google.Pattern",
 "lineno": 7,
 "endlineno": 7
 },
@@ -32777,19 +34615,11 @@
 },
 {
 "kind": "alias",
-"name": "DocstringAdmonition",
-"target_path": "griffe.docstrings.dataclasses.DocstringAdmonition",
-"path": "griffe.docstrings.google.DocstringAdmonition",
-"lineno": 9,
-"endlineno": 20
-},
-{
-"kind": "alias",
 "name": "DocstringAttribute",
 "target_path": "griffe.docstrings.dataclasses.DocstringAttribute",
 "path": "griffe.docstrings.google.DocstringAttribute",
 "lineno": 9,
-"endlineno": 20
+"endlineno": 31
 },
 {
 "kind": "alias",
@@ -32797,7 +34627,7 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringParameter",
 "path": "griffe.docstrings.google.DocstringParameter",
 "lineno": 9,
-"endlineno": 20
+"endlineno": 31
 },
 {
 "kind": "alias",
@@ -32805,7 +34635,7 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringRaise",
 "path": "griffe.docstrings.google.DocstringRaise",
 "lineno": 9,
-"endlineno": 20
+"endlineno": 31
 },
 {
 "kind": "alias",
@@ -32813,7 +34643,7 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringReceive",
 "path": "griffe.docstrings.google.DocstringReceive",
 "lineno": 9,
-"endlineno": 20
+"endlineno": 31
 },
 {
 "kind": "alias",
@@ -32821,7 +34651,7 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringReturn",
 "path": "griffe.docstrings.google.DocstringReturn",
 "lineno": 9,
-"endlineno": 20
+"endlineno": 31
 },
 {
 "kind": "alias",
@@ -32829,7 +34659,39 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringSection",
 "path": "griffe.docstrings.google.DocstringSection",
 "lineno": 9,
-"endlineno": 20
+"endlineno": 31
+},
+{
+"kind": "alias",
+"name": "DocstringSectionAdmonition",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionAdmonition",
+"path": "griffe.docstrings.google.DocstringSectionAdmonition",
+"lineno": 9,
+"endlineno": 31
+},
+{
+"kind": "alias",
+"name": "DocstringSectionAttributes",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionAttributes",
+"path": "griffe.docstrings.google.DocstringSectionAttributes",
+"lineno": 9,
+"endlineno": 31
+},
+{
+"kind": "alias",
+"name": "DocstringSectionDeprecated",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionDeprecated",
+"path": "griffe.docstrings.google.DocstringSectionDeprecated",
+"lineno": 9,
+"endlineno": 31
+},
+{
+"kind": "alias",
+"name": "DocstringSectionExamples",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionExamples",
+"path": "griffe.docstrings.google.DocstringSectionExamples",
+"lineno": 9,
+"endlineno": 31
 },
 {
 "kind": "alias",
@@ -32837,7 +34699,71 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringSectionKind",
 "path": "griffe.docstrings.google.DocstringSectionKind",
 "lineno": 9,
-"endlineno": 20
+"endlineno": 31
+},
+{
+"kind": "alias",
+"name": "DocstringSectionOtherParameters",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionOtherParameters",
+"path": "griffe.docstrings.google.DocstringSectionOtherParameters",
+"lineno": 9,
+"endlineno": 31
+},
+{
+"kind": "alias",
+"name": "DocstringSectionParameters",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionParameters",
+"path": "griffe.docstrings.google.DocstringSectionParameters",
+"lineno": 9,
+"endlineno": 31
+},
+{
+"kind": "alias",
+"name": "DocstringSectionRaises",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionRaises",
+"path": "griffe.docstrings.google.DocstringSectionRaises",
+"lineno": 9,
+"endlineno": 31
+},
+{
+"kind": "alias",
+"name": "DocstringSectionReceives",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionReceives",
+"path": "griffe.docstrings.google.DocstringSectionReceives",
+"lineno": 9,
+"endlineno": 31
+},
+{
+"kind": "alias",
+"name": "DocstringSectionReturns",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionReturns",
+"path": "griffe.docstrings.google.DocstringSectionReturns",
+"lineno": 9,
+"endlineno": 31
+},
+{
+"kind": "alias",
+"name": "DocstringSectionText",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionText",
+"path": "griffe.docstrings.google.DocstringSectionText",
+"lineno": 9,
+"endlineno": 31
+},
+{
+"kind": "alias",
+"name": "DocstringSectionWarns",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionWarns",
+"path": "griffe.docstrings.google.DocstringSectionWarns",
+"lineno": 9,
+"endlineno": 31
+},
+{
+"kind": "alias",
+"name": "DocstringSectionYields",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionYields",
+"path": "griffe.docstrings.google.DocstringSectionYields",
+"lineno": 9,
+"endlineno": 31
 },
 {
 "kind": "alias",
@@ -32845,7 +34771,7 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringWarn",
 "path": "griffe.docstrings.google.DocstringWarn",
 "lineno": 9,
-"endlineno": 20
+"endlineno": 31
 },
 {
 "kind": "alias",
@@ -32853,47 +34779,71 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringYield",
 "path": "griffe.docstrings.google.DocstringYield",
 "lineno": 9,
-"endlineno": 20
+"endlineno": 31
 },
 {
 "kind": "alias",
 "name": "parse_annotation",
 "target_path": "griffe.docstrings.utils.parse_annotation",
 "path": "griffe.docstrings.google.parse_annotation",
-"lineno": 21,
-"endlineno": 21
+"lineno": 32,
+"endlineno": 32
 },
 {
 "kind": "alias",
 "name": "warning",
 "target_path": "griffe.docstrings.utils.warning",
 "path": "griffe.docstrings.google.warning",
-"lineno": 21,
-"endlineno": 21
+"lineno": 32,
+"endlineno": 32
 },
 {
 "kind": "alias",
 "name": "Expression",
 "target_path": "griffe.expressions.Expression",
 "path": "griffe.docstrings.google.Expression",
-"lineno": 22,
-"endlineno": 22
+"lineno": 33,
+"endlineno": 33
 },
 {
 "kind": "alias",
 "name": "Name",
 "target_path": "griffe.expressions.Name",
 "path": "griffe.docstrings.google.Name",
-"lineno": 22,
-"endlineno": 22
+"lineno": 33,
+"endlineno": 33
+},
+{
+"kind": "alias",
+"name": "Any",
+"target_path": "typing.Any",
+"path": "griffe.docstrings.google.Any",
+"lineno": 36,
+"endlineno": 36
+},
+{
+"kind": "alias",
+"name": "Literal",
+"target_path": "typing.Literal",
+"path": "griffe.docstrings.google.Literal",
+"lineno": 36,
+"endlineno": 36
+},
+{
+"kind": "alias",
+"name": "Pattern",
+"target_path": "typing.Pattern",
+"path": "griffe.docstrings.google.Pattern",
+"lineno": 36,
+"endlineno": 36
 },
 {
 "kind": "alias",
 "name": "Docstring",
 "target_path": "griffe.dataclasses.Docstring",
 "path": "griffe.docstrings.google.Docstring",
-"lineno": 25,
-"endlineno": 25
+"lineno": 38,
+"endlineno": 38
 },
 {
 "kind": "attribute",
@@ -32901,8 +34851,8 @@
 "path": "griffe.docstrings.google._warn",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 27,
-"endlineno": 27,
+"lineno": 40,
+"endlineno": 40,
 "labels": [
 "module-attribute"
 ],
@@ -32915,8 +34865,8 @@
 "path": "griffe.docstrings.google._section_kind",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 29,
-"endlineno": 44,
+"lineno": 42,
+"endlineno": 57,
 "labels": [
 "module-attribute"
 ],
@@ -32929,8 +34879,8 @@
 "path": "griffe.docstrings.google.BlockItem",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 46,
-"endlineno": 46,
+"lineno": 59,
+"endlineno": 59,
 "labels": [
 "module-attribute"
 ],
@@ -32943,8 +34893,8 @@
 "path": "griffe.docstrings.google.BlockItems",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 47,
-"endlineno": 47,
+"lineno": 60,
+"endlineno": 60,
 "labels": [
 "module-attribute"
 ],
@@ -32957,8 +34907,8 @@
 "path": "griffe.docstrings.google.ItemsBlock",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 48,
-"endlineno": 48,
+"lineno": 61,
+"endlineno": 61,
 "labels": [
 "module-attribute"
 ],
@@ -32971,8 +34921,8 @@
 "path": "griffe.docstrings.google._RE_ADMONITION",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 50,
-"endlineno": 50,
+"lineno": 63,
+"endlineno": 63,
 "labels": [
 "module-attribute"
 ],
@@ -32989,8 +34939,8 @@
 "path": "griffe.docstrings.google._RE_NAME_ANNOTATION_DESCRIPTION",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 51,
-"endlineno": 51,
+"lineno": 64,
+"endlineno": 64,
 "labels": [
 "module-attribute"
 ],
@@ -33007,8 +34957,8 @@
 "path": "griffe.docstrings.google._RE_DOCTEST_BLANKLINE",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 52,
-"endlineno": 52,
+"lineno": 65,
+"endlineno": 65,
 "labels": [
 "module-attribute"
 ],
@@ -33025,8 +34975,8 @@
 "path": "griffe.docstrings.google._RE_DOCTEST_FLAGS",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 53,
-"endlineno": 53,
+"lineno": 66,
+"endlineno": 66,
 "labels": [
 "module-attribute"
 ],
@@ -33043,8 +34993,8 @@
 "path": "griffe.docstrings.google._read_block_items",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 56,
-"endlineno": 116,
+"lineno": 69,
+"endlineno": 129,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33079,8 +35029,8 @@
 "path": "griffe.docstrings.google._read_block",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 119,
-"endlineno": 147,
+"lineno": 132,
+"endlineno": 160,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33130,8 +35080,8 @@
 "path": "griffe.docstrings.google._read_parameters",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 150,
-"endlineno": 193,
+"lineno": 163,
+"endlineno": 206,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33189,8 +35139,8 @@
 "path": "griffe.docstrings.google._read_parameters_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 196,
-"endlineno": 207,
+"lineno": 209,
+"endlineno": 220,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33232,8 +35182,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionParameters",
+"full": "griffe.docstrings.dataclasses.DocstringSectionParameters"
 },
 " | ",
 "None"
@@ -33253,8 +35203,8 @@
 "path": "griffe.docstrings.google._read_other_parameters_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 210,
-"endlineno": 221,
+"lineno": 223,
+"endlineno": 234,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33296,8 +35246,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionOtherParameters",
+"full": "griffe.docstrings.dataclasses.DocstringSectionOtherParameters"
 },
 " | ",
 "None"
@@ -33317,8 +35267,8 @@
 "path": "griffe.docstrings.google._read_attributes_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 224,
-"endlineno": 260,
+"lineno": 237,
+"endlineno": 273,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33360,8 +35310,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionAttributes",
+"full": "griffe.docstrings.dataclasses.DocstringSectionAttributes"
 },
 " | ",
 "None"
@@ -33381,8 +35331,8 @@
 "path": "griffe.docstrings.google._read_raises_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 263,
-"endlineno": 287,
+"lineno": 276,
+"endlineno": 300,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33424,8 +35374,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionRaises",
+"full": "griffe.docstrings.dataclasses.DocstringSectionRaises"
 },
 " | ",
 "None"
@@ -33445,8 +35395,8 @@
 "path": "griffe.docstrings.google._read_warns_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 290,
-"endlineno": 311,
+"lineno": 303,
+"endlineno": 324,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33488,8 +35438,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionWarns",
+"full": "griffe.docstrings.dataclasses.DocstringSectionWarns"
 },
 " | ",
 "None"
@@ -33509,8 +35459,8 @@
 "path": "griffe.docstrings.google._read_returns_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 314,
-"endlineno": 352,
+"lineno": 327,
+"endlineno": 365,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33552,8 +35502,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionReturns",
+"full": "griffe.docstrings.dataclasses.DocstringSectionReturns"
 },
 " | ",
 "None"
@@ -33573,8 +35523,8 @@
 "path": "griffe.docstrings.google._read_yields_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 355,
-"endlineno": 394,
+"lineno": 368,
+"endlineno": 407,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33616,8 +35566,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionYields",
+"full": "griffe.docstrings.dataclasses.DocstringSectionYields"
 },
 " | ",
 "None"
@@ -33637,8 +35587,8 @@
 "path": "griffe.docstrings.google._read_receives_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 397,
-"endlineno": 436,
+"lineno": 410,
+"endlineno": 449,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33680,8 +35630,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionReceives",
+"full": "griffe.docstrings.dataclasses.DocstringSectionReceives"
 },
 " | ",
 "None"
@@ -33701,8 +35651,8 @@
 "path": "griffe.docstrings.google._read_examples_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 439,
-"endlineno": 498,
+"lineno": 452,
+"endlineno": 511,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33753,8 +35703,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionExamples",
+"full": "griffe.docstrings.dataclasses.DocstringSectionExamples"
 },
 " | ",
 "None"
@@ -33774,8 +35724,8 @@
 "path": "griffe.docstrings.google._read_deprecated_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 501,
-"endlineno": 526,
+"lineno": 514,
+"endlineno": 539,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33817,8 +35767,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionDeprecated",
+"full": "griffe.docstrings.dataclasses.DocstringSectionDeprecated"
 },
 " | ",
 "None"
@@ -33838,8 +35788,8 @@
 "path": "griffe.docstrings.google._is_empty_line",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 529,
-"endlineno": 530,
+"lineno": 542,
+"endlineno": 543,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33862,8 +35812,8 @@
 "path": "griffe.docstrings.google._section_reader",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 533,
-"endlineno": 544,
+"lineno": 546,
+"endlineno": 557,
 "labels": [
 "module-attribute"
 ],
@@ -33876,12 +35826,12 @@
 "path": "griffe.docstrings.google.parse",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 547,
-"endlineno": 652,
+"lineno": 560,
+"endlineno": 654,
 "docstring": {
 "value": "Parse a docstring.\n\nThis function iterates on lines of a docstring to build sections.\nIt then returns this list of sections.\n\nParameters:\n    docstring: The docstring to parse.\n    ignore_init_summary: Whether to ignore the summary in `__init__` methods' docstrings.\n    trim_doctest_flags: Whether to remove doctest flags from Python example blocks.\n    **options: Additional parsing options.\n\nReturns:\n    A list of docstring sections.",
-"lineno": 553,
-"endlineno": 566,
+"lineno": 566,
+"endlineno": 579,
 "parsed": [
 {
 "kind": "text",
@@ -34067,9 +36017,9 @@
 },
 {
 "kind": "alias",
-"name": "DocstringSectionKind",
-"target_path": "griffe.docstrings.dataclasses.DocstringSectionKind",
-"path": "griffe.docstrings.parsers.DocstringSectionKind",
+"name": "DocstringSectionText",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionText",
+"path": "griffe.docstrings.parsers.DocstringSectionText",
 "lineno": 8,
 "endlineno": 8
 },
@@ -34384,27 +36334,11 @@
 },
 {
 "kind": "alias",
-"name": "Any",
-"target_path": "typing.Any",
-"path": "griffe.docstrings.numpy.Any",
-"lineno": 44,
-"endlineno": 44
-},
-{
-"kind": "alias",
-"name": "Pattern",
-"target_path": "typing.Pattern",
-"path": "griffe.docstrings.numpy.Pattern",
-"lineno": 44,
-"endlineno": 44
-},
-{
-"kind": "alias",
 "name": "DocstringAttribute",
 "target_path": "griffe.docstrings.dataclasses.DocstringAttribute",
 "path": "griffe.docstrings.numpy.DocstringAttribute",
 "lineno": 46,
-"endlineno": 56
+"endlineno": 67
 },
 {
 "kind": "alias",
@@ -34412,7 +36346,7 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringParameter",
 "path": "griffe.docstrings.numpy.DocstringParameter",
 "lineno": 46,
-"endlineno": 56
+"endlineno": 67
 },
 {
 "kind": "alias",
@@ -34420,7 +36354,7 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringRaise",
 "path": "griffe.docstrings.numpy.DocstringRaise",
 "lineno": 46,
-"endlineno": 56
+"endlineno": 67
 },
 {
 "kind": "alias",
@@ -34428,7 +36362,7 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringReceive",
 "path": "griffe.docstrings.numpy.DocstringReceive",
 "lineno": 46,
-"endlineno": 56
+"endlineno": 67
 },
 {
 "kind": "alias",
@@ -34436,7 +36370,7 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringReturn",
 "path": "griffe.docstrings.numpy.DocstringReturn",
 "lineno": 46,
-"endlineno": 56
+"endlineno": 67
 },
 {
 "kind": "alias",
@@ -34444,7 +36378,31 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringSection",
 "path": "griffe.docstrings.numpy.DocstringSection",
 "lineno": 46,
-"endlineno": 56
+"endlineno": 67
+},
+{
+"kind": "alias",
+"name": "DocstringSectionAttributes",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionAttributes",
+"path": "griffe.docstrings.numpy.DocstringSectionAttributes",
+"lineno": 46,
+"endlineno": 67
+},
+{
+"kind": "alias",
+"name": "DocstringSectionDeprecated",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionDeprecated",
+"path": "griffe.docstrings.numpy.DocstringSectionDeprecated",
+"lineno": 46,
+"endlineno": 67
+},
+{
+"kind": "alias",
+"name": "DocstringSectionExamples",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionExamples",
+"path": "griffe.docstrings.numpy.DocstringSectionExamples",
+"lineno": 46,
+"endlineno": 67
 },
 {
 "kind": "alias",
@@ -34452,7 +36410,71 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringSectionKind",
 "path": "griffe.docstrings.numpy.DocstringSectionKind",
 "lineno": 46,
-"endlineno": 56
+"endlineno": 67
+},
+{
+"kind": "alias",
+"name": "DocstringSectionOtherParameters",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionOtherParameters",
+"path": "griffe.docstrings.numpy.DocstringSectionOtherParameters",
+"lineno": 46,
+"endlineno": 67
+},
+{
+"kind": "alias",
+"name": "DocstringSectionParameters",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionParameters",
+"path": "griffe.docstrings.numpy.DocstringSectionParameters",
+"lineno": 46,
+"endlineno": 67
+},
+{
+"kind": "alias",
+"name": "DocstringSectionRaises",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionRaises",
+"path": "griffe.docstrings.numpy.DocstringSectionRaises",
+"lineno": 46,
+"endlineno": 67
+},
+{
+"kind": "alias",
+"name": "DocstringSectionReceives",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionReceives",
+"path": "griffe.docstrings.numpy.DocstringSectionReceives",
+"lineno": 46,
+"endlineno": 67
+},
+{
+"kind": "alias",
+"name": "DocstringSectionReturns",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionReturns",
+"path": "griffe.docstrings.numpy.DocstringSectionReturns",
+"lineno": 46,
+"endlineno": 67
+},
+{
+"kind": "alias",
+"name": "DocstringSectionText",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionText",
+"path": "griffe.docstrings.numpy.DocstringSectionText",
+"lineno": 46,
+"endlineno": 67
+},
+{
+"kind": "alias",
+"name": "DocstringSectionWarns",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionWarns",
+"path": "griffe.docstrings.numpy.DocstringSectionWarns",
+"lineno": 46,
+"endlineno": 67
+},
+{
+"kind": "alias",
+"name": "DocstringSectionYields",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionYields",
+"path": "griffe.docstrings.numpy.DocstringSectionYields",
+"lineno": 46,
+"endlineno": 67
 },
 {
 "kind": "alias",
@@ -34460,7 +36482,7 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringWarn",
 "path": "griffe.docstrings.numpy.DocstringWarn",
 "lineno": 46,
-"endlineno": 56
+"endlineno": 67
 },
 {
 "kind": "alias",
@@ -34468,39 +36490,63 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringYield",
 "path": "griffe.docstrings.numpy.DocstringYield",
 "lineno": 46,
-"endlineno": 56
+"endlineno": 67
 },
 {
 "kind": "alias",
 "name": "warning",
 "target_path": "griffe.docstrings.utils.warning",
 "path": "griffe.docstrings.numpy.warning",
-"lineno": 57,
-"endlineno": 57
+"lineno": 68,
+"endlineno": 68
 },
 {
 "kind": "alias",
 "name": "Expression",
 "target_path": "griffe.expressions.Expression",
 "path": "griffe.docstrings.numpy.Expression",
-"lineno": 58,
-"endlineno": 58
+"lineno": 69,
+"endlineno": 69
 },
 {
 "kind": "alias",
 "name": "Name",
 "target_path": "griffe.expressions.Name",
 "path": "griffe.docstrings.numpy.Name",
-"lineno": 58,
-"endlineno": 58
+"lineno": 69,
+"endlineno": 69
+},
+{
+"kind": "alias",
+"name": "Any",
+"target_path": "typing.Any",
+"path": "griffe.docstrings.numpy.Any",
+"lineno": 72,
+"endlineno": 72
+},
+{
+"kind": "alias",
+"name": "Literal",
+"target_path": "typing.Literal",
+"path": "griffe.docstrings.numpy.Literal",
+"lineno": 72,
+"endlineno": 72
+},
+{
+"kind": "alias",
+"name": "Pattern",
+"target_path": "typing.Pattern",
+"path": "griffe.docstrings.numpy.Pattern",
+"lineno": 72,
+"endlineno": 72
 },
 {
 "kind": "alias",
 "name": "Docstring",
 "target_path": "griffe.dataclasses.Docstring",
 "path": "griffe.docstrings.numpy.Docstring",
-"lineno": 61,
-"endlineno": 61
+"lineno": 74,
+"endlineno": 74
 },
 {
 "kind": "attribute",
@@ -34508,8 +36554,8 @@
 "path": "griffe.docstrings.numpy._warn",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 63,
-"endlineno": 63,
+"lineno": 76,
+"endlineno": 76,
 "labels": [
 "module-attribute"
 ],
@@ -34522,8 +36568,8 @@
 "path": "griffe.docstrings.numpy._section_kind",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 65,
-"endlineno": 76,
+"lineno": 78,
+"endlineno": 89,
 "labels": [
 "module-attribute"
 ],
@@ -34536,8 +36582,8 @@
 "path": "griffe.docstrings.numpy._is_empty_line",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 79,
-"endlineno": 80,
+"lineno": 92,
+"endlineno": 93,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34560,8 +36606,8 @@
 "path": "griffe.docstrings.numpy._is_dash_line",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 83,
-"endlineno": 84,
+"lineno": 96,
+"endlineno": 97,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34584,8 +36630,8 @@
 "path": "griffe.docstrings.numpy._read_block_items",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 87,
-"endlineno": 144,
+"lineno": 100,
+"endlineno": 157,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34651,8 +36697,8 @@
 "path": "griffe.docstrings.numpy._read_block",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 147,
-"endlineno": 163,
+"lineno": 160,
+"endlineno": 176,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34702,8 +36748,8 @@
 "path": "griffe.docstrings.numpy._RE_OB",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 166,
-"endlineno": 166,
+"lineno": 179,
+"endlineno": 179,
 "labels": [
 "module-attribute"
 ],
@@ -34720,8 +36766,8 @@
 "path": "griffe.docstrings.numpy._RE_CB",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 167,
-"endlineno": 167,
+"lineno": 180,
+"endlineno": 180,
 "labels": [
 "module-attribute"
 ],
@@ -34738,8 +36784,8 @@
 "path": "griffe.docstrings.numpy._RE_NAME",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 168,
-"endlineno": 168,
+"lineno": 181,
+"endlineno": 181,
 "labels": [
 "module-attribute"
 ],
@@ -34756,8 +36802,8 @@
 "path": "griffe.docstrings.numpy._RE_NATURAL_TYPE",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 169,
-"endlineno": 169,
+"lineno": 182,
+"endlineno": 182,
 "labels": [
 "module-attribute"
 ],
@@ -34774,8 +36820,8 @@
 "path": "griffe.docstrings.numpy._RE_RETURNS",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 170,
-"endlineno": 170,
+"lineno": 183,
+"endlineno": 183,
 "labels": [
 "module-attribute"
 ],
@@ -34792,8 +36838,8 @@
 "path": "griffe.docstrings.numpy._RE_YIELDS",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 171,
-"endlineno": 171,
+"lineno": 184,
+"endlineno": 184,
 "labels": [
 "module-attribute"
 ],
@@ -34810,8 +36856,8 @@
 "path": "griffe.docstrings.numpy._RE_RECEIVES",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 172,
-"endlineno": 172,
+"lineno": 185,
+"endlineno": 185,
 "labels": [
 "module-attribute"
 ],
@@ -34828,8 +36874,8 @@
 "path": "griffe.docstrings.numpy._RE_PARAMETER",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 173,
-"endlineno": 192,
+"lineno": 186,
+"endlineno": 205,
 "labels": [
 "module-attribute"
 ],
@@ -34846,8 +36892,8 @@
 "path": "griffe.docstrings.numpy._RE_DOCTEST_BLANKLINE",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 193,
-"endlineno": 193,
+"lineno": 206,
+"endlineno": 206,
 "labels": [
 "module-attribute"
 ],
@@ -34864,8 +36910,8 @@
 "path": "griffe.docstrings.numpy._RE_DOCTEST_FLAGS",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 194,
-"endlineno": 194,
+"lineno": 207,
+"endlineno": 207,
 "labels": [
 "module-attribute"
 ],
@@ -34882,8 +36928,8 @@
 "path": "griffe.docstrings.numpy._read_parameters",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 197,
-"endlineno": 241,
+"lineno": 210,
+"endlineno": 254,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34941,8 +36987,8 @@
 "path": "griffe.docstrings.numpy._read_parameters_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 244,
-"endlineno": 255,
+"lineno": 257,
+"endlineno": 268,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34984,8 +37030,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionParameters",
+"full": "griffe.docstrings.dataclasses.DocstringSectionParameters"
 },
 " | ",
 "None"
@@ -35005,8 +37051,8 @@
 "path": "griffe.docstrings.numpy._read_other_parameters_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 258,
-"endlineno": 269,
+"lineno": 271,
+"endlineno": 282,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35048,8 +37094,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionOtherParameters",
+"full": "griffe.docstrings.dataclasses.DocstringSectionOtherParameters"
 },
 " | ",
 "None"
@@ -35069,8 +37115,8 @@
 "path": "griffe.docstrings.numpy._read_deprecated_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 272,
-"endlineno": 292,
+"lineno": 285,
+"endlineno": 305,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35112,8 +37158,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionDeprecated",
+"full": "griffe.docstrings.dataclasses.DocstringSectionDeprecated"
 },
 " | ",
 "None"
@@ -35133,8 +37179,8 @@
 "path": "griffe.docstrings.numpy._read_returns_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 295,
-"endlineno": 319,
+"lineno": 308,
+"endlineno": 332,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35176,8 +37222,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionReturns",
+"full": "griffe.docstrings.dataclasses.DocstringSectionReturns"
 },
 " | ",
 "None"
@@ -35197,8 +37243,8 @@
 "path": "griffe.docstrings.numpy._read_yields_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 322,
-"endlineno": 346,
+"lineno": 335,
+"endlineno": 359,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35240,8 +37286,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionYields",
+"full": "griffe.docstrings.dataclasses.DocstringSectionYields"
 },
 " | ",
 "None"
@@ -35261,8 +37307,8 @@
 "path": "griffe.docstrings.numpy._read_receives_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 349,
-"endlineno": 373,
+"lineno": 362,
+"endlineno": 386,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35304,8 +37350,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionReceives",
+"full": "griffe.docstrings.dataclasses.DocstringSectionReceives"
 },
 " | ",
 "None"
@@ -35325,8 +37371,8 @@
 "path": "griffe.docstrings.numpy._read_raises_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 376,
-"endlineno": 395,
+"lineno": 389,
+"endlineno": 408,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35368,8 +37414,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionRaises",
+"full": "griffe.docstrings.dataclasses.DocstringSectionRaises"
 },
 " | ",
 "None"
@@ -35389,8 +37435,8 @@
 "path": "griffe.docstrings.numpy._read_warns_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 398,
-"endlineno": 417,
+"lineno": 411,
+"endlineno": 430,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35432,8 +37478,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionWarns",
+"full": "griffe.docstrings.dataclasses.DocstringSectionWarns"
 },
 " | ",
 "None"
@@ -35453,8 +37499,8 @@
 "path": "griffe.docstrings.numpy._read_attributes_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 420,
-"endlineno": 445,
+"lineno": 433,
+"endlineno": 458,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35496,8 +37542,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionAttributes",
+"full": "griffe.docstrings.dataclasses.DocstringSectionAttributes"
 },
 " | ",
 "None"
@@ -35517,8 +37563,8 @@
 "path": "griffe.docstrings.numpy._read_examples_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 448,
-"endlineno": 507,
+"lineno": 461,
+"endlineno": 520,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35569,8 +37615,8 @@
 [
 [
 {
-"source": "DocstringSection",
-"full": "griffe.docstrings.dataclasses.DocstringSection"
+"source": "DocstringSectionExamples",
+"full": "griffe.docstrings.dataclasses.DocstringSectionExamples"
 },
 " | ",
 "None"
@@ -35590,8 +37636,8 @@
 "path": "griffe.docstrings.numpy._section_reader",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 510,
-"endlineno": 521,
+"lineno": 523,
+"endlineno": 534,
 "labels": [
 "module-attribute"
 ],
@@ -35604,12 +37650,12 @@
 "path": "griffe.docstrings.numpy.parse",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 524,
-"endlineno": 587,
+"lineno": 537,
+"endlineno": 598,
 "docstring": {
 "value": "Parse a docstring.\n\nThis function iterates on lines of a docstring to build sections.\nIt then returns this list of sections.\n\nParameters:\n    docstring: The docstring to parse.\n    trim_doctest_flags: Whether to remove doctest flags from Python example blocks.\n    **options: Additional parsing options.\n\nReturns:\n    A list of docstring sections.",
-"lineno": 529,
-"endlineno": 541,
+"lineno": 542,
+"endlineno": 554,
 "parsed": [
 {
 "kind": "text",
@@ -35805,7 +37851,7 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringAttribute",
 "path": "griffe.docstrings.sphinx.DocstringAttribute",
 "lineno": 14,
-"endlineno": 21
+"endlineno": 25
 },
 {
 "kind": "alias",
@@ -35813,7 +37859,7 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringParameter",
 "path": "griffe.docstrings.sphinx.DocstringParameter",
 "lineno": 14,
-"endlineno": 21
+"endlineno": 25
 },
 {
 "kind": "alias",
@@ -35821,7 +37867,7 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringRaise",
 "path": "griffe.docstrings.sphinx.DocstringRaise",
 "lineno": 14,
-"endlineno": 21
+"endlineno": 25
 },
 {
 "kind": "alias",
@@ -35829,7 +37875,7 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringReturn",
 "path": "griffe.docstrings.sphinx.DocstringReturn",
 "lineno": 14,
-"endlineno": 21
+"endlineno": 25
 },
 {
 "kind": "alias",
@@ -35837,47 +37883,79 @@
 "target_path": "griffe.docstrings.dataclasses.DocstringSection",
 "path": "griffe.docstrings.sphinx.DocstringSection",
 "lineno": 14,
-"endlineno": 21
+"endlineno": 25
 },
 {
 "kind": "alias",
-"name": "DocstringSectionKind",
-"target_path": "griffe.docstrings.dataclasses.DocstringSectionKind",
-"path": "griffe.docstrings.sphinx.DocstringSectionKind",
+"name": "DocstringSectionAttributes",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionAttributes",
+"path": "griffe.docstrings.sphinx.DocstringSectionAttributes",
 "lineno": 14,
-"endlineno": 21
+"endlineno": 25
+},
+{
+"kind": "alias",
+"name": "DocstringSectionParameters",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionParameters",
+"path": "griffe.docstrings.sphinx.DocstringSectionParameters",
+"lineno": 14,
+"endlineno": 25
+},
+{
+"kind": "alias",
+"name": "DocstringSectionRaises",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionRaises",
+"path": "griffe.docstrings.sphinx.DocstringSectionRaises",
+"lineno": 14,
+"endlineno": 25
+},
+{
+"kind": "alias",
+"name": "DocstringSectionReturns",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionReturns",
+"path": "griffe.docstrings.sphinx.DocstringSectionReturns",
+"lineno": 14,
+"endlineno": 25
+},
+{
+"kind": "alias",
+"name": "DocstringSectionText",
+"target_path": "griffe.docstrings.dataclasses.DocstringSectionText",
+"path": "griffe.docstrings.sphinx.DocstringSectionText",
+"lineno": 14,
+"endlineno": 25
 },
 {
 "kind": "alias",
 "name": "warning",
 "target_path": "griffe.docstrings.utils.warning",
 "path": "griffe.docstrings.sphinx.warning",
-"lineno": 22,
-"endlineno": 22
+"lineno": 26,
+"endlineno": 26
 },
 {
 "kind": "alias",
 "name": "Expression",
 "target_path": "griffe.expressions.Expression",
 "path": "griffe.docstrings.sphinx.Expression",
-"lineno": 23,
-"endlineno": 23
+"lineno": 27,
+"endlineno": 27
 },
 {
 "kind": "alias",
 "name": "Name",
 "target_path": "griffe.expressions.Name",
 "path": "griffe.docstrings.sphinx.Name",
-"lineno": 23,
-"endlineno": 23
+"lineno": 27,
+"endlineno": 27
 },
 {
 "kind": "alias",
 "name": "Docstring",
 "target_path": "griffe.dataclasses.Docstring",
 "path": "griffe.docstrings.sphinx.Docstring",
-"lineno": 26,
-"endlineno": 26
+"lineno": 30,
+"endlineno": 30
 },
 {
 "kind": "attribute",
@@ -35885,8 +37963,8 @@
 "path": "griffe.docstrings.sphinx._warn",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 28,
-"endlineno": 28,
+"lineno": 32,
+"endlineno": 32,
 "labels": [
 "module-attribute"
 ],
@@ -35899,8 +37977,8 @@
 "path": "griffe.docstrings.sphinx.PARAM_NAMES",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 31,
-"endlineno": 31,
+"lineno": 35,
+"endlineno": 35,
 "labels": [
 "module-attribute"
 ],
@@ -35913,8 +37991,8 @@
 "path": "griffe.docstrings.sphinx.PARAM_TYPE_NAMES",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 32,
-"endlineno": 32,
+"lineno": 36,
+"endlineno": 36,
 "labels": [
 "module-attribute"
 ],
@@ -35927,8 +38005,8 @@
 "path": "griffe.docstrings.sphinx.ATTRIBUTE_NAMES",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 33,
-"endlineno": 33,
+"lineno": 37,
+"endlineno": 37,
 "labels": [
 "module-attribute"
 ],
@@ -35941,8 +38019,8 @@
 "path": "griffe.docstrings.sphinx.ATTRIBUTE_TYPE_NAMES",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 34,
-"endlineno": 34,
+"lineno": 38,
+"endlineno": 38,
 "labels": [
 "module-attribute"
 ],
@@ -35955,8 +38033,8 @@
 "path": "griffe.docstrings.sphinx.RETURN_NAMES",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 35,
-"endlineno": 35,
+"lineno": 39,
+"endlineno": 39,
 "labels": [
 "module-attribute"
 ],
@@ -35969,8 +38047,8 @@
 "path": "griffe.docstrings.sphinx.RETURN_TYPE_NAMES",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 36,
-"endlineno": 36,
+"lineno": 40,
+"endlineno": 40,
 "labels": [
 "module-attribute"
 ],
@@ -35983,8 +38061,8 @@
 "path": "griffe.docstrings.sphinx.EXCEPTION_NAMES",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 37,
-"endlineno": 37,
+"lineno": 41,
+"endlineno": 41,
 "labels": [
 "module-attribute"
 ],
@@ -35997,12 +38075,12 @@
 "path": "griffe.docstrings.sphinx.FieldType",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 40,
-"endlineno": 56,
+"lineno": 44,
+"endlineno": 60,
 "docstring": {
 "value": "Maps directive names to parser functions.",
-"lineno": 42,
-"endlineno": 42,
+"lineno": 46,
+"endlineno": 46,
 "parsed": [
 {
 "kind": "text",
@@ -36018,8 +38096,8 @@
 "path": "griffe.docstrings.sphinx.FieldType.names",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 44,
-"endlineno": 44,
+"lineno": 48,
+"endlineno": 48,
 "labels": [
 "class-attribute"
 ],
@@ -36044,8 +38122,8 @@
 "path": "griffe.docstrings.sphinx.FieldType.reader",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 45,
-"endlineno": 45,
+"lineno": 49,
+"endlineno": 49,
 "labels": [
 "class-attribute"
 ],
@@ -36091,12 +38169,12 @@
 "path": "griffe.docstrings.sphinx.FieldType.matches",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 47,
-"endlineno": 56,
+"lineno": 51,
+"endlineno": 60,
 "docstring": {
 "value": "Check if a line matches the field type.\n\nParameters:\n    line: Line to check against\n\nReturns:\n    True if the line matches the field type, False otherwise.",
-"lineno": 48,
-"endlineno": 55,
+"lineno": 52,
+"endlineno": 59,
 "parsed": [
 {
 "kind": "text",
@@ -36159,8 +38237,8 @@
 "bases": [],
 "decorators": [
 {
-"lineno": 40,
-"endlineno": 40
+"lineno": 44,
+"endlineno": 44
 }
 ]
 },
@@ -36170,12 +38248,12 @@
 "path": "griffe.docstrings.sphinx.ParsedDirective",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 59,
-"endlineno": 67,
+"lineno": 63,
+"endlineno": 71,
 "docstring": {
 "value": "Directive information that has been parsed from a docstring.",
-"lineno": 61,
-"endlineno": 61,
+"lineno": 65,
+"endlineno": 65,
 "parsed": [
 {
 "kind": "text",
@@ -36191,8 +38269,8 @@
 "path": "griffe.docstrings.sphinx.ParsedDirective.line",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 63,
-"endlineno": 63,
+"lineno": 67,
+"endlineno": 67,
 "labels": [
 "class-attribute"
 ],
@@ -36209,8 +38287,8 @@
 "path": "griffe.docstrings.sphinx.ParsedDirective.next_index",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 64,
-"endlineno": 64,
+"lineno": 68,
+"endlineno": 68,
 "labels": [
 "class-attribute"
 ],
@@ -36227,8 +38305,8 @@
 "path": "griffe.docstrings.sphinx.ParsedDirective.directive_parts",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 65,
-"endlineno": 65,
+"lineno": 69,
+"endlineno": 69,
 "labels": [
 "class-attribute"
 ],
@@ -36253,8 +38331,8 @@
 "path": "griffe.docstrings.sphinx.ParsedDirective.value",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 66,
-"endlineno": 66,
+"lineno": 70,
+"endlineno": 70,
 "labels": [
 "class-attribute"
 ],
@@ -36271,8 +38349,8 @@
 "path": "griffe.docstrings.sphinx.ParsedDirective.invalid",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 67,
-"endlineno": 67,
+"lineno": 71,
+"endlineno": 71,
 "labels": [
 "class-attribute"
 ],
@@ -36287,8 +38365,8 @@
 "bases": [],
 "decorators": [
 {
-"lineno": 59,
-"endlineno": 59
+"lineno": 63,
+"endlineno": 63
 }
 ]
 },
@@ -36298,12 +38376,12 @@
 "path": "griffe.docstrings.sphinx.ParsedValues",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 70,
-"endlineno": 81,
+"lineno": 74,
+"endlineno": 85,
 "docstring": {
 "value": "Values parsed from the docstring to be used to produce sections.",
-"lineno": 72,
-"endlineno": 72,
+"lineno": 76,
+"endlineno": 76,
 "parsed": [
 {
 "kind": "text",
@@ -36319,8 +38397,8 @@
 "path": "griffe.docstrings.sphinx.ParsedValues.description",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 74,
-"endlineno": 74,
+"lineno": 78,
+"endlineno": 78,
 "labels": [
 "class-attribute"
 ],
@@ -36345,8 +38423,8 @@
 "path": "griffe.docstrings.sphinx.ParsedValues.parameters",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 75,
-"endlineno": 75,
+"lineno": 79,
+"endlineno": 79,
 "labels": [
 "class-attribute"
 ],
@@ -36378,8 +38456,8 @@
 "path": "griffe.docstrings.sphinx.ParsedValues.param_types",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 76,
-"endlineno": 76,
+"lineno": 80,
+"endlineno": 80,
 "labels": [
 "class-attribute"
 ],
@@ -36411,8 +38489,8 @@
 "path": "griffe.docstrings.sphinx.ParsedValues.attributes",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 77,
-"endlineno": 77,
+"lineno": 81,
+"endlineno": 81,
 "labels": [
 "class-attribute"
 ],
@@ -36444,8 +38522,8 @@
 "path": "griffe.docstrings.sphinx.ParsedValues.attribute_types",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 78,
-"endlineno": 78,
+"lineno": 82,
+"endlineno": 82,
 "labels": [
 "class-attribute"
 ],
@@ -36477,8 +38555,8 @@
 "path": "griffe.docstrings.sphinx.ParsedValues.exceptions",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 79,
-"endlineno": 79,
+"lineno": 83,
+"endlineno": 83,
 "labels": [
 "class-attribute"
 ],
@@ -36503,8 +38581,8 @@
 "path": "griffe.docstrings.sphinx.ParsedValues.return_value",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 80,
-"endlineno": 80,
+"lineno": 84,
+"endlineno": 84,
 "labels": [
 "class-attribute"
 ],
@@ -36525,8 +38603,8 @@
 "path": "griffe.docstrings.sphinx.ParsedValues.return_type",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 81,
-"endlineno": 81,
+"lineno": 85,
+"endlineno": 85,
 "labels": [
 "class-attribute"
 ],
@@ -36545,8 +38623,8 @@
 "bases": [],
 "decorators": [
 {
-"lineno": 70,
-"endlineno": 70
+"lineno": 74,
+"endlineno": 74
 }
 ]
 },
@@ -36556,12 +38634,12 @@
 "path": "griffe.docstrings.sphinx.parse",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 84,
-"endlineno": 111,
+"lineno": 88,
+"endlineno": 115,
 "docstring": {
 "value": "Parse a Sphinx-styled docstring.\n\nParameters:\n    docstring: The docstring to parse.\n    **options: Additional parsing options.\n\nReturns:\n    A list of docstring sections.",
-"lineno": 85,
-"endlineno": 93,
+"lineno": 89,
+"endlineno": 97,
 "parsed": [
 {
 "kind": "text",
@@ -36654,8 +38732,8 @@
 "path": "griffe.docstrings.sphinx._read_parameter",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 114,
-"endlineno": 144,
+"lineno": 118,
+"endlineno": 148,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36699,8 +38777,8 @@
 "path": "griffe.docstrings.sphinx._determine_param_default",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 147,
-"endlineno": 151,
+"lineno": 151,
+"endlineno": 155,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36739,8 +38817,8 @@
 "path": "griffe.docstrings.sphinx._determine_param_annotation",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 154,
-"endlineno": 180,
+"lineno": 158,
+"endlineno": 184,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36797,8 +38875,8 @@
 "path": "griffe.docstrings.sphinx._read_parameter_type",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 183,
-"endlineno": 202,
+"lineno": 187,
+"endlineno": 206,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36842,8 +38920,8 @@
 "path": "griffe.docstrings.sphinx._read_attribute",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 205,
-"endlineno": 239,
+"lineno": 209,
+"endlineno": 243,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36887,8 +38965,8 @@
 "path": "griffe.docstrings.sphinx._read_attribute_type",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 242,
-"endlineno": 261,
+"lineno": 246,
+"endlineno": 265,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36932,8 +39010,8 @@
 "path": "griffe.docstrings.sphinx._read_exception",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 264,
-"endlineno": 275,
+"lineno": 268,
+"endlineno": 279,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36977,8 +39055,8 @@
 "path": "griffe.docstrings.sphinx._read_return",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 278,
-"endlineno": 300,
+"lineno": 282,
+"endlineno": 304,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37022,8 +39100,8 @@
 "path": "griffe.docstrings.sphinx._read_return_type",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 303,
-"endlineno": 314,
+"lineno": 307,
+"endlineno": 318,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37067,8 +39145,8 @@
 "path": "griffe.docstrings.sphinx._parsed_values_to_sections",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 317,
-"endlineno": 330,
+"lineno": 321,
+"endlineno": 334,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37102,8 +39180,8 @@
 "path": "griffe.docstrings.sphinx._parse_directive",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 333,
-"endlineno": 342,
+"lineno": 337,
+"endlineno": 346,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37138,8 +39216,8 @@
 "path": "griffe.docstrings.sphinx._consolidate_continuation_lines",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 345,
-"endlineno": 355,
+"lineno": 349,
+"endlineno": 359,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37197,8 +39275,8 @@
 "path": "griffe.docstrings.sphinx._consolidate_descriptive_type",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 358,
-"endlineno": 359,
+"lineno": 362,
+"endlineno": 363,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37224,8 +39302,8 @@
 "path": "griffe.docstrings.sphinx._strip_blank_lines",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 362,
-"endlineno": 377,
+"lineno": 366,
+"endlineno": 381,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37267,8 +39345,8 @@
 "path": "griffe.docstrings.sphinx.field_types",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/sphinx.py",
 "relative_filepath": "griffe/docstrings/sphinx.py",
-"lineno": 380,
-"endlineno": 388,
+"lineno": 384,
+"endlineno": 392,
 "labels": [
 "module-attribute"
 ],
