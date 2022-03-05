@@ -1192,8 +1192,8 @@ If Griffe can't find the packages, it will fail with a <code>ModuleNotFoundError
 <p>If you don't want to recurse in the submodules:</p>
 <div class="highlight"><pre><span></span><code><span class="n">griffe</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="s2">&quot;griffe&quot;</span><span class="p">,</span> <span class="n">submodules</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
-<p>The <a href="../reference/griffe/loader/#griffe.loader.GriffeLoader.load_module"><code>load_module</code></a> method
-returns a <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Module"><code>Module</code></a> instance.
+<p>The <a class="" href="../reference/griffe/loader/#griffe.loader.GriffeLoader.load_module"><code>load_module</code></a> method
+returns a <a class="" href="../reference/griffe/dataclasses/#griffe.dataclasses.Module"><code>Module</code></a> instance.
 There are several ways to access members of an object:</p>
 <ul>
 <li>through its <code>members</code> attribute, which is a dictionary,
@@ -1203,14 +1203,14 @@ There are several ways to access members of an object:</p>
   Since this module also has members, you can chain calls: <code>griffe["dataclasses"]["Module"]</code>.
   Conveniently, you can chain the names with dots in a single call: <code>griffe["dataclasses.Module"]</code>.
   You can even pass a tuple instead of a string: <code>griffe[("dataclasses", "Module")]</code>.</li>
-<li>through the <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Object.modules"><code>modules</code></a>,
-  <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Object.classes"><code>classes</code></a>,
-  <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Object.functions"><code>functions</code></a> and
-  <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Object.attributes"><code>attributes</code></a> properties,
+<li>through the <a class="" href="../reference/griffe/dataclasses/#griffe.dataclasses.Object.modules"><code>modules</code></a>,
+  <a class="" href="../reference/griffe/dataclasses/#griffe.dataclasses.Object.classes"><code>classes</code></a>,
+  <a class="" href="../reference/griffe/dataclasses/#griffe.dataclasses.Object.functions"><code>functions</code></a> and
+  <a class="" href="../reference/griffe/dataclasses/#griffe.dataclasses.Object.attributes"><code>attributes</code></a> properties,
   which take care of filtering members based on their kind, and return dictionaries.</li>
 </ul>
-<p>Most of the time, you will only use classes from the <a href="../reference/griffe/dataclasses/#griffe.dataclasses"><code>griffe.dataclasses</code></a>
-and <a href="../reference/griffe/docstrings/dataclasses/#griffe.docstrings.dataclasses"><code>griffe.docstrings.dataclasses</code></a> modules.</p>
+<p>Most of the time, you will only use classes from the <a class="" href="../reference/griffe/dataclasses/#griffe.dataclasses"><code>griffe.dataclasses</code></a>
+and <a class="" href="../reference/griffe/docstrings/dataclasses/#griffe.docstrings.dataclasses"><code>griffe.docstrings.dataclasses</code></a> modules.</p>
 <h3 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">¤</a></h3>
 <p>You can pass extensions to the loader to augment its capacities:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">griffe.loader</span> <span class="kn">import</span> <span class="n">GriffeLoader</span>
@@ -1233,7 +1233,7 @@ and <a href="../reference/griffe/docstrings/dataclasses/#griffe.docstrings.datac
 <span class="n">griffe</span> <span class="o">=</span> <span class="n">GriffeLoader</span><span class="p">(</span><span class="n">extensions</span><span class="o">=</span><span class="n">extensions</span><span class="p">)</span>
 <span class="n">fastapi</span> <span class="o">=</span> <span class="n">griffe</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="s2">&quot;fastapi&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>Extensions are subclasses of a custom version of <a href="https://docs.python.org/3/library/ast.html#ast.NodeVisitor"><code>ast.NodeVisitor</code></a>.
+<p>Extensions are subclasses of a custom version of <a class="external" href="https://docs.python.org/3/library/ast.html#ast.NodeVisitor"><code>ast.NodeVisitor</code></a>.
 Griffe uses a node visitor as well, that we will call the <em>main visitor</em>.
 The extensions are instantiated with a reference to this main visitor,
 so they can benefit from its capacities (navigating the nodes, getting the current
@@ -1267,9 +1267,9 @@ and the nodes instances are extended with additional attributes and properties:<
         <span class="bp">self</span><span class="o">.</span><span class="n">visitor</span><span class="o">.</span><span class="n">current</span>  <span class="c1"># the current data object</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">visitor</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">kind</span>  <span class="c1"># the kind of object: module, class, function, attribute </span>
 </code></pre></div>
-<p>See the data classes (<a href="../reference/griffe/dataclasses/#griffe.dataclasses.Module"><code>Module</code></a>,
-<a href="../reference/griffe/dataclasses/#griffe.dataclasses.Class"><code>Class</code></a>, <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Function"><code>Function</code></a>
-and <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Attribute"><code>Attribute</code></a>)
+<p>See the data classes (<a class="" href="../reference/griffe/dataclasses/#griffe.dataclasses.Module"><code>Module</code></a>,
+<a class="" href="../reference/griffe/dataclasses/#griffe.dataclasses.Class"><code>Class</code></a>, <a class="" href="../reference/griffe/dataclasses/#griffe.dataclasses.Function"><code>Function</code></a>
+and <a class="" href="../reference/griffe/dataclasses/#griffe.dataclasses.Attribute"><code>Attribute</code></a>)
 for a complete description of their methods and attributes.</p>
 <p>Extensions are run at certain moments while walking the Abstract Syntax Tree (AST):</p>
 <ul>
@@ -1283,7 +1283,7 @@ for a complete description of their methods and attributes.</p>
   Children <strong>have</strong> now been visited/inspected.</li>
 <li>after the visit/inspection: <code>When.after_all</code></li>
 </ul>
-<p>See <a href="../reference/griffe/agents/extensions/#griffe.agents.extensions.When">the <code>When</code> enumeration</a>.</p>
+<p>See <a class="" href="../reference/griffe/agents/extensions/#griffe.agents.extensions.When">the <code>When</code> enumeration</a>.</p>
 <p>To tell the main visitor to run your extension at a certain time,
 set its <code>when</code> attribute:</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MyExtension</span><span class="p">(</span><span class="n">Extension</span><span class="p">):</span>
@@ -1294,9 +1294,9 @@ that's when the full data for this node and its children is loaded.</p>
 <h2 id="using-griffe-as-a-docstring-parsing-library">Using Griffe as a docstring-parsing library<a class="headerlink" href="#using-griffe-as-a-docstring-parsing-library" title="Permanent link">¤</a></h2>
 <p>You can use Griffe to parse arbitrary docstrings.
 You don't have to load anything through the Griffe loader.
-You need to import the <a href="../reference/griffe/docstrings/parsers/#griffe.docstrings.parsers.parse"><code>parse</code></a> function,
-the <a href="../reference/griffe/docstrings/parsers/#griffe.docstrings.parsers.Parser"><code>Parser</code></a> enumeration,
-and the <a href="../reference/griffe/dataclasses/#griffe.dataclasses.Docstring"><code>Docstring</code></a> class.
+You need to import the <a class="" href="../reference/griffe/docstrings/parsers/#griffe.docstrings.parsers.parse"><code>parse</code></a> function,
+the <a class="" href="../reference/griffe/docstrings/parsers/#griffe.docstrings.parsers.Parser"><code>Parser</code></a> enumeration,
+and the <a class="" href="../reference/griffe/dataclasses/#griffe.dataclasses.Docstring"><code>Docstring</code></a> class.
 Then you can build a <code>Docstring</code> instance and call <code>parse</code> on it,
 choosing the parsing-style to use:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">griffe.dataclasses</span> <span class="kn">import</span> <span class="n">Docstring</span>
@@ -1335,130 +1335,130 @@ from the parent function's parameters.</p>
 <blockquote>
 <p><table style="border: none; background-color: unset;"><tbody><tr><td></p>
 <ul>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Add"><code>Add</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.alias"><code>alias</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.And"><code>And</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.AnnAssign"><code>AnnAssign</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.arg"><code>arg</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.arguments"><code>arguments</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Assert"><code>Assert</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Assign"><code>Assign</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.AsyncFor"><code>AsyncFor</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.AsyncFunctionDef"><code>AsyncFunctionDef</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.AsyncWith"><code>AsyncWith</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Attribute"><code>Attribute</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.AugAssign"><code>AugAssign</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Await"><code>Await</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.BinOp"><code>BinOp</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.BitAnd"><code>BitAnd</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.BitOr"><code>BitOr</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.BitXor"><code>BitXor</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.BoolOp"><code>BoolOp</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Break"><code>Break</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Add"><code>Add</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.alias"><code>alias</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.And"><code>And</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.AnnAssign"><code>AnnAssign</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.arg"><code>arg</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.arguments"><code>arguments</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Assert"><code>Assert</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Assign"><code>Assign</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.AsyncFor"><code>AsyncFor</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.AsyncFunctionDef"><code>AsyncFunctionDef</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.AsyncWith"><code>AsyncWith</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Attribute"><code>Attribute</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.AugAssign"><code>AugAssign</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Await"><code>Await</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.BinOp"><code>BinOp</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.BitAnd"><code>BitAnd</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.BitOr"><code>BitOr</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.BitXor"><code>BitXor</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.BoolOp"><code>BoolOp</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Break"><code>Break</code></a></li>
 <li><code>Bytes</code><sup id="fnref6:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Call"><code>Call</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.ClassDef"><code>ClassDef</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Compare"><code>Compare</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.comprehension"><code>comprehension</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Constant"><code>Constant</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Continue"><code>Continue</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Del"><code>Del</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Delete"><code>Delete</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Call"><code>Call</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.ClassDef"><code>ClassDef</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Compare"><code>Compare</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.comprehension"><code>comprehension</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Constant"><code>Constant</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Continue"><code>Continue</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Del"><code>Del</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Delete"><code>Delete</code></a></li>
 </ul>
 <p></td><td></p>
 <ul>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Dict"><code>Dict</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.DictComp"><code>DictComp</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Div"><code>Div</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Dict"><code>Dict</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.DictComp"><code>DictComp</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Div"><code>Div</code></a></li>
 <li><code>Ellipsis</code><sup id="fnref4:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Eq"><code>Eq</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.ExceptHandler"><code>ExceptHandler</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Expr"><code>Expr</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Eq"><code>Eq</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.ExceptHandler"><code>ExceptHandler</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Expr"><code>Expr</code></a></li>
 <li><code>Expression</code><sup id="fnref5:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
 <li><code>ExtSlice</code><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.FloorDiv"><code>FloorDiv</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.For"><code>For</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.FormattedValue"><code>FormattedValue</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.FunctionDef"><code>FunctionDef</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.GeneratorExp"><code>GeneratorExp</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Global"><code>Global</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Gt"><code>Gt</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.GtE"><code>GtE</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.If"><code>If</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.IfExp"><code>IfExp</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Import"><code>Import</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.ImportFrom"><code>ImportFrom</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.In"><code>In</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.FloorDiv"><code>FloorDiv</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.For"><code>For</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.FormattedValue"><code>FormattedValue</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.FunctionDef"><code>FunctionDef</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.GeneratorExp"><code>GeneratorExp</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Global"><code>Global</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Gt"><code>Gt</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.GtE"><code>GtE</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.If"><code>If</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.IfExp"><code>IfExp</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Import"><code>Import</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.ImportFrom"><code>ImportFrom</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.In"><code>In</code></a></li>
 <li><code>Index</code><sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 <li><code>Interactive</code><sup id="fnref3:3"><a class="footnote-ref" href="#fn:3">3</a></sup></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Invert"><code>Invert</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Is"><code>Is</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.IsNot"><code>IsNot</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.JoinedStr"><code>JoinedStr</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.keyword"><code>keyword</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Invert"><code>Invert</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Is"><code>Is</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.IsNot"><code>IsNot</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.JoinedStr"><code>JoinedStr</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.keyword"><code>keyword</code></a></li>
 </ul>
 <p></td><td></p>
 <ul>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Lambda"><code>Lambda</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.List"><code>List</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.ListComp"><code>ListComp</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Load"><code>Load</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.LShift"><code>LShift</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Lt"><code>Lt</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.LtE"><code>LtE</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Match"><code>Match</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.MatchAs"><code>MatchAs</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.match_case"><code>match_case</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.MatchClass"><code>MatchClass</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.MatchMapping"><code>MatchMapping</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.MatchOr"><code>MatchOr</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.MatchSequence"><code>MatchSequence</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.MatchSingleton"><code>MatchSingleton</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.MatchStar"><code>MatchStar</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.MatchValue"><code>MatchValue</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.MatMult"><code>MatMult</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Mod"><code>Mod</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Lambda"><code>Lambda</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.List"><code>List</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.ListComp"><code>ListComp</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Load"><code>Load</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.LShift"><code>LShift</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Lt"><code>Lt</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.LtE"><code>LtE</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Match"><code>Match</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.MatchAs"><code>MatchAs</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.match_case"><code>match_case</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.MatchClass"><code>MatchClass</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.MatchMapping"><code>MatchMapping</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.MatchOr"><code>MatchOr</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.MatchSequence"><code>MatchSequence</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.MatchSingleton"><code>MatchSingleton</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.MatchStar"><code>MatchStar</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.MatchValue"><code>MatchValue</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.MatMult"><code>MatMult</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Mod"><code>Mod</code></a></li>
 <li><code>Module</code><sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Mult"><code>Mult</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Name"><code>Name</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Mult"><code>Mult</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Name"><code>Name</code></a></li>
 <li><code>NameConstant</code><sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.NamedExpr"><code>NamedExpr</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Nonlocal"><code>Nonlocal</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Not"><code>Not</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.NotEq"><code>NotEq</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.NotIn"><code>NotIn</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.NamedExpr"><code>NamedExpr</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Nonlocal"><code>Nonlocal</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Not"><code>Not</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.NotEq"><code>NotEq</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.NotIn"><code>NotIn</code></a></li>
 <li><code>Num</code><sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
 </ul>
 <p></td><td></p>
 <ul>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Or"><code>Or</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Pass"><code>Pass</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Or"><code>Or</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Pass"><code>Pass</code></a></li>
 <li><code>pattern</code><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Pow"><code>Pow</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Pow"><code>Pow</code></a></li>
 <li><code>Print</code><sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Raise"><code>Raise</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Return"><code>Return</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.RShift"><code>RShift</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Set"><code>Set</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.SetComp"><code>SetComp</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Slice"><code>Slice</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Starred"><code>Starred</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Store"><code>Store</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Raise"><code>Raise</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Return"><code>Return</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.RShift"><code>RShift</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Set"><code>Set</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.SetComp"><code>SetComp</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Slice"><code>Slice</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Starred"><code>Starred</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Store"><code>Store</code></a></li>
 <li><code>Str</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Sub"><code>Sub</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Subscript"><code>Subscript</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Try"><code>Try</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Sub"><code>Sub</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Subscript"><code>Subscript</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Try"><code>Try</code></a></li>
 <li><code>TryExcept</code><sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></li>
 <li><code>TryFinally</code><sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Tuple"><code>Tuple</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.UAdd"><code>UAdd</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.UnaryOp"><code>UnaryOp</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.USub"><code>USub</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.While"><code>While</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.With"><code>With</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.withitem"><code>withitem</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.Yield"><code>Yield</code></a></li>
-<li><a href="https://docs.python.org/3/library/ast.html#ast.YieldFrom"><code>YieldFrom</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Tuple"><code>Tuple</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.UAdd"><code>UAdd</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.UnaryOp"><code>UnaryOp</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.USub"><code>USub</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.While"><code>While</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.With"><code>With</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.withitem"><code>withitem</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.Yield"><code>Yield</code></a></li>
+<li><a class="external" href="https://docs.python.org/3/library/ast.html#ast.YieldFrom"><code>YieldFrom</code></a></li>
 </ul>
 <p></td></tr></tbody></table></p>
 </blockquote>

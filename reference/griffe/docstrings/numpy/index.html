@@ -1275,17 +1275,17 @@ It then returns this list of sections.</p>
   <ul>
       <li class="field-body">
         <b>docstring</b>
-            (<code><a title="griffe.dataclasses.Docstring" href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
+            (<code><a class="" title="griffe.dataclasses.Docstring" href="../../dataclasses/#griffe.dataclasses.Docstring">Docstring</a></code>)
         – <p>The docstring to parse.</p>
       </li>
       <li class="field-body">
         <b>trim_doctest_flags</b>
-            (<code><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
         – <p>Whether to remove doctest flags from Python example blocks.</p>
       </li>
       <li class="field-body">
         <b>**options</b>
-            (<code><a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
+            (<code><a class="external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>)
         – <p>Additional parsing options.</p>
       </li>
   </ul>
@@ -1293,20 +1293,14 @@ It then returns this list of sections.</p>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="griffe.docstrings.dataclasses.DocstringSection" href="../dataclasses/#griffe.docstrings.dataclasses.DocstringSection">DocstringSection</a>]</code>
+            <code><a class="external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a class="" title="griffe.docstrings.dataclasses.DocstringSection" href="../dataclasses/#griffe.docstrings.dataclasses.DocstringSection">DocstringSection</a>]</code>
         – <p>A list of docstring sections.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/docstrings/numpy.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">537</span>
-<span class="normal">538</span>
-<span class="normal">539</span>
-<span class="normal">540</span>
-<span class="normal">541</span>
-<span class="normal">542</span>
-<span class="normal">543</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">543</span>
 <span class="normal">544</span>
 <span class="normal">545</span>
 <span class="normal">546</span>
@@ -1361,7 +1355,13 @@ It then returns this list of sections.</p>
 <span class="normal">595</span>
 <span class="normal">596</span>
 <span class="normal">597</span>
-<span class="normal">598</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">598</span>
+<span class="normal">599</span>
+<span class="normal">600</span>
+<span class="normal">601</span>
+<span class="normal">602</span>
+<span class="normal">603</span>
+<span class="normal">604</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
     <span class="n">docstring</span><span class="p">:</span> <span class="n">Docstring</span><span class="p">,</span>
     <span class="n">trim_doctest_flags</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="o">**</span><span class="n">options</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>

@@ -2685,7 +2685,10 @@
 "default": null
 }
 ],
-"returns": null
+"returns": {
+"source": "bool",
+"full": "bool"
+}
 },
 {
 "kind": "function",
@@ -13994,7 +13997,10 @@
 "default": null
 }
 ],
-"returns": null
+"returns": {
+"source": "bool",
+"full": "bool"
+}
 },
 {
 "kind": "function",
@@ -14323,7 +14329,10 @@
 "default": null
 }
 ],
-"returns": null
+"returns": {
+"source": "bool",
+"full": "bool"
+}
 },
 {
 "kind": "function",
@@ -19635,9 +19644,9 @@
 },
 {
 "kind": "alias",
-"name": "getdoc",
-"target_path": "inspect.getdoc",
-"path": "griffe.agents.inspector.getdoc",
+"name": "cleandoc",
+"target_path": "inspect.cleandoc",
+"path": "griffe.agents.inspector.cleandoc",
 "lineno": 28,
 "endlineno": 28
 },
@@ -20217,7 +20226,7 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
 "lineno": 145,
-"endlineno": 436,
+"endlineno": 439,
 "docstring": {
 "value": "This class is used to instantiate an inspector.\n\nInspectors iterate on objects members to extract data from them.",
 "lineno": 146,
@@ -20642,7 +20651,7 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
 "lineno": 182,
-"endlineno": 190,
+"endlineno": 193,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -20678,12 +20687,12 @@
 "path": "griffe.agents.inspector.Inspector.get_module",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 192,
-"endlineno": 209,
+"lineno": 195,
+"endlineno": 212,
 "docstring": {
 "value": "Build and return the object representing the module attached to this inspector.\n\nThis method triggers a complete inspection of the module members.\n\nParameters:\n    import_paths: Paths replacing `sys.path` to import the module.\n\nReturns:\n    A module instance.",
-"lineno": 193,
-"endlineno": 202,
+"lineno": 196,
+"endlineno": 205,
 "parsed": [
 {
 "kind": "text",
@@ -20773,12 +20782,12 @@
 "path": "griffe.agents.inspector.Inspector.inspect",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 211,
-"endlineno": 221,
+"lineno": 214,
+"endlineno": 224,
 "docstring": {
 "value": "Extend the base inspection with extensions.\n\nParameters:\n    node: The node to inspect.",
-"lineno": 212,
-"endlineno": 216,
+"lineno": 215,
+"endlineno": 219,
 "parsed": [
 {
 "kind": "text",
@@ -20827,12 +20836,12 @@
 "path": "griffe.agents.inspector.Inspector.generic_inspect",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 223,
-"endlineno": 242,
+"lineno": 226,
+"endlineno": 245,
 "docstring": {
 "value": "Extend the base generic inspection with extensions.\n\nParameters:\n    node: The node to inspect.",
-"lineno": 224,
-"endlineno": 228,
+"lineno": 227,
+"endlineno": 231,
 "parsed": [
 {
 "kind": "text",
@@ -20881,12 +20890,12 @@
 "path": "griffe.agents.inspector.Inspector.inspect_module",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 244,
-"endlineno": 257,
+"lineno": 247,
+"endlineno": 260,
 "docstring": {
 "value": "Inspect a module.\n\nParameters:\n    node: The node to inspect.",
-"lineno": 245,
-"endlineno": 249,
+"lineno": 248,
+"endlineno": 252,
 "parsed": [
 {
 "kind": "text",
@@ -20935,12 +20944,12 @@
 "path": "griffe.agents.inspector.Inspector.inspect_class",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 259,
-"endlineno": 275,
+"lineno": 262,
+"endlineno": 278,
 "docstring": {
 "value": "Inspect a class.\n\nParameters:\n    node: The node to inspect.",
-"lineno": 260,
-"endlineno": 264,
+"lineno": 263,
+"endlineno": 267,
 "parsed": [
 {
 "kind": "text",
@@ -20989,12 +20998,12 @@
 "path": "griffe.agents.inspector.Inspector.inspect_staticmethod",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 277,
-"endlineno": 283,
+"lineno": 280,
+"endlineno": 286,
 "docstring": {
 "value": "Inspect a static method.\n\nParameters:\n    node: The node to inspect.",
-"lineno": 278,
-"endlineno": 282,
+"lineno": 281,
+"endlineno": 285,
 "parsed": [
 {
 "kind": "text",
@@ -21043,12 +21052,12 @@
 "path": "griffe.agents.inspector.Inspector.inspect_classmethod",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 285,
-"endlineno": 291,
+"lineno": 288,
+"endlineno": 294,
 "docstring": {
 "value": "Inspect a class method.\n\nParameters:\n    node: The node to inspect.",
-"lineno": 286,
-"endlineno": 290,
+"lineno": 289,
+"endlineno": 293,
 "parsed": [
 {
 "kind": "text",
@@ -21097,12 +21106,12 @@
 "path": "griffe.agents.inspector.Inspector.inspect_method_descriptor",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 293,
-"endlineno": 299,
+"lineno": 296,
+"endlineno": 302,
 "docstring": {
 "value": "Inspect a method descriptor.\n\nParameters:\n    node: The node to inspect.",
-"lineno": 294,
-"endlineno": 298,
+"lineno": 297,
+"endlineno": 301,
 "parsed": [
 {
 "kind": "text",
@@ -21151,12 +21160,12 @@
 "path": "griffe.agents.inspector.Inspector.inspect_builtin_method",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 301,
-"endlineno": 307,
+"lineno": 304,
+"endlineno": 310,
 "docstring": {
 "value": "Inspect a builtin method.\n\nParameters:\n    node: The node to inspect.",
-"lineno": 302,
-"endlineno": 306,
+"lineno": 305,
+"endlineno": 309,
 "parsed": [
 {
 "kind": "text",
@@ -21205,12 +21214,12 @@
 "path": "griffe.agents.inspector.Inspector.inspect_method",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 309,
-"endlineno": 315,
+"lineno": 312,
+"endlineno": 318,
 "docstring": {
 "value": "Inspect a method.\n\nParameters:\n    node: The node to inspect.",
-"lineno": 310,
-"endlineno": 314,
+"lineno": 313,
+"endlineno": 317,
 "parsed": [
 {
 "kind": "text",
@@ -21259,12 +21268,12 @@
 "path": "griffe.agents.inspector.Inspector.inspect_coroutine",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 317,
-"endlineno": 323,
+"lineno": 320,
+"endlineno": 326,
 "docstring": {
 "value": "Inspect a coroutine.\n\nParameters:\n    node: The node to inspect.",
-"lineno": 318,
-"endlineno": 322,
+"lineno": 321,
+"endlineno": 325,
 "parsed": [
 {
 "kind": "text",
@@ -21313,12 +21322,12 @@
 "path": "griffe.agents.inspector.Inspector.inspect_builtin_function",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 325,
-"endlineno": 331,
+"lineno": 328,
+"endlineno": 334,
 "docstring": {
 "value": "Inspect a builtin function.\n\nParameters:\n    node: The node to inspect.",
-"lineno": 326,
-"endlineno": 330,
+"lineno": 329,
+"endlineno": 333,
 "parsed": [
 {
 "kind": "text",
@@ -21367,12 +21376,12 @@
 "path": "griffe.agents.inspector.Inspector.inspect_function",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 333,
-"endlineno": 339,
+"lineno": 336,
+"endlineno": 342,
 "docstring": {
 "value": "Inspect a function.\n\nParameters:\n    node: The node to inspect.",
-"lineno": 334,
-"endlineno": 338,
+"lineno": 337,
+"endlineno": 341,
 "parsed": [
 {
 "kind": "text",
@@ -21421,12 +21430,12 @@
 "path": "griffe.agents.inspector.Inspector.inspect_cached_property",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 341,
-"endlineno": 347,
+"lineno": 344,
+"endlineno": 350,
 "docstring": {
 "value": "Inspect a cached property.\n\nParameters:\n    node: The node to inspect.",
-"lineno": 342,
-"endlineno": 346,
+"lineno": 345,
+"endlineno": 349,
 "parsed": [
 {
 "kind": "text",
@@ -21475,12 +21484,12 @@
 "path": "griffe.agents.inspector.Inspector.inspect_property",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 349,
-"endlineno": 355,
+"lineno": 352,
+"endlineno": 358,
 "docstring": {
 "value": "Inspect a property.\n\nParameters:\n    node: The node to inspect.",
-"lineno": 350,
-"endlineno": 354,
+"lineno": 353,
+"endlineno": 357,
 "parsed": [
 {
 "kind": "text",
@@ -21529,12 +21538,12 @@
 "path": "griffe.agents.inspector.Inspector.handle_function",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 357,
-"endlineno": 387,
+"lineno": 360,
+"endlineno": 390,
 "docstring": {
 "value": "Handle a function.\n\nParameters:\n    node: The node to inspect.\n    labels: Labels to add to the data object.",
-"lineno": 358,
-"endlineno": 363,
+"lineno": 361,
+"endlineno": 366,
 "parsed": [
 {
 "kind": "text",
@@ -21609,12 +21618,12 @@
 "path": "griffe.agents.inspector.Inspector.inspect_attribute",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 389,
-"endlineno": 395,
+"lineno": 392,
+"endlineno": 398,
 "docstring": {
 "value": "Inspect an attribute.\n\nParameters:\n    node: The node to inspect.",
-"lineno": 390,
-"endlineno": 394,
+"lineno": 393,
+"endlineno": 397,
 "parsed": [
 {
 "kind": "text",
@@ -21663,12 +21672,12 @@
 "path": "griffe.agents.inspector.Inspector.handle_attribute",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 397,
-"endlineno": 436,
+"lineno": 400,
+"endlineno": 439,
 "docstring": {
 "value": "Handle an attribute.\n\nParameters:\n    node: The node to inspect.\n    annotation: A potentiel annotation.",
-"lineno": 398,
-"endlineno": 403,
+"lineno": 401,
+"endlineno": 406,
 "parsed": [
 {
 "kind": "text",
@@ -21780,8 +21789,8 @@
 "path": "griffe.agents.inspector._kind_map",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 439,
-"endlineno": 445,
+"lineno": 442,
+"endlineno": 448,
 "labels": [
 "module-attribute"
 ],
@@ -21794,8 +21803,8 @@
 "path": "griffe.agents.inspector._convert_parameter",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 448,
-"endlineno": 459,
+"lineno": 451,
+"endlineno": 462,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -21821,8 +21830,8 @@
 "path": "griffe.agents.inspector._convert_object_to_annotation",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/inspector.py",
 "relative_filepath": "griffe/agents/inspector.py",
-"lineno": 462,
-"endlineno": 479,
+"lineno": 465,
+"endlineno": 482,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36698,7 +36707,7 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
 "lineno": 160,
-"endlineno": 176,
+"endlineno": 182,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36748,8 +36757,8 @@
 "path": "griffe.docstrings.numpy._RE_OB",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 179,
-"endlineno": 179,
+"lineno": 185,
+"endlineno": 185,
 "labels": [
 "module-attribute"
 ],
@@ -36766,8 +36775,8 @@
 "path": "griffe.docstrings.numpy._RE_CB",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 180,
-"endlineno": 180,
+"lineno": 186,
+"endlineno": 186,
 "labels": [
 "module-attribute"
 ],
@@ -36784,8 +36793,8 @@
 "path": "griffe.docstrings.numpy._RE_NAME",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 181,
-"endlineno": 181,
+"lineno": 187,
+"endlineno": 187,
 "labels": [
 "module-attribute"
 ],
@@ -36798,17 +36807,17 @@
 },
 {
 "kind": "attribute",
-"name": "_RE_NATURAL_TYPE",
-"path": "griffe.docstrings.numpy._RE_NATURAL_TYPE",
+"name": "_RE_TYPE",
+"path": "griffe.docstrings.numpy._RE_TYPE",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 182,
-"endlineno": 182,
+"lineno": 188,
+"endlineno": 188,
 "labels": [
 "module-attribute"
 ],
 "members": [],
-"value": "'[_a-z0-9 ().\\'\\\\\"-]+'",
+"value": "'[_a-z0-9 \\\\[\\\\]|().,\\'\\\\\"-]+'",
 "annotation": {
 "source": "str",
 "full": "str"
@@ -36820,13 +36829,13 @@
 "path": "griffe.docstrings.numpy._RE_RETURNS",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 183,
-"endlineno": 183,
+"lineno": 189,
+"endlineno": 189,
 "labels": [
 "module-attribute"
 ],
 "members": [],
-"value": "re.compile('^(?:(?P<name>{_RE_NAME}) : )?(?P<type>{_RE_NATURAL_TYPE})', re.IGNORECASE)",
+"value": "re.compile('^(?:(?P<name>{_RE_NAME}) : )?(?P<type>{_RE_TYPE})', re.IGNORECASE)",
 "annotation": {
 "source": "Pattern",
 "full": "typing.Pattern"
@@ -36838,8 +36847,8 @@
 "path": "griffe.docstrings.numpy._RE_YIELDS",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 184,
-"endlineno": 184,
+"lineno": 190,
+"endlineno": 190,
 "labels": [
 "module-attribute"
 ],
@@ -36856,8 +36865,8 @@
 "path": "griffe.docstrings.numpy._RE_RECEIVES",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 185,
-"endlineno": 185,
+"lineno": 191,
+"endlineno": 191,
 "labels": [
 "module-attribute"
 ],
@@ -36874,13 +36883,13 @@
 "path": "griffe.docstrings.numpy._RE_PARAMETER",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 186,
-"endlineno": 205,
+"lineno": 192,
+"endlineno": 211,
 "labels": [
 "module-attribute"
 ],
 "members": [],
-"value": "re.compile('\\n    (?P<names>{_RE_NAME}(?:,\\\\s{_RE_NAME})*)\\n    (?:\\n        \\\\s:\\\\s\\n        (?:\\n            (?:{_RE_OB}(?P<choices>.+){_RE_CB})|\\n            (?:\\n                (?P<type>{_RE_NATURAL_TYPE})\\n                (?:,\\\\soptional)?\\n                (?:\\n                    ,\\\\sdefault\\\\s*[:=]\\\\s*\\n                    (?P<default>.+)\\n                )?\\n            )\\n        )\\n    )?\\n    ', re.IGNORECASE | re.VERBOSE)",
+"value": "re.compile('\\n    (?P<names>{_RE_NAME}(?:,\\\\s{_RE_NAME})*)\\n    (?:\\n        \\\\s:\\\\s\\n        (?:\\n            (?:{_RE_OB}(?P<choices>.+){_RE_CB})|\\n            (?:\\n                (?P<type>{_RE_TYPE})\\n                (?:,\\\\soptional)?\\n                (?:\\n                    ,\\\\sdefault\\\\s*[:=]\\\\s*\\n                    (?P<default>.+)\\n                )?\\n            )\\n        )\\n    )?\\n    ', re.IGNORECASE | re.VERBOSE)",
 "annotation": {
 "source": "Pattern",
 "full": "typing.Pattern"
@@ -36892,8 +36901,8 @@
 "path": "griffe.docstrings.numpy._RE_DOCTEST_BLANKLINE",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 206,
-"endlineno": 206,
+"lineno": 212,
+"endlineno": 212,
 "labels": [
 "module-attribute"
 ],
@@ -36910,8 +36919,8 @@
 "path": "griffe.docstrings.numpy._RE_DOCTEST_FLAGS",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 207,
-"endlineno": 207,
+"lineno": 213,
+"endlineno": 213,
 "labels": [
 "module-attribute"
 ],
@@ -36928,8 +36937,8 @@
 "path": "griffe.docstrings.numpy._read_parameters",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 210,
-"endlineno": 254,
+"lineno": 216,
+"endlineno": 260,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36987,8 +36996,8 @@
 "path": "griffe.docstrings.numpy._read_parameters_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 257,
-"endlineno": 268,
+"lineno": 263,
+"endlineno": 274,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37051,8 +37060,8 @@
 "path": "griffe.docstrings.numpy._read_other_parameters_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 271,
-"endlineno": 282,
+"lineno": 277,
+"endlineno": 288,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37115,8 +37124,8 @@
 "path": "griffe.docstrings.numpy._read_deprecated_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 285,
-"endlineno": 305,
+"lineno": 291,
+"endlineno": 311,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37179,8 +37188,8 @@
 "path": "griffe.docstrings.numpy._read_returns_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 308,
-"endlineno": 332,
+"lineno": 314,
+"endlineno": 338,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37243,8 +37252,8 @@
 "path": "griffe.docstrings.numpy._read_yields_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 335,
-"endlineno": 359,
+"lineno": 341,
+"endlineno": 365,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37307,8 +37316,8 @@
 "path": "griffe.docstrings.numpy._read_receives_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 362,
-"endlineno": 386,
+"lineno": 368,
+"endlineno": 392,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37371,8 +37380,8 @@
 "path": "griffe.docstrings.numpy._read_raises_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 389,
-"endlineno": 408,
+"lineno": 395,
+"endlineno": 414,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37435,8 +37444,8 @@
 "path": "griffe.docstrings.numpy._read_warns_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 411,
-"endlineno": 430,
+"lineno": 417,
+"endlineno": 436,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37499,8 +37508,8 @@
 "path": "griffe.docstrings.numpy._read_attributes_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 433,
-"endlineno": 458,
+"lineno": 439,
+"endlineno": 464,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37563,8 +37572,8 @@
 "path": "griffe.docstrings.numpy._read_examples_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 461,
-"endlineno": 520,
+"lineno": 467,
+"endlineno": 526,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37636,8 +37645,8 @@
 "path": "griffe.docstrings.numpy._section_reader",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 523,
-"endlineno": 534,
+"lineno": 529,
+"endlineno": 540,
 "labels": [
 "module-attribute"
 ],
@@ -37650,12 +37659,12 @@
 "path": "griffe.docstrings.numpy.parse",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 537,
-"endlineno": 598,
+"lineno": 543,
+"endlineno": 604,
 "docstring": {
 "value": "Parse a docstring.\n\nThis function iterates on lines of a docstring to build sections.\nIt then returns this list of sections.\n\nParameters:\n    docstring: The docstring to parse.\n    trim_doctest_flags: Whether to remove doctest flags from Python example blocks.\n    **options: Additional parsing options.\n\nReturns:\n    A list of docstring sections.",
-"lineno": 542,
-"endlineno": 554,
+"lineno": 548,
+"endlineno": 560,
 "parsed": [
 {
 "kind": "text",

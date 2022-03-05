@@ -1467,10 +1467,10 @@ because it was created or modified dynamically, and our node visitor is not
 powerful enough to infer all these dynamic modifications. In this case,
 we always try to visit the code first, and only then we load the object
 to update the data with introspection.</p>
-<p>This module exposes a public function, <a href="#griffe.agents.inspector.inspect"><code>inspect()</code></a>,
-which inspects the module using <a href="https://docs.python.org/3/library/inspect.html#inspect.getmembers"><code>inspect.getmembers()</code></a>,
-and returns a new <a href="../../dataclasses/#griffe.dataclasses.Module"><code>Module</code></a> instance,
-populating its members recursively, by using a <a href="https://docs.python.org/3/library/ast.html#ast.NodeVisitor"><code>NodeVisitor</code></a>-like class.</p>
+<p>This module exposes a public function, <a class="" href="#griffe.agents.inspector.inspect"><code>inspect()</code></a>,
+which inspects the module using <a class="external" href="https://docs.python.org/3/library/inspect.html#inspect.getmembers"><code>inspect.getmembers()</code></a>,
+and returns a new <a class="" href="../../dataclasses/#griffe.dataclasses.Module"><code>Module</code></a> instance,
+populating its members recursively, by using a <a class="external" href="https://docs.python.org/3/library/ast.html#ast.NodeVisitor"><code>NodeVisitor</code></a>-like class.</p>
 <p>The inspection agent works similarly to the regular "node visitor" agent,
 in that it maintains a state with the current object being handled,
 and recursively handle its members.</p>
@@ -1501,7 +1501,7 @@ and recursively handle its members.</p>
 
     <div class="doc doc-contents ">
         <p class="doc doc-class-bases">
-          Bases: <code><a title="griffe.agents.base.BaseInspector" href="../base/#griffe.agents.base.BaseInspector">BaseInspector</a></code></p>
+          Bases: <code><a class="" title="griffe.agents.base.BaseInspector" href="../base/#griffe.agents.base.BaseInspector">BaseInspector</a></code></p>
 
 
       <p>This class is used to instantiate an inspector.</p>
@@ -1513,37 +1513,37 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>module_name</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
         – <p>The module name.</p>
       </li>
       <li class="field-body">
         <b>filepath</b>
-            (<code><a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | None</code>)
+            (<code><a class="external" title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | None</code>)
         – <p>The optional filepath.</p>
       </li>
       <li class="field-body">
         <b>extensions</b>
-            (<code><a title="griffe.agents.extensions.Extensions" href="../extensions/#griffe.agents.extensions.Extensions">Extensions</a></code>)
+            (<code><a class="" title="griffe.agents.extensions.Extensions" href="../extensions/#griffe.agents.extensions.Extensions">Extensions</a></code>)
         – <p>Extensions to use when inspecting.</p>
       </li>
       <li class="field-body">
         <b>parent</b>
-            (<code><a title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>)
+            (<code><a class="" title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>)
         – <p>The module parent.</p>
       </li>
       <li class="field-body">
         <b>docstring_parser</b>
-            (<code><a title="griffe.docstrings.parsers.Parser" href="../../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+            (<code><a class="" title="griffe.docstrings.parsers.Parser" href="../../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
         – <p>The docstring parser to use.</p>
       </li>
       <li class="field-body">
         <b>docstring_options</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a class="external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a class="external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
         – <p>The docstring parsing options.</p>
       </li>
       <li class="field-body">
         <b>lines_collection</b>
-            (<code><a title="griffe.collections.LinesCollection" href="../../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
+            (<code><a class="" title="griffe.collections.LinesCollection" href="../../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
         – <p>A collection of source code lines.</p>
       </li>
   </ul>
@@ -1652,17 +1652,14 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a class="" title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">223</span>
-<span class="normal">224</span>
-<span class="normal">225</span>
-<span class="normal">226</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">226</span>
 <span class="normal">227</span>
 <span class="normal">228</span>
 <span class="normal">229</span>
@@ -1678,7 +1675,10 @@ and recursively handle its members.</p>
 <span class="normal">239</span>
 <span class="normal">240</span>
 <span class="normal">241</span>
-<span class="normal">242</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generic_inspect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generic_inspect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># noqa: WPS231</span>
     <span class="sd">&quot;&quot;&quot;Extend the base generic inspection with extensions.</span>
 
 <span class="sd">    Parameters:</span>
@@ -1727,7 +1727,7 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>import_paths</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a class="external" title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
         – <p>Paths replacing <code>sys.path</code> to import the module.</p>
       </li>
   </ul>
@@ -1735,17 +1735,14 @@ and recursively handle its members.</p>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a></code>
+            <code><a class="" title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a></code>
         – <p>A module instance.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">192</span>
-<span class="normal">193</span>
-<span class="normal">194</span>
-<span class="normal">195</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">195</span>
 <span class="normal">196</span>
 <span class="normal">197</span>
 <span class="normal">198</span>
@@ -1759,7 +1756,10 @@ and recursively handle its members.</p>
 <span class="normal">206</span>
 <span class="normal">207</span>
 <span class="normal">208</span>
-<span class="normal">209</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">import_paths</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">import_paths</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Build and return the object representing the module attached to this inspector.</span>
 
 <span class="sd">    This method triggers a complete inspection of the module members.</span>
@@ -1805,22 +1805,19 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a class="" title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
       <li class="field-body">
         <b>annotation</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a title="griffe.expressions.Name" href="../../expressions/#griffe.expressions.Name">Name</a> | <a title="griffe.expressions.Expression" href="../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a class="" title="griffe.expressions.Name" href="../../expressions/#griffe.expressions.Name">Name</a> | <a class="" title="griffe.expressions.Expression" href="../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
         – <p>A potentiel annotation.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">397</span>
-<span class="normal">398</span>
-<span class="normal">399</span>
-<span class="normal">400</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">400</span>
 <span class="normal">401</span>
 <span class="normal">402</span>
 <span class="normal">403</span>
@@ -1856,7 +1853,10 @@ and recursively handle its members.</p>
 <span class="normal">433</span>
 <span class="normal">434</span>
 <span class="normal">435</span>
-<span class="normal">436</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">handle_attribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">,</span> <span class="n">annotation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">436</span>
+<span class="normal">437</span>
+<span class="normal">438</span>
+<span class="normal">439</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">handle_attribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">,</span> <span class="n">annotation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>  <span class="c1"># noqa: WPS231</span>
     <span class="sd">&quot;&quot;&quot;Handle an attribute.</span>
 
 <span class="sd">    Parameters:</span>
@@ -1924,22 +1924,19 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a class="" title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
       <li class="field-body">
         <b>labels</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#set">set</a> | None</code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/stdtypes.html#set">set</a> | None</code>)
         – <p>Labels to add to the data object.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">357</span>
-<span class="normal">358</span>
-<span class="normal">359</span>
-<span class="normal">360</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">360</span>
 <span class="normal">361</span>
 <span class="normal">362</span>
 <span class="normal">363</span>
@@ -1966,7 +1963,10 @@ and recursively handle its members.</p>
 <span class="normal">384</span>
 <span class="normal">385</span>
 <span class="normal">386</span>
-<span class="normal">387</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">handle_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">,</span> <span class="n">labels</span><span class="p">:</span> <span class="nb">set</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">handle_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">,</span> <span class="n">labels</span><span class="p">:</span> <span class="nb">set</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>  <span class="c1"># noqa: WPS231</span>
     <span class="sd">&quot;&quot;&quot;Handle a function.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2025,24 +2025,24 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a class="" title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">211</span>
-<span class="normal">212</span>
-<span class="normal">213</span>
-<span class="normal">214</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">214</span>
 <span class="normal">215</span>
 <span class="normal">216</span>
 <span class="normal">217</span>
 <span class="normal">218</span>
 <span class="normal">219</span>
 <span class="normal">220</span>
-<span class="normal">221</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Extend the base inspection with extensions.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2081,20 +2081,20 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a class="" title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">389</span>
-<span class="normal">390</span>
-<span class="normal">391</span>
-<span class="normal">392</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">392</span>
 <span class="normal">393</span>
 <span class="normal">394</span>
-<span class="normal">395</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_attribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span>
+<span class="normal">398</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_attribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Inspect an attribute.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2129,20 +2129,20 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a class="" title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">325</span>
-<span class="normal">326</span>
-<span class="normal">327</span>
-<span class="normal">328</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">328</span>
 <span class="normal">329</span>
 <span class="normal">330</span>
-<span class="normal">331</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_builtin_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_builtin_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Inspect a builtin function.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2177,20 +2177,20 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a class="" title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">301</span>
-<span class="normal">302</span>
-<span class="normal">303</span>
-<span class="normal">304</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">304</span>
 <span class="normal">305</span>
 <span class="normal">306</span>
-<span class="normal">307</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_builtin_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_builtin_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Inspect a builtin method.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2225,20 +2225,20 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a class="" title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">341</span>
-<span class="normal">342</span>
-<span class="normal">343</span>
-<span class="normal">344</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">344</span>
 <span class="normal">345</span>
 <span class="normal">346</span>
-<span class="normal">347</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_cached_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_cached_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Inspect a cached property.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2273,17 +2273,14 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a class="" title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">259</span>
-<span class="normal">260</span>
-<span class="normal">261</span>
-<span class="normal">262</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">262</span>
 <span class="normal">263</span>
 <span class="normal">264</span>
 <span class="normal">265</span>
@@ -2296,7 +2293,10 @@ and recursively handle its members.</p>
 <span class="normal">272</span>
 <span class="normal">273</span>
 <span class="normal">274</span>
-<span class="normal">275</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_class</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_class</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Inspect a class.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2341,20 +2341,20 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a class="" title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">285</span>
-<span class="normal">286</span>
-<span class="normal">287</span>
-<span class="normal">288</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">288</span>
 <span class="normal">289</span>
 <span class="normal">290</span>
-<span class="normal">291</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_classmethod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_classmethod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Inspect a class method.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2389,20 +2389,20 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a class="" title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">317</span>
-<span class="normal">318</span>
-<span class="normal">319</span>
-<span class="normal">320</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">320</span>
 <span class="normal">321</span>
 <span class="normal">322</span>
-<span class="normal">323</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_coroutine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_coroutine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Inspect a coroutine.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2437,20 +2437,20 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a class="" title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">333</span>
-<span class="normal">334</span>
-<span class="normal">335</span>
-<span class="normal">336</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">336</span>
 <span class="normal">337</span>
 <span class="normal">338</span>
-<span class="normal">339</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Inspect a function.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2485,20 +2485,20 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a class="" title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">309</span>
-<span class="normal">310</span>
-<span class="normal">311</span>
-<span class="normal">312</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">312</span>
 <span class="normal">313</span>
 <span class="normal">314</span>
-<span class="normal">315</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Inspect a method.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2533,20 +2533,20 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a class="" title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">293</span>
-<span class="normal">294</span>
-<span class="normal">295</span>
-<span class="normal">296</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">296</span>
 <span class="normal">297</span>
 <span class="normal">298</span>
-<span class="normal">299</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_method_descriptor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_method_descriptor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Inspect a method descriptor.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2581,17 +2581,14 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a class="" title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">244</span>
-<span class="normal">245</span>
-<span class="normal">246</span>
-<span class="normal">247</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">247</span>
 <span class="normal">248</span>
 <span class="normal">249</span>
 <span class="normal">250</span>
@@ -2601,7 +2598,10 @@ and recursively handle its members.</p>
 <span class="normal">254</span>
 <span class="normal">255</span>
 <span class="normal">256</span>
-<span class="normal">257</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Inspect a module.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2643,20 +2643,20 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a class="" title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">349</span>
-<span class="normal">350</span>
-<span class="normal">351</span>
-<span class="normal">352</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">352</span>
 <span class="normal">353</span>
 <span class="normal">354</span>
-<span class="normal">355</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Inspect a property.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2691,20 +2691,20 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
+            (<code><a class="" title="griffe.agents.nodes.ObjectNode" href="../nodes/#griffe.agents.nodes.ObjectNode">ObjectNode</a></code>)
         – <p>The node to inspect.</p>
       </li>
   </ul>
 
         <details class="quote">
           <summary>Source code in <code>griffe/agents/inspector.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">277</span>
-<span class="normal">278</span>
-<span class="normal">279</span>
-<span class="normal">280</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">280</span>
 <span class="normal">281</span>
 <span class="normal">282</span>
-<span class="normal">283</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_staticmethod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_staticmethod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ObjectNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Inspect a static method.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2753,42 +2753,42 @@ and recursively handle its members.</p>
   <ul>
       <li class="field-body">
         <b>module_name</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
         – <p>The module name (as when importing [from] it).</p>
       </li>
       <li class="field-body">
         <b>filepath</b>
-            (<code><a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | None</code>)
+            (<code><a class="external" title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | None</code>)
         – <p>The module file path.</p>
       </li>
       <li class="field-body">
         <b>import_paths</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a class="external" title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a>] | None</code>)
         – <p>Paths to import the module from.</p>
       </li>
       <li class="field-body">
         <b>extensions</b>
-            (<code><a title="griffe.agents.extensions.Extensions" href="../extensions/#griffe.agents.extensions.Extensions">Extensions</a> | None</code>)
+            (<code><a class="" title="griffe.agents.extensions.Extensions" href="../extensions/#griffe.agents.extensions.Extensions">Extensions</a> | None</code>)
         – <p>The extensions to use when inspecting the module.</p>
       </li>
       <li class="field-body">
         <b>parent</b>
-            (<code><a title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>)
+            (<code><a class="" title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>)
         – <p>The optional parent of this module.</p>
       </li>
       <li class="field-body">
         <b>docstring_parser</b>
-            (<code><a title="griffe.docstrings.parsers.Parser" href="../../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+            (<code><a class="" title="griffe.docstrings.parsers.Parser" href="../../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
         – <p>The docstring parser to use. By default, no parsing is done.</p>
       </li>
       <li class="field-body">
         <b>docstring_options</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a class="external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a class="external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
         – <p>Additional docstring parsing options.</p>
       </li>
       <li class="field-body">
         <b>lines_collection</b>
-            (<code><a title="griffe.collections.LinesCollection" href="../../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
+            (<code><a class="" title="griffe.collections.LinesCollection" href="../../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
         – <p>A collection of source code lines.</p>
       </li>
   </ul>
@@ -2796,7 +2796,7 @@ and recursively handle its members.</p>
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a></code>
+            <code><a class="" title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a></code>
         – <p>The module, with its members populated.</p>
       </li>
   </ul>

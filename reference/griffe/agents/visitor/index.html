@@ -1403,10 +1403,10 @@
     <div class="doc doc-contents first">
 
       <p>Code parsing and data extraction utilies.</p>
-<p>This module exposes a public function, <a href="#griffe.agents.visitor.visit"><code>visit()</code></a>,
-which parses the module code using <a href="https://docs.python.org/3/library/ast.html#ast.parse"><code>parse()</code></a>,
-and returns a new <a href="../../dataclasses/#griffe.dataclasses.Module"><code>Module</code></a> instance,
-populating its members recursively, by using a <a href="https://docs.python.org/3/library/ast.html#ast.NodeVisitor"><code>NodeVisitor</code></a>-like class.</p>
+<p>This module exposes a public function, <a class="" href="#griffe.agents.visitor.visit"><code>visit()</code></a>,
+which parses the module code using <a class="external" href="https://docs.python.org/3/library/ast.html#ast.parse"><code>parse()</code></a>,
+and returns a new <a class="" href="../../dataclasses/#griffe.dataclasses.Module"><code>Module</code></a> instance,
+populating its members recursively, by using a <a class="external" href="https://docs.python.org/3/library/ast.html#ast.NodeVisitor"><code>NodeVisitor</code></a>-like class.</p>
 
 
 
@@ -1432,7 +1432,7 @@ populating its members recursively, by using a <a href="https://docs.python.org/
 
     <div class="doc doc-contents ">
         <p class="doc doc-class-bases">
-          Bases: <code><a title="griffe.agents.base.BaseVisitor" href="../base/#griffe.agents.base.BaseVisitor">BaseVisitor</a></code></p>
+          Bases: <code><a class="" title="griffe.agents.base.BaseVisitor" href="../base/#griffe.agents.base.BaseVisitor">BaseVisitor</a></code></p>
 
 
       <p>This class is used to instantiate a visitor.</p>
@@ -1444,47 +1444,47 @@ populating its members recursively, by using a <a href="https://docs.python.org/
   <ul>
       <li class="field-body">
         <b>module_name</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
         – <p>The module name.</p>
       </li>
       <li class="field-body">
         <b>filepath</b>
-            (<code><a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
+            (<code><a class="external" title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
         – <p>The module filepath.</p>
       </li>
       <li class="field-body">
         <b>code</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
         – <p>The module source code.</p>
       </li>
       <li class="field-body">
         <b>extensions</b>
-            (<code><a title="griffe.agents.extensions.Extensions" href="../extensions/#griffe.agents.extensions.Extensions">Extensions</a></code>)
+            (<code><a class="" title="griffe.agents.extensions.Extensions" href="../extensions/#griffe.agents.extensions.Extensions">Extensions</a></code>)
         – <p>The extensions to use when visiting.</p>
       </li>
       <li class="field-body">
         <b>parent</b>
-            (<code><a title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>)
+            (<code><a class="" title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>)
         – <p>An optional parent for the final module object.</p>
       </li>
       <li class="field-body">
         <b>docstring_parser</b>
-            (<code><a title="griffe.docstrings.parsers.Parser" href="../../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+            (<code><a class="" title="griffe.docstrings.parsers.Parser" href="../../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
         – <p>The docstring parser to use.</p>
       </li>
       <li class="field-body">
         <b>docstring_options</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a class="external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a class="external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
         – <p>The docstring parsing options.</p>
       </li>
       <li class="field-body">
         <b>lines_collection</b>
-            (<code><a title="griffe.collections.LinesCollection" href="../../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
+            (<code><a class="" title="griffe.collections.LinesCollection" href="../../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
         – <p>A collection of source code lines.</p>
       </li>
       <li class="field-body">
         <b>modules_collection</b>
-            (<code><a title="griffe.collections.ModulesCollection" href="../../collections/#griffe.collections.ModulesCollection">ModulesCollection</a> | None</code>)
+            (<code><a class="" title="griffe.collections.ModulesCollection" href="../../collections/#griffe.collections.ModulesCollection">ModulesCollection</a> | None</code>)
         – <p>A collection of modules.</p>
       </li>
   </ul>
@@ -1610,7 +1610,7 @@ populating its members recursively, by using a <a href="https://docs.python.org/
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a title="ast.AST" href="https://docs.python.org/3/library/ast.html#ast.AST">AST</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="external" title="ast.AST" href="https://docs.python.org/3/library/ast.html#ast.AST">AST</a></code>)
         – <p>The node to visit.</p>
       </li>
   </ul>
@@ -1668,7 +1668,7 @@ populating its members recursively, by using a <a href="https://docs.python.org/
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a></code>
+            <code><a class="" title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a></code>
         – <p>A module instance.</p>
       </li>
   </ul>
@@ -1728,12 +1728,12 @@ populating its members recursively, by using a <a href="https://docs.python.org/
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a title="ast.Assign" href="https://docs.python.org/3/library/ast.html#ast.Assign">Assign</a> | <a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a title="ast.AnnAssign" href="https://docs.python.org/3/library/ast.html#ast.AnnAssign">AnnAssign</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="external" title="ast.Assign" href="https://docs.python.org/3/library/ast.html#ast.Assign">Assign</a> | <a class="external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="external" title="ast.AnnAssign" href="https://docs.python.org/3/library/ast.html#ast.AnnAssign">AnnAssign</a></code>)
         – <p>The node to visit.</p>
       </li>
       <li class="field-body">
         <b>annotation</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a title="griffe.expressions.Name" href="../../expressions/#griffe.expressions.Name">Name</a> | <a title="griffe.expressions.Expression" href="../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a class="" title="griffe.expressions.Name" href="../../expressions/#griffe.expressions.Name">Name</a> | <a class="" title="griffe.expressions.Expression" href="../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>)
         – <p>A potential annotation.</p>
       </li>
   </ul>
@@ -1911,12 +1911,12 @@ populating its members recursively, by using a <a href="https://docs.python.org/
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a title="ast.AsyncFunctionDef" href="https://docs.python.org/3/library/ast.html#ast.AsyncFunctionDef">AsyncFunctionDef</a> | <a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a title="ast.FunctionDef" href="https://docs.python.org/3/library/ast.html#ast.FunctionDef">FunctionDef</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="external" title="ast.AsyncFunctionDef" href="https://docs.python.org/3/library/ast.html#ast.AsyncFunctionDef">AsyncFunctionDef</a> | <a class="external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="external" title="ast.FunctionDef" href="https://docs.python.org/3/library/ast.html#ast.FunctionDef">FunctionDef</a></code>)
         – <p>The node to visit.</p>
       </li>
       <li class="field-body">
         <b>labels</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#set">set</a> | None</code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/stdtypes.html#set">set</a> | None</code>)
         – <p>Labels to add to the data object.</p>
       </li>
   </ul>
@@ -2176,7 +2176,7 @@ populating its members recursively, by using a <a href="https://docs.python.org/
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a title="ast.AST" href="https://docs.python.org/3/library/ast.html#ast.AST">AST</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="external" title="ast.AST" href="https://docs.python.org/3/library/ast.html#ast.AST">AST</a></code>)
         – <p>The node to visit.</p>
       </li>
   </ul>
@@ -2232,7 +2232,7 @@ populating its members recursively, by using a <a href="https://docs.python.org/
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a title="ast.AnnAssign" href="https://docs.python.org/3/library/ast.html#ast.AnnAssign">AnnAssign</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="external" title="ast.AnnAssign" href="https://docs.python.org/3/library/ast.html#ast.AnnAssign">AnnAssign</a></code>)
         – <p>The node to visit.</p>
       </li>
   </ul>
@@ -2280,7 +2280,7 @@ populating its members recursively, by using a <a href="https://docs.python.org/
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a title="ast.Assign" href="https://docs.python.org/3/library/ast.html#ast.Assign">Assign</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="external" title="ast.Assign" href="https://docs.python.org/3/library/ast.html#ast.Assign">Assign</a></code>)
         – <p>The node to visit.</p>
       </li>
   </ul>
@@ -2328,7 +2328,7 @@ populating its members recursively, by using a <a href="https://docs.python.org/
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a title="ast.AsyncFunctionDef" href="https://docs.python.org/3/library/ast.html#ast.AsyncFunctionDef">AsyncFunctionDef</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="external" title="ast.AsyncFunctionDef" href="https://docs.python.org/3/library/ast.html#ast.AsyncFunctionDef">AsyncFunctionDef</a></code>)
         – <p>The node to visit.</p>
       </li>
   </ul>
@@ -2376,7 +2376,7 @@ populating its members recursively, by using a <a href="https://docs.python.org/
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a title="ast.ClassDef" href="https://docs.python.org/3/library/ast.html#ast.ClassDef">ClassDef</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="external" title="ast.ClassDef" href="https://docs.python.org/3/library/ast.html#ast.ClassDef">ClassDef</a></code>)
         – <p>The node to visit.</p>
       </li>
   </ul>
@@ -2482,7 +2482,7 @@ populating its members recursively, by using a <a href="https://docs.python.org/
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a title="ast.FunctionDef" href="https://docs.python.org/3/library/ast.html#ast.FunctionDef">FunctionDef</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="external" title="ast.FunctionDef" href="https://docs.python.org/3/library/ast.html#ast.FunctionDef">FunctionDef</a></code>)
         – <p>The node to visit.</p>
       </li>
   </ul>
@@ -2530,7 +2530,7 @@ populating its members recursively, by using a <a href="https://docs.python.org/
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a title="ast.Import" href="https://docs.python.org/3/library/ast.html#ast.Import">Import</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="external" title="ast.Import" href="https://docs.python.org/3/library/ast.html#ast.Import">Import</a></code>)
         – <p>The node to visit.</p>
       </li>
   </ul>
@@ -2598,7 +2598,7 @@ populating its members recursively, by using a <a href="https://docs.python.org/
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a title="ast.ImportFrom" href="https://docs.python.org/3/library/ast.html#ast.ImportFrom">ImportFrom</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="external" title="ast.ImportFrom" href="https://docs.python.org/3/library/ast.html#ast.ImportFrom">ImportFrom</a></code>)
         – <p>The node to visit.</p>
       </li>
   </ul>
@@ -2690,7 +2690,7 @@ populating its members recursively, by using a <a href="https://docs.python.org/
   <ul>
       <li class="field-body">
         <b>node</b>
-            (<code><a href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<span title="ast.Module">Module</span></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<span title="ast.Module">Module</span></code>)
         – <p>The node to visit.</p>
       </li>
   </ul>
@@ -2810,47 +2810,47 @@ populating its members recursively, by using a <a href="https://docs.python.org/
   <ul>
       <li class="field-body">
         <b>module_name</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
         – <p>The module name (as when importing [from] it).</p>
       </li>
       <li class="field-body">
         <b>filepath</b>
-            (<code><a title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
+            (<code><a class="external" title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></code>)
         – <p>The module file path.</p>
       </li>
       <li class="field-body">
         <b>code</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
         – <p>The module contents.</p>
       </li>
       <li class="field-body">
         <b>extensions</b>
-            (<code><a title="griffe.agents.extensions.Extensions" href="../extensions/#griffe.agents.extensions.Extensions">Extensions</a> | None</code>)
+            (<code><a class="" title="griffe.agents.extensions.Extensions" href="../extensions/#griffe.agents.extensions.Extensions">Extensions</a> | None</code>)
         – <p>The extensions to use when visiting the AST.</p>
       </li>
       <li class="field-body">
         <b>parent</b>
-            (<code><a title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>)
+            (<code><a class="" title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a> | None</code>)
         – <p>The optional parent of this module.</p>
       </li>
       <li class="field-body">
         <b>docstring_parser</b>
-            (<code><a title="griffe.docstrings.parsers.Parser" href="../../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
+            (<code><a class="" title="griffe.docstrings.parsers.Parser" href="../../docstrings/parsers/#griffe.docstrings.parsers.Parser">Parser</a> | None</code>)
         – <p>The docstring parser to use. By default, no parsing is done.</p>
       </li>
       <li class="field-body">
         <b>docstring_options</b>
-            (<code><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
+            (<code><a class="external" href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a class="external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a class="external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>)
         – <p>Additional docstring parsing options.</p>
       </li>
       <li class="field-body">
         <b>lines_collection</b>
-            (<code><a title="griffe.collections.LinesCollection" href="../../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
+            (<code><a class="" title="griffe.collections.LinesCollection" href="../../collections/#griffe.collections.LinesCollection">LinesCollection</a> | None</code>)
         – <p>A collection of source code lines.</p>
       </li>
       <li class="field-body">
         <b>modules_collection</b>
-            (<code><a title="griffe.collections.ModulesCollection" href="../../collections/#griffe.collections.ModulesCollection">ModulesCollection</a> | None</code>)
+            (<code><a class="" title="griffe.collections.ModulesCollection" href="../../collections/#griffe.collections.ModulesCollection">ModulesCollection</a> | None</code>)
         – <p>A collection of modules.</p>
       </li>
   </ul>
@@ -2858,7 +2858,7 @@ populating its members recursively, by using a <a href="https://docs.python.org/
   <p>Returns:</p>
   <ul>
       <li class="field-body">
-            <code><a title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a></code>
+            <code><a class="" title="griffe.dataclasses.Module" href="../../dataclasses/#griffe.dataclasses.Module">Module</a></code>
         – <p>The module, with its members populated.</p>
       </li>
   </ul>
