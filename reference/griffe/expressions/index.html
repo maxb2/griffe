@@ -936,6 +936,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#griffe.expressions.Expression.generator_items" class="md-nav__link">
+    generator_items()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#griffe.expressions.Expression.is_generator" class="md-nav__link">
+    is_generator()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#griffe.expressions.Expression.is_iterator" class="md-nav__link">
+    is_iterator()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#griffe.expressions.Expression.is_tuple" class="md-nav__link">
     is_tuple()
   </a>
@@ -943,8 +964,29 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#griffe.expressions.Expression.iterator_item" class="md-nav__link">
+    iterator_item()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#griffe.expressions.Expression.kind" class="md-nav__link">
+    kind()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#griffe.expressions.Expression.tuple_item" class="md-nav__link">
     tuple_item()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#griffe.expressions.Expression.tuple_items" class="md-nav__link">
+    tuple_items()
   </a>
   
 </li>
@@ -1232,6 +1274,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#griffe.expressions.Expression.generator_items" class="md-nav__link">
+    generator_items()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#griffe.expressions.Expression.is_generator" class="md-nav__link">
+    is_generator()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#griffe.expressions.Expression.is_iterator" class="md-nav__link">
+    is_iterator()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#griffe.expressions.Expression.is_tuple" class="md-nav__link">
     is_tuple()
   </a>
@@ -1239,8 +1302,29 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#griffe.expressions.Expression.iterator_item" class="md-nav__link">
+    iterator_item()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#griffe.expressions.Expression.kind" class="md-nav__link">
+    kind()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#griffe.expressions.Expression.tuple_item" class="md-nav__link">
     tuple_item()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#griffe.expressions.Expression.tuple_items" class="md-nav__link">
+    tuple_items()
   </a>
   
 </li>
@@ -1448,6 +1532,165 @@ Each name in the expression can be resolved to its full name within its scope.</
 
 
 
+<h3 id="griffe.expressions.Expression.generator_items" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">generator_items</span><span class="p">()</span></code>
+
+
+<a href="#griffe.expressions.Expression.generator_items" class="headerlink" title="Permanent link">¤</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Return the items of a generator.</p>
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-internal" title="griffe.expressions.Name" href="#griffe.expressions.Name">Name</a> | <a class="autorefs autorefs-internal" title="griffe.expressions.Expression" href="#griffe.expressions.Expression">Expression</a></code>
+        – <p>The yield type.</p>
+      </li>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-internal" title="griffe.expressions.Name" href="#griffe.expressions.Name">Name</a> | <a class="autorefs autorefs-internal" title="griffe.expressions.Expression" href="#griffe.expressions.Expression">Expression</a></code>
+        – <p>The send/receive type.</p>
+      </li>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-internal" title="griffe.expressions.Name" href="#griffe.expressions.Name">Name</a> | <a class="autorefs autorefs-internal" title="griffe.expressions.Expression" href="#griffe.expressions.Expression">Expression</a></code>
+        – <p>The return type.</p>
+      </li>
+  </ul>
+
+        <details class="quote">
+          <summary>Source code in <code>griffe/expressions.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generator_items</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span><span class="p">,</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span><span class="p">,</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Return the items of a generator.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The yield type.</span>
+<span class="sd">        The send/receive type.</span>
+<span class="sd">        The return type.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Generator[Yield, Send/Receive, Return]</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="bp">self</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="griffe.expressions.Expression.is_generator" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">is_generator</span><span class="p">()</span></code>
+
+
+<a href="#griffe.expressions.Expression.is_generator" class="headerlink" title="Permanent link">¤</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Tell whether this expression represents a generator.</p>
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+        – <p>True or False.</p>
+      </li>
+  </ul>
+
+        <details class="quote">
+          <summary>Source code in <code>griffe/expressions.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">is_generator</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Tell whether this expression represents a generator.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        True or False.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;generator&quot;</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="griffe.expressions.Expression.is_iterator" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">is_iterator</span><span class="p">()</span></code>
+
+
+<a href="#griffe.expressions.Expression.is_iterator" class="headerlink" title="Permanent link">¤</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Tell whether this expression represents an iterator.</p>
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+        – <p>True or False.</p>
+      </li>
+  </ul>
+
+        <details class="quote">
+          <summary>Source code in <code>griffe/expressions.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">is_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Tell whether this expression represents an iterator.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        True or False.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;iterator&quot;</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
 <h3 id="griffe.expressions.Expression.is_tuple" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">is_tuple</span><span class="p">()</span></code>
 
@@ -1469,6 +1712,104 @@ Each name in the expression can be resolved to its full name within its scope.</
 
         <details class="quote">
           <summary>Source code in <code>griffe/expressions.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">is_tuple</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Tell whether this expression represents a tuple.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        True or False.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;tuple&quot;</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="griffe.expressions.Expression.iterator_item" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">iterator_item</span><span class="p">()</span></code>
+
+
+<a href="#griffe.expressions.Expression.iterator_item" class="headerlink" title="Permanent link">¤</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Return the item of an iterator.</p>
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-internal" title="griffe.expressions.Name" href="#griffe.expressions.Name">Name</a> | <a class="autorefs autorefs-internal" title="griffe.expressions.Expression" href="#griffe.expressions.Expression">Expression</a></code>
+        – <p>The iterator item.</p>
+      </li>
+  </ul>
+
+        <details class="quote">
+          <summary>Source code in <code>griffe/expressions.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">iterator_item</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Return the item of an iterator.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The iterator item.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Iterator[ItemType]</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="griffe.expressions.Expression.kind" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">kind</span><span class="p">()</span></code>
+
+
+<a href="#griffe.expressions.Expression.kind" class="headerlink" title="Permanent link">¤</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Return the main type object as a string.</p>
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+        – <p>The main type of this expression.</p>
+      </li>
+  </ul>
+
+        <details class="quote">
+          <summary>Source code in <code>griffe/expressions.py</code></summary>
           <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">121</span>
 <span class="normal">122</span>
 <span class="normal">123</span>
@@ -1477,13 +1818,13 @@ Each name in the expression can be resolved to its full name within its scope.</
 <span class="normal">126</span>
 <span class="normal">127</span>
 <span class="normal">128</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
-<span class="k">def</span> <span class="nf">is_tuple</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Tell whether this expression represents a tuple.</span>
+<span class="k">def</span> <span class="nf">kind</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Return the main type object as a string.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        True or False.</span>
+<span class="sd">        The main type of this expression.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;[&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;tuple&quot;</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;[&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -1527,20 +1868,20 @@ Each name in the expression can be resolved to its full name within its scope.</
 
         <details class="quote">
           <summary>Source code in <code>griffe/expressions.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tuple_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nth</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span><span class="p">:</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tuple_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nth</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the n-th item of this tuple expression.</span>
 
 <span class="sd">    Parameters:</span>
@@ -1554,6 +1895,53 @@ Each name in the expression can be resolved to its full name within its scope.</
     <span class="c1">#       N , N , N</span>
     <span class="c1">#       0 1 2 3 4</span>
     <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span> <span class="o">*</span> <span class="n">nth</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="griffe.expressions.Expression.tuple_items" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">tuple_items</span><span class="p">()</span></code>
+
+
+<a href="#griffe.expressions.Expression.tuple_items" class="headerlink" title="Permanent link">¤</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Return a tuple items as a list.</p>
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a class="autorefs autorefs-internal" title="griffe.expressions.Name" href="#griffe.expressions.Name">Name</a> | <a class="autorefs autorefs-internal" title="griffe.expressions.Expression" href="#griffe.expressions.Expression">Expression</a>]</code>
+        – <p>The tuple items.</p>
+      </li>
+  </ul>
+
+        <details class="quote">
+          <summary>Source code in <code>griffe/expressions.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tuple_items</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple items as a list.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The tuple items.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">2</span><span class="p">][::</span><span class="mi">2</span><span class="p">]</span>
 </code></pre></div>
 </td></tr></table>
         </details>

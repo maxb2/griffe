@@ -354,6 +354,14 @@
 },
 {
 "kind": "alias",
+"name": "WindowsPath",
+"target_path": "pathlib.WindowsPath",
+"path": "griffe.encoders.WindowsPath",
+"lineno": 11,
+"endlineno": 11
+},
+{
+"kind": "alias",
 "name": "Any",
 "target_path": "typing.Any",
 "path": "griffe.encoders.Any",
@@ -532,12 +540,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
 "lineno": 37,
-"endlineno": 44,
+"endlineno": 45,
 "labels": [
 "module-attribute"
 ],
 "members": [],
-"value": "{Path: str, PosixPath: str, ParameterKind: _enum_value, Kind: _enum_value, DocstringSectionKind: _enum_value, set: list}",
+"value": "{Path: str, PosixPath: str, WindowsPath: str, ParameterKind: _enum_value, Kind: _enum_value, DocstringSectionKind: _enum_value, set: list}",
 "annotation": [
 {
 "source": "dict",
@@ -583,12 +591,12 @@
 "path": "griffe.encoders.JSONEncoder",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 47,
-"endlineno": 101,
+"lineno": 48,
+"endlineno": 102,
 "docstring": {
 "value": "JSON encoder.\n\nJSON encoders can be used directly, or through\nthe [`json.dump`][] or [`json.dumps`][] methods.\n\nExamples:\n    >>> from griffe.encoders import JSONEncoder\n    >>> JSONEncoder(full=True).encode(..., **kwargs)\n\n    >>> import json\n    >>> from griffe.encoders import JSONEncoder\n    >>> json.dumps(..., cls=JSONEncoder, full=True, **kwargs)",
-"lineno": 48,
-"endlineno": 60,
+"lineno": 49,
+"endlineno": 61,
 "parsed": [
 {
 "kind": "text",
@@ -617,12 +625,12 @@
 "path": "griffe.encoders.JSONEncoder.__init__",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 62,
-"endlineno": 87,
+"lineno": 63,
+"endlineno": 88,
 "docstring": {
 "value": "Initialize the encoder.\n\nParameters:\n    *args: See [`json.JSONEncoder`][].\n    full: Whether to dump full data or base data.\n        If you plan to reload the data in Python memory\n        using the [`json_decoder`][griffe.encoders.json_decoder],\n        you don't need the full data as it can be infered again\n        using the base data. If you want to feed a non-Python\n        tool instead, dump the full data.\n    docstring_parser: The docstring parser to use. By default, no parsing is done.\n    docstring_options: Additional docstring parsing options.\n    **kwargs: See [`json.JSONEncoder`][].",
-"lineno": 70,
-"endlineno": 83,
+"lineno": 71,
+"endlineno": 84,
 "parsed": [
 {
 "kind": "parameters",
@@ -786,8 +794,8 @@
 "path": "griffe.encoders.JSONEncoder.full",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 85,
-"endlineno": 85,
+"lineno": 86,
+"endlineno": 86,
 "labels": [
 "instance-attribute"
 ],
@@ -804,8 +812,8 @@
 "path": "griffe.encoders.JSONEncoder.docstring_parser",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 86,
-"endlineno": 86,
+"lineno": 87,
+"endlineno": 87,
 "labels": [
 "instance-attribute"
 ],
@@ -826,8 +834,8 @@
 "path": "griffe.encoders.JSONEncoder.docstring_options",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 87,
-"endlineno": 87,
+"lineno": 88,
+"endlineno": 88,
 "labels": [
 "instance-attribute"
 ],
@@ -859,12 +867,12 @@
 "path": "griffe.encoders.JSONEncoder.default",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 89,
-"endlineno": 101,
+"lineno": 90,
+"endlineno": 102,
 "docstring": {
 "value": "Return a serializable representation of the given object.\n\nParameters:\n    obj: The object to serialize.\n\nReturns:\n    A serializable representation.",
-"lineno": 90,
-"endlineno": 97,
+"lineno": 91,
+"endlineno": 98,
 "parsed": [
 {
 "kind": "text",
@@ -945,8 +953,8 @@
 "path": "griffe.encoders._load_docstring",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 104,
-"endlineno": 107,
+"lineno": 105,
+"endlineno": 108,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -966,8 +974,8 @@
 "path": "griffe.encoders._load_decorators",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 110,
-"endlineno": 111,
+"lineno": 111,
+"endlineno": 112,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -987,8 +995,8 @@
 "path": "griffe.encoders._annotation_loader_map",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 114,
-"endlineno": 118,
+"lineno": 115,
+"endlineno": 119,
 "labels": [
 "module-attribute"
 ],
@@ -1001,8 +1009,8 @@
 "path": "griffe.encoders._load_annotation",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 121,
-"endlineno": 124,
+"lineno": 122,
+"endlineno": 125,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -1056,8 +1064,8 @@
 "path": "griffe.encoders._load_parameter",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 127,
-"endlineno": 133,
+"lineno": 128,
+"endlineno": 134,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -1098,8 +1106,8 @@
 "path": "griffe.encoders._load_module",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 136,
-"endlineno": 141,
+"lineno": 137,
+"endlineno": 142,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -1140,8 +1148,8 @@
 "path": "griffe.encoders._load_class",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 144,
-"endlineno": 156,
+"lineno": 145,
+"endlineno": 157,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -1182,8 +1190,8 @@
 "path": "griffe.encoders._load_function",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 159,
-"endlineno": 170,
+"lineno": 160,
+"endlineno": 171,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -1224,8 +1232,8 @@
 "path": "griffe.encoders._load_attribute",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 173,
-"endlineno": 183,
+"lineno": 174,
+"endlineno": 184,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -1266,8 +1274,8 @@
 "path": "griffe.encoders._load_alias",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 186,
-"endlineno": 192,
+"lineno": 187,
+"endlineno": 193,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -1308,8 +1316,8 @@
 "path": "griffe.encoders._loader_map",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 195,
-"endlineno": 201,
+"lineno": 196,
+"endlineno": 202,
 "labels": [
 "module-attribute"
 ],
@@ -1403,12 +1411,12 @@
 "path": "griffe.encoders.json_decoder",
 "filepath": "/media/data/dev/griffe/src/griffe/encoders.py",
 "relative_filepath": "griffe/encoders.py",
-"lineno": 204,
-"endlineno": 226,
+"lineno": 205,
+"endlineno": 227,
 "docstring": {
 "value": "Decode dictionaries as data classes.\n\nThe [`json.loads`][] method walks the tree from bottom to top.\n\nExamples:\n    >>> import json\n    >>> from griffe.encoders import json_decoder\n    >>> json.loads(..., object_hook=json_decoder)\n\nParameters:\n    obj_dict: The dictionary to decode.\n\nReturns:\n    An instance of a data class.",
-"lineno": 205,
-"endlineno": 219,
+"lineno": 206,
+"endlineno": 220,
 "parsed": [
 {
 "kind": "text",
@@ -12035,7 +12043,7 @@
 "filepath": "/media/data/dev/griffe/src/griffe/expressions.py",
 "relative_filepath": "griffe/expressions.py",
 "lineno": 81,
-"endlineno": 143,
+"endlineno": 198,
 "docstring": {
 "value": "This class represents a Python expression.\n\nFor example, it can represent complex annotations such as:\n\n- `Optional[Dict[str, Tuple[int, bool]]]`\n- `str | Callable | list[int]`\n\nExpressions are simple lists containing strings, names or expressions.\nEach name in the expression can be resolved to its full name within its scope.",
 "lineno": 82,
@@ -12204,16 +12212,69 @@
 },
 {
 "kind": "function",
-"name": "is_tuple",
-"path": "griffe.expressions.Expression.is_tuple",
+"name": "kind",
+"path": "griffe.expressions.Expression.kind",
 "filepath": "/media/data/dev/griffe/src/griffe/expressions.py",
 "relative_filepath": "griffe/expressions.py",
 "lineno": 121,
 "endlineno": 128,
 "docstring": {
-"value": "Tell whether this expression represents a tuple.\n\nReturns:\n    True or False.",
+"value": "Return the main type object as a string.\n\nReturns:\n    The main type of this expression.",
 "lineno": 123,
 "endlineno": 127,
+"parsed": [
+{
+"kind": "text",
+"value": "Return the main type object as a string."
+},
+{
+"kind": "returns",
+"value": [
+{
+"name": "",
+"annotation": {
+"source": "str",
+"full": "str"
+},
+"description": "The main type of this expression."
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [
+{
+"lineno": 121,
+"endlineno": 121
+}
+],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": {
+"source": "str",
+"full": "str"
+}
+},
+{
+"kind": "function",
+"name": "is_tuple",
+"path": "griffe.expressions.Expression.is_tuple",
+"filepath": "/media/data/dev/griffe/src/griffe/expressions.py",
+"relative_filepath": "griffe/expressions.py",
+"lineno": 130,
+"endlineno": 137,
+"docstring": {
+"value": "Tell whether this expression represents a tuple.\n\nReturns:\n    True or False.",
+"lineno": 132,
+"endlineno": 136,
 "parsed": [
 {
 "kind": "text",
@@ -12238,8 +12299,114 @@
 "members": [],
 "decorators": [
 {
-"lineno": 121,
-"endlineno": 121
+"lineno": 130,
+"endlineno": 130
+}
+],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": {
+"source": "bool",
+"full": "bool"
+}
+},
+{
+"kind": "function",
+"name": "is_iterator",
+"path": "griffe.expressions.Expression.is_iterator",
+"filepath": "/media/data/dev/griffe/src/griffe/expressions.py",
+"relative_filepath": "griffe/expressions.py",
+"lineno": 139,
+"endlineno": 146,
+"docstring": {
+"value": "Tell whether this expression represents an iterator.\n\nReturns:\n    True or False.",
+"lineno": 141,
+"endlineno": 145,
+"parsed": [
+{
+"kind": "text",
+"value": "Tell whether this expression represents an iterator."
+},
+{
+"kind": "returns",
+"value": [
+{
+"name": "",
+"annotation": {
+"source": "bool",
+"full": "bool"
+},
+"description": "True or False."
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [
+{
+"lineno": 139,
+"endlineno": 139
+}
+],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": {
+"source": "bool",
+"full": "bool"
+}
+},
+{
+"kind": "function",
+"name": "is_generator",
+"path": "griffe.expressions.Expression.is_generator",
+"filepath": "/media/data/dev/griffe/src/griffe/expressions.py",
+"relative_filepath": "griffe/expressions.py",
+"lineno": 148,
+"endlineno": 155,
+"docstring": {
+"value": "Tell whether this expression represents a generator.\n\nReturns:\n    True or False.",
+"lineno": 150,
+"endlineno": 154,
+"parsed": [
+{
+"kind": "text",
+"value": "Tell whether this expression represents a generator."
+},
+{
+"kind": "returns",
+"value": [
+{
+"name": "",
+"annotation": {
+"source": "bool",
+"full": "bool"
+},
+"description": "True or False."
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [
+{
+"lineno": 148,
+"endlineno": 148
 }
 ],
 "parameters": [
@@ -12261,12 +12428,12 @@
 "path": "griffe.expressions.Expression.tuple_item",
 "filepath": "/media/data/dev/griffe/src/griffe/expressions.py",
 "relative_filepath": "griffe/expressions.py",
-"lineno": 130,
-"endlineno": 143,
+"lineno": 157,
+"endlineno": 170,
 "docstring": {
 "value": "Return the n-th item of this tuple expression.\n\nParameters:\n    nth: The item number.\n\nReturns:\n    A string or name.",
-"lineno": 131,
-"endlineno": 138,
+"lineno": 158,
+"endlineno": 165,
 "parsed": [
 {
 "kind": "text",
@@ -12337,6 +12504,272 @@
 "source": "Name",
 "full": "griffe.expressions.Name"
 }
+]
+},
+{
+"kind": "function",
+"name": "tuple_items",
+"path": "griffe.expressions.Expression.tuple_items",
+"filepath": "/media/data/dev/griffe/src/griffe/expressions.py",
+"relative_filepath": "griffe/expressions.py",
+"lineno": 172,
+"endlineno": 178,
+"docstring": {
+"value": "Return a tuple items as a list.\n\nReturns:\n    The tuple items.",
+"lineno": 173,
+"endlineno": 177,
+"parsed": [
+{
+"kind": "text",
+"value": "Return a tuple items as a list."
+},
+{
+"kind": "returns",
+"value": [
+{
+"name": "",
+"annotation": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+[
+{
+"source": "Name",
+"full": "griffe.expressions.Name"
+},
+" | ",
+{
+"source": "Expression",
+"full": "griffe.expressions.Expression"
+}
+],
+"]"
+],
+"description": "The tuple items."
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": [
+{
+"source": "list",
+"full": "list"
+},
+"[",
+[
+{
+"source": "Name",
+"full": "griffe.expressions.Name"
+},
+" | ",
+{
+"source": "Expression",
+"full": "griffe.expressions.Expression"
+}
+],
+"]"
+]
+},
+{
+"kind": "function",
+"name": "iterator_item",
+"path": "griffe.expressions.Expression.iterator_item",
+"filepath": "/media/data/dev/griffe/src/griffe/expressions.py",
+"relative_filepath": "griffe/expressions.py",
+"lineno": 180,
+"endlineno": 187,
+"docstring": {
+"value": "Return the item of an iterator.\n\nReturns:\n    The iterator item.",
+"lineno": 181,
+"endlineno": 185,
+"parsed": [
+{
+"kind": "text",
+"value": "Return the item of an iterator."
+},
+{
+"kind": "returns",
+"value": [
+{
+"name": "",
+"annotation": [
+{
+"source": "Name",
+"full": "griffe.expressions.Name"
+},
+" | ",
+{
+"source": "Expression",
+"full": "griffe.expressions.Expression"
+}
+],
+"description": "The iterator item."
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": [
+{
+"source": "Name",
+"full": "griffe.expressions.Name"
+},
+" | ",
+{
+"source": "Expression",
+"full": "griffe.expressions.Expression"
+}
+]
+},
+{
+"kind": "function",
+"name": "generator_items",
+"path": "griffe.expressions.Expression.generator_items",
+"filepath": "/media/data/dev/griffe/src/griffe/expressions.py",
+"relative_filepath": "griffe/expressions.py",
+"lineno": 189,
+"endlineno": 198,
+"docstring": {
+"value": "Return the items of a generator.\n\nReturns:\n    The yield type.\n    The send/receive type.\n    The return type.",
+"lineno": 190,
+"endlineno": 196,
+"parsed": [
+{
+"kind": "text",
+"value": "Return the items of a generator."
+},
+{
+"kind": "returns",
+"value": [
+{
+"name": "",
+"annotation": [
+{
+"source": "Name",
+"full": "griffe.expressions.Name"
+},
+" | ",
+{
+"source": "Expression",
+"full": "griffe.expressions.Expression"
+}
+],
+"description": "The yield type."
+},
+{
+"name": "",
+"annotation": [
+{
+"source": "Name",
+"full": "griffe.expressions.Name"
+},
+" | ",
+{
+"source": "Expression",
+"full": "griffe.expressions.Expression"
+}
+],
+"description": "The send/receive type."
+},
+{
+"name": "",
+"annotation": [
+{
+"source": "Name",
+"full": "griffe.expressions.Name"
+},
+" | ",
+{
+"source": "Expression",
+"full": "griffe.expressions.Expression"
+}
+],
+"description": "The return type."
+}
+]
+}
+]
+},
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": [
+{
+"source": "tuple",
+"full": "tuple"
+},
+"[",
+[
+[
+{
+"source": "Name",
+"full": "griffe.expressions.Name"
+},
+" | ",
+{
+"source": "Expression",
+"full": "griffe.expressions.Expression"
+}
+],
+", ",
+[
+{
+"source": "Name",
+"full": "griffe.expressions.Name"
+},
+" | ",
+{
+"source": "Expression",
+"full": "griffe.expressions.Expression"
+}
+],
+", ",
+[
+{
+"source": "Name",
+"full": "griffe.expressions.Name"
+},
+" | ",
+{
+"source": "Expression",
+"full": "griffe.expressions.Expression"
+}
+]
+],
+"]"
 ]
 }
 ],
@@ -34901,12 +35334,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
 "lineno": 42,
-"endlineno": 57,
+"endlineno": 58,
 "labels": [
 "module-attribute"
 ],
 "members": [],
-"value": "{'args': DocstringSectionKind.parameters, 'arguments': DocstringSectionKind.parameters, 'params': DocstringSectionKind.parameters, 'parameters': DocstringSectionKind.parameters, 'keyword args': DocstringSectionKind.other_parameters, 'keyword arguments': DocstringSectionKind.other_parameters, 'other args': DocstringSectionKind.other_parameters, 'other parameters': DocstringSectionKind.other_parameters, 'raises': DocstringSectionKind.raises, 'exceptions': DocstringSectionKind.raises, 'returns': DocstringSectionKind.returns, 'yields': DocstringSectionKind.yields, 'examples': DocstringSectionKind.examples, 'attributes': DocstringSectionKind.attributes}"
+"value": "{'args': DocstringSectionKind.parameters, 'arguments': DocstringSectionKind.parameters, 'params': DocstringSectionKind.parameters, 'parameters': DocstringSectionKind.parameters, 'keyword args': DocstringSectionKind.other_parameters, 'keyword arguments': DocstringSectionKind.other_parameters, 'other args': DocstringSectionKind.other_parameters, 'other parameters': DocstringSectionKind.other_parameters, 'raises': DocstringSectionKind.raises, 'exceptions': DocstringSectionKind.raises, 'returns': DocstringSectionKind.returns, 'yields': DocstringSectionKind.yields, 'receives': DocstringSectionKind.receives, 'examples': DocstringSectionKind.examples, 'attributes': DocstringSectionKind.attributes}"
 },
 {
 "kind": "attribute",
@@ -34914,8 +35347,8 @@
 "path": "griffe.docstrings.google.BlockItem",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 59,
-"endlineno": 59,
+"lineno": 60,
+"endlineno": 60,
 "labels": [
 "module-attribute"
 ],
@@ -34928,8 +35361,8 @@
 "path": "griffe.docstrings.google.BlockItems",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 60,
-"endlineno": 60,
+"lineno": 61,
+"endlineno": 61,
 "labels": [
 "module-attribute"
 ],
@@ -34942,8 +35375,8 @@
 "path": "griffe.docstrings.google.ItemsBlock",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 61,
-"endlineno": 61,
+"lineno": 62,
+"endlineno": 62,
 "labels": [
 "module-attribute"
 ],
@@ -34956,8 +35389,8 @@
 "path": "griffe.docstrings.google._RE_ADMONITION",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 63,
-"endlineno": 63,
+"lineno": 64,
+"endlineno": 64,
 "labels": [
 "module-attribute"
 ],
@@ -34974,8 +35407,8 @@
 "path": "griffe.docstrings.google._RE_NAME_ANNOTATION_DESCRIPTION",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 64,
-"endlineno": 64,
+"lineno": 65,
+"endlineno": 65,
 "labels": [
 "module-attribute"
 ],
@@ -34992,8 +35425,8 @@
 "path": "griffe.docstrings.google._RE_DOCTEST_BLANKLINE",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 65,
-"endlineno": 65,
+"lineno": 66,
+"endlineno": 66,
 "labels": [
 "module-attribute"
 ],
@@ -35010,8 +35443,8 @@
 "path": "griffe.docstrings.google._RE_DOCTEST_FLAGS",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 66,
-"endlineno": 66,
+"lineno": 67,
+"endlineno": 67,
 "labels": [
 "module-attribute"
 ],
@@ -35028,8 +35461,8 @@
 "path": "griffe.docstrings.google._read_block_items",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 69,
-"endlineno": 129,
+"lineno": 70,
+"endlineno": 130,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35064,8 +35497,8 @@
 "path": "griffe.docstrings.google._read_block",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 132,
-"endlineno": 160,
+"lineno": 133,
+"endlineno": 161,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35115,8 +35548,8 @@
 "path": "griffe.docstrings.google._read_parameters",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 163,
-"endlineno": 206,
+"lineno": 164,
+"endlineno": 207,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35174,8 +35607,8 @@
 "path": "griffe.docstrings.google._read_parameters_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 209,
-"endlineno": 220,
+"lineno": 210,
+"endlineno": 221,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35238,8 +35671,8 @@
 "path": "griffe.docstrings.google._read_other_parameters_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 223,
-"endlineno": 234,
+"lineno": 224,
+"endlineno": 235,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35302,8 +35735,8 @@
 "path": "griffe.docstrings.google._read_attributes_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 237,
-"endlineno": 273,
+"lineno": 238,
+"endlineno": 274,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35366,8 +35799,8 @@
 "path": "griffe.docstrings.google._read_raises_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 276,
-"endlineno": 300,
+"lineno": 277,
+"endlineno": 301,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35430,8 +35863,8 @@
 "path": "griffe.docstrings.google._read_warns_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 303,
-"endlineno": 324,
+"lineno": 304,
+"endlineno": 325,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35494,8 +35927,8 @@
 "path": "griffe.docstrings.google._read_returns_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 327,
-"endlineno": 365,
+"lineno": 328,
+"endlineno": 379,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35558,8 +35991,8 @@
 "path": "griffe.docstrings.google._read_yields_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 368,
-"endlineno": 407,
+"lineno": 382,
+"endlineno": 430,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35622,8 +36055,8 @@
 "path": "griffe.docstrings.google._read_receives_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 410,
-"endlineno": 449,
+"lineno": 433,
+"endlineno": 476,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35686,8 +36119,8 @@
 "path": "griffe.docstrings.google._read_examples_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 452,
-"endlineno": 511,
+"lineno": 479,
+"endlineno": 538,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35759,8 +36192,8 @@
 "path": "griffe.docstrings.google._read_deprecated_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 514,
-"endlineno": 539,
+"lineno": 541,
+"endlineno": 566,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35823,8 +36256,8 @@
 "path": "griffe.docstrings.google._is_empty_line",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 542,
-"endlineno": 543,
+"lineno": 569,
+"endlineno": 570,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35847,8 +36280,8 @@
 "path": "griffe.docstrings.google._section_reader",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 546,
-"endlineno": 557,
+"lineno": 573,
+"endlineno": 584,
 "labels": [
 "module-attribute"
 ],
@@ -35861,12 +36294,12 @@
 "path": "griffe.docstrings.google.parse",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "griffe/docstrings/google.py",
-"lineno": 560,
-"endlineno": 654,
+"lineno": 587,
+"endlineno": 681,
 "docstring": {
 "value": "Parse a docstring.\n\nThis function iterates on lines of a docstring to build sections.\nIt then returns this list of sections.\n\nParameters:\n    docstring: The docstring to parse.\n    ignore_init_summary: Whether to ignore the summary in `__init__` methods' docstrings.\n    trim_doctest_flags: Whether to remove doctest flags from Python example blocks.\n    **options: Additional parsing options.\n\nReturns:\n    A list of docstring sections.",
-"lineno": 566,
-"endlineno": 579,
+"lineno": 593,
+"endlineno": 606,
 "parsed": [
 {
 "kind": "text",
@@ -36529,6 +36962,14 @@
 },
 {
 "kind": "alias",
+"name": "parse_annotation",
+"target_path": "griffe.docstrings.utils.parse_annotation",
+"path": "griffe.docstrings.numpy.parse_annotation",
+"lineno": 68,
+"endlineno": 68
+},
+{
+"kind": "alias",
 "name": "warning",
 "target_path": "griffe.docstrings.utils.warning",
 "path": "griffe.docstrings.numpy.warning",
@@ -36843,7 +37284,7 @@
 "module-attribute"
 ],
 "members": [],
-"value": "'[_a-z0-9 \\\\[\\\\]|().,\\'\\\\\"-]+'",
+"value": "'[_a-z0-9 \\\\[\\\\]|().,\\'\\\\\"-]*'",
 "annotation": {
 "source": "str",
 "full": "str"
@@ -36861,7 +37302,7 @@
 "module-attribute"
 ],
 "members": [],
-"value": "re.compile('^(?:(?P<name>{_RE_NAME}) : )?(?P<type>{_RE_TYPE})', re.IGNORECASE)",
+"value": "re.compile('^(?:(?P<name>{_RE_NAME})\\\\s*:\\\\s*)?(?P<type>{_RE_TYPE})', re.IGNORECASE)",
 "annotation": {
 "source": "Pattern",
 "full": "typing.Pattern"
@@ -36964,7 +37405,7 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
 "lineno": 216,
-"endlineno": 260,
+"endlineno": 263,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37022,8 +37463,8 @@
 "path": "griffe.docstrings.numpy._read_parameters_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 263,
-"endlineno": 274,
+"lineno": 266,
+"endlineno": 277,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37086,8 +37527,8 @@
 "path": "griffe.docstrings.numpy._read_other_parameters_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 277,
-"endlineno": 288,
+"lineno": 280,
+"endlineno": 291,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37150,8 +37591,8 @@
 "path": "griffe.docstrings.numpy._read_deprecated_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 291,
-"endlineno": 311,
+"lineno": 294,
+"endlineno": 314,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37214,8 +37655,8 @@
 "path": "griffe.docstrings.numpy._read_returns_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 314,
-"endlineno": 338,
+"lineno": 317,
+"endlineno": 364,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37278,8 +37719,8 @@
 "path": "griffe.docstrings.numpy._read_yields_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 341,
-"endlineno": 365,
+"lineno": 367,
+"endlineno": 411,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37342,8 +37783,8 @@
 "path": "griffe.docstrings.numpy._read_receives_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 368,
-"endlineno": 392,
+"lineno": 414,
+"endlineno": 453,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37406,8 +37847,8 @@
 "path": "griffe.docstrings.numpy._read_raises_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 395,
-"endlineno": 414,
+"lineno": 456,
+"endlineno": 475,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37470,8 +37911,8 @@
 "path": "griffe.docstrings.numpy._read_warns_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 417,
-"endlineno": 436,
+"lineno": 478,
+"endlineno": 497,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37534,8 +37975,8 @@
 "path": "griffe.docstrings.numpy._read_attributes_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 439,
-"endlineno": 464,
+"lineno": 500,
+"endlineno": 532,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37598,8 +38039,8 @@
 "path": "griffe.docstrings.numpy._read_examples_section",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 467,
-"endlineno": 526,
+"lineno": 535,
+"endlineno": 594,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37671,8 +38112,8 @@
 "path": "griffe.docstrings.numpy._section_reader",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 529,
-"endlineno": 540,
+"lineno": 597,
+"endlineno": 608,
 "labels": [
 "module-attribute"
 ],
@@ -37685,12 +38126,12 @@
 "path": "griffe.docstrings.numpy.parse",
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/numpy.py",
 "relative_filepath": "griffe/docstrings/numpy.py",
-"lineno": 543,
-"endlineno": 604,
+"lineno": 611,
+"endlineno": 687,
 "docstring": {
-"value": "Parse a docstring.\n\nThis function iterates on lines of a docstring to build sections.\nIt then returns this list of sections.\n\nParameters:\n    docstring: The docstring to parse.\n    trim_doctest_flags: Whether to remove doctest flags from Python example blocks.\n    **options: Additional parsing options.\n\nReturns:\n    A list of docstring sections.",
-"lineno": 548,
-"endlineno": 560,
+"value": "Parse a docstring.\n\nThis function iterates on lines of a docstring to build sections.\nIt then returns this list of sections.\n\nParameters:\n    docstring: The docstring to parse.\n    ignore_init_summary: Whether to ignore the summary in `__init__` methods' docstrings.\n    trim_doctest_flags: Whether to remove doctest flags from Python example blocks.\n    **options: Additional parsing options.\n\nReturns:\n    A list of docstring sections.",
+"lineno": 617,
+"endlineno": 630,
 "parsed": [
 {
 "kind": "text",
@@ -37706,6 +38147,15 @@
 "full": "griffe.dataclasses.Docstring"
 },
 "description": "The docstring to parse."
+},
+{
+"name": "ignore_init_summary",
+"annotation": {
+"source": "bool",
+"full": "bool"
+},
+"description": "Whether to ignore the summary in `__init__` methods' docstrings.",
+"value": "False"
 },
 {
 "name": "trim_doctest_flags",
@@ -37762,6 +38212,15 @@
 },
 "kind": "positional or keyword",
 "default": null
+},
+{
+"name": "ignore_init_summary",
+"annotation": {
+"source": "bool",
+"full": "bool"
+},
+"kind": "positional or keyword",
+"default": "False"
 },
 {
 "name": "trim_doctest_flags",
