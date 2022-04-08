@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=emulateIE7" />
-    <title>Coverage for src/griffe/docstrings/google.py: 81.27%</title>
+    <title>Coverage for src/griffe/docstrings/google.py: 81.37%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -13,7 +13,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>src/griffe/docstrings/google.py</b>:
-            <span class="pc_cov">81.27%</span>
+            <span class="pc_cov">81.37%</span>
         </h1>
         <div id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -44,11 +44,11 @@
             </div>
         </div>
         <h2>
-            <span class="text">364 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">300<span class="text"> run</span></button>
+            <span class="text">368 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">304<span class="text"> run</span></button>
             <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">64<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
-            <button type="button" class="par run show_par button_toggle_par" value="par" data-shortcut="p" title="Toggle lines partially run">28<span class="text"> partial</span></button>
+            <button type="button" class="par run show_par button_toggle_par" value="par" data-shortcut="p" title="Toggle lines partially run">29<span class="text"> partial</span></button>
         </h2>
         <div style="display: none;">
             <button type="button" class="button_next_chunk" data-shortcut="j">Next highlighted chunk</button>
@@ -724,28 +724,32 @@
     <p class="pln"><span class="n"><a id="t663" href="#t663">663</a></span><span class="t">                <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t664" href="#t664">664</a></span><span class="t">                    <span class="nam">contents</span><span class="op">,</span> <span class="nam">offset</span> <span class="op">=</span> <span class="nam">_read_block</span><span class="op">(</span><span class="nam">docstring</span><span class="op">,</span> <span class="nam">offset</span> <span class="op">+</span> <span class="num">1</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t665" href="#t665">665</a></span><span class="t">                    <span class="key">if</span> <span class="nam">contents</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t666" href="#t666">666</a></span><span class="t">                        <span class="key">if</span> <span class="nam">title</span> <span class="key">is</span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t667" href="#t667">667</a></span><span class="t">                            <span class="nam">title</span> <span class="op">=</span> <span class="nam">admonition_type</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t668" href="#t668">668</a></span><span class="t">                        <span class="nam">admonition_type</span> <span class="op">=</span> <span class="nam">admonition_type</span><span class="op">.</span><span class="nam">lower</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">replace</span><span class="op">(</span><span class="str">" "</span><span class="op">,</span> <span class="str">"-"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t669" href="#t669">669</a></span><span class="t">                        <span class="nam">sections</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">DocstringSectionAdmonition</span><span class="op">(</span><span class="nam">kind</span><span class="op">=</span><span class="nam">admonition_type</span><span class="op">,</span> <span class="nam">text</span><span class="op">=</span><span class="nam">contents</span><span class="op">,</span> <span class="nam">title</span><span class="op">=</span><span class="nam">title</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t670" href="#t670">670</a></span><span class="t">                    <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t671" href="#t671">671</a></span><span class="t">                        <span class="key">with</span> <span class="nam">suppress</span><span class="op">(</span><span class="nam">IndexError</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t672" href="#t672">672</a></span><span class="t">                            <span class="nam">current_section</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">lines</span><span class="op">[</span><span class="nam">offset</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t673" href="#t673">673</a></span><span class="t">            <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t674" href="#t674">674</a></span><span class="t">                <span class="nam">current_section</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">lines</span><span class="op">[</span><span class="nam">offset</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t675" href="#t675">675</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t676" href="#t676">676</a></span><span class="t">        <span class="nam">offset</span> <span class="op">+=</span> <span class="num">1</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t677" href="#t677">677</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t678" href="#t678">678</a></span><span class="t">    <span class="key">if</span> <span class="nam">current_section</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t679" href="#t679">679</a></span><span class="t">        <span class="nam">sections</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">DocstringSectionText</span><span class="op">(</span><span class="str">"\n"</span><span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="nam">current_section</span><span class="op">)</span><span class="op">.</span><span class="nam">rstrip</span><span class="op">(</span><span class="str">"\n"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t680" href="#t680">680</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t681" href="#t681">681</a></span><span class="t">    <span class="key">return</span> <span class="nam">sections</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t666" href="#t666">666</a></span><span class="t">                        <span class="key">if</span> <span class="nam">current_section</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="par run show_par"><span class="n"><a id="t667" href="#t667">667</a></span><span class="t">                            <span class="key">if</span> <span class="nam">any</span><span class="op">(</span><span class="nam">current_section</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">667&#x202F;&#x219B;&#x202F;669</span><span class="annotate long">line 667 didn't jump to line 669, because the condition on line 667 was never false</span></span></p>
+    <p class="run"><span class="n"><a id="t668" href="#t668">668</a></span><span class="t">                                <span class="nam">sections</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">DocstringSectionText</span><span class="op">(</span><span class="str">"\n"</span><span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="nam">current_section</span><span class="op">)</span><span class="op">.</span><span class="nam">rstrip</span><span class="op">(</span><span class="str">"\n"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t669" href="#t669">669</a></span><span class="t">                            <span class="nam">current_section</span> <span class="op">=</span> <span class="op">[</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t670" href="#t670">670</a></span><span class="t">                        <span class="key">if</span> <span class="nam">title</span> <span class="key">is</span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t671" href="#t671">671</a></span><span class="t">                            <span class="nam">title</span> <span class="op">=</span> <span class="nam">admonition_type</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t672" href="#t672">672</a></span><span class="t">                        <span class="nam">admonition_type</span> <span class="op">=</span> <span class="nam">admonition_type</span><span class="op">.</span><span class="nam">lower</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">replace</span><span class="op">(</span><span class="str">" "</span><span class="op">,</span> <span class="str">"-"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t673" href="#t673">673</a></span><span class="t">                        <span class="nam">sections</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">DocstringSectionAdmonition</span><span class="op">(</span><span class="nam">kind</span><span class="op">=</span><span class="nam">admonition_type</span><span class="op">,</span> <span class="nam">text</span><span class="op">=</span><span class="nam">contents</span><span class="op">,</span> <span class="nam">title</span><span class="op">=</span><span class="nam">title</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t674" href="#t674">674</a></span><span class="t">                    <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t675" href="#t675">675</a></span><span class="t">                        <span class="key">with</span> <span class="nam">suppress</span><span class="op">(</span><span class="nam">IndexError</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t676" href="#t676">676</a></span><span class="t">                            <span class="nam">current_section</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">lines</span><span class="op">[</span><span class="nam">offset</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t677" href="#t677">677</a></span><span class="t">            <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t678" href="#t678">678</a></span><span class="t">                <span class="nam">current_section</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">lines</span><span class="op">[</span><span class="nam">offset</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t679" href="#t679">679</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t680" href="#t680">680</a></span><span class="t">        <span class="nam">offset</span> <span class="op">+=</span> <span class="num">1</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t681" href="#t681">681</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t682" href="#t682">682</a></span><span class="t">    <span class="key">if</span> <span class="nam">current_section</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t683" href="#t683">683</a></span><span class="t">        <span class="nam">sections</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">DocstringSectionText</span><span class="op">(</span><span class="str">"\n"</span><span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="nam">current_section</span><span class="op">)</span><span class="op">.</span><span class="nam">rstrip</span><span class="op">(</span><span class="str">"\n"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t684" href="#t684">684</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t685" href="#t685">685</a></span><span class="t">    <span class="key">return</span> <span class="nam">sections</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
         <p>
             <a class="nav" href="covindex.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.3.2</a>,
-            created at 2022-04-03 18:56 +0200
+            created at 2022-04-08 23:37 +0200
         </p>
     </div>
 </footer>

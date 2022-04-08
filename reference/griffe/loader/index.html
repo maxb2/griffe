@@ -1517,7 +1517,10 @@
 <span class="normal">225</span>
 <span class="normal">226</span>
 <span class="normal">227</span>
-<span class="normal">228</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">expand_wildcards</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">expand_wildcards</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">obj</span><span class="p">:</span> <span class="n">Object</span><span class="p">,</span>
     <span class="n">only_known_modules</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -1563,7 +1566,10 @@
         <span class="k">del</span> <span class="n">obj</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>  <span class="c1"># noqa: WPS420</span>
 
     <span class="k">for</span> <span class="n">new_member</span><span class="p">,</span> <span class="n">alias_lineno</span><span class="p">,</span> <span class="n">alias_endlineno</span> <span class="ow">in</span> <span class="n">expanded</span><span class="p">:</span>
-        <span class="n">obj</span><span class="p">[</span><span class="n">new_member</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">Alias</span><span class="p">(</span><span class="n">new_member</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">new_member</span><span class="p">,</span> <span class="n">lineno</span><span class="o">=</span><span class="n">alias_lineno</span><span class="p">,</span> <span class="n">endlineno</span><span class="o">=</span><span class="n">alias_endlineno</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">new_member</span><span class="o">.</span><span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">members</span> <span class="ow">or</span> <span class="n">obj</span><span class="p">[</span><span class="n">new_member</span><span class="o">.</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">lineno</span> <span class="o">&lt;</span> <span class="n">alias_lineno</span><span class="p">:</span>
+            <span class="n">obj</span><span class="p">[</span><span class="n">new_member</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">Alias</span><span class="p">(</span>
+                <span class="n">new_member</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">new_member</span><span class="p">,</span> <span class="n">lineno</span><span class="o">=</span><span class="n">alias_lineno</span><span class="p">,</span> <span class="n">endlineno</span><span class="o">=</span><span class="n">alias_endlineno</span>
+            <span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -1891,10 +1897,7 @@
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">230</span>
-<span class="normal">231</span>
-<span class="normal">232</span>
-<span class="normal">233</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">233</span>
 <span class="normal">234</span>
 <span class="normal">235</span>
 <span class="normal">236</span>
@@ -1950,7 +1953,10 @@
 <span class="normal">286</span>
 <span class="normal">287</span>
 <span class="normal">288</span>
-<span class="normal">289</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_module_aliases</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_module_aliases</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">obj</span><span class="p">:</span> <span class="n">Object</span><span class="p">,</span>
     <span class="n">only_exported</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -2044,13 +2050,13 @@
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">291</span>
-<span class="normal">292</span>
-<span class="normal">293</span>
-<span class="normal">294</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">294</span>
 <span class="normal">295</span>
 <span class="normal">296</span>
-<span class="normal">297</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">stats</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">stats</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Compute some statistics.</span>
 
 <span class="sd">    Returns:</span>

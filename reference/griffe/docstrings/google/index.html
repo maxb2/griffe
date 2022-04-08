@@ -1371,7 +1371,11 @@ It then returns this list of sections.</p>
 <span class="normal">678</span>
 <span class="normal">679</span>
 <span class="normal">680</span>
-<span class="normal">681</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">681</span>
+<span class="normal">682</span>
+<span class="normal">683</span>
+<span class="normal">684</span>
+<span class="normal">685</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
     <span class="n">docstring</span><span class="p">:</span> <span class="n">Docstring</span><span class="p">,</span>
     <span class="n">ignore_init_summary</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="n">trim_doctest_flags</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -1450,6 +1454,10 @@ It then returns this list of sections.</p>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">contents</span><span class="p">,</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">_read_block</span><span class="p">(</span><span class="n">docstring</span><span class="p">,</span> <span class="n">offset</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
                     <span class="k">if</span> <span class="n">contents</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">current_section</span><span class="p">:</span>
+                            <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">current_section</span><span class="p">):</span>
+                                <span class="n">sections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">DocstringSectionText</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_section</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)))</span>
+                            <span class="n">current_section</span> <span class="o">=</span> <span class="p">[]</span>
                         <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                             <span class="n">title</span> <span class="o">=</span> <span class="n">admonition_type</span>
                         <span class="n">admonition_type</span> <span class="o">=</span> <span class="n">admonition_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
