@@ -1271,7 +1271,11 @@ The docstring's parent is accessed to bind a resolver to the resulting name/expr
 <span class="normal">57</span>
 <span class="normal">58</span>
 <span class="normal">59</span>
-<span class="normal">60</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parse_annotation</span><span class="p">(</span><span class="n">annotation</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">docstring</span><span class="p">:</span> <span class="n">Docstring</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span><span class="p">:</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parse_annotation</span><span class="p">(</span><span class="n">annotation</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">docstring</span><span class="p">:</span> <span class="n">Docstring</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Parse a string into a true name or expression that can be resolved later.</span>
 
 <span class="sd">    Parameters:</span>
@@ -1282,7 +1286,11 @@ The docstring's parent is accessed to bind a resolver to the resulting name/expr
 <span class="sd">    Returns:</span>
 <span class="sd">        The string unchanged, or a new name or expression.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">SyntaxError</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span>
+        <span class="ne">AttributeError</span><span class="p">,</span>  <span class="c1"># docstring has no parent that can be used to resolve names</span>
+        <span class="ne">KeyError</span><span class="p">,</span>  <span class="c1"># compiled annotation contains unhandled AST nodes</span>
+        <span class="ne">SyntaxError</span><span class="p">,</span>  <span class="c1"># annotation contains syntax errors</span>
+    <span class="p">):</span>
         <span class="n">code</span> <span class="o">=</span> <span class="nb">compile</span><span class="p">(</span><span class="n">annotation</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;eval&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">PyCF_ONLY_AST</span><span class="p">,</span> <span class="n">optimize</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">code</span><span class="o">.</span><span class="n">body</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">get_annotation</span><span class="p">(</span><span class="n">code</span><span class="o">.</span><span class="n">body</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">docstring</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span> <span class="ow">or</span> <span class="n">annotation</span>  <span class="c1"># type: ignore[arg-type]</span>
