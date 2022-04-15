@@ -794,6 +794,26 @@
     DocstringAdmonition
   </a>
   
+    <nav class="md-nav" aria-label="DocstringAdmonition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#griffe.docstrings.dataclasses.DocstringAdmonition.contents" class="md-nav__link">
+    contents()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#griffe.docstrings.dataclasses.DocstringAdmonition.kind" class="md-nav__link">
+    kind()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -807,6 +827,19 @@
   <a href="#griffe.docstrings.dataclasses.DocstringDeprecated" class="md-nav__link">
     DocstringDeprecated
   </a>
+  
+    <nav class="md-nav" aria-label="DocstringDeprecated">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#griffe.docstrings.dataclasses.DocstringDeprecated.version" class="md-nav__link">
+    version()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -854,6 +887,19 @@
   <a href="#griffe.docstrings.dataclasses.DocstringParameter" class="md-nav__link">
     DocstringParameter
   </a>
+  
+    <nav class="md-nav" aria-label="DocstringParameter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#griffe.docstrings.dataclasses.DocstringParameter.default" class="md-nav__link">
+    default()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1369,6 +1415,26 @@
     DocstringAdmonition
   </a>
   
+    <nav class="md-nav" aria-label="DocstringAdmonition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#griffe.docstrings.dataclasses.DocstringAdmonition.contents" class="md-nav__link">
+    contents()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#griffe.docstrings.dataclasses.DocstringAdmonition.kind" class="md-nav__link">
+    kind()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1382,6 +1448,19 @@
   <a href="#griffe.docstrings.dataclasses.DocstringDeprecated" class="md-nav__link">
     DocstringDeprecated
   </a>
+  
+    <nav class="md-nav" aria-label="DocstringDeprecated">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#griffe.docstrings.dataclasses.DocstringDeprecated.version" class="md-nav__link">
+    version()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1429,6 +1508,19 @@
   <a href="#griffe.docstrings.dataclasses.DocstringParameter" class="md-nav__link">
     DocstringParameter
   </a>
+  
+    <nav class="md-nav" aria-label="DocstringParameter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#griffe.docstrings.dataclasses.DocstringParameter.default" class="md-nav__link">
+    default()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1647,6 +1739,110 @@
 
 
 
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="griffe.docstrings.dataclasses.DocstringAdmonition.contents" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">contents</span><span class="p">()</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#griffe.docstrings.dataclasses.DocstringAdmonition.contents" class="headerlink" title="Permanent link">¤</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Return the contents of this admonition.</p>
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+        – <p>The admonition's contents.</p>
+      </li>
+  </ul>
+
+        <details class="quote">
+          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">contents</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Return the contents of this admonition.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The admonition&#39;s contents.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">description</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="griffe.docstrings.dataclasses.DocstringAdmonition.kind" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">kind</span><span class="p">()</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#griffe.docstrings.dataclasses.DocstringAdmonition.kind" class="headerlink" title="Permanent link">¤</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Return the kind of this admonition.</p>
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <a class="autorefs autorefs-internal" title="griffe.dataclasses.Name" href="../../expressions/#griffe.expressions.Name">Name</a> | <a class="autorefs autorefs-internal" title="griffe.dataclasses.Expression" href="../../expressions/#griffe.expressions.Expression">Expression</a> | None</code>
+        – <p>The admonition's kind.</p>
+      </li>
+  </ul>
+
+        <details class="quote">
+          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">kind</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Return the kind of this admonition.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The admonition&#39;s kind.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">annotation</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
 
 
 
@@ -1717,6 +1913,58 @@
 
 
 
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="griffe.docstrings.dataclasses.DocstringDeprecated.version" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">version</span><span class="p">()</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#griffe.docstrings.dataclasses.DocstringDeprecated.version" class="headerlink" title="Permanent link">¤</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Return the version of this deprecation.</p>
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+        – <p>The deprecation version.</p>
+      </li>
+  </ul>
+
+        <details class="quote">
+          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">version</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Return the version of this deprecation.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The deprecation version.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">annotation</span>  <span class="c1"># type: ignore[return-value]</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
 
 
 
@@ -2112,6 +2360,58 @@
 
 
 
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="griffe.docstrings.dataclasses.DocstringParameter.default" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">default</span><span class="p">()</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#griffe.docstrings.dataclasses.DocstringParameter.default" class="headerlink" title="Permanent link">¤</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Return the default value of this parameter.</p>
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>
+        – <p>The parameter's default.</p>
+      </li>
+  </ul>
+
+        <details class="quote">
+          <summary>Source code in <code>griffe/docstrings/dataclasses.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Return the default value of this parameter.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The parameter&#39;s default.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
 
 
 
