@@ -385,13 +385,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
@@ -1167,13 +1160,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
@@ -1221,27 +1207,6 @@
 <p>Signatures for entire Python programs. Extract the structure, the frame, the skeleton of your project, to generate API documentation or find breaking changes in your API.</p>
 <p>Griffe, pronounced "grif" (<code>/ɡʁif/</code>), is a french word that means "claw",
 but also "signature" in a familiar way. "On reconnaît bien là sa griffe."</p>
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">¤</a></h2>
-<p>griffe requires Python 3.7 or above.</p>
-<details>
-<summary>To install Python 3.7, I recommend using <a href="https://github.com/pyenv/pyenv"><code>pyenv</code></a>.</summary>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># install pyenv</span>
-git clone https://github.com/pyenv/pyenv ~/.pyenv
-
-<span class="c1"># setup pyenv (you should also put these three lines in .bashrc or similar)</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/.pyenv/bin:</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="nb">export</span> <span class="nv">PYENV_ROOT</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/.pyenv&quot;</span>
-<span class="nb">eval</span> <span class="s2">&quot;</span><span class="k">$(</span>pyenv init -<span class="k">)</span><span class="s2">&quot;</span>
-
-<span class="c1"># install Python 3.7</span>
-pyenv install <span class="m">3</span>.7.12
-
-<span class="c1"># make it available globally</span>
-pyenv global system <span class="m">3</span>.7.12
-</code></pre></div>
-</details>
-
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¤</a></h2>
 <p>With <code>pip</code>:
 <div class="highlight"><pre><span></span><code>pip install griffe
@@ -1271,21 +1236,9 @@ pipx install griffe
 <h2 id="todo">Todo<a class="headerlink" href="#todo" title="Permanent link">¤</a></h2>
 <ul>
 <li>Visitor/Inspector:<ul>
-<li>Labels<ul>
-<li>Attribute: ?</li>
-<li>Function: ?</li>
-<li>Class: ?</li>
-<li>Module: ?</li>
-</ul>
-</li>
 <li>Merging inherited members into class.
     Needs to be able to post-process classes,
     and to compute their MRO (C3Linearization, see docspec/pydocspec issues).</li>
-<li>Merging <code>__init__</code> method's docstring into class' docstring (could be an extension)</li>
-<li>Support for <code>typing.overload</code> decorator.
-    We'll probably need to add an <code>overloads</code> attribute to <code>Function</code>,
-    to store the list of <code>@overload</code>-decorated functions,
-    because currently different members of a same object cannot have the same names.</li>
 </ul>
 </li>
 <li>Extensions<ul>
