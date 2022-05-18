@@ -44,8 +44,8 @@
             </div>
         </div>
         <h2>
-            <span class="text">363 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">363<span class="text"> run</span></button>
+            <span class="text">369 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">369<span class="text"> run</span></button>
             <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">0<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
             <button type="button" class="par run show_par button_toggle_par" value="par" data-shortcut="p" title="Toggle lines partially run">0<span class="text"> partial</span></button>
@@ -1096,7 +1096,7 @@
     <p class="pln"><span class="n"><a id="t1035" href="#t1035">1035</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t1036" href="#t1036">1036</a></span><span class="t"><span class="str">    Parameters:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t1037" href="#t1037">1037</a></span><span class="t"><span class="str">        parse_google: Fixture parser.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t1038" href="#t1038">1038</a></span><span class="t"><span class="str">        docstring: The docstring to parse_google (parametrized).</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t1038" href="#t1038">1038</a></span><span class="t"><span class="str">        docstring: The docstring to parse (parametrized).</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t1039" href="#t1039">1039</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t1040" href="#t1040">1040</a></span><span class="t">    <span class="nam">sections</span><span class="op">,</span> <span class="nam">warnings</span> <span class="op">=</span> <span class="nam">parse_google</span><span class="op">(</span><span class="nam">docstring</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t1041" href="#t1041">1041</a></span><span class="t">    <span class="key">assert</span> <span class="nam">len</span><span class="op">(</span><span class="nam">sections</span><span class="op">)</span> <span class="op">==</span> <span class="num">1</span>&nbsp;</span><span class="r"></span></p>
@@ -1179,11 +1179,11 @@
     <p class="pln"><span class="n"><a id="t1118" href="#t1118">1118</a></span><span class="t">    <span class="op">]</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t1119" href="#t1119">1119</a></span><span class="t"><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t1120" href="#t1120">1120</a></span><span class="t"><span class="key">def</span> <span class="nam">test_trim_doctest_flags_basic_example</span><span class="op">(</span><span class="nam">parse_google</span><span class="op">,</span> <span class="nam">docstring</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t1121" href="#t1121">1121</a></span><span class="t">    <span class="str">"""Correctly parse_google simple example docstrings when `trim_doctest_flags` option is turned on.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t1121" href="#t1121">1121</a></span><span class="t">    <span class="str">"""Correctly parse simple example docstrings when `trim_doctest_flags` option is turned on.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t1122" href="#t1122">1122</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t1123" href="#t1123">1123</a></span><span class="t"><span class="str">    Parameters:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t1124" href="#t1124">1124</a></span><span class="t"><span class="str">        parse_google: Fixture parser.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t1125" href="#t1125">1125</a></span><span class="t"><span class="str">        docstring: The docstring to parse_google (parametrized).</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t1125" href="#t1125">1125</a></span><span class="t"><span class="str">        docstring: The docstring to parse (parametrized).</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t1126" href="#t1126">1126</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t1127" href="#t1127">1127</a></span><span class="t">    <span class="nam">sections</span><span class="op">,</span> <span class="nam">warnings</span> <span class="op">=</span> <span class="nam">parse_google</span><span class="op">(</span><span class="nam">docstring</span><span class="op">,</span> <span class="nam">trim_doctest_flags</span><span class="op">=</span><span class="key">True</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t1128" href="#t1128">1128</a></span><span class="t">    <span class="key">assert</span> <span class="nam">len</span><span class="op">(</span><span class="nam">sections</span><span class="op">)</span> <span class="op">==</span> <span class="num">1</span>&nbsp;</span><span class="r"></span></p>
@@ -1197,7 +1197,7 @@
     <p class="pln"><span class="n"><a id="t1136" href="#t1136">1136</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t1137" href="#t1137">1137</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t1138" href="#t1138">1138</a></span><span class="t"><span class="key">def</span> <span class="nam">test_trim_doctest_flags_multi_example</span><span class="op">(</span><span class="nam">parse_google</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t1139" href="#t1139">1139</a></span><span class="t">    <span class="str">"""Correctly parse_google multiline example docstrings when `trim_doctest_flags` option is turned on.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t1139" href="#t1139">1139</a></span><span class="t">    <span class="str">"""Correctly parse multiline example docstrings when `trim_doctest_flags` option is turned on.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t1140" href="#t1140">1140</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t1141" href="#t1141">1141</a></span><span class="t"><span class="str">    Parameters:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t1142" href="#t1142">1142</a></span><span class="t"><span class="str">        parse_google: Fixture parser.</span>&nbsp;</span><span class="r"></span></p>
@@ -1230,12 +1230,25 @@
     <p class="run"><span class="n"><a id="t1169" href="#t1169">1169</a></span><span class="t">    <span class="nam">example_str</span> <span class="op">=</span> <span class="nam">sections</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">.</span><span class="nam">value</span><span class="op">[</span><span class="num">3</span><span class="op">]</span><span class="op">[</span><span class="num">1</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t1170" href="#t1170">1170</a></span><span class="t">    <span class="key">assert</span> <span class="str">"&lt;BLANKLINE>"</span> <span class="key">not</span> <span class="key">in</span> <span class="nam">example_str</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t1171" href="#t1171">1171</a></span><span class="t">    <span class="key">assert</span> <span class="str">"\n>>> print(list(range(1, 100)))\n"</span> <span class="key">in</span> <span class="nam">example_str</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t1172" href="#t1172">1172</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t1173" href="#t1173">1173</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t1174" href="#t1174">1174</a></span><span class="t"><span class="key">def</span> <span class="nam">test_single_line_with_trailing_whitespace</span><span class="op">(</span><span class="nam">parse_google</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t1175" href="#t1175">1175</a></span><span class="t">    <span class="str">"""Don't crash on single line docstrings with trailing whitespace.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t1176" href="#t1176">1176</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t1177" href="#t1177">1177</a></span><span class="t"><span class="str">    Parameters:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t1178" href="#t1178">1178</a></span><span class="t"><span class="str">        parse_google: Fixture parser.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t1179" href="#t1179">1179</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t1180" href="#t1180">1180</a></span><span class="t">    <span class="nam">docstring</span> <span class="op">=</span> <span class="str">"a: b\n    "</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t1181" href="#t1181">1181</a></span><span class="t">    <span class="nam">sections</span><span class="op">,</span> <span class="nam">warnings</span> <span class="op">=</span> <span class="nam">parse_google</span><span class="op">(</span><span class="nam">docstring</span><span class="op">,</span> <span class="nam">trim_doctest_flags</span><span class="op">=</span><span class="key">True</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t1182" href="#t1182">1182</a></span><span class="t">    <span class="key">assert</span> <span class="nam">len</span><span class="op">(</span><span class="nam">sections</span><span class="op">)</span> <span class="op">==</span> <span class="num">1</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t1183" href="#t1183">1183</a></span><span class="t">    <span class="key">assert</span> <span class="nam">sections</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">.</span><span class="nam">kind</span> <span class="key">is</span> <span class="nam">DocstringSectionKind</span><span class="op">.</span><span class="nam">text</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t1184" href="#t1184">1184</a></span><span class="t">    <span class="key">assert</span> <span class="key">not</span> <span class="nam">warnings</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
         <p>
             <a class="nav" href="covindex.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.3.2</a>,
-            created at 2022-04-22 18:48 +0200
+            created at 2022-05-18 20:59 +0200
         </p>
     </div>
 </footer>

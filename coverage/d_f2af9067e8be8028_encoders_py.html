@@ -238,7 +238,7 @@
     <p class="pln"><span class="n"><a id="t177" href="#t177">177</a></span><span class="t">        <span class="nam">lineno</span><span class="op">=</span><span class="nam">obj_dict</span><span class="op">[</span><span class="str">"lineno"</span><span class="op">]</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t178" href="#t178">178</a></span><span class="t">        <span class="nam">endlineno</span><span class="op">=</span><span class="nam">obj_dict</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"endlineno"</span><span class="op">,</span> <span class="key">None</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t179" href="#t179">179</a></span><span class="t">        <span class="nam">docstring</span><span class="op">=</span><span class="nam">_load_docstring</span><span class="op">(</span><span class="nam">obj_dict</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t180" href="#t180">180</a></span><span class="t">        <span class="nam">value</span><span class="op">=</span><span class="nam">obj_dict</span><span class="op">[</span><span class="str">"value"</span><span class="op">]</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t180" href="#t180">180</a></span><span class="t">        <span class="nam">value</span><span class="op">=</span><span class="nam">obj_dict</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"value"</span><span class="op">,</span> <span class="key">None</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t181" href="#t181">181</a></span><span class="t">        <span class="nam">annotation</span><span class="op">=</span><span class="nam">_load_annotation</span><span class="op">(</span><span class="nam">obj_dict</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"annotation"</span><span class="op">,</span> <span class="key">None</span><span class="op">)</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t182" href="#t182">182</a></span><span class="t">    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t183" href="#t183">183</a></span><span class="t">    <span class="nam">attribute</span><span class="op">.</span><span class="nam">labels</span> <span class="op">|=</span> <span class="nam">set</span><span class="op">(</span><span class="nam">obj_dict</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"labels"</span><span class="op">,</span> <span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -291,7 +291,7 @@
     <div class="content">
         <p>
             <a class="nav" href="covindex.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.3.2</a>,
-            created at 2022-04-22 18:48 +0200
+            created at 2022-05-18 20:59 +0200
         </p>
     </div>
 </footer>

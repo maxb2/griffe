@@ -3071,7 +3071,7 @@
 "instance-attribute"
 ],
 "members": [],
-"value": "inspect.cleandoc(value)",
+"value": "inspect.cleandoc(value.rstrip())",
 "annotation": {
 "source": "str",
 "full": "str"
