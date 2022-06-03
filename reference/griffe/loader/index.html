@@ -1644,7 +1644,13 @@
 <span class="normal">260</span>
 <span class="normal">261</span>
 <span class="normal">262</span>
-<span class="normal">263</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">expand_wildcards</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">expand_wildcards</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">obj</span><span class="p">:</span> <span class="n">Object</span><span class="p">,</span>
     <span class="n">only_known_modules</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -1690,7 +1696,13 @@
         <span class="k">del</span> <span class="n">obj</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>  <span class="c1"># noqa: WPS420</span>
 
     <span class="k">for</span> <span class="n">new_member</span><span class="p">,</span> <span class="n">alias_lineno</span><span class="p">,</span> <span class="n">alias_endlineno</span> <span class="ow">in</span> <span class="n">expanded</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">new_member</span><span class="o">.</span><span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">members</span> <span class="ow">or</span> <span class="n">obj</span><span class="p">[</span><span class="n">new_member</span><span class="o">.</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">lineno</span> <span class="o">&lt;</span> <span class="n">alias_lineno</span><span class="p">:</span>
+        <span class="n">overwrite</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">already_present</span> <span class="o">=</span> <span class="n">new_member</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">members</span>
+        <span class="k">if</span> <span class="n">already_present</span><span class="p">:</span>
+            <span class="n">old_member</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="n">new_member</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>
+            <span class="n">old_lineno</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">old_member</span><span class="p">,</span> <span class="s2">&quot;alias_lineno&quot;</span><span class="p">,</span> <span class="n">old_member</span><span class="o">.</span><span class="n">lineno</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">overwrite</span> <span class="o">=</span> <span class="n">alias_lineno</span> <span class="o">&gt;</span> <span class="n">old_lineno</span>  <span class="c1"># type: ignore[operator]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">already_present</span> <span class="ow">or</span> <span class="n">overwrite</span><span class="p">:</span>
             <span class="n">obj</span><span class="p">[</span><span class="n">new_member</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">Alias</span><span class="p">(</span>
                 <span class="n">new_member</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">new_member</span><span class="p">,</span> <span class="n">lineno</span><span class="o">=</span><span class="n">alias_lineno</span><span class="p">,</span> <span class="n">endlineno</span><span class="o">=</span><span class="n">alias_endlineno</span>
             <span class="p">)</span>
@@ -2044,13 +2056,7 @@
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">265</span>
-<span class="normal">266</span>
-<span class="normal">267</span>
-<span class="normal">268</span>
-<span class="normal">269</span>
-<span class="normal">270</span>
-<span class="normal">271</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">271</span>
 <span class="normal">272</span>
 <span class="normal">273</span>
 <span class="normal">274</span>
@@ -2103,7 +2109,13 @@
 <span class="normal">321</span>
 <span class="normal">322</span>
 <span class="normal">323</span>
-<span class="normal">324</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_module_aliases</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_module_aliases</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">obj</span><span class="p">:</span> <span class="n">Object</span><span class="p">,</span>
     <span class="n">only_exported</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -2197,13 +2209,13 @@
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">326</span>
-<span class="normal">327</span>
-<span class="normal">328</span>
-<span class="normal">329</span>
-<span class="normal">330</span>
-<span class="normal">331</span>
-<span class="normal">332</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">stats</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">stats</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Compute some statistics.</span>
 
 <span class="sd">    Returns:</span>
@@ -2322,13 +2334,7 @@
 
         <details class="quote">
           <summary>Source code in <code>griffe/loader.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">472</span>
-<span class="normal">473</span>
-<span class="normal">474</span>
-<span class="normal">475</span>
-<span class="normal">476</span>
-<span class="normal">477</span>
-<span class="normal">478</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">478</span>
 <span class="normal">479</span>
 <span class="normal">480</span>
 <span class="normal">481</span>
@@ -2382,7 +2388,13 @@
 <span class="normal">529</span>
 <span class="normal">530</span>
 <span class="normal">531</span>
-<span class="normal">532</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">load</span><span class="p">(</span>
+<span class="normal">532</span>
+<span class="normal">533</span>
+<span class="normal">534</span>
+<span class="normal">535</span>
+<span class="normal">536</span>
+<span class="normal">537</span>
+<span class="normal">538</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">load</span><span class="p">(</span>
     <span class="n">module</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">,</span>
     <span class="n">submodules</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">try_relative_path</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
