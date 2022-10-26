@@ -1390,11 +1390,11 @@
 
 
 
-<h2 id="griffe.mixins.DelMembersMixin" class="doc doc-heading">
+<h2 class="doc doc-heading" id="griffe.mixins.DelMembersMixin">
         <code>DelMembersMixin</code>
 
 
-<a href="#griffe.mixins.DelMembersMixin" class="headerlink" title="Permanent link">¤</a></h2>
+<a class="headerlink" href="#griffe.mixins.DelMembersMixin" title="Permanent link">¤</a></h2>
 
 
   <div class="doc doc-contents ">
@@ -1428,11 +1428,11 @@
 
 
 
-<h2 id="griffe.mixins.GetMembersMixin" class="doc doc-heading">
+<h2 class="doc doc-heading" id="griffe.mixins.GetMembersMixin">
         <code>GetMembersMixin</code>
 
 
-<a href="#griffe.mixins.GetMembersMixin" class="headerlink" title="Permanent link">¤</a></h2>
+<a class="headerlink" href="#griffe.mixins.GetMembersMixin" title="Permanent link">¤</a></h2>
 
 
   <div class="doc doc-contents ">
@@ -1468,11 +1468,11 @@ The method expects a <code>members</code> attribute/property to be available on 
 
 
 
-<h2 id="griffe.mixins.ObjectAliasMixin" class="doc doc-heading">
+<h2 class="doc doc-heading" id="griffe.mixins.ObjectAliasMixin">
         <code>ObjectAliasMixin</code>
 
 
-<a href="#griffe.mixins.ObjectAliasMixin" class="headerlink" title="Permanent link">¤</a></h2>
+<a class="headerlink" href="#griffe.mixins.ObjectAliasMixin" title="Permanent link">¤</a></h2>
 
 
   <div class="doc doc-contents ">
@@ -1498,14 +1498,14 @@ The method expects a <code>members</code> attribute/property to be available on 
 
 
 
-<h3 id="griffe.mixins.ObjectAliasMixin.is_explicitely_exported" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.mixins.ObjectAliasMixin.is_explicitely_exported">
 <code class="highlight language-python"><span class="n">is_explicitely_exported</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
-<a href="#griffe.mixins.ObjectAliasMixin.is_explicitely_exported" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.mixins.ObjectAliasMixin.is_explicitely_exported" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -1522,14 +1522,14 @@ The method expects a <code>members</code> attribute/property to be available on 
 
       <details class="quote">
         <summary>Source code in <code>griffe/mixins.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">105</span>
 <span class="normal">106</span>
-<span class="normal">107</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">is_explicitely_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if this object/alias is explicitely exported by its parent.</span>
 
@@ -1547,10 +1547,10 @@ The method expects a <code>members</code> attribute/property to be available on 
 
 
 
-<h3 id="griffe.mixins.ObjectAliasMixin.is_exported" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.mixins.ObjectAliasMixin.is_exported">
 <code class="highlight language-python"><span class="n">is_exported</span><span class="p">(</span><span class="n">explicitely</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
-<a href="#griffe.mixins.ObjectAliasMixin.is_exported" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.mixins.ObjectAliasMixin.is_exported" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -1576,16 +1576,16 @@ The method expects a <code>members</code> attribute/property to be available on 
 
       <details class="quote">
         <summary>Source code in <code>griffe/mixins.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">89</span>
-<span class="normal">90</span>
-<span class="normal">91</span>
-<span class="normal">92</span>
-<span class="normal">93</span>
-<span class="normal">94</span>
-<span class="normal">95</span>
-<span class="normal">96</span>
-<span class="normal">97</span>
-<span class="normal">98</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">is_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">explicitely</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">is_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">explicitely</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if this object/alias is implicitely exported by its parent.</span>
 
 <span class="sd">    Parameters:</span>
@@ -1605,14 +1605,14 @@ The method expects a <code>members</code> attribute/property to be available on 
 
 
 
-<h3 id="griffe.mixins.ObjectAliasMixin.is_implicitely_exported" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.mixins.ObjectAliasMixin.is_implicitely_exported">
 <code class="highlight language-python"><span class="n">is_implicitely_exported</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
-<a href="#griffe.mixins.ObjectAliasMixin.is_implicitely_exported" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.mixins.ObjectAliasMixin.is_implicitely_exported" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -1629,14 +1629,14 @@ The method expects a <code>members</code> attribute/property to be available on 
 
       <details class="quote">
         <summary>Source code in <code>griffe/mixins.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">114</span>
 <span class="normal">115</span>
-<span class="normal">116</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">is_implicitely_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Tell if this object/alias is implicitely exported by its parent.</span>
 
@@ -1662,11 +1662,11 @@ The method expects a <code>members</code> attribute/property to be available on 
 
 
 
-<h2 id="griffe.mixins.SerializationMixin" class="doc doc-heading">
+<h2 class="doc doc-heading" id="griffe.mixins.SerializationMixin">
         <code>SerializationMixin</code>
 
 
-<a href="#griffe.mixins.SerializationMixin" class="headerlink" title="Permanent link">¤</a></h2>
+<a class="headerlink" href="#griffe.mixins.SerializationMixin" title="Permanent link">¤</a></h2>
 
 
   <div class="doc doc-contents ">
@@ -1692,10 +1692,10 @@ The method expects a <code>members</code> attribute/property to be available on 
 
 
 
-<h3 id="griffe.mixins.SerializationMixin.as_json" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.mixins.SerializationMixin.as_json">
 <code class="highlight language-python"><span class="n">as_json</span><span class="p">(</span><span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
-<a href="#griffe.mixins.SerializationMixin.as_json" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.mixins.SerializationMixin.as_json" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -1726,19 +1726,19 @@ The method expects a <code>members</code> attribute/property to be available on 
 
       <details class="quote">
         <summary>Source code in <code>griffe/mixins.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">127</span>
 <span class="normal">128</span>
 <span class="normal">129</span>
 <span class="normal">130</span>
 <span class="normal">131</span>
 <span class="normal">132</span>
 <span class="normal">133</span>
-<span class="normal">134</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">as_json</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">as_json</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return this object&#39;s data as a JSON string.</span>
 
 <span class="sd">    Parameters:</span>
@@ -1761,14 +1761,14 @@ The method expects a <code>members</code> attribute/property to be available on 
 
 
 
-<h3 id="griffe.mixins.SerializationMixin.from_json" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.mixins.SerializationMixin.from_json">
 <code class="highlight language-python"><span class="n">from_json</span><span class="p">(</span><span class="n">json_string</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
   </span>
 
-<a href="#griffe.mixins.SerializationMixin.from_json" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.mixins.SerializationMixin.from_json" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -1809,12 +1809,7 @@ of the class from which this classmethod has been called.</p>
 
       <details class="quote">
         <summary>Source code in <code>griffe/mixins.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">141</span>
 <span class="normal">142</span>
 <span class="normal">143</span>
 <span class="normal">144</span>
@@ -1830,7 +1825,12 @@ of the class from which this classmethod has been called.</p>
 <span class="normal">154</span>
 <span class="normal">155</span>
 <span class="normal">156</span>
-<span class="normal">157</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
 <span class="k">def</span> <span class="nf">from_json</span><span class="p">(</span><span class="bp">cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">_ObjType</span><span class="p">],</span> <span class="n">json_string</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_ObjType</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Create an instance of this class from a JSON string.</span>
 
@@ -1870,11 +1870,11 @@ of the class from which this classmethod has been called.</p>
 
 
 
-<h2 id="griffe.mixins.SetMembersMixin" class="doc doc-heading">
+<h2 class="doc doc-heading" id="griffe.mixins.SetMembersMixin">
         <code>SetMembersMixin</code>
 
 
-<a href="#griffe.mixins.SetMembersMixin" class="headerlink" title="Permanent link">¤</a></h2>
+<a class="headerlink" href="#griffe.mixins.SetMembersMixin" title="Permanent link">¤</a></h2>
 
 
   <div class="doc doc-contents ">

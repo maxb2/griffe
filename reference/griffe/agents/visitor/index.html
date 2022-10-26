@@ -1524,10 +1524,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h2 id="griffe.agents.visitor.Visitor" class="doc doc-heading">
+<h2 class="doc doc-heading" id="griffe.agents.visitor.Visitor">
 <code class="highlight language-python"><span class="n">Visitor</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">extensions</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_parser</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lines_collection</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">modules_collection</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.Visitor" class="headerlink" title="Permanent link">¤</a></h2>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor" title="Permanent link">¤</a></h2>
 
 
   <div class="doc doc-contents ">
@@ -1591,8 +1591,7 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
           <details class="quote">
             <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">112</span>
-<span class="normal">113</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">113</span>
 <span class="normal">114</span>
 <span class="normal">115</span>
 <span class="normal">116</span>
@@ -1627,7 +1626,8 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 <span class="normal">145</span>
 <span class="normal">146</span>
 <span class="normal">147</span>
-<span class="normal">148</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">148</span>
+<span class="normal">149</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span>
@@ -1683,10 +1683,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h3 id="griffe.agents.visitor.Visitor.decorators_to_labels" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.agents.visitor.Visitor.decorators_to_labels">
 <code class="highlight language-python"><span class="n">decorators_to_labels</span><span class="p">(</span><span class="n">decorators</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.Visitor.decorators_to_labels" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor.decorators_to_labels" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -1712,8 +1712,7 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">259</span>
-<span class="normal">260</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">260</span>
 <span class="normal">261</span>
 <span class="normal">262</span>
 <span class="normal">263</span>
@@ -1733,7 +1732,8 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 <span class="normal">277</span>
 <span class="normal">278</span>
 <span class="normal">279</span>
-<span class="normal">280</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">decorators_to_labels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">decorators</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Decorator</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">280</span>
+<span class="normal">281</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">decorators_to_labels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">decorators</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Decorator</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>  <span class="c1"># noqa: WPS231</span>
     <span class="sd">&quot;&quot;&quot;Build and return a set of labels based on decorators.</span>
 
 <span class="sd">    Parameters:</span>
@@ -1765,10 +1765,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h3 id="griffe.agents.visitor.Visitor.generic_visit" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.agents.visitor.Visitor.generic_visit">
 <code class="highlight language-python"><span class="n">generic_visit</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.Visitor.generic_visit" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor.generic_visit" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -1786,8 +1786,7 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">188</span>
-<span class="normal">189</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">189</span>
 <span class="normal">190</span>
 <span class="normal">191</span>
 <span class="normal">192</span>
@@ -1797,7 +1796,8 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 <span class="normal">196</span>
 <span class="normal">197</span>
 <span class="normal">198</span>
-<span class="normal">199</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">generic_visit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">AST</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">199</span>
+<span class="normal">200</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">generic_visit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">AST</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># noqa: WPS231</span>
     <span class="sd">&quot;&quot;&quot;Extend the base generic visit with extensions.</span>
 
 <span class="sd">    Parameters:</span>
@@ -1819,10 +1819,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h3 id="griffe.agents.visitor.Visitor.get_base_property" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.agents.visitor.Visitor.get_base_property">
 <code class="highlight language-python"><span class="n">get_base_property</span><span class="p">(</span><span class="n">decorators</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.Visitor.get_base_property" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor.get_base_property" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -1852,8 +1852,7 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">282</span>
-<span class="normal">283</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">283</span>
 <span class="normal">284</span>
 <span class="normal">285</span>
 <span class="normal">286</span>
@@ -1873,7 +1872,8 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 <span class="normal">300</span>
 <span class="normal">301</span>
 <span class="normal">302</span>
-<span class="normal">303</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_base_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">decorators</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Decorator</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Function</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]:</span>
+<span class="normal">303</span>
+<span class="normal">304</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_base_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">decorators</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Decorator</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Function</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Check decorators to return the base property in case of setters and deleters.</span>
 
 <span class="sd">    Parameters:</span>
@@ -1905,10 +1905,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h3 id="griffe.agents.visitor.Visitor.get_module" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.agents.visitor.Visitor.get_module">
 <code class="highlight language-python"><span class="n">get_module</span><span class="p">()</span></code>
 
-<a href="#griffe.agents.visitor.Visitor.get_module" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor.get_module" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -1926,8 +1926,7 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">162</span>
-<span class="normal">163</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">163</span>
 <span class="normal">164</span>
 <span class="normal">165</span>
 <span class="normal">166</span>
@@ -1938,7 +1937,8 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 <span class="normal">171</span>
 <span class="normal">172</span>
 <span class="normal">173</span>
-<span class="normal">174</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_module</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
+<span class="normal">174</span>
+<span class="normal">175</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_module</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Build and return the object representing the module attached to this visitor.</span>
 
 <span class="sd">    This method triggers a complete visit of the module nodes.</span>
@@ -1961,10 +1961,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h3 id="griffe.agents.visitor.Visitor.handle_attribute" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.agents.visitor.Visitor.handle_attribute">
 <code class="highlight language-python"><span class="n">handle_attribute</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">annotation</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.Visitor.handle_attribute" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor.handle_attribute" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -1987,8 +1987,7 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">515</span>
-<span class="normal">516</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">516</span>
 <span class="normal">517</span>
 <span class="normal">518</span>
 <span class="normal">519</span>
@@ -2059,7 +2058,8 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 <span class="normal">584</span>
 <span class="normal">585</span>
 <span class="normal">586</span>
-<span class="normal">587</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">handle_attribute</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">587</span>
+<span class="normal">588</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">handle_attribute</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">Assign</span> <span class="o">|</span> <span class="n">ast</span><span class="o">.</span><span class="n">AnnAssign</span><span class="p">,</span>
     <span class="n">annotation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -2142,10 +2142,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h3 id="griffe.agents.visitor.Visitor.handle_function" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.agents.visitor.Visitor.handle_function">
 <code class="highlight language-python"><span class="n">handle_function</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.Visitor.handle_function" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor.handle_function" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -2168,8 +2168,7 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">305</span>
-<span class="normal">306</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">306</span>
 <span class="normal">307</span>
 <span class="normal">308</span>
 <span class="normal">309</span>
@@ -2312,7 +2311,8 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 <span class="normal">446</span>
 <span class="normal">447</span>
 <span class="normal">448</span>
-<span class="normal">449</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">handle_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">AsyncFunctionDef</span> <span class="o">|</span> <span class="n">ast</span><span class="o">.</span><span class="n">FunctionDef</span><span class="p">,</span> <span class="n">labels</span><span class="p">:</span> <span class="nb">set</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">449</span>
+<span class="normal">450</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">handle_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">AsyncFunctionDef</span> <span class="o">|</span> <span class="n">ast</span><span class="o">.</span><span class="n">FunctionDef</span><span class="p">,</span> <span class="n">labels</span><span class="p">:</span> <span class="nb">set</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>  <span class="c1"># noqa: WPS231</span>
     <span class="sd">&quot;&quot;&quot;Handle a function definition node.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2329,9 +2329,9 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
         <span class="k">for</span> <span class="n">decorator_node</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">decorator_list</span><span class="p">:</span>
             <span class="n">decorator_value</span> <span class="o">=</span> <span class="n">safe_get_value</span><span class="p">(</span><span class="n">decorator_node</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="p">)</span>
             <span class="n">overload</span> <span class="o">=</span> <span class="p">(</span>
-                <span class="n">decorator_value</span> <span class="o">==</span> <span class="s2">&quot;typing.overload&quot;</span>
+                <span class="n">decorator_value</span> <span class="ow">in</span> <span class="n">typing_overload</span>
                 <span class="ow">or</span> <span class="n">decorator_value</span> <span class="o">==</span> <span class="s2">&quot;overload&quot;</span>
-                <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">resolve</span><span class="p">(</span><span class="s2">&quot;overload&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;typing.overload&quot;</span>
+                <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">resolve</span><span class="p">(</span><span class="s2">&quot;overload&quot;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">typing_overload</span>
             <span class="p">)</span>
             <span class="n">decorators</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
                 <span class="n">Decorator</span><span class="p">(</span>
@@ -2467,10 +2467,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h3 id="griffe.agents.visitor.Visitor.visit" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.agents.visitor.Visitor.visit">
 <code class="highlight language-python"><span class="n">visit</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.Visitor.visit" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor.visit" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -2488,8 +2488,7 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">176</span>
-<span class="normal">177</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">177</span>
 <span class="normal">178</span>
 <span class="normal">179</span>
 <span class="normal">180</span>
@@ -2498,7 +2497,8 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 <span class="normal">183</span>
 <span class="normal">184</span>
 <span class="normal">185</span>
-<span class="normal">186</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">AST</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">186</span>
+<span class="normal">187</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">AST</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Extend the base visit with extensions.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2519,10 +2519,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h3 id="griffe.agents.visitor.Visitor.visit_annassign" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.agents.visitor.Visitor.visit_annassign">
 <code class="highlight language-python"><span class="n">visit_annassign</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.Visitor.visit_annassign" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor.visit_annassign" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -2540,13 +2540,13 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">597</span>
-<span class="normal">598</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">598</span>
 <span class="normal">599</span>
 <span class="normal">600</span>
 <span class="normal">601</span>
 <span class="normal">602</span>
-<span class="normal">603</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_annassign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">AnnAssign</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">603</span>
+<span class="normal">604</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_annassign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">AnnAssign</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Visit an annotated assignment node.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2563,10 +2563,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h3 id="griffe.agents.visitor.Visitor.visit_assign" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.agents.visitor.Visitor.visit_assign">
 <code class="highlight language-python"><span class="n">visit_assign</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.Visitor.visit_assign" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor.visit_assign" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -2584,13 +2584,13 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">589</span>
-<span class="normal">590</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">590</span>
 <span class="normal">591</span>
 <span class="normal">592</span>
 <span class="normal">593</span>
 <span class="normal">594</span>
-<span class="normal">595</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_assign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">Assign</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">595</span>
+<span class="normal">596</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_assign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">Assign</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Visit an assignment node.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2607,10 +2607,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h3 id="griffe.agents.visitor.Visitor.visit_asyncfunctiondef" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.agents.visitor.Visitor.visit_asyncfunctiondef">
 <code class="highlight language-python"><span class="n">visit_asyncfunctiondef</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.Visitor.visit_asyncfunctiondef" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor.visit_asyncfunctiondef" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -2628,13 +2628,13 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">459</span>
-<span class="normal">460</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">460</span>
 <span class="normal">461</span>
 <span class="normal">462</span>
 <span class="normal">463</span>
 <span class="normal">464</span>
-<span class="normal">465</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_asyncfunctiondef</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">AsyncFunctionDef</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">465</span>
+<span class="normal">466</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_asyncfunctiondef</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">AsyncFunctionDef</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Visit an async function definition node.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2651,10 +2651,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h3 id="griffe.agents.visitor.Visitor.visit_augassign" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.agents.visitor.Visitor.visit_augassign">
 <code class="highlight language-python"><span class="n">visit_augassign</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.Visitor.visit_augassign" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor.visit_augassign" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -2672,8 +2672,7 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">605</span>
-<span class="normal">606</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">606</span>
 <span class="normal">607</span>
 <span class="normal">608</span>
 <span class="normal">609</span>
@@ -2686,7 +2685,8 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 <span class="normal">616</span>
 <span class="normal">617</span>
 <span class="normal">618</span>
-<span class="normal">619</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_augassign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">AugAssign</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">619</span>
+<span class="normal">620</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_augassign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">AugAssign</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Visit an augmented assignment node.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2711,10 +2711,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h3 id="griffe.agents.visitor.Visitor.visit_classdef" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.agents.visitor.Visitor.visit_classdef">
 <code class="highlight language-python"><span class="n">visit_classdef</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.Visitor.visit_classdef" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor.visit_classdef" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -2732,8 +2732,7 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">217</span>
-<span class="normal">218</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">218</span>
 <span class="normal">219</span>
 <span class="normal">220</span>
 <span class="normal">221</span>
@@ -2772,7 +2771,8 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 <span class="normal">254</span>
 <span class="normal">255</span>
 <span class="normal">256</span>
-<span class="normal">257</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_classdef</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">ClassDef</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">257</span>
+<span class="normal">258</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_classdef</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">ClassDef</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Visit a class definition node.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2823,10 +2823,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h3 id="griffe.agents.visitor.Visitor.visit_functiondef" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.agents.visitor.Visitor.visit_functiondef">
 <code class="highlight language-python"><span class="n">visit_functiondef</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.Visitor.visit_functiondef" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor.visit_functiondef" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -2844,13 +2844,13 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">451</span>
-<span class="normal">452</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">452</span>
 <span class="normal">453</span>
 <span class="normal">454</span>
 <span class="normal">455</span>
 <span class="normal">456</span>
-<span class="normal">457</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_functiondef</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">FunctionDef</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">457</span>
+<span class="normal">458</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_functiondef</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">FunctionDef</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Visit a function definition node.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2867,10 +2867,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h3 id="griffe.agents.visitor.Visitor.visit_if" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.agents.visitor.Visitor.visit_if">
 <code class="highlight language-python"><span class="n">visit_if</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.Visitor.visit_if" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor.visit_if" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -2888,8 +2888,7 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">621</span>
-<span class="normal">622</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">622</span>
 <span class="normal">623</span>
 <span class="normal">624</span>
 <span class="normal">625</span>
@@ -2900,7 +2899,8 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 <span class="normal">630</span>
 <span class="normal">631</span>
 <span class="normal">632</span>
-<span class="normal">633</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_if</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">If</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">633</span>
+<span class="normal">634</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_if</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">If</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Visit an &quot;if&quot; node.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2923,10 +2923,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h3 id="griffe.agents.visitor.Visitor.visit_import" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.agents.visitor.Visitor.visit_import">
 <code class="highlight language-python"><span class="n">visit_import</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.Visitor.visit_import" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor.visit_import" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -2944,8 +2944,7 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">467</span>
-<span class="normal">468</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">468</span>
 <span class="normal">469</span>
 <span class="normal">470</span>
 <span class="normal">471</span>
@@ -2960,7 +2959,8 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 <span class="normal">480</span>
 <span class="normal">481</span>
 <span class="normal">482</span>
-<span class="normal">483</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_import</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">Import</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">483</span>
+<span class="normal">484</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_import</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">Import</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Visit an import node.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2987,10 +2987,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h3 id="griffe.agents.visitor.Visitor.visit_importfrom" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.agents.visitor.Visitor.visit_importfrom">
 <code class="highlight language-python"><span class="n">visit_importfrom</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.Visitor.visit_importfrom" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor.visit_importfrom" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -3008,8 +3008,7 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">485</span>
-<span class="normal">486</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">486</span>
 <span class="normal">487</span>
 <span class="normal">488</span>
 <span class="normal">489</span>
@@ -3036,7 +3035,8 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 <span class="normal">510</span>
 <span class="normal">511</span>
 <span class="normal">512</span>
-<span class="normal">513</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_importfrom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">ImportFrom</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">513</span>
+<span class="normal">514</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_importfrom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">ImportFrom</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># noqa: WPS231</span>
     <span class="sd">&quot;&quot;&quot;Visit an &quot;import from&quot; node.</span>
 
 <span class="sd">    Parameters:</span>
@@ -3075,10 +3075,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h3 id="griffe.agents.visitor.Visitor.visit_module" class="doc doc-heading">
+<h3 class="doc doc-heading" id="griffe.agents.visitor.Visitor.visit_module">
 <code class="highlight language-python"><span class="n">visit_module</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.Visitor.visit_module" class="headerlink" title="Permanent link">¤</a></h3>
+<a class="headerlink" href="#griffe.agents.visitor.Visitor.visit_module" title="Permanent link">¤</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -3096,8 +3096,7 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">201</span>
-<span class="normal">202</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">202</span>
 <span class="normal">203</span>
 <span class="normal">204</span>
 <span class="normal">205</span>
@@ -3110,7 +3109,8 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 <span class="normal">212</span>
 <span class="normal">213</span>
 <span class="normal">214</span>
-<span class="normal">215</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">Module</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">215</span>
+<span class="normal">216</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">Module</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Visit a module node.</span>
 
 <span class="sd">    Parameters:</span>
@@ -3144,10 +3144,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h2 id="griffe.agents.visitor.patch_ast" class="doc doc-heading">
+<h2 class="doc doc-heading" id="griffe.agents.visitor.patch_ast">
 <code class="highlight language-python"><span class="n">patch_ast</span><span class="p">()</span></code>
 
-<a href="#griffe.agents.visitor.patch_ast" class="headerlink" title="Permanent link">¤</a></h2>
+<a class="headerlink" href="#griffe.agents.visitor.patch_ast" title="Permanent link">¤</a></h2>
 
 
   <div class="doc doc-contents ">
@@ -3156,8 +3156,7 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">639</span>
-<span class="normal">640</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">640</span>
 <span class="normal">641</span>
 <span class="normal">642</span>
 <span class="normal">643</span>
@@ -3165,7 +3164,8 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 <span class="normal">645</span>
 <span class="normal">646</span>
 <span class="normal">647</span>
-<span class="normal">648</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">patch_ast</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">648</span>
+<span class="normal">649</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">patch_ast</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Extend the base `ast.AST` class to provide more functionality.&quot;&quot;&quot;</span>
     <span class="k">global</span> <span class="n">_patched</span>  <span class="c1"># noqa: WPS420</span>
     <span class="k">if</span> <span class="n">_patched</span><span class="p">:</span>
@@ -3185,10 +3185,10 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
 
 
-<h2 id="griffe.agents.visitor.visit" class="doc doc-heading">
+<h2 class="doc doc-heading" id="griffe.agents.visitor.visit">
 <code class="highlight language-python"><span class="n">visit</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">extensions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_parser</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">docstring_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lines_collection</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">modules_collection</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
-<a href="#griffe.agents.visitor.visit" class="headerlink" title="Permanent link">¤</a></h2>
+<a class="headerlink" href="#griffe.agents.visitor.visit" title="Permanent link">¤</a></h2>
 
 
   <div class="doc doc-contents ">
@@ -3254,8 +3254,7 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 
       <details class="quote">
         <summary>Source code in <code>griffe/agents/visitor.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 65</span>
-<span class="normal"> 66</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 66</span>
 <span class="normal"> 67</span>
 <span class="normal"> 68</span>
 <span class="normal"> 69</span>
@@ -3292,7 +3291,8 @@ populating its members recursively, by using a <a class="autorefs autorefs-exter
 <span class="normal">100</span>
 <span class="normal">101</span>
 <span class="normal">102</span>
-<span class="normal">103</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit</span><span class="p">(</span>
+<span class="normal">103</span>
+<span class="normal">104</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">visit</span><span class="p">(</span>
     <span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span>
     <span class="n">code</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>

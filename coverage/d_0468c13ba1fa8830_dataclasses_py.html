@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for src/griffe/docstrings/dataclasses.py: 90.77%</title>
+    <title>Coverage for src/griffe/docstrings/dataclasses.py: 90.37%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>src/griffe/docstrings/dataclasses.py</b>:
-            <span class="pc_cov">90.77%</span>
+            <span class="pc_cov">90.37%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -55,8 +55,8 @@
             </div>
         </aside>
         <h2>
-            <span class="text">137 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">124<span class="text"> run</span></button>
+            <span class="text">129 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">116<span class="text"> run</span></button>
             <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">13<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
             <button type="button" class="par run show_par button_toggle_par" value="par" data-shortcut="p" title="Toggle lines partially run">3<span class="text"> partial</span></button>
@@ -67,7 +67,7 @@
             <a id="nextFileLink" class="nav" href="d_0468c13ba1fa8830_google_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.4.4</a>,
-            created at 2022-09-10 18:09 +0200
+            created at 2022-10-26 23:30 +0200
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -176,7 +176,7 @@
     <p class="pln"><span class="n"><a id="t92" href="#t92">92</a></span><span class="t">    <span class="str">"""This class represents an admonition."""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t93" href="#t93">93</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t94" href="#t94">94</a></span><span class="t">    <span class="op">@</span><span class="nam">property</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t95" href="#t95">95</a></span><span class="t">    <span class="key">def</span> <span class="nam">kind</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="nam">str</span> <span class="op">|</span> <span class="nam">Name</span> <span class="op">|</span> <span class="nam">Expression</span> <span class="op">|</span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t95" href="#t95">95</a></span><span class="t">    <span class="key">def</span> <span class="nam">kind</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="nam">str</span> <span class="op">|</span> <span class="nam">Name</span> <span class="op">|</span> <span class="nam">Expression</span> <span class="op">|</span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t96" href="#t96">96</a></span><span class="t">        <span class="str">"""Return the kind of this admonition.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t97" href="#t97">97</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t98" href="#t98">98</a></span><span class="t"><span class="str">        Returns:</span>&nbsp;</span><span class="r"></span></p>
@@ -185,11 +185,11 @@
     <p class="run"><span class="n"><a id="t101" href="#t101">101</a></span><span class="t">        <span class="key">return</span> <span class="nam">self</span><span class="op">.</span><span class="nam">annotation</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t102" href="#t102">102</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t103" href="#t103">103</a></span><span class="t">    <span class="op">@</span><span class="nam">kind</span><span class="op">.</span><span class="nam">setter</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t104" href="#t104">104</a></span><span class="t">    <span class="key">def</span> <span class="nam">kind</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">value</span><span class="op">:</span> <span class="nam">str</span> <span class="op">|</span> <span class="nam">Name</span> <span class="op">|</span> <span class="nam">Expression</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t104" href="#t104">104</a></span><span class="t">    <span class="key">def</span> <span class="nam">kind</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">value</span><span class="op">:</span> <span class="nam">str</span> <span class="op">|</span> <span class="nam">Name</span> <span class="op">|</span> <span class="nam">Expression</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t105" href="#t105">105</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">annotation</span> <span class="op">=</span> <span class="nam">value</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t106" href="#t106">106</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t107" href="#t107">107</a></span><span class="t">    <span class="op">@</span><span class="nam">property</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t108" href="#t108">108</a></span><span class="t">    <span class="key">def</span> <span class="nam">contents</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="nam">str</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t108" href="#t108">108</a></span><span class="t">    <span class="key">def</span> <span class="nam">contents</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="nam">str</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t109" href="#t109">109</a></span><span class="t">        <span class="str">"""Return the contents of this admonition.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t110" href="#t110">110</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t111" href="#t111">111</a></span><span class="t"><span class="str">        Returns:</span>&nbsp;</span><span class="r"></span></p>
@@ -198,7 +198,7 @@
     <p class="run"><span class="n"><a id="t114" href="#t114">114</a></span><span class="t">        <span class="key">return</span> <span class="nam">self</span><span class="op">.</span><span class="nam">description</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t115" href="#t115">115</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t116" href="#t116">116</a></span><span class="t">    <span class="op">@</span><span class="nam">contents</span><span class="op">.</span><span class="nam">setter</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t117" href="#t117">117</a></span><span class="t">    <span class="key">def</span> <span class="nam">contents</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">value</span><span class="op">:</span> <span class="nam">str</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t117" href="#t117">117</a></span><span class="t">    <span class="key">def</span> <span class="nam">contents</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">value</span><span class="op">:</span> <span class="nam">str</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t118" href="#t118">118</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">description</span> <span class="op">=</span> <span class="nam">value</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t119" href="#t119">119</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t120" href="#t120">120</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -206,7 +206,7 @@
     <p class="pln"><span class="n"><a id="t122" href="#t122">122</a></span><span class="t">    <span class="str">"""This class represents a documented deprecated item."""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t123" href="#t123">123</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t124" href="#t124">124</a></span><span class="t">    <span class="op">@</span><span class="nam">property</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t125" href="#t125">125</a></span><span class="t">    <span class="key">def</span> <span class="nam">version</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="nam">str</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t125" href="#t125">125</a></span><span class="t">    <span class="key">def</span> <span class="nam">version</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="nam">str</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t126" href="#t126">126</a></span><span class="t">        <span class="str">"""Return the version of this deprecation.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t127" href="#t127">127</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t128" href="#t128">128</a></span><span class="t"><span class="str">        Returns:</span>&nbsp;</span><span class="r"></span></p>
@@ -215,7 +215,7 @@
     <p class="run"><span class="n"><a id="t131" href="#t131">131</a></span><span class="t">        <span class="key">return</span> <span class="nam">self</span><span class="op">.</span><span class="nam">annotation</span>  <span class="com"># type: ignore[return-value]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t132" href="#t132">132</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t133" href="#t133">133</a></span><span class="t">    <span class="op">@</span><span class="nam">version</span><span class="op">.</span><span class="nam">setter</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t134" href="#t134">134</a></span><span class="t">    <span class="key">def</span> <span class="nam">version</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">value</span><span class="op">:</span> <span class="nam">str</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t134" href="#t134">134</a></span><span class="t">    <span class="key">def</span> <span class="nam">version</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">value</span><span class="op">:</span> <span class="nam">str</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t135" href="#t135">135</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">annotation</span> <span class="op">=</span> <span class="nam">value</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t136" href="#t136">136</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t137" href="#t137">137</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -243,7 +243,7 @@
     <p class="pln"><span class="n"><a id="t159" href="#t159">159</a></span><span class="t">    <span class="str">"""This class represent a documented function parameter."""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t160" href="#t160">160</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t161" href="#t161">161</a></span><span class="t">    <span class="op">@</span><span class="nam">property</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t162" href="#t162">162</a></span><span class="t">    <span class="key">def</span> <span class="nam">default</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="nam">str</span> <span class="op">|</span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t162" href="#t162">162</a></span><span class="t">    <span class="key">def</span> <span class="nam">default</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="nam">str</span> <span class="op">|</span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t163" href="#t163">163</a></span><span class="t">        <span class="str">"""Return the default value of this parameter.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t164" href="#t164">164</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t165" href="#t165">165</a></span><span class="t"><span class="str">        Returns:</span>&nbsp;</span><span class="r"></span></p>
@@ -252,7 +252,7 @@
     <p class="run"><span class="n"><a id="t168" href="#t168">168</a></span><span class="t">        <span class="key">return</span> <span class="nam">self</span><span class="op">.</span><span class="nam">value</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t169" href="#t169">169</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t170" href="#t170">170</a></span><span class="t">    <span class="op">@</span><span class="nam">default</span><span class="op">.</span><span class="nam">setter</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t171" href="#t171">171</a></span><span class="t">    <span class="key">def</span> <span class="nam">default</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">value</span><span class="op">:</span> <span class="nam">str</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t171" href="#t171">171</a></span><span class="t">    <span class="key">def</span> <span class="nam">default</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">value</span><span class="op">:</span> <span class="nam">str</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t172" href="#t172">172</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">value</span> <span class="op">=</span> <span class="nam">value</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t173" href="#t173">173</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t174" href="#t174">174</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -507,7 +507,7 @@
             <a id="nextFileLink" class="nav" href="d_0468c13ba1fa8830_google_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.4.4</a>,
-            created at 2022-09-10 18:09 +0200
+            created at 2022-10-26 23:30 +0200
         </p>
     </div>
 </footer>
