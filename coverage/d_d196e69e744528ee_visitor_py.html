@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for src/griffe/agents/visitor.py: 92.88%</title>
+    <title>Coverage for src/griffe/agents/visitor.py: 92.65%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>src/griffe/agents/visitor.py</b>:
-            <span class="pc_cov">92.88%</span>
+            <span class="pc_cov">92.65%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -67,7 +67,7 @@
             <a id="nextFileLink" class="nav" href="d_f2af9067e8be8028_cli_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.5.0</a>,
-            created at 2022-11-12 20:37 +0100
+            created at 2022-11-05 23:16 +0100
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -699,7 +699,7 @@
     <p class="pln"><span class="n"><a id="t615" href="#t615">615</a></span><span class="t">                <span class="key">and</span> <span class="nam">self</span><span class="op">.</span><span class="nam">current</span><span class="op">.</span><span class="nam">is_module</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t616" href="#t616">616</a></span><span class="t">                <span class="key">and</span> <span class="nam">isinstance</span><span class="op">(</span><span class="nam">node</span><span class="op">.</span><span class="nam">op</span><span class="op">,</span> <span class="nam">ast</span><span class="op">.</span><span class="nam">Add</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t617" href="#t617">617</a></span><span class="t">            <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="par run show_par"><span class="n"><a id="t618" href="#t618">618</a></span><span class="t">            <span class="key">if</span> <span class="nam">all_augment</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">618&#x202F;&#x219B;&#x202F;612</span><span class="annotate long">line 618 didn't jump to line 612</span></span></p>
+    <p class="par run show_par"><span class="n"><a id="t618" href="#t618">618</a></span><span class="t">            <span class="key">if</span> <span class="nam">all_augment</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">618&#x202F;&#x219B;&#x202F;exit</span><span class="annotate long">line 618 didn't return from function 'visit_augassign', because the condition on line 618 was never false</span></span></p>
     <p class="pln"><span class="n"><a id="t619" href="#t619">619</a></span><span class="t">                <span class="com"># we assume exports is not None at this point</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t620" href="#t620">620</a></span><span class="t">                <span class="nam">self</span><span class="op">.</span><span class="nam">current</span><span class="op">.</span><span class="nam">exports</span><span class="op">.</span><span class="nam">extend</span><span class="op">(</span><span class="nam">parse__all__</span><span class="op">(</span><span class="nam">node</span><span class="op">,</span> <span class="nam">self</span><span class="op">.</span><span class="nam">current</span><span class="op">)</span><span class="op">)</span>  <span class="com"># type: ignore[arg-type,union-attr]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t621" href="#t621">621</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -712,7 +712,7 @@
     <p class="run"><span class="n"><a id="t628" href="#t628">628</a></span><span class="t">        <span class="key">if</span> <span class="nam">isinstance</span><span class="op">(</span><span class="nam">node</span><span class="op">.</span><span class="nam">parent</span><span class="op">,</span> <span class="op">(</span><span class="nam">ast</span><span class="op">.</span><span class="nam">Module</span><span class="op">,</span> <span class="nam">ast</span><span class="op">.</span><span class="nam">ClassDef</span><span class="op">)</span><span class="op">)</span><span class="op">:</span>  <span class="com"># type: ignore[attr-defined]</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t629" href="#t629">629</a></span><span class="t">            <span class="key">with</span> <span class="nam">suppress</span><span class="op">(</span><span class="nam">KeyError</span><span class="op">)</span><span class="op">:</span>  <span class="com"># unhandled AST nodes</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t630" href="#t630">630</a></span><span class="t">                <span class="nam">condition</span> <span class="op">=</span> <span class="nam">get_annotation</span><span class="op">(</span><span class="nam">node</span><span class="op">.</span><span class="nam">test</span><span class="op">,</span> <span class="nam">parent</span><span class="op">=</span><span class="nam">self</span><span class="op">.</span><span class="nam">current</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="par run show_par"><span class="n"><a id="t631" href="#t631">631</a></span><span class="t">                <span class="key">if</span> <span class="nam">str</span><span class="op">(</span><span class="nam">condition</span><span class="op">)</span> <span class="key">in</span> <span class="op">{</span><span class="str">"typing.TYPE_CHECKING"</span><span class="op">,</span> <span class="str">"TYPE_CHECKING"</span><span class="op">}</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">631&#x202F;&#x219B;&#x202F;629</span><span class="annotate long">line 631 didn't jump to line 629</span></span></p>
+    <p class="par run show_par"><span class="n"><a id="t631" href="#t631">631</a></span><span class="t">                <span class="key">if</span> <span class="nam">str</span><span class="op">(</span><span class="nam">condition</span><span class="op">)</span> <span class="key">in</span> <span class="op">{</span><span class="str">"typing.TYPE_CHECKING"</span><span class="op">,</span> <span class="str">"TYPE_CHECKING"</span><span class="op">}</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">631&#x202F;&#x219B;&#x202F;633</span><span class="annotate long">line 631 didn't jump to line 633, because the condition on line 631 was never false</span></span></p>
     <p class="run"><span class="n"><a id="t632" href="#t632">632</a></span><span class="t">                    <span class="nam">self</span><span class="op">.</span><span class="nam">type_guarded</span> <span class="op">=</span> <span class="key">True</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t633" href="#t633">633</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">generic_visit</span><span class="op">(</span><span class="nam">node</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t634" href="#t634">634</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">type_guarded</span> <span class="op">=</span> <span class="key">False</span>&nbsp;</span><span class="r"></span></p>
@@ -740,7 +740,7 @@
             <a id="nextFileLink" class="nav" href="d_f2af9067e8be8028_cli_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.5.0</a>,
-            created at 2022-11-12 20:37 +0100
+            created at 2022-11-05 23:16 +0100
         </p>
     </div>
 </footer>
