@@ -3862,13 +3862,13 @@ and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semanti
 <p><small><a href="https://github.com/mkdocstrings/griffe/compare/0.24.1...0.25.0">Compare with 0.24.1</a></small></p>
 <h3 id="breaking-changes">Breaking changes<a class="headerlink" href="#breaking-changes" title="Permanent link">¤</a></h3>
 <ul>
-<li>Parameter <code>only_known_modules</code> was renamed <code>external</code> in the [<code>expand_wildcard()</code>][griffe.loader.GriffeLoader.expand_wildcard] method of the loader.</li>
+<li>Parameter <code>only_known_modules</code> was renamed <code>external</code> in the <a class="autorefs autorefs-internal" href="../reference/griffe/loader/#griffe.loader.GriffeLoader.expand_wildcards"><code>expand_wildcards()</code></a> method of the loader.</li>
 <li>Exception <code>UnhandledEditablesModuleError</code> was renamed <code>UnhandledEditableModuleError</code> since we now support editable installation from other packages than <code>editables</code>.</li>
 </ul>
 <h3 id="highlights">Highlights<a class="headerlink" href="#highlights" title="Permanent link">¤</a></h3>
 <ul>
 <li>Properties are now fetched as attributes rather than functions, since that is how they are used. This was asked by users, and since Griffe generates signatures for Python APIs (emphasis on <strong>APIs</strong>), it makes sense to return data that matches the interface provided to users. Such property objects in Griffe's output will still have the associated <code>property</code> labels of course.</li>
-<li>Lots of bug fixes. These bugs were discovered by running Griffe on <em>many</em> major packages as well as the standard library. Particularly, alias resolution should be more robust now, and should generate less issues like cyclic aliases, meaning indirect/wildcard imports should be better understood.</li>
+<li>Lots of bug fixes. These bugs were discovered by running Griffe on <em>many</em> major packages as well as the standard library (again). Particularly, alias resolution should be more robust now, and should generate less issues like cyclic aliases, meaning indirect/wildcard imports should be better understood. We still highly discourage usage of wilcard imports <img alt="😀" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f600.png" title=":grinning:" /></li>
 </ul>
 <h3 id="features">Features<a class="headerlink" href="#features" title="Permanent link">¤</a></h3>
 <ul>
