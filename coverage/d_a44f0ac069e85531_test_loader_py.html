@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for tests/test_loader.py: 99.01%</title>
+    <title>Coverage for tests/test_loader.py: 99.21%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>tests/test_loader.py</b>:
-            <span class="pc_cov">99.01%</span>
+            <span class="pc_cov">99.21%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -55,8 +55,8 @@
             </div>
         </aside>
         <h2>
-            <span class="text">187 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">187<span class="text"> run</span></button>
+            <span class="text">202 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">202<span class="text"> run</span></button>
             <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">0<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
             <button type="button" class="par run show_par button_toggle_par" value="par" data-shortcut="p" title="Toggle lines partially run">2<span class="text"> partial</span></button>
@@ -67,7 +67,7 @@
             <a id="nextFileLink" class="nav" href="d_a44f0ac069e85531_test_merger_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.5.0</a>,
-            created at 2022-11-30 16:46 +0100
+            created at 2022-12-11 13:15 +0100
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -416,6 +416,27 @@
     <p class="run"><span class="n"><a id="t332" href="#t332">332</a></span><span class="t">            <span class="key">assert</span> <span class="nam">d_package</span><span class="op">.</span><span class="nam">filepath</span> <span class="op">==</span> <span class="nam">tmp_ns1</span><span class="op">.</span><span class="nam">tmpdir</span><span class="op">.</span><span class="nam">joinpath</span><span class="op">(</span><span class="str">"a/b/c/d/__init__.py"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t333" href="#t333">333</a></span><span class="t">            <span class="key">assert</span> <span class="str">"mod1"</span> <span class="key">in</span> <span class="nam">d_package</span><span class="op">.</span><span class="nam">members</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t334" href="#t334">334</a></span><span class="t">            <span class="key">assert</span> <span class="str">"mod2"</span> <span class="key">not</span> <span class="key">in</span> <span class="nam">d_package</span><span class="op">.</span><span class="nam">members</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t335" href="#t335">335</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t336" href="#t336">336</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t337" href="#t337">337</a></span><span class="t"><span class="key">def</span> <span class="nam">test_load_builtin_modules</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t338" href="#t338">338</a></span><span class="t">    <span class="str">"""Assert builtin/compiled modules can be loaded."""</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t339" href="#t339">339</a></span><span class="t">    <span class="nam">loader</span> <span class="op">=</span> <span class="nam">GriffeLoader</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t340" href="#t340">340</a></span><span class="t">    <span class="nam">loader</span><span class="op">.</span><span class="nam">load_module</span><span class="op">(</span><span class="str">"_ast"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t341" href="#t341">341</a></span><span class="t">    <span class="nam">loader</span><span class="op">.</span><span class="nam">load_module</span><span class="op">(</span><span class="str">"_collections"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t342" href="#t342">342</a></span><span class="t">    <span class="nam">loader</span><span class="op">.</span><span class="nam">load_module</span><span class="op">(</span><span class="str">"_json"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t343" href="#t343">343</a></span><span class="t">    <span class="key">assert</span> <span class="str">"_ast"</span> <span class="key">in</span> <span class="nam">loader</span><span class="op">.</span><span class="nam">modules_collection</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t344" href="#t344">344</a></span><span class="t">    <span class="key">assert</span> <span class="str">"_collections"</span> <span class="key">in</span> <span class="nam">loader</span><span class="op">.</span><span class="nam">modules_collection</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t345" href="#t345">345</a></span><span class="t">    <span class="key">assert</span> <span class="str">"_json"</span> <span class="key">in</span> <span class="nam">loader</span><span class="op">.</span><span class="nam">modules_collection</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t346" href="#t346">346</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t347" href="#t347">347</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t348" href="#t348">348</a></span><span class="t"><span class="key">def</span> <span class="nam">test_resolve_aliases_of_builtin_modules</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t349" href="#t349">349</a></span><span class="t">    <span class="str">"""Assert builtin/compiled modules can be loaded."""</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t350" href="#t350">350</a></span><span class="t">    <span class="nam">loader</span> <span class="op">=</span> <span class="nam">GriffeLoader</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t351" href="#t351">351</a></span><span class="t">    <span class="nam">loader</span><span class="op">.</span><span class="nam">load_module</span><span class="op">(</span><span class="str">"io"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t352" href="#t352">352</a></span><span class="t">    <span class="nam">loader</span><span class="op">.</span><span class="nam">load_module</span><span class="op">(</span><span class="str">"_io"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t353" href="#t353">353</a></span><span class="t">    <span class="nam">unresolved</span><span class="op">,</span> <span class="nam">_</span> <span class="op">=</span> <span class="nam">loader</span><span class="op">.</span><span class="nam">resolve_aliases</span><span class="op">(</span><span class="nam">external</span><span class="op">=</span><span class="key">True</span><span class="op">,</span> <span class="nam">implicit</span><span class="op">=</span><span class="key">True</span><span class="op">,</span> <span class="nam">max_iterations</span><span class="op">=</span><span class="num">1</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t354" href="#t354">354</a></span><span class="t">    <span class="nam">io_unresolved</span> <span class="op">=</span> <span class="op">{</span><span class="nam">un</span> <span class="key">for</span> <span class="nam">un</span> <span class="key">in</span> <span class="nam">unresolved</span> <span class="key">if</span> <span class="nam">un</span><span class="op">.</span><span class="nam">startswith</span><span class="op">(</span><span class="op">(</span><span class="str">"io"</span><span class="op">,</span> <span class="str">"_io"</span><span class="op">)</span><span class="op">)</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t355" href="#t355">355</a></span><span class="t">    <span class="key">assert</span> <span class="nam">len</span><span class="op">(</span><span class="nam">io_unresolved</span><span class="op">)</span> <span class="op">&lt;</span> <span class="num">5</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -425,7 +446,7 @@
             <a id="nextFileLink" class="nav" href="d_a44f0ac069e85531_test_merger_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.5.0</a>,
-            created at 2022-11-30 16:46 +0100
+            created at 2022-12-11 13:15 +0100
         </p>
     </div>
 </footer>

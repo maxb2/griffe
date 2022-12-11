@@ -1524,11 +1524,11 @@
 
 
 
-<h2 class="doc doc-heading" id="griffe.loader.GriffeLoader">
+<h2 id="griffe.loader.GriffeLoader" class="doc doc-heading">
         <span class="doc doc-object-name doc-class-name">GriffeLoader</span>
 
 
-<a class="headerlink" href="#griffe.loader.GriffeLoader" title="Permanent link">¤</a></h2>
+<a href="#griffe.loader.GriffeLoader" class="headerlink" title="Permanent link">¤</a></h2>
 <div class="highlight"><pre><span></span><code><span class="n">GriffeLoader</span><span class="p">(</span>
     <span class="n">extensions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">search_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -1672,11 +1672,11 @@
 
 
 
-<h3 class="doc doc-heading" id="griffe.loader.GriffeLoader.expand_exports">
+<h3 id="griffe.loader.GriffeLoader.expand_exports" class="doc doc-heading">
         <span class="doc doc-object-name doc-function-name">expand_exports</span>
 
 
-<a class="headerlink" href="#griffe.loader.GriffeLoader.expand_exports" title="Permanent link">¤</a></h3>
+<a href="#griffe.loader.GriffeLoader.expand_exports" class="headerlink" title="Permanent link">¤</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">expand_exports</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">seen</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
@@ -1700,14 +1700,7 @@
 
       <details class="quote">
         <summary>Source code in <code>griffe/loader.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">226</span>
-<span class="normal">227</span>
-<span class="normal">228</span>
-<span class="normal">229</span>
-<span class="normal">230</span>
-<span class="normal">231</span>
-<span class="normal">232</span>
-<span class="normal">233</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">233</span>
 <span class="normal">234</span>
 <span class="normal">235</span>
 <span class="normal">236</span>
@@ -1724,7 +1717,18 @@
 <span class="normal">247</span>
 <span class="normal">248</span>
 <span class="normal">249</span>
-<span class="normal">250</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">expand_exports</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">Module</span><span class="p">,</span> <span class="n">seen</span><span class="p">:</span> <span class="nb">set</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">expand_exports</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">Module</span><span class="p">,</span> <span class="n">seen</span><span class="p">:</span> <span class="nb">set</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># noqa: WPS231</span>
     <span class="sd">&quot;&quot;&quot;Expand exports: try to recursively expand all module exports.</span>
 
 <span class="sd">    Parameters:</span>
@@ -1739,7 +1743,11 @@
     <span class="k">for</span> <span class="n">export</span> <span class="ow">in</span> <span class="n">module</span><span class="o">.</span><span class="n">exports</span><span class="p">:</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">export</span><span class="p">,</span> <span class="n">Name</span><span class="p">):</span>
             <span class="n">module_path</span> <span class="o">=</span> <span class="n">export</span><span class="o">.</span><span class="n">full</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># remove trailing .__all__</span>
-            <span class="n">next_module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">[</span><span class="n">module_path</span><span class="p">]</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">next_module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">[</span><span class="n">module_path</span><span class="p">]</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cannot expand &#39;</span><span class="si">{</span><span class="n">export</span><span class="o">.</span><span class="n">full</span><span class="si">}</span><span class="s2">&#39;, try pre-loading corresponding package&quot;</span><span class="p">)</span>
+                <span class="k">continue</span>
             <span class="k">if</span> <span class="n">next_module</span><span class="o">.</span><span class="n">path</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">expand_exports</span><span class="p">(</span><span class="n">next_module</span><span class="p">,</span> <span class="n">seen</span><span class="p">)</span>
                 <span class="k">try</span><span class="p">:</span>
@@ -1759,12 +1767,12 @@
 
 
 
-<h3 class="doc doc-heading" id="griffe.loader.GriffeLoader.expand_wildcards">
+<h3 id="griffe.loader.GriffeLoader.expand_wildcards" class="doc doc-heading">
         <span class="doc doc-object-name doc-function-name">expand_wildcards</span>
 
 
-<a class="headerlink" href="#griffe.loader.GriffeLoader.expand_wildcards" title="Permanent link">¤</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">expand_wildcards</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">only_known_modules</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">seen</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<a href="#griffe.loader.GriffeLoader.expand_wildcards" class="headerlink" title="Permanent link">¤</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">expand_wildcards</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">external</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">seen</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1779,9 +1787,9 @@
         – <p>The object and its members to recurse on.</p>
       </li>
       <li class="field-body">
-        <b>only_known_modules</b>
+        <b>external</b>
             (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>)
-        – <p>When true, don't try to load unspecified modules to expand wildcards.</p>
+        – <p>When true, try to load unspecified modules to expand wildcards.</p>
       </li>
       <li class="field-body">
         <b>seen</b>
@@ -1792,18 +1800,7 @@
 
       <details class="quote">
         <summary>Source code in <code>griffe/loader.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">252</span>
-<span class="normal">253</span>
-<span class="normal">254</span>
-<span class="normal">255</span>
-<span class="normal">256</span>
-<span class="normal">257</span>
-<span class="normal">258</span>
-<span class="normal">259</span>
-<span class="normal">260</span>
-<span class="normal">261</span>
-<span class="normal">262</span>
-<span class="normal">263</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">263</span>
 <span class="normal">264</span>
 <span class="normal">265</span>
 <span class="normal">266</span>
@@ -1847,17 +1844,33 @@
 <span class="normal">304</span>
 <span class="normal">305</span>
 <span class="normal">306</span>
-<span class="normal">307</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">expand_wildcards</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">expand_wildcards</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">obj</span><span class="p">:</span> <span class="n">Object</span><span class="p">,</span>
-    <span class="n">only_known_modules</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">external</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="n">seen</span><span class="p">:</span> <span class="nb">set</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Expand wildcards: try to recursively expand all found wildcards.</span>
 
 <span class="sd">    Parameters:</span>
 <span class="sd">        obj: The object and its members to recurse on.</span>
-<span class="sd">        only_known_modules: When true, don&#39;t try to load unspecified modules to expand wildcards.</span>
+<span class="sd">        external: When true, try to load unspecified modules to expand wildcards.</span>
 <span class="sd">        seen: Used to avoid infinite recursion.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">expanded</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1870,7 +1883,7 @@
             <span class="n">package</span> <span class="o">=</span> <span class="n">member</span><span class="o">.</span><span class="n">wildcard</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># type: ignore[union-attr]</span>
             <span class="n">not_loaded</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">package</span><span class="o">.</span><span class="n">path</span> <span class="o">!=</span> <span class="n">package</span> <span class="ow">and</span> <span class="n">package</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span>
             <span class="k">if</span> <span class="n">not_loaded</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">only_known_modules</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">external</span><span class="p">:</span>
                     <span class="k">continue</span>
                 <span class="k">try</span><span class="p">:</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="n">package</span><span class="p">,</span> <span class="n">try_relative_path</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -1880,14 +1893,14 @@
             <span class="n">target</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">[</span><span class="n">member</span><span class="o">.</span><span class="n">target_path</span><span class="p">]</span>  <span class="c1"># type: ignore[union-attr]</span>
             <span class="k">if</span> <span class="n">target</span><span class="o">.</span><span class="n">path</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
                 <span class="k">try</span><span class="p">:</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">expand_wildcards</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">only_known_modules</span><span class="p">,</span> <span class="n">seen</span><span class="p">)</span>  <span class="c1"># type: ignore[union-attr]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">expand_wildcards</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">external</span><span class="p">,</span> <span class="n">seen</span><span class="p">)</span>  <span class="c1"># type: ignore[union-attr]</span>
                 <span class="k">except</span> <span class="p">(</span><span class="n">AliasResolutionError</span><span class="p">,</span> <span class="n">CyclicAliasError</span><span class="p">)</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>  <span class="c1"># noqa: WPS440</span>
                     <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Could not expand wildcard import </span><span class="si">{</span><span class="n">member</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">obj</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
                     <span class="k">continue</span>
             <span class="n">expanded</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_expand_wildcard</span><span class="p">(</span><span class="n">member</span><span class="p">))</span>  <span class="c1"># type: ignore[arg-type]</span>
             <span class="n">to_remove</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">member</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
         <span class="k">elif</span> <span class="ow">not</span> <span class="n">member</span><span class="o">.</span><span class="n">is_alias</span> <span class="ow">and</span> <span class="n">member</span><span class="o">.</span><span class="n">is_module</span> <span class="ow">and</span> <span class="n">member</span><span class="o">.</span><span class="n">path</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">expand_wildcards</span><span class="p">(</span><span class="n">member</span><span class="p">,</span> <span class="n">only_known_modules</span><span class="p">,</span> <span class="n">seen</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">expand_wildcards</span><span class="p">(</span><span class="n">member</span><span class="p">,</span> <span class="n">external</span><span class="p">,</span> <span class="n">seen</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
 
     <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">to_remove</span><span class="p">:</span>
         <span class="k">del</span> <span class="n">obj</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>  <span class="c1"># noqa: WPS420</span>
@@ -1895,13 +1908,18 @@
     <span class="k">for</span> <span class="n">new_member</span><span class="p">,</span> <span class="n">alias_lineno</span><span class="p">,</span> <span class="n">alias_endlineno</span> <span class="ow">in</span> <span class="n">expanded</span><span class="p">:</span>
         <span class="n">overwrite</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="n">already_present</span> <span class="o">=</span> <span class="n">new_member</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">members</span>
+        <span class="n">self_alias</span> <span class="o">=</span> <span class="n">new_member</span><span class="o">.</span><span class="n">is_alias</span> <span class="ow">and</span> <span class="n">cast</span><span class="p">(</span><span class="n">Alias</span><span class="p">,</span> <span class="n">new_member</span><span class="p">)</span><span class="o">.</span><span class="n">target_path</span> <span class="o">==</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">obj</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">new_member</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="k">if</span> <span class="n">already_present</span><span class="p">:</span>
             <span class="n">old_member</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="n">new_member</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>
             <span class="n">old_lineno</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">old_member</span><span class="p">,</span> <span class="s2">&quot;alias_lineno&quot;</span><span class="p">,</span> <span class="n">old_member</span><span class="o">.</span><span class="n">lineno</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">)</span>
             <span class="n">overwrite</span> <span class="o">=</span> <span class="n">alias_lineno</span> <span class="o">&gt;</span> <span class="n">old_lineno</span>  <span class="c1"># type: ignore[operator]</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">already_present</span> <span class="ow">or</span> <span class="n">overwrite</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">self_alias</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">already_present</span> <span class="ow">or</span> <span class="n">overwrite</span><span class="p">):</span>
             <span class="n">obj</span><span class="p">[</span><span class="n">new_member</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">Alias</span><span class="p">(</span>
-                <span class="n">new_member</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">new_member</span><span class="p">,</span> <span class="n">lineno</span><span class="o">=</span><span class="n">alias_lineno</span><span class="p">,</span> <span class="n">endlineno</span><span class="o">=</span><span class="n">alias_endlineno</span>
+                <span class="n">new_member</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                <span class="n">new_member</span><span class="p">,</span>
+                <span class="n">lineno</span><span class="o">=</span><span class="n">alias_lineno</span><span class="p">,</span>
+                <span class="n">endlineno</span><span class="o">=</span><span class="n">alias_endlineno</span><span class="p">,</span>
+                <span class="n">parent</span><span class="o">=</span><span class="n">obj</span><span class="p">,</span>  <span class="c1"># type: ignore[arg-type]</span>
             <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
       </details>
@@ -1913,11 +1931,11 @@
 
 
 
-<h3 class="doc doc-heading" id="griffe.loader.GriffeLoader.load_module">
+<h3 id="griffe.loader.GriffeLoader.load_module" class="doc doc-heading">
         <span class="doc doc-object-name doc-function-name">load_module</span>
 
 
-<a class="headerlink" href="#griffe.loader.GriffeLoader.load_module" title="Permanent link">¤</a></h3>
+<a href="#griffe.loader.GriffeLoader.load_module" class="headerlink" title="Permanent link">¤</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">load_module</span><span class="p">(</span>
     <span class="n">module</span><span class="p">,</span> <span class="n">submodules</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">try_relative_path</span><span class="o">=</span><span class="kc">True</span>
 <span class="p">)</span>
@@ -2017,7 +2035,8 @@
 <span class="normal">152</span>
 <span class="normal">153</span>
 <span class="normal">154</span>
-<span class="normal">155</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">load_module</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">155</span>
+<span class="normal">156</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">load_module</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">module</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">,</span>
     <span class="n">submodules</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -2055,6 +2074,7 @@
             <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Trying inspection on </span><span class="si">{</span><span class="n">module</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="n">module_name</span> <span class="o">=</span> <span class="n">module</span>  <span class="c1"># type: ignore[assignment]</span>
             <span class="n">top_module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_module</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">[</span><span class="n">top_module</span><span class="o">.</span><span class="n">path</span><span class="p">]</span> <span class="o">=</span> <span class="n">top_module</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span>
     <span class="k">else</span><span class="p">:</span>
@@ -2075,11 +2095,11 @@
 
 
 
-<h3 class="doc doc-heading" id="griffe.loader.GriffeLoader.resolve_aliases">
+<h3 id="griffe.loader.GriffeLoader.resolve_aliases" class="doc doc-heading">
         <span class="doc doc-object-name doc-function-name">resolve_aliases</span>
 
 
-<a class="headerlink" href="#griffe.loader.GriffeLoader.resolve_aliases" title="Permanent link">¤</a></h3>
+<a href="#griffe.loader.GriffeLoader.resolve_aliases" class="headerlink" title="Permanent link">¤</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">resolve_aliases</span><span class="p">(</span>
     <span class="o">*</span><span class="p">,</span>
     <span class="n">implicit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -2133,8 +2153,7 @@
 
       <details class="quote">
         <summary>Source code in <code>griffe/loader.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">157</span>
-<span class="normal">158</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">158</span>
 <span class="normal">159</span>
 <span class="normal">160</span>
 <span class="normal">161</span>
@@ -2200,7 +2219,14 @@
 <span class="normal">221</span>
 <span class="normal">222</span>
 <span class="normal">223</span>
-<span class="normal">224</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_aliases</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_aliases</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="o">*</span><span class="p">,</span>
     <span class="n">implicit</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -2254,6 +2280,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">expand_exports</span><span class="p">(</span><span class="n">exports_module</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">wildcards_module</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">collection</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">expand_wildcards</span><span class="p">(</span><span class="n">wildcards_module</span><span class="p">)</span>
+    <span class="n">load_failures</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
     <span class="k">while</span> <span class="n">unresolved</span> <span class="ow">and</span> <span class="n">unresolved</span> <span class="o">!=</span> <span class="n">prev_unresolved</span> <span class="ow">and</span> <span class="n">iteration</span> <span class="o">&lt;</span> <span class="n">max_iterations</span><span class="p">:</span>  <span class="c1"># type: ignore[operator]</span>
         <span class="n">prev_unresolved</span> <span class="o">=</span> <span class="n">unresolved</span> <span class="o">-</span> <span class="p">{</span><span class="s2">&quot;0&quot;</span><span class="p">}</span>
         <span class="n">unresolved</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
@@ -2261,7 +2288,12 @@
         <span class="n">iteration</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">for</span> <span class="n">module_name</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">collection</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
             <span class="n">module</span> <span class="o">=</span> <span class="n">collection</span><span class="p">[</span><span class="n">module_name</span><span class="p">]</span>
-            <span class="n">next_resolved</span><span class="p">,</span> <span class="n">next_unresolved</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolve_module_aliases</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">implicit</span><span class="p">,</span> <span class="n">external</span><span class="p">)</span>
+            <span class="n">next_resolved</span><span class="p">,</span> <span class="n">next_unresolved</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolve_module_aliases</span><span class="p">(</span>
+                <span class="n">module</span><span class="p">,</span>
+                <span class="n">implicit</span><span class="p">,</span>
+                <span class="n">external</span><span class="p">,</span>
+                <span class="n">load_failures</span><span class="o">=</span><span class="n">load_failures</span><span class="p">,</span>
+            <span class="p">)</span>
             <span class="n">resolved</span> <span class="o">|=</span> <span class="n">next_resolved</span>
             <span class="n">unresolved</span> <span class="o">|=</span> <span class="n">next_unresolved</span>
         <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
@@ -2278,13 +2310,17 @@
 
 
 
-<h3 class="doc doc-heading" id="griffe.loader.GriffeLoader.resolve_module_aliases">
+<h3 id="griffe.loader.GriffeLoader.resolve_module_aliases" class="doc doc-heading">
         <span class="doc doc-object-name doc-function-name">resolve_module_aliases</span>
 
 
-<a class="headerlink" href="#griffe.loader.GriffeLoader.resolve_module_aliases" title="Permanent link">¤</a></h3>
+<a href="#griffe.loader.GriffeLoader.resolve_module_aliases" class="headerlink" title="Permanent link">¤</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">resolve_module_aliases</span><span class="p">(</span>
-    <span class="n">obj</span><span class="p">,</span> <span class="n">implicit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">external</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">seen</span><span class="o">=</span><span class="kc">None</span>
+    <span class="n">obj</span><span class="p">,</span>
+    <span class="n">implicit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">external</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">seen</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">load_failures</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
 
@@ -2311,8 +2347,13 @@
       </li>
       <li class="field-body">
         <b>seen</b>
-            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#set">set</a> | None</code>)
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#set">set</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>] | None</code>)
         – <p>Used to avoid infinite recursion.</p>
+      </li>
+      <li class="field-body">
+        <b>load_failures</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#set">set</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>] | None</code>)
+        – <p>Set of external packages we failed to load (to prevent retries).</p>
       </li>
   </ul>
 
@@ -2326,23 +2367,7 @@
 
       <details class="quote">
         <summary>Source code in <code>griffe/loader.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">309</span>
-<span class="normal">310</span>
-<span class="normal">311</span>
-<span class="normal">312</span>
-<span class="normal">313</span>
-<span class="normal">314</span>
-<span class="normal">315</span>
-<span class="normal">316</span>
-<span class="normal">317</span>
-<span class="normal">318</span>
-<span class="normal">319</span>
-<span class="normal">320</span>
-<span class="normal">321</span>
-<span class="normal">322</span>
-<span class="normal">323</span>
-<span class="normal">324</span>
-<span class="normal">325</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">325</span>
 <span class="normal">326</span>
 <span class="normal">327</span>
 <span class="normal">328</span>
@@ -2381,12 +2406,38 @@
 <span class="normal">361</span>
 <span class="normal">362</span>
 <span class="normal">363</span>
-<span class="normal">364</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_module_aliases</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_module_aliases</span><span class="p">(</span>  <span class="c1"># noqa: WPS231</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">obj</span><span class="p">:</span> <span class="n">Object</span><span class="p">,</span>
     <span class="n">implicit</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="n">external</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-    <span class="n">seen</span><span class="p">:</span> <span class="nb">set</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">seen</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">load_failures</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
     <span class="sd">&quot;&quot;&quot;Follow aliases: try to recursively resolve all found aliases.</span>
 
@@ -2395,12 +2446,15 @@
 <span class="sd">        implicit: When false, only try to resolve an alias if it is explicitely exported.</span>
 <span class="sd">        external: When false, don&#39;t try to load unspecified modules to resolve aliases.</span>
 <span class="sd">        seen: Used to avoid infinite recursion.</span>
+<span class="sd">        load_failures: Set of external packages we failed to load (to prevent retries).</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        Both sets of resolved and unresolved aliases.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">resolved</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
     <span class="n">unresolved</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">load_failures</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">load_failures</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
     <span class="n">seen</span> <span class="o">=</span> <span class="n">seen</span> <span class="ow">or</span> <span class="nb">set</span><span class="p">()</span>
     <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
 
@@ -2413,17 +2467,22 @@
             <span class="k">try</span><span class="p">:</span>
                 <span class="n">member</span><span class="o">.</span><span class="n">resolve_target</span><span class="p">()</span>  <span class="c1"># type: ignore[union-attr]</span>
             <span class="k">except</span> <span class="n">AliasResolutionError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>  <span class="c1"># noqa: WPS440</span>
-                <span class="n">path</span> <span class="o">=</span> <span class="n">member</span><span class="o">.</span><span class="n">path</span>
                 <span class="n">target</span> <span class="o">=</span> <span class="n">error</span><span class="o">.</span><span class="n">target_path</span>  <span class="c1"># type: ignore[union-attr]  # noqa: WPS437</span>
-                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Alias resolution error for </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="n">target</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-                <span class="n">unresolved</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+                <span class="n">unresolved</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">member</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
                 <span class="n">package</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-                <span class="n">load_module</span> <span class="o">=</span> <span class="n">external</span> <span class="ow">and</span> <span class="n">obj</span><span class="o">.</span><span class="n">package</span><span class="o">.</span><span class="n">path</span> <span class="o">!=</span> <span class="n">package</span> <span class="ow">and</span> <span class="n">package</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span>
+                <span class="n">load_module</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="n">external</span>
+                    <span class="ow">and</span> <span class="n">package</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">load_failures</span>
+                    <span class="ow">and</span> <span class="n">obj</span><span class="o">.</span><span class="n">package</span><span class="o">.</span><span class="n">path</span> <span class="o">!=</span> <span class="n">package</span>
+                    <span class="ow">and</span> <span class="n">package</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span>
+                <span class="p">)</span>
                 <span class="k">if</span> <span class="n">load_module</span><span class="p">:</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to resolve alias </span><span class="si">{</span><span class="n">member</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="n">target</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
                     <span class="k">try</span><span class="p">:</span>  <span class="c1"># noqa: WPS505</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="n">package</span><span class="p">,</span> <span class="n">try_relative_path</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
                     <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>  <span class="c1"># noqa: WPS440</span>
                         <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Could not follow alias </span><span class="si">{</span><span class="n">member</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                        <span class="n">load_failures</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">package</span><span class="p">)</span>
             <span class="k">except</span> <span class="n">CyclicAliasError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
                 <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">error</span><span class="p">))</span>
             <span class="k">else</span><span class="p">:</span>
@@ -2431,7 +2490,7 @@
                 <span class="n">resolved</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">member</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">member</span><span class="o">.</span><span class="n">kind</span> <span class="ow">in</span> <span class="p">{</span><span class="n">Kind</span><span class="o">.</span><span class="n">MODULE</span><span class="p">,</span> <span class="n">Kind</span><span class="o">.</span><span class="n">CLASS</span><span class="p">}</span> <span class="ow">and</span> <span class="n">member</span><span class="o">.</span><span class="n">path</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
             <span class="n">sub_resolved</span><span class="p">,</span> <span class="n">sub_unresolved</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolve_module_aliases</span><span class="p">(</span>
-                <span class="n">member</span><span class="p">,</span> <span class="n">implicit</span><span class="p">,</span> <span class="n">external</span><span class="p">,</span> <span class="n">seen</span>  <span class="c1"># type: ignore[arg-type]</span>
+                <span class="n">member</span><span class="p">,</span> <span class="n">implicit</span><span class="p">,</span> <span class="n">external</span><span class="p">,</span> <span class="n">seen</span><span class="p">,</span> <span class="n">load_failures</span>  <span class="c1"># type: ignore[arg-type]</span>
             <span class="p">)</span>
             <span class="n">resolved</span> <span class="o">|=</span> <span class="n">sub_resolved</span>
             <span class="n">unresolved</span> <span class="o">|=</span> <span class="n">sub_unresolved</span>
@@ -2447,11 +2506,11 @@
 
 
 
-<h3 class="doc doc-heading" id="griffe.loader.GriffeLoader.stats">
+<h3 id="griffe.loader.GriffeLoader.stats" class="doc doc-heading">
         <span class="doc doc-object-name doc-function-name">stats</span>
 
 
-<a class="headerlink" href="#griffe.loader.GriffeLoader.stats" title="Permanent link">¤</a></h3>
+<a href="#griffe.loader.GriffeLoader.stats" class="headerlink" title="Permanent link">¤</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">stats</span><span class="p">()</span>
 </code></pre></div>
 
@@ -2469,13 +2528,13 @@
 
       <details class="quote">
         <summary>Source code in <code>griffe/loader.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">366</span>
-<span class="normal">367</span>
-<span class="normal">368</span>
-<span class="normal">369</span>
-<span class="normal">370</span>
-<span class="normal">371</span>
-<span class="normal">372</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">stats</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span>
+<span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">stats</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Compute some statistics.</span>
 
 <span class="sd">    Returns:</span>
@@ -2501,11 +2560,11 @@
 
 
 
-<h2 class="doc doc-heading" id="griffe.loader.load">
+<h2 id="griffe.loader.load" class="doc doc-heading">
         <span class="doc doc-object-name doc-function-name">load</span>
 
 
-<a class="headerlink" href="#griffe.loader.load" title="Permanent link">¤</a></h2>
+<a href="#griffe.loader.load" class="headerlink" title="Permanent link">¤</a></h2>
 <div class="highlight"><pre><span></span><code><span class="n">load</span><span class="p">(</span>
     <span class="n">module</span><span class="p">,</span>
     <span class="n">submodules</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -2600,32 +2659,7 @@
 
       <details class="quote">
         <summary>Source code in <code>griffe/loader.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">535</span>
-<span class="normal">536</span>
-<span class="normal">537</span>
-<span class="normal">538</span>
-<span class="normal">539</span>
-<span class="normal">540</span>
-<span class="normal">541</span>
-<span class="normal">542</span>
-<span class="normal">543</span>
-<span class="normal">544</span>
-<span class="normal">545</span>
-<span class="normal">546</span>
-<span class="normal">547</span>
-<span class="normal">548</span>
-<span class="normal">549</span>
-<span class="normal">550</span>
-<span class="normal">551</span>
-<span class="normal">552</span>
-<span class="normal">553</span>
-<span class="normal">554</span>
-<span class="normal">555</span>
-<span class="normal">556</span>
-<span class="normal">557</span>
-<span class="normal">558</span>
-<span class="normal">559</span>
-<span class="normal">560</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">560</span>
 <span class="normal">561</span>
 <span class="normal">562</span>
 <span class="normal">563</span>
@@ -2660,7 +2694,32 @@
 <span class="normal">592</span>
 <span class="normal">593</span>
 <span class="normal">594</span>
-<span class="normal">595</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">load</span><span class="p">(</span>
+<span class="normal">595</span>
+<span class="normal">596</span>
+<span class="normal">597</span>
+<span class="normal">598</span>
+<span class="normal">599</span>
+<span class="normal">600</span>
+<span class="normal">601</span>
+<span class="normal">602</span>
+<span class="normal">603</span>
+<span class="normal">604</span>
+<span class="normal">605</span>
+<span class="normal">606</span>
+<span class="normal">607</span>
+<span class="normal">608</span>
+<span class="normal">609</span>
+<span class="normal">610</span>
+<span class="normal">611</span>
+<span class="normal">612</span>
+<span class="normal">613</span>
+<span class="normal">614</span>
+<span class="normal">615</span>
+<span class="normal">616</span>
+<span class="normal">617</span>
+<span class="normal">618</span>
+<span class="normal">619</span>
+<span class="normal">620</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">load</span><span class="p">(</span>
     <span class="n">module</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">,</span>
     <span class="n">submodules</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">try_relative_path</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
