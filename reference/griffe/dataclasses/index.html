@@ -2875,8 +2875,8 @@ If it's an object, or even another alias, the target is immediately set.</p>
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-writable"><code>writable</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Alias.parent" class="headerlink" title="Permanent link">¤</a></h3>
@@ -2970,8 +2970,8 @@ If it's an object, or even another alias, the target is immediately set.</p>
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-writable"><code>writable</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Alias.target" class="headerlink" title="Permanent link">¤</a></h3>
@@ -3202,6 +3202,7 @@ and added to the collection.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_passed_through</span><span class="p">:</span>
         <span class="k">raise</span> <span class="n">CyclicAliasError</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">target_path</span><span class="p">])</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_passed_through</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">resolved</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">target_path</span><span class="p">]</span>
     <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
@@ -3209,7 +3210,6 @@ and added to the collection.</p>
     <span class="k">if</span> <span class="n">resolved</span> <span class="ow">is</span> <span class="bp">self</span><span class="p">:</span>
         <span class="k">raise</span> <span class="n">CyclicAliasError</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">target_path</span><span class="p">])</span>
     <span class="k">if</span> <span class="n">resolved</span><span class="o">.</span><span class="n">is_alias</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">resolved</span><span class="o">.</span><span class="n">resolved</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_passed_through</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">resolved</span><span class="o">.</span><span class="n">resolve_target</span><span class="p">()</span>
         <span class="k">except</span> <span class="n">CyclicAliasError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>  <span class="c1"># noqa: WPS440</span>
