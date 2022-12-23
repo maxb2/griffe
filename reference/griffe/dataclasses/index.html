@@ -2644,9 +2644,7 @@ If it's an object, or even another alias, the target is immediately set.</p>
 <span class="normal">807</span>
 <span class="normal">808</span>
 <span class="normal">809</span>
-<span class="normal">810</span>
-<span class="normal">811</span>
-<span class="normal">812</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">810</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">target</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Object</span> <span class="o">|</span> <span class="n">Alias</span><span class="p">,</span>
@@ -2679,9 +2677,7 @@ If it's an object, or even another alias, the target is immediately set.</p>
     <span class="k">else</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_target</span> <span class="o">=</span> <span class="n">target</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">target_path</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">path</span>
-        <span class="k">if</span> <span class="n">parent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="n">AliasResolutionError</span><span class="p">):</span>
-                <span class="n">target</span><span class="o">.</span><span class="n">aliases</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_update_target_aliases</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
           </details>
 
@@ -2843,8 +2839,8 @@ If it's an object, or even another alias, the target is immediately set.</p>
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Alias.modules_collection" class="headerlink" title="Permanent link">¤</a></h3>
@@ -2875,8 +2871,8 @@ If it's an object, or even another alias, the target is immediately set.</p>
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
       <small class="doc doc-label doc-label-property"><code>property</code></small>
+      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Alias.parent" class="headerlink" title="Permanent link">¤</a></h3>
@@ -2907,8 +2903,8 @@ If it's an object, or even another alias, the target is immediately set.</p>
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Alias.path" class="headerlink" title="Permanent link">¤</a></h3>
@@ -2970,8 +2966,8 @@ If it's an object, or even another alias, the target is immediately set.</p>
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
       <small class="doc doc-label doc-label-property"><code>property</code></small>
+      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Alias.target" class="headerlink" title="Permanent link">¤</a></h3>
@@ -3004,8 +3000,8 @@ a lookup is done using the modules collection to find the target.</p>
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Alias.wildcard" class="headerlink" title="Permanent link">¤</a></h3>
@@ -3069,11 +3065,7 @@ a lookup is done using the modules collection to find the target.</p>
 
       <details class="quote">
         <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1145</span>
-<span class="normal">1146</span>
-<span class="normal">1147</span>
-<span class="normal">1148</span>
-<span class="normal">1149</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1149</span>
 <span class="normal">1150</span>
 <span class="normal">1151</span>
 <span class="normal">1152</span>
@@ -3093,7 +3085,11 @@ a lookup is done using the modules collection to find the target.</p>
 <span class="normal">1166</span>
 <span class="normal">1167</span>
 <span class="normal">1168</span>
-<span class="normal">1169</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="normal">1169</span>
+<span class="normal">1170</span>
+<span class="normal">1171</span>
+<span class="normal">1172</span>
+<span class="normal">1173</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Return this alias&#39; data as a dictionary.</span>
 
 <span class="sd">    Parameters:</span>
@@ -3160,7 +3156,11 @@ and added to the collection.</p>
 
       <details class="quote">
         <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1094</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1090</span>
+<span class="normal">1091</span>
+<span class="normal">1092</span>
+<span class="normal">1093</span>
+<span class="normal">1094</span>
 <span class="normal">1095</span>
 <span class="normal">1096</span>
 <span class="normal">1097</span>
@@ -3173,23 +3173,7 @@ and added to the collection.</p>
 <span class="normal">1104</span>
 <span class="normal">1105</span>
 <span class="normal">1106</span>
-<span class="normal">1107</span>
-<span class="normal">1108</span>
-<span class="normal">1109</span>
-<span class="normal">1110</span>
-<span class="normal">1111</span>
-<span class="normal">1112</span>
-<span class="normal">1113</span>
-<span class="normal">1114</span>
-<span class="normal">1115</span>
-<span class="normal">1116</span>
-<span class="normal">1117</span>
-<span class="normal">1118</span>
-<span class="normal">1119</span>
-<span class="normal">1120</span>
-<span class="normal">1121</span>
-<span class="normal">1122</span>
-<span class="normal">1123</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_target</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># noqa: WPS231,WPS238</span>
+<span class="normal">1107</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_target</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># noqa: WPS231,WPS238</span>
     <span class="sd">&quot;&quot;&quot;Resolve the target.</span>
 
 <span class="sd">    Raises:</span>
@@ -3203,22 +3187,10 @@ and added to the collection.</p>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_passed_through</span><span class="p">:</span>
         <span class="k">raise</span> <span class="n">CyclicAliasError</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">target_path</span><span class="p">])</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_passed_through</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">resolved</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">modules_collection</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">target_path</span><span class="p">]</span>
-    <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">AliasResolutionError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target_path</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">error</span>
-    <span class="k">if</span> <span class="n">resolved</span> <span class="ow">is</span> <span class="bp">self</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">CyclicAliasError</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">target_path</span><span class="p">])</span>
-    <span class="k">if</span> <span class="n">resolved</span><span class="o">.</span><span class="n">is_alias</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">resolved</span><span class="o">.</span><span class="n">resolved</span><span class="p">:</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">resolved</span><span class="o">.</span><span class="n">resolve_target</span><span class="p">()</span>
-        <span class="k">except</span> <span class="n">CyclicAliasError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>  <span class="c1"># noqa: WPS440</span>
-            <span class="k">raise</span> <span class="n">CyclicAliasError</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">target_path</span><span class="p">]</span> <span class="o">+</span> <span class="n">error</span><span class="o">.</span><span class="n">chain</span><span class="p">)</span>
-        <span class="k">finally</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_passed_through</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_target</span> <span class="o">=</span> <span class="n">resolved</span>
-    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_target</span><span class="o">.</span><span class="n">aliases</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span>  <span class="c1"># type: ignore[union-attr]  # we just set the target</span>
+    <span class="k">try</span><span class="p">:</span>  <span class="c1"># noqa: WPS501</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_resolve_target</span><span class="p">()</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_passed_through</span> <span class="o">=</span> <span class="kc">False</span>
 </code></pre></div></td></tr></table></div>
       </details>
   </div>
@@ -3280,11 +3252,7 @@ and added to the collection.</p>
 
           <details class="quote">
             <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1404</span>
-<span class="normal">1405</span>
-<span class="normal">1406</span>
-<span class="normal">1407</span>
-<span class="normal">1408</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1408</span>
 <span class="normal">1409</span>
 <span class="normal">1410</span>
 <span class="normal">1411</span>
@@ -3297,7 +3265,11 @@ and added to the collection.</p>
 <span class="normal">1418</span>
 <span class="normal">1419</span>
 <span class="normal">1420</span>
-<span class="normal">1421</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">1421</span>
+<span class="normal">1422</span>
+<span class="normal">1423</span>
+<span class="normal">1424</span>
+<span class="normal">1425</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
     <span class="n">value</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -3365,11 +3337,7 @@ and added to the collection.</p>
 
       <details class="quote">
         <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1423</span>
-<span class="normal">1424</span>
-<span class="normal">1425</span>
-<span class="normal">1426</span>
-<span class="normal">1427</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1427</span>
 <span class="normal">1428</span>
 <span class="normal">1429</span>
 <span class="normal">1430</span>
@@ -3379,7 +3347,11 @@ and added to the collection.</p>
 <span class="normal">1434</span>
 <span class="normal">1435</span>
 <span class="normal">1436</span>
-<span class="normal">1437</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
+<span class="normal">1437</span>
+<span class="normal">1438</span>
+<span class="normal">1439</span>
+<span class="normal">1440</span>
+<span class="normal">1441</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
     <span class="sd">&quot;&quot;&quot;Return this function&#39;s data as a dictionary.</span>
 
 <span class="sd">    Parameters:</span>
@@ -3455,11 +3427,7 @@ and added to the collection.</p>
 
           <details class="quote">
             <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1290</span>
-<span class="normal">1291</span>
-<span class="normal">1292</span>
-<span class="normal">1293</span>
-<span class="normal">1294</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1294</span>
 <span class="normal">1295</span>
 <span class="normal">1296</span>
 <span class="normal">1297</span>
@@ -3473,7 +3441,11 @@ and added to the collection.</p>
 <span class="normal">1305</span>
 <span class="normal">1306</span>
 <span class="normal">1307</span>
-<span class="normal">1308</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">1308</span>
+<span class="normal">1309</span>
+<span class="normal">1310</span>
+<span class="normal">1311</span>
+<span class="normal">1312</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
     <span class="n">bases</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Name</span> <span class="o">|</span> <span class="n">Expression</span> <span class="o">|</span> <span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -3573,11 +3545,7 @@ and added to the collection.</p>
 
       <details class="quote">
         <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1329</span>
-<span class="normal">1330</span>
-<span class="normal">1331</span>
-<span class="normal">1332</span>
-<span class="normal">1333</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1333</span>
 <span class="normal">1334</span>
 <span class="normal">1335</span>
 <span class="normal">1336</span>
@@ -3585,7 +3553,11 @@ and added to the collection.</p>
 <span class="normal">1338</span>
 <span class="normal">1339</span>
 <span class="normal">1340</span>
-<span class="normal">1341</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
+<span class="normal">1341</span>
+<span class="normal">1342</span>
+<span class="normal">1343</span>
+<span class="normal">1344</span>
+<span class="normal">1345</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
     <span class="sd">&quot;&quot;&quot;Return this class&#39; data as a dictionary.</span>
 
 <span class="sd">    Parameters:</span>
@@ -3938,8 +3910,8 @@ and added to the collection.</p>
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Docstring.lines" class="headerlink" title="Permanent link">¤</a></h3>
@@ -3970,8 +3942,8 @@ and added to the collection.</p>
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Docstring.parsed" class="headerlink" title="Permanent link">¤</a></h3>
@@ -4219,11 +4191,7 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
           <details class="quote">
             <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1349</span>
-<span class="normal">1350</span>
-<span class="normal">1351</span>
-<span class="normal">1352</span>
-<span class="normal">1353</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1353</span>
 <span class="normal">1354</span>
 <span class="normal">1355</span>
 <span class="normal">1356</span>
@@ -4242,7 +4210,11 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 <span class="normal">1369</span>
 <span class="normal">1370</span>
 <span class="normal">1371</span>
-<span class="normal">1372</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">1372</span>
+<span class="normal">1373</span>
+<span class="normal">1374</span>
+<span class="normal">1375</span>
+<span class="normal">1376</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
     <span class="n">parameters</span><span class="p">:</span> <span class="n">Parameters</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -4347,11 +4319,7 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
       <details class="quote">
         <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1383</span>
-<span class="normal">1384</span>
-<span class="normal">1385</span>
-<span class="normal">1386</span>
-<span class="normal">1387</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1387</span>
 <span class="normal">1388</span>
 <span class="normal">1389</span>
 <span class="normal">1390</span>
@@ -4360,7 +4328,11 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 <span class="normal">1393</span>
 <span class="normal">1394</span>
 <span class="normal">1395</span>
-<span class="normal">1396</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
+<span class="normal">1396</span>
+<span class="normal">1397</span>
+<span class="normal">1398</span>
+<span class="normal">1399</span>
+<span class="normal">1400</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
     <span class="sd">&quot;&quot;&quot;Return this function&#39;s data as a dictionary.</span>
 
 <span class="sd">    Parameters:</span>
@@ -4494,17 +4466,17 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
           <details class="quote">
             <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1177</span>
-<span class="normal">1178</span>
-<span class="normal">1179</span>
-<span class="normal">1180</span>
-<span class="normal">1181</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1181</span>
 <span class="normal">1182</span>
 <span class="normal">1183</span>
 <span class="normal">1184</span>
 <span class="normal">1185</span>
 <span class="normal">1186</span>
-<span class="normal">1187</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">1187</span>
+<span class="normal">1188</span>
+<span class="normal">1189</span>
+<span class="normal">1190</span>
+<span class="normal">1191</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Path</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Initialize the module.</span>
 
 <span class="sd">    Parameters:</span>
@@ -4577,8 +4549,8 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Module.is_init_module" class="headerlink" title="Permanent link">¤</a></h3>
@@ -4609,8 +4581,8 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Module.is_namespace_package" class="headerlink" title="Permanent link">¤</a></h3>
@@ -4641,8 +4613,8 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Module.is_namespace_subpackage" class="headerlink" title="Permanent link">¤</a></h3>
@@ -4673,8 +4645,8 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Module.is_package" class="headerlink" title="Permanent link">¤</a></h3>
@@ -4705,8 +4677,8 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Module.is_subpackage" class="headerlink" title="Permanent link">¤</a></h3>
@@ -4765,18 +4737,18 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
       <details class="quote">
         <summary>Source code in <code>griffe/dataclasses.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1271</span>
-<span class="normal">1272</span>
-<span class="normal">1273</span>
-<span class="normal">1274</span>
-<span class="normal">1275</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1275</span>
 <span class="normal">1276</span>
 <span class="normal">1277</span>
 <span class="normal">1278</span>
 <span class="normal">1279</span>
 <span class="normal">1280</span>
 <span class="normal">1281</span>
-<span class="normal">1282</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
+<span class="normal">1282</span>
+<span class="normal">1283</span>
+<span class="normal">1284</span>
+<span class="normal">1285</span>
+<span class="normal">1286</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># type: ignore[override]</span>
     <span class="sd">&quot;&quot;&quot;Return this module&#39;s data as a dictionary.</span>
 
 <span class="sd">    Parameters:</span>
@@ -5057,8 +5029,8 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Object.canonical_path" class="headerlink" title="Permanent link">¤</a></h3>
@@ -5121,8 +5093,8 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Object.filepath" class="headerlink" title="Permanent link">¤</a></h3>
@@ -5322,8 +5294,8 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Object.lines" class="headerlink" title="Permanent link">¤</a></h3>
@@ -5354,8 +5326,8 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Object.lines_collection" class="headerlink" title="Permanent link">¤</a></h3>
@@ -5395,8 +5367,8 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Object.module" class="headerlink" title="Permanent link">¤</a></h3>
@@ -5467,8 +5439,8 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Object.modules_collection" class="headerlink" title="Permanent link">¤</a></h3>
@@ -5508,8 +5480,8 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Object.package" class="headerlink" title="Permanent link">¤</a></h3>
@@ -5540,8 +5512,8 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Object.path" class="headerlink" title="Permanent link">¤</a></h3>
@@ -5573,8 +5545,8 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Object.relative_filepath" class="headerlink" title="Permanent link">¤</a></h3>
@@ -5614,8 +5586,8 @@ In order: use the given parser, or the self parser, or no parser (return a singl
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 <a href="#griffe.dataclasses.Object.source" class="headerlink" title="Permanent link">¤</a></h3>

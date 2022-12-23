@@ -15993,7 +15993,7 @@
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
 "lineno": 752,
-"endlineno": 1169,
+"endlineno": 1173,
 "docstring": {
 "value": "This class represents an alias, or indirection, to an object declared in another module.\n\nAliases represent objects that are in the scope of a module or class,\nbut were imported from another module.\n\nThey behave almost exactly like regular objects, to a few exceptions:\n\n- line numbers are those of the alias, not the target\n- the path is the alias path, not the canonical one\n- the name can be different from the target's\n- if the target can be resolved, the kind is the target's kind\n- if the target cannot be resolved, the kind becomes [Kind.ALIAS][griffe.dataclasses.Kind]\n\nAttributes:\n    name: The alias name.\n    lineno: The alias starting line number.\n    endlineno: The alias ending line number.\n    parent: The alias parent.\n    target_path: The alias target path.",
 "lineno": 753,
@@ -16114,7 +16114,7 @@
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
 "lineno": 777,
-"endlineno": 812,
+"endlineno": 810,
 "docstring": {
 "value": "Initialize the alias.\n\nParameters:\n    name: The alias name.\n    target: If it's a string, the target resolution is delayed until accessing the target property.\n        If it's an object, or even another alias, the target is immediately set.\n    lineno: The alias starting line number.\n    endlineno: The alias ending line number.\n    runtime: Whether this alias is present at runtime or not.\n    parent: The alias parent.",
 "lineno": 787,
@@ -16492,8 +16492,8 @@
 "path": "griffe.dataclasses.Alias.__repr__",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 814,
-"endlineno": 815,
+"lineno": 812,
+"endlineno": 813,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -16516,8 +16516,8 @@
 "path": "griffe.dataclasses.Alias.__getitem__",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 817,
-"endlineno": 819,
+"lineno": 815,
+"endlineno": 817,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -16543,8 +16543,8 @@
 "path": "griffe.dataclasses.Alias.__setitem__",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 821,
-"endlineno": 823,
+"lineno": 819,
+"endlineno": 821,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -16576,8 +16576,8 @@
 "path": "griffe.dataclasses.Alias.__len__",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 825,
-"endlineno": 826,
+"lineno": 823,
+"endlineno": 824,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -16600,12 +16600,12 @@
 "path": "griffe.dataclasses.Alias.kind",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 831,
-"endlineno": 841,
+"lineno": 829,
+"endlineno": 839,
 "docstring": {
 "value": "Return the target's kind, or Kind.ALIAS if the target cannot be resolved.\n\nReturns:\n    A kind.",
-"lineno": 832,
-"endlineno": 836,
+"lineno": 830,
+"endlineno": 834,
 "parsed": [
 {
 "kind": "text",
@@ -16641,12 +16641,12 @@
 "path": "griffe.dataclasses.Alias.lineno",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 844,
-"endlineno": 852,
+"lineno": 842,
+"endlineno": 850,
 "docstring": {
 "value": "Return the target lineno or the alias lineno.\n\nReturns:\n    The target lineno or the alias lineno.",
-"lineno": 845,
-"endlineno": 849,
+"lineno": 843,
+"endlineno": 847,
 "parsed": [
 {
 "kind": "text",
@@ -16690,12 +16690,12 @@
 "path": "griffe.dataclasses.Alias.endlineno",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 855,
-"endlineno": 863,
+"lineno": 853,
+"endlineno": 861,
 "docstring": {
 "value": "Return the target endlineno or the alias endlineno.\n\nReturns:\n    The target endlineno or the alias endlineno.",
-"lineno": 856,
-"endlineno": 860,
+"lineno": 854,
+"endlineno": 858,
 "parsed": [
 {
 "kind": "text",
@@ -16739,12 +16739,12 @@
 "path": "griffe.dataclasses.Alias.has_docstring",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 866,
-"endlineno": 868,
+"lineno": 864,
+"endlineno": 866,
 "docstring": {
 "value": "Tell if this alias' target has a non-empty docstring.",
-"lineno": 867,
-"endlineno": 867,
+"lineno": 865,
+"endlineno": 865,
 "parsed": [
 {
 "kind": "text",
@@ -16767,12 +16767,12 @@
 "path": "griffe.dataclasses.Alias.has_docstrings",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 871,
-"endlineno": 873,
+"lineno": 869,
+"endlineno": 871,
 "docstring": {
 "value": "Tell if this alias' target or any of its members has a non-empty docstring.",
-"lineno": 872,
-"endlineno": 872,
+"lineno": 870,
+"endlineno": 870,
 "parsed": [
 {
 "kind": "text",
@@ -16795,12 +16795,12 @@
 "path": "griffe.dataclasses.Alias.parent",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 876,
-"endlineno": 882,
+"lineno": 874,
+"endlineno": 880,
 "docstring": {
 "value": "Return the parent of this alias.\n\nReturns:\n    The parent.",
-"lineno": 877,
-"endlineno": 881,
+"lineno": 875,
+"endlineno": 879,
 "parsed": [
 {
 "kind": "text",
@@ -16859,12 +16859,12 @@
 "path": "griffe.dataclasses.Alias.path",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 892,
-"endlineno": 898,
+"lineno": 888,
+"endlineno": 894,
 "docstring": {
 "value": "Return the dotted path / import path of this object.\n\nReturns:\n    A dotted path.",
-"lineno": 893,
-"endlineno": 897,
+"lineno": 889,
+"endlineno": 893,
 "parsed": [
 {
 "kind": "text",
@@ -16901,12 +16901,12 @@
 "path": "griffe.dataclasses.Alias.modules_collection",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 901,
-"endlineno": 908,
+"lineno": 897,
+"endlineno": 904,
 "docstring": {
 "value": "Return the modules collection attached to the alias parents.\n\nReturns:\n    A modules collection.",
-"lineno": 902,
-"endlineno": 906,
+"lineno": 898,
+"endlineno": 902,
 "parsed": [
 {
 "kind": "text",
@@ -16943,8 +16943,8 @@
 "path": "griffe.dataclasses.Alias.docstring",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 913,
-"endlineno": 914,
+"lineno": 909,
+"endlineno": 910,
 "labels": [
 "property"
 ],
@@ -16956,8 +16956,8 @@
 "path": "griffe.dataclasses.Alias.members",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 917,
-"endlineno": 918,
+"lineno": 913,
+"endlineno": 914,
 "labels": [
 "property"
 ],
@@ -16969,8 +16969,8 @@
 "path": "griffe.dataclasses.Alias.labels",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 921,
-"endlineno": 922,
+"lineno": 917,
+"endlineno": 918,
 "labels": [
 "property"
 ],
@@ -16982,8 +16982,8 @@
 "path": "griffe.dataclasses.Alias.imports",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 925,
-"endlineno": 926,
+"lineno": 921,
+"endlineno": 922,
 "labels": [
 "property"
 ],
@@ -16995,8 +16995,8 @@
 "path": "griffe.dataclasses.Alias.exports",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 929,
-"endlineno": 930,
+"lineno": 925,
+"endlineno": 926,
 "labels": [
 "property"
 ],
@@ -17008,8 +17008,8 @@
 "path": "griffe.dataclasses.Alias.aliases",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 933,
-"endlineno": 934,
+"lineno": 929,
+"endlineno": 930,
 "labels": [
 "property"
 ],
@@ -17021,8 +17021,8 @@
 "path": "griffe.dataclasses.Alias.member_is_exported",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 936,
-"endlineno": 937,
+"lineno": 932,
+"endlineno": 933,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -17070,8 +17070,8 @@
 "path": "griffe.dataclasses.Alias.is_kind",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 939,
-"endlineno": 940,
+"lineno": 935,
+"endlineno": 936,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -17132,8 +17132,8 @@
 "path": "griffe.dataclasses.Alias.is_module",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 943,
-"endlineno": 944,
+"lineno": 939,
+"endlineno": 940,
 "labels": [
 "property"
 ],
@@ -17145,8 +17145,8 @@
 "path": "griffe.dataclasses.Alias.is_class",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 947,
-"endlineno": 948,
+"lineno": 943,
+"endlineno": 944,
 "labels": [
 "property"
 ],
@@ -17158,8 +17158,8 @@
 "path": "griffe.dataclasses.Alias.is_function",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 951,
-"endlineno": 952,
+"lineno": 947,
+"endlineno": 948,
 "labels": [
 "property"
 ],
@@ -17171,8 +17171,8 @@
 "path": "griffe.dataclasses.Alias.is_attribute",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 955,
-"endlineno": 956,
+"lineno": 951,
+"endlineno": 952,
 "labels": [
 "property"
 ],
@@ -17184,8 +17184,8 @@
 "path": "griffe.dataclasses.Alias.has_labels",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 958,
-"endlineno": 959,
+"lineno": 954,
+"endlineno": 955,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -17225,8 +17225,8 @@
 "path": "griffe.dataclasses.Alias.filter_members",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 961,
-"endlineno": 962,
+"lineno": 957,
+"endlineno": 958,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -17306,8 +17306,8 @@
 "path": "griffe.dataclasses.Alias.modules",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 965,
-"endlineno": 966,
+"lineno": 961,
+"endlineno": 962,
 "labels": [
 "property"
 ],
@@ -17319,8 +17319,8 @@
 "path": "griffe.dataclasses.Alias.classes",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 969,
-"endlineno": 970,
+"lineno": 965,
+"endlineno": 966,
 "labels": [
 "property"
 ],
@@ -17332,8 +17332,8 @@
 "path": "griffe.dataclasses.Alias.functions",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 973,
-"endlineno": 974,
+"lineno": 969,
+"endlineno": 970,
 "labels": [
 "property"
 ],
@@ -17345,8 +17345,8 @@
 "path": "griffe.dataclasses.Alias.attributes",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 977,
-"endlineno": 978,
+"lineno": 973,
+"endlineno": 974,
 "labels": [
 "property"
 ],
@@ -17358,8 +17358,8 @@
 "path": "griffe.dataclasses.Alias.module",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 981,
-"endlineno": 982,
+"lineno": 977,
+"endlineno": 978,
 "labels": [
 "property"
 ],
@@ -17371,8 +17371,8 @@
 "path": "griffe.dataclasses.Alias.package",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 985,
-"endlineno": 986,
+"lineno": 981,
+"endlineno": 982,
 "labels": [
 "property"
 ],
@@ -17384,8 +17384,8 @@
 "path": "griffe.dataclasses.Alias.filepath",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 989,
-"endlineno": 990,
+"lineno": 985,
+"endlineno": 986,
 "labels": [
 "property"
 ],
@@ -17397,8 +17397,8 @@
 "path": "griffe.dataclasses.Alias.relative_filepath",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 993,
-"endlineno": 994,
+"lineno": 989,
+"endlineno": 990,
 "labels": [
 "property"
 ],
@@ -17410,8 +17410,8 @@
 "path": "griffe.dataclasses.Alias.canonical_path",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 997,
-"endlineno": 998,
+"lineno": 993,
+"endlineno": 994,
 "labels": [
 "property"
 ],
@@ -17423,8 +17423,8 @@
 "path": "griffe.dataclasses.Alias.lines_collection",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1001,
-"endlineno": 1002,
+"lineno": 997,
+"endlineno": 998,
 "labels": [
 "property"
 ],
@@ -17436,8 +17436,8 @@
 "path": "griffe.dataclasses.Alias.lines",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1005,
-"endlineno": 1006,
+"lineno": 1001,
+"endlineno": 1002,
 "labels": [
 "property"
 ],
@@ -17449,8 +17449,8 @@
 "path": "griffe.dataclasses.Alias.source",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1009,
-"endlineno": 1010,
+"lineno": 1005,
+"endlineno": 1006,
 "labels": [
 "property"
 ],
@@ -17462,8 +17462,8 @@
 "path": "griffe.dataclasses.Alias.resolve",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1012,
-"endlineno": 1013,
+"lineno": 1008,
+"endlineno": 1009,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -17495,8 +17495,8 @@
 "path": "griffe.dataclasses.Alias._filepath",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1018,
-"endlineno": 1019,
+"lineno": 1014,
+"endlineno": 1015,
 "labels": [
 "property"
 ],
@@ -17531,8 +17531,8 @@
 "path": "griffe.dataclasses.Alias.bases",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1022,
-"endlineno": 1023,
+"lineno": 1018,
+"endlineno": 1019,
 "labels": [
 "property"
 ],
@@ -17570,8 +17570,8 @@
 "path": "griffe.dataclasses.Alias.decorators",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1026,
-"endlineno": 1027,
+"lineno": 1022,
+"endlineno": 1023,
 "labels": [
 "property"
 ],
@@ -17595,8 +17595,8 @@
 "path": "griffe.dataclasses.Alias.overloads",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1030,
-"endlineno": 1031,
+"lineno": 1026,
+"endlineno": 1027,
 "labels": [
 "property",
 "writable"
@@ -17655,8 +17655,8 @@
 "path": "griffe.dataclasses.Alias.parameters",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1038,
-"endlineno": 1039,
+"lineno": 1034,
+"endlineno": 1035,
 "labels": [
 "property"
 ],
@@ -17672,8 +17672,8 @@
 "path": "griffe.dataclasses.Alias.returns",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1042,
-"endlineno": 1043,
+"lineno": 1038,
+"endlineno": 1039,
 "labels": [
 "property",
 "writable"
@@ -17708,8 +17708,8 @@
 "path": "griffe.dataclasses.Alias.setter",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1050,
-"endlineno": 1051,
+"lineno": 1046,
+"endlineno": 1047,
 "labels": [
 "property"
 ],
@@ -17729,8 +17729,8 @@
 "path": "griffe.dataclasses.Alias.deleter",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1054,
-"endlineno": 1055,
+"lineno": 1050,
+"endlineno": 1051,
 "labels": [
 "property"
 ],
@@ -17750,8 +17750,8 @@
 "path": "griffe.dataclasses.Alias.value",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1058,
-"endlineno": 1059,
+"lineno": 1054,
+"endlineno": 1055,
 "labels": [
 "property"
 ],
@@ -17771,8 +17771,8 @@
 "path": "griffe.dataclasses.Alias.annotation",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1062,
-"endlineno": 1063,
+"lineno": 1058,
+"endlineno": 1059,
 "labels": [
 "property",
 "writable"
@@ -17807,12 +17807,12 @@
 "path": "griffe.dataclasses.Alias.target",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1072,
-"endlineno": 1083,
+"lineno": 1068,
+"endlineno": 1079,
 "docstring": {
 "value": "Resolve and return the target, if possible.\n\nUpon accessing this property, if the target is not already resolved,\na lookup is done using the modules collection to find the target.\n\nReturns:\n    The resolved target.",
-"lineno": 1073,
-"endlineno": 1080,
+"lineno": 1069,
+"endlineno": 1076,
 "parsed": [
 {
 "kind": "text",
@@ -17863,12 +17863,12 @@
 "path": "griffe.dataclasses.Alias.resolve_target",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1094,
-"endlineno": 1123,
+"lineno": 1090,
+"endlineno": 1107,
 "docstring": {
 "value": "Resolve the target.\n\nRaises:\n    AliasResolutionError: When the target cannot be resolved.\n        It happens when the target does not exist,\n        or could not be loaded (unhandled dynamic object?),\n        or when the target is from a module that was not loaded\n        and added to the collection.\n    CyclicAliasError: When the resolved target is the alias itself.",
-"lineno": 1095,
-"endlineno": 1104,
+"lineno": 1091,
+"endlineno": 1100,
 "parsed": [
 {
 "kind": "text",
@@ -17909,17 +17909,59 @@
 "returns": "None"
 },
 {
+"kind": "function",
+"name": "_resolve_target",
+"path": "griffe.dataclasses.Alias._resolve_target",
+"filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
+"relative_filepath": "griffe/dataclasses.py",
+"lineno": 1109,
+"endlineno": 1123,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": "None"
+},
+{
+"kind": "function",
+"name": "_update_target_aliases",
+"path": "griffe.dataclasses.Alias._update_target_aliases",
+"filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
+"relative_filepath": "griffe/dataclasses.py",
+"lineno": 1125,
+"endlineno": 1127,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "self",
+"annotation": null,
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": "None"
+},
+{
 "kind": "attribute",
 "name": "resolved",
 "path": "griffe.dataclasses.Alias.resolved",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1126,
-"endlineno": 1132,
+"lineno": 1130,
+"endlineno": 1136,
 "docstring": {
 "value": "Tell whether this alias' target is resolved.\n\nReturns:\n    True or False.",
-"lineno": 1127,
-"endlineno": 1131,
+"lineno": 1131,
+"endlineno": 1135,
 "parsed": [
 {
 "kind": "text",
@@ -17955,12 +17997,12 @@
 "path": "griffe.dataclasses.Alias.wildcard",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1135,
-"endlineno": 1143,
+"lineno": 1139,
+"endlineno": 1147,
 "docstring": {
 "value": "Return the module on which the wildcard import is performed (if any).\n\nReturns:\n    The wildcard imported module, or None.",
-"lineno": 1136,
-"endlineno": 1140,
+"lineno": 1140,
+"endlineno": 1144,
 "parsed": [
 {
 "kind": "text",
@@ -18005,12 +18047,12 @@
 "path": "griffe.dataclasses.Alias.as_dict",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1145,
-"endlineno": 1169,
+"lineno": 1149,
+"endlineno": 1173,
 "docstring": {
 "value": "Return this alias' data as a dictionary.\n\nParameters:\n    full: Whether to return full info, or just base info.\n    **kwargs: Additional serialization options.\n\nReturns:\n    A dictionary.",
-"lineno": 1146,
-"endlineno": 1154,
+"lineno": 1150,
+"endlineno": 1158,
 "parsed": [
 {
 "kind": "text",
@@ -18133,12 +18175,12 @@
 "path": "griffe.dataclasses.Module",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1172,
-"endlineno": 1282,
+"lineno": 1176,
+"endlineno": 1286,
 "docstring": {
 "value": "The class representing a Python module.",
-"lineno": 1173,
-"endlineno": 1173,
+"lineno": 1177,
+"endlineno": 1177,
 "parsed": [
 {
 "kind": "text",
@@ -18154,8 +18196,8 @@
 "path": "griffe.dataclasses.Module.kind",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1175,
-"endlineno": 1175,
+"lineno": 1179,
+"endlineno": 1179,
 "labels": [
 "class-attribute"
 ],
@@ -18168,12 +18210,12 @@
 "path": "griffe.dataclasses.Module.__init__",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1177,
-"endlineno": 1187,
+"lineno": 1181,
+"endlineno": 1191,
 "docstring": {
 "value": "Initialize the module.\n\nParameters:\n    *args: See [`griffe.dataclasses.Object`][].\n    filepath: The module file path (directory for namespace [sub]packages, none for builtin modules).\n    **kwargs: See [`griffe.dataclasses.Object`][].",
-"lineno": 1178,
-"endlineno": 1184,
+"lineno": 1182,
+"endlineno": 1188,
 "parsed": [
 {
 "kind": "parameters",
@@ -18293,8 +18335,8 @@
 "path": "griffe.dataclasses.Module._filepath",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1186,
-"endlineno": 1186,
+"lineno": 1190,
+"endlineno": 1190,
 "labels": [
 "instance-attribute"
 ],
@@ -18330,8 +18372,8 @@
 "path": "griffe.dataclasses.Module.overloads",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1187,
-"endlineno": 1187,
+"lineno": 1191,
+"endlineno": 1191,
 "labels": [
 "instance-attribute"
 ],
@@ -18371,8 +18413,8 @@
 "path": "griffe.dataclasses.Module.__repr__",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1189,
-"endlineno": 1193,
+"lineno": 1193,
+"endlineno": 1197,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18395,12 +18437,12 @@
 "path": "griffe.dataclasses.Module.filepath",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1196,
-"endlineno": 1207,
+"lineno": 1200,
+"endlineno": 1211,
 "docstring": {
 "value": "Get the file path of this module.\n\nRaises:\n    BuiltinModuleError: When the instance filepath is None.\n\nReturns:\n    The module's file path.",
-"lineno": 1197,
-"endlineno": 1204,
+"lineno": 1201,
+"endlineno": 1208,
 "parsed": [
 {
 "kind": "text",
@@ -18478,12 +18520,12 @@
 "path": "griffe.dataclasses.Module.is_init_module",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1210,
-"endlineno": 1221,
+"lineno": 1214,
+"endlineno": 1225,
 "docstring": {
 "value": "Tell if this module is an `__init__.py` module.\n\nReturns:\n    True or False.",
-"lineno": 1211,
-"endlineno": 1215,
+"lineno": 1215,
+"endlineno": 1219,
 "parsed": [
 {
 "kind": "text",
@@ -18520,12 +18562,12 @@
 "path": "griffe.dataclasses.Module.is_package",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1224,
-"endlineno": 1230,
+"lineno": 1228,
+"endlineno": 1234,
 "docstring": {
 "value": "Tell if this module is a package (top module).\n\nReturns:\n    True or False.",
-"lineno": 1225,
-"endlineno": 1229,
+"lineno": 1229,
+"endlineno": 1233,
 "parsed": [
 {
 "kind": "text",
@@ -18562,12 +18604,12 @@
 "path": "griffe.dataclasses.Module.is_subpackage",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1233,
-"endlineno": 1239,
+"lineno": 1237,
+"endlineno": 1243,
 "docstring": {
 "value": "Tell if this module is a subpackage.\n\nReturns:\n    True or False.",
-"lineno": 1234,
-"endlineno": 1238,
+"lineno": 1238,
+"endlineno": 1242,
 "parsed": [
 {
 "kind": "text",
@@ -18604,12 +18646,12 @@
 "path": "griffe.dataclasses.Module.is_namespace_package",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1242,
-"endlineno": 1251,
+"lineno": 1246,
+"endlineno": 1255,
 "docstring": {
 "value": "Tell if this module is a namespace package (top folder, no `__init__.py`).\n\nReturns:\n    True or False.",
-"lineno": 1243,
-"endlineno": 1247,
+"lineno": 1247,
+"endlineno": 1251,
 "parsed": [
 {
 "kind": "text",
@@ -18646,12 +18688,12 @@
 "path": "griffe.dataclasses.Module.is_namespace_subpackage",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1254,
-"endlineno": 1269,
+"lineno": 1258,
+"endlineno": 1273,
 "docstring": {
 "value": "Tell if this module is a namespace subpackage.\n\nReturns:\n    True or False.",
-"lineno": 1255,
-"endlineno": 1259,
+"lineno": 1259,
+"endlineno": 1263,
 "parsed": [
 {
 "kind": "text",
@@ -18688,12 +18730,12 @@
 "path": "griffe.dataclasses.Module.as_dict",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1271,
-"endlineno": 1282,
+"lineno": 1275,
+"endlineno": 1286,
 "docstring": {
 "value": "Return this module's data as a dictionary.\n\nParameters:\n    **kwargs: Additional serialization options.\n\nReturns:\n    A dictionary.",
-"lineno": 1272,
-"endlineno": 1279,
+"lineno": 1276,
+"endlineno": 1283,
 "parsed": [
 {
 "kind": "text",
@@ -18798,12 +18840,12 @@
 "path": "griffe.dataclasses.Class",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1285,
-"endlineno": 1341,
+"lineno": 1289,
+"endlineno": 1345,
 "docstring": {
 "value": "The class representing a Python class.",
-"lineno": 1286,
-"endlineno": 1286,
+"lineno": 1290,
+"endlineno": 1290,
 "parsed": [
 {
 "kind": "text",
@@ -18819,8 +18861,8 @@
 "path": "griffe.dataclasses.Class.kind",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1288,
-"endlineno": 1288,
+"lineno": 1292,
+"endlineno": 1292,
 "labels": [
 "class-attribute"
 ],
@@ -18833,12 +18875,12 @@
 "path": "griffe.dataclasses.Class.__init__",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1290,
-"endlineno": 1308,
+"lineno": 1294,
+"endlineno": 1312,
 "docstring": {
 "value": "Initialize the class.\n\nParameters:\n    *args: See [`griffe.dataclasses.Object`][].\n    bases: The list of base classes, if any.\n    decorators: The class decorators, if any.\n    **kwargs: See [`griffe.dataclasses.Object`][].",
-"lineno": 1297,
-"endlineno": 1304,
+"lineno": 1301,
+"endlineno": 1308,
 "parsed": [
 {
 "kind": "parameters",
@@ -19014,8 +19056,8 @@
 "path": "griffe.dataclasses.Class.bases",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1306,
-"endlineno": 1306,
+"lineno": 1310,
+"endlineno": 1310,
 "labels": [
 "instance-attribute"
 ],
@@ -19054,8 +19096,8 @@
 "path": "griffe.dataclasses.Class.decorators",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1307,
-"endlineno": 1307,
+"lineno": 1311,
+"endlineno": 1311,
 "labels": [
 "instance-attribute"
 ],
@@ -19080,8 +19122,8 @@
 "path": "griffe.dataclasses.Class.overloads",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1308,
-"endlineno": 1308,
+"lineno": 1312,
+"endlineno": 1312,
 "labels": [
 "instance-attribute"
 ],
@@ -19121,12 +19163,12 @@
 "path": "griffe.dataclasses.Class.parameters",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1311,
-"endlineno": 1327,
+"lineno": 1315,
+"endlineno": 1331,
 "docstring": {
 "value": "Return the parameters of this class' `__init__` method, if any.\n\nReturns:\n    The parameters containter.",
-"lineno": 1312,
-"endlineno": 1316,
+"lineno": 1316,
+"endlineno": 1320,
 "parsed": [
 {
 "kind": "text",
@@ -19162,12 +19204,12 @@
 "path": "griffe.dataclasses.Class.as_dict",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1329,
-"endlineno": 1341,
+"lineno": 1333,
+"endlineno": 1345,
 "docstring": {
 "value": "Return this class' data as a dictionary.\n\nParameters:\n    **kwargs: Additional serialization options.\n\nReturns:\n    A dictionary.",
-"lineno": 1330,
-"endlineno": 1337,
+"lineno": 1334,
+"endlineno": 1341,
 "parsed": [
 {
 "kind": "text",
@@ -19272,12 +19314,12 @@
 "path": "griffe.dataclasses.Function",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1344,
-"endlineno": 1396,
+"lineno": 1348,
+"endlineno": 1400,
 "docstring": {
 "value": "The class representing a Python function.",
-"lineno": 1345,
-"endlineno": 1345,
+"lineno": 1349,
+"endlineno": 1349,
 "parsed": [
 {
 "kind": "text",
@@ -19293,8 +19335,8 @@
 "path": "griffe.dataclasses.Function.kind",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1347,
-"endlineno": 1347,
+"lineno": 1351,
+"endlineno": 1351,
 "labels": [
 "class-attribute"
 ],
@@ -19307,12 +19349,12 @@
 "path": "griffe.dataclasses.Function.__init__",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1349,
-"endlineno": 1372,
+"lineno": 1353,
+"endlineno": 1376,
 "docstring": {
 "value": "Initialize the function.\n\nParameters:\n    *args: See [`griffe.dataclasses.Object`][].\n    parameters: The function parameters.\n    returns: The function return annotation.\n    decorators: The function decorators, if any.\n    **kwargs: See [`griffe.dataclasses.Object`][].",
-"lineno": 1357,
-"endlineno": 1365,
+"lineno": 1361,
+"endlineno": 1369,
 "parsed": [
 {
 "kind": "parameters",
@@ -19498,8 +19540,8 @@
 "path": "griffe.dataclasses.Function.parameters",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1367,
-"endlineno": 1367,
+"lineno": 1371,
+"endlineno": 1371,
 "labels": [
 "instance-attribute"
 ],
@@ -19516,8 +19558,8 @@
 "path": "griffe.dataclasses.Function.returns",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1368,
-"endlineno": 1368,
+"lineno": 1372,
+"endlineno": 1372,
 "labels": [
 "instance-attribute"
 ],
@@ -19552,8 +19594,8 @@
 "path": "griffe.dataclasses.Function.decorators",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1369,
-"endlineno": 1369,
+"lineno": 1373,
+"endlineno": 1373,
 "labels": [
 "instance-attribute"
 ],
@@ -19578,8 +19620,8 @@
 "path": "griffe.dataclasses.Function.setter",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1370,
-"endlineno": 1370,
+"lineno": 1374,
+"endlineno": 1374,
 "labels": [
 "instance-attribute"
 ],
@@ -19600,8 +19642,8 @@
 "path": "griffe.dataclasses.Function.deleter",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1371,
-"endlineno": 1371,
+"lineno": 1375,
+"endlineno": 1375,
 "labels": [
 "instance-attribute"
 ],
@@ -19622,8 +19664,8 @@
 "path": "griffe.dataclasses.Function.overloads",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1372,
-"endlineno": 1372,
+"lineno": 1376,
+"endlineno": 1376,
 "labels": [
 "instance-attribute"
 ],
@@ -19652,12 +19694,12 @@
 "path": "griffe.dataclasses.Function.annotation",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1375,
-"endlineno": 1381,
+"lineno": 1379,
+"endlineno": 1385,
 "docstring": {
 "value": "Return the return annotation.\n\nReturns:\n    The function return annotation.",
-"lineno": 1376,
-"endlineno": 1380,
+"lineno": 1380,
+"endlineno": 1384,
 "parsed": [
 {
 "kind": "text",
@@ -19729,12 +19771,12 @@
 "path": "griffe.dataclasses.Function.as_dict",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1383,
-"endlineno": 1396,
+"lineno": 1387,
+"endlineno": 1400,
 "docstring": {
 "value": "Return this function's data as a dictionary.\n\nParameters:\n    **kwargs: Additional serialization options.\n\nReturns:\n    A dictionary.",
-"lineno": 1384,
-"endlineno": 1391,
+"lineno": 1388,
+"endlineno": 1395,
 "parsed": [
 {
 "kind": "text",
@@ -19839,12 +19881,12 @@
 "path": "griffe.dataclasses.Attribute",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1399,
-"endlineno": 1437,
+"lineno": 1403,
+"endlineno": 1441,
 "docstring": {
 "value": "The class representing a Python module/class/instance attribute.",
-"lineno": 1400,
-"endlineno": 1400,
+"lineno": 1404,
+"endlineno": 1404,
 "parsed": [
 {
 "kind": "text",
@@ -19860,8 +19902,8 @@
 "path": "griffe.dataclasses.Attribute.kind",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1402,
-"endlineno": 1402,
+"lineno": 1406,
+"endlineno": 1406,
 "labels": [
 "class-attribute"
 ],
@@ -19874,12 +19916,12 @@
 "path": "griffe.dataclasses.Attribute.__init__",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1404,
-"endlineno": 1421,
+"lineno": 1408,
+"endlineno": 1425,
 "docstring": {
 "value": "Initialize the function.\n\nParameters:\n    *args: See [`griffe.dataclasses.Object`][].\n    value: The attribute value, if any.\n    annotation: The attribute annotation, if any.\n    **kwargs: See [`griffe.dataclasses.Object`][].",
-"lineno": 1411,
-"endlineno": 1418,
+"lineno": 1415,
+"endlineno": 1422,
 "parsed": [
 {
 "kind": "parameters",
@@ -20023,8 +20065,8 @@
 "path": "griffe.dataclasses.Attribute.value",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1420,
-"endlineno": 1420,
+"lineno": 1424,
+"endlineno": 1424,
 "labels": [
 "instance-attribute"
 ],
@@ -20045,8 +20087,8 @@
 "path": "griffe.dataclasses.Attribute.annotation",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1421,
-"endlineno": 1421,
+"lineno": 1425,
+"endlineno": 1425,
 "labels": [
 "instance-attribute"
 ],
@@ -20081,12 +20123,12 @@
 "path": "griffe.dataclasses.Attribute.as_dict",
 "filepath": "/home/pawamoy/data/dev/griffe/src/griffe/dataclasses.py",
 "relative_filepath": "griffe/dataclasses.py",
-"lineno": 1423,
-"endlineno": 1437,
+"lineno": 1427,
+"endlineno": 1441,
 "docstring": {
 "value": "Return this function's data as a dictionary.\n\nParameters:\n    **kwargs: Additional serialization options.\n\nReturns:\n    A dictionary.",
-"lineno": 1424,
-"endlineno": 1431,
+"lineno": 1428,
+"endlineno": 1435,
 "parsed": [
 {
 "kind": "text",
