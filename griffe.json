@@ -16863,11 +16863,19 @@
 },
 {
 "kind": "alias",
+"name": "AliasResolutionError",
+"target_path": "griffe.exceptions.AliasResolutionError",
+"path": "griffe.diff.AliasResolutionError",
+"lineno": 12,
+"endlineno": 12
+},
+{
+"kind": "alias",
 "name": "get_logger",
 "target_path": "griffe.logger.get_logger",
 "path": "griffe.diff.get_logger",
-"lineno": 12,
-"endlineno": 12
+"lineno": 13,
+"endlineno": 13
 },
 {
 "kind": "attribute",
@@ -16876,8 +16884,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 14,
-"endlineno": 14,
+"lineno": 15,
+"endlineno": 15,
 "labels": [
 "module-attribute"
 ],
@@ -16891,8 +16899,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 15,
-"endlineno": 15,
+"lineno": 16,
+"endlineno": 16,
 "labels": [
 "module-attribute"
 ],
@@ -16906,8 +16914,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 16,
-"endlineno": 16,
+"lineno": 17,
+"endlineno": 17,
 "labels": [
 "module-attribute"
 ],
@@ -16916,13 +16924,28 @@
 },
 {
 "kind": "attribute",
-"name": "logger",
-"path": "griffe.diff.logger",
+"name": "VARIADIC",
+"path": "griffe.diff.VARIADIC",
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
 "lineno": 18,
 "endlineno": 18,
+"labels": [
+"module-attribute"
+],
+"members": [],
+"value": "frozenset((ParameterKind.var_positional, ParameterKind.var_keyword))"
+},
+{
+"kind": "attribute",
+"name": "logger",
+"path": "griffe.diff.logger",
+"filepath": "/media/data/dev/griffe/src/griffe/diff.py",
+"relative_filepath": "src/griffe/diff.py",
+"relative_package_filepath": "griffe/diff.py",
+"lineno": 20,
+"endlineno": 20,
 "labels": [
 "module-attribute"
 ],
@@ -16936,12 +16959,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 21,
-"endlineno": 25,
+"lineno": 23,
+"endlineno": 27,
 "docstring": {
 "value": "An enumeration of the possible styles for explanations.",
-"lineno": 22,
-"endlineno": 22,
+"lineno": 24,
+"endlineno": 24,
 "parsed": [
 {
 "kind": "text",
@@ -16958,8 +16981,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 24,
-"endlineno": 24,
+"lineno": 26,
+"endlineno": 26,
 "labels": [
 "class-attribute"
 ],
@@ -16977,8 +17000,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 25,
-"endlineno": 25,
+"lineno": 27,
+"endlineno": 27,
 "labels": [
 "class-attribute"
 ],
@@ -17012,12 +17035,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 28,
-"endlineno": 42,
+"lineno": 30,
+"endlineno": 44,
 "docstring": {
 "value": "An enumeration of the possible breakages.",
-"lineno": 29,
-"endlineno": 29,
+"lineno": 31,
+"endlineno": 31,
 "parsed": [
 {
 "kind": "text",
@@ -17034,8 +17057,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 31,
-"endlineno": 31,
+"lineno": 33,
+"endlineno": 33,
 "labels": [
 "class-attribute"
 ],
@@ -17053,8 +17076,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 32,
-"endlineno": 32,
+"lineno": 34,
+"endlineno": 34,
 "labels": [
 "class-attribute"
 ],
@@ -17072,8 +17095,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 33,
-"endlineno": 33,
+"lineno": 35,
+"endlineno": 35,
 "labels": [
 "class-attribute"
 ],
@@ -17091,8 +17114,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 34,
-"endlineno": 34,
+"lineno": 36,
+"endlineno": 36,
 "labels": [
 "class-attribute"
 ],
@@ -17110,8 +17133,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 35,
-"endlineno": 35,
+"lineno": 37,
+"endlineno": 37,
 "labels": [
 "class-attribute"
 ],
@@ -17129,8 +17152,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 36,
-"endlineno": 36,
+"lineno": 38,
+"endlineno": 38,
 "labels": [
 "class-attribute"
 ],
@@ -17148,8 +17171,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 37,
-"endlineno": 37,
+"lineno": 39,
+"endlineno": 39,
 "labels": [
 "class-attribute"
 ],
@@ -17167,8 +17190,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 38,
-"endlineno": 38,
+"lineno": 40,
+"endlineno": 40,
 "labels": [
 "class-attribute"
 ],
@@ -17186,8 +17209,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 39,
-"endlineno": 39,
+"lineno": 41,
+"endlineno": 41,
 "labels": [
 "class-attribute"
 ],
@@ -17205,8 +17228,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 40,
-"endlineno": 40,
+"lineno": 42,
+"endlineno": 42,
 "labels": [
 "class-attribute"
 ],
@@ -17224,8 +17247,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 41,
-"endlineno": 41,
+"lineno": 43,
+"endlineno": 43,
 "labels": [
 "class-attribute"
 ],
@@ -17243,8 +17266,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 42,
-"endlineno": 42,
+"lineno": 44,
+"endlineno": 44,
 "labels": [
 "class-attribute"
 ],
@@ -17278,12 +17301,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 45,
-"endlineno": 148,
+"lineno": 47,
+"endlineno": 150,
 "docstring": {
 "value": "Breakages can explain what broke from a version to another.",
-"lineno": 46,
-"endlineno": 46,
+"lineno": 48,
+"endlineno": 48,
 "parsed": [
 {
 "kind": "text",
@@ -17300,8 +17323,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 48,
-"endlineno": 48,
+"lineno": 50,
+"endlineno": 50,
 "labels": [
 "class-attribute"
 ],
@@ -17318,12 +17341,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 50,
-"endlineno": 62,
+"lineno": 52,
+"endlineno": 64,
 "docstring": {
 "value": "Initialize the breakage.\n\nParameters:\n    obj: The object related to the breakage.\n    old_value: The old value.\n    new_value: The new, incompatible value.\n    details: Some details about the breakage.",
-"lineno": 51,
-"endlineno": 58,
+"lineno": 53,
+"endlineno": 60,
 "parsed": [
 {
 "kind": "parameters",
@@ -17421,8 +17444,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 59,
-"endlineno": 59,
+"lineno": 61,
+"endlineno": 61,
 "labels": [
 "instance-attribute"
 ],
@@ -17436,8 +17459,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 60,
-"endlineno": 60,
+"lineno": 62,
+"endlineno": 62,
 "labels": [
 "instance-attribute"
 ],
@@ -17451,8 +17474,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 61,
-"endlineno": 61,
+"lineno": 63,
+"endlineno": 63,
 "labels": [
 "instance-attribute"
 ],
@@ -17466,8 +17489,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 62,
-"endlineno": 62,
+"lineno": 64,
+"endlineno": 64,
 "labels": [
 "instance-attribute"
 ],
@@ -17481,8 +17504,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 64,
-"endlineno": 65,
+"lineno": 66,
+"endlineno": 67,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -17506,8 +17529,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 67,
-"endlineno": 68,
+"lineno": 69,
+"endlineno": 70,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -17531,12 +17554,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 70,
-"endlineno": 85,
+"lineno": 72,
+"endlineno": 87,
 "docstring": {
 "value": "Return this object's data as a dictionary.\n\nParameters:\n    full: Whether to return full info, or just base info.\n    **kwargs: Additional serialization options.\n\nReturns:\n    A dictionary.",
-"lineno": 71,
-"endlineno": 79,
+"lineno": 73,
+"endlineno": 81,
 "parsed": [
 {
 "kind": "text",
@@ -17651,12 +17674,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 87,
-"endlineno": 96,
+"lineno": 89,
+"endlineno": 98,
 "docstring": {
 "value": "Explain the breakage by showing old and new value.\n\nParameters:\n    style: The explanation style to use.\n\nReturns:\n    An explanation.",
-"lineno": 88,
-"endlineno": 95,
+"lineno": 90,
+"endlineno": 97,
 "parsed": [
 {
 "kind": "text",
@@ -17723,8 +17746,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 98,
-"endlineno": 99,
+"lineno": 100,
+"endlineno": 101,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -17748,8 +17771,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 101,
-"endlineno": 102,
+"lineno": 103,
+"endlineno": 104,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -17773,8 +17796,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 104,
-"endlineno": 105,
+"lineno": 106,
+"endlineno": 107,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -17798,8 +17821,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 107,
-"endlineno": 108,
+"lineno": 109,
+"endlineno": 110,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -17823,8 +17846,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 110,
-"endlineno": 111,
+"lineno": 112,
+"endlineno": 113,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -17848,8 +17871,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 113,
-"endlineno": 114,
+"lineno": 115,
+"endlineno": 116,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -17873,8 +17896,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 116,
-"endlineno": 130,
+"lineno": 118,
+"endlineno": 132,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -17898,8 +17921,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 132,
-"endlineno": 148,
+"lineno": 134,
+"endlineno": 150,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -17927,12 +17950,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 151,
-"endlineno": 163,
+"lineno": 153,
+"endlineno": 165,
 "docstring": {
 "value": "Specific breakage class for moved parameters.",
-"lineno": 152,
-"endlineno": 152,
+"lineno": 154,
+"endlineno": 154,
 "parsed": [
 {
 "kind": "text",
@@ -17949,8 +17972,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 154,
-"endlineno": 154,
+"lineno": 156,
+"endlineno": 156,
 "labels": [
 "class-attribute"
 ],
@@ -17968,8 +17991,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 156,
-"endlineno": 157,
+"lineno": 158,
+"endlineno": 159,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -17993,8 +18016,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 159,
-"endlineno": 160,
+"lineno": 161,
+"endlineno": 162,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18018,8 +18041,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 162,
-"endlineno": 163,
+"lineno": 164,
+"endlineno": 165,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18052,12 +18075,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 166,
-"endlineno": 178,
+"lineno": 168,
+"endlineno": 180,
 "docstring": {
 "value": "Specific breakage class for removed parameters.",
-"lineno": 167,
-"endlineno": 167,
+"lineno": 169,
+"endlineno": 169,
 "parsed": [
 {
 "kind": "text",
@@ -18074,8 +18097,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 169,
-"endlineno": 169,
+"lineno": 171,
+"endlineno": 171,
 "labels": [
 "class-attribute"
 ],
@@ -18093,8 +18116,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 171,
-"endlineno": 172,
+"lineno": 173,
+"endlineno": 174,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18118,8 +18141,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 174,
-"endlineno": 175,
+"lineno": 176,
+"endlineno": 177,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18143,8 +18166,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 177,
-"endlineno": 178,
+"lineno": 179,
+"endlineno": 180,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18177,12 +18200,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 181,
-"endlineno": 193,
+"lineno": 183,
+"endlineno": 195,
 "docstring": {
 "value": "Specific breakage class for parameters whose kind changed.",
-"lineno": 182,
-"endlineno": 182,
+"lineno": 184,
+"endlineno": 184,
 "parsed": [
 {
 "kind": "text",
@@ -18199,8 +18222,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 184,
-"endlineno": 184,
+"lineno": 186,
+"endlineno": 186,
 "labels": [
 "class-attribute"
 ],
@@ -18218,8 +18241,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 186,
-"endlineno": 187,
+"lineno": 188,
+"endlineno": 189,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18243,8 +18266,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 189,
-"endlineno": 190,
+"lineno": 191,
+"endlineno": 192,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18268,8 +18291,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 192,
-"endlineno": 193,
+"lineno": 194,
+"endlineno": 195,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18302,12 +18325,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 196,
-"endlineno": 208,
+"lineno": 198,
+"endlineno": 210,
 "docstring": {
 "value": "Specific breakage class for parameters whose default value changed.",
-"lineno": 197,
-"endlineno": 197,
+"lineno": 199,
+"endlineno": 199,
 "parsed": [
 {
 "kind": "text",
@@ -18324,8 +18347,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 199,
-"endlineno": 199,
+"lineno": 201,
+"endlineno": 201,
 "labels": [
 "class-attribute"
 ],
@@ -18343,8 +18366,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 201,
-"endlineno": 202,
+"lineno": 203,
+"endlineno": 204,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18368,8 +18391,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 204,
-"endlineno": 205,
+"lineno": 206,
+"endlineno": 207,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18393,8 +18416,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 207,
-"endlineno": 208,
+"lineno": 209,
+"endlineno": 210,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18427,12 +18450,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 211,
-"endlineno": 223,
+"lineno": 213,
+"endlineno": 225,
 "docstring": {
 "value": "Specific breakage class for parameters which became required.",
-"lineno": 212,
-"endlineno": 212,
+"lineno": 214,
+"endlineno": 214,
 "parsed": [
 {
 "kind": "text",
@@ -18449,8 +18472,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 214,
-"endlineno": 214,
+"lineno": 216,
+"endlineno": 216,
 "labels": [
 "class-attribute"
 ],
@@ -18468,8 +18491,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 216,
-"endlineno": 217,
+"lineno": 218,
+"endlineno": 219,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18493,8 +18516,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 219,
-"endlineno": 220,
+"lineno": 221,
+"endlineno": 222,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18518,8 +18541,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 222,
-"endlineno": 223,
+"lineno": 224,
+"endlineno": 225,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18552,12 +18575,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 226,
-"endlineno": 238,
+"lineno": 228,
+"endlineno": 240,
 "docstring": {
 "value": "Specific breakage class for new parameters added as required.",
-"lineno": 227,
-"endlineno": 227,
+"lineno": 229,
+"endlineno": 229,
 "parsed": [
 {
 "kind": "text",
@@ -18574,8 +18597,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 229,
-"endlineno": 229,
+"lineno": 231,
+"endlineno": 231,
 "labels": [
 "class-attribute"
 ],
@@ -18593,8 +18616,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 231,
-"endlineno": 232,
+"lineno": 233,
+"endlineno": 234,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18618,8 +18641,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 234,
-"endlineno": 235,
+"lineno": 236,
+"endlineno": 237,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18643,8 +18666,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 237,
-"endlineno": 238,
+"lineno": 239,
+"endlineno": 240,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18677,12 +18700,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 241,
-"endlineno": 244,
+"lineno": 243,
+"endlineno": 246,
 "docstring": {
 "value": "Specific breakage class for return values which changed type.",
-"lineno": 242,
-"endlineno": 242,
+"lineno": 244,
+"endlineno": 244,
 "parsed": [
 {
 "kind": "text",
@@ -18699,8 +18722,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 244,
-"endlineno": 244,
+"lineno": 246,
+"endlineno": 246,
 "labels": [
 "class-attribute"
 ],
@@ -18727,12 +18750,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 247,
-"endlineno": 256,
+"lineno": 249,
+"endlineno": 258,
 "docstring": {
 "value": "Specific breakage class for removed objects.",
-"lineno": 248,
-"endlineno": 248,
+"lineno": 250,
+"endlineno": 250,
 "parsed": [
 {
 "kind": "text",
@@ -18749,8 +18772,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 250,
-"endlineno": 250,
+"lineno": 252,
+"endlineno": 252,
 "labels": [
 "class-attribute"
 ],
@@ -18768,8 +18791,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 252,
-"endlineno": 253,
+"lineno": 254,
+"endlineno": 255,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18793,8 +18816,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 255,
-"endlineno": 256,
+"lineno": 257,
+"endlineno": 258,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18827,12 +18850,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 259,
-"endlineno": 268,
+"lineno": 261,
+"endlineno": 270,
 "docstring": {
 "value": "Specific breakage class for objects whose kind changed.",
-"lineno": 260,
-"endlineno": 260,
+"lineno": 262,
+"endlineno": 262,
 "parsed": [
 {
 "kind": "text",
@@ -18849,8 +18872,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 262,
-"endlineno": 262,
+"lineno": 264,
+"endlineno": 264,
 "labels": [
 "class-attribute"
 ],
@@ -18868,8 +18891,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 264,
-"endlineno": 265,
+"lineno": 266,
+"endlineno": 267,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18893,8 +18916,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 267,
-"endlineno": 268,
+"lineno": 269,
+"endlineno": 270,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -18927,12 +18950,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 271,
-"endlineno": 274,
+"lineno": 273,
+"endlineno": 276,
 "docstring": {
 "value": "Specific breakage class for attributes whose type changed.",
-"lineno": 272,
-"endlineno": 272,
+"lineno": 274,
+"endlineno": 274,
 "parsed": [
 {
 "kind": "text",
@@ -18949,8 +18972,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 274,
-"endlineno": 274,
+"lineno": 276,
+"endlineno": 276,
 "labels": [
 "class-attribute"
 ],
@@ -18977,12 +19000,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 277,
-"endlineno": 280,
+"lineno": 279,
+"endlineno": 282,
 "docstring": {
 "value": "Specific breakage class for attributes whose value changed.",
-"lineno": 278,
-"endlineno": 278,
+"lineno": 280,
+"endlineno": 280,
 "parsed": [
 {
 "kind": "text",
@@ -18999,8 +19022,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 280,
-"endlineno": 280,
+"lineno": 282,
+"endlineno": 282,
 "labels": [
 "class-attribute"
 ],
@@ -19027,12 +19050,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 283,
-"endlineno": 292,
+"lineno": 285,
+"endlineno": 294,
 "docstring": {
 "value": "Specific breakage class for removed base classes.",
-"lineno": 284,
-"endlineno": 284,
+"lineno": 286,
+"endlineno": 286,
 "parsed": [
 {
 "kind": "text",
@@ -19049,8 +19072,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 286,
-"endlineno": 286,
+"lineno": 288,
+"endlineno": 288,
 "labels": [
 "class-attribute"
 ],
@@ -19068,8 +19091,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 288,
-"endlineno": 289,
+"lineno": 290,
+"endlineno": 291,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -19093,8 +19116,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 291,
-"endlineno": 292,
+"lineno": 293,
+"endlineno": 294,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -19127,8 +19150,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 296,
-"endlineno": 304,
+"lineno": 298,
+"endlineno": 306,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -19181,8 +19204,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 308,
-"endlineno": 376,
+"lineno": 310,
+"endlineno": 381,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -19226,8 +19249,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 379,
-"endlineno": 384,
+"lineno": 384,
+"endlineno": 389,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -19266,13 +19289,81 @@
 },
 {
 "kind": "function",
+"name": "_alias_incompatibilities",
+"path": "griffe.diff._alias_incompatibilities",
+"filepath": "/media/data/dev/griffe/src/griffe/diff.py",
+"relative_filepath": "src/griffe/diff.py",
+"relative_package_filepath": "griffe/diff.py",
+"lineno": 392,
+"endlineno": 407,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "old_obj",
+"annotation": [
+{
+"source": "Object",
+"full": "griffe.dataclasses.Object"
+},
+" | ",
+{
+"source": "Alias",
+"full": "griffe.dataclasses.Alias"
+}
+],
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "new_obj",
+"annotation": [
+{
+"source": "Object",
+"full": "griffe.dataclasses.Object"
+},
+" | ",
+{
+"source": "Alias",
+"full": "griffe.dataclasses.Alias"
+}
+],
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "ignore_private",
+"annotation": {
+"source": "bool",
+"full": "bool"
+},
+"kind": "keyword-only",
+"default": null
+}
+],
+"returns": [
+{
+"source": "Iterable",
+"full": "typing.Iterable"
+},
+"[",
+{
+"source": "Breakage",
+"full": "griffe.diff.Breakage"
+},
+"]"
+]
+},
+{
+"kind": "function",
 "name": "_member_incompatibilities",
 "path": "griffe.diff._member_incompatibilities",
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 387,
-"endlineno": 419,
+"lineno": 410,
+"endlineno": 429,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -19334,13 +19425,81 @@
 },
 {
 "kind": "function",
+"name": "_type_based_yield",
+"path": "griffe.diff._type_based_yield",
+"filepath": "/media/data/dev/griffe/src/griffe/diff.py",
+"relative_filepath": "src/griffe/diff.py",
+"relative_package_filepath": "griffe/diff.py",
+"lineno": 432,
+"endlineno": 451,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "old_member",
+"annotation": [
+{
+"source": "Object",
+"full": "griffe.dataclasses.Object"
+},
+" | ",
+{
+"source": "Alias",
+"full": "griffe.dataclasses.Alias"
+}
+],
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "new_member",
+"annotation": [
+{
+"source": "Object",
+"full": "griffe.dataclasses.Object"
+},
+" | ",
+{
+"source": "Alias",
+"full": "griffe.dataclasses.Alias"
+}
+],
+"kind": "positional or keyword",
+"default": null
+},
+{
+"name": "ignore_private",
+"annotation": {
+"source": "bool",
+"full": "bool"
+},
+"kind": "keyword-only",
+"default": null
+}
+],
+"returns": [
+{
+"source": "Iterator",
+"full": "typing.Iterator"
+},
+"[",
+{
+"source": "Breakage",
+"full": "griffe.diff.Breakage"
+},
+"]"
+]
+},
+{
+"kind": "function",
 "name": "_returns_are_compatible",
 "path": "griffe.diff._returns_are_compatible",
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 422,
-"endlineno": 434,
+"lineno": 454,
+"endlineno": 466,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -19376,8 +19535,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/diff.py",
 "relative_filepath": "src/griffe/diff.py",
 "relative_package_filepath": "griffe/diff.py",
-"lineno": 437,
-"endlineno": 437,
+"lineno": 469,
+"endlineno": 469,
 "labels": [
 "module-attribute"
 ],

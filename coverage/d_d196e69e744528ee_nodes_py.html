@@ -66,8 +66,8 @@
             <a id="indexLink" class="nav" href="covindex.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="d_d196e69e744528ee_visitor_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.2">coverage.py v7.2.2</a>,
-            created at 2023-04-03 15:44 +0200
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.3">coverage.py v7.2.3</a>,
+            created at 2023-04-10 18:05 +0200
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -759,7 +759,7 @@
     <p class="pln"><span class="n"><a id="t675" href="#t675">675</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t676" href="#t676">676</a></span><span class="t"><span class="key">def</span> <span class="nam">_get_subscript_annotation</span><span class="op">(</span><span class="nam">node</span><span class="op">:</span> <span class="nam">NodeSubscript</span><span class="op">,</span> <span class="nam">parent</span><span class="op">:</span> <span class="nam">Module</span> <span class="op">|</span> <span class="nam">Class</span><span class="op">)</span> <span class="op">-></span> <span class="nam">Expression</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t677" href="#t677">677</a></span><span class="t">    <span class="nam">left</span> <span class="op">=</span> <span class="nam">_get_annotation</span><span class="op">(</span><span class="nam">node</span><span class="op">.</span><span class="nam">value</span><span class="op">,</span> <span class="nam">parent</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t678" href="#t678">678</a></span><span class="t">    <span class="key">if</span> <span class="nam">left</span><span class="op">.</span><span class="nam">full</span> <span class="op">==</span> <span class="str">"typing.Literal"</span><span class="op">:</span>  <span class="com"># type: ignore[union-attr]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t678" href="#t678">678</a></span><span class="t">    <span class="key">if</span> <span class="nam">left</span><span class="op">.</span><span class="nam">full</span> <span class="key">in</span> <span class="op">{</span><span class="str">"typing.Literal"</span><span class="op">,</span> <span class="str">"typing_extensions.Literal"</span><span class="op">}</span><span class="op">:</span>  <span class="com"># type: ignore[union-attr]</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t679" href="#t679">679</a></span><span class="t">        <span class="nam">_node_annotation_map</span><span class="op">[</span><span class="nam">NodeConstant</span><span class="op">]</span> <span class="op">=</span> <span class="nam">_get_literal_annotation</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t680" href="#t680">680</a></span><span class="t">        <span class="nam">subscript</span> <span class="op">=</span> <span class="nam">_get_annotation</span><span class="op">(</span><span class="nam">node</span><span class="op">.</span><span class="nam">slice</span><span class="op">,</span> <span class="nam">parent</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t681" href="#t681">681</a></span><span class="t">        <span class="nam">_node_annotation_map</span><span class="op">[</span><span class="nam">NodeConstant</span><span class="op">]</span> <span class="op">=</span> <span class="nam">_get_constant_annotation</span>&nbsp;</span><span class="r"></span></p>
@@ -1453,8 +1453,8 @@
             <a id="indexLink" class="nav" href="covindex.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="d_d196e69e744528ee_visitor_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.2">coverage.py v7.2.2</a>,
-            created at 2023-04-03 15:44 +0200
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.3">coverage.py v7.2.3</a>,
+            created at 2023-04-10 18:05 +0200
         </p>
     </div>
 </footer>
