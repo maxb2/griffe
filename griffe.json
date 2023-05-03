@@ -579,6 +579,34 @@
 "source": "dict",
 "full": "dict"
 }
+},
+{
+"kind": "function",
+"name": "_format_stats",
+"path": "griffe.stats._format_stats",
+"filepath": "/media/data/dev/griffe/src/griffe/stats.py",
+"relative_filepath": "src/griffe/stats.py",
+"relative_package_filepath": "griffe/stats.py",
+"lineno": 112,
+"endlineno": 171,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "stats",
+"annotation": {
+"source": "dict",
+"full": "dict"
+},
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": {
+"source": "str",
+"full": "str"
+}
 }
 ]
 },
@@ -2743,7 +2771,8 @@
 "lineno": 46,
 "endlineno": 46,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'positional-only'",
@@ -2762,7 +2791,8 @@
 "lineno": 47,
 "endlineno": 47,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'positional or keyword'",
@@ -2781,7 +2811,8 @@
 "lineno": 48,
 "endlineno": 48,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'variadic positional'",
@@ -2800,7 +2831,8 @@
 "lineno": 49,
 "endlineno": 49,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'keyword-only'",
@@ -2819,7 +2851,8 @@
 "lineno": 50,
 "endlineno": 50,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'variadic keyword'",
@@ -4909,7 +4942,8 @@
 "lineno": 301,
 "endlineno": 301,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'module'",
@@ -4928,7 +4962,8 @@
 "lineno": 302,
 "endlineno": 302,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'class'",
@@ -4947,7 +4982,8 @@
 "lineno": 303,
 "endlineno": 303,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'function'",
@@ -4966,7 +5002,8 @@
 "lineno": 304,
 "endlineno": 304,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'attribute'",
@@ -4985,7 +5022,8 @@
 "lineno": 305,
 "endlineno": 305,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'alias'",
@@ -5164,7 +5202,7 @@
 "lineno": 322,
 "endlineno": 322,
 "labels": [
-"class-attribute"
+"instance-attribute"
 ],
 "members": [],
 "annotation": {
@@ -5182,7 +5220,8 @@
 "lineno": 323,
 "endlineno": 323,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "False",
@@ -5201,7 +5240,8 @@
 "lineno": 324,
 "endlineno": 324,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "False",
@@ -7778,7 +7818,8 @@
 "lineno": 798,
 "endlineno": 798,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "True",
@@ -7797,7 +7838,8 @@
 "lineno": 799,
 "endlineno": 799,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "False",
@@ -10330,7 +10372,8 @@
 "lineno": 1217,
 "endlineno": 1217,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "Kind.MODULE"
@@ -11008,7 +11051,8 @@
 "lineno": 1330,
 "endlineno": 1330,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "Kind.CLASS"
@@ -11490,7 +11534,8 @@
 "lineno": 1389,
 "endlineno": 1389,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "Kind.FUNCTION"
@@ -12068,7 +12113,8 @@
 "lineno": 1444,
 "endlineno": 1444,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "Kind.ATTRIBUTE"
@@ -12458,137 +12504,145 @@
 },
 {
 "kind": "alias",
-"name": "subprocess",
-"target_path": "subprocess",
-"path": "griffe.cli.subprocess",
-"lineno": 20,
-"endlineno": 20
-},
-{
-"kind": "alias",
 "name": "sys",
 "target_path": "sys",
 "path": "griffe.cli.sys",
-"lineno": 21,
-"endlineno": 21
+"lineno": 20,
+"endlineno": 20
 },
 {
 "kind": "alias",
 "name": "datetime",
 "target_path": "datetime.datetime",
 "path": "griffe.cli.datetime",
-"lineno": 22,
-"endlineno": 22
+"lineno": 21,
+"endlineno": 21
 },
 {
 "kind": "alias",
 "name": "timezone",
 "target_path": "datetime.timezone",
 "path": "griffe.cli.timezone",
-"lineno": 22,
-"endlineno": 22
+"lineno": 21,
+"endlineno": 21
 },
 {
 "kind": "alias",
 "name": "Path",
 "target_path": "pathlib.Path",
 "path": "griffe.cli.Path",
-"lineno": 23,
-"endlineno": 23
+"lineno": 22,
+"endlineno": 22
 },
 {
 "kind": "alias",
 "name": "IO",
 "target_path": "typing.IO",
 "path": "griffe.cli.IO",
-"lineno": 24,
-"endlineno": 24
+"lineno": 23,
+"endlineno": 23
 },
 {
 "kind": "alias",
 "name": "TYPE_CHECKING",
 "target_path": "typing.TYPE_CHECKING",
 "path": "griffe.cli.TYPE_CHECKING",
-"lineno": 24,
-"endlineno": 24
+"lineno": 23,
+"endlineno": 23
 },
 {
 "kind": "alias",
 "name": "Any",
 "target_path": "typing.Any",
 "path": "griffe.cli.Any",
-"lineno": 24,
-"endlineno": 24
+"lineno": 23,
+"endlineno": 23
 },
 {
 "kind": "alias",
 "name": "Callable",
 "target_path": "typing.Callable",
 "path": "griffe.cli.Callable",
-"lineno": 24,
-"endlineno": 24
+"lineno": 23,
+"endlineno": 23
 },
 {
 "kind": "alias",
 "name": "Sequence",
 "target_path": "typing.Sequence",
 "path": "griffe.cli.Sequence",
-"lineno": 24,
-"endlineno": 24
+"lineno": 23,
+"endlineno": 23
 },
 {
 "kind": "alias",
 "name": "colorama",
 "target_path": "colorama",
 "path": "griffe.cli.colorama",
-"lineno": 26,
-"endlineno": 26
+"lineno": 25,
+"endlineno": 25
 },
 {
 "kind": "alias",
 "name": "ExplanationStyle",
 "target_path": "griffe.diff.ExplanationStyle",
 "path": "griffe.cli.ExplanationStyle",
-"lineno": 28,
-"endlineno": 28
+"lineno": 27,
+"endlineno": 27
 },
 {
 "kind": "alias",
 "name": "find_breaking_changes",
 "target_path": "griffe.diff.find_breaking_changes",
 "path": "griffe.cli.find_breaking_changes",
-"lineno": 28,
-"endlineno": 28
+"lineno": 27,
+"endlineno": 27
 },
 {
 "kind": "alias",
 "name": "Parser",
 "target_path": "griffe.docstrings.parsers.Parser",
 "path": "griffe.cli.Parser",
-"lineno": 29,
-"endlineno": 29
+"lineno": 28,
+"endlineno": 28
 },
 {
 "kind": "alias",
 "name": "JSONEncoder",
 "target_path": "griffe.encoders.JSONEncoder",
 "path": "griffe.cli.JSONEncoder",
-"lineno": 30,
-"endlineno": 30
+"lineno": 29,
+"endlineno": 29
 },
 {
 "kind": "alias",
 "name": "ExtensionError",
 "target_path": "griffe.exceptions.ExtensionError",
 "path": "griffe.cli.ExtensionError",
-"lineno": 31,
-"endlineno": 31
+"lineno": 30,
+"endlineno": 30
 },
 {
 "kind": "alias",
 "name": "load_extensions",
 "target_path": "griffe.extensions.base.load_extensions",
 "path": "griffe.cli.load_extensions",
+"lineno": 31,
+"endlineno": 31
+},
+{
+"kind": "alias",
+"name": "_get_latest_tag",
+"target_path": "griffe.git._get_latest_tag",
+"path": "griffe.cli._get_latest_tag",
+"lineno": 32,
+"endlineno": 32
+},
+{
+"kind": "alias",
+"name": "_get_repo_root",
+"target_path": "griffe.git._get_repo_root",
+"path": "griffe.cli._get_repo_root",
 "lineno": 32,
 "endlineno": 32
 },
@@ -12597,30 +12651,38 @@
 "name": "load_git",
 "target_path": "griffe.git.load_git",
 "path": "griffe.cli.load_git",
-"lineno": 33,
-"endlineno": 33
+"lineno": 32,
+"endlineno": 32
 },
 {
 "kind": "alias",
 "name": "GriffeLoader",
 "target_path": "griffe.loader.GriffeLoader",
 "path": "griffe.cli.GriffeLoader",
-"lineno": 34,
-"endlineno": 34
+"lineno": 33,
+"endlineno": 33
 },
 {
 "kind": "alias",
 "name": "load",
 "target_path": "griffe.loader.load",
 "path": "griffe.cli.load",
-"lineno": 34,
-"endlineno": 34
+"lineno": 33,
+"endlineno": 33
 },
 {
 "kind": "alias",
 "name": "get_logger",
 "target_path": "griffe.logger.get_logger",
 "path": "griffe.cli.get_logger",
+"lineno": 34,
+"endlineno": 34
+},
+{
+"kind": "alias",
+"name": "_format_stats",
+"target_path": "griffe.stats._format_stats",
+"path": "griffe.cli._format_stats",
 "lineno": 35,
 "endlineno": 35
 },
@@ -12717,111 +12779,13 @@
 },
 {
 "kind": "function",
-"name": "_get_latest_tag",
-"path": "griffe.cli._get_latest_tag",
-"filepath": "/media/data/dev/griffe/src/griffe/cli.py",
-"relative_filepath": "src/griffe/cli.py",
-"relative_package_filepath": "griffe/cli.py",
-"lineno": 55,
-"endlineno": 64,
-"labels": [],
-"members": [],
-"decorators": [],
-"parameters": [
-{
-"name": "path",
-"annotation": [
-{
-"source": "str",
-"full": "str"
-},
-" | ",
-{
-"source": "Path",
-"full": "pathlib.Path"
-}
-],
-"kind": "positional or keyword",
-"default": null
-}
-],
-"returns": {
-"source": "str",
-"full": "str"
-}
-},
-{
-"kind": "function",
-"name": "_get_repo_root",
-"path": "griffe.cli._get_repo_root",
-"filepath": "/media/data/dev/griffe/src/griffe/cli.py",
-"relative_filepath": "src/griffe/cli.py",
-"relative_package_filepath": "griffe/cli.py",
-"lineno": 67,
-"endlineno": 76,
-"labels": [],
-"members": [],
-"decorators": [],
-"parameters": [
-{
-"name": "path",
-"annotation": [
-{
-"source": "str",
-"full": "str"
-},
-" | ",
-{
-"source": "Path",
-"full": "pathlib.Path"
-}
-],
-"kind": "positional or keyword",
-"default": null
-}
-],
-"returns": {
-"source": "str",
-"full": "str"
-}
-},
-{
-"kind": "function",
-"name": "_stats",
-"path": "griffe.cli._stats",
-"filepath": "/media/data/dev/griffe/src/griffe/cli.py",
-"relative_filepath": "src/griffe/cli.py",
-"relative_package_filepath": "griffe/cli.py",
-"lineno": 79,
-"endlineno": 138,
-"labels": [],
-"members": [],
-"decorators": [],
-"parameters": [
-{
-"name": "stats",
-"annotation": {
-"source": "dict",
-"full": "dict"
-},
-"kind": "positional or keyword",
-"default": null
-}
-],
-"returns": {
-"source": "str",
-"full": "str"
-}
-},
-{
-"kind": "function",
 "name": "_load_packages",
 "path": "griffe.cli._load_packages",
 "filepath": "/media/data/dev/griffe/src/griffe/cli.py",
 "relative_filepath": "src/griffe/cli.py",
 "relative_package_filepath": "griffe/cli.py",
-"lineno": 141,
-"endlineno": 179,
+"lineno": 55,
+"endlineno": 93,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -12970,8 +12934,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/cli.py",
 "relative_filepath": "src/griffe/cli.py",
 "relative_package_filepath": "griffe/cli.py",
-"lineno": 182,
-"endlineno": 182,
+"lineno": 96,
+"endlineno": 96,
 "labels": [
 "module-attribute"
 ],
@@ -12985,12 +12949,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/cli.py",
 "relative_filepath": "src/griffe/cli.py",
 "relative_package_filepath": "griffe/cli.py",
-"lineno": 185,
-"endlineno": 340,
+"lineno": 99,
+"endlineno": 254,
 "docstring": {
 "value": "Return the CLI argument parser.\n\nReturns:\n    An argparse parser.",
-"lineno": 186,
-"endlineno": 190,
+"lineno": 100,
+"endlineno": 104,
 "parsed": [
 {
 "kind": "text",
@@ -13041,12 +13005,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/cli.py",
 "relative_filepath": "src/griffe/cli.py",
 "relative_package_filepath": "griffe/cli.py",
-"lineno": 343,
-"endlineno": 419,
+"lineno": 257,
+"endlineno": 333,
 "docstring": {
 "value": "Load packages data and dump it as JSON.\n\nParameters:\n    packages: The packages to load and dump.\n    output: Where to output the JSON-serialized data.\n    full: Whether to output full or minimal data.\n    docstring_parser: The docstring parser to use. By default, no parsing is done.\n    docstring_options: Additional docstring parsing options.\n    resolve_aliases: Whether to resolve aliases (indirect objects references).\n    resolve_implicit: Whether to resolve every alias or only the explicitly exported ones.\n    resolve_external: Whether to load additional, unspecified modules to resolve aliases.\n    extensions: The extensions to use.\n    search_paths: The paths to search into.\n    append_sys_path: Whether to append the contents of `sys.path` to the search paths.\n    allow_inspection: Whether to allow inspecting modules when visiting them is not possible.\n    stats: Whether to compute and log stats about loading.\n\nReturns:\n    `0` for success, `1` for failure.",
-"lineno": 359,
-"endlineno": 378,
+"lineno": 273,
+"endlineno": 292,
 "parsed": [
 {
 "kind": "text",
@@ -13556,12 +13520,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/cli.py",
 "relative_filepath": "src/griffe/cli.py",
 "relative_package_filepath": "griffe/cli.py",
-"lineno": 422,
-"endlineno": 495,
+"lineno": 336,
+"endlineno": 409,
 "docstring": {
 "value": "Load packages data and dump it as JSON.\n\nParameters:\n    package: The package to load and check.\n    against: Older Git reference (commit, branch, tag) to check against.\n    against_path: Path when the \"against\" reference is checked out.\n    base_ref: Git reference (commit, branch, tag) to check.\n    extensions: The extensions to use.\n    search_paths: The paths to search into.\n    allow_inspection: Whether to allow inspecting modules when visiting them is not possible.\n    verbose: Use a verbose output.\n\nReturns:\n    `0` for success, `1` for failure.",
-"lineno": 433,
-"endlineno": 447,
+"lineno": 347,
+"endlineno": 361,
 "parsed": [
 {
 "kind": "text",
@@ -13949,12 +13913,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/cli.py",
 "relative_filepath": "src/griffe/cli.py",
 "relative_package_filepath": "griffe/cli.py",
-"lineno": 498,
-"endlineno": 528,
+"lineno": 412,
+"endlineno": 442,
 "docstring": {
 "value": "Run the main program.\n\nThis function is executed when you type `griffe` or `python -m griffe`.\n\nParameters:\n    args: Arguments passed from the command line.\n\nReturns:\n    An exit code.",
-"lineno": 499,
-"endlineno": 508,
+"lineno": 413,
+"endlineno": 422,
 "parsed": [
 {
 "kind": "text",
@@ -15995,7 +15959,7 @@
 "relative_filepath": "src/griffe/expressions.py",
 "relative_package_filepath": "griffe/expressions.py",
 "lineno": 92,
-"endlineno": 227,
+"endlineno": 236,
 "docstring": {
 "value": "This class represents a Python expression.\n\nFor example, it can represent complex annotations such as:\n\n- `Optional[Dict[str, Tuple[int, bool]]]`\n- `str | Callable | list[int]`\n\nExpressions are simple lists containing strings, names or expressions.\nEach name in the expression can be resolved to its full name within its scope.",
 "lineno": 93,
@@ -16323,17 +16287,59 @@
 },
 {
 "kind": "attribute",
+"name": "is_classvar",
+"path": "griffe.expressions.Expression.is_classvar",
+"filepath": "/media/data/dev/griffe/src/griffe/expressions.py",
+"relative_filepath": "src/griffe/expressions.py",
+"relative_package_filepath": "griffe/expressions.py",
+"lineno": 166,
+"endlineno": 172,
+"docstring": {
+"value": "Tell whether this expression represents a ClassVar.\n\nReturns:\n    True or False.",
+"lineno": 167,
+"endlineno": 171,
+"parsed": [
+{
+"kind": "text",
+"value": "Tell whether this expression represents a ClassVar."
+},
+{
+"kind": "returns",
+"value": [
+{
+"name": "",
+"annotation": {
+"source": "bool",
+"full": "bool"
+},
+"description": "True or False."
+}
+]
+}
+]
+},
+"labels": [
+"property"
+],
+"members": [],
+"annotation": {
+"source": "bool",
+"full": "bool"
+}
+},
+{
+"kind": "attribute",
 "name": "non_optional",
 "path": "griffe.expressions.Expression.non_optional",
 "filepath": "/media/data/dev/griffe/src/griffe/expressions.py",
 "relative_filepath": "src/griffe/expressions.py",
 "relative_package_filepath": "griffe/expressions.py",
-"lineno": 166,
-"endlineno": 187,
+"lineno": 175,
+"endlineno": 196,
 "docstring": {
 "value": "Return the same expression as non-optional.\n\nThis will return a new expression without\nthe `Optional[]` or `| None` parts.\n\nReturns:\n    A non-optional expression.",
-"lineno": 167,
-"endlineno": 174,
+"lineno": 176,
+"endlineno": 183,
 "parsed": [
 {
 "kind": "text",
@@ -16371,12 +16377,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/expressions.py",
 "relative_filepath": "src/griffe/expressions.py",
 "relative_package_filepath": "griffe/expressions.py",
-"lineno": 189,
-"endlineno": 201,
+"lineno": 198,
+"endlineno": 210,
 "docstring": {
 "value": "Return the n-th item of this tuple expression.\n\nParameters:\n    nth: The item number.\n\nReturns:\n    A string or name.",
-"lineno": 190,
-"endlineno": 197,
+"lineno": 199,
+"endlineno": 206,
 "parsed": [
 {
 "kind": "text",
@@ -16456,12 +16462,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/expressions.py",
 "relative_filepath": "src/griffe/expressions.py",
 "relative_package_filepath": "griffe/expressions.py",
-"lineno": 203,
-"endlineno": 209,
+"lineno": 212,
+"endlineno": 218,
 "docstring": {
 "value": "Return a tuple items as a list.\n\nReturns:\n    The tuple items.",
-"lineno": 204,
-"endlineno": 208,
+"lineno": 213,
+"endlineno": 217,
 "parsed": [
 {
 "kind": "text",
@@ -16535,12 +16541,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/expressions.py",
 "relative_filepath": "src/griffe/expressions.py",
 "relative_package_filepath": "griffe/expressions.py",
-"lineno": 211,
-"endlineno": 217,
+"lineno": 220,
+"endlineno": 226,
 "docstring": {
 "value": "Return the item of an iterator.\n\nReturns:\n    The iterator item.",
-"lineno": 212,
-"endlineno": 216,
+"lineno": 221,
+"endlineno": 225,
 "parsed": [
 {
 "kind": "text",
@@ -16598,12 +16604,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/expressions.py",
 "relative_filepath": "src/griffe/expressions.py",
 "relative_package_filepath": "griffe/expressions.py",
-"lineno": 219,
-"endlineno": 227,
+"lineno": 228,
+"endlineno": 236,
 "docstring": {
 "value": "Return the items of a generator.\n\nReturns:\n    The yield type.\n    The send/receive type.\n    The return type.",
-"lineno": 220,
-"endlineno": 226,
+"lineno": 229,
+"endlineno": 235,
 "parsed": [
 {
 "kind": "text",
@@ -16984,7 +16990,8 @@
 "lineno": 26,
 "endlineno": 26,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'oneline'",
@@ -17003,7 +17010,8 @@
 "lineno": 27,
 "endlineno": 27,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'verbose'",
@@ -17060,7 +17068,8 @@
 "lineno": 33,
 "endlineno": 33,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'Positional parameter was moved'",
@@ -17079,7 +17088,8 @@
 "lineno": 34,
 "endlineno": 34,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'Parameter was removed'",
@@ -17098,7 +17108,8 @@
 "lineno": 35,
 "endlineno": 35,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'Parameter kind was changed'",
@@ -17117,7 +17128,8 @@
 "lineno": 36,
 "endlineno": 36,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'Parameter default was changed'",
@@ -17136,7 +17148,8 @@
 "lineno": 37,
 "endlineno": 37,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'Parameter is now required'",
@@ -17155,7 +17168,8 @@
 "lineno": 38,
 "endlineno": 38,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'Parameter was added as required'",
@@ -17174,7 +17188,8 @@
 "lineno": 39,
 "endlineno": 39,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'Return types are incompatible'",
@@ -17193,7 +17208,8 @@
 "lineno": 40,
 "endlineno": 40,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'Public object was removed'",
@@ -17212,7 +17228,8 @@
 "lineno": 41,
 "endlineno": 41,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'Public object points to a different kind of object'",
@@ -17231,7 +17248,8 @@
 "lineno": 42,
 "endlineno": 42,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'Attribute types are incompatible'",
@@ -17250,7 +17268,8 @@
 "lineno": 43,
 "endlineno": 43,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'Attribute value was changed'",
@@ -17269,7 +17288,8 @@
 "lineno": 44,
 "endlineno": 44,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'Base class was removed'",
@@ -17326,7 +17346,7 @@
 "lineno": 50,
 "endlineno": 50,
 "labels": [
-"class-attribute"
+"instance-attribute"
 ],
 "members": [],
 "annotation": {
@@ -17975,7 +17995,8 @@
 "lineno": 156,
 "endlineno": 156,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "BreakageKind.PARAMETER_MOVED",
@@ -18100,7 +18121,8 @@
 "lineno": 171,
 "endlineno": 171,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "BreakageKind.PARAMETER_REMOVED",
@@ -18225,7 +18247,8 @@
 "lineno": 186,
 "endlineno": 186,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "BreakageKind.PARAMETER_CHANGED_KIND",
@@ -18350,7 +18373,8 @@
 "lineno": 201,
 "endlineno": 201,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "BreakageKind.PARAMETER_CHANGED_DEFAULT",
@@ -18475,7 +18499,8 @@
 "lineno": 216,
 "endlineno": 216,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "BreakageKind.PARAMETER_CHANGED_REQUIRED",
@@ -18600,7 +18625,8 @@
 "lineno": 231,
 "endlineno": 231,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "BreakageKind.PARAMETER_ADDED_REQUIRED",
@@ -18725,7 +18751,8 @@
 "lineno": 246,
 "endlineno": 246,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "BreakageKind.RETURN_CHANGED_TYPE",
@@ -18775,7 +18802,8 @@
 "lineno": 252,
 "endlineno": 252,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "BreakageKind.OBJECT_REMOVED",
@@ -18875,7 +18903,8 @@
 "lineno": 264,
 "endlineno": 264,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "BreakageKind.OBJECT_CHANGED_KIND",
@@ -18975,7 +19004,8 @@
 "lineno": 276,
 "endlineno": 276,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "BreakageKind.ATTRIBUTE_CHANGED_TYPE",
@@ -19025,7 +19055,8 @@
 "lineno": 282,
 "endlineno": 282,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "BreakageKind.ATTRIBUTE_CHANGED_VALUE",
@@ -19075,7 +19106,8 @@
 "lineno": 288,
 "endlineno": 288,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "BreakageKind.CLASS_REMOVED_BASE",
@@ -20136,7 +20168,8 @@
 "lineno": 61,
 "endlineno": 61,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "['.py', '.pyc', '.pyo', '.pyd', '.pyi', '.so']"
@@ -20151,7 +20184,8 @@
 "lineno": 62,
 "endlineno": 62,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "set(accepted_py_module_extensions)"
@@ -21254,152 +21288,136 @@
 "name": "annotations",
 "target_path": "__future__.annotations",
 "path": "griffe.git.annotations",
-"lineno": 10,
-"endlineno": 10
+"lineno": 11,
+"endlineno": 11
 },
 {
 "kind": "alias",
 "name": "os",
 "target_path": "os",
 "path": "griffe.git.os",
-"lineno": 12,
-"endlineno": 12
+"lineno": 13,
+"endlineno": 13
 },
 {
 "kind": "alias",
 "name": "shutil",
 "target_path": "shutil",
 "path": "griffe.git.shutil",
-"lineno": 13,
-"endlineno": 13
+"lineno": 14,
+"endlineno": 14
+},
+{
+"kind": "alias",
+"name": "subprocess",
+"target_path": "subprocess",
+"path": "griffe.git.subprocess",
+"lineno": 15,
+"endlineno": 15
 },
 {
 "kind": "alias",
 "name": "contextmanager",
 "target_path": "contextlib.contextmanager",
 "path": "griffe.git.contextmanager",
-"lineno": 14,
-"endlineno": 14
+"lineno": 16,
+"endlineno": 16
 },
 {
 "kind": "alias",
 "name": "Path",
 "target_path": "pathlib.Path",
 "path": "griffe.git.Path",
-"lineno": 15,
-"endlineno": 15
-},
-{
-"kind": "alias",
-"name": "DEVNULL",
-"target_path": "subprocess.DEVNULL",
-"path": "griffe.git.DEVNULL",
-"lineno": 16,
-"endlineno": 16
-},
-{
-"kind": "alias",
-"name": "CalledProcessError",
-"target_path": "subprocess.CalledProcessError",
-"path": "griffe.git.CalledProcessError",
-"lineno": 16,
-"endlineno": 16
-},
-{
-"kind": "alias",
-"name": "run",
-"target_path": "subprocess.run",
-"path": "griffe.git.run",
-"lineno": 16,
-"endlineno": 16
+"lineno": 17,
+"endlineno": 17
 },
 {
 "kind": "alias",
 "name": "TemporaryDirectory",
 "target_path": "tempfile.TemporaryDirectory",
 "path": "griffe.git.TemporaryDirectory",
-"lineno": 17,
-"endlineno": 17
+"lineno": 18,
+"endlineno": 18
 },
 {
 "kind": "alias",
 "name": "TYPE_CHECKING",
 "target_path": "typing.TYPE_CHECKING",
 "path": "griffe.git.TYPE_CHECKING",
-"lineno": 18,
-"endlineno": 18
+"lineno": 19,
+"endlineno": 19
 },
 {
 "kind": "alias",
 "name": "Any",
 "target_path": "typing.Any",
 "path": "griffe.git.Any",
-"lineno": 18,
-"endlineno": 18
+"lineno": 19,
+"endlineno": 19
 },
 {
 "kind": "alias",
 "name": "Iterator",
 "target_path": "typing.Iterator",
 "path": "griffe.git.Iterator",
-"lineno": 18,
-"endlineno": 18
+"lineno": 19,
+"endlineno": 19
 },
 {
 "kind": "alias",
 "name": "Sequence",
 "target_path": "typing.Sequence",
 "path": "griffe.git.Sequence",
-"lineno": 18,
-"endlineno": 18
+"lineno": 19,
+"endlineno": 19
 },
 {
 "kind": "alias",
 "name": "loader",
 "target_path": "griffe.loader",
 "path": "griffe.git.loader",
-"lineno": 20,
-"endlineno": 20
+"lineno": 21,
+"endlineno": 21
 },
 {
 "kind": "alias",
 "name": "LinesCollection",
 "target_path": "griffe.collections.LinesCollection",
 "path": "griffe.git.LinesCollection",
-"lineno": 23,
-"endlineno": 23
+"lineno": 24,
+"endlineno": 24
 },
 {
 "kind": "alias",
 "name": "ModulesCollection",
 "target_path": "griffe.collections.ModulesCollection",
 "path": "griffe.git.ModulesCollection",
-"lineno": 23,
-"endlineno": 23
+"lineno": 24,
+"endlineno": 24
 },
 {
 "kind": "alias",
 "name": "Module",
 "target_path": "griffe.dataclasses.Module",
 "path": "griffe.git.Module",
-"lineno": 24,
-"endlineno": 24
+"lineno": 25,
+"endlineno": 25
 },
 {
 "kind": "alias",
 "name": "Parser",
 "target_path": "griffe.docstrings.parsers.Parser",
 "path": "griffe.git.Parser",
-"lineno": 25,
-"endlineno": 25
+"lineno": 26,
+"endlineno": 26
 },
 {
 "kind": "alias",
 "name": "Extensions",
 "target_path": "griffe.extensions.Extensions",
 "path": "griffe.git.Extensions",
-"lineno": 26,
-"endlineno": 26
+"lineno": 27,
+"endlineno": 27
 },
 {
 "kind": "function",
@@ -21408,8 +21426,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/git.py",
 "relative_filepath": "src/griffe/git.py",
 "relative_package_filepath": "griffe/git.py",
-"lineno": 29,
-"endlineno": 41,
+"lineno": 30,
+"endlineno": 42,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -21428,17 +21446,87 @@
 },
 {
 "kind": "function",
+"name": "_get_latest_tag",
+"path": "griffe.git._get_latest_tag",
+"filepath": "/media/data/dev/griffe/src/griffe/git.py",
+"relative_filepath": "src/griffe/git.py",
+"relative_package_filepath": "griffe/git.py",
+"lineno": 45,
+"endlineno": 54,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "path",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+{
+"source": "Path",
+"full": "pathlib.Path"
+}
+],
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": {
+"source": "str",
+"full": "str"
+}
+},
+{
+"kind": "function",
+"name": "_get_repo_root",
+"path": "griffe.git._get_repo_root",
+"filepath": "/media/data/dev/griffe/src/griffe/git.py",
+"relative_filepath": "src/griffe/git.py",
+"relative_package_filepath": "griffe/git.py",
+"lineno": 57,
+"endlineno": 66,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "path",
+"annotation": [
+{
+"source": "str",
+"full": "str"
+},
+" | ",
+{
+"source": "Path",
+"full": "pathlib.Path"
+}
+],
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": {
+"source": "str",
+"full": "str"
+}
+},
+{
+"kind": "function",
 "name": "tmp_worktree",
 "path": "griffe.git.tmp_worktree",
 "filepath": "/media/data/dev/griffe/src/griffe/git.py",
 "relative_filepath": "src/griffe/git.py",
 "relative_package_filepath": "griffe/git.py",
-"lineno": 44,
-"endlineno": 76,
+"lineno": 69,
+"endlineno": 101,
 "docstring": {
 "value": "Context manager that checks out the given reference in the given repository to a temporary worktree.\n\nParameters:\n    repo: Path to the repository (i.e. the directory *containing* the `.git` directory)\n    ref: A Git reference such as a commit, tag or branch.\n\nYields:\n    The path to the temporary worktree.\n\nRaises:\n    OSError: If `repo` is not a valid `.git` repository\n    RuntimeError: If the `git` executable is unavailable, or if it cannot create a worktree",
-"lineno": 46,
-"endlineno": 58,
+"lineno": 71,
+"endlineno": 83,
 "parsed": [
 {
 "kind": "text",
@@ -21521,8 +21609,8 @@
 "decorators": [
 {
 "value": "contextmanager",
-"lineno": 44,
-"endlineno": 44
+"lineno": 69,
+"endlineno": 69
 }
 ],
 "parameters": [
@@ -21572,12 +21660,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/git.py",
 "relative_filepath": "src/griffe/git.py",
 "relative_package_filepath": "griffe/git.py",
-"lineno": 79,
-"endlineno": 132,
+"lineno": 104,
+"endlineno": 157,
 "docstring": {
 "value": "Load and return a module from a specific Git reference.\n\nThis function will create a temporary\n[git worktree](https://git-scm.com/docs/git-worktree) at the requested reference\nbefore loading `module` with [`griffe.load`][griffe.loader.load].\n\nThis function requires that the `git` executable is installed.\n\nParameters:\n    module: The module path, relative to the repository root.\n    ref: A Git reference such as a commit, tag or branch.\n    repo: Path to the repository (i.e. the directory *containing* the `.git` directory)\n    submodules: Whether to recurse on the submodules.\n    extensions: The extensions to use.\n    search_paths: The paths to search into (relative to the repository root).\n    docstring_parser: The docstring parser to use. By default, no parsing is done.\n    docstring_options: Additional docstring parsing options.\n    lines_collection: A collection of source code lines.\n    modules_collection: A collection of modules.\n    allow_inspection: Whether to allow inspecting modules when visiting them is not possible.\n\nReturns:\n    A loaded module.",
-"lineno": 93,
-"endlineno": 116,
+"lineno": 118,
+"endlineno": 141,
 "parsed": [
 {
 "kind": "text",
@@ -22609,7 +22697,8 @@
 "lineno": 81,
 "endlineno": 81,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "True"
@@ -23416,7 +23505,8 @@
 "lineno": 45,
 "endlineno": 45,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "{'debugpy', '_pydev'}"
@@ -25837,7 +25927,8 @@
 "lineno": 42,
 "endlineno": 42,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'trace'",
@@ -25856,7 +25947,8 @@
 "lineno": 43,
 "endlineno": 43,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'debug'",
@@ -25875,7 +25967,8 @@
 "lineno": 44,
 "endlineno": 44,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'info'",
@@ -25894,7 +25987,8 @@
 "lineno": 45,
 "endlineno": 45,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'success'",
@@ -25913,7 +26007,8 @@
 "lineno": 46,
 "endlineno": 46,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'warning'",
@@ -25932,7 +26027,8 @@
 "lineno": 47,
 "endlineno": 47,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'error'",
@@ -25951,7 +26047,8 @@
 "lineno": 48,
 "endlineno": 48,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'critical'",
@@ -25990,7 +26087,8 @@
 "lineno": 52,
 "endlineno": 52,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "logging.getLogger",
@@ -26009,7 +26107,8 @@
 "lineno": 53,
 "endlineno": 53,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "{}",
@@ -26994,33 +27093,33 @@
 },
 {
 "kind": "alias",
+"name": "Expression",
+"target_path": "griffe.expressions.Expression",
+"path": "griffe.agents.visitor.Expression",
+"lineno": 45,
+"endlineno": 45
+},
+{
+"kind": "alias",
 "name": "Extensions",
 "target_path": "griffe.extensions.Extensions",
 "path": "griffe.agents.visitor.Extensions",
-"lineno": 45,
-"endlineno": 45
+"lineno": 46,
+"endlineno": 46
 },
 {
 "kind": "alias",
 "name": "Path",
 "target_path": "pathlib.Path",
 "path": "griffe.agents.visitor.Path",
-"lineno": 48,
-"endlineno": 48
+"lineno": 49,
+"endlineno": 49
 },
 {
 "kind": "alias",
 "name": "Parser",
 "target_path": "griffe.docstrings.parsers.Parser",
 "path": "griffe.agents.visitor.Parser",
-"lineno": 50,
-"endlineno": 50
-},
-{
-"kind": "alias",
-"name": "Expression",
-"target_path": "griffe.expressions.Expression",
-"path": "griffe.agents.visitor.Expression",
 "lineno": 51,
 "endlineno": 51
 },
@@ -27029,8 +27128,8 @@
 "name": "Name",
 "target_path": "griffe.expressions.Name",
 "path": "griffe.agents.visitor.Name",
-"lineno": 51,
-"endlineno": 51
+"lineno": 52,
+"endlineno": 52
 },
 {
 "kind": "attribute",
@@ -27039,8 +27138,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 54,
-"endlineno": 58,
+"lineno": 55,
+"endlineno": 59,
 "labels": [
 "module-attribute"
 ],
@@ -27054,8 +27153,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 60,
-"endlineno": 67,
+"lineno": 61,
+"endlineno": 68,
 "labels": [
 "module-attribute"
 ],
@@ -27069,8 +27168,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 68,
-"endlineno": 68,
+"lineno": 69,
+"endlineno": 69,
 "labels": [
 "module-attribute"
 ],
@@ -27084,12 +27183,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 71,
-"endlineno": 109,
+"lineno": 72,
+"endlineno": 110,
 "docstring": {
 "value": "Parse and visit a module file.\n\nParameters:\n    module_name: The module name (as when importing [from] it).\n    filepath: The module file path.\n    code: The module contents.\n    extensions: The extensions to use when visiting the AST.\n    parent: The optional parent of this module.\n    docstring_parser: The docstring parser to use. By default, no parsing is done.\n    docstring_options: Additional docstring parsing options.\n    lines_collection: A collection of source code lines.\n    modules_collection: A collection of modules.\n\nReturns:\n    The module, with its members populated.",
-"lineno": 83,
-"endlineno": 98,
+"lineno": 84,
+"endlineno": 99,
 "parsed": [
 {
 "kind": "text",
@@ -27369,12 +27468,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 112,
-"endlineno": 659,
+"lineno": 113,
+"endlineno": 674,
 "docstring": {
 "value": "This class is used to instantiate a visitor.\n\nVisitors iterate on AST nodes to extract data from them.",
-"lineno": 113,
-"endlineno": 116,
+"lineno": 114,
+"endlineno": 117,
 "parsed": [
 {
 "kind": "text",
@@ -27391,12 +27490,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 118,
-"endlineno": 154,
+"lineno": 119,
+"endlineno": 155,
 "docstring": {
 "value": "Initialize the visitor.\n\nParameters:\n    module_name: The module name.\n    filepath: The module filepath.\n    code: The module source code.\n    extensions: The extensions to use when visiting.\n    parent: An optional parent for the final module object.\n    docstring_parser: The docstring parser to use.\n    docstring_options: The docstring parsing options.\n    lines_collection: A collection of source code lines.\n    modules_collection: A collection of modules.",
-"lineno": 130,
-"endlineno": 142,
+"lineno": 131,
+"endlineno": 143,
 "parsed": [
 {
 "kind": "parameters",
@@ -27653,8 +27752,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 144,
-"endlineno": 144,
+"lineno": 145,
+"endlineno": 145,
 "labels": [
 "instance-attribute"
 ],
@@ -27672,8 +27771,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 145,
-"endlineno": 145,
+"lineno": 146,
+"endlineno": 146,
 "labels": [
 "instance-attribute"
 ],
@@ -27691,8 +27790,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 146,
-"endlineno": 146,
+"lineno": 147,
+"endlineno": 147,
 "labels": [
 "instance-attribute"
 ],
@@ -27710,8 +27809,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 147,
-"endlineno": 147,
+"lineno": 148,
+"endlineno": 148,
 "labels": [
 "instance-attribute"
 ],
@@ -27729,8 +27828,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 148,
-"endlineno": 148,
+"lineno": 149,
+"endlineno": 149,
 "labels": [
 "instance-attribute"
 ],
@@ -27752,8 +27851,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 149,
-"endlineno": 149,
+"lineno": 150,
+"endlineno": 150,
 "labels": [
 "instance-attribute"
 ],
@@ -27778,8 +27877,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 150,
-"endlineno": 150,
+"lineno": 151,
+"endlineno": 151,
 "labels": [
 "instance-attribute"
 ],
@@ -27801,8 +27900,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 151,
-"endlineno": 151,
+"lineno": 152,
+"endlineno": 152,
 "labels": [
 "instance-attribute"
 ],
@@ -27835,8 +27934,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 152,
-"endlineno": 152,
+"lineno": 153,
+"endlineno": 153,
 "labels": [
 "instance-attribute"
 ],
@@ -27854,8 +27953,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 153,
-"endlineno": 153,
+"lineno": 154,
+"endlineno": 154,
 "labels": [
 "instance-attribute"
 ],
@@ -27873,8 +27972,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 154,
-"endlineno": 154,
+"lineno": 155,
+"endlineno": 155,
 "labels": [
 "instance-attribute"
 ],
@@ -27892,8 +27991,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 156,
-"endlineno": 166,
+"lineno": 157,
+"endlineno": 167,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -27946,12 +28045,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 168,
-"endlineno": 180,
+"lineno": 169,
+"endlineno": 181,
 "docstring": {
 "value": "Build and return the object representing the module attached to this visitor.\n\nThis method triggers a complete visit of the module nodes.\n\nReturns:\n    A module instance.",
-"lineno": 169,
-"endlineno": 175,
+"lineno": 170,
+"endlineno": 176,
 "parsed": [
 {
 "kind": "text",
@@ -27995,12 +28094,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 182,
-"endlineno": 192,
+"lineno": 183,
+"endlineno": 193,
 "docstring": {
 "value": "Extend the base visit with extensions.\n\nParameters:\n    node: The node to visit.",
-"lineno": 183,
-"endlineno": 187,
+"lineno": 184,
+"endlineno": 188,
 "parsed": [
 {
 "kind": "text",
@@ -28064,12 +28163,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 194,
-"endlineno": 205,
+"lineno": 195,
+"endlineno": 206,
 "docstring": {
 "value": "Extend the base generic visit with extensions.\n\nParameters:\n    node: The node to visit.",
-"lineno": 195,
-"endlineno": 199,
+"lineno": 196,
+"endlineno": 200,
 "parsed": [
 {
 "kind": "text",
@@ -28133,12 +28232,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 207,
-"endlineno": 221,
+"lineno": 208,
+"endlineno": 222,
 "docstring": {
 "value": "Visit a module node.\n\nParameters:\n    node: The node to visit.",
-"lineno": 208,
-"endlineno": 212,
+"lineno": 209,
+"endlineno": 213,
 "parsed": [
 {
 "kind": "text",
@@ -28202,12 +28301,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 223,
-"endlineno": 263,
+"lineno": 224,
+"endlineno": 264,
 "docstring": {
 "value": "Visit a class definition node.\n\nParameters:\n    node: The node to visit.",
-"lineno": 224,
-"endlineno": 228,
+"lineno": 225,
+"endlineno": 229,
 "parsed": [
 {
 "kind": "text",
@@ -28271,12 +28370,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 265,
-"endlineno": 286,
+"lineno": 266,
+"endlineno": 287,
 "docstring": {
 "value": "Build and return a set of labels based on decorators.\n\nParameters:\n    decorators: The decorators to check.\n\nReturns:\n    A set of labels.",
-"lineno": 266,
-"endlineno": 273,
+"lineno": 267,
+"endlineno": 274,
 "parsed": [
 {
 "kind": "text",
@@ -28374,12 +28473,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 288,
-"endlineno": 309,
+"lineno": 289,
+"endlineno": 310,
 "docstring": {
 "value": "Check decorators to return the base property in case of setters and deleters.\n\nParameters:\n    decorators: The decorators to check.\n\nReturns:\n    base_property: The property for which the setter/deleted is set.\n    property_function: Either `\"setter\"` or `\"deleter\"`.",
-"lineno": 289,
-"endlineno": 297,
+"lineno": 290,
+"endlineno": 298,
 "parsed": [
 {
 "kind": "text",
@@ -28500,12 +28599,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 311,
-"endlineno": 470,
+"lineno": 312,
+"endlineno": 471,
 "docstring": {
 "value": "Handle a function definition node.\n\nParameters:\n    node: The node to visit.\n    labels: Labels to add to the data object.",
-"lineno": 312,
-"endlineno": 317,
+"lineno": 313,
+"endlineno": 318,
 "parsed": [
 {
 "kind": "text",
@@ -28623,12 +28722,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 472,
-"endlineno": 478,
+"lineno": 473,
+"endlineno": 479,
 "docstring": {
 "value": "Visit a function definition node.\n\nParameters:\n    node: The node to visit.",
-"lineno": 473,
-"endlineno": 477,
+"lineno": 474,
+"endlineno": 478,
 "parsed": [
 {
 "kind": "text",
@@ -28692,12 +28791,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 480,
-"endlineno": 486,
+"lineno": 481,
+"endlineno": 487,
 "docstring": {
 "value": "Visit an async function definition node.\n\nParameters:\n    node: The node to visit.",
-"lineno": 481,
-"endlineno": 485,
+"lineno": 482,
+"endlineno": 486,
 "parsed": [
 {
 "kind": "text",
@@ -28761,12 +28860,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 488,
-"endlineno": 504,
+"lineno": 489,
+"endlineno": 505,
 "docstring": {
 "value": "Visit an import node.\n\nParameters:\n    node: The node to visit.",
-"lineno": 489,
-"endlineno": 493,
+"lineno": 490,
+"endlineno": 494,
 "parsed": [
 {
 "kind": "text",
@@ -28830,12 +28929,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 506,
-"endlineno": 533,
+"lineno": 507,
+"endlineno": 534,
 "docstring": {
 "value": "Visit an \"import from\" node.\n\nParameters:\n    node: The node to visit.",
-"lineno": 507,
-"endlineno": 511,
+"lineno": 508,
+"endlineno": 512,
 "parsed": [
 {
 "kind": "text",
@@ -28899,12 +28998,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 535,
-"endlineno": 613,
+"lineno": 536,
+"endlineno": 628,
 "docstring": {
 "value": "Handle an attribute (assignment) node.\n\nParameters:\n    node: The node to visit.\n    annotation: A potential annotation.",
-"lineno": 540,
-"endlineno": 545,
+"lineno": 541,
+"endlineno": 546,
 "parsed": [
 {
 "kind": "text",
@@ -29050,12 +29149,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 615,
-"endlineno": 621,
+"lineno": 630,
+"endlineno": 636,
 "docstring": {
 "value": "Visit an assignment node.\n\nParameters:\n    node: The node to visit.",
-"lineno": 616,
-"endlineno": 620,
+"lineno": 631,
+"endlineno": 635,
 "parsed": [
 {
 "kind": "text",
@@ -29119,12 +29218,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 623,
-"endlineno": 629,
+"lineno": 638,
+"endlineno": 644,
 "docstring": {
 "value": "Visit an annotated assignment node.\n\nParameters:\n    node: The node to visit.",
-"lineno": 624,
-"endlineno": 628,
+"lineno": 639,
+"endlineno": 643,
 "parsed": [
 {
 "kind": "text",
@@ -29188,12 +29287,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 631,
-"endlineno": 645,
+"lineno": 646,
+"endlineno": 660,
 "docstring": {
 "value": "Visit an augmented assignment node.\n\nParameters:\n    node: The node to visit.",
-"lineno": 632,
-"endlineno": 636,
+"lineno": 647,
+"endlineno": 651,
 "parsed": [
 {
 "kind": "text",
@@ -29257,12 +29356,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 647,
-"endlineno": 659,
+"lineno": 662,
+"endlineno": 674,
 "docstring": {
 "value": "Visit an \"if\" node.\n\nParameters:\n    node: The node to visit.",
-"lineno": 648,
-"endlineno": 652,
+"lineno": 663,
+"endlineno": 667,
 "parsed": [
 {
 "kind": "text",
@@ -29335,8 +29434,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 662,
-"endlineno": 662,
+"lineno": 677,
+"endlineno": 677,
 "labels": [
 "module-attribute"
 ],
@@ -29350,12 +29449,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/visitor.py",
 "relative_filepath": "src/griffe/agents/visitor.py",
 "relative_package_filepath": "griffe/agents/visitor.py",
-"lineno": 665,
-"endlineno": 673,
+"lineno": 680,
+"endlineno": 688,
 "docstring": {
 "value": "Extend the base `ast.AST` class to provide more functionality.",
-"lineno": 666,
-"endlineno": 666,
+"lineno": 681,
+"endlineno": 681,
 "parsed": [
 {
 "kind": "text",
@@ -32445,59 +32544,67 @@
 },
 {
 "kind": "alias",
+"name": "NodeNamedExpr",
+"target_path": "ast.NamedExpr",
+"path": "griffe.agents.nodes.NodeNamedExpr",
+"lineno": 92,
+"endlineno": 92
+},
+{
+"kind": "alias",
 "name": "NodeBytes",
 "target_path": "ast.Bytes",
 "path": "griffe.agents.nodes.NodeBytes",
-"lineno": 92,
-"endlineno": 92
+"lineno": 96,
+"endlineno": 96
 },
 {
 "kind": "alias",
 "name": "NodeNameConstant",
 "target_path": "ast.NameConstant",
 "path": "griffe.agents.nodes.NodeNameConstant",
-"lineno": 93,
-"endlineno": 93
+"lineno": 97,
+"endlineno": 97
 },
 {
 "kind": "alias",
 "name": "cached_property",
 "target_path": "functools.cached_property",
 "path": "griffe.agents.nodes.cached_property",
-"lineno": 97,
-"endlineno": 97
+"lineno": 101,
+"endlineno": 101
 },
 {
 "kind": "alias",
 "name": "NodeExtSlice",
 "target_path": "ast.ExtSlice",
 "path": "griffe.agents.nodes.NodeExtSlice",
-"lineno": 101,
-"endlineno": 101
+"lineno": 105,
+"endlineno": 105
 },
 {
 "kind": "alias",
 "name": "NodeIndex",
 "target_path": "ast.Index",
 "path": "griffe.agents.nodes.NodeIndex",
-"lineno": 102,
-"endlineno": 102
+"lineno": 106,
+"endlineno": 106
 },
 {
 "kind": "alias",
 "name": "Class",
 "target_path": "griffe.dataclasses.Class",
 "path": "griffe.agents.nodes.Class",
-"lineno": 105,
-"endlineno": 105
+"lineno": 109,
+"endlineno": 109
 },
 {
 "kind": "alias",
 "name": "Module",
 "target_path": "griffe.dataclasses.Module",
 "path": "griffe.agents.nodes.Module",
-"lineno": 105,
-"endlineno": 105
+"lineno": 109,
+"endlineno": 109
 },
 {
 "kind": "class",
@@ -32506,12 +32613,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 108,
-"endlineno": 253,
+"lineno": 112,
+"endlineno": 257,
 "docstring": {
 "value": "This class is dynamically added to the bases of each AST node class.",
-"lineno": 109,
-"endlineno": 109,
+"lineno": 113,
+"endlineno": 113,
 "parsed": [
 {
 "kind": "text",
@@ -32528,10 +32635,10 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 111,
-"endlineno": 111,
+"lineno": 115,
+"endlineno": 115,
 "labels": [
-"class-attribute"
+"instance-attribute"
 ],
 "members": [],
 "annotation": {
@@ -32546,10 +32653,11 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 115,
-"endlineno": 115,
+"lineno": 119,
+"endlineno": 119,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "property(lambda _: None)"
@@ -32561,12 +32669,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 118,
-"endlineno": 124,
+"lineno": 122,
+"endlineno": 128,
 "docstring": {
 "value": "Return the kind of this node.\n\nReturns:\n    The node kind.",
-"lineno": 119,
-"endlineno": 123,
+"lineno": 123,
+"endlineno": 127,
 "parsed": [
 {
 "kind": "text",
@@ -32604,12 +32712,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 127,
-"endlineno": 147,
+"lineno": 131,
+"endlineno": 151,
 "docstring": {
 "value": "Build and return the children of this node.\n\nReturns:\n    A list of children.",
-"lineno": 128,
-"endlineno": 132,
+"lineno": 132,
+"endlineno": 136,
 "parsed": [
 {
 "kind": "text",
@@ -32663,12 +32771,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 150,
-"endlineno": 162,
+"lineno": 154,
+"endlineno": 166,
 "docstring": {
 "value": "Tell the position of this node amongst its siblings.\n\nRaises:\n    RootNodeError: When the node doesn't have a parent.\n\nReturns:\n    The node position amongst its siblings.",
-"lineno": 151,
-"endlineno": 158,
+"lineno": 155,
+"endlineno": 162,
 "parsed": [
 {
 "kind": "text",
@@ -32718,12 +32826,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 165,
-"endlineno": 173,
+"lineno": 169,
+"endlineno": 177,
 "docstring": {
 "value": "Return the previous siblings of this node, starting from the closest.\n\nReturns:\n    The previous siblings.",
-"lineno": 166,
-"endlineno": 170,
+"lineno": 170,
+"endlineno": 174,
 "parsed": [
 {
 "kind": "text",
@@ -32777,12 +32885,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 176,
-"endlineno": 184,
+"lineno": 180,
+"endlineno": 188,
 "docstring": {
 "value": "Return the next siblings of this node, starting from the closest.\n\nReturns:\n    The next siblings.",
-"lineno": 177,
-"endlineno": 181,
+"lineno": 181,
+"endlineno": 185,
 "parsed": [
 {
 "kind": "text",
@@ -32836,12 +32944,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 187,
-"endlineno": 193,
+"lineno": 191,
+"endlineno": 197,
 "docstring": {
 "value": "Return the siblings of this node.\n\nReturns:\n    The siblings.",
-"lineno": 188,
-"endlineno": 192,
+"lineno": 192,
+"endlineno": 196,
 "parsed": [
 {
 "kind": "text",
@@ -32895,12 +33003,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 196,
-"endlineno": 208,
+"lineno": 200,
+"endlineno": 212,
 "docstring": {
 "value": "Return the previous sibling of this node.\n\nRaises:\n    LastNodeError: When the node does not have previous siblings.\n\nReturns:\n    The sibling.",
-"lineno": 197,
-"endlineno": 204,
+"lineno": 201,
+"endlineno": 208,
 "parsed": [
 {
 "kind": "text",
@@ -32950,12 +33058,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 211,
-"endlineno": 223,
+"lineno": 215,
+"endlineno": 227,
 "docstring": {
 "value": "Return the next sibling of this node.\n\nRaises:\n    LastNodeError: When the node does not have next siblings.\n\nReturns:\n    The sibling.",
-"lineno": 212,
-"endlineno": 219,
+"lineno": 216,
+"endlineno": 223,
 "parsed": [
 {
 "kind": "text",
@@ -33005,12 +33113,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 226,
-"endlineno": 238,
+"lineno": 230,
+"endlineno": 242,
 "docstring": {
 "value": "Return the first child of this node.\n\nRaises:\n    LastNodeError: When the node does not have children.\n\nReturns:\n    The child.",
-"lineno": 227,
-"endlineno": 234,
+"lineno": 231,
+"endlineno": 238,
 "parsed": [
 {
 "kind": "text",
@@ -33060,12 +33168,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 241,
-"endlineno": 253,
+"lineno": 245,
+"endlineno": 257,
 "docstring": {
 "value": "Return the lasts child of this node.\n\nRaises:\n    LastNodeError: When the node does not have children.\n\nReturns:\n    The child.",
-"lineno": 242,
-"endlineno": 249,
+"lineno": 246,
+"endlineno": 253,
 "parsed": [
 {
 "kind": "text",
@@ -33119,12 +33227,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 256,
-"endlineno": 274,
+"lineno": 260,
+"endlineno": 278,
 "docstring": {
 "value": "Enumeration for the different kinds of objects.",
-"lineno": 257,
-"endlineno": 257,
+"lineno": 261,
+"endlineno": 261,
 "parsed": [
 {
 "kind": "text",
@@ -33141,10 +33249,11 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 259,
-"endlineno": 259,
+"lineno": 263,
+"endlineno": 263,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'module'",
@@ -33160,10 +33269,11 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 260,
-"endlineno": 260,
+"lineno": 264,
+"endlineno": 264,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'class'",
@@ -33179,10 +33289,11 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 261,
-"endlineno": 261,
+"lineno": 265,
+"endlineno": 265,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'staticmethod'",
@@ -33198,10 +33309,11 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 262,
-"endlineno": 262,
+"lineno": 266,
+"endlineno": 266,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'classmethod'",
@@ -33217,10 +33329,11 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 263,
-"endlineno": 263,
+"lineno": 267,
+"endlineno": 267,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'method_descriptor'",
@@ -33236,10 +33349,11 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 264,
-"endlineno": 264,
+"lineno": 268,
+"endlineno": 268,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'method'",
@@ -33255,10 +33369,11 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 265,
-"endlineno": 265,
+"lineno": 269,
+"endlineno": 269,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'builtin_method'",
@@ -33274,10 +33389,11 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 266,
-"endlineno": 266,
+"lineno": 270,
+"endlineno": 270,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'coroutine'",
@@ -33293,10 +33409,11 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 267,
-"endlineno": 267,
+"lineno": 271,
+"endlineno": 271,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'function'",
@@ -33312,10 +33429,11 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 268,
-"endlineno": 268,
+"lineno": 272,
+"endlineno": 272,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'builtin_function'",
@@ -33331,10 +33449,11 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 269,
-"endlineno": 269,
+"lineno": 273,
+"endlineno": 273,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'cached_property'",
@@ -33350,10 +33469,11 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 270,
-"endlineno": 270,
+"lineno": 274,
+"endlineno": 274,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'property'",
@@ -33369,10 +33489,11 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 271,
-"endlineno": 271,
+"lineno": 275,
+"endlineno": 275,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'attribute'",
@@ -33388,8 +33509,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 273,
-"endlineno": 274,
+"lineno": 277,
+"endlineno": 278,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33429,12 +33550,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 277,
-"endlineno": 509,
+"lineno": 281,
+"endlineno": 513,
 "docstring": {
 "value": "Helper class to represent an object tree.\n\nIt's not really a tree but more a backward-linked list:\neach node has a reference to its parent, but not to its child (for simplicity purposes and to avoid bugs).\n\nEach node stores an object, its name, and a reference to its parent node.\n\nAttributes:\n    obj: The actual Python object.\n    name: The Python object's name.\n    parent: The parent node.",
-"lineno": 278,
-"endlineno": 289,
+"lineno": 282,
+"endlineno": 293,
 "parsed": [
 {
 "kind": "text",
@@ -33484,10 +33605,11 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 292,
-"endlineno": 292,
+"lineno": 296,
+"endlineno": 296,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "{'__builtins__', '__loader__', '__spec__'}"
@@ -33499,12 +33621,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 294,
-"endlineno": 313,
+"lineno": 298,
+"endlineno": 317,
 "docstring": {
 "value": "Initialize the object.\n\nArguments:\n    obj: A Python object.\n    name: The object's name.\n    parent: The object's parent node.",
-"lineno": 295,
-"endlineno": 301,
+"lineno": 299,
+"endlineno": 305,
 "parsed": [
 {
 "kind": "parameters",
@@ -33593,8 +33715,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 311,
-"endlineno": 311,
+"lineno": 315,
+"endlineno": 315,
 "labels": [
 "instance-attribute"
 ],
@@ -33612,8 +33734,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 312,
-"endlineno": 312,
+"lineno": 316,
+"endlineno": 316,
 "labels": [
 "instance-attribute"
 ],
@@ -33631,8 +33753,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 313,
-"endlineno": 313,
+"lineno": 317,
+"endlineno": 317,
 "labels": [
 "instance-attribute"
 ],
@@ -33654,8 +33776,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 315,
-"endlineno": 316,
+"lineno": 319,
+"endlineno": 320,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -33679,12 +33801,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 319,
-"endlineno": 349,
+"lineno": 323,
+"endlineno": 353,
 "docstring": {
 "value": "Return the kind of this node.\n\nReturns:\n    The node kind.",
-"lineno": 320,
-"endlineno": 324,
+"lineno": 324,
+"endlineno": 328,
 "parsed": [
 {
 "kind": "text",
@@ -33722,12 +33844,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 352,
-"endlineno": 362,
+"lineno": 356,
+"endlineno": 366,
 "docstring": {
 "value": "Build and return the children of this node.\n\nReturns:\n    A list of children.",
-"lineno": 353,
-"endlineno": 357,
+"lineno": 357,
+"endlineno": 361,
 "parsed": [
 {
 "kind": "text",
@@ -33781,12 +33903,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 365,
-"endlineno": 371,
+"lineno": 369,
+"endlineno": 375,
 "docstring": {
 "value": "Tell if this node's object is a module.\n\nReturns:\n    The root of the tree.",
-"lineno": 366,
-"endlineno": 370,
+"lineno": 370,
+"endlineno": 374,
 "parsed": [
 {
 "kind": "text",
@@ -33824,12 +33946,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 374,
-"endlineno": 380,
+"lineno": 378,
+"endlineno": 384,
 "docstring": {
 "value": "Tell if this node's object is a class.\n\nReturns:\n    If this node's object is a class.",
-"lineno": 375,
-"endlineno": 379,
+"lineno": 379,
+"endlineno": 383,
 "parsed": [
 {
 "kind": "text",
@@ -33867,12 +33989,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 383,
-"endlineno": 389,
+"lineno": 387,
+"endlineno": 393,
 "docstring": {
 "value": "Tell if this node's object is a function.\n\nReturns:\n    If this node's object is a function.",
-"lineno": 384,
-"endlineno": 388,
+"lineno": 388,
+"endlineno": 392,
 "parsed": [
 {
 "kind": "text",
@@ -33910,12 +34032,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 392,
-"endlineno": 398,
+"lineno": 396,
+"endlineno": 402,
 "docstring": {
 "value": "Tell if this node's object is a builtin function.\n\nReturns:\n    If this node's object is a builtin function.",
-"lineno": 393,
-"endlineno": 397,
+"lineno": 397,
+"endlineno": 401,
 "parsed": [
 {
 "kind": "text",
@@ -33953,12 +34075,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 401,
-"endlineno": 407,
+"lineno": 405,
+"endlineno": 411,
 "docstring": {
 "value": "Tell if this node's object is a coroutine.\n\nReturns:\n    If this node's object is a coroutine.",
-"lineno": 402,
-"endlineno": 406,
+"lineno": 406,
+"endlineno": 410,
 "parsed": [
 {
 "kind": "text",
@@ -33996,12 +34118,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 410,
-"endlineno": 416,
+"lineno": 414,
+"endlineno": 420,
 "docstring": {
 "value": "Tell if this node's object is a property.\n\nReturns:\n    If this node's object is a property.",
-"lineno": 411,
-"endlineno": 415,
+"lineno": 415,
+"endlineno": 419,
 "parsed": [
 {
 "kind": "text",
@@ -34039,12 +34161,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 419,
-"endlineno": 425,
+"lineno": 423,
+"endlineno": 429,
 "docstring": {
 "value": "Tell if this node's object is a cached property.\n\nReturns:\n    If this node's object is a cached property.",
-"lineno": 420,
-"endlineno": 424,
+"lineno": 424,
+"endlineno": 428,
 "parsed": [
 {
 "kind": "text",
@@ -34082,12 +34204,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 428,
-"endlineno": 434,
+"lineno": 432,
+"endlineno": 438,
 "docstring": {
 "value": "Tell if the object of this node's parent is a class.\n\nReturns:\n    If the object of this node's parent is a class.",
-"lineno": 429,
-"endlineno": 433,
+"lineno": 433,
+"endlineno": 437,
 "parsed": [
 {
 "kind": "text",
@@ -34125,12 +34247,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 437,
-"endlineno": 444,
+"lineno": 441,
+"endlineno": 448,
 "docstring": {
 "value": "Tell if this node's object is a method.\n\nReturns:\n    If this node's object is a method.",
-"lineno": 438,
-"endlineno": 442,
+"lineno": 442,
+"endlineno": 446,
 "parsed": [
 {
 "kind": "text",
@@ -34168,12 +34290,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 447,
-"endlineno": 456,
+"lineno": 451,
+"endlineno": 460,
 "docstring": {
 "value": "Tell if this node's object is a method descriptor.\n\nBuilt-in methods (e.g. those implemented in C/Rust) are often\nmethod descriptors, rather than normal methods.\n\nReturns:\n    If this node's object is a method descriptor.",
-"lineno": 448,
-"endlineno": 455,
+"lineno": 452,
+"endlineno": 459,
 "parsed": [
 {
 "kind": "text",
@@ -34211,12 +34333,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 459,
-"endlineno": 465,
+"lineno": 463,
+"endlineno": 469,
 "docstring": {
 "value": "Tell if this node's object is a builtin method.\n\nReturns:\n    If this node's object is a builtin method.",
-"lineno": 460,
-"endlineno": 464,
+"lineno": 464,
+"endlineno": 468,
 "parsed": [
 {
 "kind": "text",
@@ -34254,12 +34376,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 468,
-"endlineno": 480,
+"lineno": 472,
+"endlineno": 484,
 "docstring": {
 "value": "Tell if this node's object is a staticmethod.\n\nReturns:\n    If this node's object is a staticmethod.",
-"lineno": 469,
-"endlineno": 473,
+"lineno": 473,
+"endlineno": 477,
 "parsed": [
 {
 "kind": "text",
@@ -34297,12 +34419,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 483,
-"endlineno": 495,
+"lineno": 487,
+"endlineno": 499,
 "docstring": {
 "value": "Tell if this node's object is a classmethod.\n\nReturns:\n    If this node's object is a classmethod.",
-"lineno": 484,
-"endlineno": 488,
+"lineno": 488,
+"endlineno": 492,
 "parsed": [
 {
 "kind": "text",
@@ -34340,8 +34462,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 498,
-"endlineno": 501,
+"lineno": 502,
+"endlineno": 505,
 "labels": [
 "cached",
 "property"
@@ -34367,8 +34489,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 503,
-"endlineno": 509,
+"lineno": 507,
+"endlineno": 513,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34414,8 +34536,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 512,
-"endlineno": 519,
+"lineno": 516,
+"endlineno": 523,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34451,8 +34573,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 522,
-"endlineno": 526,
+"lineno": 526,
+"endlineno": 530,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34496,8 +34618,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 529,
-"endlineno": 530,
+"lineno": 533,
+"endlineno": 534,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34541,8 +34663,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 533,
-"endlineno": 534,
+"lineno": 537,
+"endlineno": 538,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34593,8 +34715,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 537,
-"endlineno": 541,
+"lineno": 541,
+"endlineno": 545,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34659,8 +34781,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 544,
-"endlineno": 547,
+"lineno": 548,
+"endlineno": 551,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34711,8 +34833,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 550,
-"endlineno": 558,
+"lineno": 554,
+"endlineno": 562,
 "labels": [
 "module-attribute"
 ],
@@ -34784,8 +34906,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 563,
-"endlineno": 564,
+"lineno": 567,
+"endlineno": 568,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34829,8 +34951,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 566,
-"endlineno": 567,
+"lineno": 570,
+"endlineno": 571,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34874,8 +34996,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 573,
-"endlineno": 574,
+"lineno": 577,
+"endlineno": 578,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -34926,12 +35048,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 577,
-"endlineno": 591,
+"lineno": 581,
+"endlineno": 595,
 "docstring": {
 "value": "Get the values declared in `__all__`.\n\nParameters:\n    node: The assignment node.\n    parent: The parent module.\n\nReturns:\n    A set of names.",
-"lineno": 578,
-"endlineno": 586,
+"lineno": 582,
+"endlineno": 590,
 "parsed": [
 {
 "kind": "text",
@@ -35052,8 +35174,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 596,
-"endlineno": 603,
+"lineno": 600,
+"endlineno": 607,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35096,8 +35218,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 606,
-"endlineno": 609,
+"lineno": 610,
+"endlineno": 613,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35140,8 +35262,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 612,
-"endlineno": 613,
+"lineno": 616,
+"endlineno": 617,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35184,8 +35306,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 616,
-"endlineno": 617,
+"lineno": 620,
+"endlineno": 621,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35228,8 +35350,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 620,
-"endlineno": 632,
+"lineno": 624,
+"endlineno": 636,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35272,8 +35394,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 635,
-"endlineno": 639,
+"lineno": 639,
+"endlineno": 643,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35323,8 +35445,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 642,
-"endlineno": 643,
+"lineno": 646,
+"endlineno": 647,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35367,8 +35489,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 646,
-"endlineno": 647,
+"lineno": 650,
+"endlineno": 651,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35411,8 +35533,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 650,
-"endlineno": 657,
+"lineno": 654,
+"endlineno": 661,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35455,8 +35577,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 660,
-"endlineno": 661,
+"lineno": 664,
+"endlineno": 665,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35499,8 +35621,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 664,
-"endlineno": 665,
+"lineno": 668,
+"endlineno": 669,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35543,8 +35665,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 668,
-"endlineno": 669,
+"lineno": 672,
+"endlineno": 673,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35587,8 +35709,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 672,
-"endlineno": 673,
+"lineno": 676,
+"endlineno": 677,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35631,8 +35753,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 676,
-"endlineno": 684,
+"lineno": 680,
+"endlineno": 688,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35675,8 +35797,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 687,
-"endlineno": 688,
+"lineno": 691,
+"endlineno": 692,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35719,8 +35841,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 691,
-"endlineno": 692,
+"lineno": 695,
+"endlineno": 696,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35763,8 +35885,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 695,
-"endlineno": 696,
+"lineno": 699,
+"endlineno": 700,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35807,8 +35929,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 699,
-"endlineno": 700,
+"lineno": 703,
+"endlineno": 704,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35851,8 +35973,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 703,
-"endlineno": 721,
+"lineno": 707,
+"endlineno": 725,
 "labels": [
 "module-attribute"
 ],
@@ -35930,8 +36052,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 726,
-"endlineno": 727,
+"lineno": 730,
+"endlineno": 731,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -35988,8 +36110,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 734,
-"endlineno": 735,
+"lineno": 738,
+"endlineno": 739,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36032,8 +36154,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 737,
-"endlineno": 738,
+"lineno": 741,
+"endlineno": 742,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36076,8 +36198,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 740,
-"endlineno": 741,
+"lineno": 744,
+"endlineno": 745,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36120,8 +36242,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 743,
-"endlineno": 745,
+"lineno": 747,
+"endlineno": 749,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36171,8 +36293,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 753,
-"endlineno": 754,
+"lineno": 757,
+"endlineno": 758,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36229,12 +36351,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 757,
-"endlineno": 769,
+"lineno": 761,
+"endlineno": 773,
 "docstring": {
 "value": "Extract a resolvable annotation.\n\nParameters:\n    node: The annotation node.\n    parent: The parent used to resolve the name.\n\nReturns:\n    A string or resovable name or expression.",
-"lineno": 758,
-"endlineno": 766,
+"lineno": 762,
+"endlineno": 770,
 "parsed": [
 {
 "kind": "text",
@@ -36369,12 +36491,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 772,
-"endlineno": 796,
+"lineno": 776,
+"endlineno": 800,
 "docstring": {
 "value": "Safely (no exception) extract a resolvable annotation.\n\nParameters:\n    node: The annotation node.\n    parent: The parent used to resolve the name.\n    log_level: Log level to use to log a message.\n\nReturns:\n    A string or resovable name or expression.",
-"lineno": 777,
-"endlineno": 786,
+"lineno": 781,
+"endlineno": 790,
 "parsed": [
 {
 "kind": "text",
@@ -36527,12 +36649,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 801,
-"endlineno": 833,
+"lineno": 805,
+"endlineno": 837,
 "docstring": {
 "value": "Extract a docstring.\n\nParameters:\n    node: The node to extract the docstring from.\n    strict: Whether to skip searching the body (functions).\n\nReturns:\n    A tuple with the value and line numbers of the docstring.",
-"lineno": 806,
-"endlineno": 814,
+"lineno": 810,
+"endlineno": 818,
 "parsed": [
 {
 "kind": "text",
@@ -36674,8 +36796,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 838,
-"endlineno": 839,
+"lineno": 842,
+"endlineno": 843,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36702,8 +36824,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 842,
-"endlineno": 843,
+"lineno": 846,
+"endlineno": 847,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36730,8 +36852,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 846,
-"endlineno": 847,
+"lineno": 850,
+"endlineno": 851,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36758,8 +36880,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 850,
-"endlineno": 851,
+"lineno": 854,
+"endlineno": 855,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36786,8 +36908,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 854,
-"endlineno": 855,
+"lineno": 858,
+"endlineno": 859,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36814,8 +36936,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 858,
-"endlineno": 859,
+"lineno": 862,
+"endlineno": 863,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36842,8 +36964,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 862,
-"endlineno": 863,
+"lineno": 866,
+"endlineno": 867,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36870,8 +36992,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 866,
-"endlineno": 867,
+"lineno": 870,
+"endlineno": 871,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36898,8 +37020,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 870,
-"endlineno": 871,
+"lineno": 874,
+"endlineno": 875,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36926,8 +37048,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 874,
-"endlineno": 885,
+"lineno": 878,
+"endlineno": 889,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36954,8 +37076,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 888,
-"endlineno": 892,
+"lineno": 892,
+"endlineno": 896,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -36982,8 +37104,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 895,
-"endlineno": 904,
+"lineno": 899,
+"endlineno": 908,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37010,8 +37132,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 907,
-"endlineno": 908,
+"lineno": 911,
+"endlineno": 912,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37038,8 +37160,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 911,
-"endlineno": 914,
+"lineno": 915,
+"endlineno": 918,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37066,8 +37188,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 917,
-"endlineno": 920,
+"lineno": 921,
+"endlineno": 924,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37094,8 +37216,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 923,
-"endlineno": 927,
+"lineno": 927,
+"endlineno": 931,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37122,8 +37244,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 930,
-"endlineno": 931,
+"lineno": 934,
+"endlineno": 935,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37150,8 +37272,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 934,
-"endlineno": 935,
+"lineno": 938,
+"endlineno": 939,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37178,8 +37300,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 938,
-"endlineno": 939,
+"lineno": 942,
+"endlineno": 943,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37206,8 +37328,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 942,
-"endlineno": 943,
+"lineno": 946,
+"endlineno": 947,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37234,8 +37356,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 946,
-"endlineno": 947,
+"lineno": 950,
+"endlineno": 951,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37262,8 +37384,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 950,
-"endlineno": 953,
+"lineno": 954,
+"endlineno": 957,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37290,8 +37412,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 956,
-"endlineno": 957,
+"lineno": 960,
+"endlineno": 961,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37318,8 +37440,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 960,
-"endlineno": 961,
+"lineno": 964,
+"endlineno": 965,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37346,8 +37468,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 964,
-"endlineno": 965,
+"lineno": 968,
+"endlineno": 969,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37374,8 +37496,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 968,
-"endlineno": 969,
+"lineno": 972,
+"endlineno": 973,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37402,8 +37524,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 972,
-"endlineno": 973,
+"lineno": 976,
+"endlineno": 977,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37430,8 +37552,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 976,
-"endlineno": 977,
+"lineno": 980,
+"endlineno": 981,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37458,8 +37580,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 980,
-"endlineno": 981,
+"lineno": 984,
+"endlineno": 985,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37486,8 +37608,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 984,
-"endlineno": 989,
+"lineno": 988,
+"endlineno": 993,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37514,8 +37636,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 992,
-"endlineno": 993,
+"lineno": 996,
+"endlineno": 997,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37542,8 +37664,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 996,
-"endlineno": 997,
+"lineno": 1000,
+"endlineno": 1001,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37570,8 +37692,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1000,
-"endlineno": 1001,
+"lineno": 1004,
+"endlineno": 1005,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37598,8 +37720,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1004,
-"endlineno": 1007,
+"lineno": 1008,
+"endlineno": 1011,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37626,8 +37748,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1010,
-"endlineno": 1011,
+"lineno": 1014,
+"endlineno": 1015,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37654,8 +37776,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1014,
-"endlineno": 1015,
+"lineno": 1018,
+"endlineno": 1019,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37682,8 +37804,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1018,
-"endlineno": 1019,
+"lineno": 1022,
+"endlineno": 1023,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37710,8 +37832,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1022,
-"endlineno": 1023,
+"lineno": 1026,
+"endlineno": 1027,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37738,8 +37860,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1026,
-"endlineno": 1027,
+"lineno": 1030,
+"endlineno": 1031,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37766,8 +37888,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1030,
-"endlineno": 1031,
+"lineno": 1034,
+"endlineno": 1035,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37794,8 +37916,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1034,
-"endlineno": 1035,
+"lineno": 1038,
+"endlineno": 1039,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37822,8 +37944,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1038,
-"endlineno": 1039,
+"lineno": 1042,
+"endlineno": 1043,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37850,8 +37972,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1042,
-"endlineno": 1043,
+"lineno": 1046,
+"endlineno": 1047,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37878,8 +38000,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1046,
-"endlineno": 1047,
+"lineno": 1050,
+"endlineno": 1051,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37906,8 +38028,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1050,
-"endlineno": 1051,
+"lineno": 1054,
+"endlineno": 1055,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37934,8 +38056,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1054,
-"endlineno": 1055,
+"lineno": 1058,
+"endlineno": 1059,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37962,8 +38084,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1058,
-"endlineno": 1059,
+"lineno": 1062,
+"endlineno": 1063,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -37990,8 +38112,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1062,
-"endlineno": 1063,
+"lineno": 1066,
+"endlineno": 1067,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38018,8 +38140,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1066,
-"endlineno": 1069,
+"lineno": 1070,
+"endlineno": 1073,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38046,8 +38168,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1072,
-"endlineno": 1076,
+"lineno": 1076,
+"endlineno": 1080,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38074,8 +38196,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1079,
-"endlineno": 1080,
+"lineno": 1083,
+"endlineno": 1084,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38102,8 +38224,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1083,
-"endlineno": 1084,
+"lineno": 1087,
+"endlineno": 1088,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38130,8 +38252,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1087,
-"endlineno": 1091,
+"lineno": 1091,
+"endlineno": 1095,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38158,8 +38280,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1094,
-"endlineno": 1095,
+"lineno": 1098,
+"endlineno": 1099,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38186,8 +38308,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1098,
-"endlineno": 1099,
+"lineno": 1102,
+"endlineno": 1103,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38214,8 +38336,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1102,
-"endlineno": 1103,
+"lineno": 1106,
+"endlineno": 1107,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38242,8 +38364,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1106,
-"endlineno": 1107,
+"lineno": 1110,
+"endlineno": 1111,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38270,8 +38392,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1110,
-"endlineno": 1113,
+"lineno": 1114,
+"endlineno": 1117,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38298,8 +38420,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1116,
-"endlineno": 1175,
+"lineno": 1120,
+"endlineno": 1179,
 "labels": [
 "module-attribute"
 ],
@@ -38346,13 +38468,41 @@
 },
 {
 "kind": "function",
+"name": "_get_named_expr_value",
+"path": "griffe.agents.nodes._get_named_expr_value",
+"filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
+"relative_filepath": "src/griffe/agents/nodes.py",
+"relative_package_filepath": "griffe/agents/nodes.py",
+"lineno": 1184,
+"endlineno": 1185,
+"labels": [],
+"members": [],
+"decorators": [],
+"parameters": [
+{
+"name": "node",
+"annotation": {
+"source": "NodeNamedExpr",
+"full": "ast.NamedExpr"
+},
+"kind": "positional or keyword",
+"default": null
+}
+],
+"returns": {
+"source": "str",
+"full": "str"
+}
+},
+{
+"kind": "function",
 "name": "_get_extslice_value",
 "path": "griffe.agents.nodes._get_extslice_value",
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1180,
-"endlineno": 1181,
+"lineno": 1192,
+"endlineno": 1193,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38379,8 +38529,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1183,
-"endlineno": 1184,
+"lineno": 1195,
+"endlineno": 1196,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38407,8 +38557,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1193,
-"endlineno": 1194,
+"lineno": 1205,
+"endlineno": 1206,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38435,8 +38585,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1196,
-"endlineno": 1197,
+"lineno": 1208,
+"endlineno": 1209,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38463,8 +38613,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1199,
-"endlineno": 1200,
+"lineno": 1211,
+"endlineno": 1212,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38491,8 +38641,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1202,
-"endlineno": 1203,
+"lineno": 1214,
+"endlineno": 1215,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38519,8 +38669,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1211,
-"endlineno": 1212,
+"lineno": 1223,
+"endlineno": 1224,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38547,12 +38697,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1215,
-"endlineno": 1226,
+"lineno": 1227,
+"endlineno": 1238,
 "docstring": {
 "value": "Unparse a node to its string representation.\n\nParameters:\n    node: The node to unparse.\n\nReturns:\n    The unparsed code of the node.",
-"lineno": 1216,
-"endlineno": 1223,
+"lineno": 1228,
+"endlineno": 1235,
 "parsed": [
 {
 "kind": "text",
@@ -38628,12 +38778,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1229,
-"endlineno": 1247,
+"lineno": 1241,
+"endlineno": 1259,
 "docstring": {
 "value": "Safely (no exception) unparse a node to its string representation.\n\nParameters:\n    node: The node to unparse.\n    filepath: An optional filepath from where the node comes.\n\nReturns:\n    The unparsed code of the node.",
-"lineno": 1230,
-"endlineno": 1238,
+"lineno": 1242,
+"endlineno": 1250,
 "parsed": [
 {
 "kind": "text",
@@ -38749,8 +38899,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1252,
-"endlineno": 1253,
+"lineno": 1264,
+"endlineno": 1265,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38777,8 +38927,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1256,
-"endlineno": 1257,
+"lineno": 1268,
+"endlineno": 1269,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38805,8 +38955,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1260,
-"endlineno": 1263,
+"lineno": 1272,
+"endlineno": 1275,
 "labels": [
 "module-attribute"
 ],
@@ -38858,12 +39008,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1266,
-"endlineno": 1275,
+"lineno": 1278,
+"endlineno": 1287,
 "docstring": {
 "value": "Extract name from an assignment node.\n\nParameters:\n    node: The node to extract names from.\n\nReturns:\n    A list of names.",
-"lineno": 1267,
-"endlineno": 1274,
+"lineno": 1279,
+"endlineno": 1286,
 "parsed": [
 {
 "kind": "text",
@@ -38923,8 +39073,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1278,
-"endlineno": 1280,
+"lineno": 1290,
+"endlineno": 1292,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38959,8 +39109,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1283,
-"endlineno": 1285,
+"lineno": 1295,
+"endlineno": 1297,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -38995,8 +39145,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1288,
-"endlineno": 1291,
+"lineno": 1300,
+"endlineno": 1303,
 "labels": [
 "module-attribute"
 ],
@@ -39056,12 +39206,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1294,
-"endlineno": 1303,
+"lineno": 1306,
+"endlineno": 1315,
 "docstring": {
 "value": "Extract names from an assignment node.\n\nParameters:\n    node: The node to extract names from.\n\nReturns:\n    A list of names.",
-"lineno": 1295,
-"endlineno": 1302,
+"lineno": 1307,
+"endlineno": 1314,
 "parsed": [
 {
 "kind": "text",
@@ -39137,12 +39287,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1306,
-"endlineno": 1315,
+"lineno": 1318,
+"endlineno": 1327,
 "docstring": {
 "value": "Extract names from an assignment node, only for instance attributes.\n\nParameters:\n    node: The node to extract names from.\n\nReturns:\n    A list of names.",
-"lineno": 1307,
-"endlineno": 1314,
+"lineno": 1319,
+"endlineno": 1326,
 "parsed": [
 {
 "kind": "text",
@@ -39218,12 +39368,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1320,
-"endlineno": 1339,
+"lineno": 1332,
+"endlineno": 1351,
 "docstring": {
 "value": "Extract the default value of a function parameter.\n\nParameters:\n    node: The node to extract the default value from.\n    filepath: The filepath in which the parameter is written.\n        It allows to retrieve the actual code directly from the lines collection.\n    lines_collection: A collection of source code lines.\n\nReturns:\n    The default value as a string.",
-"lineno": 1321,
-"endlineno": 1331,
+"lineno": 1333,
+"endlineno": 1343,
 "parsed": [
 {
 "kind": "text",
@@ -39333,12 +39483,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/agents/nodes.py",
 "relative_filepath": "src/griffe/agents/nodes.py",
 "relative_package_filepath": "griffe/agents/nodes.py",
-"lineno": 1344,
-"endlineno": 1363,
+"lineno": 1356,
+"endlineno": 1375,
 "docstring": {
 "value": "Convert a relative import path to an absolute one.\n\nParameters:\n    node: The \"from ... import ...\" AST node.\n    name: The imported name.\n    current_module: The module in which the import happens.\n\nReturns:\n    The absolute import path.",
-"lineno": 1345,
-"endlineno": 1354,
+"lineno": 1357,
+"endlineno": 1366,
 "parsed": [
 {
 "kind": "text",
@@ -40835,7 +40985,8 @@
 "lineno": 189,
 "endlineno": 189,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'text'"
@@ -40850,7 +41001,8 @@
 "lineno": 190,
 "endlineno": 190,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'parameters'"
@@ -40865,7 +41017,8 @@
 "lineno": 191,
 "endlineno": 191,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'other parameters'"
@@ -40880,7 +41033,8 @@
 "lineno": 192,
 "endlineno": 192,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'raises'"
@@ -40895,7 +41049,8 @@
 "lineno": 193,
 "endlineno": 193,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'warns'"
@@ -40910,7 +41065,8 @@
 "lineno": 194,
 "endlineno": 194,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'returns'"
@@ -40925,7 +41081,8 @@
 "lineno": 195,
 "endlineno": 195,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'yields'"
@@ -40940,7 +41097,8 @@
 "lineno": 196,
 "endlineno": 196,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'receives'"
@@ -40955,7 +41113,8 @@
 "lineno": 197,
 "endlineno": 197,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'examples'"
@@ -40970,7 +41129,8 @@
 "lineno": 198,
 "endlineno": 198,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'attributes'"
@@ -40985,7 +41145,8 @@
 "lineno": 199,
 "endlineno": 199,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'deprecated'"
@@ -41000,7 +41161,8 @@
 "lineno": 200,
 "endlineno": 200,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'admonition'"
@@ -41053,7 +41215,7 @@
 "lineno": 206,
 "endlineno": 206,
 "labels": [
-"class-attribute"
+"instance-attribute"
 ],
 "members": [],
 "annotation": {
@@ -41301,7 +41463,8 @@
 "lineno": 239,
 "endlineno": 239,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "DocstringSectionKind.text",
@@ -41447,7 +41610,8 @@
 "lineno": 255,
 "endlineno": 255,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "DocstringSectionKind.parameters",
@@ -41617,7 +41781,8 @@
 "lineno": 271,
 "endlineno": 271,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "DocstringSectionKind.other_parameters",
@@ -41667,7 +41832,8 @@
 "lineno": 277,
 "endlineno": 277,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "DocstringSectionKind.raises",
@@ -41837,7 +42003,8 @@
 "lineno": 293,
 "endlineno": 293,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "DocstringSectionKind.warns",
@@ -42007,7 +42174,8 @@
 "lineno": 309,
 "endlineno": 309,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "DocstringSectionKind.returns",
@@ -42177,7 +42345,8 @@
 "lineno": 325,
 "endlineno": 325,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "DocstringSectionKind.yields",
@@ -42347,7 +42516,8 @@
 "lineno": 341,
 "endlineno": 341,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "DocstringSectionKind.receives",
@@ -42517,7 +42687,8 @@
 "lineno": 357,
 "endlineno": 357,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "DocstringSectionKind.examples",
@@ -42843,7 +43014,8 @@
 "lineno": 379,
 "endlineno": 379,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "DocstringSectionKind.attributes",
@@ -43013,7 +43185,8 @@
 "lineno": 395,
 "endlineno": 395,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "DocstringSectionKind.deprecated",
@@ -43176,7 +43349,8 @@
 "lineno": 412,
 "endlineno": 412,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "DocstringSectionKind.admonition",
@@ -43640,12 +43814,12 @@
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
 "lineno": 48,
-"endlineno": 66,
+"endlineno": 68,
 "labels": [
 "module-attribute"
 ],
 "members": [],
-"value": "{'args': DocstringSectionKind.parameters, 'arguments': DocstringSectionKind.parameters, 'params': DocstringSectionKind.parameters, 'parameters': DocstringSectionKind.parameters, 'keyword args': DocstringSectionKind.other_parameters, 'keyword arguments': DocstringSectionKind.other_parameters, 'other args': DocstringSectionKind.other_parameters, 'other parameters': DocstringSectionKind.other_parameters, 'raises': DocstringSectionKind.raises, 'exceptions': DocstringSectionKind.raises, 'returns': DocstringSectionKind.returns, 'yields': DocstringSectionKind.yields, 'receives': DocstringSectionKind.receives, 'examples': DocstringSectionKind.examples, 'attributes': DocstringSectionKind.attributes, 'warns': DocstringSectionKind.attributes, 'warnings': DocstringSectionKind.attributes}"
+"value": "{'args': DocstringSectionKind.parameters, 'arguments': DocstringSectionKind.parameters, 'params': DocstringSectionKind.parameters, 'parameters': DocstringSectionKind.parameters, 'keyword args': DocstringSectionKind.other_parameters, 'keyword arguments': DocstringSectionKind.other_parameters, 'other args': DocstringSectionKind.other_parameters, 'other arguments': DocstringSectionKind.other_parameters, 'other params': DocstringSectionKind.other_parameters, 'other parameters': DocstringSectionKind.other_parameters, 'raises': DocstringSectionKind.raises, 'exceptions': DocstringSectionKind.raises, 'returns': DocstringSectionKind.returns, 'yields': DocstringSectionKind.yields, 'receives': DocstringSectionKind.receives, 'examples': DocstringSectionKind.examples, 'attributes': DocstringSectionKind.attributes, 'warns': DocstringSectionKind.attributes, 'warnings': DocstringSectionKind.attributes}"
 },
 {
 "kind": "attribute",
@@ -43654,8 +43828,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 68,
-"endlineno": 68,
+"lineno": 70,
+"endlineno": 70,
 "labels": [
 "module-attribute"
 ],
@@ -43669,8 +43843,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 69,
-"endlineno": 69,
+"lineno": 71,
+"endlineno": 71,
 "labels": [
 "module-attribute"
 ],
@@ -43684,8 +43858,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 70,
-"endlineno": 70,
+"lineno": 72,
+"endlineno": 72,
 "labels": [
 "module-attribute"
 ],
@@ -43699,8 +43873,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 72,
-"endlineno": 72,
+"lineno": 74,
+"endlineno": 74,
 "labels": [
 "module-attribute"
 ],
@@ -43718,8 +43892,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 73,
-"endlineno": 73,
+"lineno": 75,
+"endlineno": 75,
 "labels": [
 "module-attribute"
 ],
@@ -43737,8 +43911,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 74,
-"endlineno": 74,
+"lineno": 76,
+"endlineno": 76,
 "labels": [
 "module-attribute"
 ],
@@ -43756,8 +43930,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 75,
-"endlineno": 75,
+"lineno": 77,
+"endlineno": 77,
 "labels": [
 "module-attribute"
 ],
@@ -43775,8 +43949,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 78,
-"endlineno": 138,
+"lineno": 80,
+"endlineno": 140,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -43812,8 +43986,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 141,
-"endlineno": 169,
+"lineno": 143,
+"endlineno": 171,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -43864,8 +44038,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 172,
-"endlineno": 230,
+"lineno": 174,
+"endlineno": 232,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -43933,8 +44107,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 233,
-"endlineno": 245,
+"lineno": 235,
+"endlineno": 247,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -43998,8 +44172,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 248,
-"endlineno": 260,
+"lineno": 250,
+"endlineno": 262,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -44063,8 +44237,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 263,
-"endlineno": 300,
+"lineno": 265,
+"endlineno": 302,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -44128,8 +44302,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 303,
-"endlineno": 328,
+"lineno": 305,
+"endlineno": 330,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -44193,8 +44367,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 331,
-"endlineno": 353,
+"lineno": 333,
+"endlineno": 355,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -44258,8 +44432,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 356,
-"endlineno": 413,
+"lineno": 358,
+"endlineno": 415,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -44323,8 +44497,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 416,
-"endlineno": 465,
+"lineno": 418,
+"endlineno": 467,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -44388,8 +44562,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 468,
-"endlineno": 512,
+"lineno": 470,
+"endlineno": 514,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -44453,8 +44627,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 515,
-"endlineno": 575,
+"lineno": 517,
+"endlineno": 577,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -44527,8 +44701,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 578,
-"endlineno": 604,
+"lineno": 580,
+"endlineno": 606,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -44592,8 +44766,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 607,
-"endlineno": 608,
+"lineno": 609,
+"endlineno": 610,
 "labels": [],
 "members": [],
 "decorators": [],
@@ -44620,8 +44794,8 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 611,
-"endlineno": 622,
+"lineno": 613,
+"endlineno": 624,
 "labels": [
 "module-attribute"
 ],
@@ -44635,12 +44809,12 @@
 "filepath": "/media/data/dev/griffe/src/griffe/docstrings/google.py",
 "relative_filepath": "src/griffe/docstrings/google.py",
 "relative_package_filepath": "griffe/docstrings/google.py",
-"lineno": 625,
-"endlineno": 721,
+"lineno": 627,
+"endlineno": 723,
 "docstring": {
 "value": "Parse a docstring.\n\nThis function iterates on lines of a docstring to build sections.\nIt then returns this list of sections.\n\nParameters:\n    docstring: The docstring to parse.\n    ignore_init_summary: Whether to ignore the summary in `__init__` methods' docstrings.\n    trim_doctest_flags: Whether to remove doctest flags from Python example blocks.\n    **options: Additional parsing options.\n\nReturns:\n    A list of docstring sections.",
-"lineno": 632,
-"endlineno": 645,
+"lineno": 634,
+"endlineno": 647,
 "parsed": [
 {
 "kind": "text",
@@ -44897,7 +45071,8 @@
 "lineno": 27,
 "endlineno": 27,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'google'"
@@ -44912,7 +45087,8 @@
 "lineno": 28,
 "endlineno": 28,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'sphinx'"
@@ -44927,7 +45103,8 @@
 "lineno": 29,
 "endlineno": 29,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "'numpy'"
@@ -47007,7 +47184,7 @@
 "lineno": 48,
 "endlineno": 48,
 "labels": [
-"class-attribute"
+"instance-attribute"
 ],
 "members": [],
 "annotation": [
@@ -47033,7 +47210,7 @@
 "lineno": 49,
 "endlineno": 49,
 "labels": [
-"class-attribute"
+"instance-attribute"
 ],
 "members": [],
 "annotation": [
@@ -47185,7 +47362,7 @@
 "lineno": 67,
 "endlineno": 67,
 "labels": [
-"class-attribute"
+"instance-attribute"
 ],
 "members": [],
 "annotation": {
@@ -47203,7 +47380,7 @@
 "lineno": 68,
 "endlineno": 68,
 "labels": [
-"class-attribute"
+"instance-attribute"
 ],
 "members": [],
 "annotation": {
@@ -47221,7 +47398,7 @@
 "lineno": 69,
 "endlineno": 69,
 "labels": [
-"class-attribute"
+"instance-attribute"
 ],
 "members": [],
 "annotation": [
@@ -47247,7 +47424,7 @@
 "lineno": 70,
 "endlineno": 70,
 "labels": [
-"class-attribute"
+"instance-attribute"
 ],
 "members": [],
 "annotation": {
@@ -47265,7 +47442,8 @@
 "lineno": 71,
 "endlineno": 71,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "False",
@@ -47318,7 +47496,8 @@
 "lineno": 78,
 "endlineno": 78,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "field(default_factory=list)",
@@ -47345,7 +47524,8 @@
 "lineno": 79,
 "endlineno": 79,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "field(default_factory=dict)",
@@ -47379,7 +47559,8 @@
 "lineno": 80,
 "endlineno": 80,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "field(default_factory=dict)",
@@ -47413,7 +47594,8 @@
 "lineno": 81,
 "endlineno": 81,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "field(default_factory=dict)",
@@ -47447,7 +47629,8 @@
 "lineno": 82,
 "endlineno": 82,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "field(default_factory=dict)",
@@ -47481,7 +47664,8 @@
 "lineno": 83,
 "endlineno": 83,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "field(default_factory=list)",
@@ -47508,7 +47692,8 @@
 "lineno": 84,
 "endlineno": 84,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "None",
@@ -47531,7 +47716,8 @@
 "lineno": 85,
 "endlineno": 85,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "None",
@@ -49057,7 +49243,8 @@
 "lineno": 36,
 "endlineno": 36,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "1",
@@ -49076,7 +49263,8 @@
 "lineno": 37,
 "endlineno": 37,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "2",
@@ -49095,7 +49283,8 @@
 "lineno": 38,
 "endlineno": 38,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "3",
@@ -49114,7 +49303,8 @@
 "lineno": 39,
 "endlineno": 39,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "4",
@@ -49171,7 +49361,8 @@
 "lineno": 45,
 "endlineno": 45,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "When.after_all",
@@ -49392,7 +49583,8 @@
 "lineno": 72,
 "endlineno": 72,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "When.after_all",
@@ -50992,7 +51184,8 @@
 "lineno": 35,
 "endlineno": 35,
 "labels": [
-"class-attribute"
+"class-attribute",
+"instance-attribute"
 ],
 "members": [],
 "value": "When.after_all"
