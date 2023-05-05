@@ -313,7 +313,9 @@
 <span class=normal>625</span>
 <span class=normal>626</span>
 <span class=normal>627</span>
-<span class=normal>628</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>handle_attribute</span><span class=p>(</span>
+<span class=normal>628</span>
+<span class=normal>629</span>
+<span class=normal>630</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>handle_attribute</span><span class=p>(</span>
     <span class=bp>self</span><span class=p>,</span>
     <span class=n>node</span><span class=p>:</span> <span class=n>ast</span><span class=o>.</span><span class=n>Assign</span> <span class=o>|</span> <span class=n>ast</span><span class=o>.</span><span class=n>AnnAssign</span><span class=p>,</span>
     <span class=n>annotation</span><span class=p>:</span> <span class=nb>str</span> <span class=o>|</span> <span class=n>Name</span> <span class=o>|</span> <span class=n>Expression</span> <span class=o>|</span> <span class=kc>None</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>
@@ -383,13 +385,15 @@
             <span class=k>if</span> <span class=nb>isinstance</span><span class=p>(</span><span class=n>node</span><span class=o>.</span><span class=n>parent</span><span class=p>,</span> <span class=p>(</span><span class=n>ast</span><span class=o>.</span><span class=n>If</span><span class=p>,</span> <span class=n>ast</span><span class=o>.</span><span class=n>ExceptHandler</span><span class=p>)):</span>  <span class=c1># type: ignore[union-attr]</span>
                 <span class=k>continue</span>  <span class=c1># prefer &quot;no-exception&quot; case</span>
 
+            <span class=n>existing_member</span> <span class=o>=</span> <span class=n>parent</span><span class=o>.</span><span class=n>members</span><span class=p>[</span><span class=n>name</span><span class=p>]</span>
             <span class=k>with</span> <span class=n>suppress</span><span class=p>(</span><span class=n>AliasResolutionError</span><span class=p>,</span> <span class=n>CyclicAliasError</span><span class=p>):</span>
-                <span class=n>labels</span> <span class=o>|=</span> <span class=n>parent</span><span class=o>.</span><span class=n>members</span><span class=p>[</span><span class=n>name</span><span class=p>]</span><span class=o>.</span><span class=n>labels</span>  <span class=c1># type: ignore[misc]</span>
+                <span class=n>labels</span> <span class=o>|=</span> <span class=n>existing_member</span><span class=o>.</span><span class=n>labels</span>  <span class=c1># type: ignore[misc]</span>
                 <span class=c1># forward previous docstring and annotation instead of erasing them</span>
-                <span class=k>if</span> <span class=n>parent</span><span class=o>.</span><span class=n>members</span><span class=p>[</span><span class=n>name</span><span class=p>]</span><span class=o>.</span><span class=n>docstring</span> <span class=ow>and</span> <span class=ow>not</span> <span class=n>docstring</span><span class=p>:</span>
-                    <span class=n>docstring</span> <span class=o>=</span> <span class=n>parent</span><span class=o>.</span><span class=n>members</span><span class=p>[</span><span class=n>name</span><span class=p>]</span><span class=o>.</span><span class=n>docstring</span>
-                <span class=k>if</span> <span class=n>parent</span><span class=o>.</span><span class=n>attributes</span><span class=p>[</span><span class=n>name</span><span class=p>]</span><span class=o>.</span><span class=n>annotation</span> <span class=ow>and</span> <span class=ow>not</span> <span class=n>annotation</span><span class=p>:</span>
-                    <span class=n>annotation</span> <span class=o>=</span> <span class=n>parent</span><span class=o>.</span><span class=n>attributes</span><span class=p>[</span><span class=n>name</span><span class=p>]</span><span class=o>.</span><span class=n>annotation</span>
+                <span class=k>if</span> <span class=n>existing_member</span><span class=o>.</span><span class=n>docstring</span> <span class=ow>and</span> <span class=ow>not</span> <span class=n>docstring</span><span class=p>:</span>
+                    <span class=n>docstring</span> <span class=o>=</span> <span class=n>existing_member</span><span class=o>.</span><span class=n>docstring</span>
+                <span class=k>with</span> <span class=n>suppress</span><span class=p>(</span><span class=ne>AttributeError</span><span class=p>):</span>
+                    <span class=k>if</span> <span class=n>existing_member</span><span class=o>.</span><span class=n>annotation</span> <span class=ow>and</span> <span class=ow>not</span> <span class=n>annotation</span><span class=p>:</span>  <span class=c1># type: ignore[union-attr]</span>
+                        <span class=n>annotation</span> <span class=o>=</span> <span class=n>existing_member</span><span class=o>.</span><span class=n>annotation</span>  <span class=c1># type: ignore[union-attr]</span>
 
         <span class=n>attribute</span> <span class=o>=</span> <span class=n>Attribute</span><span class=p>(</span>
             <span class=n>name</span><span class=o>=</span><span class=n>name</span><span class=p>,</span>
@@ -749,13 +753,13 @@
     <span class=k>for</span> <span class=n>after_visitor</span> <span class=ow>in</span> <span class=bp>self</span><span class=o>.</span><span class=n>extensions</span><span class=o>.</span><span class=n>after_visit</span><span class=p>:</span>
         <span class=n>after_visitor</span><span class=o>.</span><span class=n>visit</span><span class=p>(</span><span class=n>node</span><span class=p>)</span>
 </code></pre></div></td></tr></table></div> </details> </div> </div> <div class="doc doc-object doc-function"> <h3 id=griffe.agents.visitor.Visitor.visit_annassign class="doc doc-heading"> <span class="doc doc-object-name doc-function-name">visit_annassign</span> <a href=#griffe.agents.visitor.Visitor.visit_annassign class=headerlink title="Permanent link">¤</a></h3> <div class=highlight><pre><span></span><code><span class=n>visit_annassign</span><span class=p>(</span><span class=n>node</span><span class=p>)</span>
-</code></pre></div> <div class="doc doc-contents "> <p>Visit an annotated assignment node.</p> <p>Parameters:</p> <ul> <li class=field-body> <b>node</b> (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="autorefs autorefs-external" title="ast.AnnAssign" href="https://docs.python.org/3/library/ast.html#ast.AnnAssign">AnnAssign</a></code>) – <p>The node to visit.</p> </li> </ul> <details class=quote> <summary>Source code in <code>src/griffe/agents/visitor.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>638</span>
-<span class=normal>639</span>
-<span class=normal>640</span>
+</code></pre></div> <div class="doc doc-contents "> <p>Visit an annotated assignment node.</p> <p>Parameters:</p> <ul> <li class=field-body> <b>node</b> (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="autorefs autorefs-external" title="ast.AnnAssign" href="https://docs.python.org/3/library/ast.html#ast.AnnAssign">AnnAssign</a></code>) – <p>The node to visit.</p> </li> </ul> <details class=quote> <summary>Source code in <code>src/griffe/agents/visitor.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>640</span>
 <span class=normal>641</span>
 <span class=normal>642</span>
 <span class=normal>643</span>
-<span class=normal>644</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>visit_annassign</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>node</span><span class=p>:</span> <span class=n>ast</span><span class=o>.</span><span class=n>AnnAssign</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+<span class=normal>644</span>
+<span class=normal>645</span>
+<span class=normal>646</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>visit_annassign</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>node</span><span class=p>:</span> <span class=n>ast</span><span class=o>.</span><span class=n>AnnAssign</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 <span class=w>    </span><span class=sd>&quot;&quot;&quot;Visit an annotated assignment node.</span>
 
 <span class=sd>    Parameters:</span>
@@ -763,13 +767,13 @@
 <span class=sd>    &quot;&quot;&quot;</span>
     <span class=bp>self</span><span class=o>.</span><span class=n>handle_attribute</span><span class=p>(</span><span class=n>node</span><span class=p>,</span> <span class=n>safe_get_annotation</span><span class=p>(</span><span class=n>node</span><span class=o>.</span><span class=n>annotation</span><span class=p>,</span> <span class=n>parent</span><span class=o>=</span><span class=bp>self</span><span class=o>.</span><span class=n>current</span><span class=p>))</span>
 </code></pre></div></td></tr></table></div> </details> </div> </div> <div class="doc doc-object doc-function"> <h3 id=griffe.agents.visitor.Visitor.visit_assign class="doc doc-heading"> <span class="doc doc-object-name doc-function-name">visit_assign</span> <a href=#griffe.agents.visitor.Visitor.visit_assign class=headerlink title="Permanent link">¤</a></h3> <div class=highlight><pre><span></span><code><span class=n>visit_assign</span><span class=p>(</span><span class=n>node</span><span class=p>)</span>
-</code></pre></div> <div class="doc doc-contents "> <p>Visit an assignment node.</p> <p>Parameters:</p> <ul> <li class=field-body> <b>node</b> (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="autorefs autorefs-external" title="ast.Assign" href="https://docs.python.org/3/library/ast.html#ast.Assign">Assign</a></code>) – <p>The node to visit.</p> </li> </ul> <details class=quote> <summary>Source code in <code>src/griffe/agents/visitor.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>630</span>
-<span class=normal>631</span>
-<span class=normal>632</span>
+</code></pre></div> <div class="doc doc-contents "> <p>Visit an assignment node.</p> <p>Parameters:</p> <ul> <li class=field-body> <b>node</b> (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="autorefs autorefs-external" title="ast.Assign" href="https://docs.python.org/3/library/ast.html#ast.Assign">Assign</a></code>) – <p>The node to visit.</p> </li> </ul> <details class=quote> <summary>Source code in <code>src/griffe/agents/visitor.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>632</span>
 <span class=normal>633</span>
 <span class=normal>634</span>
 <span class=normal>635</span>
-<span class=normal>636</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>visit_assign</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>node</span><span class=p>:</span> <span class=n>ast</span><span class=o>.</span><span class=n>Assign</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+<span class=normal>636</span>
+<span class=normal>637</span>
+<span class=normal>638</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>visit_assign</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>node</span><span class=p>:</span> <span class=n>ast</span><span class=o>.</span><span class=n>Assign</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 <span class=w>    </span><span class=sd>&quot;&quot;&quot;Visit an assignment node.</span>
 
 <span class=sd>    Parameters:</span>
@@ -791,9 +795,7 @@
 <span class=sd>    &quot;&quot;&quot;</span>
     <span class=bp>self</span><span class=o>.</span><span class=n>handle_function</span><span class=p>(</span><span class=n>node</span><span class=p>,</span> <span class=n>labels</span><span class=o>=</span><span class=p>{</span><span class=s2>&quot;async&quot;</span><span class=p>})</span>
 </code></pre></div></td></tr></table></div> </details> </div> </div> <div class="doc doc-object doc-function"> <h3 id=griffe.agents.visitor.Visitor.visit_augassign class="doc doc-heading"> <span class="doc doc-object-name doc-function-name">visit_augassign</span> <a href=#griffe.agents.visitor.Visitor.visit_augassign class=headerlink title="Permanent link">¤</a></h3> <div class=highlight><pre><span></span><code><span class=n>visit_augassign</span><span class=p>(</span><span class=n>node</span><span class=p>)</span>
-</code></pre></div> <div class="doc doc-contents "> <p>Visit an augmented assignment node.</p> <p>Parameters:</p> <ul> <li class=field-body> <b>node</b> (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="autorefs autorefs-external" title="ast.AugAssign" href="https://docs.python.org/3/library/ast.html#ast.AugAssign">AugAssign</a></code>) – <p>The node to visit.</p> </li> </ul> <details class=quote> <summary>Source code in <code>src/griffe/agents/visitor.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>646</span>
-<span class=normal>647</span>
-<span class=normal>648</span>
+</code></pre></div> <div class="doc doc-contents "> <p>Visit an augmented assignment node.</p> <p>Parameters:</p> <ul> <li class=field-body> <b>node</b> (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="autorefs autorefs-external" title="ast.AugAssign" href="https://docs.python.org/3/library/ast.html#ast.AugAssign">AugAssign</a></code>) – <p>The node to visit.</p> </li> </ul> <details class=quote> <summary>Source code in <code>src/griffe/agents/visitor.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>648</span>
 <span class=normal>649</span>
 <span class=normal>650</span>
 <span class=normal>651</span>
@@ -805,7 +807,9 @@
 <span class=normal>657</span>
 <span class=normal>658</span>
 <span class=normal>659</span>
-<span class=normal>660</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>visit_augassign</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>node</span><span class=p>:</span> <span class=n>ast</span><span class=o>.</span><span class=n>AugAssign</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+<span class=normal>660</span>
+<span class=normal>661</span>
+<span class=normal>662</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>visit_augassign</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>node</span><span class=p>:</span> <span class=n>ast</span><span class=o>.</span><span class=n>AugAssign</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 <span class=w>    </span><span class=sd>&quot;&quot;&quot;Visit an augmented assignment node.</span>
 
 <span class=sd>    Parameters:</span>
@@ -917,9 +921,7 @@
 <span class=sd>    &quot;&quot;&quot;</span>
     <span class=bp>self</span><span class=o>.</span><span class=n>handle_function</span><span class=p>(</span><span class=n>node</span><span class=p>)</span>
 </code></pre></div></td></tr></table></div> </details> </div> </div> <div class="doc doc-object doc-function"> <h3 id=griffe.agents.visitor.Visitor.visit_if class="doc doc-heading"> <span class="doc doc-object-name doc-function-name">visit_if</span> <a href=#griffe.agents.visitor.Visitor.visit_if class=headerlink title="Permanent link">¤</a></h3> <div class=highlight><pre><span></span><code><span class=n>visit_if</span><span class=p>(</span><span class=n>node</span><span class=p>)</span>
-</code></pre></div> <div class="doc doc-contents "> <p>Visit an "if" node.</p> <p>Parameters:</p> <ul> <li class=field-body> <b>node</b> (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="autorefs autorefs-external" title="ast.If" href="https://docs.python.org/3/library/ast.html#ast.If">If</a></code>) – <p>The node to visit.</p> </li> </ul> <details class=quote> <summary>Source code in <code>src/griffe/agents/visitor.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>662</span>
-<span class=normal>663</span>
-<span class=normal>664</span>
+</code></pre></div> <div class="doc doc-contents "> <p>Visit an "if" node.</p> <p>Parameters:</p> <ul> <li class=field-body> <b>node</b> (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/ast.html#module-ast">ast</a>.<a class="autorefs autorefs-external" title="ast.If" href="https://docs.python.org/3/library/ast.html#ast.If">If</a></code>) – <p>The node to visit.</p> </li> </ul> <details class=quote> <summary>Source code in <code>src/griffe/agents/visitor.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>664</span>
 <span class=normal>665</span>
 <span class=normal>666</span>
 <span class=normal>667</span>
@@ -929,7 +931,9 @@
 <span class=normal>671</span>
 <span class=normal>672</span>
 <span class=normal>673</span>
-<span class=normal>674</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>visit_if</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>node</span><span class=p>:</span> <span class=n>ast</span><span class=o>.</span><span class=n>If</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+<span class=normal>674</span>
+<span class=normal>675</span>
+<span class=normal>676</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>visit_if</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>node</span><span class=p>:</span> <span class=n>ast</span><span class=o>.</span><span class=n>If</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 <span class=w>    </span><span class=sd>&quot;&quot;&quot;Visit an &quot;if&quot; node.</span>
 
 <span class=sd>    Parameters:</span>
@@ -1063,15 +1067,15 @@
     <span class=p>)</span>
     <span class=bp>self</span><span class=o>.</span><span class=n>generic_visit</span><span class=p>(</span><span class=n>node</span><span class=p>)</span>
 </code></pre></div></td></tr></table></div> </details> </div> </div> </div> </div> </div> <div class="doc doc-object doc-function"> <h2 id=griffe.agents.visitor.patch_ast class="doc doc-heading"> <span class="doc doc-object-name doc-function-name">patch_ast</span> <a href=#griffe.agents.visitor.patch_ast class=headerlink title="Permanent link">¤</a></h2> <div class=highlight><pre><span></span><code><span class=n>patch_ast</span><span class=p>()</span>
-</code></pre></div> <div class="doc doc-contents "> <p>Extend the base <code>ast.AST</code> class to provide more functionality.</p> <details class=quote> <summary>Source code in <code>src/griffe/agents/visitor.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>680</span>
-<span class=normal>681</span>
-<span class=normal>682</span>
+</code></pre></div> <div class="doc doc-contents "> <p>Extend the base <code>ast.AST</code> class to provide more functionality.</p> <details class=quote> <summary>Source code in <code>src/griffe/agents/visitor.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>682</span>
 <span class=normal>683</span>
 <span class=normal>684</span>
 <span class=normal>685</span>
 <span class=normal>686</span>
 <span class=normal>687</span>
-<span class=normal>688</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>patch_ast</span><span class=p>()</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+<span class=normal>688</span>
+<span class=normal>689</span>
+<span class=normal>690</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>patch_ast</span><span class=p>()</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 <span class=w>    </span><span class=sd>&quot;&quot;&quot;Extend the base `ast.AST` class to provide more functionality.&quot;&quot;&quot;</span>
     <span class=k>global</span> <span class=n>_patched</span>  <span class=c1># noqa: PLW0603</span>
     <span class=k>if</span> <span class=n>_patched</span><span class=p>:</span>
