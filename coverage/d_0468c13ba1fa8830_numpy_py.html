@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for src/griffe/docstrings/numpy.py: 83.67%</title>
+    <title>Coverage for src/griffe/docstrings/numpy.py: 83.24%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>src/griffe/docstrings/numpy.py</b>:
-            <span class="pc_cov">83.67%</span>
+            <span class="pc_cov">83.24%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -66,8 +66,8 @@
             <a id="indexLink" class="nav" href="covindex.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="d_0468c13ba1fa8830_parsers_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.3">coverage.py v7.2.3</a>,
-            created at 2023-04-10 18:05 +0200
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
+            created at 2023-05-09 00:23 +0200
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -455,7 +455,7 @@
     <p class="mis show_mis"><span class="n"><a id="t371" href="#t371">371</a></span><span class="t">                    <span class="nam">annotation</span> <span class="op">=</span> <span class="nam">docstring</span><span class="op">.</span><span class="nam">parent</span><span class="op">.</span><span class="nam">annotation</span>  <span class="com"># type: ignore[union-attr]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t372" href="#t372">372</a></span><span class="t">                <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t373" href="#t373">373</a></span><span class="t">                    <span class="key">raise</span> <span class="nam">ValueError</span>&nbsp;</span><span class="r"></span></p>
-    <p class="par run show_par"><span class="n"><a id="t374" href="#t374">374</a></span><span class="t">                <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">items</span><span class="op">)</span> <span class="op">></span> <span class="num">1</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">374&#x202F;&#x219B;&#x202F;367</span><span class="annotate long">line 374 didn't jump to line 367</span></span></p>
+    <p class="par run show_par"><span class="n"><a id="t374" href="#t374">374</a></span><span class="t">                <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">items</span><span class="op">)</span> <span class="op">></span> <span class="num">1</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">374&#x202F;&#x219B;&#x202F;392</span><span class="annotate long">line 374 didn't jump to line 392, because the condition on line 374 was never false</span></span></p>
     <p class="par run show_par"><span class="n"><a id="t375" href="#t375">375</a></span><span class="t">                    <span class="key">if</span> <span class="nam">annotation</span><span class="op">.</span><span class="nam">is_tuple</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">375&#x202F;&#x219B;&#x202F;376</span><span class="annotate long">line 375 didn't jump to line 376, because the condition on line 375 was never true</span></span></p>
     <p class="mis show_mis"><span class="n"><a id="t376" href="#t376">376</a></span><span class="t">                        <span class="nam">annotation</span> <span class="op">=</span> <span class="nam">annotation</span><span class="op">.</span><span class="nam">tuple_item</span><span class="op">(</span><span class="nam">index</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t377" href="#t377">377</a></span><span class="t">                    <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -506,7 +506,7 @@
     <p class="pln"><span class="n"><a id="t422" href="#t422">422</a></span><span class="t">            <span class="com"># try to retrieve the annotation from the docstring parent</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t423" href="#t423">423</a></span><span class="t">            <span class="key">with</span> <span class="nam">suppress</span><span class="op">(</span><span class="nam">AttributeError</span><span class="op">,</span> <span class="nam">KeyError</span><span class="op">,</span> <span class="nam">ValueError</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t424" href="#t424">424</a></span><span class="t">                <span class="nam">annotation</span> <span class="op">=</span> <span class="nam">docstring</span><span class="op">.</span><span class="nam">parent</span><span class="op">.</span><span class="nam">returns</span>  <span class="com"># type: ignore[union-attr]</span>&nbsp;</span><span class="r"></span></p>
-    <p class="par run show_par"><span class="n"><a id="t425" href="#t425">425</a></span><span class="t">                <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">items</span><span class="op">)</span> <span class="op">></span> <span class="num">1</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">425&#x202F;&#x219B;&#x202F;423</span><span class="annotate long">line 425 didn't jump to line 423</span></span></p>
+    <p class="par run show_par"><span class="n"><a id="t425" href="#t425">425</a></span><span class="t">                <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">items</span><span class="op">)</span> <span class="op">></span> <span class="num">1</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">425&#x202F;&#x219B;&#x202F;440</span><span class="annotate long">line 425 didn't jump to line 440, because the condition on line 425 was never false</span></span></p>
     <p class="run"><span class="n"><a id="t426" href="#t426">426</a></span><span class="t">                    <span class="key">if</span> <span class="nam">annotation</span><span class="op">.</span><span class="nam">is_iterator</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t427" href="#t427">427</a></span><span class="t">                        <span class="nam">yield_item</span> <span class="op">=</span> <span class="nam">annotation</span><span class="op">.</span><span class="nam">iterator_item</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="par run show_par"><span class="n"><a id="t428" href="#t428">428</a></span><span class="t">                    <span class="key">elif</span> <span class="nam">annotation</span><span class="op">.</span><span class="nam">is_generator</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">428&#x202F;&#x219B;&#x202F;431</span><span class="annotate long">line 428 didn't jump to line 431, because the condition on line 428 was never false</span></span></p>
@@ -554,7 +554,7 @@
     <p class="pln"><span class="n"><a id="t470" href="#t470">470</a></span><span class="t">            <span class="com"># try to retrieve the annotation from the docstring parent</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t471" href="#t471">471</a></span><span class="t">            <span class="key">with</span> <span class="nam">suppress</span><span class="op">(</span><span class="nam">AttributeError</span><span class="op">,</span> <span class="nam">KeyError</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t472" href="#t472">472</a></span><span class="t">                <span class="nam">annotation</span> <span class="op">=</span> <span class="nam">docstring</span><span class="op">.</span><span class="nam">parent</span><span class="op">.</span><span class="nam">returns</span>  <span class="com"># type: ignore[union-attr]</span>&nbsp;</span><span class="r"></span></p>
-    <p class="par run show_par"><span class="n"><a id="t473" href="#t473">473</a></span><span class="t">                <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">items</span><span class="op">)</span> <span class="op">></span> <span class="num">1</span> <span class="key">and</span> <span class="nam">annotation</span><span class="op">.</span><span class="nam">is_generator</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">473&#x202F;&#x219B;&#x202F;471</span><span class="annotate long">line 473 didn't jump to line 471</span></span></p>
+    <p class="par run show_par"><span class="n"><a id="t473" href="#t473">473</a></span><span class="t">                <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">items</span><span class="op">)</span> <span class="op">></span> <span class="num">1</span> <span class="key">and</span> <span class="nam">annotation</span><span class="op">.</span><span class="nam">is_generator</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">473&#x202F;&#x219B;&#x202F;483</span><span class="annotate long">line 473 didn't jump to line 483, because the condition on line 473 was never false</span></span></p>
     <p class="run"><span class="n"><a id="t474" href="#t474">474</a></span><span class="t">                    <span class="nam">_</span><span class="op">,</span> <span class="nam">receives_item</span><span class="op">,</span> <span class="nam">_</span> <span class="op">=</span> <span class="nam">annotation</span><span class="op">.</span><span class="nam">generator_items</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="par run show_par"><span class="n"><a id="t475" href="#t475">475</a></span><span class="t">                    <span class="key">if</span> <span class="nam">isinstance</span><span class="op">(</span><span class="nam">receives_item</span><span class="op">,</span> <span class="nam">Name</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">475&#x202F;&#x219B;&#x202F;476</span><span class="annotate long">line 475 didn't jump to line 476, because the condition on line 475 was never true</span></span></p>
     <p class="mis show_mis"><span class="n"><a id="t476" href="#t476">476</a></span><span class="t">                        <span class="nam">annotation</span> <span class="op">=</span> <span class="nam">receives_item</span>&nbsp;</span><span class="r"></span></p>
@@ -810,8 +810,8 @@
             <a id="indexLink" class="nav" href="covindex.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="d_0468c13ba1fa8830_parsers_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.3">coverage.py v7.2.3</a>,
-            created at 2023-04-10 18:05 +0200
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
+            created at 2023-05-09 00:23 +0200
         </p>
     </div>
 </footer>

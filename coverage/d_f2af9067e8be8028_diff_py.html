@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for src/griffe/diff.py: 68.45%</title>
+    <title>Coverage for src/griffe/diff.py: 68.67%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>src/griffe/diff.py</b>:
-            <span class="pc_cov">68.45%</span>
+            <span class="pc_cov">68.67%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -55,19 +55,19 @@
             </div>
         </aside>
         <h2>
-            <span class="text">251 statements &nbsp;</span>
+            <span class="text">250 statements &nbsp;</span>
             <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">178<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">73<span class="text"> missing</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">72<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
-            <button type="button" class="par run show_par button_toggle_par" value="par" data-shortcut="p" title="Toggle lines partially run">13<span class="text"> partial</span></button>
+            <button type="button" class="par run show_par button_toggle_par" value="par" data-shortcut="p" title="Toggle lines partially run">12<span class="text"> partial</span></button>
         </h2>
         <p class="text">
             <a id="prevFileLink" class="nav" href="d_f2af9067e8be8028_dataclasses_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a id="indexLink" class="nav" href="covindex.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="d_0468c13ba1fa8830___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.3">coverage.py v7.2.3</a>,
-            created at 2023-04-10 18:05 +0200
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
+            created at 2023-05-09 00:23 +0200
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -382,11 +382,11 @@
     <p class="run"><span class="n"><a id="t298" href="#t298">298</a></span><span class="t"><span class="key">def</span> <span class="nam">_class_incompatibilities</span><span class="op">(</span><span class="nam">old_class</span><span class="op">:</span> <span class="nam">Class</span><span class="op">,</span> <span class="nam">new_class</span><span class="op">:</span> <span class="nam">Class</span><span class="op">,</span> <span class="op">*</span><span class="op">,</span> <span class="nam">ignore_private</span><span class="op">:</span> <span class="nam">bool</span> <span class="op">=</span> <span class="key">True</span><span class="op">)</span> <span class="op">-></span> <span class="nam">Iterable</span><span class="op">[</span><span class="nam">Breakage</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t299" href="#t299">299</a></span><span class="t">    <span class="key">yield</span> <span class="key">from</span> <span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="par run show_par"><span class="n"><a id="t300" href="#t300">300</a></span><span class="t">    <span class="key">if</span> <span class="nam">new_class</span><span class="op">.</span><span class="nam">bases</span> <span class="op">!=</span> <span class="nam">old_class</span><span class="op">.</span><span class="nam">bases</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">300&#x202F;&#x219B;&#x202F;306</span><span class="annotate long">line 300 didn't jump to line 306, because the condition on line 300 was never false</span></span></p>
-    <p class="par run show_par"><span class="n"><a id="t301" href="#t301">301</a></span><span class="t">        <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">new_class</span><span class="op">.</span><span class="nam">bases</span><span class="op">)</span> <span class="op">&lt;</span> <span class="nam">len</span><span class="op">(</span><span class="nam">old_class</span><span class="op">.</span><span class="nam">bases</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">301&#x202F;&#x219B;&#x202F;305</span><span class="annotate long">line 301 didn't jump to line 305, because the condition on line 301 was never false</span></span></p>
+    <p class="par run show_par"><span class="n"><a id="t301" href="#t301">301</a></span><span class="t">        <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">new_class</span><span class="op">.</span><span class="nam">bases</span><span class="op">)</span> <span class="op">&lt;</span> <span class="nam">len</span><span class="op">(</span><span class="nam">old_class</span><span class="op">.</span><span class="nam">bases</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">301&#x202F;&#x219B;&#x202F;306</span><span class="annotate long">line 301 didn't jump to line 306, because the condition on line 301 was never false</span></span></p>
     <p class="run"><span class="n"><a id="t302" href="#t302">302</a></span><span class="t">            <span class="key">yield</span> <span class="nam">ClassRemovedBaseBreakage</span><span class="op">(</span><span class="nam">new_class</span><span class="op">,</span> <span class="nam">old_class</span><span class="op">.</span><span class="nam">bases</span><span class="op">,</span> <span class="nam">new_class</span><span class="op">.</span><span class="nam">bases</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t303" href="#t303">303</a></span><span class="t">        <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t304" href="#t304">304</a></span><span class="t">            <span class="com"># TODO: check mro</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t305" href="#t305">305</a></span><span class="t">            <span class="op">...</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t305" href="#t305">305</a></span><span class="t">            <span class="op">...</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t306" href="#t306">306</a></span><span class="t">    <span class="key">yield</span> <span class="key">from</span> <span class="nam">_member_incompatibilities</span><span class="op">(</span><span class="nam">old_class</span><span class="op">,</span> <span class="nam">new_class</span><span class="op">,</span> <span class="nam">ignore_private</span><span class="op">=</span><span class="nam">ignore_private</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t307" href="#t307">307</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t308" href="#t308">308</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -542,7 +542,7 @@
     <p class="pln"><span class="n"><a id="t458" href="#t458">458</a></span><span class="t">        <span class="com"># TODO: it should be configurable to allow/disallow removing a return type</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t459" href="#t459">459</a></span><span class="t">        <span class="key">return</span> <span class="key">False</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t460" href="#t460">460</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="par run show_par"><span class="n"><a id="t461" href="#t461">461</a></span><span class="t">    <span class="key">with</span> <span class="nam">contextlib</span><span class="op">.</span><span class="nam">suppress</span><span class="op">(</span><span class="nam">AttributeError</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">461&#x202F;&#x219B;&#x202F;exit</span><span class="annotate long">line 461 didn't return from function '_returns_are_compatible', because the return on line 463 wasn't executed</span></span></p>
+    <p class="run"><span class="n"><a id="t461" href="#t461">461</a></span><span class="t">    <span class="key">with</span> <span class="nam">contextlib</span><span class="op">.</span><span class="nam">suppress</span><span class="op">(</span><span class="nam">AttributeError</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="par run show_par"><span class="n"><a id="t462" href="#t462">462</a></span><span class="t">        <span class="key">if</span> <span class="nam">new_function</span><span class="op">.</span><span class="nam">returns</span> <span class="op">==</span> <span class="nam">old_function</span><span class="op">.</span><span class="nam">returns</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">462&#x202F;&#x219B;&#x202F;463</span><span class="annotate long">line 462 didn't jump to line 463, because the condition on line 462 was never true</span></span></p>
     <p class="mis show_mis"><span class="n"><a id="t463" href="#t463">463</a></span><span class="t">            <span class="key">return</span> <span class="key">True</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t464" href="#t464">464</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -559,8 +559,8 @@
             <a id="indexLink" class="nav" href="covindex.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="d_0468c13ba1fa8830___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.3">coverage.py v7.2.3</a>,
-            created at 2023-04-10 18:05 +0200
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
+            created at 2023-05-09 00:23 +0200
         </p>
     </div>
 </footer>
